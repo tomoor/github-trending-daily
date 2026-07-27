@@ -7,7 +7,7 @@
 GitHub Actions 每天 UTC 23:10（北京时间 7:10）触发：
 
 1. 获取 GitHub Trending 榜单（首选 [newsnow](https://newsnow.busiyi.world/) API，失败降级直接抓取 github.com/trending）
-2. 逐项目抓取 README，调用火山方舟 DeepSeek 生成中文分析
+2. 逐项目抓取 README，调用火山方舟大模型生成中文分析
 3. 生成日报 `reports/YYYY-MM-DD.md` 并提交到本仓库
 4. 向飞书群 webhook 推送摘要卡片（含日报链接）
 
@@ -30,7 +30,7 @@ export FEISHU_WEBHOOK_URL=xxx
 .venv/bin/python -m src.main notify               # 真实推送到群, 谨慎执行
 ```
 
-环境变量: `ARK_MODEL`（默认 `deepseek-v3-1-terminus`）、`REPORT_BASE_URL`（卡片日报链接前缀，缺省则卡片无链接按钮）、`GITHUB_TOKEN`（提高 README 抓取限流阈值）
+环境变量: `ARK_MODEL`（默认 `doubao-seed-1-6-250615`）、`REPORT_BASE_URL`（卡片日报链接前缀，缺省则卡片无链接按钮）、`GITHUB_TOKEN`（提高 README 抓取限流阈值）
 
 ## 测试
 

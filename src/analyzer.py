@@ -13,7 +13,7 @@ from .fetch_trending import TrendingRepo
 logger = logging.getLogger(__name__)
 
 ARK_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
-DEFAULT_MODEL = "deepseek-v3-1-terminus"
+DEFAULT_MODEL = "doubao-seed-1-6-250615"
 MAX_RETRIES = 2
 RETRY_DELAY = 5
 ONE_LINER_MAX = 60

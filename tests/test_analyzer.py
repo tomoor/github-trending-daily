@@ -28,6 +28,16 @@ def no_sleep(monkeypatch):
     monkeypatch.setattr(az.time, "sleep", lambda s: None)
 
 
+def test_analyzer_default_model(monkeypatch):
+    monkeypatch.delenv("ARK_MODEL", raising=False)
+    assert Analyzer(client=make_client([])).model == "doubao-seed-1-6-250615"
+
+
+def test_analyzer_model_env_override(monkeypatch):
+    monkeypatch.setenv("ARK_MODEL", "custom-model")
+    assert Analyzer(client=make_client([])).model == "custom-model"
+
+
 def test_parse_analysis_normal():
     a = _parse_analysis("一句话简介\n\n**解决什么问题**\n内容", REPO)
     assert a.one_liner == "一句话简介"
