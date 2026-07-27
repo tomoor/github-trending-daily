@@ -30,7 +30,7 @@ export FEISHU_WEBHOOK_URL=xxx
 .venv/bin/python -m src.main notify               # 真实推送到群, 谨慎执行
 ```
 
-环境变量: `ARK_MODEL`（默认 `doubao-seed-1-6-250615`）、`REPORT_BASE_URL`（卡片日报链接前缀，缺省则卡片无链接按钮）、`GITHUB_TOKEN`（提高 README 抓取限流阈值）
+环境变量: `ARK_MODEL`（默认 `doubao-seed-2-0-pro-260215`）、`REPORT_BASE_URL`（卡片日报链接前缀，缺省则卡片无链接按钮）、`GITHUB_TOKEN`（提高 README 抓取限流阈值）
 
 ## 测试
 

@@ -30,7 +30,7 @@ def no_sleep(monkeypatch):
 
 def test_analyzer_default_model(monkeypatch):
     monkeypatch.delenv("ARK_MODEL", raising=False)
-    assert Analyzer(client=make_client([])).model == "doubao-seed-1-6-250615"
+    assert Analyzer(client=make_client([])).model == "doubao-seed-2-0-pro-260215"
 
 
 def test_analyzer_model_env_override(monkeypatch):

@@ -23,7 +23,7 @@
 | 决策点 | 结论 |
 |--------|------|
 | 运行环境 | GitHub Actions 定时（cron `10 23 * * *` UTC = 北京 7:10 触发，考虑 Actions 延迟，8:00 前推送到群） |
-| 大模型 | 火山方舟 OpenAI 兼容接口，默认模型 `doubao-seed-1-6-250615`（部署验证时发现用户 key 未开通 DeepSeek 系列，经确认改用豆包），可用环境变量 `ARK_MODEL` 覆盖 |
+| 大模型 | 火山方舟 OpenAI 兼容接口，默认模型 `doubao-seed-2-0-pro-260215`（原定 DeepSeek V3 已在方舟下线；实测 key 可用模型后经用户确认选定），可用环境变量 `ARK_MODEL` 覆盖 |
 | 分析深度 | 抓取每个项目 README（截断）供 LLM 深度分析 |
 | 分析策略 | 逐项目单独调用 LLM + 最后一次调用生成「今日看点」总览 |
 | 分析范围 | 榜单全部项目（通常 10~30 个） |
@@ -188,7 +188,7 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 | `ARK_API_KEY` | 是 | 火山方舟 API Key |
 | `FEISHU_WEBHOOK_URL` | notify 时必填 | 群机器人 webhook 地址（generate 阶段不需要） |
 | `FEISHU_WEBHOOK_SECRET` | 否 | 机器人签名校验密钥 |
-| `ARK_MODEL` | 否 | 默认 `doubao-seed-1-6-250615` |
+| `ARK_MODEL` | 否 | 默认 `doubao-seed-2-0-pro-260215` |
 | `REPORT_BASE_URL` | 否 | 日报链接前缀；Actions 中由 workflow 传入 `https://github.com/${{ github.repository }}/blob/main/reports`，本地未设置时卡片省略链接按钮 |
 
 ### 5.7 daily.yml
