@@ -6,11 +6,12 @@ from .fetch_trending import TrendingRepo
 
 
 def render_report(date_str: str, overview: str,
-                  repos: list[TrendingRepo], analyses: list[Analysis]) -> str:
+                  repos: list[TrendingRepo], analyses: list[Analysis],
+                  model: str) -> str:
     lines = [
         f"# GitHub Trending 日报 · {date_str}",
         "",
-        "> 由 DeepSeek 自动分析生成",
+        f"> 由 {model} 自动分析生成",
         "",
     ]
     if overview:

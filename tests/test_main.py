@@ -10,7 +10,7 @@ REPO = TrendingRepo(owner="foo", name="bar", url="https://github.com/foo/bar",
 
 class FakeAnalyzer:
     def __init__(self, *args, **kwargs):
-        pass
+        self.model = "fake-model"
 
     def analyze_repo(self, repo, readme):
         return Analysis(one_liner="一句话", detail_md="详情")

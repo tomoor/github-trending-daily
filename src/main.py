@@ -46,7 +46,8 @@ def generate(limit: int | None = None) -> None:
     REPORTS_DIR.mkdir(exist_ok=True)
     report_path = REPORTS_DIR / f"{date_str}.md"
     report_path.write_text(
-        render_report(date_str, overview, repos, analyses), encoding="utf-8")
+        render_report(date_str, overview, repos, analyses, analyzer.model),
+        encoding="utf-8")
     logger.info("日报已写入 %s", report_path)
 
     base_url = os.environ.get("REPORT_BASE_URL", "").rstrip("/")
