@@ -113,6 +113,8 @@ def fetch_deepwiki_summary(owner: str, name: str) -> str | None
 - 提问要求日报固定格式（第一行一句话简介 + 四小节详细介绍，全中文）
 - 解析 SSE 响应取带 `result` 事件的 `content[0].text`，跳过 ping 注释与 notifications 事件；按 UTF-8 显式解码（响应头无 charset）
 - 清洗服务端固定尾巴：`## Notes` / `Wiki pages you might want to explore` / `View this search on DeepWiki` 起截断
+- 输出规范化：偶发 HTML 形态（`<p>/<strong>/<br>`）转 Markdown；清理引用角标残留的中文标点前空格
+- 语言判定：中文占比（中文字符/(中文字符+英文字母)）< 0.3 视为英文回答，返回 None 走兜底（阈值容忍技术专有名词的英文字母）
 - 未索引（文本以 `Error processing question` 开头）/ HTTP / 网络 / 解析失败均返回 None
 
 ### 5.2b zread.py / context7.py（兜底简介，英文）
@@ -215,7 +217,7 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 |------|------|
 | newsnow 被 Cloudflare 拦 | 降级直接抓 github.com/trending |
 | 两个榜单来源都失败 | 任务失败，Actions 标红 + GitHub 邮件 |
-| 单项目 DeepWiki 失败/未索引 | 依次回退 zread → context7 → 榜单描述，日报标注「未获得深度解读」，不中断 |
+| 单项目 DeepWiki 失败/未索引/返回英文主导内容 | 依次回退 zread → context7 → 榜单描述，日报标注「未获得深度解读」，不中断 |
 | zread/context7 也失败 | 用榜单原始描述占位，不中断 |
 | 飞书发送失败（重试后） | 任务失败标红（日报已提交，不丢数据） |
 

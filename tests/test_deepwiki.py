@@ -89,6 +89,32 @@ def test_fetch_summary_strips_citation_spaces(monkeypatch):
     assert "实现安全通信。支持离线，功能丰富。" in result
 
 
+def test_fetch_summary_rejects_all_english(monkeypatch):
+    text = ("A one-line summary of the project.\n\n"
+            "**What it solves**\nThis project provides a decentralized chat "
+            "application over Bluetooth mesh networks and the Nostr protocol.")
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=_sse(text)))
+    assert dw.fetch_deepwiki_summary("o", "r") is None
+
+
+def test_fetch_summary_rejects_english_dominant(monkeypatch):
+    text = ("BitChat is a decentralized peer-to-peer messaging app that works "
+            "over Bluetooth mesh networks without requiring internet access, "
+            "servers, or phone numbers. 一个去中心化应用。")
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=_sse(text)))
+    assert dw.fetch_deepwiki_summary("o", "r") is None
+
+
+def test_fetch_summary_accepts_chinese_with_tech_terms(monkeypatch):
+    text = ("BitChat 是一款去中心化通讯应用\n\n"
+            "**技术亮点**\n使用 Noise_XX_25519_ChaChaPoly_SHA256 协议进行端到端加密, "
+            "通过 BLE Mesh 与 Nostr NIP-17 实现离线与全球通信, "
+            "所有身份密钥存储在设备 Keychain 中。")
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=_sse(text)))
+    result = dw.fetch_deepwiki_summary("o", "r")
+    assert result is not None and result.startswith("BitChat 是一款去中心化通讯应用")
+
+
 def test_fetch_summary_skips_pings_and_notifications(monkeypatch):
     notification = json.dumps({"method": "notifications/message",
                                "params": {"level": "info", "data": "working"}})

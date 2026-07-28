@@ -22,6 +22,15 @@ QUESTION = (
 # DeepWiki 服务端固定附加的尾巴 marker, 从首个出现处截断
 TAIL_MARKERS = ("## Notes", "Wiki pages you might want to explore",
                 "View this search on DeepWiki")
+# 中文占比(中文字符/(中文字符+英文字母))低于该阈值视为英文回答, 走兜底
+MIN_CHINESE_RATIO = 0.3
+
+
+def _chinese_ratio(text: str) -> float:
+    chinese = len(re.findall(r"[\u4e00-\u9fff]", text))
+    letters = len(re.findall(r"[a-zA-Z]", text))
+    total = chinese + letters
+    return chinese / total if total else 0.0
 
 
 def _strip_tail(text: str) -> str:
@@ -88,4 +97,12 @@ def fetch_deepwiki_summary(owner: str, name: str) -> str | None:
         logger.info("DeepWiki 无可用解读 %s/%s: %s", owner, name,
                     (text or f"解析失败, 响应前 120 字符: {raw[:120]!r}"))
         return None
-    return _normalize(_strip_tail(text)) or None
+    cleaned = _normalize(_strip_tail(text))
+    if not cleaned:
+        return None
+    ratio = _chinese_ratio(cleaned)
+    if ratio < MIN_CHINESE_RATIO:
+        logger.info("DeepWiki 解读为英文主导(中文占比 %.0f%%), 走兜底 %s/%s",
+                    ratio * 100, owner, name)
+        return None
+    return cleaned
