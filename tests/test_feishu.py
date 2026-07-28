@@ -3,7 +3,7 @@ import base64
 import pytest
 
 import src.feishu as fs
-from src.analyzer import Analysis
+from src.digest import Analysis
 from src.fetch_trending import TrendingRepo
 
 REPO = TrendingRepo(owner="foo", name="bar", url="https://github.com/foo/bar",

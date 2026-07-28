@@ -9,7 +9,7 @@ import time
 
 import requests
 
-from .analyzer import Analysis
+from .digest import Analysis
 from .fetch_trending import TrendingRepo
 
 logger = logging.getLogger(__name__)

@@ -9,12 +9,13 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from .analyzer import Analyzer
+from .context7 import fetch_context7_description
 from .deepwiki import fetch_deepwiki_summary
+from .digest import build_analysis
 from .feishu import build_card, send_card
 from .fetch_trending import fetch_trending
-from .github_readme import fetch_readme
 from .report import render_report
+from .zread import fetch_zread_description
 
 logger = logging.getLogger(__name__)
 
@@ -35,19 +36,20 @@ def generate(limit: int | None = None) -> None:
         repos = repos[:limit]
     logger.info("待分析项目: %d 个", len(repos))
 
-    analyzer = Analyzer()
     analyses = []
     for i, repo in enumerate(repos, 1):
-        logger.info("[%d/%d] 分析 %s", i, len(repos), repo.full_name)
-        readme = fetch_readme(repo.owner, repo.name)
+        logger.info("[%d/%d] 解读 %s", i, len(repos), repo.full_name)
         wiki = fetch_deepwiki_summary(repo.owner, repo.name)
-        analyses.append(analyzer.analyze_repo(repo, readme, wiki))
+        fallback = None
+        if wiki is None:
+            fallback = (fetch_zread_description(repo.owner, repo.name)
+                        or fetch_context7_description(repo.owner, repo.name))
+        analyses.append(build_analysis(repo, wiki, fallback))
 
     REPORTS_DIR.mkdir(exist_ok=True)
     report_path = REPORTS_DIR / f"{date_str}.md"
     report_path.write_text(
-        render_report(date_str, repos, analyses, analyzer.model),
-        encoding="utf-8")
+        render_report(date_str, repos, analyses), encoding="utf-8")
     logger.info("日报已写入 %s", report_path)
 
     base_url = os.environ.get("REPORT_BASE_URL", "").rstrip("/")

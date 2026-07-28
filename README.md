@@ -7,15 +7,16 @@
 GitHub Actions 每天 UTC 23:10（北京时间 7:10）触发：
 
 1. 获取 GitHub Trending 榜单（首选 [newsnow](https://newsnow.busiyi.world/) API，失败降级直接抓取 github.com/trending）
-2. 逐项目抓取 README 与 [DeepWiki](https://deepwiki.com/) 解读，调用阿里云百炼大模型生成中文分析
+2. 逐项目获取 [DeepWiki](https://deepwiki.com/) 中文解读（免费无需 key）；未索引时依次用 [zread.ai](https://zread.ai/) / [Context7](https://context7.com/) 的英文简介兜底
 3. 生成日报 `reports/YYYY-MM-DD.md` 并提交到本仓库
 4. 向飞书群 webhook 推送摘要卡片（含日报链接）
+
+不调用任何自有大模型，无 LLM API 成本。
 
 ## 部署
 
 1. 飞书群: 设置 → 群机器人 → 添加「自定义机器人」，复制 webhook 地址（建议开启签名校验）
 2. 仓库 Settings → Secrets and variables → Actions 添加:
-   - `LLM_API_KEY`: 阿里云百炼 API Key
    - `FEISHU_WEBHOOK_URL`: 群机器人 webhook 地址
    - `FEISHU_WEBHOOK_SECRET`: （可选）签名密钥
 3. Actions 页手动触发 `Daily Trending Report` 验证
@@ -24,13 +25,12 @@ GitHub Actions 每天 UTC 23:10（北京时间 7:10）触发：
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-export LLM_API_KEY=xxx
-.venv/bin/python -m src.main generate --limit 3   # 只分析前 3 个项目, 产出 reports/ 与 build/card.json
+.venv/bin/python -m src.main generate --limit 3   # 只处理前 3 个项目, 产出 reports/ 与 build/card.json
 export FEISHU_WEBHOOK_URL=xxx
 .venv/bin/python -m src.main notify               # 真实推送到群, 谨慎执行
 ```
 
-环境变量: `LLM_MODEL`（默认 `qwen3.7-plus`）、`LLM_BASE_URL`（默认百炼兼容接口，可换任意 OpenAI 兼容平台）、`REPORT_BASE_URL`（卡片日报链接前缀，缺省则卡片无链接按钮）、`GITHUB_TOKEN`（提高 README 抓取限流阈值）
+环境变量: `REPORT_BASE_URL`（卡片日报链接前缀，缺省则卡片无链接按钮）
 
 ## 测试
 

@@ -23,9 +23,8 @@
 | 决策点 | 结论 |
 |--------|------|
 | 运行环境 | GitHub Actions 定时（cron `10 23 * * *` UTC = 北京 7:10 触发，考虑 Actions 延迟，8:00 前推送到群） |
-| 大模型 | 阿里云百炼 OpenAI 兼容接口，默认模型 `qwen3.7-plus`（2026-07-28 由火山方舟豆包切换而来；qwen3.7-plus 默认开启思考模式，代码固定传 `enable_thinking: false` 以支持非流式并省 token），`LLM_BASE_URL`/`LLM_MODEL` 可覆盖 |
-| 分析深度 | 抓取每个项目 README（截断）+ DeepWiki 解读（`mcp.deepwiki.com` 免费 MCP 端点，未索引/失败时回退仅 README）供 LLM 深度分析 |
-| 分析策略 | 逐项目单独调用 LLM；「今日看点」总览已按用户要求移除（2026-07-28） |
+| 大模型 | **不使用自有 LLM**（2026-07-28 用户决策）：DeepWiki `ask_question` 直出中文解读（按日报格式提问 + 清洗服务端尾巴），未索引时依次用 zread.ai og:description / Context7 search description（英文）兜底，全无则用榜单原始描述。已知代价：兜底内容为英文、格式依赖 DeepWiki 遵循度、免费服务无 SLA |
+| 分析策略 | 逐项目获取解读；「今日看点」总览已按用户要求移除（2026-07-28） |
 | 分析范围 | 榜单全部项目（通常 10~30 个） |
 | 群消息详略 | 每项目一行（名称 + star + 一句话简介），完整分析看日报链接 |
 | 存档 | 本仓库 `reports/YYYY-MM-DD.md`，由 workflow 提交 |
@@ -43,17 +42,16 @@ GitHub Actions (UTC 23:10 触发, 支持 workflow_dispatch 手动触发)
   │     降级: GET https://github.com/trending?spoken_language_code= 解析 HTML
   │           (newsnow 该源本身就是爬此页面, 两者数据等价, 已验证)
   │
-  ├─ ② github_readme + deepwiki  逐项目抓补充资料
-  │     README: GET https://api.github.com/repos/{owner}/{repo}/readme
-  │       Header: Accept: application/vnd.github.raw+json, Authorization: Bearer GITHUB_TOKEN
-  │       (Actions 内置 token, 限流 5000 次/小时, 足够) 截断前 5000 字符
-  │     DeepWiki: POST https://mcp.deepwiki.com/mcp (JSON-RPC ask_question, 免费无鉴权)
-  │       返回项目中文解读; 未索引/失败返回 None
-  │     两者均失败则仅用榜单自带描述
+  ├─ ② 逐项目获取解读(无 LLM)
+  │     主力: DeepWiki POST https://mcp.deepwiki.com/mcp (JSON-RPC ask_question, 免费无鉴权)
+  │       按日报格式提问, 返回中文解读; 清洗服务端尾巴(## Notes / Wiki pages / View this search)
+  │     兜底1: zread.ai/{owner}/{repo} 页面 og:description (英文一句话)
+  │     兜底2: context7.com/api/v1/search?query={name}, id/title 精确匹配 (英文一句话)
+  │     全无: 榜单自带描述
   │
-  ├─ ③ analyzer  百炼 qwen3.7-plus 分析
-  │     逐项目: 输入 repo 名/star/描述/README 节选/DeepWiki 解读
-  │             → 输出一句话简介 + 详细介绍(Markdown)
+  ├─ ③ digest  纯组装(无网络)
+  │     DeepWiki 命中: 第一行→一句话简介, 其余→详情
+  │     仅兜底简介: 标注「未获得 DeepWiki 深度解读」, degraded=True
   │
   ├─ ④ report  渲染 reports/YYYY-MM-DD.md (日期取 Asia/Shanghai 时区)
   │     同时把飞书卡片 JSON 写到 build/card.json (不提交)
@@ -72,9 +70,10 @@ github-trending-daily/
 ├── src/
 │   ├── __init__.py
 │   ├── fetch_trending.py         # ① 榜单获取, 含 Cloudflare 降级逻辑
-│   ├── github_readme.py          # ② README 抓取与截断
-│   ├── deepwiki.py               # ② DeepWiki 仓库解读(补充信息源)
-│   ├── analyzer.py               # ③ LLM 逐项分析, 重试
+│   ├── deepwiki.py               # ② DeepWiki 中文解读(主力信息源)
+│   ├── zread.py                  # ② zread og:description 兜底
+│   ├── context7.py               # ② context7 search 兜底
+│   ├── digest.py                 # ③ 解读/简介 → 日报条目(纯组装)
 │   ├── report.py                 # ④ Markdown 日报渲染
 │   ├── feishu.py                 # ⑤ 卡片构造 + webhook 发送(含可选签名)
 │   └── main.py                   # 编排; --dry-run / --limit N 便于本地调试
@@ -104,49 +103,50 @@ def fetch_trending() -> list[TrendingRepo]
 - newsnow 请求失败（非 200 / 非 JSON / status != success）时降级抓 GitHub Trending 页面，用 BeautifulSoup 解析（选择器与 newsnow 源码一致：`article` 下 `h2 a` 取名称、`[href$=stargazers]` 取 star、`p` 取描述）
 - 两个来源都失败 → 抛异常，整个任务失败（Actions 标红，GitHub 邮件通知）
 
-### 5.2 github_readme.py
-
-```python
-def fetch_readme(owner: str, name: str, max_chars: int = 5000) -> str | None
-```
-
-- 404 或网络失败返回 None（调用方回退用榜单描述），不中断流程
-
-### 5.2b deepwiki.py
+### 5.2 deepwiki.py（主力信息源）
 
 ```python
 def fetch_deepwiki_summary(owner: str, name: str) -> str | None
 ```
 
 - POST `https://mcp.deepwiki.com/mcp`（官方 MCP 端点，JSON-RPC `tools/call` → `ask_question`，免费无鉴权）
-- 解析 SSE 响应取 `result.content[0].text`；未索引时返回文本以 `Error processing question` 开头 → 返回 None
-- HTTP/网络/解析失败均返回 None（调用方仅用 README 继续），不中断流程
+- 提问要求日报固定格式（第一行一句话简介 + 四小节详细介绍，全中文）
+- 解析 SSE 响应取带 `result` 事件的 `content[0].text`，跳过 ping 注释与 notifications 事件；按 UTF-8 显式解码（响应头无 charset）
+- 清洗服务端固定尾巴：`## Notes` / `Wiki pages you might want to explore` / `View this search on DeepWiki` 起截断
+- 未索引（文本以 `Error processing question` 开头）/ HTTP / 网络 / 解析失败均返回 None
 
-### 5.3 analyzer.py
+### 5.2b zread.py / context7.py（兜底简介，英文）
+
+```python
+def fetch_zread_description(owner: str, name: str) -> str | None      # og:description
+def fetch_context7_description(owner: str, name: str) -> str | None  # search API, id/title 精确匹配
+```
+
+- zread 无公开 API，取项目页 `og:description` meta；页面不存在/无 meta 返回 None
+- context7 搜索按名称模糊命中，仅接受 `id == /owner/name` 或 `title == name` 的精确匹配，避免同名误命中
+- 仅在 DeepWiki 未命中时才调用（省请求）
+
+### 5.3 digest.py（纯组装，无网络）
 
 ```python
 @dataclass
 class Analysis:
-    one_liner: str        # 一句话简介, ≤40 字
-    detail_md: str        # 详细介绍 Markdown
-    failed: bool = False  # 分析失败占位标记
+    one_liner: str          # 一句话简介, ≤60 字
+    detail_md: str          # 详情 Markdown
+    degraded: bool = False  # 未获得 DeepWiki 深度解读, 仅有简介
 
-class Analyzer:  # client/model 可注入, 便于单测 mock
-    def __init__(self, client: OpenAI | None = None, model: str | None = None): ...
-    def analyze_repo(self, repo: TrendingRepo, readme: str | None, wiki: str | None) -> Analysis: ...
+def build_analysis(repo: TrendingRepo, wiki: str | None, fallback_desc: str | None) -> Analysis
 ```
 
-- OpenAI SDK，`base_url` 默认 `https://dashscope.aliyuncs.com/compatible-mode/v1`（`LLM_BASE_URL` 可覆盖），key 从环境变量 `LLM_API_KEY` 读取
-- 每次调用固定传 `extra_body={"enable_thinking": False}`（qwen3.7-plus 混合思考模型默认开思考，关闭以支持非流式并省 token）
-- 逐项 prompt 输入含 README 节选与 DeepWiki 解读（缺失项填占位符），要求固定输出格式：第一行为一句话简介，空行后为详细介绍（包含：解决什么问题、核心功能、技术亮点、适合谁用）；全部中文
-- 解析失败兜底：整段作为 detail_md，one_liner 回退用榜单描述
-- 单项目调用失败重试 2 次（指数退避）；仍失败则该项目用榜单描述占位并在日报中标注「分析失败」，不中断其余项目
+- wiki 命中且格式正常（首行 ≤60 字且有正文）：首行→one_liner，其余→detail_md
+- wiki 格式异常：整段作 detail_md，one_liner 回退 fallback/榜单描述
+- 无 wiki：`fallback_desc or repo.description or "(无可用介绍)"` 作简介，detail_md 标注「未获得 DeepWiki 深度解读, 仅展示简介」，degraded=True
 
 ### 5.4 report.py
 
 ```python
 def render_report(date_str: str, repos: list[TrendingRepo],
-                  analyses: list[Analysis], model: str) -> str
+                  analyses: list[Analysis]) -> str
 ```
 
 日报结构：
@@ -154,7 +154,7 @@ def render_report(date_str: str, repos: list[TrendingRepo],
 ```markdown
 # GitHub Trending 日报 · 2026-07-27
 
-> 由 {model} 自动分析生成
+> 由 DeepWiki 自动解读生成
 
 ## 项目速览
 | # | 项目 | Stars | 一句话简介 |
@@ -195,12 +195,11 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 
 | 变量 | 必填 | 说明 |
 |------|------|------|
-| `LLM_API_KEY` | 是 | 阿里云百炼 API Key |
-| `LLM_BASE_URL` | 否 | 默认 `https://dashscope.aliyuncs.com/compatible-mode/v1`，可换任意 OpenAI 兼容平台 |
-| `LLM_MODEL` | 否 | 默认 `qwen3.7-plus` |
 | `FEISHU_WEBHOOK_URL` | notify 时必填 | 群机器人 webhook 地址（generate 阶段不需要） |
 | `FEISHU_WEBHOOK_SECRET` | 否 | 机器人签名校验密钥 |
 | `REPORT_BASE_URL` | 否 | 日报链接前缀；Actions 中由 workflow 传入 `https://github.com/${{ github.repository }}/blob/main/reports`，本地未设置时卡片省略链接按钮 |
+
+（无 LLM 后不再需要任何模型相关密钥与配置）
 
 ### 5.7 daily.yml
 
@@ -216,9 +215,8 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 |------|------|
 | newsnow 被 Cloudflare 拦 | 降级直接抓 github.com/trending |
 | 两个榜单来源都失败 | 任务失败，Actions 标红 + GitHub 邮件 |
-| 单项目 README 抓取失败 | 用 DeepWiki 解读/榜单描述继续分析 |
-| 单项目 DeepWiki 获取失败或未索引 | 仅用 README 继续分析 |
-| 单项目 LLM 失败（重试后） | 该项目占位标注，不中断 |
+| 单项目 DeepWiki 失败/未索引 | 依次回退 zread → context7 → 榜单描述，日报标注「未获得深度解读」，不中断 |
+| zread/context7 也失败 | 用榜单原始描述占位，不中断 |
 | 飞书发送失败（重试后） | 任务失败标红（日报已提交，不丢数据） |
 
 ## 7. 测试策略
