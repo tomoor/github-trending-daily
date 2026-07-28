@@ -4,7 +4,9 @@
 
 ## 工作方式
 
-GitHub Actions 每天北京时间 7:10（主推）、12:10 / 18:10（补推）触发：
+每天北京时间 7:10（主推）、12:10 / 18:10（补推）触发。触发采用双保险：外部 crontab 准时调用 `gh workflow run`（GitHub schedule 高峰期常延迟 30~60 分钟），仓库内 schedule cron 保留作兜底——增量清单保证重复触发零副作用（无新项目时静默）。
+
+流程：
 
 1. 获取 GitHub Trending 榜单（首选 [newsnow](https://newsnow.busiyi.world/) API，失败降级直接抓取 github.com/trending）
 2. 与当天已推送清单（`reports/YYYY-MM-DD.json`）比对，只处理**新上榜项目**（主推 = 清单为空的首次运行）
