@@ -28,7 +28,7 @@ def gen_sign(secret: str, timestamp: int) -> str:
 
 def build_card(date_str: str,
                repos: list[TrendingRepo], analyses: list[Analysis],
-               report_url: str | None) -> dict:
+               report_url: str | None, supplement: bool = False) -> dict:
     repo_lines = "\n".join(
         f"{i}. [{r.full_name}]({r.url}) ✰ {r.stars:,} — {a.one_liner}"
         for i, (r, a) in enumerate(zip(repos, analyses), 1)
@@ -44,11 +44,15 @@ def build_card(date_str: str,
                 "url": report_url,
             }]},
         ]
+    if supplement:
+        title, template = f"GitHub Trending 新上榜 {len(repos)} 项 · {date_str}", "orange"
+    else:
+        title, template = f"GitHub Trending 日报 · {date_str}", "blue"
     return {
         "config": {"wide_screen_mode": True},
         "header": {
-            "template": "blue",
-            "title": {"tag": "plain_text", "content": f"GitHub Trending 日报 · {date_str}"},
+            "template": template,
+            "title": {"tag": "plain_text", "content": title},
         },
         "elements": elements,
     }

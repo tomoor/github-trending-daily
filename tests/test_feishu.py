@@ -33,6 +33,18 @@ def test_build_card_without_report_url():
     assert all(e.get("tag") != "action" for e in card["elements"])
 
 
+def test_build_card_default_is_daily_blue():
+    card = fs.build_card("2026-07-27", [REPO], [AN], None)
+    assert card["header"]["template"] == "blue"
+    assert card["header"]["title"]["content"] == "GitHub Trending 日报 · 2026-07-27"
+
+
+def test_build_card_supplement_orange_with_count():
+    card = fs.build_card("2026-07-27", [REPO, REPO], [AN, AN], None, supplement=True)
+    assert card["header"]["template"] == "orange"
+    assert card["header"]["title"]["content"] == "GitHub Trending 新上榜 2 项 · 2026-07-27"
+
+
 class FakeResp:
     def __init__(self, code=0, status=200):
         self._code = code
