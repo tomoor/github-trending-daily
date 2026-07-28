@@ -53,8 +53,12 @@ def fetch_deepwiki_summary(owner: str, name: str) -> str | None:
     if resp.status_code != 200:
         logger.warning("DeepWiki 获取失败 %s/%s: HTTP %d", owner, name, resp.status_code)
         return None
-    text = _parse_sse_text(resp.text)
+    # 响应头 text/event-stream 未声明 charset, requests 会误用 ISO-8859-1,
+    # 必须按 UTF-8 显式解码, 否则中文乱码导致 JSON 解析失败
+    raw = resp.content.decode("utf-8", errors="replace")
+    text = _parse_sse_text(raw)
     if not text or text.startswith("Error processing question"):
-        logger.info("DeepWiki 无可用解读 %s/%s", owner, name)
+        logger.info("DeepWiki 无可用解读 %s/%s: %s", owner, name,
+                    (text or f"解析失败, 响应前 120 字符: {raw[:120]!r}"))
         return None
     return text.strip()

@@ -11,9 +11,13 @@ def _sse(text):
 
 
 class FakeResp:
+    """模拟 requests 对无 charset 的 text/event-stream 的行为:
+    content 为 UTF-8 字节, text 按 ISO-8859-1 解码(中文会乱码)。"""
+
     def __init__(self, status_code=200, text=""):
         self.status_code = status_code
-        self.text = text
+        self.content = text.encode("utf-8")
+        self.text = self.content.decode("iso-8859-1")
 
 
 def test_fetch_summary_ok(monkeypatch):
