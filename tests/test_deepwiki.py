@@ -62,6 +62,16 @@ def test_fetch_summary_none_on_malformed_response(monkeypatch):
     assert dw.fetch_deepwiki_summary("o", "r") is None
 
 
+def test_fetch_summary_strips_service_tail(monkeypatch):
+    text = ("一句话简介\n\n**解决什么问题**\n正文内容\n\n"
+            "## Notes\n源码文件细节\n\n"
+            "Wiki pages you might want to explore:\n- [X](/wiki/x)\n\n"
+            "View this search on DeepWiki: https://deepwiki.com/search/xxx\n")
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=_sse(text)))
+    result = dw.fetch_deepwiki_summary("o", "r")
+    assert result == "一句话简介\n\n**解决什么问题**\n正文内容"
+
+
 def test_fetch_summary_skips_pings_and_notifications(monkeypatch):
     notification = json.dumps({"method": "notifications/message",
                                "params": {"level": "info", "data": "working"}})

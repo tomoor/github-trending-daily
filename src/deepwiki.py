@@ -13,7 +13,22 @@ logger = logging.getLogger(__name__)
 
 DEEPWIKI_MCP_URL = "https://mcp.deepwiki.com/mcp"
 TIMEOUT = 90
-QUESTION = "请用中文介绍这个项目: 它解决什么问题、核心功能、技术架构与亮点、适合谁用。300 字以内。"
+QUESTION = (
+    "请严格按以下格式用中文介绍这个项目, 不要任何额外内容: "
+    "第一行为不超过 40 字的一句话简介; 然后空一行; 之后是四个小节: "
+    "**解决什么问题**、**核心功能**、**技术亮点**、**适合谁用**, 共 200~400 字。"
+)
+# DeepWiki 服务端固定附加的尾巴 marker, 从首个出现处截断
+TAIL_MARKERS = ("## Notes", "Wiki pages you might want to explore",
+                "View this search on DeepWiki")
+
+
+def _strip_tail(text: str) -> str:
+    for marker in TAIL_MARKERS:
+        idx = text.find(marker)
+        if idx != -1:
+            text = text[:idx]
+    return text.strip()
 
 
 def _parse_sse_text(raw: str) -> str | None:
@@ -61,4 +76,4 @@ def fetch_deepwiki_summary(owner: str, name: str) -> str | None:
         logger.info("DeepWiki 无可用解读 %s/%s: %s", owner, name,
                     (text or f"解析失败, 响应前 120 字符: {raw[:120]!r}"))
         return None
-    return text.strip()
+    return _strip_tail(text) or None
