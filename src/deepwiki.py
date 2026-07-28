@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 
 import requests
 
@@ -28,6 +29,17 @@ def _strip_tail(text: str) -> str:
         idx = text.find(marker)
         if idx != -1:
             text = text[:idx]
+    return text.strip()
+
+
+def _normalize(text: str) -> str:
+    """规范化 DeepWiki 输出: HTML 转 Markdown, 清理引用角标残留的标点前空格."""
+    if "<p>" in text or "</p>" in text:
+        text = re.sub(r"<strong>(.*?)</strong>", r"**\1**", text)
+        text = re.sub(r"<br\s*/?>", "\n", text)
+        text = re.sub(r"</p>\s*<p>", "\n\n", text)
+        text = re.sub(r"</?[a-zA-Z][^>]*>", "", text)
+    text = re.sub(r" +([。，、；：！？])", r"\1", text)
     return text.strip()
 
 
@@ -76,4 +88,4 @@ def fetch_deepwiki_summary(owner: str, name: str) -> str | None:
         logger.info("DeepWiki 无可用解读 %s/%s: %s", owner, name,
                     (text or f"解析失败, 响应前 120 字符: {raw[:120]!r}"))
         return None
-    return _strip_tail(text) or None
+    return _normalize(_strip_tail(text)) or None

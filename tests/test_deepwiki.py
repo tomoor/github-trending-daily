@@ -72,6 +72,23 @@ def test_fetch_summary_strips_service_tail(monkeypatch):
     assert result == "一句话简介\n\n**解决什么问题**\n正文内容"
 
 
+def test_fetch_summary_converts_html_to_markdown(monkeypatch):
+    html = ("<p>一句话简介。</p>\n<p><strong>解决什么问题</strong><br />"
+            "正文第一段。</p>\n<p>第二段。</p>")
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=_sse(html)))
+    result = dw.fetch_deepwiki_summary("o", "r")
+    assert "<p>" not in result and "<br" not in result and "<strong>" not in result
+    assert "**解决什么问题**" in result
+    assert result.startswith("一句话简介。")
+
+
+def test_fetch_summary_strips_citation_spaces(monkeypatch):
+    text = "实现安全通信 。支持离线 ，功能丰富  。\n\n详情"
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=_sse(text)))
+    result = dw.fetch_deepwiki_summary("o", "r")
+    assert "实现安全通信。支持离线，功能丰富。" in result
+
+
 def test_fetch_summary_skips_pings_and_notifications(monkeypatch):
     notification = json.dumps({"method": "notifications/message",
                                "params": {"level": "info", "data": "working"}})
