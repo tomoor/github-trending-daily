@@ -1,0 +1,134 @@
+[
+  {
+    "id": "pascalorg/editor",
+    "owner": "pascalorg",
+    "name": "editor",
+    "url": "https://github.com/pascalorg/editor",
+    "stars": 18628,
+    "description": "Create and share 3D architectural projects.",
+    "one_liner": "Pascal Editor 是一个 AI 驱动的 3D 建筑编辑器，支持场景编辑、可视化和与 AI 代理的协作。",
+    "detail_md": "**解决什么问题**\n该项目旨在解决传统 3D 建筑设计工具操作复杂、难以与 AI 智能体集成的问题。它通过提供一个无头（headless）的 3D 场景编辑引擎，使得大型语言模型（LLMs）能够直接读取、修改和管理 3D 场景，而无需浏览器或 GPU。这极大地简化了从自然语言指令到结构化 3D 场景数据的转换过程，支持例如从文本描述生成平面图、通过照片翻新房间等工作流。\n\n**核心功能**\n核心功能包括：\n*   **AI 驱动的场景编辑**：通过 Model Context Protocol (MCP) 服务器，AI 代理可以无头地访问和操作 Pascal 场景图和编辑引擎。\n*   **实时同步**：MCP 服务器与 Pascal 编辑器协同工作，通过本地 SQLite 数据库和 Server-Sent Events (SSE) 实现 AI 和人工编辑器之间的近实时同步。\n*   **场景管理工具**：提供创建项目、保存场景、获取项目状态等工具，支持从简要描述创建房屋等高级工作流。\n*   **3D 渲染与交互**：基于 React Three Fiber 和 WebGPU 提供 3D 场景渲染，并支持多种交互工具，如选择、绘制墙体、创建区域和放置物品。\n\n**技术亮点**\n*   **无头架构**：MCP 服务器在 Node.js 或 Bun 环境中运行，通过 `SceneBridge` 和 Node Shims 模拟浏览器 API，实现数据逻辑与渲染逻辑分离。\n*   **模块化设计**：项目采用 monorepo 结构，核心功能如场景图、节点模式、状态管理等封装在 `@pascal-app/core` 包中，3D 渲染在 `@pascal-app/viewer` 中，AI 交互在 `@pascal-app/mcp` 中。\n*   **状态管理**：使用 Zustand 进行状态管理，并结合 Zundo 实现撤销/重做功能。\n*   **多种传输方式**：MCP 服务器支持 stdio、HTTP 和内存传输，以适应不同的 AI 托管环境。\n\n**适合谁用**\n该项目适合需要自动化 3D 建筑设计流程的开发者和 AI 代理。它也适用于希望通过自然语言指令进行 3D 场景创建和修改的用户，以及需要将 3D 编辑功能集成到其应用程序中的开发者。此外，对于建筑师、室内设计师等专业人士，它提供了一个强大的工具来加速设计过程并探索更多设计可能性。",
+    "degraded": false
+  },
+  {
+    "id": "jenkinsci/jenkins",
+    "owner": "jenkinsci",
+    "name": "jenkins",
+    "url": "https://github.com/jenkinsci/jenkins",
+    "stars": 26059,
+    "description": "Jenkins automation server",
+    "one_liner": "Jenkins 是一个领先的开源自动化服务器，用于自动化开发工作流程，支持持续集成和持续交付。",
+    "detail_md": "**解决什么问题**\nJenkins 旨在解决软件开发中重复性任务的自动化问题，例如项目构建、测试、静态代码分析和部署。 它通过自动化这些流程，帮助开发人员将精力集中在更重要的工作上，从而优化开发过程并提高效率。\n\n**核心功能**\nJenkins 的核心功能包括项目构建、运行测试以尽早发现错误、执行静态代码分析以及部署应用程序。 它通过提供超过 2,000 个插件来支持自动化几乎所有任务。 此外，Jenkins 还支持多语言用户界面，通过 Java ResourceBundle 约定管理本地化文本和消息，例如中文（繁体）的界面消息。\n\n**技术亮点**\nJenkins 使用 Java 构建，并采用分层的 `.properties` 文件系统实现国际化，支持超过 15 种语言。 消息键遵循 `ClassName.MessageIdentifier` 的命名约定，便于管理和查找。 它与 Stapler Web 框架和 Jelly 模板系统集成，以在网页中提供本地化内容。 此外，Jenkins 还支持 Java MessageFormat 参数替换，以实现动态内容的本地化。\n\n**适合谁用**\nJenkins 适合需要自动化其开发工作流程的开发团队和公司。 无论是小型项目还是大型企业级应用，Jenkins 都能通过其丰富的插件生态系统和灵活的配置满足不同的自动化需求。 它被数百万用户和数千家公司使用，是持续集成和持续交付领域的领先工具。",
+    "degraded": false
+  },
+  {
+    "id": "moeru-ai/airi",
+    "owner": "moeru-ai",
+    "name": "airi",
+    "url": "https://github.com/moeru-ai/airi",
+    "stars": 44723,
+    "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+    "one_liner": "Project AIRI是一个开源的AI VTuber和虚拟伴侣系统，旨在将AI角色带入现实世界，实现多平台互动和游戏能力。",
+    "detail_md": "**解决什么问题**\n本项目旨在解决现有AI伴侣系统互动性不足、缺乏游戏能力以及非开源导致无法持续互动的问题。 它通过提供一个开源、多功能的平台，让用户能够轻松拥有自己的数字生命，随时随地进行互动。 \n\n**核心功能**\nAIRI的核心功能包括：支持Live2D和VRM模型，实现角色的2D/3D表现； 整合TTS、STT、VAD等语音能力，让角色能听会说； 通过桌面端和插件系统接入应用、开发环境和游戏状态等上下文； 以及通过Minecraft、Factorio、Discord、Telegram等服务模块实现智能体在外部世界的行动能力。 \n\n**技术亮点**\n项目大量使用Web技术，结合WebGPU、WebAudio、Web Worker、WebAssembly、WebSocket等能力，实现了网页、桌面和移动端的基础设施共享。 技术栈包括Vue 3、TypeScript、Vite、Pinia、Electron（桌面端）和Capacitor（移动端）。 AI模型和LLM Provider主要由`xsai`生态驱动。 \n\n**适合谁用**\nAIRI适合希望拥有个性化AI伴侣的用户，无论是想在网页端快速体验，还是在桌面端获得更完整的桌宠体验，或者开发者希望参与构建和扩展AI角色的能力。 它也适合对AI、VRM、Live2D、多模态AI、游戏智能体等领域感兴趣的开发者和研究者。",
+    "degraded": false
+  },
+  {
+    "id": "andrewyng/aisuite",
+    "owner": "andrewyng",
+    "name": "aisuite",
+    "url": "https://github.com/andrewyng/aisuite",
+    "stars": 15662,
+    "description": "Simple, unified interface to multiple Generative AI providers",
+    "one_liner": "aisuite 是一个轻量级 Python 库，用于构建 LLM 应用，提供统一的聊天补全 API 和代理 API，并包含桌面 AI 助手 OpenCoworker。</cite>",
+    "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型 (LLM) 应用开发中的复杂性问题，特别是多提供商集成和代理构建的挑战。</cite>它通过提供一个统一的 API 接口，让开发者可以轻松切换不同的 LLM 提供商，而无需修改大量代码。</cite>同时，它还简化了工具调用和代理的开发，使得模型能够执行实际任务。</cite>\n\n**核心功能**\n*   **统一的聊天补全 API**：提供一个与 OpenAI 兼容的接口，支持 OpenAI、Anthropic、Google、Mistral 等 20 多个 LLM 提供商，允许通过更改模型字符串来切换提供商。</cite>\n*   **代理 API**：允许模型使用真实的 Python 函数作为工具，支持多轮对话、工具包（文件、Git、Shell）以及模型上下文协议 (MCP) 集成，用于构建复杂的 AI 代理。</cite>\n*   **OpenCoworker 桌面应用**：一个基于 aisuite 构建的桌面 AI 助手，能够执行研究、文件操作和自动化任务，支持 macOS 和 Windows。</cite>\n\n**技术亮点**\n*   **提供商抽象层**：通过 `<provider>:<model-name>` 格式的模型名称，aisuite 能够将调用路由到正确的提供商，并转换参数和响应，实现提供商无关的交互。</cite>\n*   **工具调用自动化**：将 Python 函数直接作为工具传递给模型，aisuite 自动生成 schema、执行调用并将结果反馈给模型。</cite>\n*   **模块化架构**：项目分为聊天补全、代理 API 和 OpenCoworker 三个层次，每个层次都可以独立使用或组合使用。</cite>\n*   **本地模型支持**：通过 Ollama 支持本地运行模型，无需 API 密钥。</cite>\n\n**适合谁用**\n*   **LLM 应用开发者**：希望快速集成和切换多个 LLM 提供商，并构建具有工具调用能力的 AI 代理的开发者。</cite>\n*   **需要桌面 AI 助手的普通用户**：希望在本地机器上运行 AI 助手，执行日常任务、文件管理和自动化操作的用户。</cite>\n*   **研究人员和工程师**：对构建自定义 AI 代理和探索模型上下文协议 (MCP) 集成感兴趣的人员。</cite>",
+    "degraded": false
+  },
+  {
+    "id": "affaan-m/ECC",
+    "owner": "affaan-m",
+    "name": "ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "stars": 234750,
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "one_liner": "Everything Claude Code (ECC) 是一个为 AI 智能体平台设计的性能优化系统，旨在通过专业智能体、技能和自动化来提升软件工程效率和质量。",
+    "detail_md": "Everything Claude Code (ECC) 是一个为 AI 智能体平台设计的性能优化系统，旨在通过专业智能体、技能和自动化来提升软件工程效率和质量。它提供了一套全面的工具和配置，以实现持续学习、安全审计和工作流自动化。\n\n**解决什么问题**\n该项目旨在解决传统软件开发中效率低下、代码质量参差不齐以及安全漏洞等问题。通过引入智能体、技能和自动化工作流，它帮助开发者实现测试驱动开发、代码审查和持续集成，从而提高开发速度和代码质量。\n\n**核心功能**\nECC 的核心功能包括：提供 67 个专业子智能体，278 个工作流技能和领域知识，以及 94 个斜杠命令。它还包含基于触发器的自动化钩子、始终遵循的规则，以及用于管理会话和学习的命令。\n\n**技术亮点**\n该项目的技术亮点在于其“智能体优先”的性能系统，通过将任务委派给具有特定工具访问权限和模型偏好的专业智能体，实现了复杂的软件工程工作流自动化。它还支持持续学习，能从会话中自动提取模式并转化为可重用技能，并提供 AgentShield 安全审计工具来检测漏洞。\n\n**适合谁用**\nECC 适用于使用 Claude Code、Codex、Cursor、OpenCode、Gemini 等 AI 智能体平台的开发者、团队和组织。特别是那些希望优化开发工作流、提高代码质量、确保安全合规，并实现持续学习和自动化部署的软件工程师和架构师。",
+    "degraded": false
+  },
+  {
+    "id": "huggingface/speech-to-speech",
+    "owner": "huggingface",
+    "name": "speech-to-speech",
+    "url": "https://github.com/huggingface/speech-to-speech",
+    "stars": 7185,
+    "description": "Build local voice agents with open-source models",
+    "one_liner": "本项目是一个低延迟、模块化的语音代理管道，用于构建实时对话式AI系统。",
+    "detail_md": "**解决什么问题**\n该项目旨在提供一个开放、模块化的替代方案，以解决实时对话式AI系统中语音输入处理、语音识别、语言模型推理和语音合成的集成问题，避免了封闭系统的限制。 它通过一个可插拔的组件和多种部署选项的管道，实现了低延迟的语音代理功能。 \n\n**核心功能**\n核心功能包括语音活动检测 (VAD)、语音转文本 (STT)、语言模型 (LLM) 推理 和文本转语音 (TTS)。系统能够接受来自麦克风、网络套接字或WebSocket连接的音频输入，并支持多种STT引擎（如Whisper、Parakeet TDT）、LLM后端（如Transformers、MLX、OpenAI）和TTS引擎（如Qwen3、Melo、Kokoro）的灵活切换。 \n\n**技术亮点**\n该项目具有高度模块化和灵活性，每个管道阶段都支持多种实现，可通过配置进行切换。 它通过基于队列的并发处理和可选的`torch.compile`实现高性能，并针对Apple Silicon (MLX) 和NVIDIA (CUDA) 进行了硬件优化。 支持多种部署模式，包括本地、客户端-服务器（TCP Socket）、WebSocket以及兼容OpenAI Realtime API的模式。  \n\n**适合谁用**\n该项目适合需要构建实时语音代理、对话式AI系统或语音助手的开发者和研究人员。 特别是那些寻求开放、可定制、高性能且支持多种硬件平台（如Apple Silicon和NVIDIA GPU）解决方案的用户。 它也适用于希望将现有OpenAI Realtime API客户端连接到自托管或开源语音后端的用户。",
+    "degraded": false
+  },
+  {
+    "id": "virgiliojr94/book-to-skill",
+    "owner": "virgiliojr94",
+    "name": "book-to-skill",
+    "url": "https://github.com/virgiliojr94/book-to-skill",
+    "stars": 11258,
+    "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+    "one_liner": "`book-to-skill` 项目能将技术书籍、文档等转换为结构化的智能体技能，供 GitHub Copilot CLI、Amp 或 Claude Code 等智能体按需使用，从而提高知识利用效率…",
+    "detail_md": "`book-to-skill` 项目能将技术书籍、文档等转换为结构化的智能体技能，供 GitHub Copilot CLI、Amp 或 Claude Code 等智能体按需使用，从而提高知识利用效率和准确性。  \n\n## 解决什么问题\n该项目旨在解决传统技术书籍阅读和知识检索的痛点，例如在 PDF 中搜索内容效率低下、智能体容易产生幻觉或无法访问特定内容，以及手动笔记难以管理和复用等问题。 通过将书籍转化为结构化的智能体技能，它使得智能体能够直接从实际内容中获取答案，避免了幻觉和繁琐的查找过程，将书籍知识融入工作流程。 \n\n## 核心功能\n`book-to-skill` 的核心功能包括多格式文档提取和结构化技能生成。 它支持 PDF、EPUB、DOCX、HTML、Markdown 等多种文档格式的输入。 项目会生成一个包含核心心智模型和章节索引的 `SKILL.md` 文件，以及按需加载的章节文件、词汇表、模式和备忘单等辅助文件。 此外，它还支持将新材料更新或合并到现有技能中，保持索引和词汇表的同步。 \n\n## 技术亮点\n该项目采用确定性提取器（Python）和规范驱动生成器（遵循 `SKILL.md` 的智能体）两部分架构。 它通过“编译时”分析而非运行时检索来提取作者的框架、原则和技术，从而避免了“发现循环税”并降低了每次查询的成本。 对于大型书籍，系统采用递归语言模型（RLM）范式，通过编程探测和有针对性的读取来处理超出上下文窗口的内容，而不是一次性加载整个文件。 \n\n## 适合谁用\n`book-to-skill` 适合需要深入学习特定主题或知识库的个人和团队。 它特别适用于那些经常需要查阅技术书籍、内部文档、品牌设计系统、研究论文或规范标准的用户。 通过将这些知识转化为智能体技能，用户可以在 GitHub Copilot CLI、Amp 或 Claude Code 等智能体环境中，高效地学习、参考和应用这些知识。",
+    "degraded": false
+  },
+  {
+    "id": "opengeos/GeoLibre",
+    "owner": "opengeos",
+    "name": "GeoLibre",
+    "url": "https://github.com/opengeos/GeoLibre",
+    "stars": 3350,
+    "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+    "one_liner": "GeoLibre 是一个轻量级的云原生 GIS 平台，用于可视化、探索和分析地理空间数据，支持桌面、Web 和移动环境。",
+    "detail_md": "**解决什么问题**\nGeoLibre 旨在解决传统 GIS 软件的局限性，提供一个跨平台、云原生的解决方案，使用户能够直接从云存储流式传输数据，并在浏览器中执行空间分析。它通过支持多种地理空间数据格式和提供客户端计算能力，简化了地理空间数据的工作流程。\n\n**核心功能**\n该项目提供地图查看器、GeoJSON 加载、图层和样式面板、属性表等功能。它支持云原生格式如 GeoParquet、FlatGeobuf 和 COG 导入。此外，GeoLibre 还集成了 DuckDB-WASM Spatial 进行矢量数据处理，并提供 Python 包 (`geolibre.Map`) 以便在 Jupyter Notebook 中嵌入和交互。\n\n**技术亮点**\nGeoLibre 采用现代技术栈，包括 Tauri v2、React、TypeScript 和 MapLibre GL JS。它利用 DuckDB-WASM Spatial 在浏览器中进行 SQL 查询和矢量数据处理，并通过 Pyodide 引擎在浏览器中运行 Python 矢量操作。项目还支持插件系统，允许扩展功能。\n\n**适合谁用**\nGeoLibre 适合需要轻量级、跨平台 GIS 工具的地理空间数据分析师、研究人员和开发者。它特别适用于那些希望在桌面、Web 或 Jupyter Notebook 环境中无缝处理和可视化地理空间数据的用户。",
+    "degraded": false
+  },
+  {
+    "id": "paperswithbacktest/awesome-systematic-trading",
+    "owner": "paperswithbacktest",
+    "name": "awesome-systematic-trading",
+    "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+    "stars": 9528,
+    "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+    "one_liner": "系统化交易资源库，汇集97个库、40+策略、55本书籍及教学视频。",
+    "detail_md": "**解决什么问题**\n\n该项目解决量化交易从入门到实战的全流程问题。它为交易者、研究人员和开发者提供了一个集中的资源中心，涵盖策略研究、数据获取、回测框架、风险管理等环节，帮助用户快速找到合适的工具和学习资料。\n\n**核心功能**\n\n项目包含四大核心内容：（1）97个库和包，涵盖回测框架（如vnpy、zipline、backtrader）、交易机器人、技术指标、投资组合优化等工具；（2）40+学术交易策略，按资产类别分类，包含夏普比率、波动率等性能指标；（3）55本专业书籍，从初学者指南到高频交易理论；（4）23个视频和在线课程资源。项目还提供了多个策略实现示例，基于QuantConnect平台。\n\n**技术亮点**\n\n项目采用精心策划的资源分类体系，涵盖事件驱动框架（vnpy、zipline）和向量化框架（vectorbt、pysystemtrade）两大回测方案。库按编程语言和热度排序，便于快速查找。策略实现展示了从宏观经济指标、价值因子、动量跟踪到多因子组合的多样化方法。\n\n**适合谁用**\n\n该项目适合量化交易的全阶段用户：初学者可通过书籍和视频快速入门；研究人员可参考40+学术策略和实现代码进行研究；专业交易员可利用97个库快速搭建交易系统；机构投资者可借鉴多因子策略和风险管理工具。无论是学生、独立交易者还是专业机构，都能在此找到所需资源。",
+    "degraded": false
+  },
+  {
+    "id": "microsoft/agent-governance-toolkit",
+    "owner": "microsoft",
+    "name": "agent-governance-toolkit",
+    "url": "https://github.com/microsoft/agent-governance-toolkit",
+    "stars": 5168,
+    "description": "AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+    "one_liner": "Agent Governance Toolkit 是一个运行时治理基础设施，旨在确保 AI 代理行动的安全、可靠和合规。",
+    "detail_md": "**解决什么问题**\n该工具包解决了在生产环境中部署 AI 代理时面临的安全、信任、控制和可靠性问题。  它通过在应用层拦截和治理代理行为（如工具调用、资源访问和代理间通信），而不是仅仅过滤 LLM 的输入/输出，来防止安全风险、资源滥用和审计缺失。  该项目全面覆盖了 OWASP Agentic Top 10 风险。 \n\n**核心功能**\n核心功能包括确定性策略执行、零信任身份验证、执行沙箱和可靠性工程。  它提供了一个内核架构，用于在执行前拦截和评估所有代理操作，确保 0% 的策略违规。  工具包还支持多模型验证 (CMVK) 和完整的审计日志，以实现合规性。 \n\n**技术亮点**\n该工具包采用操作系统启发式治理层设计，提供内核、能力模型、进程隔离和审计日志等核心功能。  它支持多种语言，包括 Python、TypeScript、.NET、Rust 和 Go。  治理开销极低，每次操作小于 0.1 毫秒，比 LLM API 调用快约 10,000 倍。  它还提供了与主要 AI 框架（如 LangChain, AutoGen, CrewAI）的广泛集成。 \n\n**适合谁用**\n该工具包适用于需要在生产环境中安全、可靠地部署 AI 代理的开发者和企业。  特别是那些关注合规性（如 SOC2, EU AI Act, HIPAA, GDPR）、需要实时策略执行和审计追踪的组织。  它也适合希望通过自然语言创建、测试和部署 AI 代理，并确保 0% 策略违规的开发者。",
+    "degraded": false
+  },
+  {
+    "id": "yorukot/superfile",
+    "owner": "yorukot",
+    "name": "superfile",
+    "url": "https://github.com/yorukot/superfile",
+    "stars": 21441,
+    "description": "Pretty fancy and modern terminal file manager",
+    "one_liner": "Superfile 是一个功能丰富、高度可定制的现代化终端文件管理器，旨在提供高效的文件操作体验。",
+    "detail_md": "**解决什么问题**\nSuperfile 旨在解决传统终端文件管理器在美观性、功能完整性和可定制性方面的不足。它提供了一个现代化的用户界面，支持多种文件操作，并允许用户根据自己的偏好进行深度定制。\n\n**核心功能**\nSuperfile 的核心功能包括：精美且美观的用户界面；完整的文件操作，如复制、剪切、粘贴、删除、重命名、创建文件/文件夹、压缩和解压缩；高度可定制的热键、主题和边框样式；以及多面板视图，允许同时查看多个目录并简化文件操作。它还支持文件预览、进程管理和元数据查看。\n\n**技术亮点**\n该项目使用 Go 语言开发，并遵循标准的 Go 项目布局。它通过 `src/cmd/main.go` 处理 CLI 参数、配置初始化和应用程序启动。配置系统允许用户通过 `config.toml` 文件自定义主题、编辑器、更新检查、文件预览等行为。Superfile 还具备自动更新功能，可检查最新版本并提示用户。\n\n**适合谁用**\nSuperfile 适合需要一个强大、美观且高度可定制的终端文件管理器的用户。特别是那些希望在终端环境中进行高效文件操作，并能根据个人习惯调整界面和功能的开发者和高级用户。它支持 Linux、macOS 和 Windows 平台。",
+    "degraded": false
+  },
+  {
+    "id": "bradautomates/claude-video",
+    "owner": "bradautomates",
+    "name": "claude-video",
+    "url": "https://github.com/bradautomates/claude-video",
+    "stars": 12045,
+    "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+    "one_liner": "本项目旨在让 Claude 能够“观看”视频内容，通过下载、帧提取和转录，为大型语言模型提供视频的视觉和听觉上下文，从而回答用户关于视频的问题。",
+    "detail_md": "**解决什么问题**\n本项目解决了大型语言模型（LLM）无法直接处理视频内容的问题。 它通过将视频转换为LLM可理解的图像帧和文本转录，使Claude能够“看到”和“听到”视频，进而回答用户提出的关于视频内容的问题。\n\n**核心功能**\n核心功能包括视频下载、帧提取和转录。 它使用 `yt-dlp` 下载视频并提取原生字幕， 使用 `ffmpeg` 提取视频帧， 并在没有原生字幕时，通过 Groq 或 OpenAI 的 Whisper API 进行音频转录。 最终生成包含帧路径和时间戳转录的 Markdown 报告供 Claude 使用。\n\n**技术亮点**\n技术亮点在于其多表面集成架构，支持 Claude Code 插件、claude.ai 技能和 Codex 插件，确保核心逻辑的一致性。 它采用自适应帧预算和“聚焦模式”，根据视频时长和用户查询动态调整帧率，以优化 token 成本和准确性。 此外，还实现了预检机制 (`scripts/setup.py`) 来验证依赖和 API 密钥。\n\n**适合谁用**\n本项目适合需要让 Claude 分析视频内容的用户。 例如，用户可以粘贴视频 URL 或本地视频路径，并提出问题，Claude 将根据视频帧和转录内容提供答案。 对于需要从视频中提取信息、总结内容或回答特定时间点问题的用户，此工具非常有用。",
+    "degraded": false
+  }
+]
