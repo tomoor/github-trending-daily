@@ -17,7 +17,7 @@ QUESTION = "请用中文介绍这个项目: 它解决什么问题、核心功能
 
 
 def _parse_sse_text(raw: str) -> str | None:
-    """从 SSE 响应中提取第一个 message 的 result.content[0].text."""
+    """从 SSE 响应中提取带 result 的事件文本, 跳过 ping 注释与 notifications 事件."""
     for line in raw.splitlines():
         if not line.startswith("data: "):
             continue
@@ -25,7 +25,7 @@ def _parse_sse_text(raw: str) -> str | None:
             payload = json.loads(line[len("data: "):])
             return payload["result"]["content"][0]["text"]
         except (json.JSONDecodeError, KeyError, IndexError, TypeError):
-            return None
+            continue
     return None
 
 

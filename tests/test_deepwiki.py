@@ -60,3 +60,13 @@ def test_fetch_summary_none_on_malformed_response(monkeypatch):
     monkeypatch.setattr(dw.requests, "post",
                         lambda url, **kw: FakeResp(text="event: message\ndata: not-json\n\n"))
     assert dw.fetch_deepwiki_summary("o", "r") is None
+
+
+def test_fetch_summary_skips_pings_and_notifications(monkeypatch):
+    notification = json.dumps({"method": "notifications/message",
+                               "params": {"level": "info", "data": "working"}})
+    raw = (": ping - 2026-07-28 10:17:30\r\n\r\n"
+           f"event: message\r\ndata: {notification}\r\n\r\n"
+           + _sse("最终解读内容").replace("\n", "\r\n"))
+    monkeypatch.setattr(dw.requests, "post", lambda url, **kw: FakeResp(text=raw))
+    assert dw.fetch_deepwiki_summary("o", "r") == "最终解读内容"
