@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate report
         env:
-          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPORT_BASE_URL: https://github.com/${{ github.repository }}/blob/main/reports
         run: python -m src.main generate

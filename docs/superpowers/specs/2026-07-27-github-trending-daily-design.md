@@ -23,9 +23,9 @@
 | 决策点 | 结论 |
 |--------|------|
 | 运行环境 | GitHub Actions 定时（cron `10 23 * * *` UTC = 北京 7:10 触发，考虑 Actions 延迟，8:00 前推送到群） |
-| 大模型 | 火山方舟 OpenAI 兼容接口，默认模型 `doubao-seed-2-0-pro-260215`（原定 DeepSeek V3 已在方舟下线；实测 key 可用模型后经用户确认选定），可用环境变量 `ARK_MODEL` 覆盖 |
-| 分析深度 | 抓取每个项目 README（截断）供 LLM 深度分析 |
-| 分析策略 | 逐项目单独调用 LLM + 最后一次调用生成「今日看点」总览 |
+| 大模型 | 阿里云百炼 OpenAI 兼容接口，默认模型 `qwen3.7-plus`（2026-07-28 由火山方舟豆包切换而来；qwen3.7-plus 默认开启思考模式，代码固定传 `enable_thinking: false` 以支持非流式并省 token），`LLM_BASE_URL`/`LLM_MODEL` 可覆盖 |
+| 分析深度 | 抓取每个项目 README（截断）+ DeepWiki 解读（`mcp.deepwiki.com` 免费 MCP 端点，未索引/失败时回退仅 README）供 LLM 深度分析 |
+| 分析策略 | 逐项目单独调用 LLM；「今日看点」总览已按用户要求移除（2026-07-28） |
 | 分析范围 | 榜单全部项目（通常 10~30 个） |
 | 群消息详略 | 每项目一行（名称 + star + 一句话简介），完整分析看日报链接 |
 | 存档 | 本仓库 `reports/YYYY-MM-DD.md`，由 workflow 提交 |
@@ -43,15 +43,17 @@ GitHub Actions (UTC 23:10 触发, 支持 workflow_dispatch 手动触发)
   │     降级: GET https://github.com/trending?spoken_language_code= 解析 HTML
   │           (newsnow 该源本身就是爬此页面, 两者数据等价, 已验证)
   │
-  ├─ ② github_readme  逐项目抓 README
-  │     GET https://api.github.com/repos/{owner}/{repo}/readme
-  │     Header: Accept: application/vnd.github.raw+json, Authorization: Bearer GITHUB_TOKEN
-  │     (Actions 内置 token, 限流 5000 次/小时, 足够)
-  │     截断前 5000 字符; 失败则回退用榜单自带描述
+  ├─ ② github_readme + deepwiki  逐项目抓补充资料
+  │     README: GET https://api.github.com/repos/{owner}/{repo}/readme
+  │       Header: Accept: application/vnd.github.raw+json, Authorization: Bearer GITHUB_TOKEN
+  │       (Actions 内置 token, 限流 5000 次/小时, 足够) 截断前 5000 字符
+  │     DeepWiki: POST https://mcp.deepwiki.com/mcp (JSON-RPC ask_question, 免费无鉴权)
+  │       返回项目中文解读; 未索引/失败返回 None
+  │     两者均失败则仅用榜单自带描述
   │
-  ├─ ③ analyzer  DeepSeek 分析
-  │     逐项目: 输入 repo 名/star/描述/README 节选 → 输出一句话简介 + 详细介绍(Markdown)
-  │     总览:   输入全部项目的一句话简介 → 输出 3-5 句「今日看点」
+  ├─ ③ analyzer  百炼 qwen3.7-plus 分析
+  │     逐项目: 输入 repo 名/star/描述/README 节选/DeepWiki 解读
+  │             → 输出一句话简介 + 详细介绍(Markdown)
   │
   ├─ ④ report  渲染 reports/YYYY-MM-DD.md (日期取 Asia/Shanghai 时区)
   │     同时把飞书卡片 JSON 写到 build/card.json (不提交)
@@ -59,7 +61,7 @@ GitHub Actions (UTC 23:10 触发, 支持 workflow_dispatch 手动触发)
   │
   └─ ⑤ feishu  读取 build/card.json, POST 到群 webhook
         (在 push 之后执行, 保证群里日报链接已可访问)
-        卡片 = 今日看点 + 项目列表(每行: [名称](url) ✰star — 一句话) + 日报链接
+        卡片 = 项目列表(每行: [名称](url) ✰star — 一句话) + 日报链接
 ```
 
 ## 4. 项目结构
@@ -71,7 +73,8 @@ github-trending-daily/
 │   ├── __init__.py
 │   ├── fetch_trending.py         # ① 榜单获取, 含 Cloudflare 降级逻辑
 │   ├── github_readme.py          # ② README 抓取与截断
-│   ├── analyzer.py               # ③ LLM 调用(逐项 + 总览), 重试
+│   ├── deepwiki.py               # ② DeepWiki 仓库解读(补充信息源)
+│   ├── analyzer.py               # ③ LLM 逐项分析, 重试
 │   ├── report.py                 # ④ Markdown 日报渲染
 │   ├── feishu.py                 # ⑤ 卡片构造 + webhook 发送(含可选签名)
 │   └── main.py                   # 编排; --dry-run / --limit N 便于本地调试
@@ -109,6 +112,16 @@ def fetch_readme(owner: str, name: str, max_chars: int = 5000) -> str | None
 
 - 404 或网络失败返回 None（调用方回退用榜单描述），不中断流程
 
+### 5.2b deepwiki.py
+
+```python
+def fetch_deepwiki_summary(owner: str, name: str) -> str | None
+```
+
+- POST `https://mcp.deepwiki.com/mcp`（官方 MCP 端点，JSON-RPC `tools/call` → `ask_question`，免费无鉴权）
+- 解析 SSE 响应取 `result.content[0].text`；未索引时返回文本以 `Error processing question` 开头 → 返回 None
+- HTTP/网络/解析失败均返回 None（调用方仅用 README 继续），不中断流程
+
 ### 5.3 analyzer.py
 
 ```python
@@ -120,20 +133,20 @@ class Analysis:
 
 class Analyzer:  # client/model 可注入, 便于单测 mock
     def __init__(self, client: OpenAI | None = None, model: str | None = None): ...
-    def analyze_repo(self, repo: TrendingRepo, readme: str | None) -> Analysis: ...
-    def summarize_day(self, repos: list[TrendingRepo], analyses: list[Analysis]) -> str: ...  # 今日看点
+    def analyze_repo(self, repo: TrendingRepo, readme: str | None, wiki: str | None) -> Analysis: ...
 ```
 
-- OpenAI SDK，`base_url=https://ark.cn-beijing.volces.com/api/v3`，key 从环境变量 `ARK_API_KEY` 读取
-- 逐项 prompt 要求固定输出格式：第一行为一句话简介，空行后为详细介绍（包含：解决什么问题、核心功能、技术亮点、适合谁用）；全部中文
+- OpenAI SDK，`base_url` 默认 `https://dashscope.aliyuncs.com/compatible-mode/v1`（`LLM_BASE_URL` 可覆盖），key 从环境变量 `LLM_API_KEY` 读取
+- 每次调用固定传 `extra_body={"enable_thinking": False}`（qwen3.7-plus 混合思考模型默认开思考，关闭以支持非流式并省 token）
+- 逐项 prompt 输入含 README 节选与 DeepWiki 解读（缺失项填占位符），要求固定输出格式：第一行为一句话简介，空行后为详细介绍（包含：解决什么问题、核心功能、技术亮点、适合谁用）；全部中文
 - 解析失败兜底：整段作为 detail_md，one_liner 回退用榜单描述
 - 单项目调用失败重试 2 次（指数退避）；仍失败则该项目用榜单描述占位并在日报中标注「分析失败」，不中断其余项目
 
 ### 5.4 report.py
 
 ```python
-def render_report(date_str: str, overview: str,
-                  repos: list[TrendingRepo], analyses: list[Analysis]) -> str
+def render_report(date_str: str, repos: list[TrendingRepo],
+                  analyses: list[Analysis], model: str) -> str
 ```
 
 日报结构：
@@ -141,10 +154,7 @@ def render_report(date_str: str, overview: str,
 ```markdown
 # GitHub Trending 日报 · 2026-07-27
 
-> 由 DeepSeek 自动分析生成
-
-## 今日看点
-（3-5 句总览）
+> 由 {model} 自动分析生成
 
 ## 项目速览
 | # | 项目 | Stars | 一句话简介 |
@@ -159,11 +169,11 @@ def render_report(date_str: str, overview: str,
 ### 5.5 feishu.py
 
 ```python
-def build_card(date_str: str, overview: str, repos, analyses, report_url: str) -> dict
+def build_card(date_str: str, repos, analyses, report_url: str | None) -> dict
 def send_card(webhook_url: str, card: dict, secret: str | None = None) -> None
 ```
 
-- `msg_type: interactive` 卡片：蓝色 header「GitHub Trending 日报 · 日期」+ 今日看点 + 项目列表（lark_md，每行 `[owner/name](url) ✰ 31,374 — 一句话`）+ 底部日报链接按钮
+- `msg_type: interactive` 卡片：蓝色 header「GitHub Trending 日报 · 日期」+ 项目列表（lark_md，每行 `[owner/name](url) ✰ 31,374 — 一句话`）+ 底部日报链接按钮
 - 日报链接：`https://github.com/<owner>/github-trending-daily/blob/main/reports/YYYY-MM-DD.md`
 - 可选签名：设置了 `FEISHU_WEBHOOK_SECRET` 时按飞书规范计算 HmacSHA256 签名（`timestamp\nsecret` 为 key 对空串签名，base64）
 - 发送失败（HTTP 非 200 或响应 `code != 0`）重试 2 次后抛异常
@@ -185,10 +195,11 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 
 | 变量 | 必填 | 说明 |
 |------|------|------|
-| `ARK_API_KEY` | 是 | 火山方舟 API Key |
+| `LLM_API_KEY` | 是 | 阿里云百炼 API Key |
+| `LLM_BASE_URL` | 否 | 默认 `https://dashscope.aliyuncs.com/compatible-mode/v1`，可换任意 OpenAI 兼容平台 |
+| `LLM_MODEL` | 否 | 默认 `qwen3.7-plus` |
 | `FEISHU_WEBHOOK_URL` | notify 时必填 | 群机器人 webhook 地址（generate 阶段不需要） |
 | `FEISHU_WEBHOOK_SECRET` | 否 | 机器人签名校验密钥 |
-| `ARK_MODEL` | 否 | 默认 `doubao-seed-2-0-pro-260215` |
 | `REPORT_BASE_URL` | 否 | 日报链接前缀；Actions 中由 workflow 传入 `https://github.com/${{ github.repository }}/blob/main/reports`，本地未设置时卡片省略链接按钮 |
 
 ### 5.7 daily.yml
@@ -205,9 +216,9 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 |------|------|
 | newsnow 被 Cloudflare 拦 | 降级直接抓 github.com/trending |
 | 两个榜单来源都失败 | 任务失败，Actions 标红 + GitHub 邮件 |
-| 单项目 README 抓取失败 | 用榜单描述继续分析 |
+| 单项目 README 抓取失败 | 用 DeepWiki 解读/榜单描述继续分析 |
+| 单项目 DeepWiki 获取失败或未索引 | 仅用 README 继续分析 |
 | 单项目 LLM 失败（重试后） | 该项目占位标注，不中断 |
-| 总览生成失败 | 日报省略「今日看点」，其余照常 |
 | 飞书发送失败（重试后） | 任务失败标红（日报已提交，不丢数据） |
 
 ## 7. 测试策略
