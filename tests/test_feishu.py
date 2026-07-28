@@ -19,20 +19,18 @@ def test_gen_sign_deterministic():
 
 
 def test_build_card_with_report_url():
-    card = fs.build_card("2026-07-27", "总览", [REPO], [AN], "https://example.com/r.md")
+    card = fs.build_card("2026-07-27", [REPO], [AN], "https://example.com/r.md")
     assert card["header"]["title"]["content"] == "GitHub Trending 日报 · 2026-07-27"
     md_texts = [e["content"] for e in card["elements"] if e.get("tag") == "markdown"]
-    assert any("总览" in t for t in md_texts)
     assert any("[foo/bar](https://github.com/foo/bar)" in t and "一句话" in t for t in md_texts)
+    assert not any("今日看点" in t for t in md_texts)
     actions = [e for e in card["elements"] if e.get("tag") == "action"]
     assert actions and actions[0]["actions"][0]["url"] == "https://example.com/r.md"
 
 
-def test_build_card_without_report_url_or_overview():
-    card = fs.build_card("2026-07-27", "", [REPO], [AN], None)
+def test_build_card_without_report_url():
+    card = fs.build_card("2026-07-27", [REPO], [AN], None)
     assert all(e.get("tag") != "action" for e in card["elements"])
-    md_texts = [e["content"] for e in card["elements"] if e.get("tag") == "markdown"]
-    assert not any("今日看点" in t for t in md_texts)
 
 
 class FakeResp:

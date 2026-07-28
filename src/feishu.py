@@ -26,20 +26,14 @@ def gen_sign(secret: str, timestamp: int) -> str:
     return base64.b64encode(digest).decode("utf-8")
 
 
-def build_card(date_str: str, overview: str,
+def build_card(date_str: str,
                repos: list[TrendingRepo], analyses: list[Analysis],
                report_url: str | None) -> dict:
     repo_lines = "\n".join(
         f"{i}. [{r.full_name}]({r.url}) ✰ {r.stars:,} — {a.one_liner}"
         for i, (r, a) in enumerate(zip(repos, analyses), 1)
     )
-    elements: list[dict] = []
-    if overview:
-        elements += [
-            {"tag": "markdown", "content": f"**今日看点**\n{overview}"},
-            {"tag": "hr"},
-        ]
-    elements.append({"tag": "markdown", "content": repo_lines})
+    elements: list[dict] = [{"tag": "markdown", "content": repo_lines}]
     if report_url:
         elements += [
             {"tag": "hr"},

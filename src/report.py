@@ -5,7 +5,7 @@ from .analyzer import Analysis
 from .fetch_trending import TrendingRepo
 
 
-def render_report(date_str: str, overview: str,
+def render_report(date_str: str,
                   repos: list[TrendingRepo], analyses: list[Analysis],
                   model: str) -> str:
     lines = [
@@ -14,8 +14,6 @@ def render_report(date_str: str, overview: str,
         f"> 由 {model} 自动分析生成",
         "",
     ]
-    if overview:
-        lines += ["## 今日看点", "", overview, ""]
     lines += [
         "## 项目速览",
         "",
