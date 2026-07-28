@@ -14,10 +14,22 @@ def test_wiki_normal_format():
     assert not a.degraded
 
 
-def test_wiki_bad_format_falls_back_one_liner():
-    text = "x" * 100  # 首行超长且无详情段
+def test_wiki_long_first_line_extracts_first_sentence():
+    # DeepWiki 首行超 60 字但含句号: 一句话取首句(仍是中文), 不回退英文榜单描述
+    long_first = "这是一个超长的一句话简介" * 6 + "。后半句继续说明更多内容"
+    text = f"{long_first}\n\n**解决什么问题**\n正文"
     a = build_analysis(REPO, text, None)
-    assert a.one_liner == "官方描述"
+    assert a.one_liner.startswith("这是一个超长的一句话简介")
+    assert "官方描述" not in a.one_liner
+    assert len(a.one_liner) <= 60
+    assert a.detail_md == text.strip()
+    assert not a.degraded
+
+
+def test_wiki_long_first_line_without_period_truncates():
+    text = "中" * 100  # 首行超长且无句号无详情段
+    a = build_analysis(REPO, text, None)
+    assert a.one_liner == "中" * 59 + "…"
     assert a.detail_md == text
     assert not a.degraded
 

@@ -141,7 +141,7 @@ def build_analysis(repo: TrendingRepo, wiki: str | None, fallback_desc: str | No
 ```
 
 - wiki 命中且格式正常（首行 ≤60 字且有正文）：首行→one_liner，其余→detail_md
-- wiki 格式异常：整段作 detail_md，one_liner 回退 fallback/榜单描述
+- wiki 首行超长/无正文结构：one_liner 从中文解读首句提取（按句末标点切分+截断），整段作 detail_md；**不回退英文榜单描述**（2026-07-28 修复：此前回退导致卡片混入英文）
 - 无 wiki：`fallback_desc or repo.description or "(无可用介绍)"` 作简介，detail_md 标注「未获得 DeepWiki 深度解读, 仅展示简介」，degraded=True
 
 ### 5.4 report.py
