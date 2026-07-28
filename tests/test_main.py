@@ -11,12 +11,11 @@ REPO = TrendingRepo(owner="foo", name="bar", url="https://github.com/foo/bar",
 class FakeAnalyzer:
     def __init__(self, *args, **kwargs):
         self.model = "fake-model"
+        self.seen = []
 
-    def analyze_repo(self, repo, readme):
+    def analyze_repo(self, repo, readme, wiki):
+        self.seen.append((repo.full_name, readme, wiki))
         return Analysis(one_liner="一句话", detail_md="详情")
-
-    def summarize_day(self, repos, analyses):
-        return "今日总览"
 
 
 def _patch_paths(monkeypatch, tmp_path):
@@ -27,14 +26,18 @@ def _patch_paths(monkeypatch, tmp_path):
 
 def test_generate_writes_report_and_card(monkeypatch, tmp_path):
     _patch_paths(monkeypatch, tmp_path)
+    analyzers = []
     monkeypatch.setattr(main, "fetch_trending", lambda: [REPO, REPO])
     monkeypatch.setattr(main, "fetch_readme", lambda owner, name: "readme")
-    monkeypatch.setattr(main, "Analyzer", FakeAnalyzer)
+    monkeypatch.setattr(main, "fetch_deepwiki_summary", lambda owner, name: "wiki 内容")
+    monkeypatch.setattr(main, "Analyzer",
+                        lambda *a, **kw: analyzers.append(FakeAnalyzer()) or analyzers[-1])
     monkeypatch.setenv("REPORT_BASE_URL", "https://example.com/reports")
     main.generate()
+    assert analyzers[0].seen == [("foo/bar", "readme", "wiki 内容")] * 2
     date_str = main.today_str()
     report = (tmp_path / "reports" / f"{date_str}.md").read_text(encoding="utf-8")
-    assert "foo/bar" in report and "今日总览" in report
+    assert "foo/bar" in report and "今日看点" not in report
     card = json.loads((tmp_path / "build" / "card.json").read_text(encoding="utf-8"))
     assert card["header"]["title"]["content"].endswith(date_str)
     button = card["elements"][-1]["actions"][0]
@@ -47,6 +50,7 @@ def test_generate_limit(monkeypatch, tmp_path):
     monkeypatch.setattr(main, "fetch_trending", lambda: [REPO, REPO, REPO])
     monkeypatch.setattr(main, "fetch_readme",
                         lambda owner, name: readme_calls.append(name) or None)
+    monkeypatch.setattr(main, "fetch_deepwiki_summary", lambda owner, name: None)
     monkeypatch.setattr(main, "Analyzer", FakeAnalyzer)
     monkeypatch.delenv("REPORT_BASE_URL", raising=False)
     main.generate(limit=1)

@@ -10,6 +10,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .analyzer import Analyzer
+from .deepwiki import fetch_deepwiki_summary
 from .feishu import build_card, send_card
 from .fetch_trending import fetch_trending
 from .github_readme import fetch_readme
@@ -39,20 +40,19 @@ def generate(limit: int | None = None) -> None:
     for i, repo in enumerate(repos, 1):
         logger.info("[%d/%d] 分析 %s", i, len(repos), repo.full_name)
         readme = fetch_readme(repo.owner, repo.name)
-        analyses.append(analyzer.analyze_repo(repo, readme))
-
-    overview = analyzer.summarize_day(repos, analyses)
+        wiki = fetch_deepwiki_summary(repo.owner, repo.name)
+        analyses.append(analyzer.analyze_repo(repo, readme, wiki))
 
     REPORTS_DIR.mkdir(exist_ok=True)
     report_path = REPORTS_DIR / f"{date_str}.md"
     report_path.write_text(
-        render_report(date_str, overview, repos, analyses, analyzer.model),
+        render_report(date_str, repos, analyses, analyzer.model),
         encoding="utf-8")
     logger.info("日报已写入 %s", report_path)
 
     base_url = os.environ.get("REPORT_BASE_URL", "").rstrip("/")
     report_url = f"{base_url}/{date_str}.md" if base_url else None
-    card = build_card(date_str, overview, repos, analyses, report_url)
+    card = build_card(date_str, repos, analyses, report_url)
     BUILD_DIR.mkdir(exist_ok=True)
     CARD_PATH.write_text(json.dumps(card, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info("卡片已写入 %s", CARD_PATH)
