@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 from .fetch_trending import TrendingRepo
 
-ONE_LINER_MAX = 60
+ONE_LINER_MAX = 100
 
 
 @dataclass
