@@ -4,12 +4,13 @@
 
 ## 工作方式
 
-GitHub Actions 每天 UTC 23:10（北京时间 7:10）触发：
+GitHub Actions 每天北京时间 7:10（主推）、12:10 / 18:10（补推）触发：
 
 1. 获取 GitHub Trending 榜单（首选 [newsnow](https://newsnow.busiyi.world/) API，失败降级直接抓取 github.com/trending）
-2. 逐项目获取 [DeepWiki](https://deepwiki.com/) 中文解读（免费无需 key）；未索引时依次用 [zread.ai](https://zread.ai/) / [Context7](https://context7.com/) 的英文简介兜底
-3. 生成日报 `reports/YYYY-MM-DD.md` 并提交到本仓库
-4. 向飞书群 webhook 推送摘要卡片（含日报链接）
+2. 与当天已推送清单（`reports/YYYY-MM-DD.json`）比对，只处理**新上榜项目**（主推 = 清单为空的首次运行）
+3. 逐项目获取 [DeepWiki](https://deepwiki.com/) 中文解读（免费无需 key）；未索引时依次用 [zread.ai](https://zread.ai/) / [Context7](https://context7.com/) 的英文简介兜底
+4. 全量重渲染日报 `reports/YYYY-MM-DD.md`（全天累积）并提交到本仓库
+5. 向飞书群 webhook 推送卡片：主推为蓝色日报卡片，补推为橙色「新上榜 N 项」卡片，只含新项目；无新项目则静默不推送
 
 不调用任何自有大模型，无 LLM API 成本。
 

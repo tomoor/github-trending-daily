@@ -2,7 +2,9 @@ name: Daily Trending Report
 
 on:
   schedule:
-    - cron: "10 23 * * *"  # UTC 23:10 = 北京时间次日 7:10
+    - cron: "10 23 * * *"  # 北京 7:10 主推(当天首次, 全量)
+    - cron: "10 4 * * *"   # 北京 12:10 补推(仅新上榜)
+    - cron: "10 10 * * *"  # 北京 18:10 补推(仅新上榜)
   workflow_dispatch:
 
 permissions:

@@ -22,7 +22,8 @@
 
 | 决策点 | 结论 |
 |--------|------|
-| 运行环境 | GitHub Actions 定时（cron `10 23 * * *` UTC = 北京 7:10 触发，考虑 Actions 延迟，8:00 前推送到群） |
+| 运行环境 | GitHub Actions 定时：北京 7:10 主推 + 12:10/18:10 补推（2026-07-28 新增；trending 是 24h 滚动窗口，白天新上榜项目增量补推） |
+| 增量机制 | 当天已推送清单存 `reports/YYYY-MM-DD.json`（随日报提交）；每次运行只解读清单外的新项目，主推=清单为空的首次运行；日报由清单全量重渲染（全天累积）；卡片只含本次新项目，无新项目静默跳过 |
 | 大模型 | **不使用自有 LLM**（2026-07-28 用户决策）：DeepWiki `ask_question` 直出中文解读（按日报格式提问 + 清洗服务端尾巴），未索引时依次用 zread.ai og:description / Context7 search description（英文）兜底，全无则用榜单原始描述。已知代价：兜底内容为英文、格式依赖 DeepWiki 遵循度、免费服务无 SLA |
 | 分析策略 | 逐项目获取解读；「今日看点」总览已按用户要求移除（2026-07-28） |
 | 分析范围 | 榜单全部项目（通常 10~30 个） |
@@ -74,6 +75,7 @@ github-trending-daily/
 │   ├── zread.py                  # ② zread og:description 兜底
 │   ├── context7.py               # ② context7 search 兜底
 │   ├── digest.py                 # ③ 解读/简介 → 日报条目(纯组装)
+│   ├── state.py                  # ③ 当天已推送清单读写(增量补推的状态源)
 │   ├── report.py                 # ④ Markdown 日报渲染
 │   ├── feishu.py                 # ⑤ 卡片构造 + webhook 发送(含可选签名)
 │   └── main.py                   # 编排; --dry-run / --limit N 便于本地调试
@@ -205,7 +207,7 @@ python -m src.main notify                 # ⑤: 读 build/card.json 发送飞�
 
 ### 5.7 daily.yml
 
-- `on: schedule (cron "10 23 * * *")` + `workflow_dispatch`
+- `on: schedule`（UTC 23:10/04:10/10:10 = 北京 7:10 主推 + 12:10/18:10 补推）+ `workflow_dispatch`
 - `permissions: contents: write`
 - 步骤：checkout → setup-python 3.12 → `pip install -r requirements.txt` → `python -m src.main generate` → 以 `github-actions[bot]` 身份 commit `reports/` 并 push（提交信息如 `report: 2026-07-27`，无编辑器署名）→ `python -m src.main notify`
 - 先 push 后发飞书：群成员点开链接时日报必定已存在
