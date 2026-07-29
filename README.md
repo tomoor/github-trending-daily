@@ -4,7 +4,9 @@
 
 ## 工作方式
 
-每天北京时间 7:10（主推）、12:10 / 18:10（补推）触发。触发采用双保险：外部 crontab 准时调用 `gh workflow run`（GitHub schedule 高峰期常延迟 30~60 分钟），仓库内 schedule cron 保留作兜底——增量清单保证重复触发零副作用（无新项目时静默）。
+每天北京时间 7:10（主推）、12:10 / 18:10（补推）触发。触发采用双保险：Cloudflare Worker Cron（`cf-worker/`，分钟级准时）调用 GitHub `workflow_dispatch` API，仓库内 schedule cron 保留作兜底（GitHub schedule 高峰期常延迟 30~60 分钟）——增量清单保证重复触发零副作用（无新项目时静默）。
+
+Worker 部署：`cd cf-worker && npx wrangler deploy && npx wrangler secret put GITHUB_TOKEN`（值为仅授权本仓库 Actions 写权限的 fine-grained PAT）。
 
 流程：
 
