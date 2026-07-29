@@ -95,13 +95,53 @@ def _enable_link_share(token: str, doc_token: str) -> None:
          json={"external_access_entity": "open", "link_share_entity": "anyone_readable"})
 
 
-def _delete_doc(token: str, doc_token: str) -> None:
-    _api("DELETE", f"{BASE}/drive/v1/files/{doc_token}",
-         headers={"Authorization": f"Bearer {token}"}, params={"type": "docx"})
+def update_daily_doc(md_content: str, doc_token: str,
+                     app_id: str, app_secret: str) -> bool:
+    """原地替换已有文档内容(URL 不变, 历史卡片链接始终有效).
+
+    流程: markdown 转块 → 清空文档一级块 → 插入新块。失败返回 False,
+    调用方保留旧文档(内容略旧但链接可用), 下次运行自动重试。
+    """
+    token = _get_tenant_token(app_id, app_secret)
+    if not token:
+        return False
+    headers = {"Authorization": f"Bearer {token}"}
+
+    data = _api("POST", f"{BASE}/docx/v1/documents/blocks/convert", headers=headers,
+                json={"content_type": "markdown", "content": md_content})
+    if not data:
+        return False
+    children_ids = data["data"]["first_level_block_ids"]
+    blocks = data["data"]["blocks"]
+    for block in blocks:  # merge_info 为只读字段, 提交前须去除
+        if "table" in block:
+            block["table"].get("property", {}).pop("merge_info", None)
+
+    data = _api("GET", f"{BASE}/docx/v1/documents/{doc_token}/blocks",
+                headers=headers, params={"page_size": 500})
+    if not data:
+        return False
+    page = next((b for b in data["data"]["items"] if b["block_id"] == doc_token), None)
+    old_count = len(page.get("children") or []) if page else 0
+
+    if old_count:
+        if not _api("DELETE",
+                    f"{BASE}/docx/v1/documents/{doc_token}/blocks/{doc_token}"
+                    "/children/batch_delete",
+                    headers=headers,
+                    json={"start_index": 0, "end_index": old_count}):
+            return False
+    if not _api("POST",
+                f"{BASE}/docx/v1/documents/{doc_token}/blocks/{doc_token}/descendant",
+                headers=headers,
+                json={"children_id": children_ids, "index": 0, "descendants": blocks}):
+        return False
+    logger.info("飞书文档已原地更新: %s", doc_token)
+    return True
 
 
-def create_daily_doc(md_content: str, title: str, app_id: str, app_secret: str,
-                     old_doc_token: str | None = None) -> tuple[str, str] | None:
+def create_daily_doc(md_content: str, title: str,
+                     app_id: str, app_secret: str) -> tuple[str, str] | None:
     """导入日报为飞书云文档, 返回 (doc_token, doc_url); 失败返回 None."""
     token = _get_tenant_token(app_id, app_secret)
     if not token:
@@ -114,7 +154,5 @@ def create_daily_doc(md_content: str, title: str, app_id: str, app_secret: str,
         return None
     doc_token, doc_url = result
     _enable_link_share(token, doc_token)
-    if old_doc_token:
-        _delete_doc(token, old_doc_token)
     logger.info("飞书文档已生成: %s", doc_url)
     return doc_token, doc_url

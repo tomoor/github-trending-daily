@@ -126,7 +126,7 @@ def test_generate_limit(monkeypatch, tmp_path):
     assert len(wiki_calls) == 1
 
 
-def test_generate_creates_feishu_doc_and_links_card(monkeypatch, tmp_path):
+def test_generate_creates_feishu_doc_first_time(monkeypatch, tmp_path):
     _patch_paths(monkeypatch, tmp_path)
     monkeypatch.setattr(main, "fetch_trending", lambda: [REPO, REPO2])
     monkeypatch.setattr(main, "fetch_deepwiki_summary",
@@ -136,15 +136,12 @@ def test_generate_creates_feishu_doc_and_links_card(monkeypatch, tmp_path):
     monkeypatch.setenv("REPORT_BASE_URL", "https://example.com/reports")
     monkeypatch.setenv("FEISHU_APP_ID", "cli_id")
     monkeypatch.setenv("FEISHU_APP_SECRET", "sec")
-    doc_calls = {}
-    monkeypatch.setattr(
-        main, "create_daily_doc",
-        lambda md, title, app_id, app_secret, old_doc_token=None:
-        doc_calls.update(title=title, old=old_doc_token)
-        or ("doxcnNEW", "https://x.feishu.cn/docx/doxcnNEW"))
-    _write_state(tmp_path, [SEEN_ITEM], doc_token="doxcnOLD", doc_url="https://old")
+    monkeypatch.setattr(main, "create_daily_doc",
+                        lambda md, title, app_id, app_secret:
+                        ("doxcnNEW", "https://x.feishu.cn/docx/doxcnNEW"))
+    monkeypatch.setattr(main, "update_daily_doc",
+                        lambda *a, **kw: 1 / 0)  # 首次不应走更新
     main.generate()
-    assert doc_calls["old"] == "doxcnOLD"  # 传入旧文档 token 供删除
     date_str = main.today_str()
     state = json.loads(
         (tmp_path / "reports" / f"{date_str}.json").read_text(encoding="utf-8"))
@@ -152,6 +149,35 @@ def test_generate_creates_feishu_doc_and_links_card(monkeypatch, tmp_path):
     card = json.loads((tmp_path / "build" / "card.json").read_text(encoding="utf-8"))
     button = card["elements"][-1]["actions"][0]
     assert button["url"] == "https://x.feishu.cn/docx/doxcnNEW"  # 优先飞书文档
+
+
+def test_generate_updates_existing_doc_in_place(monkeypatch, tmp_path):
+    _patch_paths(monkeypatch, tmp_path)
+    monkeypatch.setattr(main, "fetch_trending", lambda: [REPO, REPO2])
+    monkeypatch.setattr(main, "fetch_deepwiki_summary",
+                        lambda owner, name: "新简介\n\n新详情")
+    monkeypatch.setattr(main, "fetch_zread_description", lambda owner, name: None)
+    monkeypatch.setattr(main, "fetch_context7_description", lambda owner, name: None)
+    monkeypatch.delenv("REPORT_BASE_URL", raising=False)
+    monkeypatch.setenv("FEISHU_APP_ID", "cli_id")
+    monkeypatch.setenv("FEISHU_APP_SECRET", "sec")
+    updated = {}
+    monkeypatch.setattr(main, "create_daily_doc",
+                        lambda *a, **kw: 1 / 0)  # 已有文档不应重建
+    monkeypatch.setattr(main, "update_daily_doc",
+                        lambda md, doc_token, app_id, app_secret:
+                        updated.update(doc=doc_token) or True)
+    _write_state(tmp_path, [SEEN_ITEM], doc_token="doxcnOLD",
+                 doc_url="https://x.feishu.cn/docx/doxcnOLD")
+    main.generate()
+    assert updated["doc"] == "doxcnOLD"  # 原地更新同一篇
+    date_str = main.today_str()
+    state = json.loads(
+        (tmp_path / "reports" / f"{date_str}.json").read_text(encoding="utf-8"))
+    assert state["doc_token"] == "doxcnOLD"  # token/URL 不变
+    card = json.loads((tmp_path / "build" / "card.json").read_text(encoding="utf-8"))
+    button = card["elements"][-1]["actions"][0]
+    assert button["url"] == "https://x.feishu.cn/docx/doxcnOLD"  # 链接始终稳定
 
 
 def test_generate_doc_failure_falls_back_to_github_url(monkeypatch, tmp_path):

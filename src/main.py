@@ -13,7 +13,7 @@ from .context7 import fetch_context7_description
 from .deepwiki import fetch_deepwiki_summary
 from .digest import build_analysis
 from .feishu import build_card, send_card
-from .feishu_doc import create_daily_doc
+from .feishu_doc import create_daily_doc, update_daily_doc
 from .fetch_trending import fetch_trending
 from .report import render_report
 from .state import from_item, load_state, save_state, to_item
@@ -70,15 +70,19 @@ def generate(limit: int | None = None) -> None:
     report_path.write_text(report_md, encoding="utf-8")
     logger.info("日报已写入 %s (共 %d 个项目)", report_path, len(items))
 
-    # 有新内容且配置了自建应用: 全量日报导入为飞书云文档(每天保留一个)
+    # 有新内容且配置了自建应用: 当天首次创建飞书云文档, 之后原地更新(URL 不变,
+    # 历史卡片链接始终有效且指向最新全量版)
     app_id = os.environ.get("FEISHU_APP_ID")
     app_secret = os.environ.get("FEISHU_APP_SECRET")
     if new_repos and app_id and app_secret:
-        result = create_daily_doc(report_md, f"GitHub Trending 日报 {date_str}",
-                                  app_id, app_secret,
-                                  old_doc_token=state["doc_token"])
-        if result:
-            state["doc_token"], state["doc_url"] = result
+        if state["doc_token"]:
+            if not update_daily_doc(report_md, state["doc_token"], app_id, app_secret):
+                logger.warning("飞书文档原地更新失败, 本次保留旧内容, 下次运行重试")
+        else:
+            result = create_daily_doc(report_md, f"GitHub Trending 日报 {date_str}",
+                                      app_id, app_secret)
+            if result:
+                state["doc_token"], state["doc_url"] = result
 
     save_state(state_path, state)
 

@@ -14,7 +14,7 @@ Worker 部署：`cd cf-worker && npx wrangler deploy && npx wrangler secret put 
 2. 与当天已推送清单（`reports/YYYY-MM-DD.json`）比对，只处理**新上榜项目**（主推 = 清单为空的首次运行）
 3. 逐项目获取 [DeepWiki](https://deepwiki.com/) 中文解读（免费无需 key）；未索引时依次用 [zread.ai](https://zread.ai/) / [Context7](https://context7.com/) 的英文简介兜底
 4. 全量重渲染日报 `reports/YYYY-MM-DD.md`（全天累积）并提交到本仓库
-5. 若配置了飞书自建应用凭证，将全量日报导入为**飞书云文档**（每天保留一个最新版，开启链接分享），卡片按钮优先跳转该文档；未配置或导入失败则回退 GitHub 日报链接
+5. 若配置了飞书自建应用凭证，当天首次运行创建**飞书云文档**（归档到共享文件夹、开启链接分享），补推时**原地更新同一篇**（URL 不变，历史卡片链接始终有效且指向最新全量版）；未配置或失败则回退 GitHub 日报链接
 6. 向飞书群 webhook 推送卡片：主推为蓝色日报卡片，补推为橙色「新上榜 N 项」卡片，只含新项目；无新项目则静默不推送
 
 不调用任何自有大模型，无 LLM API 成本。
