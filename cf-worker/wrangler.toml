@@ -2,6 +2,6 @@ name = "trending-dispatch"
 main = "worker.js"
 compatibility_date = "2026-07-01"
 
-# UTC 时间: 北京 8:00 主推, 12:10 / 18:10 补推
+# UTC 时间: 北京 8:00 主推, 16:00 补推
 [triggers]
-crons = ["0 0 * * *", "10 4 * * *", "10 10 * * *"]
+crons = ["0 0 * * *", "0 8 * * *"]
