@@ -31,6 +31,8 @@ jobs:
       - name: Generate report
         env:
           REPORT_BASE_URL: https://github.com/${{ github.repository }}/blob/main/reports
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
         run: python -m src.main generate
 
       - name: Commit report

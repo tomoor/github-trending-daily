@@ -13,6 +13,7 @@ from .context7 import fetch_context7_description
 from .deepwiki import fetch_deepwiki_summary
 from .digest import build_analysis
 from .feishu import build_card, send_card
+from .feishu_doc import create_daily_doc
 from .fetch_trending import fetch_trending
 from .report import render_report
 from .state import from_item, load_state, save_state, to_item
@@ -38,7 +39,8 @@ def generate(limit: int | None = None) -> None:
 
     # 当天已推送清单: 首次运行为空(主推), 后续运行只处理增量(补推)
     state_path = REPORTS_DIR / f"{date_str}.json"
-    items = load_state(state_path)
+    state = load_state(state_path)
+    items = state["items"]
     is_first_run = not items
     seen_ids = {it["id"] for it in items}
     new_repos = [r for r in repos if r.full_name not in seen_ids]
@@ -55,7 +57,6 @@ def generate(limit: int | None = None) -> None:
         new_analyses.append(build_analysis(repo, wiki, fallback))
 
     items += [to_item(r, a) for r, a in zip(new_repos, new_analyses)]
-    save_state(state_path, items)
 
     # 日报由清单全量重渲染, 全天累积所有上过榜的项目
     all_repos, all_analyses = [], []
@@ -63,10 +64,23 @@ def generate(limit: int | None = None) -> None:
         repo, analysis = from_item(item)
         all_repos.append(repo)
         all_analyses.append(analysis)
+    report_md = render_report(date_str, all_repos, all_analyses)
     report_path = REPORTS_DIR / f"{date_str}.md"
-    report_path.write_text(
-        render_report(date_str, all_repos, all_analyses), encoding="utf-8")
+    REPORTS_DIR.mkdir(exist_ok=True)
+    report_path.write_text(report_md, encoding="utf-8")
     logger.info("日报已写入 %s (共 %d 个项目)", report_path, len(items))
+
+    # 有新内容且配置了自建应用: 全量日报导入为飞书云文档(每天保留一个)
+    app_id = os.environ.get("FEISHU_APP_ID")
+    app_secret = os.environ.get("FEISHU_APP_SECRET")
+    if new_repos and app_id and app_secret:
+        result = create_daily_doc(report_md, f"GitHub Trending 日报 {date_str}",
+                                  app_id, app_secret,
+                                  old_doc_token=state["doc_token"])
+        if result:
+            state["doc_token"], state["doc_url"] = result
+
+    save_state(state_path, state)
 
     # 卡片只含本次新项目; 无新项目则清除卡片, notify 将静默跳过
     if not new_repos:
@@ -74,7 +88,8 @@ def generate(limit: int | None = None) -> None:
         logger.info("无新上榜项目, 本次不推送")
         return
     base_url = os.environ.get("REPORT_BASE_URL", "").rstrip("/")
-    report_url = f"{base_url}/{date_str}.md" if base_url else None
+    github_url = f"{base_url}/{date_str}.md" if base_url else None
+    report_url = state["doc_url"] or github_url  # 优先飞书文档
     card = build_card(date_str, new_repos, new_analyses, report_url,
                       supplement=not is_first_run)
     BUILD_DIR.mkdir(exist_ok=True)

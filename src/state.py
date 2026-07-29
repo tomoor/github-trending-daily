@@ -8,15 +8,24 @@ from .digest import Analysis
 from .fetch_trending import TrendingRepo
 
 
-def load_state(path: Path) -> list[dict]:
+def _empty_state() -> dict:
+    # 每次返回全新对象, 避免共享可变 items 列表被调用方原地修改
+    return {"doc_token": None, "doc_url": None, "items": []}
+
+
+def load_state(path: Path) -> dict:
+    """返回 {"doc_token", "doc_url", "items"}; 兼容旧版纯 list 格式."""
     if not path.exists():
-        return []
-    return json.loads(path.read_text(encoding="utf-8"))
+        return _empty_state()
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(data, list):
+        return {**_empty_state(), "items": data}
+    return data
 
 
-def save_state(path: Path, items: list[dict]) -> None:
+def save_state(path: Path, state: dict) -> None:
     path.parent.mkdir(exist_ok=True)
-    path.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+    path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def to_item(repo: TrendingRepo, analysis: Analysis) -> dict:
