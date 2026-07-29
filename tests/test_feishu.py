@@ -11,6 +11,23 @@ REPO = TrendingRepo(owner="foo", name="bar", url="https://github.com/foo/bar",
 AN = Analysis(one_liner="一句话", detail_md="详情")
 
 
+def test_format_stars_k_unit():
+    assert fs._format_stars(234) == "234"
+    assert fs._format_stars(1326) == "1.3K"
+    assert fs._format_stars(18773) == "18.8K"
+    assert fs._format_stars(21000) == "21K"     # 去掉无意义的 .0
+    assert fs._format_stars(234853) == "234.9K"
+
+
+def test_build_card_uses_k_unit_stars():
+    repo = TrendingRepo(owner="foo", name="bar", url="https://github.com/foo/bar",
+                        stars=18773, description="demo")
+    card = fs.build_card("2026-07-29", [repo], [AN], None)
+    content = card["elements"][0]["content"]
+    assert "✰ 18.8K" in content
+    assert "18,773" not in content
+
+
 def test_gen_sign_deterministic():
     s1 = fs.gen_sign("secret", 1700000000)
     assert s1 == fs.gen_sign("secret", 1700000000)

@@ -26,11 +26,19 @@ def gen_sign(secret: str, timestamp: int) -> str:
     return base64.b64encode(digest).decode("utf-8")
 
 
+def _format_stars(stars: int) -> str:
+    """卡片内星数用 K 单位缩写, 如 18773 → 18.8K (千位以下原样)."""
+    if stars < 1000:
+        return str(stars)
+    value = round(stars / 1000, 1)
+    return f"{value:g}K"
+
+
 def build_card(date_str: str,
                repos: list[TrendingRepo], analyses: list[Analysis],
                report_url: str | None, supplement: bool = False) -> dict:
     repo_lines = "\n".join(
-        f"{i}. [{r.full_name}]({r.url}) ✰ {r.stars:,} — {a.one_liner}"
+        f"{i}. [{r.full_name}]({r.url}) ✰ {_format_stars(r.stars)} — {a.one_liner}"
         for i, (r, a) in enumerate(zip(repos, analyses), 1)
     )
     elements: list[dict] = [{"tag": "markdown", "content": repo_lines}]
