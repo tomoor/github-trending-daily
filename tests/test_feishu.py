@@ -12,7 +12,10 @@ AN = Analysis(one_liner="一句话", detail_md="详情")
 
 
 def test_format_stars_k_unit():
+    assert fs._format_stars(0) == "0"
     assert fs._format_stars(234) == "234"
+    assert fs._format_stars(999) == "999"       # 边界: 千位以下原样
+    assert fs._format_stars(1000) == "1K"       # 边界: 恰好 1000
     assert fs._format_stars(1326) == "1.3K"
     assert fs._format_stars(18773) == "18.8K"
     assert fs._format_stars(21000) == "21K"     # 去掉无意义的 .0
