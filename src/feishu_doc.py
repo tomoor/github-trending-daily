@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import time
 
 import requests
@@ -63,7 +64,9 @@ def _import_as_docx(token: str, file_token: str, title: str) -> tuple[str, str] 
         "file_token": file_token,
         "type": "docx",
         "file_name": title,
-        "point": {"mount_type": 1, "mount_key": ""},
+        # FEISHU_FOLDER_TOKEN: 挂载到用户共享文件夹(长效浏览入口), 未配置则应用空间根目录
+        "point": {"mount_type": 1,
+                  "mount_key": os.environ.get("FEISHU_FOLDER_TOKEN", "")},
     })
     if not data:
         return None

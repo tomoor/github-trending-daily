@@ -54,6 +54,24 @@ def test_create_daily_doc_success(monkeypatch):
     assert share_call[2]["json"]["link_share_entity"] == "anyone_readable"
 
 
+def test_create_daily_doc_mounts_to_folder_env(monkeypatch):
+    calls = []
+    monkeypatch.setattr(fd.requests, "request", _happy_router(calls))
+    monkeypatch.setenv("FEISHU_FOLDER_TOKEN", "FldTest123")
+    fd.create_daily_doc("# md", "t", "cli_id", "secret")
+    import_call = next(c for c in calls if c[1].endswith("/import_tasks"))
+    assert import_call[2]["json"]["point"]["mount_key"] == "FldTest123"
+
+
+def test_create_daily_doc_default_mount_root(monkeypatch):
+    calls = []
+    monkeypatch.setattr(fd.requests, "request", _happy_router(calls))
+    monkeypatch.delenv("FEISHU_FOLDER_TOKEN", raising=False)
+    fd.create_daily_doc("# md", "t", "cli_id", "secret")
+    import_call = next(c for c in calls if c[1].endswith("/import_tasks"))
+    assert import_call[2]["json"]["point"]["mount_key"] == ""
+
+
 def test_create_daily_doc_no_old_token_skips_delete(monkeypatch):
     calls = []
     monkeypatch.setattr(fd.requests, "request", _happy_router(calls))

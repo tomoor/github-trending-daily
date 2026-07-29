@@ -25,7 +25,8 @@ Worker 部署：`cd cf-worker && npx wrangler deploy && npx wrangler secret put 
 2. 仓库 Settings → Secrets and variables → Actions 添加:
    - `FEISHU_WEBHOOK_URL`: 群机器人 webhook 地址
    - `FEISHU_WEBHOOK_SECRET`: （可选）签名密钥
-   - `FEISHU_APP_ID` / `FEISHU_APP_SECRET`: （可选）自建应用凭证，配置后日报同步为飞书云文档；应用需开通云空间文件管理权限（`drive:drive`）并发布版本
+   - `FEISHU_APP_ID` / `FEISHU_APP_SECRET`: （可选）自建应用凭证，配置后日报同步为飞书云文档；应用需开通云空间文件管理权限（`drive:drive`）、启用机器人能力并发布版本
+   - `FEISHU_FOLDER_TOKEN`: （可选）云盘共享文件夹 token（文件夹 URL 末段），文档将归档到该文件夹作为长效浏览入口；需将应用添加为文件夹协作者（可编辑）
 3. Actions 页手动触发 `Daily Trending Report` 验证
 
 ## 本地调试
