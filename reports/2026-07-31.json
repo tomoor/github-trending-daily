@@ -1,0 +1,160 @@
+{
+  "doc_token": "ACHOdlQyGo4yKJxYe7Bc2vaFnDU",
+  "doc_url": "https://my.feishu.cn/docx/ACHOdlQyGo4yKJxYe7Bc2vaFnDU",
+  "items": [
+    {
+      "id": "huggingface/speech-to-speech",
+      "owner": "huggingface",
+      "name": "speech-to-speech",
+      "url": "https://github.com/huggingface/speech-to-speech",
+      "stars": 8742,
+      "description": "Build local voice agents with open-source models",
+      "one_liner": "Hugging Face Speech-to-Speech 是一个低延迟、模块化的语音代理流水线，支持实时对话式AI。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个灵活、可插拔的开源解决方案，用于构建实时对话式AI系统，以替代封闭系统。  它解决了传统语音AI系统中组件固定、部署不灵活的问题，并支持多种硬件优化。 \n\n**核心功能**\n核心功能包括语音活动检测 (VAD)、语音转文本 (STT)、大型语言模型 (LLM) 推理和文本转语音 (TTS)。  它能接收音频输入、检测语音、转录文本、生成上下文响应并合成自然语音输出。 \n\n**技术亮点**\n该系统具有高度模块化和灵活性，每个阶段都支持多种可互换的后端实现，例如 Whisper、Parakeet TDT 用于 STT，Transformers、MLX-LM 用于 LLM，以及 Qwen3-TTS、MeloTTS 用于 TTS。   它还针对 Apple Silicon (MLX) 和 NVIDIA (CUDA) 进行了硬件优化，并支持多种部署模式，包括本地、Socket、WebSocket 和 OpenAI Realtime API 兼容模式。 \n\n**适合谁用**\n该项目适合需要构建低延迟、可定制的实时语音代理的开发者和研究人员。  尤其适用于希望在本地硬件上运行模型、集成到现有应用或设备中，或需要与 OpenAI Realtime API 兼容的场景。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/AI-For-Beginners",
+      "owner": "microsoft",
+      "name": "AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "stars": 53858,
+      "description": "12 Weeks, 24 Lessons, AI for All!",
+      "one_liner": "这是一个为期12周、24节课的综合性开源课程，旨在通过实践项目和测验教授人工智能基础知识。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决人工智能初学者入门难的问题，提供结构化的课程内容，帮助他们从基础概念到高级主题逐步学习AI。 它通过结合理论知识和实践操作，使学习过程更具吸引力并提高概念的保留率。\n\n**核心功能**\n核心功能包括24节课程，涵盖符号AI、神经网络、计算机视觉、自然语言处理、遗传算法、强化学习、多智能体系统和AI伦理等主题。 每节课都包含理论内容、Jupyter Notebooks中的代码示例（支持TensorFlow和PyTorch双框架）、 以及课前课后测验和实验。\n\n**技术亮点**\n项目采用Python 3、Jupyter Notebooks、TensorFlow和PyTorch作为主要技术栈。 它支持多种开发环境，包括VS Code Dev Containers、GitHub Codespaces和本地设置。 此外，项目还具备广泛的多语言支持，通过GitHub Actions自动进行50多种语言的翻译。\n\n**适合谁用**\n该课程专为没有AI经验的初学者设计， 同时也适合希望通过自学或作为教师指导学生学习AI的人群。 它不侧重于商业AI应用、经典机器学习或云特定框架，而是专注于概念理解和动手编码。",
+      "degraded": false
+    },
+    {
+      "id": "paperswithbacktest/awesome-systematic-trading",
+      "owner": "paperswithbacktest",
+      "name": "awesome-systematic-trading",
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+      "stars": 11008,
+      "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+      "one_liner": "这是一个系统化交易资源库，收集了量化交易策略的论文、软件、书籍和文章。",
+      "detail_md": "### 解决什么问题\n该项目旨在为系统化（量化）交易提供一个全面的资源中心，解决交易员、研究人员和开发者在寻找、开发和实施量化交易策略时信息分散的问题。  它汇集了软件库、学术论文、书籍、视频和文章等高质量资源，涵盖了从数据获取、分析到策略开发、回测和部署的整个工作流程。 \n\n### 核心功能\n该项目主要提供以下几类核心功能：\n*   **库和包**：收录了超过97个用于研究和实盘交易的软件工具，包括回测框架（如`vnpy`、`zipline`、`backtrader` ）、交易机器人、分析工具、经纪商API、数据源、数据科学、机器学习和可视化工具等。  \n*   **交易策略**：提供了40多种机构和学术界描述的系统化交易策略，按资产类别分类，并附有夏普比率、波动率、再平衡频率等信息，部分策略还提供Python实现示例。  \n*   **教育资源**：包含55本量化交易书籍（涵盖初学者、传记、编程、机器学习等类别  ）、23个视频和访谈，以及精选的博客和课程，帮助用户学习和提升量化交易技能。 \n\n### 技术亮点\n*   **多语言支持**：项目提供中文版`README_zh.md`，方便中文用户访问。 \n*   **策略实现示例**：部分策略提供了基于QuantConnect框架的Python实现，例如“资产增长效应”、“ROA效应” 和“应计项目异常” 等，展示了如何将学术研究转化为实际交易算法。 \n*   **广泛的工具集成**：涵盖了多种编程语言（如Python、Go、Rust、C++、TypeScript）和技术栈，支持事件驱动和向量化回测框架，以及机器学习库（如TensorFlow、PyTorch、Scikit-learn）在量化金融中的应用。   \n\n### 适合谁用\n该项目适合以下人群：\n*   **量化交易员和研究人员**：希望探索、开发和实施系统化交易策略的专业人士。 \n*   **金融科技开发者**：寻找用于回测、实时交易、数据分析和机器学习的软件库和工具的开发者。 \n*   **量化投资学习者**：希望通过书籍、视频、博客和课程学习量化交易知识的初学者和进阶者。",
+      "degraded": false
+    },
+    {
+      "id": "different-ai/openwork",
+      "owner": "different-ai",
+      "name": "openwork",
+      "url": "https://github.com/different-ai/openwork",
+      "stars": 18693,
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "one_liner": "OpenWork 是一个开源桌面应用，通过 AI 代理在本地文件上执行任务，支持多模型和团队协作。",
+      "detail_md": "**解决什么问题**\nOpenWork 旨在解决企业和个人在使用 AI 代理时面临的隐私、模型选择和团队协作问题。 它提供了一个本地优先的解决方案，确保文件和敏感数据保留在用户机器上，而不是发送到云端。 此外，它允许用户自带模型和提供商，支持 50 多种大型语言模型（LLMs），避免了厂商锁定。 对于团队，OpenWork 简化了 AI 代理设置的共享和部署，并提供了策略和安全防护。\n\n**核心功能**\nOpenWork 的核心功能包括：\n*   **桌面应用**：提供 macOS、Windows 和 Linux 上的图形用户界面，用于与 AI 代理交互。\n*   **多模型支持**：兼容 OpenAI、Anthropic、Google 以及本地模型等 50 多种 LLM 提供商。\n*   **技能、插件和 MCP 服务器**：通过这些扩展机制增强代理的能力，使其能够执行更复杂的任务。\n*   **团队协作与共享**：支持团队共享代理设置、策略和安全防护，简化了企业内部的 AI 部署。 用户可以通过一个链接分享整个代理设置，包括技能、MCPs 和配置。\n\n**技术亮点**\n*   **本地优先架构**：在桌面应用中运行，确保文件和数据保留在本地，增强隐私和安全性。\n*   **可扩展性**：通过 `Skills`、`Plugins` 和 `MCP` (Managed Control Plane) 服务器机制，允许用户和团队自定义和扩展 AI 代理的功能。\n*   **灵活的部署模型**：支持自托管或托管部署，并可与现有 SSO/SAML 认证系统集成。\n*   **多语言支持**：应用程序界面支持包括中文在内的多种语言，提升了全球用户的可用性。\n\n**适合谁用**\nOpenWork 适合希望在本地环境中安全使用 AI 代理的个人用户，以及需要部署、管理和共享 AI 代理工作流的企业和团队。 特别适用于对数据隐私有严格要求、需要集成多种 LLM 模型、或希望标准化团队 AI 工作流程的组织。 它也适合开发者，因为它是开源的，并提供了扩展 AI 代理能力的工具。",
+      "degraded": false
+    },
+    {
+      "id": "WhiskeySockets/Baileys",
+      "owner": "WhiskeySockets",
+      "name": "Baileys",
+      "url": "https://github.com/WhiskeySockets/Baileys",
+      "stars": 10429,
+      "description": "Socket-based TS/JavaScript API for WhatsApp Web",
+      "one_liner": "Baileys是一个基于WebSocket的TypeScript库，用于与WhatsApp Web API交互。",
+      "detail_md": "**解决什么问题**\nBaileys解决了应用程序无需浏览器或Selenium即可与WhatsApp交互的问题，它通过WebSocket连接直接与WhatsApp服务器通信，并实现了完整的加密协议栈。这使得开发者能够构建自定义的WhatsApp自动化、机器人和集成应用。\n\n**核心功能**\n该库支持WhatsApp多设备协议，允许应用程序进行身份验证（通过二维码或配对码），发送和接收所有消息类型（文本、媒体、投票、反应等），管理聊天、群组、联系人和隐私设置，以及跨设备同步应用状态和消息历史。所有通信都使用Signal协议进行端到端加密。\n\n**技术亮点**\nBaileys采用装饰器模式来组合Socket功能，入口点`makeWASocket`封装了多层专业逻辑。它使用Noise协议进行WebSocket帧加密，并通过`libsignal`和`whatsapp-rust-bridge`实现Signal协议的端到端加密。此外，它还支持WhatsApp的二进制Protobuf消息格式。\n\n**适合谁用**\nBaileys适用于需要与WhatsApp Web API进行程序化交互的开发者，例如构建WhatsApp自动化工具、聊天机器人或集成服务。它要求Node.js 20.0.0或更高版本。",
+      "degraded": false
+    },
+    {
+      "id": "pascalorg/editor",
+      "owner": "pascalorg",
+      "name": "editor",
+      "url": "https://github.com/pascalorg/editor",
+      "stars": 20096,
+      "description": "Create and share 3D architectural projects.",
+      "one_liner": "Pascal Editor 是一个基于 React Three Fiber 和 WebGPU 的 3D 建筑编辑器。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个功能强大的 3D 建筑设计和编辑平台。它通过模块化的架构，将核心逻辑、3D 渲染和用户界面分离，从而实现高效的开发和维护。此外，它还通过 MCP 服务器支持 AI 驱动的场景编辑，允许 AI 代理以无头方式读取、修改和管理 3D 场景。\n\n**核心功能**\n项目提供 3D 场景管理、空间索引、事件处理和渲染等核心基础设施。`@pascal-app/core` 包负责场景图、节点模式、状态管理和核心系统。`@pascal-app/viewer` 包提供基于 React Three Fiber 的 3D 渲染组件和 WebGPU 渲染栈。`apps/editor` 应用程序则集成了这些组件，提供完整的编辑体验，包括工具、面板和自定义行为。MCP 服务器 (`@pascal-app/mcp`) 允许 AI 代理通过自然语言指令与 3D 场景进行交互，例如生成平面图或进行房间改造。\n\n**技术亮点**\n该项目采用 React 19、Next.js 16.2、React Three Fiber 9 和 Three.js 0.184 构建前端和 3D 渲染。状态管理使用 Zustand 5，并结合 Zundo 实现撤销/重做功能。WebGPU 渲染栈提供了高性能的 3D 渲染，包括后处理效果。MCP 服务器通过“无头桥接”架构，在 Node.js 或 Bun 环境中模拟浏览器 API，实现核心逻辑与渲染逻辑的隔离。\n\n**适合谁用**\n该项目适合需要进行 3D 建筑设计、编辑和可视化的用户。对于希望通过 AI 驱动的方式生成或修改 3D 场景的开发者和研究人员，MCP 服务器提供了强大的接口。其模块化设计也使其适用于需要将 3D 编辑功能嵌入到其他应用程序中的场景。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 55522,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "这是一个由AI代理驱动的搜索引擎，它通过分析社交媒体和网络数据，提供基于社区参与度的实时信息摘要。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLMs）存在的“时效性差距”问题，通过提供基于社区实时信号的最新信息。它不同于传统搜索引擎侧重SEO，而是优先考虑用户参与度，例如点赞、转发和实际交易量，以反映真实的人们关注的内容。\n\n**核心功能**\n该系统能够并行搜索并整合来自Reddit、X/Twitter、YouTube、TikTok、Instagram、Hacker News、Polymarket、GitHub等十多个平台的数据。它通过智能预研功能，在搜索前解析实体（如X句柄、subreddit和YouTube频道），进行有针对性的深度搜索。最终，AI代理会综合这些信息，生成结构化的报告，包括排名靠前的证据集群和“最佳观点”部分。\n\n**技术亮点**\n该项目采用Python 3.12+开发，利用`yt-dlp`进行YouTube视频转录，并使用Node.js的`Bird`客户端进行X搜索。它实现了多源融合算法（RRF）来整合来自不同平台的数据，并使用混合相似性算法进行去重。系统还支持多种安装方式，包括Claude Code插件和Agent Skills CLI，并能自动保存研究报告为Markdown文件。\n\n**适合谁用**\n该工具适用于需要快速了解特定主题在过去30天内社区讨论和情绪的用户，例如在会议前了解某人的最新动态、比较工具、分析市场情绪或进行招聘信号研究等场景。它特别适合那些需要实时、去中心化、以社区参与度为导向的信息，而不是传统SEO或编辑筛选结果的用户。",
+      "degraded": false
+    },
+    {
+      "id": "dotnet/aspnetcore",
+      "owner": "dotnet",
+      "name": "aspnetcore",
+      "url": "https://github.com/dotnet/aspnetcore",
+      "stars": 38286,
+      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+      "one_liner": "此项目提供多种ASP.NET Core项目模板，用于快速创建Web应用、API和后台服务。",
+      "detail_md": "**解决什么问题**\n该项目旨在简化ASP.NET Core应用程序的开发过程，通过提供预配置的项目模板，帮助开发者快速启动不同类型的Web项目，减少从零开始搭建项目所需的时间和精力。\n\n**核心功能**\n核心功能包括提供多种项目类型，例如ASP.NET Core Web应用程序（MVC）、Blazor WebAssembly独立应用程序、ASP.NET Core Web API 和后台工作服务。每个模板都包含预设的配置和示例代码，并支持多种认证方式（如无认证、个人认证、Azure AD B2C认证、组织认证和Windows认证）。\n\n**技术亮点**\n技术亮点在于其高度的可配置性，允许用户在创建项目时选择目标框架、是否包含示例页面、是否禁用HTTPS 以及是否使用LocalDB。对于Blazor项目，还支持选择不同的交互式渲染模式（无、服务器、WebAssembly、自动）和交互位置。\n\n**适合谁用**\n此项目适合需要快速开发ASP.NET Core Web应用程序、RESTful HTTP服务或后台服务的开发者。特别是对于那些希望利用Blazor框架构建富动态UI的Web应用程序的开发者，以及需要集成各种认证方案的企业和个人开发者。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/PowerToys",
+      "owner": "microsoft",
+      "name": "PowerToys",
+      "url": "https://github.com/microsoft/PowerToys",
+      "stars": 137104,
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+      "one_liner": "PowerToys 是一个开源工具集，旨在提升 Windows 用户体验和生产力。",
+      "detail_md": "**解决什么问题**\nPowerToys 旨在通过提供一系列实用工具来增强 Windows 的功能，解决用户在日常使用中遇到的效率低下、功能缺失等问题 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"8\" page_name=\"Contributing to PowerToys\" />。例如，它提供了键盘重映射功能，以解决用户对默认键盘布局或快捷键不满意的问题 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"3.3\" page_name=\"Keyboard Manager\" />。\n\n**核心功能**\n该项目包含多个独立的实用工具，例如键盘管理器（Keyboard Manager），允许用户重新映射单个按键或键盘快捷键，可应用于系统全局或特定应用程序 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"3.3\" page_name=\"Keyboard Manager\" />。此外，还有其他模块如 FancyZones、Image Resizer、PowerRename 等，每个模块都提供特定的功能来优化工作流程。\n\n**技术亮点**\nPowerToys 采用模块化架构，每个工具作为一个独立的模块集成到 PowerToys Runner 进程中 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"3.3\" page_name=\"Keyboard Manager\" />。例如，键盘管理器通过低级键盘钩子 `WH_KEYBOARD_LL` 拦截所有键盘事件，并使用 `Shortcut` 类处理复杂的按键组合和操作 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"3.3\" page_name=\"Keyboard Manager\" />。项目还利用自动化工具如 FabricBot 管理社区贡献和问题，确保开发流程高效 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"8\" page_name=\"Contributing to PowerToys\" />。\n\n**适合谁用**\nPowerToys 适合所有希望提升 Windows 操作系统使用效率和个性化体验的用户 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"8\" page_name=\"Contributing to PowerToys\" />。无论是需要自定义键盘快捷键的专业人士，还是希望简化日常操作的普通用户，都能从中找到有用的工具 <wiki_page repo_name=\"microsoft/PowerToys\" id=\"3.3\" page_name=\"Keyboard Manager\" />。",
+      "degraded": false
+    },
+    {
+      "id": "ansible/ansible",
+      "owner": "ansible",
+      "name": "ansible",
+      "url": "https://github.com/ansible/ansible",
+      "stars": 69871,
+      "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+      "one_liner": "Ansible是一个自动化引擎，用于配置管理、应用部署和任务编排，无需代理即可简化IT自动化。",
+      "detail_md": "### 解决什么问题\nAnsible解决了IT自动化中的复杂性问题，通过声明式YAML剧本实现系统配置、应用部署和复杂工作流的编排，无需在目标系统上安装代理。 它通过使用标准协议（如SSH、WinRM）来管理机器，避免了自定义代理和额外开放端口的需求。\n\n### 核心功能\nAnsible的核心功能包括：通过YAML定义声明式任务、提供幂等操作以确保重复运行的安全性、支持多主机并行执行、通过插件和模块实现可扩展性，以及通过集合进行内容分发。 它提供了多种命令行工具，如`ansible`用于即席命令，`ansible-playbook`用于执行剧本，`ansible-galaxy`用于管理集合和角色。\n\n### 技术亮点\nAnsible的技术亮点在于其无代理架构，使用SSH等标准协议进行通信，降低了部署和维护的复杂性。 它采用模块化设计，通过插件系统（如连接插件、动作插件）和模块系统（基于`AnsibleModule`基类）实现高度可扩展性。 配置系统通过`ConfigManager`管理，支持CLI参数、环境变量和配置文件等多种配置源，并有明确的优先级。\n\n### 适合谁用\nAnsible适合需要简化IT自动化、配置管理、应用部署和工作流编排的系统管理员、DevOps工程师和开发人员。 它的简单设置和低学习曲线使其成为希望快速实现自动化而无需复杂代理部署的用户的理想选择。",
+      "degraded": false
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 48027,
+      "description": "Chrome DevTools for coding agents",
+      "one_liner": "这是一个用于自动化Chrome DevTools任务、提供浏览器自动化工具和性能分析能力的软件包。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决浏览器自动化、性能分析和调试的复杂性问题，通过提供一系列工具和功能，简化开发者与Chrome DevTools的交互，例如自动化测试、性能指标收集和辅助功能调试等。\n\n**核心功能**\n核心功能包括：提供用于可访问性调试和审计的技能；支持LCP（Largest Contentful Paint）优化；实验性的截屏录制工具；内存快照功能；以及网络请求过滤。它还支持在页面加载时注入脚本，并能测试亮色和暗色模式。\n\n**技术亮点**\n技术亮点包括：使用`release-please`机器人进行版本管理和发布自动化；通过GitHub Actions实现持续集成和发布流程；在发布前进行预验证，确保包的正确性；以及自动维护`CHANGELOG.md`文件。\n\n**适合谁用**\n该项目适合需要进行浏览器自动化测试、网页性能优化、辅助功能审计以及希望通过编程方式与Chrome DevTools交互的开发者和团队。",
+      "degraded": false
+    },
+    {
+      "id": "jenkinsci/jenkins",
+      "owner": "jenkinsci",
+      "name": "jenkins",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "stars": 26285,
+      "description": "Jenkins automation server",
+      "one_liner": "Jenkins 是领先的开源自动化服务器，用于自动化开发工作流程。",
+      "detail_md": "**解决什么问题**\nJenkins 旨在通过自动化重复性任务来优化开发流程，例如项目构建、运行测试以尽早发现错误、执行静态代码分析和部署应用程序。它帮助开发人员将精力集中在机器无法完成的工作上。\n\n**核心功能**\nJenkins 的核心功能包括构建项目、运行测试、静态代码分析和部署。它通过提供超过 2,000 个插件来支持几乎所有自动化需求。项目以 WAR 文件、Docker 镜像、原生包和安装程序的形式分发。\n\n**技术亮点**\nJenkins 采用多模块 Maven 项目结构进行构建。它使用 Maven 作为构建工具，并包含 `jenkins-core` 模块作为主要功能和视图文件。构建系统支持插件管理，包括“分离插件”的概念，这些插件在运行时由 `LocalPluginManager` 加载。它还处理资源本地化、Jelly 模板和 ANTLR 语法生成。前端资源通过 Node.js 和 Yarn 构建。\n\n**适合谁用**\nJenkins 适用于需要自动化开发工作流程的开发人员和团队。它被数百万用户和数千家公司使用。Jenkins 提供两种发布线：包含所有新功能的周发布版和定期更新错误修复的长期支持 (LTS) 版本。",
+      "degraded": false
+    },
+    {
+      "id": "agavra/tuicr",
+      "owner": "agavra",
+      "name": "tuicr",
+      "url": "https://github.com/agavra/tuicr",
+      "stars": 1839,
+      "description": "a code review TUI with vim keybindings",
+      "one_liner": "`tuicr` 是一个终端用户界面 (TUI) 工具，用于在终端中像 GitHub 拉取请求一样审查 AI 生成的差异。",
+      "detail_md": "**解决什么问题**\n`tuicr` 旨在解决 AI 辅助开发中代码审查的痛点。它提供了一个中间方案，避免了“审查每个更改”的缓慢和“接受所有编辑”导致后期痛苦的审查。通过 `tuicr`，用户可以像审查普通拉取请求一样审查 AI 生成的更改，并以结构化反馈的形式导出评论，供 AI 代理一次性处理。\n\n**核心功能**\n`tuicr` 提供无限滚动的差异视图，将所有更改的文件聚合到一个连续视图中。它支持 Vim 风格的按键绑定进行导航，可以添加行级、文件级或审查级的评论，并支持自定义评论类型。审查进度和评论会自动保存并可在会话之间恢复。此外，它还支持 `.tuicrignore` 文件来排除文件，并将审查结果导出为针对 LLM 优化的 Markdown 格式。它还内置支持 Jujutsu (`jj`)、Git 和 Mercurial (`hg`) 等版本控制系统。\n\n**技术亮点**\n该项目使用 Rust 语言开发，并利用 `ratatui` 和 `crossterm` 库构建终端用户界面。它通过 `VcsBackend` 特性抽象了版本控制系统操作，支持 Git、Jujutsu 和 Mercurial。主题解析逻辑具有优先级，CLI 参数 `--theme` 优先于配置文件设置。`tuicr` 还提供了与 AI 代理集成的能力，例如通过 `skills/tuicr/` 目录下的技能包，允许 AI 代理在 tmux 分割窗格中启动 `tuicr` 进行交互式审查。\n\n**适合谁用**\n`tuicr` 适合使用 AI 代理（如 Claude 或 Codex）进行开发的工程师，他们需要一种高效的方式来审查 AI 生成的代码差异，并提供结构化、多点反馈。它也适用于习惯于终端环境和 Vim 键绑定的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 236194,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code 是一个 AI 智能体性能优化系统，旨在自动化软件工程工作流。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统 AI 智能体在软件开发中效率低下、上下文管理复杂以及缺乏专业化的问题。  它通过提供一个由 67 个专业子代理组成的生态系统，  自动化了从规划、执行到审查的整个软件开发生命周期，  从而优化了 AI 智能体平台的性能。 \n\n**核心功能**\n核心功能包括：\n*   **专业化智能体**：提供 67 个专业子代理，  覆盖核心开发、语言专家、构建与解决以及领域与运维等多个类别。 \n*   **工作流自动化**：通过“规划-执行-审查”生命周期，  自动化任务，例如 `planner` 代理负责任务规划，  `tdd-guide` 代理强制执行测试驱动开发，  `code-reviewer` 和 `security-reviewer` 代理进行代码审查。 \n*   **上下文管理与优化**：通过 `context-budget` 技能审计上下文窗口消耗，  并提供令牌优化建议，  例如使用 `/clear` 清除不相关的任务上下文，  和 `/compact` 在逻辑断点处精简上下文。 \n\n**技术亮点**\n*   **代理优先架构**：系统以代理为核心，  每个代理都有特定的工具访问、模型偏好和领域边界。 \n*   **多语言支持**：提供 11 种以上语言的文档和本地化资产，  确保全球开发者的可用性。 \n*   **可定制性**：用户可以根据自己的工作流和技术栈定制配置，  包括添加自己的模式和移除不需要的部分。 \n*   **Git 工作流集成**：支持约定式提交格式  和 PR 工作流，  确保代码质量和可维护性。 \n\n**适合谁用**\n该项目适用于使用 **Claude Code**、**Codex**、**Cursor**、**OpenCode**、**Gemini** 等 AI 智能体平台的开发者和团队。  特别适合需要自动化软件开发流程、优化 AI 智能体性能、管理复杂上下文以及确保代码质量和安全性的用户。",
+      "degraded": false
+    }
+  ]
+}
