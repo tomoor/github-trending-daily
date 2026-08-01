@@ -1,0 +1,138 @@
+{
+  "doc_token": "LZNfdSjJSo57jfxXn3QcEkmrnZn",
+  "doc_url": "https://my.feishu.cn/docx/LZNfdSjJSo57jfxXn3QcEkmrnZn",
+  "items": [
+    {
+      "id": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "stars": 10681,
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "one_liner": "本项目是一个面向AI代码助手的安全任务技能路由与自动化框架。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI在执行逆向工程、渗透测试和安全分析任务时，无法有效选择工具、规划工作流以及复用经验的问题。它避免了AI直接猜测命令，而是通过结构化的路由机制引导AI使用正确的方法论和工具链。\n\n**核心功能**\n核心功能包括技能路由、工具自举与索引、经验自动回写和Agent服从性工程。它通过 `routing.md` 实现任务到子技能的分流，利用 `bootstrap-reverse.ps1` 自动安装缺失工具并更新 `tool-index.md`。每次任务完成后，AI会将经验自动回写至 `field-journal/` 目录，实现知识库的自我进化。此外，它还包含Agent服从性工程，确保AI严格遵循指令执行任务。\n\n**技术亮点**\n技术亮点在于其“先路由后执行”的工作哲学，以及通过 `RULES.md` 实现的全局规则注入机制，使得AI客户端能自动加载路由规则。它支持多平台（Windows, Kali Linux, Ubuntu, macOS），并能与MCP（Model Context Protocol）工具桥接，实现AI对本地安全工具的直接调用和编排。\n\n**适合谁用**\n该项目适合使用Claude Code、Codex CLI、Cursor等AI代码助手的安全研究人员、渗透测试工程师和逆向工程师。它帮助这些用户将AI助手集成到日常安全工作中，提高自动化水平和工作效率，尤其是在处理APK逆向、二进制分析、前端JS逆向、渗透测试等复杂任务时。",
+      "degraded": false
+    },
+    {
+      "id": "different-ai/openwork",
+      "owner": "different-ai",
+      "name": "openwork",
+      "url": "https://github.com/different-ai/openwork",
+      "stars": 19478,
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "one_liner": "OpenWork 是一个免费开源的桌面应用，用于通过 AI 代理处理文件，是 Claude Cowork 和 Codex 的开源替代品。",
+      "detail_md": "**解决什么问题**\nOpenWork 旨在解决专有 AI 代理工作空间（如 Claude Cowork 和 Codex）的局限性，提供一个本地优先、可扩展的替代方案。它允许用户自带 50 多种大型语言模型（LLM）的密钥，并通过技能、插件和 MCP 服务器扩展代理功能。项目还致力于简化团队协作，通过一个链接即可共享完整的代理设置。\n\n**核心功能**\n该项目提供桌面应用（macOS, Windows, Linux），支持自带模型和提供商（如 OpenAI, Anthropic, 本地模型等）。它还具备技能、插件和 MCP 服务器扩展功能，并支持团队共享代理设置及策略和防护措施。此外，OpenWork 还提供云端工作器服务，用于长时间运行的任务。\n\n**技术亮点**\nOpenWork 基于 Next.js 和 App Router 构建，使用 Framer Motion 进行动画，并采用 Tailwind CSS 进行样式设计。它通过 `WebMcpProvider` 组件将网站功能暴露给 AI 代理，支持 `navigate_to`、`get_pricing_summary` 和 `get_download_links` 等工具。项目还实现了复杂的事件跟踪和自动化评估流程，例如 `landing-copy-prompt-analytics.flow.mjs` 用于验证用户复制提示时的事件触发。\n\n**适合谁用**\nOpenWork 适合需要灵活使用多种 LLM、希望在本地机器上运行 AI 代理并保持数据隐私的个人开发者。对于团队而言，它提供了共享技能、插件和 AI 工作流的能力，并支持企业级的 SSO、SCIM 供应和桌面策略。大型组织也可以选择自托管或托管部署，以满足合规性和定制化需求。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 56208,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "本项目是一个AI代理驱动的搜索引擎，通过整合多源社交媒体数据，提供过去30天内热门话题的深度分析报告。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统搜索引擎和大型语言模型（LLMs）在信息时效性和社交信号捕捉方面的不足。它通过聚合Reddit、X (Twitter)、YouTube、TikTok、Instagram、Hacker News、Polymarket和GitHub等多个平台的数据，提供基于用户互动（如点赞、转发、投票、真实资金押注）而非编辑推荐的实时信息。\n\n**核心功能**\n核心功能包括智能预研究、多源社交管道和自动化知识库。智能预研究（v3引擎）在搜索前解析实体，如X句柄、subreddit和YouTube频道，进行精准搜索。多源社交管道从Reddit、X、Polymarket、GitHub、YouTube、TikTok和Instagram等平台获取数据，并根据用户参与度进行评分和排名。每次研究运行都会自动保存为Markdown文件，形成一个可搜索的本地知识库。\n\n**技术亮点**\n项目采用Python 3.12+开发，并支持多种代理技能宿主（如Claude Code, Codex, Cursor, Gemini CLI）。它使用Reciprocal Rank Fusion (RRF) 算法整合来自不同平台的数据，并进行实体聚类以避免重复信息。此外，它还具备智能搜索规划、跨源集群合并、单次比较和自动发现竞争对手等高级功能。\n\n**适合谁用**\n该项目适用于需要快速了解特定主题在过去30天内社交媒体动态的用户，例如：在会议前了解某人的最新动态、在产品发布前评估市场情绪、进行工具比较、或在旅行前获取社区建议。它特别适合那些需要基于真实用户参与度而非传统SEO排名来获取信息的专业人士和研究人员。",
+      "degraded": false
+    },
+    {
+      "id": "paperswithbacktest/awesome-systematic-trading",
+      "owner": "paperswithbacktest",
+      "name": "awesome-systematic-trading",
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+      "stars": 11730,
+      "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+      "one_liner": "这是一个系统化交易资源库，收集了量化交易策略相关的论文、软件、书籍和文章，旨在帮助用户发现、开发和运行量化交易策略。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决系统化交易领域资源分散的问题，为交易员、研究人员和开发者提供一个集中化的平台，以便他们能够轻松获取高质量的量化交易资源，涵盖从数据获取、分析到策略开发、回测和部署的整个工作流程。  \n\n**核心功能**\n该项目核心功能是提供一个全面的资源索引，包括97个用于研究和实盘交易的库和软件包，40多种机构和学术界描述的交易策略，55本量化交易书籍，以及23个视频、博客和课程等教育资源。此外，它还包含使用QuantConnect平台实现的策略示例，例如“原油预测股票收益”策略 和“美元套利交易”策略。\n\n**技术亮点**\n技术亮点在于其对多种编程语言（如Python、Go、Rust、C++、TypeScript等）库和工具的整合，涵盖回测、实时交易、数据分析、机器学习等多个方面。例如，在回测方面，它列出了事件驱动框架如`vnpy` 和基于矢量的框架如`vectorbt`。在策略实现上，项目提供了基于QuantConnect `QCAlgorithm` 的具体代码示例，展示了如何将学术研究转化为可执行的交易算法。\n\n**适合谁用**\n该项目适合对系统化交易（量化交易）感兴趣的交易员、金融研究人员、量化分析师以及希望开发和实现自动交易策略的开发者。无论是初学者寻求入门知识，还是专业人士寻找高级工具和策略，都能在此找到有价值的资源。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/AI-For-Beginners",
+      "owner": "microsoft",
+      "name": "AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "stars": 55284,
+      "description": "12 Weeks, 24 Lessons, AI for All!",
+      "one_liner": "本项目提供为期12周、24节课的人工智能初学者课程，包含实践课程、测验和实验，涵盖AI基础知识到高级主题。",
+      "detail_md": "**解决什么问题**\n该项目旨在为没有AI经验的初学者提供一个结构化的学习路径，帮助他们掌握人工智能的基本概念和实践技能。它通过结合理论知识和动手实践，解决初学者在学习AI时遇到的理论抽象和实践困难。\n\n**核心功能**\n核心功能包括：\n*   **结构化课程**：提供12周、24节课的课程，涵盖符号AI、神经网络、计算机视觉、自然语言处理、遗传算法、强化学习和AI伦理等主题。\n*   **实践操作**：每节课都包含使用Jupyter Notebooks的实践课程，支持TensorFlow和PyTorch双框架实现。\n*   **评估系统**：提供课前和课后测验，以及实验作业，帮助学习者巩固知识。\n*   **多语言支持**：通过GitHub Action支持50多种语言的自动翻译，方便全球用户学习。\n\n**技术亮点**\n*   **双框架实现**：课程内容同时提供PyTorch和TensorFlow/Keras的实现，允许学习者选择偏好的框架。\n*   **Dev Container支持**：提供`.devcontainer`配置，支持VS Code Dev Containers和GitHub Codespaces，简化开发环境设置。\n*   **Vue.js测验应用**：测验系统是一个独立的Vue.js单页应用，支持国际化。\n*   **自动化翻译**：利用Co-op Translator服务通过GitHub Actions自动生成和维护多语言翻译。\n\n**适合谁用**\n本项目适合：\n*   **AI初学者**：没有AI经验，希望系统学习AI基础知识和实践技能的个人。\n*   **学生**：寻求项目式学习和动手实践机会的学生。\n*   **自学者**：希望通过自学方式掌握AI，并能利用Jupyter Notebooks进行实践的用户。\n*   **教育工作者**：寻找结构化、可用于教学的AI课程材料的教师。",
+      "degraded": false
+    },
+    {
+      "id": "github/copilot-sdk",
+      "owner": "github",
+      "name": "copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "stars": 10131,
+      "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "one_liner": "GitHub Copilot SDK 是一个多语言软件开发工具包，用于构建与 GitHub Copilot 代理交互的应用程序。",
+      "detail_md": "**解决什么问题**\n该项目旨在为开发者提供一个标准化的接口，以便在多种编程语言（如 Node.js/TypeScript、Python、Go、.NET、Java 和 Rust）中集成 GitHub Copilot 的 AI 能力。它解决了直接与 Copilot CLI 交互的复杂性，允许应用程序通过编程方式利用 Copilot 的代码生成、问答和工具调用等功能。\n\n**核心功能**\n核心功能包括创建和管理 Copilot 会话，发送消息并接收响应，支持流式响应以实时获取生成内容，以及定义和使用自定义工具，使 AI 能够调用应用程序的特定代码。此外，它还支持图像输入  和会话钩子以拦截和修改会话行为。\n\n**技术亮点**\n技术亮点包括对多种主流编程语言的广泛支持，灵活的连接模式（子进程或外部服务器），以及通过 `SystemMessageConfig` 对系统提示进行高度定制的能力。SDK 还提供了事件驱动的架构，允许订阅 40 多种会话事件，并支持通过插件目录加载可重用模块。\n\n**适合谁用**\n该 SDK 适合希望在其应用程序中集成 GitHub Copilot 功能的开发者，特别是那些需要通过编程方式控制 AI 代理、实现自定义工具、处理流式数据或对 AI 行为进行精细控制的场景。它也适用于构建需要与 Copilot CLI 深度交互的 AI 驱动型应用。",
+      "degraded": false
+    },
+    {
+      "id": "chatwoot/chatwoot",
+      "owner": "chatwoot",
+      "name": "chatwoot",
+      "url": "https://github.com/chatwoot/chatwoot",
+      "stars": 35109,
+      "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
+      "one_liner": "Chatwoot 是一个开源的多渠道客户沟通平台，帮助企业在一个统一的界面管理客户互动。",
+      "detail_md": "## 解决什么问题\nChatwoot 旨在解决企业在多渠道客户沟通中遇到的挑战，例如通过电子邮件、WhatsApp、Facebook、Instagram、短信等不同渠道与客户互动时，信息分散、管理困难的问题。它提供了一个统一的仪表盘，帮助企业高效地管理客户对话，提升客户满意度。\n\n\n\n## 核心功能\nChatwoot 的核心功能包括多渠道支持、实时消息传递、AI 辅助和自动化工作流。它提供自定义视图和过滤器来组织收件箱，支持业务时间和自动回复，以及团队和自动化工具来扩展支持工作流。此外，它还具备客户数据管理、集成（如 Slack、Dialogflow、Shopify、Google Translate）和报告分析功能。\n\n\n\n## 技术亮点\nChatwoot 采用 Ruby on Rails 作为后端框架，使用 Ruby 3.4.4 和 PostgreSQL 16+ 数据库。前端则基于 Vue.js、Vuex 和 Vite 构建，通过 ActionCable/WebSockets 实现实时通信。系统架构支持水平扩展，包括 Puma Web 服务器、ActionCable 服务器和 Sidekiq 后台工作器。它还集成了 AI 能力，如 Captain AI 代理和 pgvector 进行向量搜索。\n\n\n\n## 适合谁用\nChatwoot 适合需要高效管理多渠道客户沟通的企业和团队。无论是小型企业还是大型组织，只要有客户支持、销售或营销需求，希望通过统一平台与客户互动，并利用自动化和 AI 提升效率，Chatwoot 都是一个理想的选择。它也适合希望部署开源解决方案并进行定制的开发者和公司。\n\nNotes\nThe information provided is based on the project's overview, README, and localization files, specifically config/locales/zh_CN.yml, which indicates support for Chinese localization.",
+      "degraded": false
+    },
+    {
+      "id": "agavra/tuicr",
+      "owner": "agavra",
+      "name": "tuicr",
+      "url": "https://github.com/agavra/tuicr",
+      "stars": 2144,
+      "description": "a code review TUI with vim keybindings",
+      "one_liner": "`tuicr` 是一个终端用户界面 (TUI) 工具，用于在终端中高效审查 AI 生成的代码差异。",
+      "detail_md": "**解决什么问题**\n`tuicr` 旨在解决 AI 辅助开发中代码审查的痛点。它提供了一个介于“接受所有修改”和“逐文件手动检查”之间的中间方案，允许开发者像审查 GitHub 拉取请求一样，在终端中对 AI 生成的差异进行结构化、多点反馈。\n\n**核心功能**\n`tuicr` 提供统一和并排的差异视图，将所有更改的文件聚合到一个连续视图中。它支持 Vim 风格的导航，允许添加审查级别、文件级别或行范围的评论，并支持自定义评论类型。审查进度和评论会自动保存并可在会话间恢复。此外，它还能生成针对 LLM 代理优化的 Markdown 摘要。\n\n**技术亮点**\n该工具使用 `ratatui` 构建用户界面，并使用 `crossterm` 处理终端事件。它抽象了版本控制系统 (VCS) 操作，支持 Git、Jujutsu (`jj`) 和 Mercurial (`hg`)。`tuicr` 能够将原始 VCS 差异转换为交互式、带注释的 TUI，并通过 `App` 结构管理审查会话的生命周期。\n\n**适合谁用**\n`tuicr` 适用于使用 AI 代理（如 Claude 或 Codex）的开发者，他们需要一种方式来提供结构化、多点反馈，以便 AI 代理能够一次性处理并应用修复。它也适合习惯在终端环境中工作并寻求高效代码审查流程的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "usekaneo/kaneo",
+      "owner": "usekaneo",
+      "name": "kaneo",
+      "url": "https://github.com/usekaneo/kaneo",
+      "stars": 5059,
+      "description": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+      "one_liner": "Kaneo 是一个轻量级、开源、自托管的项目管理平台，专注于简洁高效的任务管理和团队协作。",
+      "detail_md": "**解决什么问题**\nKaneo 旨在解决传统项目管理工具“功能臃肿、过度复杂”的问题，这些工具往往会分散团队注意力，使其偏离核心工作。 它提供了一个简洁的界面，让团队能够专注于构建优秀的产品，而不是管理工具本身。\n\n**核心功能**\nKaneo 提供任务管理、看板视图、列表和待办事项视图等核心功能，支持团队协作。 它还包括多租户工作区、身份验证、以及通过 Creem 实现的订阅管理和席位强制执行的计费系统。 此外，Kaneo 支持与 GitHub 进行任务和问题之间的双向同步，并集成了 MCP (Model Context Protocol) 以支持 AI 代理与 Kaneo 数据交互。\n\n**技术亮点**\nKaneo 采用现代 Web 应用程序架构，是一个 pnpm monorepo，前后端分离。 前端使用 React 19 和 Vite 构建，采用 TanStack Router 进行路由，TanStack Query 管理服务器状态，Zustand 管理客户端状态。 后端基于 Hono 框架和 Node.js，使用 Drizzle ORM 进行数据库管理，并支持 PostgreSQL 数据库。 它还利用 `better-auth` 处理身份验证。\n\n**适合谁用**\nKaneo 适合需要精简项目管理方法、注重性能和简洁性的团队。 它特别适合那些希望自托管以完全控制数据、并寻求开源解决方案的用户。 对于不希望被过多功能困扰，而是希望工具能放大团队自然工作流程的团队来说，Kaneo 是一个理想选择。",
+      "degraded": false
+    },
+    {
+      "id": "geo-tp/ESP32-Bit-Pirate",
+      "owner": "geo-tp",
+      "name": "ESP32-Bit-Pirate",
+      "url": "https://github.com/geo-tp/ESP32-Bit-Pirate",
+      "stars": 4987,
+      "description": "A Hardware Hacking Tool with Web-Based CLI That Speaks Every Protocol",
+      "one_liner": "ESP32 Bit Pirate 是一个基于 ESP32 的固件，用于硬件交互和协议分析，支持多种终端和设备视图。",
+      "detail_md": "## 解决什么问题\n该项目旨在提供一个灵活的平台，用于与各种硬件协议（如 I2C, SPI, UART 等）进行交互和调试。它解决了传统硬件调试工具的局限性，允许用户通过多种接口（串口、Wi-Fi 或设备屏幕）发送命令和接收反馈。\n\n## 核心功能\nESP32 Bit Pirate 的核心功能包括：\n*   **多协议支持**：支持 I2C, SPI, UART, OneWire, Bluetooth, Wi-Fi, Ethernet, USB 等多种硬件和网络协议。\n*   **灵活的输入/输出**：用户可以通过串口、Web 界面或设备上的物理按键输入命令，并通过终端视图（串口或 Web）和设备视图（屏幕）获取输出和图形反馈。\n*   **命令调度系统**：`ActionDispatcher` 负责解析用户输入，扩展别名，并将命令路由到相应的控制器和服务进行处理。\n*   **硬件抽象层**：通过 `Service` 层与底层硬件进行交互，实现硬件操作的抽象化。\n\n## 技术亮点\n*   **分层架构**：采用分层架构，将用户界面、协议逻辑和硬件抽象分离，提高了模块化和可维护性。\n*   **依赖注入**：`DependencyProvider` 负责管理和注入核心组件的实例，确保组件之间松耦合。\n*   **状态管理**：`GlobalState` 单例模式管理设备运行时配置，包括引脚分配、协议设置和持久化存储。\n*   **多态接口**：通过 `ITerminalView`、`IDeviceView` 和 `IInput` 等抽象接口支持多种并发 UI 目标和输入方式。\n\n## 适合谁用\n该项目适合需要进行硬件调试、协议分析、嵌入式系统开发以及对 ESP32 平台进行底层硬件交互的工程师、爱好者和研究人员。它也适用于希望通过命令行界面或 Web 界面控制和测试各种传感器、模块和外设的用户。",
+      "degraded": false
+    },
+    {
+      "id": "deepfakes/faceswap",
+      "owner": "deepfakes",
+      "name": "faceswap",
+      "url": "https://github.com/deepfakes/faceswap",
+      "stars": 56971,
+      "description": "Deepfakes Software For All",
+      "one_liner": "本项目是一个基于 Web 的文件管理系统，提供文件上传、下载、预览和分享等功能，支持多种文件类型和权限控制。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统文件管理中文件存储分散、共享不便、权限控制复杂等问题。它提供了一个集中的平台，方便用户管理个人文件，并能安全地与他人协作和分享文件。\n\n**核心功能**\n核心功能包括文件上传与下载、文件预览、文件分享、用户认证与授权。用户可以上传各种类型的文件，通过链接分享给其他用户，并设置不同的访问权限。\n\n**技术亮点**\n项目采用 Next.js 框架构建前端和后端 API，利用 NextAuth.js 实现用户认证，并使用 Prisma ORM 进行数据库操作。文件存储可能集成外部存储服务，如 S3 兼容存储。\n\n**适合谁用**\n适合需要高效管理和分享文件的个人用户、团队以及小型企业。对于开发者而言，它也是一个学习 Next.js、NextAuth.js 和 Prisma 集成应用的良好范例。",
+      "degraded": false
+    },
+    {
+      "id": "1jehuang/jcode",
+      "owner": "1jehuang",
+      "name": "jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "stars": 14594,
+      "description": "The most RAM efficient harness",
+      "one_liner": "`jcode` 是一个高性能、原生 AI 编码代理框架，专为终端深度集成设计。",
+      "detail_md": "**解决什么问题**\n`jcode` 旨在解决传统 AI 编码工具性能低下、资源占用高以及集成度不足的问题。它通过 Rust 原生开发，避免了 Electron 或 Node.js 运行时带来的开销，实现了亚毫秒级的帧渲染时间和极低的内存占用。\n\n**核心功能**\n`jcode` 提供多模型编排能力，支持 Anthropic、OpenAI、Google (Gemini) 等多种大型语言模型。它内置了超过 30 种工具，用于文件操作、搜索 (`agentgrep`) 和 shell 执行。此外，它还具备持久化记忆系统和自主群组协调功能，支持代理在同一代码库中协作。\n\n**技术亮点**\n该项目采用高性能的服务器-客户端模型架构，支持交互式 TUI 会话、非交互式 CLI 运行和持久化后台代理。其内存系统通过本地 ONNX 嵌入跟踪事实和偏好。`jcode` 还具备自我开发循环，代理可以自动修改、构建、测试并热重载自身二进制文件。\n\n**适合谁用**\n`jcode` 适合需要高性能、低资源占用 AI 编码助手的开发者。对于追求终端深度集成、多模型支持以及希望代理能够自主学习和进化的用户，`jcode` 是一个理想的选择。",
+      "degraded": false
+    }
+  ]
+}
