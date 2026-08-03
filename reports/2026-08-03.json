@@ -166,6 +166,72 @@
       "one_liner": "Reasonix 是一个配置与插件驱动的 DeepSeek 原生 AI 编码 Agent，为终端而生，旨在通过优化缓存机制降低长会话的 token 成本。",
       "detail_md": "## 解决什么问题\n该项目旨在解决传统 AI Agent 在长会话中 token 成本高昂的问题，通过 DeepSeek 的字节稳定前缀缓存机制，显著降低输入 token 成本，并提供多平台一致的开发体验。  \n\n## 核心功能\nReasonix 提供交互式 CLI/TUI、桌面应用和本地 Web UI 等多种使用方式。它支持配置驱动的模型和工具管理，具备会话恢复、多种工作模式（如轻量、均衡、交付优先），以及通过斜杠命令和 `@` 符号进行文件引用的智能补全功能。\n\n## 技术亮点\n项目采用 Go 语言编写，编译为单一静态二进制文件，无 CGO 依赖，支持跨平台分发。其核心是“缓存优先”的运行循环，与 DeepSeek 的前缀缓存对齐，使得长会话的缓存命中率超过 90%，输入 token 成本降至约 1/5。此外，它还支持 MCP（Model Context Protocol）插件  和沙箱机制。\n\n## 适合谁用\nReasonix 适合需要高效、低成本进行编码工作的开发者。无论是偏好终端操作的工程师，还是希望通过桌面应用或编辑器扩展获得可视化工作流的用户，都能利用其强大的 AI 辅助编码能力。",
       "degraded": false
+    },
+    {
+      "id": "firecrawl/pdf-inspector",
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "stars": 6693,
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "one_liner": "`pdf-inspector` 是一个高性能 Rust 库，用于快速分类和提取 PDF 文档中的文本，并转换为结构化 Markdown，专为 AI 代理和 LLM 管道优化。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 PDF 文档处理中效率低下和成本高昂的问题，特别是对于 AI 代理和 LLM 管道。它通过智能分类 PDF 类型，避免对文本型 PDF 进行昂贵的 OCR 处理，从而节省时间和计算资源。  \n\n### 核心功能\n`pdf-inspector` 能够快速检测 PDF 是文本型、扫描型、图像型还是混合型，并提供置信度分数和每页是否需要 OCR 的路由信息。 它能进行位置感知的文本提取，包括字体信息和多列阅读顺序。 此外，它还能将 PDF 内容转换为结构化 Markdown，支持标题、列表、代码块、表格、粗体/斜体格式和 URL 链接等。 \n\n### 技术亮点\n该库采用纯 Rust 实现，无机器学习模型和外部服务依赖，仅依赖 `lopdf` 进行 PDF 解析，确保了轻量和高性能。 它通过一次加载文档并共享给检测和提取阶段，避免了冗余 I/O。 在表格检测方面，它采用矩形、线条和启发式三种策略，以提高准确性。 \n\n### 适合谁用\n`pdf-inspector` 适用于需要高效处理大量 PDF 文档的 AI 代理、LLM 管道以及任何希望优化 PDF 文本提取流程的开发者。 它提供了 Rust 库、Python 模块和 Node.js 包等多种使用方式，方便不同技术栈的用户集成。",
+      "degraded": false
+    },
+    {
+      "id": "donnemartin/system-design-primer",
+      "owner": "donnemartin",
+      "name": "system-design-primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "stars": 360253,
+      "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+      "one_liner": "本项目旨在帮助工程师学习如何设计大型可扩展系统，并为系统设计面试做准备，提供系统设计原则、面试问题及解决方案的整理集合。",
+      "detail_md": "**解决什么问题**\n本项目主要解决系统设计知识分散、难以系统学习的问题，并为工程师准备系统设计面试提供结构化的学习路径和实践资源。它通过组织和收集网络上的大量系统设计资源，帮助用户理解如何构建可扩展的系统。\n\n**核心功能**\n核心功能包括：提供系统设计主题的索引和摘要，涵盖性能、可扩展性、延迟、吞吐量、可用性、一致性等概念；提供系统设计面试问题的解答示例，包含讨论、代码和图表；以及面向对象设计面试问题的解答。此外，还提供了Anki抽认卡，帮助记忆关键概念。\n\n**技术亮点**\n技术亮点在于其结构化的学习方法，将系统设计面试过程分解为四个步骤：描述使用场景、约束和假设；创造高层级设计；设计核心组件；以及扩展设计并处理瓶颈。项目还强调了性能与可扩展性、延迟与吞吐量、可用性与一致性之间的权衡。\n\n**适合谁用**\n本项目适合希望学习如何设计大型可扩展系统的工程师，以及正在准备科技公司系统设计面试的求职者。对于不同经验水平的候选人，项目提供了短期、中期、长期的学习指南，以适应不同的面试准备时间线和深度需求。",
+      "degraded": false
+    },
+    {
+      "id": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "stars": 35713,
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "one_liner": "Kronos是一个金融市场K线序列的开源基础模型，用于预测金融数据。",
+      "detail_md": "**解决什么问题**\nKronos旨在解决金融市场数据预测的挑战，特别是K线序列的预测问题。它通过将连续、多维的K线数据（OHLCV）量化为分层离散token，并利用大型自回归Transformer模型进行预训练，从而处理金融数据特有的高噪声特性。 \n\n**核心功能**\n核心功能包括K线数据分词、模型预测和微调。它使用`KronosTokenizer`将OHLCV数据编码为分层离散token，然后由`Kronos`模型进行预测。`KronosPredictor`类简化了数据预处理、归一化、预测和反归一化过程。项目还提供了在自定义CSV数据集上进行模型微调的功能，支持分布式训练。\n\n**技术亮点**\nKronos是首个针对金融K线数据的开源基础模型。它采用两阶段框架：首先通过专门的tokenizer将K线数据量化为分层离散token，然后使用大型自回归Transformer进行预训练。模型架构中包含`BSQuantizer`（Binary Spherical Quantizer）进行量化，以及`HierarchicalEmbedding`和`DependencyAwareLayer`等分层组件。\n\n**适合谁用**\n该项目适合需要进行金融市场预测的研究人员、量化投资者和开发者。特别是那些希望利用深度学习模型对金融K线数据进行分析和预测，并可能需要根据自己的数据集进行模型微调的用户。它也适用于对金融领域基础模型和Transformer架构感兴趣的技术人员。",
+      "degraded": false
+    },
+    {
+      "id": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "stars": 43825,
+      "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+      "one_liner": "本项目是一个轻量级代理，允许用户免费使用 Claude Code CLI 和 VSCode 扩展，无需 Anthropic API 密钥，通过路由请求到其他大型语言模型提供商。",
+      "detail_md": "### 解决什么问题\n该项目解决了 Claude Code CLI 和 VSCode 扩展需要 Anthropic API 密钥才能使用的问题，通过提供一个代理层，将 Anthropic API 请求转发到其他免费或成本更低的 LLM 提供商，从而降低了使用成本并增加了模型选择的灵活性。  \n\n### 核心功能\n核心功能包括：作为透明代理，将 Claude Code 的 Anthropic API 请求转发到配置的 LLM 提供商；支持 NVIDIA NIM、OpenRouter、DeepSeek、LM Studio、llama.cpp 和 Ollama 等多种提供商；实现模型路由，将 Claude 的 Opus、Sonnet、Haiku 请求映射到不同的后端模型；通过本地拦截琐碎请求（如配额探测、标题生成等）来优化请求，节省 API 配额和降低延迟；支持 Discord 和 Telegram 机器人集成，实现远程自主编码和会话持久化。\n\n### 技术亮点\n技术亮点包括：基于 FastAPI 构建的异步代理服务；灵活的提供商抽象层，通过 `BaseProvider` 接口处理消息转换和工具调用解析；请求优化（Fast-Path Handlers）机制，本地处理常见请求以减少延迟和节省配额；支持思考令牌（`<think>` 标签和 `reasoning_content`）转换为原生的 Claude 思考块；以及可扩展的架构，方便添加新的 LLM 提供商或消息平台。\n\n### 适合谁用\n该项目适合希望免费或以更低成本使用 Claude Code CLI 或 VSCode 扩展的开发者；需要灵活选择不同 LLM 提供商（如 NVIDIA NIM、OpenRouter、本地 LM Studio 等）的用户；以及希望通过 Discord 或 Telegram 远程控制 Claude Code 进行自主编码的用户。",
+      "degraded": false
+    },
+    {
+      "id": "livekit/agents",
+      "owner": "livekit",
+      "name": "agents",
+      "url": "https://github.com/livekit/agents",
+      "stars": 11784,
+      "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+      "one_liner": "LiveKit Agents 是一个用于构建实时、可编程语音 AI 代理的 Python 框架，能够实现多模态交互。",
+      "detail_md": "**解决什么问题**\nLiveKit Agents 解决了构建实时对话式 AI 代理的复杂性问题。它抽象了语音转文本 (STT)、大型语言模型 (LLM)、文本转语音 (TTS) 和实时 API 等底层技术，并处理了流媒体逻辑、语音轮次检测和工具编排，使开发者能够专注于定义代理指令和实现功能工具。 \n\n**核心功能**\n该框架提供了一系列核心功能，包括：灵活的集成，支持多种 STT、LLM、TTS 和实时 API 提供商；  内置的任务调度和分发机制；  丰富的 WebRTC 客户端生态系统；  与 LiveKit 电话堆栈的无缝集成；  通过 RPC 和数据 API 与客户端交换数据；  以及基于 Transformer 模型的语义轮次检测功能。 \n\n**技术亮点**\nLiveKit Agents 的技术亮点在于其分层架构，将部署、代理编排、语音交互处理、I/O 管理和 AI 提供商抽象分离。  它拥有一个包含 60 多个提供商集成的插件生态系统，  例如 OpenAI、Google、Anthropic 和 Deepgram。  此外，它还支持多代理工作流，通过 `AgentHandoff` 和 `AgentTask` 抽象实现代理之间的无缝切换。  框架还提供了用于热重载、交互式测试和生产部署的开发工具。 \n\n**适合谁用**\nLiveKit Agents 适合希望构建实时、对话式、多模态语音 AI 代理的开发者。  无论是需要集成各种 AI 模型、处理复杂对话流程，还是需要与 LiveKit 实时通信平台深度结合的应用场景，该框架都能提供强大的支持。",
+      "degraded": false
+    },
+    {
+      "id": "jamiepine/voicebox",
+      "owner": "jamiepine",
+      "name": "voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "stars": 48379,
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "one_liner": "Voicebox 是一个开源的 AI 语音工作室，可在本地克隆声音、生成语音、进行听写和与 AI 代理对话。",
+      "detail_md": "**解决什么问题**\nVoicebox 旨在提供一个本地化的、免费的 ElevenLabs 和 WisprFlow 替代方案。它解决了云端语音服务的数据隐私、成本和离线使用限制等问题。项目致力于将语音输入和输出功能整合到一个应用中，实现语音克隆、文本转语音 (TTS) 和语音转文本 (STT) 的全套本地解决方案。\n\n**核心功能**\nVoicebox 的核心功能包括：语音克隆，支持多种 TTS 引擎生成语音；听写功能，可将语音转录并粘贴到任何应用程序；以及通过 Model Context Protocol (MCP) 与 AI 代理进行语音交互。它还提供语音配置文件管理、生成历史记录和多轨时间轴编辑器等功能。\n\n**技术亮点**\n该项目采用 Tauri (Rust) 作为桌面应用壳层，提供原生性能；前端使用 React 和 TypeScript 构建；后端是基于 FastAPI (Python) 的高性能服务，用于 AI 推理。它支持多种 TTS 引擎（如 Qwen3-TTS、LuxTTS）和 STT 引擎（Whisper），并能在 Apple Silicon (MLX) 和 NVIDIA (CUDA) 等平台上进行硬件加速。\n\n**适合谁用**\nVoicebox 适合需要本地化、高性能语音克隆和生成工具的开发者、内容创作者和 AI 代理用户。对于希望在本地机器上运行 AI 语音模型，注重隐私和效率的用户，以及寻求 ElevenLabs 或 WisprFlow 开源替代方案的用户，Voicebox 是一个理想的选择。",
+      "degraded": false
     }
   ]
 }
