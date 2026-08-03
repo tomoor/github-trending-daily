@@ -1,0 +1,171 @@
+{
+  "doc_token": "ViRkdoWCpo6vrkxN8LIcltcBnAb",
+  "doc_url": "https://my.feishu.cn/docx/ViRkdoWCpo6vrkxN8LIcltcBnAb",
+  "items": [
+    {
+      "id": "microsoft/AI-For-Beginners",
+      "owner": "microsoft",
+      "name": "AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "stars": 58964,
+      "description": "12 Weeks, 24 Lessons, AI for All!",
+      "one_liner": "本项目是微软为初学者设计的AI课程，通过12周24节课，提供AI基础知识和实践经验。",
+      "detail_md": "**解决什么问题**\n该项目旨在帮助没有AI经验的初学者系统学习人工智能基础知识，包括符号AI、神经网络、计算机视觉、自然语言处理等，并通过实践提升技能。   它还提供多语言支持，解决全球学习者的语言障碍。 \n\n**核心功能**\n核心功能包括：12周24节课程，涵盖AI基础到高级主题；提供Jupyter Notebooks实践课程、测验和实验；支持TensorFlow和PyTorch双框架实现；以及通过GitHub Actions自动维护的50多种语言翻译。 \n\n**技术亮点**\n技术亮点在于其双框架（PyTorch和TensorFlow）实现，允许学习者选择偏好框架。项目采用基于项目的教学方法和频繁测验来巩固学习。此外，它利用GitHub Actions实现自动化的多语言翻译，确保内容及时更新。 \n\n**适合谁用**\n本项目适合所有对人工智能感兴趣的初学者，特别是那些没有AI背景但希望通过实践学习AI基础知识的学生和自学者。  教师也可以利用此课程进行教学。",
+      "degraded": false
+    },
+    {
+      "id": "usekaneo/kaneo",
+      "owner": "usekaneo",
+      "name": "kaneo",
+      "url": "https://github.com/usekaneo/kaneo",
+      "stars": 6119,
+      "description": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+      "one_liner": "Kaneo 是一个轻量级、自托管的开源项目管理平台，专注于简洁高效的任务管理。",
+      "detail_md": "**解决什么问题**\nKaneo 旨在解决传统项目管理工具过于臃肿、复杂，导致团队分散精力的问题。它提供了一个简洁的界面和核心功能，帮助团队专注于实际工作，而不是工具本身的配置和管理。\n\n**核心功能**\nKaneo 提供任务管理、看板视图、列表和待办事项视图，并支持团队协作。它还支持 GitHub 集成，实现任务与 GitHub Issue 的双向同步，以及通过 MCP (Model Context Protocol) 实现 AI 工具集成。任务支持富文本描述和项目内原子计数。\n\n**技术亮点**\nKaneo 采用现代 Web 应用程序架构，是一个 pnpm monorepo。前端使用 React 19 和 Vite，后端是基于 Node.js 的 Hono API，营销和文档站点则使用 Next.js。数据模型围绕工作区、项目和任务构建，并使用 Drizzle ORM 和 PostgreSQL 数据库。\n\n**适合谁用**\nKaneo 适合需要轻量级、高性能项目管理解决方案的团队。特别是那些希望自托管以完全控制数据，或寻求 Jira、Trello 等工具的开源替代品，且注重简洁和效率的团队。",
+      "degraded": false
+    },
+    {
+      "id": "lyogavin/airllm",
+      "owner": "lyogavin",
+      "name": "airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "stars": 25615,
+      "description": "AirLLM 70B inference with single 4GB GPU",
+      "one_liner": "AirLLM是一个优化大型语言模型推理内存使用的框架，使70B+模型能在有限GPU显存上运行。",
+      "detail_md": "### 解决什么问题\nAirLLM解决了大型语言模型（LLMs）在消费级硬件上运行推理时对GPU显存需求过高的问题。它允许70B参数的模型在仅有4GB显存的GPU上运行，甚至405B的Llama3.1模型也能在8GB显存上运行，而无需进行量化、蒸馏或剪枝等可能降低模型性能的操作。\n\n### 核心功能\nAirLLM的核心功能包括层分片（Layer Sharding），即将模型分解为单独的层，按需加载到内存中。它还支持预取（Prefetching）技术，通过重叠计算和I/O操作来提高性能。此外，AirLLM提供了可选的4位/8位块级量化（Model Compression），可将推理速度提升高达3倍。它通过`AutoModel`类提供统一接口，自动检测模型类型并实例化相应的实现。\n\n### 技术亮点\nAirLLM的技术亮点在于其创新的内存管理方法，通过顺序加载模型层来显著减少显存占用。它支持多种模型架构，包括Llama 3.1、ChatGLM、QWen、Baichuan、Mistral、Mixtral和InternLM。项目还支持macOS（通过MLX后端）和CPU推理。此外，AirLLM集成了RLHF技术，特别是DPO（Direct Preference Optimization），支持低成本的RLHF训练。\n\n### 适合谁用\nAirLLM适合希望在消费级硬件上运行大型语言模型推理的开发者和研究人员。特别是那些GPU显存有限，但又不想牺牲模型性能的用户。它也适用于需要进行低成本RLHF训练的用户。",
+      "degraded": false
+    },
+    {
+      "id": "iv-org/invidious",
+      "owner": "iv-org",
+      "name": "invidious",
+      "url": "https://github.com/iv-org/invidious",
+      "stars": 21966,
+      "description": "Invidious is an alternative front-end to YouTube",
+      "one_liner": "本项目是一个YouTube的替代前端，旨在提供一个注重隐私、开源且无广告的YouTube观看体验，支持多语言本地化。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决用户在使用YouTube时遇到的隐私侵犯、广告干扰以及对Google服务依赖的问题。它通过提供一个独立的、开源的平台，让用户可以在没有广告和追踪的情况下观看YouTube视频，并支持数据导入导出，增强用户对其数据的控制权。  \n\n**核心功能**\n核心功能包括视频观看、频道订阅、播放列表管理、评论查看以及用户偏好设置。    它还支持多语言界面，通过国际化系统提供本地化的用户体验，包括复杂的复数规则和变量插值。   \n\n**技术亮点**\n技术亮点在于其数据提取器（Data Extractors）架构，能够解析YouTube的InnerTube API数据并转换为结构化的Crystal对象，支持搜索结果、频道内容和Feed项的提取。   此外，项目实现了完善的国际化（i18n）系统，通过JSON本地化文件和`i18next`助手处理多语言翻译、复数形式和动态内容插值。  \n\n**适合谁用**\n本项目适合注重隐私、希望摆脱广告干扰、寻求开源替代方案的用户。  也适合开发者和技术爱好者，他们可以参与到项目的开发和维护中，共同完善这个去中心化的YouTube前端。",
+      "degraded": false
+    },
+    {
+      "id": "codecrafters-io/build-your-own-x",
+      "owner": "codecrafters-io",
+      "name": "build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "stars": 534799,
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "one_liner": "本项目汇集了从零开始构建各类技术的优质分步指南，旨在帮助开发者深入理解技术原理。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者在学习新技术时，难以找到高质量、从零开始、循序渐进的教程的问题。</cite>它通过提供一个社区策展的教程索引，帮助学习者通过亲手实践来掌握复杂的技术概念。</cite>\n\n**核心功能**\n核心功能是提供一个分类清晰的教程列表，涵盖3D渲染器、区块链、操作系统、编程语言等多种技术领域。</cite>用户可以通过 `README.md` 文件浏览不同类别下的教程链接。</cite>项目还支持社区贡献，允许用户通过提交Issue或Pull Request来添加新的教程。</cite>\n\n**技术亮点**\n技术亮点在于其社区驱动的策展模式，通过 `ISSUE_TEMPLATE.md` 强制执行教程质量标准，确保所有收录的教程都是从零开始、有指导路径且专注于单一语言。</cite>这种机制结合人工审核，保证了内容的质量和一致性。</cite>\n\n**适合谁用**\n本项目适合希望通过实践深入理解技术原理的开发者、学生以及任何对“从零开始构建”各类软件和系统感兴趣的学习者。</cite>它也适合希望分享高质量教程的贡献者。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "stars": 13300,
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "one_liner": "本项目是一个面向AI的安全技能框架，旨在自动化逆向工程、渗透测试和CTF任务，并通过AI驱动的经验沉淀实现自我进化。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决安全领域中逆向工程和渗透测试任务的自动化和智能化问题。 它通过为AI提供结构化的技能、工具路由和经验沉淀机制，帮助AI克服在复杂安全任务中遇到的“懒惰”、跳步或重复确认等问题，提高任务执行的效率和稳定性。\n\n**核心功能**\n核心功能包括：\n*   **技能路由**：通过 `routing.md` 文件，根据目标类型、用户意图和工具链将任务分发到不同的技能模块。\n*   **工具管理**：`tool-index.md` 记录本地工具的可用状态和路径，并能通过 `bootstrap-reverse.ps1` 脚本自动安装缺失工具。\n*   **经验沉淀**：`field-journal/` 目录用于记录和复用历史操作经验，并通过 `_index.md` 进行索引，实现AI的自我进化。\n*   **多领域支持**：涵盖APK逆向、IDA Pro分析、JS逆向、渗透测试、固件渗透、EDR绕过、CTF等多个安全子领域。\n\n**技术亮点**\n*   **“Route First, Execute Second”哲学**：强制AI在执行任何技术操作前，先通过路由矩阵匹配到特定的技能模块。\n*   **Agent服从性工程**：通过 `agent-obedience-engineering.md` 等文件，确保AI严格遵循指令，防止“语义逃逸”和任务停滞。\n*   **统一规则注入**：`RULES.md` 文件包含核心指令，可让AI客户端自动将路由规则注入到其全局配置中，实现跨编辑器和项目的通用性。\n*   **MCP (Model Context Protocol) 集成**：通过MCP连接AI客户端与本地安全工具（如IDA Pro、BurpSuite），实现AI对外部工具的直接调用。\n\n**适合谁用**\n本项目适合需要自动化和智能化安全分析流程的**安全工程师、逆向工程师、渗透测试人员以及CTF选手**。 尤其适用于希望利用AI提升工作效率、减少重复劳动，并构建可自我进化的安全知识体系的专业人士。",
+      "degraded": false
+    },
+    {
+      "id": "different-ai/openwork",
+      "owner": "different-ai",
+      "name": "openwork",
+      "url": "https://github.com/different-ai/openwork",
+      "stars": 20293,
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "one_liner": "OpenWork 是一个开源桌面应用，通过 AI 代理在本地文件上执行任务，支持多模型和团队协作。",
+      "detail_md": "**解决什么问题**\nOpenWork 旨在解决传统 AI 工具在本地文件处理、多模型支持和团队协作方面的局限性。它提供了一个隐私优先、本地优先的解决方案，允许用户在自己的电脑上使用 AI 代理处理文件，同时支持超过 50 种大型语言模型（LLMs），并能通过共享代理设置和策略实现团队协作。   \n\n**核心功能**\n该项目提供桌面应用（macOS, Windows, Linux），支持自带模型和提供商密钥，允许用户连接 OpenAI、Anthropic 等 50 多种 LLMs。   核心功能包括通过 Skills、Plugins 和 MCP 服务器扩展代理能力，以及为团队提供带有策略和防护措施的共享代理设置。   此外，它还支持自动化浏览器任务、处理 CSV 文件、组织文件和连接外部 API。    \n\n**技术亮点**\nOpenWork 基于 Next.js、Framer Motion 和 Tailwind CSS 构建，提供响应式用户界面。  它通过 Model Context Protocol (MCP) 集成 AI 代理，使其能够浏览页面并提供工具，如 `navigate_to` 和 `get_download_links`。  企业版支持 SSO/SAML、SCIM 供应和桌面策略，确保合规性和部署灵活性。 \n\n**适合谁用**\nOpenWork 适合需要利用 AI 代理在本地处理文件、希望自由选择 LLM 提供商的个人开发者和团队。   对于企业用户，它提供了高级的安全、合规和部署选项，如 SSO、审计日志和模型工具白名单，适用于对数据隐私和管理有严格要求的组织。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/generative-ai-for-beginners",
+      "owner": "microsoft",
+      "name": "generative-ai-for-beginners",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "stars": 114748,
+      "description": "21 Lessons, Get Started Building with Generative AI",
+      "one_liner": "本项目旨在深入探讨生成式AI领域的开源大型语言模型（LLM），涵盖其优势、主要模型家族及访问方式。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决用户对开源大型语言模型（LLM）的理解不足问题，帮助开发者和研究人员了解如何利用这些模型进行定制化开发、降低成本并提高灵活性。它还提供了如何选择合适模型的指导，以及在Azure AI Foundry和GitHub Models上访问这些模型的方法。\n\n**核心功能**\n核心功能包括介绍开源模型的定义和优势，例如高度可定制性、成本效益和灵活性。项目还详细介绍了主要的开源模型家族，如Llama、Mistral和Phi，并说明了如何通过Azure AI Foundry和GitHub Models访问这些模型。\n\n**技术亮点**\n技术亮点在于对“开放模型”概念的细致区分，指出大多数模型分享权重而非完整训练数据。项目还强调了开源模型在检索增强生成（RAG）和微调等高级模式中的应用，并展示了如何使用`azure.ai.inference`库与模型进行交互。\n\n**适合谁用**\n本项目适合希望深入了解生成式AI领域开源大型语言模型的研究人员、开发者和工程师。对于那些寻求定制化AI解决方案、优化成本或避免供应商锁定的用户，本项目提供了宝贵的指导和资源。",
+      "degraded": false
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 64666,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 为 AI Agent 提供一键式互联网访问能力，支持跨平台内容读取与搜索，无需复杂配置。",
+      "detail_md": "## 解决什么问题 \nAI Agent 在获取互联网信息时面临诸多障碍，例如付费 API、IP 封锁、登录限制和反爬措施。Agent Reach 旨在解决这些问题，通过预选、配置和管理工具，让 Agent 能够轻松访问 YouTube、Twitter、Reddit、小红书等平台内容，而无需用户手动处理复杂的配置和部署。\n\n## 核心功能 \nAgent Reach 提供统一的命令行接口，使 AI Agent 能够读取网页内容、搜索社交媒体、提取视频字幕等。它支持包括网页、YouTube、RSS、GitHub、Twitter/X、Bilibili、Reddit、小红书、抖音、LinkedIn、微信公众号、微博、V2EX、雪球、小宇宙播客等十余个平台。项目还包含 `agent-reach install` 进行自动化安装和配置，以及 `agent-reach doctor` 命令用于诊断各渠道的运行状态。\n\n## 技术亮点 \nAgent Reach 采用“脚手架而非框架”的设计理念，每个平台渠道都是可插拔的独立 Python 文件。它不封装上游工具，而是直接调用 `bird CLI`、`yt-dlp`、`mcporter`、`gh CLI` 等现有工具。项目强调零强制 API 费用，所有默认后端均为免费开源工具。凭据本地存储，确保隐私安全。\n\n## 适合谁用 \nAgent Reach 适合所有需要互联网访问能力的 AI Agent，如 Claude Code、OpenClaw、Cursor、Windsurf 等。开发者和 AI Agent 操作者可以通过简单的命令，快速为 Agent 部署互联网能力，而无需深入了解各平台的 API 或反爬机制。",
+      "degraded": false
+    },
+    {
+      "id": "TencentCloud/TencentDB-Agent-Memory",
+      "owner": "TencentCloud",
+      "name": "TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "stars": 10968,
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "one_liner": "TencentDB Agent Memory 是一个四层本地记忆系统插件，旨在为 AI Agent 提供结构化、可追溯的记忆能力，显著提升任务成功率并降低Token消耗。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）在长对话和复杂任务中面临的上下文信息过载和记忆扁平化问题。 传统记忆系统常将数据碎片化并平铺存储，导致召回效率低下且缺乏宏观指导。 通过分层记忆和符号化记忆，它避免了暴力历史堆砌和不可逆的摘要，让人类不必重复解释SOP、项目背景等信息。\n\n**核心功能**\n1.  **分层记忆系统（L0-L3）**：将原始对话（L0 Conversation）逐步提炼为结构化事实（L1 Atom）、场景块（L2 Scenario）和用户画像（L3 Persona），实现渐进式披露和异构存储。\n2.  **符号化短期记忆**：将冗长的工具日志压缩成轻量级Mermaid符号图谱，大幅降低Token消耗，同时通过`node_id`实现100%可追溯。\n3.  **混合检索**：结合BM25关键词搜索和向量嵌入搜索（RRF融合），支持关键词和语义召回。\n4.  **白盒可调试性**：关键中间产物以可读文件（如Markdown）形式保存，方便开发者沿着“Persona → Scenario → Atom → Conversation”链路进行调试和溯源。\n\n**技术亮点**\n1.  **语义金字塔**：构建L0到L3的语义金字塔，实现记忆的分层管理和高效检索。\n2.  **上下文卸载与符号化**：通过Mermaid图谱和`node_id`追踪，将大量日志卸载到外部文件系统，仅在LLM上下文中保留轻量级符号，显著节省Token。\n3.  **可追溯与无损恢复**：所有摘要和抽象都保留了从高层概念回溯到底层原始证据的路径，避免了不可逆的压缩。\n4.  **多后端支持**：支持本地SQLite和腾讯云向量数据库（TCVDB）作为存储后端，并适配OpenClaw和Hermes等Agent框架。\n\n**适合谁用**\n该项目适合需要提升AI Agent在长对话和复杂任务中表现的开发者和团队。 特别是那些希望Agent能够学习用户流程、保留任务上下文、复用历史经验，同时又关注Token消耗和记忆可调试性的用户。 它作为OpenClaw插件或Hermes适配器，可无缝集成到现有Agent工作流中。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 56866,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "本项目是一个AI代理驱动的搜索引擎，通过整合多平台数据，提供基于社区互动和真实资金流向的实时研究报告。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLMs）在获取实时社交信号方面的“时效性差距”问题。传统的搜索引擎侧重于SEO，而`/last30days`则优先考虑人类互动，通过整合Reddit、X/Twitter、YouTube、TikTok、Instagram、Hacker News、Polymarket、GitHub等多个平台的数据，提供过去30天内基于用户参与度（如点赞、转发、真实资金投注量）的实时、有根据的社区观点和趋势分析。\n\n**核心功能**\n核心功能包括智能预研究，它能在搜索前解析实体（如X句柄、Reddit社区、YouTube频道），进行有针对性的深度搜索。它还具备多源社交数据聚合能力，能从Reddit、X、Polymarket、GitHub等平台收集数据。此外，项目能自动将每次研究结果保存为Markdown文件，形成一个可搜索的知识库。\n\n**技术亮点**\n技术亮点在于其V3引擎架构，引入了一个“Python大脑”进行智能预研究，以识别与主题相关的X句柄、Reddit社区和YouTube频道，从而实现精准搜索。它采用加权倒数排名融合（RRF）算法整合来自不同平台的数据，并通过实体重叠检测实现跨源集群合并，将不同平台上的相同故事合并为一个集群。项目还支持多种安装方式，包括Claude Code插件和NPM包。\n\n**适合谁用**\n该项目适用于需要快速了解高变化领域（如AI、科技）社区观点和实时趋势的用户。例如，在会议前了解某人的最新动态，分析市场情绪，进行工具比较，或追踪招聘信号以洞察公司战略方向。它特别适合那些希望获取未经编辑、基于真实用户参与度而非SEO排名的信息的用户。",
+      "degraded": false
+    },
+    {
+      "id": "NomaDamas/k-skill",
+      "owner": "NomaDamas",
+      "name": "k-skill",
+      "url": "https://github.com/NomaDamas/k-skill",
+      "stars": 6881,
+      "description": "한국인을 위한 스킬 모음집 - 에이전트를 한국인으로",
+      "one_liner": "`k-skill` 是一个为韩国本地化服务设计的 AI 代理技能生态系统，旨在弥合大型语言模型与韩国特定服务之间的鸿沟，实现自动化任务处理。 </cite>",
+      "detail_md": "**解决什么问题** \n`k-skill` 解决了 AI 代理在处理韩国本地化服务（如交通、政府数据、金融、购物等）时面临的复杂交互和数据访问问题。  它通过将复杂的韩国网络交互抽象为站点依赖的“技能”来简化操作，使 AI 代理无需人工干预即可执行任务。 \n\n**核心功能** \n项目提供了一系列“技能”，涵盖了韩国生活的多个方面，例如 SRT/KTX 预订、房地产价格查询、食品安全检查、韩国股票信息查询、以及各种购物平台（如 Daiso、Market Kurly、Olive Young）的商品搜索等。 </cite> 此外，还包括法律、商业和文档处理技能，如公司注册咨询、登记自动化、韩国个人信息处理方针和使用条款自动生成、以及韩国企业账簿自动化等。 </cite> \n\n**技术亮点** \n`k-skill` 采用了“代理优先”（Proxy-First）架构，通过 `k-skill-proxy` 集中处理需要 API 密钥的免费 API，提供密钥注入、速率限制和缓存功能。 </cite> 对于现有高质量开源工具的集成，项目使用了“薄封装”（Thin-Wrapper）模式，例如 `korean-privacy-terms` 和 `korean-jangbu-for` 技能。 </cite> </cite> 此外，对于涉及破坏性或金融操作，采用了“交接模型”（Handoff Model），由技能完成自动化搜索和选择，最终执行则交由用户手动完成。 </cite>\n\n**适合谁用** \n该项目适合需要自动化处理韩国本地化服务的 AI 代理开发者和用户。  特别是对于希望通过编程方式与韩国交通、政府、金融、购物等服务进行交互，或者需要自动化法律文档生成和企业账簿处理的个人和企业。 </cite> </cite>",
+      "degraded": false
+    },
+    {
+      "id": "HarbourMasters/Lighthouse",
+      "owner": "HarbourMasters",
+      "name": "Lighthouse",
+      "url": "https://github.com/HarbourMasters/Lighthouse",
+      "stars": 218,
+      "description": "",
+      "one_liner": "Lighthouse is an automated tool that analyzes web apps and web pages, collecting modern performance…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nLighthouse is an automated tool that analyzes web apps and web pages, collecting modern performance metrics and insights on developer best practices.",
+      "degraded": true
+    },
+    {
+      "id": "antirez/ds4",
+      "owner": "antirez",
+      "name": "ds4",
+      "url": "https://github.com/antirez/ds4",
+      "stars": 19979,
+      "description": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+      "one_liner": "本项目提供了一个用于DeepSeek模型推理的平台，支持命令行、HTTP服务和原生编码代理三种交互方式，旨在提供高效、灵活的AI模型部署和应用方案。",
+      "detail_md": "## 解决什么问题\n本项目旨在解决DeepSeek模型在不同应用场景下的部署和交互问题，包括本地交互式体验、高性能API服务以及集成开发环境中的智能辅助，确保模型推理的一致性和高效性。\n\n## 核心功能\n*   **命令行接口 (ds4_cli.c)**：提供单次提示和交互式REPL模式，支持诊断工具和思考过程可视化。\n*   **HTTP API 服务器 (ds4_server.c)**：实现兼容OpenAI、Anthropic等标准的本地推理服务，支持KV缓存持久化和SSE流式传输。\n*   **原生编码代理 (ds4_agent.c)**：集成了DSML工具套件，支持文件系统和shell交互，具备上下文压缩和会话持久化能力。\n\n## 技术亮点\n*   **统一的底层加速**：所有接口共享Metal/CUDA/ROCm加速和会话管理逻辑，保证性能一致性。\n*   **高效的服务器架构**：`ds4-server` 采用单工作线程处理推理操作，同时网络层处理并发HTTP请求，并通过磁盘KV缓存实现快速会话恢复。\n*   **智能代理工具集成**：`ds4-agent` 通过 `agent_dsml_parser` 和 `agent_bash_job` 等工具，实现与系统环境的深度交互，并自动管理上下文窗口。\n\n## 适合谁用\n*   **开发者和研究人员**：需要本地部署和交互式测试DeepSeek模型的用户。\n*   **服务提供商**：希望构建基于DeepSeek模型的API服务，并要求高兼容性和性能的用户。\n*   **AI辅助编程用户**：需要智能编码助手，能够与文件系统和shell进行交互，提高开发效率的用户。",
+      "degraded": false
+    },
+    {
+      "id": "esengine/DeepSeek-Reasonix",
+      "owner": "esengine",
+      "name": "DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "stars": 29029,
+      "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+      "one_liner": "Reasonix 是一个配置与插件驱动的 DeepSeek 原生 AI 编码 Agent，为终端而生，旨在通过优化缓存机制降低长会话的 token 成本。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统 AI Agent 在长会话中 token 成本高昂的问题，通过 DeepSeek 的字节稳定前缀缓存机制，显著降低输入 token 成本，并提供多平台一致的开发体验。  \n\n## 核心功能\nReasonix 提供交互式 CLI/TUI、桌面应用和本地 Web UI 等多种使用方式。它支持配置驱动的模型和工具管理，具备会话恢复、多种工作模式（如轻量、均衡、交付优先），以及通过斜杠命令和 `@` 符号进行文件引用的智能补全功能。\n\n## 技术亮点\n项目采用 Go 语言编写，编译为单一静态二进制文件，无 CGO 依赖，支持跨平台分发。其核心是“缓存优先”的运行循环，与 DeepSeek 的前缀缓存对齐，使得长会话的缓存命中率超过 90%，输入 token 成本降至约 1/5。此外，它还支持 MCP（Model Context Protocol）插件  和沙箱机制。\n\n## 适合谁用\nReasonix 适合需要高效、低成本进行编码工作的开发者。无论是偏好终端操作的工程师，还是希望通过桌面应用或编辑器扩展获得可视化工作流的用户，都能利用其强大的 AI 辅助编码能力。",
+      "degraded": false
+    }
+  ]
+}
