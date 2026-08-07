@@ -1,0 +1,149 @@
+{
+  "doc_token": "SkBndkE6qoo2Zyx4yzacWecxnTe",
+  "doc_url": "https://my.feishu.cn/docx/SkBndkE6qoo2Zyx4yzacWecxnTe",
+  "items": [
+    {
+      "id": "TencentCloud/TencentDB-Agent-Memory",
+      "owner": "TencentCloud",
+      "name": "TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "stars": 16310,
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "one_liner": "TencentDB Agent Memory 是一个高性能、多层记忆系统，旨在帮助 AI Agent 处理长期经验和短期任务执行，减少重复工作，提高推理准确性。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI Agent 在使用过程中重复工作的问题，例如项目背景需要反复解释、文档需要重复阅读、已跑通的工作流需要重新摸索等。它通过将有价值的信息保存、组织和复用，让 Agent 能够继承经验，减少返工，提高效率和结果的稳定性。\n\n**核心功能**\nTencentDB Agent Memory 提供了四项核心功能：\n*   **分层记忆（L0-L3）**：将对话从原始的 L0 对话逐层提炼为 L1 原子记忆、L2 场景记忆和 L3 核心画像，以实现不同粒度的记忆存储和召回。\n*   **技能库（Skill）**：Agent 完成复杂工作后，可以从对话和工具调用中提炼可复用的 Skill，并进行版本管理、资源绑定、搜索和路由。\n*   **知识地图（Wiki & CodeGraph）**：将文档转化为结构化页面和链接图谱（Wiki），以及索引代码符号、文件、调用关系和影响路径（CodeGraph），帮助 Agent 搜索、阅读和分析。\n*   **团队记忆面板（Memory Hub）**：提供统一的管理界面，用于创建团队和 Agent，管理记忆资产的 Owner、版本、状态、可见性，并为 Agent 配装记忆。\n\n**技术亮点**\n该项目的主要技术亮点包括：\n*   **语义金字塔（Semantic Pyramid）**：通过 L0-L3 的分层记忆结构，解决了传统向量存储中 Agent 容易丢失宏观上下文的问题。\n*   **符号上下文卸载（Symbolic Context Offloading）**：用轻量级的 Mermaid 任务图谱替代繁重的工具执行日志，减少了 Token 开销，同时保持了完整的可追溯性。\n*   **资产管理**：将 Skill、Wiki 和 CodeGraph 作为一等资产进行管理，支持版本、状态、可见性和 Agent 绑定。\n*   **多租户与隔离**：通过 `Team / Agent / Task` 模型确保数据隔离，只有授权用户和 Agent 才能访问。\n*   **按需调用知识**：文档和代码作为可用的工具，Agent 通过 `/v3/tools/list` 发现能力，再用 `/v3/tools/call` 按需读取，避免知识整库注入。\n\n**适合谁用**\nTencentDB Agent Memory 适合需要构建和管理 AI Agent 团队的个人开发者、小型团队和企业。它特别适用于希望 Agent 能够沉淀经验、减少重复工作、提高协作效率的场景，例如代码开发、文档管理、客户服务等。通过提供统一的记忆管理和资产共享机制，它能帮助 Agent 团队实现经验的复用和积累。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 82890,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "本项目为AI编程代理提供生产级工程技能，覆盖软件开发全生命周期。",
+      "detail_md": "**解决什么问题**\nAI编程代理通常倾向于走捷径，跳过规范、测试和安全审查等关键环节，导致软件质量问题。本项目通过提供结构化的工作流程，强制AI代理遵循资深工程师在生产代码开发中使用的纪律和最佳实践，从而解决AI代理在软件开发生命周期中可能出现的质量和可靠性问题。 \n\n**核心功能**\n项目核心是“技能”（`skills/`），每个技能都是一个结构化的工作流程，包含步骤、验证门和反合理化表格，指导AI代理完成特定工程任务。此外，还包括：代理角色（`agents/`），提供如`code-reviewer`等专业角色系统提示；自动化层（`.claude/commands/`和`hooks/`），通过斜杠命令激活技能和管理会话生命周期；以及参考清单（`references/`），作为技能的退出标准。\n\n**技术亮点**\n1.  **流程驱动而非散文式指导**：技能是AI代理遵循的工作流程，而非参考文档，每个技能都包含步骤、检查点和退出标准。 \n2.  **反合理化机制**：每个技能都包含常见借口及其反驳，防止代理跳过关键步骤。 \n3.  **强制验证**：所有技能都以证据要求（如测试通过、构建输出）结束，确保工作质量。 \n4.  **渐进式披露**：`SKILL.md`是入口点，支持性参考资料按需加载，以最小化token使用。 \n\n**适合谁用**\n本项目适用于希望提升AI编程代理在软件开发中表现的开发者和团队。特别是那些需要AI代理在整个软件开发生命周期中，从需求定义（`/spec`）到部署（`/ship`），都能遵循高质量工程实践的场景。  它通过提供结构化的技能和预设的代理角色，帮助AI代理实现生产级代码质量。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/computer",
+      "owner": "cloudflare",
+      "name": "computer",
+      "url": "https://github.com/cloudflare/computer",
+      "stars": 4757,
+      "description": "Give your agent a computer 👾",
+      "one_liner": "Cloudflare Computer 是一个持久化、SQLite 支持的虚拟文件系统，专为 AI 代理和分布式应用设计，提供可移植的执行环境。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 代理和分布式应用程序在不同执行环境（如 Linux 容器或动态 Worker）之间共享持久化、标准化工作空间的需求。它通过将 Durable Object 中存储的权威状态投影到各种执行后端，确保文件操作在重启后仍然持久，并在网络边界之间同步。  \n\n**核心功能**\nCloudflare Computer 提供一个持久的、SQLite 支持的虚拟文件系统 (`workspace.fs`)，其 API 类似于 `node:fs/promises`，并支持跨 Durable Object 重启的持久性。  它还提供一个统一的执行接口 (`workspace.runtime.exec()`)，支持多种可插拔的后端，包括完整的 Linux 容器、快速的 Worker Shell 或隔离的 JavaScript 运行时。  此外，它还为 AI 代理提供了现成的 AI SDK 工具（如 `read`、`write`、`edit`、`ls`、`exec`），以及 Git 客户端、R2 支持的只读挂载和文件发布辅助功能。 \n\n**技术亮点**\n该项目采用 SQLite 作为 Durable Object 中权威状态的存储，并通过 `capnweb` RPC 协议实现 Durable Object 与 `computerd` 守护程序之间的通信，支持高效的文件变更流和同步。   `computerd` 守护程序在容器内运行，通过 FUSE 将 VFS 挂载到文件系统，使得标准 Linux 工具可以直接操作虚拟数据。  它还支持多种执行后端，包括提供完整 Linux 用户空间的容器、在动态 Worker 中运行的 `just-bash` shell，以及支持持久化导入和 `node:fs/promises` 的隔离 JavaScript 运行时。 \n\n**适合谁用**\nCloudflare Computer 适用于需要小型、可移植工作目录和文件操作工具的 AI 代理和分布式应用程序开发者。  它特别适合在 Cloudflare Durable Objects 环境中构建需要持久化文件系统和灵活执行能力的应用程序。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 206952,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "本项目提供一套AI代理技能，旨在通过结构化工作流和共享语言，解决软件开发中的常见痛点，提升工程效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助软件开发中的常见问题，例如代理与开发者之间的理解偏差、AI代理输出冗长、代码质量差 以及代码库结构混乱。它通过提供一套可组合、易于适应的技能来应对这些挑战。\n\n**核心功能**\n核心功能包括：\n*   **`/grill-with-docs`**：通过提问式访谈，帮助代理和开发者就需求达成一致，并更新项目术语和决策文档（`CONTEXT.md`和ADR）。\n*   **`/tdd`**：支持测试驱动开发，遵循红-绿-重构循环，确保代码质量。\n*   **`/diagnosing-bugs`**：提供一套严谨的六阶段调试流程，用于解决复杂bug和性能问题。\n*   **`/improve-codebase-architecture`**：扫描代码库，发现“深化机会”，即改进模块设计以提高可测试性和AI导航性的地方。\n*   **`/ask-matt`**：作为技能路由器，帮助用户找到适合当前情况的技能或工作流。\n\n**技术亮点**\n该项目采用模块化和可组合的技能设计。技能分为用户调用型（`User-invoked`）和模型调用型（`Model-invoked`），前者需用户明确输入，后者可由AI代理自动触发。通过`CONTEXT.md`文件建立统一语言，减少AI代理的冗余输出，提高沟通效率。安装方式灵活，支持Claude Code插件和`skills.sh`命令行工具。\n\n**适合谁用**\n本项目适合希望提升AI辅助软件开发效率和代码质量的工程师和团队。特别是那些在使用Claude Code、Codex或其他编码代理时遇到沟通不畅、代码质量不稳定或项目管理困难的用户。它为日常编码工作、架构改进、bug诊断和项目规划提供了结构化工具。",
+      "degraded": false
+    },
+    {
+      "id": "goauthentik/authentik",
+      "owner": "goauthentik",
+      "name": "authentik",
+      "url": "https://github.com/goauthentik/authentik",
+      "stars": 23083,
+      "description": "The authentication glue you need.",
+      "one_liner": "authentik 项目通过 `lit-localize` 框架和 XLIFF 翻译文件，为前端界面提供超过 13 种语言的本地化支持，确保全球用户都能顺畅使用。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决多语言用户在使用 authentik 平台时遇到的语言障碍问题，通过提供多语言界面，提升用户体验和可访问性。它还通过伪本地化工作流，帮助开发者在发布前发现并解决界面布局问题和硬编码字符串问题。\n\n**核心功能**\n核心功能包括从 Lit 组件中提取字符串、编译翻译包以及运行时检测用户语言环境。它支持多种语言，例如简体中文 (`zh-Hans`)、繁体中文 (`zh-Hant`)、英语 (`en`)、德语 (`de-DE`)、西班牙语 (`es-ES`)、意大利语 (`it-IT`)、芬兰语 (`fi-FI`)、韩语 (`ko-KR`)、波兰语 (`pl-PL`)、捷克语 (`cs-CZ`)、荷兰语 (`nl-NL`)、法语 (`fr-FR`)  和日语 (`ja-JP`)。\n\n**技术亮点**\n该项目采用 `lit-localize` 框架，提供类型安全且高性能的浏览器端翻译处理方式。它使用 XLIFF (XML Localization Interchange File Format) 文件进行翻译管理，并支持伪本地化以测试 UI 布局和发现硬编码文本。翻译流程包括扫描 `msg()` 调用、更新 ID、翻译、编译和输出生成 JavaScript 翻译包。\n\n**适合谁用**\n该项目适合需要多语言支持的 authentik 用户和管理员，以及希望为 authentik 平台贡献翻译的社区成员。开发者可以利用其伪本地化功能，确保在不同语言环境下界面的兼容性和稳定性。",
+      "degraded": false
+    },
+    {
+      "id": "huangruiteng/loopx",
+      "owner": "huangruiteng",
+      "name": "loopx",
+      "url": "https://github.com/huangruiteng/loopx",
+      "stars": 2829,
+      "description": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+      "one_liner": "LoopX 是一个面向长程 AI Agent 工作的本地控制面，旨在让 Agent 协作可管理、可复盘、可持续改进，同时将关键判断权保留给人类。",
+      "detail_md": "**解决什么问题**\nLoopX 解决了长程 AI Agent 工作中目标漂移、用户决策缺失、证据过期、Agent 间交接困难以及资源消耗不可控等问题。它通过提供一个稳定的控制面，确保目标、人类判断、待办事项、证据和配额在多轮 Agent 执行之间保持一致。\n\n**核心功能**\nLoopX 的核心功能包括：管理目标状态（`objective`）、人类决策门（`gate`）、待办事项（`todo`）、范围（`scope`）、证据（`evidence`）和配额（`quota`）。它提供 CLI 命令如 `loopx status`、`loopx history` 和 `loopx quota should-run` 来检查项目状态和控制 Agent 执行。LoopX 还支持模块化扩展，例如 Issue-Fix 和 Auto-Research 能力。\n\n**技术亮点**\nLoopX 的技术亮点在于其轻量级状态内核和 Agent 无关的本地控制面设计。它将高层概念映射到具体的代码实体，例如将“Objective”映射到 `ACTIVE_GOAL_STATE.md`。LoopX 强调“人机协作”，确保关键判断由人做出，同时允许 Agent 在明确的规则下持续推进工作。\n\n**适合谁用**\nLoopX 适合需要管理多天或多周的工程、研究、基准测试或实验目标的团队和个人。它也适用于处理需要保留范围、证据和审查状态的 issue/PR 循环，以及需要明确所有权、租约和交接的 Agent 团队。此外，对于需要将进展、阻塞和反馈清晰呈现给非技术用户的创作、研究或运营工作，LoopX 也能提供帮助。",
+      "degraded": false
+    },
+    {
+      "id": "google/guava",
+      "owner": "google",
+      "name": "guava",
+      "url": "https://github.com/google/guava",
+      "stars": 51623,
+      "description": "Google core libraries for Java",
+      "one_liner": "Guava 是 Google 的核心 Java 库，提供丰富的工具类、集合框架和并发原语。",
+      "detail_md": "**解决什么问题**\nGuava 旨在解决 Java 开发中常见的痛点，例如标准库功能不足、代码冗余、并发编程复杂等问题。它通过提供经过 Google 内部验证的、高性能且可靠的工具集，帮助开发者提高开发效率和代码质量。\n\n**核心功能**\nGuava 的核心功能包括：增强型集合框架，如 `Multimap` 和 `Multiset`；强大的并发工具，围绕 `ListenableFuture` 构建，提供 `MoreExecutors` 和 `RateLimiter` 等；高性能内存缓存系统，支持 `Cache` 和 `LoadingCache`；以及网络、I/O 和数学等领域的实用工具类。\n\n**技术亮点**\nGuava 的技术亮点在于其模块化架构，支持 JRE、Android 和 GWT 等多种平台变体。它强调 API 稳定性，非 `@Beta` 接口保证二进制兼容性。此外，Guava 广泛使用不可变集合，以提升线程安全性和减少 bug。项目通过 Maven 进行分发，并尽量减少外部依赖。\n\n**适合谁用**\nGuava 适合所有 Java 开发者，特别是那些需要处理复杂集合操作、并发编程、缓存管理或希望提高代码健壮性和可读性的开发者。它在 Google 内部被广泛使用，并已成为 Java 生态系统中的标准库之一。",
+      "degraded": false
+    },
+    {
+      "id": "TapXWorld/ChinaTextbook",
+      "owner": "TapXWorld",
+      "name": "ChinaTextbook",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "stars": 77044,
+      "description": "所有小初高、大学PDF教材。",
+      "one_liner": "本项目提供免费的中国中小学及大学教材，并附带PDF合并工具，旨在促进教育公平和方便海外华人子女学习中文课程。",
+      "detail_md": "**解决什么问题**\n本项目主要解决中国教育资源获取受限的问题，尤其是在中国大陆地区，许多免费资源被不法分子利用并销售。同时，它也为海外华人家庭提供便利，使其子女能够继续接触和学习中国课程。此外，项目还通过提供免费教材，促进教育公平，消除地区间的教育贫困。\n\n**核心功能**\n核心功能包括提供小学、初中、高中及大学阶段的数学和英语等科目的PDF格式教材。由于GitHub对文件大小的限制，超过50MB的PDF文件会被拆分成多个小文件。为此，项目提供了一个名为`mergePDFs.exe`的工具，用于将这些拆分的PDF文件合并回完整的教材。\n\n**技术亮点**\n技术亮点在于其PDF合并工具`mergePDFs.exe`，该工具由Go语言编写，能够自动识别并合并同一目录下的拆分PDF文件。它通过扫描目录、按文件名分组、排序文件部分并最终合并成一个完整PDF，并在合并成功后自动删除原始拆分文件。\n\n**适合谁用**\n本项目适合需要免费获取中国中小学及大学教材的学生、家长和教育工作者。特别是对于海外华人家庭，它提供了一个便捷的途径，让孩子们能够接触到国内的教育内容。同时，对于网络条件不佳或无法直接访问GitHub的中国大陆用户，项目也推荐了替代下载方案。",
+      "degraded": false
+    },
+    {
+      "id": "Significant-Gravitas/AutoGPT",
+      "owner": "Significant-Gravitas",
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "stars": 185986,
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "one_liner": "本项目是一个先进的自主人工智能平台，旨在通过模块化、可扩展的架构，赋能开发者构建、测试和部署智能代理。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统AI应用开发中，智能代理构建复杂、测试困难以及部署不灵活的问题。它提供了一个统一的平台，简化了从开发到测试再到部署的整个生命周期。\n\n**核心功能**\n核心功能包括一个基于块的代理系统，允许用户通过组合不同的功能块来构建智能代理。平台支持全面的测试策略，包括后端 `pytest`、前端 `Vitest` 和端到端 `Playwright` 测试，确保代理的质量和稳定性。此外，它还提供了数据管理工具，用于生成和管理测试数据。\n\n**技术亮点**\n技术亮点在于其模块化架构，后端采用 `FastAPI`，前端使用 `Next.js` 和 `React Query` 进行数据管理。它集成了 `Prisma ORM` 和 `PostgreSQL` 数据库，支持 `pgvector` 用于嵌入式数据处理。测试方面，利用 `MSW` 进行API模拟，并通过 `GitHub Actions` 实现持续集成/持续部署。\n\n**适合谁用**\n本项目适合希望构建、测试和部署智能代理的开发者、研究人员以及企业。特别是那些需要高度可定制化、可扩展且注重测试质量的AI应用场景。",
+      "degraded": false
+    },
+    {
+      "id": "tirth8205/code-review-graph",
+      "owner": "tirth8205",
+      "name": "code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "stars": 29001,
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "one_liner": "`code-review-graph` 是一个本地优先、增量更新的知识图谱，旨在通过精确上下文优化 AI 辅助代码审查，显著减少 LLM token 消耗。",
+      "detail_md": "**解决什么问题**\nAI 编码工具在代码审查时常需重复读取大量代码，导致 token 浪费和上下文窗口耗尽。本项目通过构建代码结构图谱，为 AI 助手提供精准的“影响半径”分析，使其只读取与变更相关的最小文件集，从而大幅减少 token 消耗，解决大型代码库和 Monorepo 中的审查效率问题。   \n\n**核心功能**\n核心功能包括：将代码库解析为抽象语法树（AST）并存储为节点和边的知识图谱；通过 SHA-256 哈希校验实现增量更新，快速重新索引变更文件；进行“影响半径”分析，识别受代码变更影响的调用者、依赖项和测试；支持超过 30 种编程语言和 Jupyter 笔记本；提供混合搜索（关键词 + 向量嵌入）和交互式可视化功能。\n\n**技术亮点**\n项目采用 Tree-sitter 进行多语言 AST 解析，将代码结构存储在本地 SQLite 数据库中。通过 Model Context Protocol (MCP) 与多种 AI 编码工具集成，提供 30 多个 MCP 工具和 5 个工作流模板。其增量更新机制可在 2 秒内重新索引 2900 个文件的项目，并在 Monorepo 中实现高达 528 倍的 token 削减。\n\n**适合谁用**\n本工具适合使用 AI 编码助手进行代码审查的开发者、团队和公司，尤其是在大型代码库或 Monorepo 环境中工作的用户。它能帮助用户显著降低 AI 工具的 token 成本，提高代码审查效率，并为 AI 助手提供更精确、更相关的上下文信息。",
+      "degraded": false
+    },
+    {
+      "id": "esengine/DeepSeek-Reasonix",
+      "owner": "esengine",
+      "name": "DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "stars": 32367,
+      "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+      "one_liner": "Reasonix 是一个 DeepSeek 原生 AI 编码 Agent，通过配置和插件驱动，旨在提供低成本、长会话的开发体验。",
+      "detail_md": "**解决什么问题**\nReasonix 旨在解决传统 AI 编码工具在长会话中 token 成本高昂的问题，通过优化 DeepSeek 的前缀缓存机制，显著降低输入 token 成本，并提供稳定的系统提示词和上下文结构。   它还通过配置驱动和插件化设计，解决了模型和工具硬编码、扩展性差的问题。 \n\n**核心功能**\nReasonix 提供配置驱动的 Agent、多模型支持、插件化工具扩展、缓存友好的上下文维护以及零摩擦分发。  用户可以通过 CLI/TUI、桌面应用、VS Code 扩展或 HTTP/SSE 服务等多种方式使用。  它支持交互式会话、代码审查、服务模式和子智能体管理等功能。 \n\n**技术亮点**\n项目采用 Go 语言重写，实现单一静态二进制文件，易于分发和跨平台部署。   其核心设计哲学是配置驱动，所有模型、工具和插件都通过 TOML 文件声明，而非硬编码。   Reasonix 针对 DeepSeek 的前缀缓存进行优化，长会话缓存命中率可达 90% 以上，大幅降低 token 成本。  \n\n**适合谁用**\nReasonix 适合需要高效、低成本 AI 辅助编码的开发者。  尤其适合 DeepSeek 模型用户，以及希望通过配置而非代码扩展 AI Agent 能力的团队。   它提供了多种使用界面，满足不同开发者的习惯，包括命令行、桌面应用和 VS Code 扩展。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 268063,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编程代理设计的完整软件开发方法论和技能框架，旨在通过结构化流程提升开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编程代理在软件开发过程中可能出现的随意性、低效和质量问题。它通过引入一套可组合的“技能”和强制性的工作流程，确保代理在开发过程中遵循测试驱动开发（TDD）、系统化调试、规划和代码审查等最佳实践。这有助于将代理从简单的代码编写者转变为能够进行复杂、高质量软件开发的工程师。\n\n**核心功能**\nSuperpowers 提供了一系列核心技能，涵盖了软件开发的各个阶段：\n*   **规划与设计**：`brainstorming` 技能用于细化想法、探索替代方案并生成设计文档。`writing-plans` 技能则将设计分解为可执行的任务。\n*   **开发与调试**：`test-driven-development` 强制执行红-绿-重构循环；`systematic-debugging` 提供四阶段的根本原因分析流程。\n*   **协作与审查**：`subagent-driven-development` 支持子代理驱动的开发和两阶段审查；`requesting-code-review` 协助代码审查。\n*   **多平台集成**：Superpowers 支持 Claude Code、Cursor、Codex、Kimi Code 等多个 AI 编程平台。\n\n**技术亮点**\n*   **跨平台兼容性**：通过为不同平台定制的 `plugin.json` 文件和钩子机制，Superpowers 能够无缝集成到多种 AI 编程环境中。例如，Claude Code 和 Cursor 使用基于钩子的架构，而 Codex 则依赖原生技能发现。\n*   **强制性技能触发**：系统强制执行“1% 规则”，即只要有极小的可能性适用某个技能，代理就必须调用它。这确保了代理始终遵循结构化的工作流程。\n*   **可视化辅助**：`brainstorming` 技能可以启动一个浏览器端的视觉伴侣，用于展示 UI 模型、架构图或进行视觉比较，提升设计沟通效率。\n*   **模块化技能库**：技能被设计为可组合的模块，易于理解和维护，并且可以在不同任务中复用。\n\n**适合谁用**\nSuperpowers 适合希望提升 AI 编程代理开发效率和代码质量的开发者、团队和企业。特别是那些使用 Claude Code、Cursor、Codex、Kimi Code 等主流 AI 编程平台的个人和组织，可以通过安装 Superpowers 插件，使其代理能够执行更系统化、更专业的软件开发工作流。",
+      "degraded": false
+    },
+    {
+      "id": "firecrawl/pdf-inspector",
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "stars": 12396,
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "one_liner": "`pdf-inspector` 是一个高性能的 Rust 库，专为 AI 代理和 LLM 流水线设计，用于快速分类和提取 PDF 文档中的文本，并将其转换为结构化 Markdown。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 PDF 文档处理中的效率和质量问题，特别是对于 AI 代理和大型语言模型 (LLM) 流水线。它通过快速识别 PDF 类型（文本型、扫描型、混合型或图像型），避免对文本型 PDF 进行昂贵的 OCR 过程，从而节省成本和时间。此外，它还能从复杂的 PDF 布局中提取高质量的语义信息，而不仅仅是视觉上的保真度。\n\n**核心功能**\n`pdf-inspector` 的核心功能包括：\n*   **智能分类**：快速判断 PDF 是 `TextBased`、`Scanned`、`ImageBased` 还是 `Mixed` 类型，并在约 10-50 毫秒内完成。它还能识别需要 OCR 的特定页面。\n*   **文本提取与布局分析**：将 PDF 内容流操作符解析为带有坐标的 `TextItem` 对象，并检测多列（报纸式）与表格布局，以保留正确的阅读顺序。\n*   **表格提取**：采用多种策略（基于矩形、基于线条和启发式）重建表格，无需视觉 OCR。\n*   **语义 Markdown 转换**：将字体大小比例、样式和标签化 PDF 结构树转换为 Markdown 标题、列表和代码块。\n\n**技术亮点**\n*   **高性能 Rust 核心**：整个库由 Rust 编写，确保了处理速度和效率。\n*   **多语言绑定**：提供 Python (通过 `PyO3`)、Node.js (通过 `napi-rs`)  和 WebAssembly 模块，方便集成到不同技术栈。\n*   **智能分类与 OCR 路由**：通过 `detector` 模块快速分类 PDF，并根据需要将特定页面路由到 OCR 服务，显著降低处理成本和延迟。\n*   **多策略表格检测**：结合矩形、线条和启发式方法，提高了表格识别的准确性。\n*   **语义优先的 Markdown 输出**：优化输出以提高 token 效率和语义质量，而非视觉格式，特别适合 AI 代理使用。\n\n**适合谁用**\n`pdf-inspector` 适用于需要大规模处理 PDF 文档的开发者、数据科学家和 AI 工程师。特别是那些构建 AI 代理、LLM 流水线或任何需要从 PDF 中快速、准确提取结构化文本的应用。它也适合希望通过避免不必要的 OCR 过程来优化成本和性能的团队。",
+      "degraded": false
+    }
+  ]
+}
