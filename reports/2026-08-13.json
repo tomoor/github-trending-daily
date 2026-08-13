@@ -1,0 +1,193 @@
+{
+  "doc_token": "TzQpdFjFTooYxrx3JXDcxvf8nde",
+  "doc_url": "https://my.feishu.cn/docx/TzQpdFjFTooYxrx3JXDcxvf8nde",
+  "items": [
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 10241,
+      "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+      "one_liner": "`diagram-design` 是一个 Claude Code 技能，用于生成高质量、可定制的图表，支持 13 种类型，并能根据品牌风格自动调整样式。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统图表生成工具在美观性和品牌一致性方面的不足，以及大型语言模型生成图表时缺乏设计感的问题。它通过提供一套有品味的编辑设计系统，确保生成的图表具有专业外观，并能快速适应用户网站的品牌风格，避免了手动调整的繁琐。  \n\n**核心功能**\n核心功能包括生成 13 种不同类型的技术和产品图表，例如架构图、流程图、时序图等。它支持通过自然语言指令生成图表。项目还提供“首次运行门禁”机制，引导用户通过网站 URL 自动提取品牌颜色和字体，或手动配置样式指南 `references/style-guide.md`，以确保图表与品牌风格一致。\n\n**技术亮点**\n技术亮点在于其模块化架构，`SKILL.md` 作为顶层索引，根据用户请求动态加载特定图表类型的参考文件（如 `references/type-architecture.md`），从而保持 Claude 的工作上下文精简高效。生成的图表是独立的 HTML 文件，包含内联 SVG 和 CSS，无需构建步骤或外部依赖。\n\n**适合谁用**\n该项目适合需要为博客文章、技术文档或产品说明创建高质量、品牌一致性图表的用户。特别是那些希望通过自动化方式，快速将图表风格与自身网站品牌匹配的开发者、博主和内容创作者。",
+      "degraded": false
+    },
+    {
+      "id": "macro-inc/macro",
+      "owner": "macro-inc",
+      "name": "macro",
+      "url": "https://github.com/macro-inc/macro",
+      "stars": 1760,
+      "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+      "one_liner": "Macro 是一个将电子邮件、消息、任务、文档和文件统一到一个系统中的协作生产力平台。",
+      "detail_md": "**解决什么问题**\nMacro 旨在解决团队在处理分散的数据和工具时遇到的效率低下问题，它将电子邮件、消息、任务、文档和文件整合到一个统一的界面和数据库中，并通过双向链接实现数据间的无缝关联，从而提高工作效率和协作能力。\n\n**核心功能**\n该平台提供多账户统一收件箱、为技术讨论设计的频道和私信、受 Linear 启发并与邮件和智能代理深度集成的任务管理、支持实时协作和 Markdown 的文档编辑、以及用于嵌入链接的 2D 画布。 此外，它还集成了智能代理、通话记录与转录、文件存储和 GitHub Pull Request 管理，并提供客户关系管理功能。\n\n**技术亮点**\nMacro 采用高性能的 Rust 后端和响应迅速的 SolidJS 前端构建，确保了速度和实时协作体验。 其核心技术包括基于 CRDT 的实时协作文档编辑、Kafka 驱动的事件代理以及广泛利用 AWS 服务（如 S3、Lambda、SQS 和 OpenSearch）的微服务架构。\n\n**适合谁用**\nMacro 适合需要高效协作、统一工作流程和智能自动化支持的团队，特别是那些在电子邮件、消息、任务和文档管理方面寻求集成解决方案的工程师和技术团队。",
+      "degraded": false
+    },
+    {
+      "id": "semantica-agi/semantica",
+      "owner": "semantica-agi",
+      "name": "semantica",
+      "url": "https://github.com/semantica-agi/semantica",
+      "stars": 5690,
+      "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+      "one_liner": "Semantica 是一个 AI 系统的上下文和可追溯性层，旨在将企业非结构化数据转化为结构化、可审计的知识图谱。",
+      "detail_md": "Semantica 是一个 AI 系统的上下文和可追溯性层，旨在将企业非结构化数据转化为结构化、可审计的知识图谱。它提供全面的工具，用于数据摄取、语义提取、知识图谱构建、推理、决策智能和溯源跟踪，确保每个 AI 决策和生成的事实都可解释、可追溯和可管理。\n\n**解决什么问题**\nSemantica 解决了 AI 系统在生产或受监管环境中部署时常见的关键问题。它通过提供持久的语义上下文、完整的决策记录、可信赖的溯源和血缘、可解释的确定性推理引擎以及冲突检测和解决，来补充现有的 LLM 提供商和代理框架。\n\n**核心功能**\nSemantica 的核心功能包括上下文图谱 (Context Graphs) 和 GraphRAG、决策智能 (Decision Intelligence)、以及可追溯性和溯源 (Accountability & Provenance)。它能够将非结构化数据转化为可查询的知识图谱，记录决策的完整因果链，并使用 W3C PROV-O 标准跟踪每个事实的完整血缘。\n\n**技术亮点**\n该项目采用模块化、四层架构设计，包括摄取层、处理层、智能层和应用层。它支持多种数据源摄取、语义提取（如命名实体识别、关系提取）、知识图谱构建、以及与各种向量存储和图数据库的集成。Semantica 还提供命令行界面 (CLI)  和 REST API，并支持多种 LLM 提供商。\n\n**适合谁用**\nSemantica 适用于 AI/ML 平台团队、合规官、风险经理和知识工程师，他们需要透明、可审计的 AI 系统，且没有供应商锁定或云依赖。它特别适合金融、医疗保健和法律等受监管领域。",
+      "degraded": false
+    },
+    {
+      "id": "stablyai/orca",
+      "owner": "stablyai",
+      "name": "orca",
+      "url": "https://github.com/stablyai/orca",
+      "stars": 43832,
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+      "one_liner": "Orca 是一个集成了 Git 和 GitHub 的开发工具，专注于工作区管理、PR 同步和 CI 检查。",
+      "detail_md": "**解决什么问题**\nOrca 旨在解决开发者在 Git 和 GitHub 工作流中遇到的复杂性问题，特别是多工作区管理、Git 状态同步、PR 元数据获取以及 CI 检查的跟踪。它通过提供统一的界面和自动化功能，简化了 Git 操作和 GitHub 交互，提高了开发效率。\n\n**核心功能**\n*   **Git 工作区管理**：支持创建、管理和同步多个 Git 工作区，包括对工作区名称的净化和分支的自动快进。\n*   **Git 状态和差异**：实现自定义的 `git status --porcelain=v2` 解析器，用于跟踪文件更改，并优化状态刷新以提高 UI 响应速度。\n*   **GitHub 集成**：通过 GitHub CLI (`gh`) 获取 PR 元数据、CI 检查和议题详情，并具备并发和速率限制管理功能。\n*   **Hooks 系统**：支持通过 `orca.yaml` 文件定义仓库特定的设置脚本和归档脚本，实现自动化工作流。\n*   **SSH & 远程 Git**：通过 SSH Relay 系统处理远程环境的 Git 命令，支持远程工作区。\n\n**技术亮点**\n*   **高效的 Git 操作**：通过优化 `git status` 读取和使用 `git worktree add` 等命令，确保 Git 操作的效率和准确性。\n*   **智能的 GitHub 交互**：利用并发控制和速率限制保护机制，确保与 GitHub API 的稳定交互，并采用指数退避策略进行 CI 检查轮询。\n*   **多语言支持**：界面支持中文、英文、韩语、日语和西班牙语等多种语言，提升用户体验。\n\n**适合谁用**\nOrca 适合需要高效管理多个 Git 工作区、频繁与 GitHub 进行交互（如处理 PR、CI 检查和议题）的开发者和团队。特别是那些希望通过自动化脚本简化开发流程，并对远程开发环境有需求的用户。。",
+      "degraded": false
+    },
+    {
+      "id": "msitarzewski/agency-agents",
+      "owner": "msitarzewski",
+      "name": "agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "stars": 144543,
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "one_liner": "本项目是一个包含 150 多个专业 AI 智能体定义的单一真实来源仓库，旨在解决 AI 智能体平台之间不兼容的格式问题，并通过自动化流程实现跨平台部署和管理。",
+      "detail_md": "## 解决什么问题 \nAI 智能体平台通常使用不兼容的格式来定义智能体，导致为不同工具（如 Claude Code、Copilot、Cursor 等）编写智能体时需要维护多个副本。 本项目通过提供一个单一的 Markdown + YAML 格式的智能体定义源，并自动化转换为平台特定格式，解决了这一痛点。 \n\n## 核心功能 \n*   **单一真实来源**：所有智能体都以 Markdown + YAML 格式编写和维护。 \n*   **自动化转换**：`scripts/convert.sh` 脚本将智能体定义转换为 11 种不同 AI 智能体平台的特定格式。  \n*   **轻松部署**：`scripts/install.sh` 脚本能自动检测已安装的平台并部署转换后的智能体。  \n*   **质量门禁**：`scripts/lint-agents.sh` 脚本在转换前验证智能体结构，确保质量。 \n\n## 技术亮点 \n*   **模块化设计**：智能体定义遵循严格的 Markdown 结构，包含身份、核心任务、关键规则、技术交付物和工作流程等部分。 \n*   **多平台支持**：通过不同的转换策略，支持 Claude Code、GitHub Copilot、Gemini CLI、OpenClaw 等多种主流 AI 智能体工具。  \n*   **可扩展性**：项目结构清晰，易于贡献者添加新的智能体或优化现有智能体。 \n*   **强个性化**：每个智能体都拥有独特的个性、明确的交付物、可衡量的成功指标和经过验证的工作流程。 \n\n## 适合谁用 \n*   **AI 智能体开发者**：希望在不同 AI 平台间复用智能体定义的开发者。 \n*   **团队和企业**：需要部署和管理大量专业化 AI 智能体以提升工作效率的团队。 \n*   **个人用户**：寻求特定领域（如工程、设计、营销、产品管理等）专业 AI 助手的个人。",
+      "degraded": false
+    },
+    {
+      "id": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "stars": 36934,
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "one_liner": "Kronos 是首个开源的金融 K 线基础模型，旨在处理金融市场特有的高噪声数据，实现多样化量化任务的统一预测。",
+      "detail_md": "**解决什么问题**\nKronos 解决了传统时间序列预测模型难以有效处理金融市场 K 线数据高噪声和复杂性的问题。 它通过将连续的 K 线数据转化为离散的层级化 token，并利用大型自回归 Transformer 模型进行预训练，从而能够统一处理各种量化任务。 \n\n**核心功能**\nKronos 的核心功能包括 K 线数据的分词和预测。 它使用 `KronosTokenizer` 将 OHLCV (开盘价、最高价、最低价、收盘价、成交量) 数据量化为层级离散 token，  然后通过 `KronosPredictor` 进行金融市场走势预测。  项目还提供了微调功能，允许用户在自定义 CSV 数据集上训练模型，并支持分布式训练。  \n\n**技术亮点**\nKronos 的技术亮点在于其独特的两阶段框架：首先，一个专门的 `KronosTokenizer` 将连续、多维的 K 线数据（OHLCV）量化为层级离散 token； 其次，一个大型自回归 Transformer 模型在这些 token 上进行预训练。 它采用了 `BSQuantizer` (Binary Spherical Quantizer) 进行量化， 并支持 `DDP` (Distributed Data Parallel) 进行多 GPU 训练。 \n\n**适合谁用**\nKronos 适合量化研究员、金融数据科学家以及对金融市场预测和量化交易策略开发感兴趣的开发者。 它为希望利用深度学习技术分析金融市场并构建预测模型的用户提供了强大的工具和灵活的微调能力。",
+      "degraded": false
+    },
+    {
+      "id": "NanmiCoder/MediaCrawler",
+      "owner": "NanmiCoder",
+      "name": "MediaCrawler",
+      "url": "https://github.com/NanmiCoder/MediaCrawler",
+      "stars": 61954,
+      "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+      "one_liner": "本项目是一个多平台自媒体数据采集工具，支持从小红书、抖音等主流平台抓取公开信息。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决从多个主流自媒体平台（如小红书、抖音、快手、B站、微博、贴吧、知乎）高效、稳定地采集公开数据的问题。  它通过模拟浏览器行为，绕过复杂的反爬机制和JS签名，降低了数据采集的技术门槛。 \n\n**核心功能**\n核心功能包括关键词搜索、指定帖子ID爬取、二级评论抓取、指定创作者主页信息获取、登录态缓存、IP代理池支持以及生成评论词云图。  数据可以存储为CSV、JSON、JSONL、Excel、SQLite或MySQL等多种格式。 \n\n**技术亮点**\n项目基于Playwright浏览器自动化框架，通过保留登录态的浏览器上下文环境，利用JS表达式获取签名参数，从而无需进行复杂的JS逆向工程。  它还支持CDP模式连接本地Chrome浏览器，以解决Webdriver引起的问题。 \n\n**适合谁用**\n本项目适合需要进行自媒体数据分析、市场研究、舆情监控等任务的个人用户、研究人员和开发者。  特别是对于希望学习爬虫技术、了解成熟项目架构设计的人员，本项目提供了良好的学习和参考价值。",
+      "degraded": false
+    },
+    {
+      "id": "hugohe3/ppt-master",
+      "owner": "hugohe3",
+      "name": "ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master",
+      "stars": 45538,
+      "description": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+      "one_liner": "PPT Master 是一个 AI 驱动的开源工作流，能将各种文档转换为可编辑的 PowerPoint 演示文稿。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决现有 AI 演示工具的局限性，例如生成扁平图片而非可编辑的 PPTX 文件，以及缺乏对演示逻辑的推理能力。它还解决了数据隐私问题，通过本地执行确保用户数据安全。\n\n**核心功能**\nPPT Master 能够将 PDF、DOCX、URL、Markdown 等源文档转换为原生可编辑的 PPTX 文件。它通过多角色协作（如 `Strategist` 规划逻辑，`Executor` 生成视觉），生成包含原生形状、文本框、图表和表格的 PowerPoint 文件。项目支持多种画布格式，包括标准 16:9 和社交媒体比例。\n\n**技术亮点**\n项目采用 SVG 作为中间表示层，将 AI 生成的 SVG 内容编译为 DrawingML，确保高度保真和原生可编辑性。它还具备 SVG 后处理管线 (`finalize_svg.py`)，用于嵌入图标、智能裁剪图片等。整个工作流在本地执行，保证数据不出本地，并支持多种 AI 模型和提供商。\n\n**适合谁用**\nPPT Master 适合需要将主题、文档、数据或已有演示文稿转换为高质量、可编辑 PowerPoint 的用户。它面向重视演示逻辑、PowerPoint 原生深度、用户控制和数据隐私的用户，即使不编写代码，也能通过对话式 AI 工具和本地 Python 环境使用。",
+      "degraded": false
+    },
+    {
+      "id": "infiniflow/ragflow",
+      "owner": "infiniflow",
+      "name": "ragflow",
+      "url": "https://github.com/infiniflow/ragflow",
+      "stars": 87534,
+      "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "one_liner": "RAGFlow 是一个开源的检索增强生成（RAG）引擎，它融合了先进的RAG技术与Agent能力，为大型语言模型提供卓越的上下文层。",
+      "detail_md": "**解决什么问题**\nRAGFlow 旨在解决大型语言模型在处理复杂数据时，上下文理解不足和可能产生幻觉的问题。  它通过深度文档理解和RAG技术，将非结构化数据转化为高可信、生产级的人工智能系统，从而提高LLM的准确性和可靠性。 \n\n**核心功能**\nRAGFlow 的核心功能包括基于深度文档理解的知识提取、智能且可解释的模板化文本切片、提供有理有据的引用以降低幻觉、兼容Word、PPT、Excel、PDF等多种异构数据源，以及自动化且无忧的RAG工作流，支持LLM和嵌入模型的配置，并提供易用的API。 \n\n**技术亮点**\n该项目融合了前沿的RAG技术与Agent能力，采用微服务架构，支持Docker Compose和Kubernetes部署。它支持多种文档引擎选择，如Elasticsearch、Infinity等。RAGFlow还具备多语言构建支持，包括Python和Go组件，并通过GitHub Actions进行持续集成测试。 \n\n**适合谁用**\nRAGFlow 适合需要构建高可信、生产级AI系统的开发者，以及希望将复杂数据转化为LLM上下文的企业用户。无论是个人应用还是超大型企业，RAGFlow 都能提供优化的RAG工作流支持。",
+      "degraded": false
+    },
+    {
+      "id": "paperclipai/paperclip",
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "stars": 77712,
+      "description": "The open-source app everyone uses to manage agents at work",
+      "one_liner": "Paperclip 是一个用于管理 AI 代理团队以运行业务的开源编排平台。",
+      "detail_md": "**解决什么问题**\nPaperclip 解决了在管理多个 AI 代理时遇到的挑战，例如跟踪代理活动、协调不同代理之间的工作、管理成本以及确保代理与业务目标保持一致。  它提供了一个统一的平台来处理代理的组织结构、任务分配、预算控制和治理。 \n\n**核心功能**\n核心功能包括：代理任务管理器，用于定义目标、分配任务和验证输出；  代理组织结构图，用于定义角色、权限和职责；  代理员工培训，用于设计、训练和评估 AI 代理；  以及代理操作系统，提供跨提供商运行时、沙盒和成本控制等基础设施。  它还支持自带代理、目标对齐、心跳机制和成本控制。 \n\n**技术亮点**\nPaperclip 采用三层架构，包括 React 前端、Node.js 后端和 PostgreSQL 数据层。  它通过适配器系统抽象了不同的代理执行模型，支持本地 CLI 适配器和远程网关适配器。  代理以“心跳”的形式执行，即由唤醒触发的短执行窗口，并能保持会话状态。   此外，它还支持多公司租户，确保数据隔离和治理。 \n\n**适合谁用**\nPaperclip 适合希望构建自主 AI 公司、协调多个不同代理以实现共同目标、管理大量代理活动、需要代理 24/7 自主运行但仍需审计和干预、监控成本和预算，以及希望通过类似任务管理器的方式管理代理的用户。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA-NeMo/Switchyard",
+      "owner": "NVIDIA-NeMo",
+      "name": "Switchyard",
+      "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+      "stars": 809,
+      "description": "",
+      "one_liner": "Switchyard 是一个高性能 LLM 流量编排代理和库，用于智能路由、格式转换和多后端服务。",
+      "detail_md": "**解决什么问题**\nSwitchyard 旨在解决大型语言模型 (LLM) 提供商 API 的碎片化问题，以及对智能请求路由的需求。它在客户端应用程序（如 Claude Code、Codex 或标准 OpenAI/Anthropic SDK）和各种 LLM 后端（NVIDIA NIM、vLLM、OpenAI、Anthropic 等）之间提供一个类型化的控制平面。\n\n**核心功能**\n*   **协议转换**: 在 `openai_chat`、`anthropic_messages` 和 `openai_responses` 之间无缝转换线缆格式。\n*   **智能路由**: 支持信号驱动的 Stage Routing、用于分层的 LLM-as-classifier 路由以及加权随机拆分。\n*   **一键启动器**: 集成 CLI 工具，用于启动流行的编码代理，如 `claude`、`codex` 和 `openclaw`，并预配置路由代理。\n*   **可观测性**: 内置 Prometheus 指标、OpenTelemetry spans 和 JSON `/v1/stats` 端点，用于跟踪 token 使用、延迟和路由开销。\n\n**技术亮点**\nSwitchyard 的核心是一个原生的 Rust 实现，提供传输无关的路由核心 (`libsy`)，可以嵌入到 Rust 应用程序中或作为独立二进制文件运行。它使用 `uv` 进行 Python 依赖管理，`cargo` 用于 Rust 组件。项目结构清晰，Python 包 `switchyard/` 包含库逻辑、CLI 和 FastAPI 组件，而 `crates/` 包含 Rust 工作区，包括 `switchyard-translation`（编解码引擎）和 `switchyard-py`（PyO3 绑定）。\n\n**适合谁用**\nSwitchyard 适合需要对 LLM 流量进行精细控制和优化的开发者和组织。特别是那些希望在不同 LLM 提供商之间进行无缝切换、实现智能路由策略、并确保协议兼容性的用户。它也适用于需要部署编码代理（如 Claude Code、Codex）并对其进行管理的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ZuodaoTech/everyone-can-use-english",
+      "owner": "ZuodaoTech",
+      "name": "everyone-can-use-english",
+      "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+      "stars": 36055,
+      "description": "人人都能用英语",
+      "one_liner": "本项目通过AI辅助和沉浸式媒体，帮助用户高效学习英语，提升语言能力。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统英语学习效率低下、缺乏个性化指导的问题。通过AI技术，提供发音纠正、口语练习和学习记录追踪，帮助用户系统性地提升英语能力，特别是口语和听力。\n\n**核心功能**\n核心功能包括AI纠正发音、跟读训练、AI对话、文档阅读、词典查询 以及学习记录追踪。用户可以导入音视频材料进行学习，并获得发音评估和反馈。\n\n**技术亮点**\n项目采用Electron、React和TypeScript构建桌面应用Enjoy App，结合Nuxt.js开发Web前端1000h Portal。技术亮点在于集成多种AI服务，如OpenAI的GPT和Whisper API、Azure AI的语音服务以及Cloudflare AI，实现语音转文本、文本转语音和发音评估等功能。\n\n**适合谁用**\n该项目适合所有希望通过高效、智能化的方式提升英语能力的用户，特别是那些希望改善发音、进行口语练习以及利用AI辅助学习的英语学习者。它也适用于希望通过系统性训练来“健脑”的用户。",
+      "degraded": false
+    },
+    {
+      "id": "smicallef/spiderfoot",
+      "owner": "smicallef",
+      "name": "spiderfoot",
+      "url": "https://github.com/smicallef/spiderfoot",
+      "stars": 20338,
+      "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+      "one_liner": "SpiderFoot 是一个开源情报 (OSINT) 自动化工具，用于收集、分析和关联目标信息。",
+      "detail_md": "**解决什么问题**\n该项目旨在自动化开源情报收集过程，帮助用户识别和分析互联网上暴露的数字资产和潜在风险。无论是用于渗透测试中的侦察，还是防御性地评估组织在互联网上的信息暴露情况，SpiderFoot 都能提供全面的数据收集和分析能力。\n\n**核心功能**\nSpiderFoot 提供了一个嵌入式 Web 用户界面和命令行接口，支持超过 200 个模块，用于从各种数据源收集信息。它可以扫描 IP 地址、域名、电子邮件地址、电话号码等多种目标类型。收集到的数据可以通过 YAML 配置的关联引擎进行分析，并支持 CSV、JSON、GEXF 等多种格式导出。\n\n**技术亮点**\n该工具使用 Python 3 开发，并采用发布/订阅模型，使 200 多个模块能够相互协作，最大化数据提取效率。它支持 TOR 集成进行暗网搜索，并能调用 DNSTwist、Whatweb、Nmap 等外部工具。此外，它还提供了 SQLite 后端用于自定义查询，并支持高度可配置的扫描选项。\n\n**适合谁用**\nSpiderFoot 适合安全研究人员、渗透测试人员、红队成员以及任何需要进行开源情报收集和分析的个人或组织。它也适用于希望评估自身或组织在互联网上信息暴露情况的用户。",
+      "degraded": false
+    },
+    {
+      "id": "localsend/localsend",
+      "owner": "localsend",
+      "name": "localsend",
+      "url": "https://github.com/localsend/localsend",
+      "stars": 87796,
+      "description": "An open-source cross-platform alternative to AirDrop",
+      "one_liner": "LocalSend 是一款免费开源应用，无需网络即可在本地设备间安全共享文件和消息。",
+      "detail_md": "**解决什么问题**\nLocalSend 解决了在没有互联网连接或不依赖第三方服务器的情况下，用户在本地网络内安全、快速地共享文件和消息的需求。  它避免了传统文件传输方式对外部服务器的依赖，提升了隐私性和传输速度。 \n\n**核心功能**\n该应用的核心功能包括在本地网络上安全地共享文件和消息。  它支持跨平台使用，可在 Android、iOS、macOS、Windows 和 Linux 等操作系统上运行。  用户可以通过 REST API 和 HTTPS 加密进行设备间的安全通信。 \n\n**技术亮点**\nLocalSend 的技术亮点在于其跨平台兼容性  和不依赖互联网连接的本地传输能力。  它使用 REST API 和 HTTPS 加密确保通信安全，并且是完全开源的。  此外，它还支持多语言，通过 `slang` 包实现类型安全的翻译。 \n\n**适合谁用**\nLocalSend 适合任何需要在本地网络中快速、安全地共享文件和消息的用户。  特别是那些注重隐私、不希望数据经过第三方服务器，或者在没有互联网连接的环境下进行文件传输的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Lightricks/LTX-2",
+      "owner": "Lightricks",
+      "name": "LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "stars": 8699,
+      "description": "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
+      "one_liner": "LTX-2 是一个基于 DiT 的音视频基础模型，集成了音视频同步、高质量生成、多种性能模式和生产级输出能力。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决视频生成领域中音视频同步、高保真度、多功能性以及生产级输出的需求。 它通过一个统一的模型架构，支持文本到视频、图像到视频、视频到视频、音频到视频等多种生成模式，并提供优化技术以适应不同硬件条件。 \n\n**核心功能**\nLTX-2 的核心功能包括：\n*   **音视频生成**：作为首个基于 DiT 的音视频基础模型，能够生成同步的音视频内容。 \n*   **多种生成模式**：提供文本到视频、图像到视频、视频到视频、音频到视频、关键帧插值和视频重拍等多种高级管道。 \n*   **模型优化**：支持 FP8 量化、块流式传输等技术，以减少内存占用并加速推理。  \n*   **LoRA 支持**：易于集成 LoRA 适配器进行微调，实现特定风格或概念的生成。 \n\n**技术亮点**\n*   **非对称双流 DiT 架构**：模型核心采用 Diffusion Transformer (DiT) 架构，并行处理视频和音频流，其中视频流参数量约为 14B，音频流约为 5B。  \n*   **跨模态注意力**：`BasicAVTransformerBlock` 实现了各模态的自注意力以及视频对音频、音频对视频的跨模态注意力。 \n*   **高效推理优化**：通过 FP8 量化、块流式传输和 LoRA 融合等技术，显著降低内存占用并提高推理速度。  \n*   **灵活的训练策略**：`ltx-trainer` 提供了统一的条件框架，通过配置而非硬编码实现多种训练模式。 \n\n**适合谁用**\n该项目适合需要生成高质量、同步音视频内容的研究人员、开发者和内容创作者。 特别是对于那些希望在有限硬件资源下运行大型模型，或需要进行视频风格转换、图像到视频、音频到视频等多种复杂生成任务的用户。",
+      "degraded": false
+    },
+    {
+      "id": "embabel/embabel-agent",
+      "owner": "embabel",
+      "name": "embabel-agent",
+      "url": "https://github.com/embabel/embabel-agent",
+      "stars": 4219,
+      "description": "Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
+      "one_liner": "Embabel Agent 是一个 JVM 框架，用于构建智能代理，将大型语言模型 (LLM) 交互与代码和领域模型无缝结合。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在 JVM 生态系统中构建智能代理的挑战，特别是在将 LLM 交互与强类型代码和面向对象设计相结合方面。它提供了一个高级框架，简化了 LLM 交互的分解、测试、可组合性和可管理性，同时支持多种 LLM 模型和平台。\n\n**核心功能**\nEmbabel Agent 提供了复杂的规划能力，例如使用目标导向行动规划 (GOAP) 动态制定行动序列。它实现了“观察、定向、决策、行动” (OODA) 循环，以便系统在每次行动后重新规划以适应新信息。框架支持强类型，通过领域模型指导行动、目标和条件。它还支持多模型混合，可以轻松利用不同的 LLM 模型（如 OpenAI、Anthropic、Bedrock）来优化成本和隐私。\n\n**技术亮点**\n该框架基于 Spring Boot 3.x 构建，与 Spring 生态系统深度集成，用于依赖注入和配置。它使用 Kotlin 2.x，并与 Java 21+ 具有互操作性。Embabel Agent 提供了两种定义代理的方式：基于注解的模型（如 `@Agent`、`@Action`）和 Kotlin DSL。它还包括用于文件系统操作、Git 仓库管理、JVM API 分析和持续集成 (CI) 交互的工具。\n\n**适合谁用**\nEmbabel Agent 适用于希望在 JVM 平台上构建智能、可测试和可维护的 AI 代理的 Java 和 Kotlin 开发人员。它特别适合需要将 LLM 功能与现有代码和基础设施资产相结合，并希望通过高级 API 简化复杂代理逻辑的应用程序。",
+      "degraded": false
+    },
+    {
+      "id": "cactus-compute/needle",
+      "owner": "cactus-compute",
+      "name": "needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "stars": 4206,
+      "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+      "one_liner": "Needle 是一个 26M 参数的精简注意力网络，专为设备端工具调用和函数生成设计，支持本地微调。",
+      "detail_md": "**解决什么问题**\nNeedle 旨在解决在资源受限的边缘设备上高效执行工具调用和函数生成的问题。它通过精简模型架构，移除传统 Transformer 中的前馈网络 (FFN)，优化了模型大小和推理速度，使其能够在消费级设备上运行。\n\n**核心功能**\n该项目提供了一个完整的工具调用解决方案，包括：\n*   **工具调用生成**：根据用户查询和提供的工具定义，生成结构化的工具调用 JSON。\n*   **本地微调**：用户可以在本地设备上使用自己的数据对模型进行微调，以适应特定工具集。\n*   **受限解码**：通过 `JsonStateMachine` 和 `Trie` 机制，确保模型生成的工具调用严格符合 JSON 格式和工具定义。\n*   **性能优化**：在生产环境中，Needle 能够达到 6000 toks/sec 的预填充速度和 1200 toks/sec 的解码速度。\n\n**技术亮点**\nNeedle 采用了多项创新技术：\n*   **Simple Attention Network (SAN)**：移除了 FFN，转而使用更深层的注意力层堆栈，优化了信息路由。\n*   **编码器-解码器架构**：使用双向编码器处理工具定义，因果解码器生成工具调用。\n*   **门控残差 (Gated Residuals)**：引入可学习的 sigmoid 门控，动态调整残差连接的强度，提高深层网络的训练稳定性。\n*   **ZCRMSNorm**：一种零中心 RMSNorm 变体，初始化时作为恒等变换，与门控残差配合，减少训练偏差。\n*   **INT4 量化感知训练 (QAT)**：在训练过程中进行 INT4 假量化，作为正则化手段，并确保推理时无性能损失。\n*   **Muon 优化器**：针对 2D 和 3D 核（密集层）使用 Muon 优化器，通过牛顿-舒尔茨迭代正交化更新，防止深层注意力堆栈中的表示崩溃。\n\n**适合谁用**\nNeedle 适合希望在边缘设备（如手机、手表、眼镜等）上部署高效、轻量级工具调用和函数生成能力的开发者和研究人员。它也适用于需要对模型进行本地微调以适应特定应用场景的用户。",
+      "degraded": false
+    }
+  ]
+}
