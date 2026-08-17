@@ -1,0 +1,83 @@
+{
+  "doc_token": "KMlVdNjFVo180exriblcyPVxn2e",
+  "doc_url": "https://my.feishu.cn/docx/KMlVdNjFVo180exriblcyPVxn2e",
+  "items": [
+    {
+      "id": "cordiverse/cordis",
+      "owner": "cordiverse",
+      "name": "cordis",
+      "url": "https://github.com/cordiverse/cordis",
+      "stars": 4703,
+      "description": "Meta-Framework of Spatiotemporal Composability",
+      "one_liner": "Cordis 是一个模块化应用元框架，提供上下文、服务和插件管理。",
+      "detail_md": "**解决什么问题**\nCordis 旨在解决现代应用开发中模块化、组件间交互和生命周期管理的问题。它通过提供一个集中的编排层来管理插件的生命周期、协调服务间的交互，并提供统一的事件总线进行通信。\n\n**核心功能**\nCordis 的核心功能包括上下文（Context）系统、服务管理、事件处理和插件基础设施。`Context` 类作为所有框架操作的主要接口，服务（Service）基类用于创建可注入的组件，并且支持动态加载和管理插件。例如，`@cordisjs/plugin-loader` 插件负责配置加载，`@cordisjs/plugin-timer` 提供定时器服务。\n\n**技术亮点**\n该项目采用 Yarn workspaces 进行 Monorepo 组织，将核心框架组件和官方插件放置在 `packages/*` 目录下。它使用“需求驱动”的依赖注入模型，通过 `ReflectService` 确保插件的逻辑在所需服务可用时才执行。所有插件都将 `cordis` 声明为 peer dependency，以确保框架核心的单一实例。\n\n**适合谁用**\nCordis 适合需要构建模块化、可扩展的现代 JavaScript 应用的开发者。特别是那些希望通过插件系统、依赖注入和统一事件总线来管理复杂应用逻辑的团队和个人。",
+      "degraded": false
+    },
+    {
+      "id": "basecamp/omarchy",
+      "owner": "basecamp",
+      "name": "omarchy",
+      "url": "https://github.com/basecamp/omarchy",
+      "stars": 25359,
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "one_liner": "Omarchy 是一个基于 Arch Linux 和 Hyprland 的桌面发行版，提供集成工具和可复现的安装体验。",
+      "detail_md": "**解决什么问题**\nOmarchy 旨在提供一个完整、有主见的桌面环境，解决传统 Linux 发行版在安装、配置、系统更新和恢复方面的复杂性问题。它通过声明式包清单实现可复现安装，并通过统一的 `omarchy` 二进制文件路由系统操作，简化了用户交互和系统管理。\n\n**核心功能**\n核心功能包括：可复现的安装系统，通过 `omarchy` 命令进行集中式命令路由，以及基于 Hyprland 的桌面环境和用户界面。它还提供快照恢复、幂等迁移和自动硬件检测等功能。用户可以通过 `omarchy-menu` 访问各种操作，例如截图、屏幕录制、提醒设置和系统切换等。\n\n**技术亮点**\n技术亮点包括：\n1.  **命令中心架构**：所有系统操作都通过统一的 `omarchy` 二进制文件进行路由，该文件通过扫描脚本元数据来识别和执行命令。\n2.  **声明式安装**：使用声明式包清单实现可复现的系统安装。\n3.  **快照恢复**：利用 Btrfs 和 Snapper 实现快照恢复功能，并与 Limine 引导加载程序集成。\n4.  **Wayland 原生 UI**：桌面环境基于 Hyprland 复合器和一系列 Wayland 原生工具构建。\n\n**适合谁用**\nOmarchy 适合希望获得一个高度集成、易于管理且功能丰富的 Arch Linux 桌面体验的用户。特别是那些重视系统可复现性、简化命令操作和现代 Wayland 桌面环境的用户。它也适合需要特定硬件支持（如 Apple T2、Intel IPU7、ASUS 硬件）的用户。",
+      "degraded": false
+    },
+    {
+      "id": "unslothai/unsloth",
+      "owner": "unslothai",
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "stars": 72554,
+      "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+      "one_liner": "Unsloth Studio 提供全面的国际化支持，为全球用户提供多语言UI翻译。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件应用在全球化过程中遇到的多语言用户界面（UI）支持问题，确保不同语言背景的用户都能流畅使用产品，并提供一致的用户体验。它通过提供UI翻译、运行时语言切换和与前端架构集成的流畅区域设置管理，支持多样化的全球用户群。\n\n**核心功能**\n核心功能包括多语言的区域设置文件（如英语、简体中文、日语等），用于检测缺失或不一致翻译键的奇偶校验工具，管理当前语言设置的运行时 `locale-store`，以及在设置中提供语言选择器UI组件。它还支持从右到左（RTL）语言，如阿拉伯语。\n\n**技术亮点**\n技术亮点在于其分层的区域设置文件结构，其中 `en.ts` 作为所有有效翻译键和默认字符串的规范来源。运行时，前端加载选定的区域设置，并通过React Hooks提供翻译查找。`check-parity.ts` 工具确保翻译的完整性和质量，能够检测缺失键、多余键和验证占位符。\n\n**适合谁用**\n该项目适合需要为软件应用提供多语言支持的开发者和技术贡献者。特别是那些希望理解、扩展或维护Studio代码库中国际化框架的人员。",
+      "degraded": false
+    },
+    {
+      "id": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "stars": 83868,
+      "description": "The open-source CapCut alternative",
+      "one_liner": "OpenCut 是一个免费开源的视频编辑器，旨在提供跨平台、高性能的视频编辑体验。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统视频编辑器在跨平台兼容性、性能和可扩展性方面的不足。通过采用 Rust 核心和插件优先的架构，OpenCut 致力于提供一个统一的开发体验，并支持桌面、Web 和移动端应用。它还计划支持无头模式和 AI 代理集成，以满足自动化和智能编辑的需求。\n\n**核心功能**\nOpenCut 的核心功能包括一个编辑器 API、支持第三方插件的插件优先架构，以及基于 Rust 核心实现的桌面、移动和浏览器版本。此外，它还将提供 MCP 服务器用于 AI 代理集成  和无头模式用于自动化渲染。\n\n**技术亮点**\n项目采用 Rust 语言作为核心，以实现高性能和跨平台兼容性。桌面应用使用 GPUI 框架构建，提供 GPU 加速的 UI 体验。Web 应用则基于 TanStack Start 框架，支持 SSR 和客户端导航。整个项目通过 Moon 和 Proto 工具进行 monorepo 管理和工具链版本控制。\n\n**适合谁用**\nOpenCut 适合需要免费、开源、高性能视频编辑工具的用户。特别是对于开发者和内容创作者，其插件优先架构和编辑器 API 将提供高度的可定制性和扩展性。同时，无头模式和 AI 代理集成也使其适用于需要自动化视频处理和智能编辑工作流的专业人士。",
+      "degraded": false
+    },
+    {
+      "id": "public-apis/public-apis",
+      "owner": "public-apis",
+      "name": "public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "stars": 461710,
+      "description": "A collective list of free APIs",
+      "one_liner": "这是一个社区维护的免费公共 API 目录，旨在帮助开发者发现和使用各种 API。",
+      "detail_md": "**解决什么问题**\n该项目解决了开发者难以发现和组织免费公共 API 的问题。它提供了一个集中、结构化的目录，方便开发者根据不同类别（如动物、动漫、金融、天气等）查找所需的 API。\n\n**核心功能**\n核心功能是提供一个包含超过 1,000 个 API 条目的 Markdown 格式目录。每个 API 条目都包含名称、描述、认证方式、是否支持 HTTPS 和 CORS 等信息。此外，项目还包含一个验证工具链，用于自动化检查目录的正确性，例如格式验证和链接可用性检查。\n\n**技术亮点**\n技术亮点在于其社区维护的模式和自动化的验证流程。它使用 GitHub Actions 工作流来协调验证工具链的运行，确保 API 目录的质量和准确性。例如，`format.py` 脚本用于验证 Markdown 表格结构和字段值，而 `links.py` 则检查 URL 的可达性并检测重复链接。\n\n**适合谁用**\n该项目适合以下几类用户：\n*   **终端用户/开发者**：浏览 `README.md` 文件以发现免费 API，用于他们的项目。\n*   **贡献者**：通过提交拉取请求来贡献新的 API 条目或改进现有条目。\n*   **下游工具消费者**：例如 [davemachado/public-api](https://github.com/davemachado/public-api) 项目，它解析 `README.md` 文件以提供可查询的 REST API。\n*   **APILayer**：作为商业赞助商，其 API 在目录中拥有专门的推荐部分。",
+      "degraded": false
+    },
+    {
+      "id": "ToolJet/ToolJet",
+      "owner": "ToolJet",
+      "name": "ToolJet",
+      "url": "https://github.com/ToolJet/ToolJet",
+      "stars": 40009,
+      "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+      "one_liner": "ToolJet 是一个开源低代码框架，用于快速构建和部署内部工具。",
+      "detail_md": "**解决什么问题**\nToolJet 旨在通过最小化工程投入来解决内部工具开发效率低下的问题。它简化了复杂、响应式界面的创建，并支持与 80 多种数据源的集成。\n\n**核心功能**\nToolJet 提供拖放式前端构建器，用于创建用户界面。它支持与数据库、API、SaaS 工具和对象存储服务等多种数据源连接。平台还包含一个内置的低代码数据库接口。\n\n**技术亮点**\nToolJet 采用现代技术栈，前端使用 React，后端使用 NestJS。它具有插件化架构，方便扩展数据源和内部工作流。状态管理通过 Zustand 实现，用于跟踪组件、查询和全局变量的实时值。\n\n**适合谁用**\nToolJet 适合需要快速构建和部署内部工具的开发者和团队。无论是社区版还是企业版，都能满足不同规模和需求的用户。",
+      "degraded": false
+    },
+    {
+      "id": "cactus-compute/needle",
+      "owner": "cactus-compute",
+      "name": "needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "stars": 6552,
+      "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+      "one_liner": "Needle是一个2600万参数的模型，专为高性能、设备上的工具调用和推理而设计。",
+      "detail_md": "**解决什么问题**\nNeedle旨在解决大型语言模型在边缘设备上进行工具调用和推理的性能和部署挑战。它通过精简模型架构，使其能够在资源受限的设备上实现高速预填充和解码。\n\n**核心功能**\nNeedle的核心功能是工具调用和推理。它能够根据用户查询和提供的工具定义，生成符合JSON格式的工具调用。项目还提供了一个完整的垂直堆栈，包括合成数据生成、分布式TPU训练以及通过基于网络的平台进行本地微调。\n\n**技术亮点**\nNeedle采用“简单注意力网络”（Simple Attention Network, SAN）架构，移除了传统的前馈网络（FFN），转而使用更深层的注意力层，并结合了门控残差和零中心RMS归一化（ZCRMSNorm）。它还使用了双优化器策略（Muon和AdamW）和INT4量化感知训练（QAT）作为正则化手段，以提高模型性能和部署效率。\n\n**适合谁用**\nNeedle适合需要高性能、低延迟、在边缘设备上进行工具调用和推理的开发者和企业。特别是那些希望将大型模型能力蒸馏到小型模型中，并在移动设备、智能手表或智能眼镜等消费级设备上部署AI功能的场景。",
+      "degraded": false
+    }
+  ]
+}
