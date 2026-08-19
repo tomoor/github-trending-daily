@@ -1,0 +1,149 @@
+{
+  "doc_token": "X3c6dGASKoOep4xoEb0cAEC4n1c",
+  "doc_url": "https://my.feishu.cn/docx/X3c6dGASKoOep4xoEb0cAEC4n1c",
+  "items": [
+    {
+      "id": "harry0703/MoneyPrinterTurbo",
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "stars": 108485,
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "one_liner": "MoneyPrinterTurbo是一个AI驱动的短视频生成工具，只需提供主题或关键词，即可全自动生成高清短视频。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决短视频内容创作中，文案撰写、素材查找、字幕制作、背景音乐选择以及视频合成等繁琐且耗时的问题。通过自动化流程，极大地简化了短视频的制作门槛，让用户能快速将创意转化为视频作品。\n\n**核心功能**\n核心功能包括：AI自动生成或自定义视频文案；支持多种高清视频尺寸（如9:16竖屏和16:9横屏）；批量视频生成；多种语音合成与实时试听；字幕自动生成及样式调整；背景音乐添加与音量调节；以及高清无版权视频素材的自动获取或本地素材使用。\n\n**技术亮点**\n项目采用完整的MVC架构，代码结构清晰，易于维护。支持API和Web界面两种交互方式。集成了OpenAI、Moonshot、Google Gemini等多种大模型服务，实现智能文案生成和关键词提取。视频处理依赖于FFmpeg和ImageMagick等工具，确保视频合成和字幕渲染的质量。\n\n**适合谁用**\n该项目适合需要快速制作短视频的内容创作者、营销人员、自媒体从业者以及任何希望通过AI技术提高视频制作效率的用户。对于不熟悉编程的用户，提供了Windows一键启动包和Google Colab运行方式，降低了使用门槛。",
+      "degraded": false
+    },
+    {
+      "id": "chaitanyagiri/munder-difflin",
+      "owner": "chaitanyagiri",
+      "name": "munder-difflin",
+      "url": "https://github.com/chaitanyagiri/munder-difflin",
+      "stars": 2000,
+      "description": "local multi-agent harness",
+      "one_liner": "Munder Difflin 是一个免费、开源、本地优先的多智能体协调平台，将CLI编码智能体转变为24/7协作的团队。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决标准CLI编码智能体（如Claude Code、Codex、Grok）无法进行自我协调、缺乏持久执行环境和长期记忆的问题。  它将这些独立的智能体转化为一个能够24/7工作、通过文件系统通信并保持长期记忆的“克隆”团队。 \n\n**核心功能**\nMunder Difflin 的核心功能包括：一个基于本地Git仓库的“Hive”协调层，用于管理智能体工作区、邮箱和共享黑板；一个名为“Michael”的“上帝智能体”，作为用户界面，负责任务路由、裁决请求并将关键决策上报给用户；以及一个“办公室楼层”的2D可视化模拟，通过像素艺术头像展示智能体的活动状态。\n\n**技术亮点**\n该项目采用Electron应用构建，利用`node-pty`提供真实的终端会话，并使用`Pixi.js`渲染“办公室楼层”的2D视觉模拟。其架构特点是“双数据平面”，即一个终端平面处理原始`node-pty`字节流，一个事件平面处理结构化的钩子事件和Hive消息，两者通过Electron IPC汇聚到同一个React + Pixi渲染器中。 \n\n**适合谁用**\nMunder Difflin 适合需要将现有CLI智能体（如Claude Code、Codex、Grok等）  转化为协作团队的个人和团队。它不仅适用于工程师进行代码审查、修复bug和开发功能，也适用于设计师、产品经理、销售人员等非技术角色，处理资产导出、撰写规范、管理任务和客户沟通等工作。",
+      "degraded": false
+    },
+    {
+      "id": "akitaonrails/ai-memory",
+      "owner": "akitaonrails",
+      "name": "ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 2696,
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "one_liner": "`ai-memory` 是一个 Rust 应用程序，为 AI 编码代理提供长期、跨代理的记忆功能，解决上下文丢失问题。",
+      "detail_md": "## 解决什么问题\nAI 编码代理在会话结束后会丢失所有上下文，导致在不同代理之间切换或重新开始会话时需要重复解释架构、失败方法和未解决的问题。   `ai-memory` 通过自动捕获代理的生命周期事件来解决这个问题，例如提示、工具调用和决策，从而构建一个持久的、版本化的知识库。 \n\n## 核心功能\n`ai-memory` 的核心功能包括零摩擦捕获、跨代理交接和 Karpathy 风格的 LLM Wiki。    它通过生命周期钩子自动捕获每次交互，无需手动 `write_note` 命令。  当一个会话结束时，系统会综合生成一个“你上次停在哪里”的摘要，供下一个代理使用。  知识库是 Git 版本化的 Markdown 文件树，可读性强且易于移植。 \n\n## 技术亮点\n该项目采用 Rust 编写，是一个单一二进制应用程序，具有清晰的架构和模块化设计。   它使用双层存储模型，以 Git 版本化的 Markdown 文件作为真相来源，并使用 SQLite 数据库作为派生索引，提供快速的 FTS5 和向量检索。   `ai-memory` 还通过 Model Context Protocol (MCP) 暴露功能，允许代理使用 `memory_query`、`memory_recent` 等工具。 \n\n## 适合谁用\n`ai-memory` 适用于使用 AI 编码代理（如 Claude Code、OpenAI Codex、Cursor、Gemini CLI 等）的开发者和团队。  它可以帮助用户在不同代理之间无缝切换，保持上下文连续性，并提供项目历史记录的快速检索和审计功能。   尤其适合需要长期记忆、跨会话上下文和团队协作的场景。",
+      "degraded": false
+    },
+    {
+      "id": "volcengine/OpenViking",
+      "owner": "volcengine",
+      "name": "OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "stars": 29346,
+      "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+      "one_liner": "OpenViking 是一个面向 AI Agent 的开源上下文数据库，旨在为 AI 应用提供强大的上下文工程基础设施。",
+      "detail_md": "## 解决什么问题\nOpenViking 致力于解决 AI Agent 在处理非结构化信息和进行智能检索时面临的挑战，通过统一的数据抽象、语义解析和高性能检索，为 AI 应用提供可靠的后端支持。它通过三层信息模型（L0/L1/L2）平衡检索效率和内容完整性，并支持多种数据类型和复杂的检索需求。\n\n## 核心功能\nOpenViking 提供资源管理、多模态解析、智能检索、会话与记忆管理、技能定义与存储、多租户与安全等核心功能。它支持多种文件格式的解析，包括文本、代码、文档、图片、视频、音频以及云文档和网页内容。其检索功能包括简单的语义搜索 `find()` 和结合意图分析的上下文感知搜索 `search()`。\n\n## 技术亮点\n项目采用双层存储架构，将内容存储在 AGFS 中，索引存储在向量库中，实现内容与索引分离。它具备大规模向量检索能力，支持毫秒级响应和高并发业务场景。OpenViking 还支持可插拔的 Embedding、LLM 和重排序提供者，增强了灵活性和可扩展性。\n\n## 适合谁用\nOpenViking 适合需要为 AI Agent 构建强大上下文工程基础设施的开发者和企业。它支持本地开发和单进程应用的嵌入式模式，也支持团队共享、生产环境和跨语言集成的 HTTP 模式。对于需要处理多模态数据、进行智能检索和会话管理的 AI 应用场景，OpenViking 提供了全面的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "mukul975/Anthropic-Cybersecurity-Skills",
+      "owner": "mukul975",
+      "name": "Anthropic-Cybersecurity-Skills",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "stars": 29161,
+      "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+      "one_liner": "Anthropic网络安全技能库，为AI智能体提供817项网络安全技能。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI智能体在网络安全领域缺乏专业知识和执行能力的问题。它通过提供结构化、机器可读的网络安全技能，使AI智能体能够发现并执行安全工作流，从而提升其在数字取证、恶意软件分析、威胁情报等29个安全领域的专业水平。\n\n**核心功能**\n核心功能是提供一个包含817项网络安全技能的开放源代码库。每项技能都遵循agentskills.io开放标准，并映射到MITRE ATT&CK、NIST CSF 2.0等六个行业框架。技能通过`SKILL.md`文件定义，包含YAML元数据和Markdown格式的工作流。\n\n**技术亮点**\n技术亮点包括统一的跨框架覆盖，将每项技能映射到六个主要网络安全框架。此外，它采用渐进式披露模型，AI智能体首先读取轻量级的`index.json`或YAML元数据进行发现，然后加载完整的`SKILL.md`内容。项目还包含自动化管道，通过GitHub Actions验证技能和生成索引。\n\n**适合谁用**\n本项目适合AI智能体开发者、网络安全从业者以及任何希望提升AI智能体网络安全能力的组织。它兼容Claude Code、GitHub Copilot、Cursor等26+ AI平台，可用于安全调查、威胁检测、事件响应等多种场景。",
+      "degraded": false
+    },
+    {
+      "id": "public-apis/public-apis",
+      "owner": "public-apis",
+      "name": "public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "stars": 464506,
+      "description": "A collective list of free APIs",
+      "one_liner": "这是一个社区维护的免费公共API目录，旨在帮助开发者快速发现和使用API。",
+      "detail_md": "**解决什么问题**\n该项目解决了开发者寻找免费公共API的痛点，提供了一个集中、分类清晰的API列表，避免了开发者在海量信息中筛选的困扰。 同时，通过自动化验证工具链，确保了API信息的准确性和可用性，解决了API列表信息过时或错误的问题。\n\n**核心功能**\n核心功能包括一个Markdown格式的API目录，其中包含超过1000个API条目，分为50多个类别。 项目还包含一个验证工具链，用于检查API条目的格式、链接可用性及重复项。 此外，CI/CD管道自动化了验证过程，确保了目录的持续更新和质量。\n\n**技术亮点**\n技术亮点在于其社区驱动的维护模式和自动化的验证系统。 验证工具链使用Python脚本 (`format.py` 和 `links.py`) 强制执行严格的API条目规范，包括Markdown表格结构、字段值、字母顺序和链接可达性。 GitHub Actions工作流 (`test_of_push_and_pull.yml`, `validate_links.yml`, `test_of_validate_package.yml`) 实现了推送、拉取请求和定时任务的自动化测试和验证。\n\n**适合谁用**\n该项目主要服务于开发者和最终用户，他们可以通过浏览 `README.md` 文件来发现免费API，用于自己的项目。 贡献者可以遵循 `CONTRIBUTING.md` 指南提交新的API或更新现有API。 此外，下游工具（如 `davemachado/public-api`）也可以解析 `README.md` 文件，以提供可查询的REST API。",
+      "degraded": false
+    },
+    {
+      "id": "basecamp/omarchy",
+      "owner": "basecamp",
+      "name": "omarchy",
+      "url": "https://github.com/basecamp/omarchy",
+      "stars": 26405,
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "one_liner": "Omarchy 是一个基于 Arch Linux 和 Hyprland 的桌面发行版，提供集成工具和独特的用户体验。",
+      "detail_md": "**解决什么问题**\nOmarchy 旨在解决传统 Linux 发行版在桌面环境集成度、用户体验一致性以及系统管理复杂性方面的问题。 它提供了一个预配置、美观且高效的桌面环境，集成了包管理、主题、系统更新和恢复工具，减少了用户自行配置的负担。 此外，它还通过声明式包清单和命令中心架构，简化了系统维护和更新过程。\n\n**核心功能**\nOmarchy 的核心功能包括：统一的 `omarchy` 命令行工具，用于路由各种系统操作，如截图、包管理和主题设置；基于 Quickshell 的菜单和 IPC 系统，提供直观的用户界面交互；以及健壮的包和更新管理机制，包括 `omarchy-update-pacman-guard` 和 `omarchy-update`，确保系统完整性和平滑升级。它还支持快照恢复和幂等迁移，增强了系统的可靠性。\n\n**技术亮点**\n该项目的技术亮点在于其“自以为是”的设计哲学，强调标准化助手和集成工具。 它采用声明式包清单 (`omarchy-base.packages`) 来定义核心系统状态，通过 Btrfs 和 Snapper 实现快照式恢复，并利用有序的 shell 脚本进行幂等迁移。 此外，其“Quickshell”桌面架构支持插件和小部件，提供了高度可扩展性。\n\n**适合谁用**\nOmarchy 适合那些寻求美观、现代且高度集成的 Linux 桌面体验的用户。 特别是对于习惯使用终端、喜欢平铺式窗口管理器 (如 Hyprland) 并希望减少系统配置时间的用户，Omarchy 提供了一个开箱即用的解决方案。 它也适合开发者，因为它集成了 Neovim 和各种开发工具，并提供了标准化的开发环境安装脚本。",
+      "degraded": false
+    },
+    {
+      "id": "agalwood/Motrix",
+      "owner": "agalwood",
+      "name": "Motrix",
+      "url": "https://github.com/agalwood/Motrix",
+      "stars": 53643,
+      "description": "A full-featured download manager.",
+      "one_liner": "Motrix 是一款全功能下载管理器，支持 HTTP、FTP、BitTorrent 和磁力链等多种下载协议，界面简洁易用。",
+      "detail_md": "**解决什么问题**\nMotrix 旨在解决用户在下载各类文件时遇到的管理不便、下载速度慢以及缺乏统一工具的问题。 它通过支持多种下载协议和提供多线程下载功能，提升了下载效率和用户体验。\n\n**核心功能**\nMotrix 的核心功能包括支持 BT 和磁力链任务，允许选择性下载 BT 部分文件。 它还具备 UPnP & NAT-PMP 端口映射、上传/下载限速、模拟用户代理 UA 等高级功能。 此外，它能自动更新 Tracker 服务器列表，并支持多达 10 个任务同时下载，单任务最高支持 64 线程。\n\n**技术亮点**\n该项目基于 Electron、Vue、VueX 和 Element 构建，利用 Electron 实现跨平台桌面应用，并结合 Vue 及其生态提供响应式用户界面。 后端下载引擎采用 Aria2，提供强大的下载能力。 架构上，Motrix 采用 Electron 的主进程和渲染进程模型，通过 IPC 进行通信，并使用事件系统实现组件间的松耦合。\n\n**适合谁用**\nMotrix 适合需要高效、便捷管理各类下载任务的用户，特别是那些经常下载 HTTP、FTP、BitTorrent 和磁力链文件的用户。 其简洁的图形界面和多平台支持（Windows, macOS, Linux）使其成为广大用户的理想选择。",
+      "degraded": false
+    },
+    {
+      "id": "NawfalMotii79/PLFM_RADAR",
+      "owner": "NawfalMotii79",
+      "name": "PLFM_RADAR",
+      "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+      "stars": 24282,
+      "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+      "one_liner": "AERIS-10是一个开源、低成本的10.5 GHz相控阵雷达系统，具有脉冲线性调频功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过提供一个完全开源、模块化且可修改的雷达系统，使雷达技术大众化。它解决了研究人员、无人机开发者和SDR爱好者在探索和实验相控阵雷达技术时面临的成本和封闭性问题。\n\n**核心功能**\nAERIS-10提供两种版本（3公里和20公里范围），支持全电子波束控制（俯仰和方位角±45°）。其FPGA板载处理脉冲压缩、多普勒FFT、MTI和CFAR等高级信号处理功能。系统还集成了Python GUI用于可视化和控制，并支持GPS/IMU以进行实时位置和姿态校正。\n\n**技术亮点**\n该系统采用模块化设计，包括电源管理、频率合成和射频板。FPGA (XC7A100T) 负责雷达信号处理，包括LFM脉冲生成、ADC数据读取、I/Q基带下变频、滤波、脉冲压缩、多普勒、MTI和CFAR处理。STM32F746xx微控制器管理电源时序、外设配置和GPS/IMU集成。硬件设计文件采用CERN-OHL-P许可证，软件和固件采用MIT许可证。\n\n**适合谁用**\nAERIS-10适用于大学研究人员、无人机初创公司以及希望实验波束成形、脉冲压缩、多普勒处理和目标跟踪的先进创客。它为对雷达原理有基本了解、具备PCB组装经验以及熟悉Python和FPGA开发工具的用户提供了平台。",
+      "degraded": false
+    },
+    {
+      "id": "jundot/omlx",
+      "owner": "jundot",
+      "name": "omlx",
+      "url": "https://github.com/jundot/omlx",
+      "stars": 19381,
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "one_liner": "oMLX 是一个专为 Mac 优化的 LLM 推理服务器，提供 OpenAI/Anthropic 兼容 API，支持多模型、分层缓存和菜单栏管理。",
+      "detail_md": "**解决什么问题**\noMLX 旨在解决本地 LLM 推理在便利性和可控性之间的权衡问题。 它允许用户将常用模型固定在内存中，按需自动切换模型，设置上下文限制，并通过原生 macOS 体验或命令行界面进行管理。\n\n**核心功能**\noMLX 提供多项核心功能，包括：分层 KV 缓存系统（热缓存和冷缓存）， 连续批处理以处理并发请求， 以及多模型服务，支持 LLM、VLM、OCR、嵌入和重排序模型。 它还提供一个管理后台，用于实时监控、模型管理、聊天和基准测试。\n\n**技术亮点**\n该项目在 Apple Silicon 上进行了优化， 利用了 `mlx-lm` 的 `BatchGenerator` 实现高效的连续批处理。 其分层 KV 缓存系统借鉴了 vLLM，支持前缀共享和写时复制， 并且可以将冷缓存持久化到 SSD，即使服务器重启也能恢复。 此外，它还通过 `EnginePool` 实现预emptive内存管理，防止系统 OOM。\n\n**适合谁用**\noMLX 适合需要在 Apple Silicon 设备上运行本地大型语言模型、视觉语言模型、OCR 模型、嵌入模型和重排序模型，并希望获得高性能、易用性和强大管理功能的用户。 无论是开发者进行本地 AI 应用开发，还是普通用户希望在 Mac 上便捷地使用 LLM，oMLX 都能提供支持。",
+      "degraded": false
+    },
+    {
+      "id": "bojieli/ai-agent-book",
+      "owner": "bojieli",
+      "name": "ai-agent-book",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "stars": 39091,
+      "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+      "one_liner": "本项目旨在构建一个高效、可靠的AI Agent框架，通过优化上下文管理和工具设计，提升大型语言模型在复杂任务中的表现。",
+      "detail_md": "**解决什么问题**\n本项目主要解决AI Agent在实际应用中面临的挑战，包括工具选择效率低下、上下文饱和导致性能下降以及Agent与外部环境交互的安全性和可靠性问题。   \n\n**核心功能**\n核心功能包括基于模型上下文协议（MCP）的工具设计与管理，将工具分为感知、执行、协作、事件触发和用户通信五大类。  此外，还实现了动态工具发现机制，以按需加载工具，避免上下文饱和。  项目还提供了多语言代码执行沙箱和文档处理工具。  \n\n**技术亮点**\n技术亮点在于Model Context Protocol (MCP) 的设计，它提供了一套开放标准用于Agent框架与工具提供商之间的集成。  项目强调了Agent-Computer Interface (ACI) 的设计原则，确保工具对LLM友好，例如通过整合工具减少认知负荷。   在安全性方面，采用了提议者-审查者模式和安全变异根等机制。  \n\n**适合谁用**\n本项目适合希望构建高效、安全、可扩展AI Agent系统的开发者和研究人员。  特别是那些需要处理复杂多步骤任务、管理大量工具或关注Agent系统安全性和可靠性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "genlayerlabs/genlayer-project-boilerplate",
+      "owner": "genlayerlabs",
+      "name": "genlayer-project-boilerplate",
+      "url": "https://github.com/genlayerlabs/genlayer-project-boilerplate",
+      "stars": 15907,
+      "description": "",
+      "one_liner": "本项目是一个基于GenLayer区块链的足球预测投注平台，结合AI技术提供智能合约驱动的预测投注体验。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统预测投注中透明度不足和结果验证困难的问题，通过区块链智能合约确保投注记录的不可篡改性，并利用AI技术自动验证比赛结果，提高公平性和效率。  \n\n## 核心功能\n1. **创建投注**：用户可以为足球比赛创建预测投注，选择比赛日期、队伍和预测的胜者。  \n2. **解决投注**：比赛结束后，投注创建者可以触发解决流程，智能合约会通过AI从指定URL获取真实比赛结果并验证投注。  \n3. **积分系统**：正确预测的用户将获得积分，并在排行榜上展示。  \n4. **数据查询**：用户可以查询所有投注记录、所有玩家的积分或特定玩家的积分。  \n\n## 技术亮点\n1. **GenLayer智能合约**：核心业务逻辑部署在GenLayer区块链上，使用Python编写，实现投注创建、解决和积分管理。  \n2. **AI驱动的结果验证**：智能合约利用`gl.nondet.web.render`获取网页数据，并通过`gl.nondet.exec_prompt`结合AI模型解析比赛结果，实现自动化、去中心化的结果验证。  \n3. **现代前端技术栈**：前端采用Next.js 15、React 19、TypeScript、Tailwind CSS、TanStack Query和Wagmi/Viem构建，提供高性能和良好的用户体验。  \n4. **钱包集成**：通过Wagmi和Viem库实现MetaMask等EVM兼容钱包的连接，方便用户进行链上操作。  \n\n## 适合谁用\n该项目适合对去中心化应用、区块链技术和AI驱动的智能合约感兴趣的开发者和用户。  特别是希望参与足球预测投注，并看重透明、公平和自动化结果验证的用户。",
+      "degraded": false
+    },
+    {
+      "id": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "stars": 84749,
+      "description": "The open-source CapCut alternative",
+      "one_liner": "OpenCut 是一个免费开源的视频编辑器，旨在提供跨平台（桌面、Web、移动）的统一编辑体验，并支持 AI 代理和插件化架构。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统视频编辑器在跨平台支持、可扩展性和智能化方面的不足。通过重写，它将提供一个统一的 Rust 核心，支持桌面、Web 和移动端应用，并引入插件优先架构和 AI 代理集成，以提升编辑效率和功能多样性。\n\n**核心功能**\nOpenCut 的核心功能包括一个编辑器 API、支持第三方插件的插件优先架构、以及用于 AI 代理的 MCP 服务器。它还计划支持无头模式（用于自动化和批量渲染）和直接在编辑器中进行脚本编写。\n\n**技术亮点**\n项目采用 Rust 作为核心语言，实现跨平台能力。桌面应用使用 Zed 团队开发的 GPU 加速 UI 框架 GPUI，而 Web 应用则基于 TanStack Start (一个全栈 React 框架) 实现。后端 API 使用 Elysia 框架。项目还利用 Moon 作为任务运行器和 Proto 进行工具链管理。\n\n**适合谁用**\nOpenCut 适合需要免费、开源、跨平台视频编辑工具的用户。特别是对于希望通过插件扩展功能、利用 AI 辅助编辑，或进行自动化视频处理的开发者和内容创作者。",
+      "degraded": false
+    }
+  ]
+}
