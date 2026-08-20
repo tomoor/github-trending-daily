@@ -144,6 +144,17 @@
       "one_liner": "这是一个基于GenLayer区块链的足球预测投注平台，用户可创建、解决投注并赢取积分。",
       "detail_md": "**解决什么问题**\n该项目旨在提供一个去中心化的足球比赛预测投注平台，利用GenLayer的AI能力验证比赛结果，确保公平性。它解决了传统投注中结果验证不透明的问题，并通过区块链技术提供可信赖的投注环境。\n\n**核心功能**\n核心功能包括用户创建足球比赛投注、在比赛结束后解决投注以验证结果，以及根据正确预测赢取积分并查看排行榜。前端应用展示所有投注和玩家积分排行榜。\n\n**技术亮点**\n项目采用Next.js 15构建前端，使用TypeScript、TanStack Query和Radix UI，提供流畅的用户体验。后端智能合约 `football_bets.py` 基于GenLayer的Python SDK开发，利用 `gl.nondet.web.render` 从外部URL获取比赛结果，并通过 `gl.nondet.exec_prompt` 结合AI进行结果验证，确保去中心化和可信赖的裁决。\n\n**适合谁用**\n该项目适合对足球预测感兴趣，并希望在去中心化、透明且由AI辅助验证结果的平台上进行投注的用户。也适合区块链开发者学习GenLayer智能合约的开发和前端集成。",
       "degraded": false
+    },
+    {
+      "id": "akitaonrails/ai-memory",
+      "owner": "akitaonrails",
+      "name": "ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 3310,
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "one_liner": "ai-memory 是一个 Rust 应用程序，旨在为 AI 编码工具提供跨代理的长期记忆，解决上下文丢失问题。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码代理在不同会话或不同代理之间切换时出现的“上下文丢失”问题。它通过自动捕获代理的生命周期事件（如提示、工具调用和决策）来构建一个持久的、版本化的知识库，从而使代理能够查询和更新记忆。\n\n**核心功能**\nai-memory 的核心功能包括：零摩擦捕获代理交互；提供跨代理的交接，允许在一个代理中停止任务，在另一个代理中继续；通过 Git 版本化的 Markdown 文件构建 Karpathy 风格的 LLM Wiki 作为真相来源；以及一个派生的 SQLite 索引，用于快速全文搜索和向量检索。它还支持通过 MCP 协议进行工具调用，例如 `memory_query`、`memory_recent` 和 `memory_handoff_accept`。\n\n**技术亮点**\n该项目采用 Rust 语言开发，是一个单二进制应用程序。它使用双层存储模型，以 Git 版本化的 Markdown 文件作为真相来源，并使用 SQLite 数据库作为派生索引。系统通过生命周期钩子实现零摩擦捕获，并将事件规范化为 `ObservationKind`。它还实现了 M8 衰减机制，用于记忆的自动管理和保留。\n\n**适合谁用**\nai-memory 适用于需要长期记忆和跨会话上下文共享的 AI 编码代理用户。这包括使用 Claude Code、OpenAI Codex、Cursor、OpenCode 等多种 AI 编码工具的开发者，以及希望在不同代理之间无缝切换并保持工作连续性的团队。它也适合那些希望通过可读的 Markdown 格式管理项目知识，并能进行全文搜索和版本控制的用户。",
+      "degraded": false
     }
   ]
 }
