@@ -1,0 +1,193 @@
+{
+  "doc_token": "DURqd6ErhobxGRxwp2zcKlCBn2d",
+  "doc_url": "https://my.feishu.cn/docx/DURqd6ErhobxGRxwp2zcKlCBn2d",
+  "items": [
+    {
+      "id": "openai/codex",
+      "owner": "openai",
+      "name": "codex",
+      "url": "https://github.com/openai/codex",
+      "stars": 113312,
+      "description": "Lightweight coding agent that runs in your terminal",
+      "one_liner": "Codex 是一个可扩展的 AI 代理平台，支持插件、双向通信和模块化请求处理。",
+      "detail_md": "**解决什么问题**\nCodex 旨在提供一个灵活的框架，用于构建和管理 AI 代理，解决传统 AI 系统在可扩展性、集成性和双向交互方面的挑战。它通过插件系统支持第三方功能集成，并允许服务器主动向客户端发送通知。\n\n**核心功能**\n该项目提供核心的请求处理机制，通过 `MessageProcessor` 路由客户端请求到不同的处理器，例如文件系统操作 (`FsRequestProcessor`) 或命令执行 (`CommandExecRequestProcessor`)。它还包含一个强大的插件系统，支持插件的发现、安装、加载和共享，这些插件可以包含技能、MCP 服务器和钩子。\n\n**技术亮点**\nCodex 的技术亮点包括其多层请求处理架构，确保了高效和可扩展的请求路由。它实现了严格的初始化握手协议，以确保客户端会话的安全性。此外，双向通信模型允许服务器向客户端发送异步通知，增强了交互性。插件系统支持本地和远程市场，并能同步远程安装的插件包。\n\n**适合谁用**\nCodex 适合需要构建高度可定制和可扩展 AI 代理的开发者和组织。特别是那些希望通过集成第三方工具、服务和自定义逻辑来增强 AI 代理功能的用户，以及需要灵活的客户端-服务器通信和事件处理机制的场景。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 231994,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "本项目提供一套AI代理技能，旨在提升软件开发效率和代码质量，解决AI协作中的常见问题。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决AI辅助软件开发中的核心痛点，包括AI与开发者之间的沟通不畅、AI输出冗长、代码质量难以保证以及软件架构腐化等问题。     通过提供结构化技能，项目帮助AI更好地理解需求，生成简洁高效的代码，并维护良好的代码架构。   \n\n### 核心功能\n项目提供一系列工程和生产力技能。例如，`/grill-with-docs` 技能通过提问式对话帮助AI和用户对需求达成一致，并更新 `CONTEXT.md` 和 ADRs 文档以建立共享语言。   `/tdd` 技能支持测试驱动开发，确保代码质量。  `/improve-codebase-architecture` 技能则用于扫描代码库，发现架构优化机会。  此外，`/ask-matt` 作为一个路由技能，帮助用户找到适合当前情况的技能或工作流。 \n\n### 技术亮点\n该项目采用模块化、可组合的AI代理技能设计，每个技能都是一个包含 `SKILL.md` 文件的独立目录。   技能分为用户调用（`User-invoked`）和模型调用（`Model-invoked`）两种类型，前者需用户明确输入，后者可由AI自动触发。  项目强调“无处不在的语言”（Ubiquitous Language）概念，通过 `CONTEXT.md` 文件建立项目特有的术语表，减少AI的冗长输出并提高沟通效率。 \n\n### 适合谁用\n本项目适合希望通过AI代理提升软件开发效率和代码质量的工程师和开发团队。  尤其适用于那些在AI协作中遇到沟通障碍、代码质量不稳定或架构维护困难的用户。    无论是个人开发者还是大型团队，都可以利用这些技能来标准化开发流程，确保AI代理在整个软件生命周期中发挥最大效用。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 242166,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code (ECC) 是一个智能体优先的性能系统，旨在通过专业 AI 智能体自动化复杂的软件工程工作流，提升开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中效率低下、代码质量参差不齐以及安全漏洞等问题。  它通过引入专业智能体来自动化规划、测试驱动开发、代码审查和安全检测等环节，从而减少人工干预，提高开发流程的标准化和自动化水平。 \n\n**核心功能**\nECC 的核心功能是提供一个由 67 个专业智能体、278 项技能和 94 条命令组成的生态系统。  这些智能体覆盖了软件开发生命周期的各个阶段，例如 `planner` 用于实现规划，`tdd-guide` 强制测试驱动开发，`code-reviewer` 负责代码质量审查，以及 `security-reviewer` 进行漏洞检测。  它还支持多种编程语言，并提供跨平台兼容性。 \n\n**技术亮点**\n该项目的技术亮点包括其“智能体优先”的架构，将复杂任务委托给专业智能体处理。  它强制执行测试驱动开发（TDD）和高代码覆盖率（80%+），确保代码质量。   ECC 2.0 引入了基于 Rust 的控制平面 (`ecc2`)，用于管理后台守护进程、会话持久化和 TUI 仪表板，并支持工作树隔离以防止环境污染。  \n\n**适合谁用**\nECC 适用于需要提高软件开发效率、确保代码质量和安全性的开发者、团队以及 AI 智能体平台用户。  特别是那些使用 Claude Code、Codex、Cursor、OpenCode 和 Gemini 等 AI 智能体平台的开发者，可以通过集成 ECC 来优化其开发工作流。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 276179,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编程代理设计的完整软件开发方法论和技能库。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过提供一套可组合的技能和初始指令，解决 AI 编程代理在软件开发过程中缺乏系统性方法、容易产生“上下文污染”以及难以进行有效协作的问题。它通过强制执行结构化的开发流程，如测试驱动开发（TDD）和子代理驱动开发（SDD），提高 AI 代理的工作效率和代码质量。\n\n**核心功能**\nSuperpowers 的核心功能包括：\n*   **技能库**：提供一系列模块化、可重用的 AI 指导单元，涵盖头脑风暴、计划编写、TDD、系统调试和代码审查等环节。\n*   **子代理驱动开发 (SDD)**：协调代理将实施计划中的任务委托给独立的子代理，每个子代理拥有隔离的上下文，以避免上下文污染。\n*   **多平台支持**：通过平台特定的插件和工具映射层，使技能能够在 Claude Code、Codex、Kimi Code 等多种 AI 编程环境中运行。\n*   **可视化辅助**：在头脑风暴阶段提供可选的浏览器端可视化伴侣，用于展示设计图、模型或图表，以增强用户与代理的交互。\n\n**技术亮点**\n*   **模块化技能设计**：每个技能都是一个独立的 `SKILL.md` 文件，遵循特定的生命周期和结构化文档格式，易于发现和重用。\n*   **强制性工作流**：通过“1% 规则”确保 AI 代理在执行任何任务前检查并激活相关技能，将工作流从建议变为强制执行。\n*   **上下文隔离**：子代理在独立的环境中执行任务，有效防止了令牌膨胀和内存干扰，提高了大型项目的可管理性。\n*   **统一审查机制**：SDD 引入了统一的任务审查流程，包括规范符合性和代码质量两阶段审查，确保每次迭代的质量。\n\n**适合谁用**\nSuperpowers 适合希望提高 AI 编程代理在软件开发中效率和质量的开发者和团队。特别是那些使用 Claude Code、Codex、Kimi Code 等主流 AI 编程工具，并希望通过结构化方法论、自动化工作流和严格的代码审查来管理复杂项目的用户。它也适用于需要对 AI 代理行为进行精细控制，并确保其遵循最佳实践（如 TDD、YAGNI、DRY）的场景。",
+      "degraded": false
+    },
+    {
+      "id": "Wei-Shaw/sub2api",
+      "owner": "Wei-Shaw",
+      "name": "sub2api",
+      "url": "https://github.com/Wei-Shaw/sub2api",
+      "stars": 38780,
+      "description": "Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+      "one_liner": "Sub2API 是一个 AI API 网关平台，用于管理和分发 AI 服务订阅配额。",
+      "detail_md": "**解决什么问题**\nSub2API 旨在解决个人或组织将有限的 AI API 配额分发给多个用户或应用程序的问题。  它通过聚合多个上游 AI 服务账号，并生成可定制配额和速率限制的 API 密钥来分发访问权限。 \n\n**核心功能**\n该平台提供多账号管理、API 密钥分发、精准计费（Token 级别）、智能调度、并发控制、速率限制、内置支付系统和管理仪表盘等功能。  它支持 Anthropic、OpenAI、Google Gemini 等主流 AI 平台。 \n\n**技术亮点**\nSub2API 后端使用 Go 1.26.5、Gin 框架和 Ent ORM，前端采用 Vue 3.4+、Vite 5+ 和 TailwindCSS。  数据库使用 PostgreSQL 15+，缓存和队列使用 Redis 7+。  项目支持 Docker Compose 部署，也提供脚本安装方式。 \n\n**适合谁用**\nSub2API 适合需要管理和分发 AI 服务订阅配额的个人开发者、团队或企业。  特别是那些希望通过统一平台接入 Claude Code、OpenAI ChatGPT Plus、Google Gemini Advanced 等 AI 服务，并对用户进行精细化管理和计费的场景。",
+      "degraded": false
+    },
+    {
+      "id": "makeplane/plane",
+      "owner": "makeplane",
+      "name": "plane",
+      "url": "https://github.com/makeplane/plane",
+      "stars": 57211,
+      "description": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+      "one_liner": "Plane 是一个开源项目管理工具，旨在帮助团队规划、跟踪和管理项目及工作项，提升协作效率和项目透明度。",
+      "detail_md": "**解决什么问题**\nPlane 旨在解决团队在项目管理中遇到的效率低下、沟通不畅和进度不透明等问题。它通过提供集中的工作区、项目、周期和模块管理，帮助团队更好地组织工作，跟踪任务状态，并分析项目绩效。\n\n**核心功能**\nPlane 的核心功能包括工作区创建与管理、项目管理（支持项目创建、归档、删除、成员邀请等）、工作项（issue）跟踪、周期（Cycles）和模块（Modules）管理。此外，它还提供项目分析功能，如工作项创建与解决趋势、成员工作量统计等，以及自定义视图、页面和自动化规则等高级特性。\n\n**技术亮点**\n该项目支持多语言（如中文简体、中文繁体、罗马尼亚语），具备灵活的工作区和项目配置能力。它还提供了 API 令牌和 Webhook 支持，方便与其他系统集成和自动化工作流程。项目管理中包含估算系统，帮助团队评估工作复杂性和工作量。\n\n**适合谁用**\nPlane 适合需要高效协作、项目透明度和精细化任务管理的团队和组织。无论是产品开发、市场活动还是其他类型的项目，Plane 都能提供全面的支持，帮助团队成员跟踪进度、分配工作并发现趋势，从而加速工作进展。",
+      "degraded": false
+    },
+    {
+      "id": "n8n-io/n8n",
+      "owner": "n8n-io",
+      "name": "n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "stars": 201809,
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "one_liner": "n8n 是一个用于构建和部署 AI 代理和自动化工作流的平台，支持自然语言交互来创建和修改工作流。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过 AI 辅助，简化和加速 n8n 工作流的创建、修改和优化过程，使用户能够通过自然语言指令来构建复杂的自动化任务，降低技术门槛。\n\n**核心功能**\n核心功能包括一个多代理 AI 编排系统 `WorkflowBuilderAgent`，它管理会话生命周期并将请求委托给专门的子代理，如 `SupervisorAgent`、`DiscoverySubgraph` 和 `CodeWorkflowBuilder`，以实现工作流的发现、规划和构建。  它还提供会话管理和信用配额控制。\n\n**技术亮点**\n技术亮点在于其多代理 LangGraph 架构，通过 `createMultiAgentWorkflowWithSubgraphs` 函数协调不同代理，实现复杂的 AI 逻辑。 它结合了丰富的提示工程，将工作流上下文和用户消息转化为 LLM 提示，并支持流式增量响应。 前端使用 Vue 3 和 Pinia 管理聊天状态和工作流更新。\n\n**适合谁用**\n该项目适合需要自动化任务但希望通过自然语言而非手动拖拽或编写代码来构建工作流的用户，以及希望利用 AI 提升工作流开发效率的开发者和企业。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 142526,
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "one_liner": "Claude Code 是一个终端内的智能编码工具，理解代码库并加速开发。",
+      "detail_md": "### 解决什么问题\n该项目旨在通过自然语言命令，帮助开发者在终端和IDE中更快地完成编码任务。它解决了日常任务自动化、复杂代码解释以及Git工作流处理等问题。\n\n### 核心功能\nClaude Code 提供以下核心功能：\n*   **智能编码辅助**：通过自然语言命令执行常规任务、解释复杂代码和处理Git工作流。\n*   **插件系统**：允许通过插件扩展功能，包括斜杠命令、自定义代理、生命周期钩子、MCP服务器配置和技能（指导文件）。\n*   **多模型支持**：支持多种Claude模型，例如Claude Sonnet 5和Claude Opus 5，并提供上下文窗口管理和自动压缩功能。\n*   **远程控制与协作**：支持远程会话，允许在不同机器上运行Claude Code，并实现会话间的消息传递和协作。\n\n### 技术亮点\n*   **代理式编码工具**：作为一个代理式工具，它能够理解代码库并执行任务。\n*   **可扩展的插件架构**：插件系统支持多种组件类型，如命令、代理、钩子、MCP服务器和技能，实现高度定制化。\n*   **安全与权限管理**：通过工作区信任机制和权限检查，确保插件和命令的执行安全。\n*   **持续优化与更新**：项目通过频繁的更新和改进，不断提升性能、修复bug并引入新功能，例如新的模型支持和UI优化。\n\n### 适合谁用\nClaude Code 适合需要提高编码效率的开发者。无论是在终端、IDE中工作，还是在GitHub上进行协作，它都能提供帮助。特别是对于希望自动化重复任务、快速理解复杂代码或简化Git操作的开发者，该工具非常有用。",
+      "degraded": false
+    },
+    {
+      "id": "AprilNEA/OpenLogi",
+      "owner": "AprilNEA",
+      "name": "OpenLogi",
+      "url": "https://github.com/AprilNEA/OpenLogi",
+      "stars": 13908,
+      "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+      "one_liner": "OpenLogi 是一个用 Rust 编写的本地优先 Logitech Options+ 替代品，用于 HID++ 设备，无需账户和遥测。",
+      "detail_md": "**解决什么问题**\nOpenLogi 旨在解决罗技官方 Options+ 软件的痛点，例如需要罗技账户、数据遥测、以及不支持 Linux 等问题。 它提供了一个轻量级的替代方案，允许用户在没有云服务依赖的情况下，对罗技 HID++ 设备进行按键重映射、DPI 调节和 SmartShift 配置。\n\n**核心功能**\n该项目提供图形用户界面 (GUI)、后台服务 (agent)  和命令行工具 (CLI)。核心功能包括：按键重映射、DPI 控制与预设、SmartShift 滚轮模式切换与灵敏度调节、设备原生滚动反转、静态 RGB 键盘灯光控制以及按应用自动切换配置。 所有配置都以纯 TOML 文件形式保存在本地。\n\n**技术亮点**\nOpenLogi 使用 Rust 语言编写，并利用 GPUI 框架构建高性能、GPU 加速的界面，避免了 Electron 的臃肿。 它采用本地优先设计，所有配置存储在本地 TOML 文件中，不依赖网络账户或数据收集。 项目架构模块化，分为多个 crate，分别处理硬件通信 (`openlogi-hid`)、操作系统级事件钩子 (`openlogi-hook`)  和图形界面 (`openlogi-desktop`)，并通过 `tarpc` 进行进程间通信。\n\n**适合谁用**\nOpenLogi 适合那些希望对罗技 HID++ 外设进行高级定制，但又厌倦了官方 Options+ 软件的复杂性、云服务依赖和数据隐私问题的用户。 特别是 Linux 用户，因为 Options+ 不支持 Linux，而 OpenLogi 将 Linux 视为一等公民，提供了完整的支持和打包方案。 它也适合开发者，因为配置是纯文本文件，易于版本控制和脚本化。",
+      "degraded": false
+    },
+    {
+      "id": "modular/modular",
+      "owner": "modular",
+      "name": "modular",
+      "url": "https://github.com/modular/modular",
+      "stars": 28838,
+      "description": "The Modular Platform (includes MAX & Mojo)",
+      "one_liner": "本项目提供 Mojo 语言和 MAX 加速库，旨在优化高性能计算和 AI 模型部署。",
+      "detail_md": "### 解决什么问题\n本项目致力于解决高性能计算和 AI 模型在不同硬件平台上的性能瓶颈和部署复杂性问题。  通过提供细粒度的内存控制、并行化以及硬件特定优化，它使得开发者能够充分利用底层硬件的性能。 \n\n### 核心功能\n核心功能包括 Mojo 语言本身及其标准库，以及 MAX 加速库。  MAX 加速库提供对内存布局和并行化的精细控制，支持硬件特定优化（如张量核、SIMD）和供应商库集成。 \n\n### 技术亮点\n技术亮点在于 Mojo 语言对性能的极致追求，以及 MAX 加速库提供的硬件级优化能力。  它支持编译时定义，允许在编译阶段进行参数配置，从而实现更优的性能。  项目还强调避免常见性能陷阱，如非合并内存访问和过多的 CPU-GPU 同步。 \n\n### 适合谁用\n本项目适合需要开发高性能计算应用、AI 模型以及对底层硬件性能有严格要求的开发者。  特别是那些希望在 Linux (x86_64, aarch64) 和 macOS (ARM64) 平台上进行优化的用户。",
+      "degraded": false
+    },
+    {
+      "id": "multica-ai/andrej-karpathy-skills",
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 205291,
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "one_liner": "本项目提供一套基于 Andrej Karpathy 观察的指南，旨在改善大型语言模型（LLM）在编码时的行为，减少常见错误。",
+      "detail_md": "## 解决什么问题\n本项目旨在解决 LLM 在编码过程中常出现的几个问题，包括：模型做出错误假设、不寻求澄清、不呈现权衡、过度复杂化代码和 API、堆砌抽象、不清理死代码，以及在任务无关的情况下修改或删除代码和注释等。\n\n## 核心功能\n项目通过四个核心原则来指导 LLM 的行为：\n1.  **编码前思考**：强制 LLM 明确说明假设、呈现多种解释、适时提出异议并在困惑时寻求澄清，以避免错误假设和隐藏困惑。\n2.  **简洁优先**：要求 LLM 编写最少的代码来解决问题，避免过度工程、不必要的抽象和投机性功能。\n3.  **精准修改**：规定 LLM 只能修改与用户请求直接相关的代码，避免“顺带”改进相邻代码或格式，并只清理自己造成的“孤儿”代码。\n4.  **目标驱动执行**：将指令式任务转化为可验证的成功标准，并鼓励 LLM 制定多步骤计划并循环验证，直到达成目标。\n\n## 技术亮点\n这些指南以多种格式分发，以确保与不同的 AI 开发环境兼容。\n*   **Claude Code 插件**：通过 `plugin.json` 和 `marketplace.json` 文件，可以将指南作为可复用的技能安装到 Claude Code 中。\n*   **Cursor 集成**：项目包含一个 `.cursor/rules/karpathy-guidelines.mdc` 文件，通过 `alwaysApply: true` 标志，在 Cursor IDE 中自动应用这些行为指南。\n*   **通用 Markdown 文件**：提供 `CLAUDE.md` 和 `skills/karpathy-guidelines/SKILL.md` 文件，方便在不支持特定插件或规则的 LLM 工具中使用，或作为个人代理技能。\n\n## 适合谁用\n本项目适用于使用大型语言模型进行编码的开发者和团队。 特别是那些希望减少 LLM 编码错误、提高代码质量、避免过度工程和不必要修改的用户。 它也适合希望将这些行为指南集成到其现有开发工作流中的 Claude Code 和 Cursor 用户。",
+      "degraded": false
+    },
+    {
+      "id": "mahlernim/google-timeline-visualizer",
+      "owner": "mahlernim",
+      "name": "google-timeline-visualizer",
+      "url": "https://github.com/mahlernim/google-timeline-visualizer",
+      "stars": 2560,
+      "description": "Visualize your year in travel using your Google Location History (Timeline) data",
+      "one_liner": "将您的 Google 地图时间轴数据转换为动画旅行视频。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户无法直观地回顾和分享其 Google 地图时间轴数据的问题。它将原始的地理位置数据转化为生动有趣的动画视频，使用户能够以引人入胜的方式可视化他们的旅行路线。\n\n**核心功能**\n核心功能包括从 Google `Timeline.json` 文件中导入位置数据，根据选定的年份或日期范围生成旅行路线，并创建带有动态摄像机移动和路线动画的 MP4 视频。它还支持多种导出格式和隐私保护措施，确保数据在本地处理。\n\n**技术亮点**\n技术亮点包括：支持多种 Google 时间轴 JSON 格式（包括 `semanticSegments` 和原始位置数据）；采用 Web Mercator 投影以实现精确的地图对齐；提供距离驱动的动画速度和智能缩放的动态摄像机；以及在 Android 平台上支持后台视频编码。\n\n**适合谁用**\n该项目适合希望将自己的 Google 地图时间轴数据转换为动画视频的用户。无论是 Android 用户、iPhone 用户（通过 Web 应用）还是桌面用户（通过 Python 脚本），只要能导出 `Timeline.json` 文件，都可以使用此工具来创建个性化的旅行回顾视频。",
+      "degraded": false
+    },
+    {
+      "id": "ripienaar/free-for-dev",
+      "owner": "ripienaar",
+      "name": "free-for-dev",
+      "url": "https://github.com/ripienaar/free-for-dev",
+      "stars": 133887,
+      "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+      "one_liner": "这个项目是一个为开发者和开源作者收集提供免费服务的清单网站。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者和开源作者难以找到提供免费服务（免费套餐而非免费试用）的问题。它汇集了各种SaaS、PaaS、IaaS等服务，帮助基础设施开发者（如系统管理员、DevOps工程师）做出明智选择。\n\n**核心功能**\n核心功能是提供一个可搜索的免费服务目录。该目录涵盖了云服务、API、数据与机器学习、CI/CD、存储、Web托管等多个类别。用户可以通过网站浏览这些服务，并了解其免费套餐的具体限制。\n\n**技术亮点**\n项目使用Docsify作为客户端文档生成器，将Markdown文件渲染成可搜索的网站，无需构建步骤。它还集成了Darklight Theme插件，支持主题切换和自定义字体。网站通过CNAME文件映射到自定义域名`free-for.dev`。\n\n**适合谁用**\n该项目主要面向基础设施开发者，包括系统管理员和DevOps工程师。也适合任何寻求免费SaaS服务来评估和构建项目的开发者和开源作者。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/TypeScript",
+      "owner": "microsoft",
+      "name": "TypeScript",
+      "url": "https://github.com/microsoft/TypeScript",
+      "stars": 110534,
+      "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+      "one_liner": "本项目旨在为 TypeScript 编译器提供诊断消息的本地化支持，确保不同语言的用户能理解编译器输出的错误和警告信息。",
+      "detail_md": "**解决什么问题**\n该项目解决了 TypeScript 编译器诊断消息的国际化问题。 编译器生成的错误、警告和提示信息默认是英文的，这对于非英语用户来说理解起来存在障碍。 通过本地化，项目确保用户能以其母语获取这些重要的诊断反馈，从而提高开发效率和用户体验。\n\n**核心功能**\n核心功能包括定义英文诊断消息、将这些消息转换为可本地化的格式，以及在运行时根据用户语言环境加载并显示本地化消息。 它支持 13 种目标语言，包括简体中文和繁体中文。\n\n**技术亮点**\n技术亮点在于其端到端的诊断消息本地化系统。 它使用 `diagnosticMessages.json` 作为英文消息的单一真相来源，并通过代码生成管道将其转换为 `DiagnosticMessage` 类型对象和 LCL 翻译文件。 LCL (Localization eXchange) 是一种 XML 格式，用于存储翻译后的消息。\n\n**适合谁用**\n本项目适合所有使用 TypeScript 编译器并需要本地化诊断消息的用户。 特别是对于非英语母语的开发者，它提供了更友好的开发环境。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 4656,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "这是一个Cursor插件市场，提供开发工具、框架规则、MCP集成和智能体技能，旨在帮助开发者编写高质量代码并自动化工作流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI生成代码中存在的“冗余代码（slop code）”问题，通过提供严谨的工程原则和自动化工作流，帮助开发者提高代码质量和开发效率。 它还解决了大型任务的并行化执行、代码审查的效率以及文档的可视化和导航问题。\n\n**核心功能**\n核心功能包括 `pstack` 插件，它提供 `poteto-mode` 等严格的智能体工作流，强制执行工程原则，减少冗余代码。 `orchestrate` 插件支持将大型任务分发给并行云智能体执行。 `pr-review-canvas` 和 `docs-canvas` 插件分别用于将PR差异和文档渲染为交互式画布，提升审查和阅读体验。 此外，还提供了与Gmail、Google Drive、Salesforce等第三方服务的集成。\n\n**技术亮点**\n项目采用多插件市场架构，每个插件都是独立的目录，拥有自己的 `plugin.json` 清单文件。 智能体（Agent）和技能（Skill）是核心概念，技能通过 `SKILL.md` 文件定义高级功能，智能体执行具体任务。 `poteto-mode` 技能通过预定义的“剧本（Playbook）”和“原则索引（Principles Index）”来指导智能体行为，确保代码质量。 `MCP (Model Context Protocol)` 用于连接智能体与外部工具和数据源。\n\n**适合谁用**\n该项目适合希望提高代码质量、自动化开发流程、并有效管理大型软件项目的开发者和团队。 特别是那些追求严谨工程实践、希望减少AI生成代码中的“冗余”并优化代码审查流程的用户。",
+      "degraded": false
+    },
+    {
+      "id": "PostHog/posthog",
+      "owner": "PostHog",
+      "name": "posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "stars": 38609,
+      "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "one_liner": "PostHog 是一个模块化的全栈产品分析平台，提供事件捕获、产品分析、A/B 测试和会话回放等功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在帮助团队理解用户行为、优化产品体验、进行数据驱动的决策，并提供AI辅助分析能力。  \n\n**核心功能**\nPostHog 提供事件捕获、产品分析、A/B 测试、会话回放、错误追踪、功能标志管理、数据仓库集成以及AI辅助分析（如Max AI助手和Replay Vision）等功能。   \n\n**技术亮点**\n项目采用pnpm monorepo结构，前端是React应用，后端使用Django REST Framework和Rust微服务。    数据存储采用ClickHouse、PostgreSQL和Redis，并利用Kafka/WarpStream进行事件流处理。   AI系统（如Max和Replay Vision）通过模型上下文协议（MCP）集成，实现智能分析和自动化。  \n\n**适合谁用**\nPostHog 适合需要深入了解用户行为、优化产品、进行A/B测试、追踪错误以及利用AI进行数据分析的产品经理、工程师和数据分析师。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/AI-Infra-Guard",
+      "owner": "Tencent",
+      "name": "AI-Infra-Guard",
+      "url": "https://github.com/Tencent/AI-Infra-Guard",
+      "stars": 5487,
+      "description": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
+      "one_liner": "AI-Infra-Guard 是腾讯朱雀实验室开发的一站式 AI 红队安全测试平台，用于全面评估 AI 基础设施、智能体工作流和大模型的安全风险。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 基础设施、智能体工作流和大型语言模型（LLMs）面临的自动化安全风险自查问题。它通过集成多种扫描能力，帮助用户发现不安全配置、漏洞和基于提示的风险，从而提升 AI 系统的安全性。\n\n**核心功能**\nAI-Infra-Guard 提供五大核心安全评估领域：ClawScan（OpenClaw 安全体检）、Agent-Scan（智能体安全扫描）、MCP Server & Agent Skills Scan（AI 工具技能扫描）、AI Infra Vulnerability Scan（AI 基础设施漏洞扫描）和 Jailbreak Evaluation（大模型越狱评估）。 这些功能涵盖了从基础设施到大模型应用的全方位安全检测。\n\n**技术亮点**\n该平台采用分布式架构，后端基于 Go 语言，通过 WebSocket 协调任务和代理。它集成了专门的扫描引擎，例如用于 AI 基础设施扫描的 GoRunner、用于 MCP 安全审计的 PyMCP、用于智能体工作流安全测试的 PyAgent 以及用于越狱评估的 PyPrompt。平台还支持 YAML 规则验证和多轮攻击策略。\n\n**适合谁用**\nAI-Infra-Guard 适用于需要对 AI 系统进行安全风险自查的企业和个人开发者。它既可以作为命令行工具使用，也提供 Web 服务界面。特别适合关注 AI 基础设施、智能体应用和大型语言模型安全性的用户。",
+      "degraded": false
+    }
+  ]
+}
