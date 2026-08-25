@@ -1,0 +1,215 @@
+{
+  "doc_token": "ZpdUd7GCEojX7UxIBjzcxICFnWR",
+  "doc_url": "https://my.feishu.cn/docx/ZpdUd7GCEojX7UxIBjzcxICFnWR",
+  "items": [
+    {
+      "id": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "stars": 48918,
+      "description": "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+      "one_liner": "本项目是一个轻量级代理，允许用户免费使用Claude Code CLI和VSCode扩展，无需Anthropic API密钥，通过路由请求到多种LLM后端实现。",
+      "detail_md": "**解决什么问题**\n该项目解决了Claude Code CLI和VSCode扩展需要Anthropic API密钥才能使用的问题，通过提供一个代理服务，将Anthropic API请求路由到其他免费或成本更低的LLM提供商，如NVIDIA NIM、OpenRouter、LM Studio、llama.cpp或Ollama。它还通过本地拦截和响应琐碎请求来优化API配额和降低延迟。\n\n**核心功能**\n核心功能包括：作为Claude Code CLI和VSCode扩展的透明代理，将Anthropic API请求转发到配置的LLM提供商。支持多种LLM后端，包括NVIDIA NIM、OpenRouter、DeepSeek、LM Studio、llama.cpp和Ollama。提供模型级别的路由，允许将Claude的Opus、Sonnet、Haiku模型映射到不同的提供商和模型。具备请求优化功能，本地处理配额探测、标题生成等琐碎请求，节省API配额。此外，还支持Discord和Telegram机器人集成，实现远程代码协作和会话持久化。\n\n**技术亮点**\n技术亮点包括：基于FastAPI构建的异步代理服务，处理API路由和请求。通过`BaseProvider`接口抽象不同LLM后端，实现消息转换和工具调用解析。实现了“快速路径”处理层，拦截并本地响应简单请求，减少延迟和API使用。支持思考令牌（`<think>`标签和`reasoning_content`）的转换，使其兼容Claude的思考块。集成了智能限速机制，包括主动滚动窗口节流和被动指数退避。\n\n**适合谁用**\n该项目适合希望免费或以更低成本使用Claude Code CLI和VSCode扩展的开发者。对于需要灵活选择LLM提供商（如NVIDIA NIM、OpenRouter、LM Studio等）的用户，它提供了便利。也适用于需要远程协作、通过Discord或Telegram控制代码代理的团队和个人。此外，对于注重隐私、希望在本地运行LLM模型（如LM Studio、llama.cpp、Ollama）的用户也十分适用。",
+      "degraded": false
+    },
+    {
+      "id": "openai/codex",
+      "owner": "openai",
+      "name": "codex",
+      "url": "https://github.com/openai/codex",
+      "stars": 117006,
+      "description": "Lightweight coding agent that runs in your terminal",
+      "one_liner": "本项目提供了一个终端用户界面（TUI），用于与AI代理交互，显示实时任务状态和详细的会话信息。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决用户在与AI代理交互时，难以实时了解任务执行状态、代理工作细节以及会话历史的问题。它通过提供一个直观的终端界面，使用户能够清晰地看到AI代理的运行进度、资源使用情况和上下文信息，从而提升用户体验和工作效率。\n\n**核心功能**\n核心功能包括实时状态指示器，显示任务运行时间、动画和中断提示。它还提供了一个 `/status` 命令输出，展示模型信息、工作目录、令牌使用量和速率限制等详细会话数据。此外，用户可以自定义状态栏显示项，如模型名称、上下文使用情况和环境信息。\n\n**技术亮点**\n技术亮点在于其组件化架构，`App` 作为主UI协调器，`ChatWidget` 处理聊天记录和 `/status` 输出，`BottomPane` 管理底部小部件，`StatusIndicatorWidget` 提供实时任务状态显示。它还实现了精确的计时器状态机，用于跟踪任务的活动运行时间，以及灵活的状态行配置机制。\n\n**适合谁用**\n本项目适合需要与AI代理进行高效交互的开发者和用户。特别是那些希望在终端环境中获得丰富、实时反馈，并对AI代理的运行状态、资源消耗和会话详情有深入了解的用户。",
+      "degraded": false
+    },
+    {
+      "id": "MadsLorentzen/ai-job-search",
+      "owner": "MadsLorentzen",
+      "name": "ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "stars": 34020,
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "one_liner": "AI Job Search是一个AI驱动的求职框架，可自动评估职位、定制简历和求职信，并准备面试。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在简化和优化求职过程，通过AI自动化职位评估、简历和求职信的定制以及面试准备，解决传统求职耗时费力的问题。</cite>它通过结构化的工作流程，将Claude Code转变为一个全栈的求职助手。</cite>\n\n**核心功能**\n核心功能包括：`/setup` 用于填充个人资料，`/scrape` 用于搜索职位并评估匹配度，以及 `/apply` 用于根据职位定制简历和求职信，并进行面试准备。</cite>此外，还有 `/expand` 丰富个人资料，以及 `/upskill` 分析技能差距并生成学习计划。</cite>\n\n**技术亮点**\n该项目采用“起草人-评审人”工作流，确保申请材料的质量和针对性。</cite>它还包含强制性的PDF验证循环，编译LaTeX源文件为PDF后，程序化地检查布局问题。</cite>简历裁剪功能会根据职位相关性、独特性和求职信依赖性来智能剪裁内容。</cite>\n\n**适合谁用**\n该项目适用于希望利用AI提高求职效率的个人。</cite>特别是那些需要定制化简历和求职信、进行面试准备以及希望系统性分析技能差距的用户。</cite>虽然职位搜索工具目前主要针对丹麦市场，但其核心工作流是语言和国家无关的，可根据需要进行扩展。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "multica-ai/andrej-karpathy-skills",
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 206478,
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "one_liner": "本项目提供一套行为准则，旨在减少大型语言模型（LLM）在编码中常犯的错误，提升代码质量和开发效率。",
+      "detail_md": "**解决什么问题**\nLLM在编码时常出现以下问题：做出错误假设、不寻求澄清、过度复杂化代码、堆砌抽象、不清理死代码以及进行无关的修改。这些问题导致代码质量下降、维护困难和开发效率低下。本项目通过引入“编码前思考”、“简洁优先”、“精准修改”和“目标驱动执行”四个核心原则来直接解决这些痛点。\n\n**核心功能**\n项目核心是四个行为准则： \n1.  **编码前思考**：强制LLM明确假设、呈现多种解释、适时提出异议并在困惑时寻求澄清，避免盲目执行。\n2.  **简洁优先**：要求LLM用最少的代码解决问题，避免过度工程、不必要的抽象和未请求的功能。\n3.  **精准修改**：规定LLM只修改与任务直接相关的代码，不“改进”相邻代码或格式，并只清理自己造成的死代码。\n4.  **目标驱动执行**：将指令式任务转化为可验证的成功标准（如通过测试），使LLM能独立循环验证直到目标达成。\n\n**技术亮点**\n这些指南以多种形式提供，确保与不同AI开发环境兼容。包括：作为Claude Code插件安装，通过 `CLAUDE.md` 文件进行项目级集成，以及作为Cursor IDE的项目规则 (`.cursor/rules/karpathy-guidelines.mdc`) 自动应用。这种多平台支持使得指南能够广泛应用于各种LLM辅助编码场景。\n\n**适合谁用**\n本项目适用于任何使用LLM进行代码开发、审查或重构的开发者和团队。特别是那些希望提高LLM生成代码质量、减少不必要修改、避免过度设计，并确保LLM行为更符合资深工程师标准的场景。它也适合希望将这些行为准则集成到其AI开发工作流中的用户。",
+      "degraded": false
+    },
+    {
+      "id": "makeplane/plane",
+      "owner": "makeplane",
+      "name": "plane",
+      "url": "https://github.com/makeplane/plane",
+      "stars": 57905,
+      "description": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+      "one_liner": "Plane 是一个开源项目管理工具，旨在帮助团队规划、跟踪和管理工作项，提升协作效率。",
+      "detail_md": "## 解决什么问题\nPlane 旨在解决团队在项目管理中遇到的效率低下、协作不畅、进度不透明等问题。它通过提供结构化的项目、周期和模块管理，帮助团队更好地组织工作，并提供分析功能以跟踪进度和工作量。\n\n## 核心功能\nPlane 的核心功能包括项目创建与管理、工作项（issues）跟踪、周期（cycles）和模块（modules）管理、以及团队协作。用户可以创建项目、定义工作项的优先级和状态、分配负责人、添加标签和附件。此外，它还支持快速链接、最近访问、以及工作区级别的分析报告，帮助团队全面了解项目状况。\n\n## 技术亮点\n该项目支持多语言，例如中文简体和中文繁体，通过 `translations.ts` 文件管理本地化字符串。它提供了详细的错误处理和用户反馈机制，例如项目创建失败、工作项移动失败等提示。项目还具备灵活的访问控制，支持私有和公开项目，并可邀请团队成员加入。\n\n## 适合谁用\nPlane 适合需要进行项目管理和团队协作的各类组织和团队。无论是小型开发团队、产品经理、市场营销团队，还是需要跨部门协作的大型企业，都可以利用 Plane 来规划、跟踪和管理他们的工作。特别是对于追求透明化、高效协作和数据驱动决策的团队，Plane 提供了强大的功能支持。",
+      "degraded": false
+    },
+    {
+      "id": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": 235773,
+      "description": "The agent that grows with you",
+      "one_liner": "Hermes Agent 提供一个Web UI仪表盘，用于管理本地或远程Agent实例，实现配置、任务调度和交互。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决管理和操作AI Agent的复杂性问题。它通过提供一个统一的Web界面，简化了Agent的配置、环境管理、会话交互、任务调度和技能管理等操作。用户无需深入命令行即可高效控制Agent。\n\n**核心功能**\n核心功能包括Agent配置管理、环境变量和API密钥管理、Agent会话交互、Cron定时任务调度、技能管理、以及分析数据展示。它还提供了一个嵌入式终端聊天界面，支持与Agent进行实时交互。\n\n**技术亮点**\n技术亮点在于其采用React单页应用作为前端，结合FastAPI后端服务器，实现了客户端-服务器架构。后端通过WebSocket连接支持嵌入式终端，将Agent CLI运行在PTY中。此外，它支持多Agent配置（Profile Scoped API Operation），并通过会话令牌确保安全性。\n\n**适合谁用**\n该项目适合需要高效管理和操作AI Agent的开发者、研究人员和企业用户。特别是那些希望通过图形界面而非纯命令行方式与Agent交互，并需要对Agent进行精细化配置和任务调度的用户。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-plugins-community",
+      "owner": "anthropics",
+      "name": "claude-plugins-community",
+      "url": "https://github.com/anthropics/claude-plugins-community",
+      "stars": 1339,
+      "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+      "one_liner": "这个项目是Claude插件市场的官方镜像，提供插件发现和安装的集中式注册表，并确保插件的有效性和安全性。",
+      "detail_md": "**解决什么问题**\n该项目解决了Claude插件生态系统中插件的有效性、安全性和可维护性问题。它通过强制执行技术架构要求和严格的安全策略来确保插件的质量和可靠性。此外，它还通过自动化维护流程，如SHA更新和插件扫描，来防止外部插件的漂移和潜在的安全漏洞。\n\n**核心功能**\n核心功能包括CI验证管道，它对插件市场进行全面的验证，包括模式检查和安全策略强制。它还提供自动化维护，例如`bump-plugin-shas`用于更新外部仓库的SHA值，以及`scan-plugins`用于通过Claude进行代码分析以检测安全问题。\n\n**技术亮点**\n该项目采用“零模式维护”设计，动态安装`@anthropic-ai/claude-code`包，并使用CLI的Zod定义作为验证的真相来源。它还实现了“祖父条款”策略，允许在不中断现有插件的情况下引入新的不变性规则。安全模型包括SSRF防护和对所有贡献者控制值的严格验证。\n\n**适合谁用**\n该项目适用于Claude插件开发者、Claude Cowork用户和Claude Code CLI用户。开发者可以利用其强大的CI验证来确保其插件符合规范和安全标准。Claude用户则受益于一个经过严格验证和维护的插件市场，从而获得更安全、更可靠的插件体验。",
+      "degraded": false
+    },
+    {
+      "id": "AprilNEA/OpenLogi",
+      "owner": "AprilNEA",
+      "name": "OpenLogi",
+      "url": "https://github.com/AprilNEA/OpenLogi",
+      "stars": 15839,
+      "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+      "one_liner": "OpenLogi 是一个用 Rust 编写的罗技 Options+ 替代品，提供本地优先、无遥测的罗技 HID++ 设备按键重映射、DPI 和 SmartShift 控制功能。",
+      "detail_md": "**解决什么问题**\nOpenLogi 旨在解决罗技 Options+ 官方软件的痛点，例如需要罗技账号、存在遥测数据收集、不支持 Linux 系统以及配置不便等问题。   它提供了一个轻量级、本地优先的解决方案，让用户可以完全掌控自己的设备配置。 \n\n**核心功能**\n该项目允许用户重映射罗技 HID++ 设备的按键、调节 DPI、控制 SmartShift 功能，并支持按应用自动切换配置。  它通过 Logi Bolt、Unifying 接收器、蓝牙直连或 USB 线缆与设备通信。  核心组件包括一个基于 GPUI 的桌面应用 (OpenLogi GUI)、一个处理输入钩子和设备 I/O 的后台服务 (OpenLogi agent)，以及一个用于设备清单和诊断的命令行工具 (OpenLogi CLI)。 \n\n**技术亮点**\nOpenLogi 使用 Rust 语言编写，并利用 GPUI 框架构建高性能、轻量级的原生应用，避免了 Electron 等框架的臃肿。  所有配置都以纯 TOML 文件形式存储在本地，便于阅读、版本控制和跨设备复制。  它支持 macOS、Linux 和 Windows 操作系统，并在 Linux 上提供了 evdev/uinput 钩子、udev 规则和 systemd 用户单元等一流支持。  \n\n**适合谁用**\nOpenLogi 适合那些希望摆脱罗技 Options+ 限制，寻求更轻量、更注重隐私、且支持多平台（尤其是 Linux）的罗技 HID++ 设备用户。   对于开发者和高级用户，其纯文本配置和命令行接口也提供了高度的可脚本化和定制能力。",
+      "degraded": false
+    },
+    {
+      "id": "apache/maka",
+      "owner": "apache",
+      "name": "maka",
+      "url": "https://github.com/apache/maka",
+      "stars": 2883,
+      "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+      "one_liner": "Maka 是一个桌面应用，旨在通过 AI 代理与用户界面交互，实现任务自动化和智能辅助，同时确保隐私和安全。",
+      "detail_md": "**解决什么问题**\nMaka 旨在解决传统人机交互效率低下的问题，通过 AI 代理实现对图形用户界面的“观察-行动”循环操作，从而自动化执行复杂任务。 它特别关注隐私保护，确保敏感数据不会泄露，并提供平台无关的工具接口和故障封闭的执行模型，以保证安全性和精确性。\n\n**核心功能**\nMaka 的核心功能包括：\n*   **计算机使用 (Computer Use, CU) 系统**：允许 AI 代理通过 `maka_computer` 工具与桌面应用进行交互，执行点击、输入等操作。\n*   **严格的隐私边界**：通过数据脱敏和策略，防止敏感信息（如密码、秘密模式的应用名称）泄露到日志或遥测中。\n*   **Composer 输入系统**：作为主要输入界面，支持草稿管理、文件和技能的标记化，并将自然语言意图转化为可执行的运行时操作。\n*   **自动更新服务**：管理应用程序的更新生命周期，确保用户始终使用最新版本。\n\n**技术亮点**\n*   **模块化架构**：采用单体仓库结构，`apps/desktop` 作为主要消费者，构建过程通过 NPM 脚本协调，确保核心运行时和存储包在桌面 shell 之前编译。\n*   **跨平台支持**：利用 `electron-builder` 生成 macOS 和 Windows 平台的安装包，并针对不同平台进行安全配置，例如 macOS 的代码签名和公证，以及 Windows 的 AppContainer 沙盒支持。\n*   **法律合规性**：强制执行所有生产依赖项的严格许可证审计，并自动生成第三方通知文件。\n*   **“观察-行动”循环**：AI 代理通过 `maka_computer` 工具观察用户界面状态，然后执行相应的操作，并通过 `LoopGate` 机制防止无限循环。\n\n**适合谁用**\nMaka 适合需要通过 AI 代理自动化桌面任务、提高工作效率的用户和开发者。 特别是那些对数据隐私和操作安全性有高要求的用户，以及希望利用 AI 能力进行复杂桌面交互的开发者。 它也适合希望贡献代码以增强模型供应商支持、修复缺陷或优化性能的开源贡献者。",
+      "degraded": false
+    },
+    {
+      "id": "PostHog/posthog",
+      "owner": "PostHog",
+      "name": "posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "stars": 38982,
+      "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "one_liner": "PostHog 是一个模块化的全栈产品分析平台，提供事件捕获、会话回放、A/B 测试和 AI 辅助分析功能。",
+      "detail_md": "**解决什么问题**\nPostHog 旨在帮助团队理解用户行为、优化产品并做出数据驱动的决策。 它通过提供全面的分析工具来解决传统产品分析工具的局限性，例如数据孤岛和难以获取深度洞察。\n\n**核心功能**\n该项目提供事件捕获、会话回放、A/B 测试、功能标志、数据仓库以及 AI 辅助分析（如 Max AI 助手和 Replay Vision）等核心功能。 Max AI 助手可以协助 SQL 生成、产品分析洞察和会话回放摘要。 Replay Vision 是一个 AI 驱动的系统，用于从会话录制中提取结构化数据，支持监控、摘要、分类和评分等扫描器类型。\n\n**技术亮点**\nPostHog 采用模块化架构，前端是基于 React 和 Kea 的 pnpm monorepo，后端是 Django REST Framework，高性能服务则使用 Rust 微服务。 它使用 ClickHouse 作为分析数据仓库，PostgreSQL 用于应用数据，Redis 用于缓存。 项目还强调类型安全，通过从 Django 序列化器生成 TypeScript 类型来确保前后端数据结构同步。\n\n**适合谁用**\nPostHog 适合需要深入了解用户行为、优化产品体验以及利用 AI 辅助分析的开发团队、产品经理和数据分析师。 尤其是那些寻求全栈、可扩展且高度可定制的产品分析解决方案的用户。",
+      "degraded": false
+    },
+    {
+      "id": "openclaw/openclaw",
+      "owner": "openclaw",
+      "name": "openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "stars": 387429,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+      "one_liner": "OpenClaw 是一个多平台个人 AI 助手系统，连接消息应用与 AI 代理，并在您的设备上运行。",
+      "detail_md": "**解决什么问题**\nOpenClaw 旨在解决个人 AI 助手在多平台和隐私方面的挑战，它允许用户在自己的硬件上运行 AI，从而更好地控制数据和隐私。  它通过将消息平台（如 WhatsApp、Telegram、Slack、Discord）与高级 AI 模型连接起来，提供统一的 AI 交互界面。 \n\n**核心功能**\nOpenClaw 的核心功能包括：\n*   **多平台 AI 网关**：作为消息应用和 AI 代理之间的桥梁，支持多种消息渠道。 \n*   **设备节点协议**：Android 应用程序实现了设备节点协议，将 Android 设备的摄像头、位置、通知、短信、通话记录等功能暴露给代理运行时。 \n*   **会话与聊天管理**：通过 `ChatController` 管理聊天会话的生命周期，包括转录缓存和群组进度跟踪。 \n*   **A2UI 集成**：支持 A2UI 标准，用于渲染交互式画布，使 Gateway 能够向 Android 设备推送丰富的 UI 布局。 \n\n**技术亮点**\n该项目采用以下技术亮点：\n*   **Kotlin 原生客户端**：Android 应用使用 Kotlin 和 Jetpack Compose 构建，提供流畅的用户体验。 \n*   **Gradle 构建系统**：Android 应用使用 Gradle 进行构建，并结合 Fastlane 和 TypeScript/Node.js 脚本实现自动化发布流程。 \n*   **模块化架构**：采用 `NodeRuntime` 作为核心协调器，初始化捕获管理器并将命令执行委托给专门的处理程序。 \n*   **本地化支持**：通过 JSON 翻译系统支持多语言，包括简体中文和繁体中文。   \n\n**适合谁用**\nOpenClaw 适合希望在个人设备上运行 AI 助手，并对数据隐私和本地控制有较高要求的用户。  它也适用于需要将 AI 能力集成到各种消息平台，并利用设备原生功能（如摄像头、位置等）的开发者和高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "AgriciDaniel/claude-obsidian",
+      "owner": "AgriciDaniel",
+      "name": "claude-obsidian",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian",
+      "stars": 11865,
+      "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+      "one_liner": "`claude-obsidian` 是一个本地优先的 Agent Skills 包和 Claude Code 插件，用于构建和维护带有来源引用的 Obsidian 知识库。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统 RAG (Retrieval-Augmented Generation) 架构中知识无法持续积累的问题，通过 LLM Wiki 模式，将新信息整合到现有页面中，使知识随时间推移而复合增长。 它还通过事务引擎确保对 Obsidian 知识库的修改是安全和可恢复的。\n\n## 核心功能\n`claude-obsidian` 提供了多种核心功能，包括：\n*   **知识库初始化与管理**：通过 `wiki` 技能初始化或采用 Obsidian 知识库。\n*   **来源捕获与整合**：`wiki-ingest` 技能将捕获的来源转化为链接页面和出处记录。\n*   **知识库查询**：`wiki-query` 技能从相关知识库证据中回答问题。\n*   **事务安全**：通过 `MutationLock` 确保只有一个代理或脚本可以同时修改知识库，并使用事务日志进行恢复。\n*   **上下文检索**：`wiki-retrieve` 技能构建本地搜索索引，支持 BM25 和可选的余弦重排序。\n\n## 技术亮点\n该项目具有以下技术亮点：\n*   **本地优先与隐私保护**：用户知识库独立于插件缓存，网络和破坏性操作需要明确同意。\n*   **事务性操作**：所有知识修改都通过一个可恢复的事务进行，确保数据完整性和一致性。\n*   **模块化 Agent Skills**：系统由 15 个小型技能组成，它们共享证据、知识库选择和修改规则。\n*   **内容寻址捕获**：将来源摄取到 `.raw/` 目录，文件名源自内容哈希，确保不变性并防止重复存储。\n*   **可配置的知识管理方法**：支持通用、LYT、PARA 或 Zettelkasten 等四种知识管理方法，用户可以根据自己的思维方式塑造知识库。\n\n## 适合谁用\n`claude-obsidian` 适合希望利用大型语言模型 (LLM) 增强其 Obsidian 知识库的用户。 特别是那些：\n*   重视本地数据存储和隐私的用户。\n*   需要安全、可恢复的知识库修改操作的用户。\n*   希望通过 LLM 自动整理、链接和查询知识，并让知识随时间复合增长的用户。\n*   希望根据个人偏好选择知识管理方法的用户。",
+      "degraded": false
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "stars": 48264,
+      "description": "Learn it. Build it. Ship it for others.",
+      "one_liner": "本项目提供了一个从数学基础到多智能体系统的全面AI工程课程。",
+      "detail_md": "**解决什么问题**\n本项目旨在通过一个结构化的20阶段课程，解决AI工程领域知识碎片化的问题。它从底层数学原理开始，逐步构建复杂的AI系统，确保学习者不仅理解理论，还能将知识转化为可重用的工程实用工具。\n\n**核心功能**\n核心功能包括：\n*   **分阶段学习路径**：涵盖从线性代数、微积分到机器学习、深度学习、大型语言模型（LLMs）和多智能体系统的20个阶段。\n*   **实践导向**：每个阶段都设计有实践课程，例如从零开始实现自动微分引擎 `Value` 类、构建迷你深度学习框架，以及开发各种AI模型和工具。\n*   **可重用工具包**：每个课程都会产出可重用的构件，如提示模板和AI编码智能体的 `SKILL.md` 文件，可集成到各种智能体平台。\n\n**技术亮点**\n*   **“自下而上”工程哲学**：强调从基本原理构建AI系统，避免“黑箱”抽象。\n*   **全面的技术栈**：覆盖计算机视觉、自然语言处理、语音与音频处理、Transformer模型、生成式AI、智能体工程 等多个前沿领域。\n*   **高级项目实践**：包含17个端到端项目和9个深度构建轨道，例如构建终端原生编码智能体、实时语音助手和多智能体软件工程团队。\n\n**适合谁用**\n本项目适合希望系统学习AI工程，从基础理论到实际应用，并能构建可部署AI系统的工程师、研究人员和学生。特别是那些希望深入理解AI底层机制，并能将理论知识转化为实际工程产出的人群。",
+      "degraded": false
+    },
+    {
+      "id": "basecamp/omarchy",
+      "owner": "basecamp",
+      "name": "omarchy",
+      "url": "https://github.com/basecamp/omarchy",
+      "stars": 30079,
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "one_liner": "Omarchy 是一个基于 Arch Linux 和 Hyprland 的桌面发行版，提供集成工具和美观、现代、有主见的桌面体验。",
+      "detail_md": "**解决什么问题**\nOmarchy 旨在解决传统 Linux 发行版在美学、生产力工具集成和系统管理方面的不足，提供一个开箱即用、高度定制化的桌面环境。  它通过声明式包清单、命令中心架构、快照恢复和幂等迁移来确保系统一致性和易用性。  此外，它还提供了一个统一的 AI 编码助手管理界面，抽象了不同代理的复杂性。 \n\n**核心功能**\nOmarchy 的核心功能包括：统一的命令行接口 `omarchy` 用于系统操作，基于 Quickshell 的桌面环境，以及一个集成的 AI 代理系统。  AI 代理系统通过 `omarchy-agent` 统一管理和启动各种 AI 编码助手，并提供使用情况跟踪和代理面板。   它还包含一个主题系统，允许用户原子化地切换桌面组件的视觉主题。 \n\n**技术亮点**\n该项目采用声明式包清单管理核心系统状态，通过 `omarchy` 二进制文件实现命令中心架构。 AI 代理集成通过三层架构实现：管理 CLI、执行包装器和使用情况管道。 主题系统采用两阶段交换机制 (`next-theme` → `current/theme`) 确保主题切换的原子性，并通过模板生成动态配置。  \n\n**适合谁用**\nOmarchy 适合那些寻求美观、现代且高度定制化 Linux 桌面体验的用户。  它特别适合开发者和高级用户，他们可以利用其集成的 AI 编码助手  和强大的命令行工具集。 对于希望在服务器环境中获得类似 Omarchy 体验的用户，还计划推出一个无头版本 \"Omarchy Server\"。",
+      "degraded": false
+    },
+    {
+      "id": "tashfeenahmed/freellmapi",
+      "owner": "tashfeenahmed",
+      "name": "freellmapi",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "stars": 19760,
+      "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+      "one_liner": "FreeLLMAPI 聚合了多家免费 LLM 提供商的额度，提供统一的 OpenAI 兼容 API 接口，并智能路由请求以优化使用和管理密钥。",
+      "detail_md": "## 解决什么问题\nFreeLLMAPI 旨在解决管理多个大型语言模型 (LLM) 提供商免费额度时的复杂性问题。它将来自 29 家提供商的 251 个模型系列和 358 个免费模型端点聚合到一个 OpenAI 兼容的 `/v1` API 接口下。这避免了开发者需要处理几十种不同的 SDK、限流规则和潜在的请求失败。\n\n## 核心功能\n该项目提供统一的 OpenAI 兼容 API 端点，允许用户通过单个接口访问多个 LLM 提供商。它具备智能路由功能，能为每个请求挑选当前可用的最佳模型，并在提供商触发限流时自动转移到下一个模型。密钥加密存储在 SQLite 数据库中，并通过统一的 API 令牌对外提供访问。此外，它还提供管理仪表盘，用于密钥管理、路由链调整、试验台功能和请求分析。\n\n## 技术亮点\nFreeLLMAPI 的技术亮点包括自更新的模型目录，每天两次从 `freellmapi.co` 同步最新的模型信息、额度变更和提供商兼容性修复。它支持按密钥跟踪限流，确保路由请求不会超出提供商的速率限制。项目还实现了粘性会话和上下文交接机制，以在模型切换时保持对话连贯性。可选的提示词压缩功能可以优化请求，减少重复和过时上下文。\n\n## 适合谁用\n该项目适合希望充分利用多个 LLM 提供商免费额度的开发者和个人用户。它特别适用于需要快速原型开发、个人实验和学习的用户，但不建议用于生产环境，因为免费额度可能不稳定。对于希望在本地运行 LLM 代理或客户端，并透明地在不同免费模型之间切换的用户，FreeLLMAPI 提供了一个便捷的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "dani-garcia/vaultwarden",
+      "owner": "dani-garcia",
+      "name": "vaultwarden",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "stars": 66124,
+      "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+      "one_liner": "Vaultwarden 是一个用 Rust 编写的 Bitwarden 服务器 API 替代实现，适用于自托管部署。",
+      "detail_md": "## 解决什么问题\nVaultwarden 旨在解决官方 Bitwarden 服务器资源消耗高的问题，为那些希望自托管密码管理服务但资源有限的用户提供一个轻量级、高效的替代方案。\n\n## 核心功能\n该项目提供了与官方 Bitwarden 客户端兼容的几乎完整的 Bitwarden 客户端 API 功能，包括个人密码库管理、发送功能、附件、网站图标、组织管理（如集合、密码共享、成员角色、群组、事件日志、策略等）、多因素认证（如 Authenticator、Email、FIDO2 WebAuthn、YubiKey、Duo）、紧急访问以及一个管理后台。\n\n## 技术亮点\nVaultwarden 使用 Rust 语言开发，基于 Rocket 0.5 Web 框架，支持 SQLite、MySQL 和 PostgreSQL 数据库，并通过 Diesel ORM 进行数据库交互。它采用 JWT (RS256) 进行认证，并支持多种存储后端（如本地文件系统和 S3）通过 Apache OpenDAL 进行抽象。部署主要通过多阶段 Docker 镜像完成，确保了轻量级和便捷性。\n\n## 适合谁用\nVaultwarden 适合希望自托管密码管理服务、对资源消耗敏感、寻求 Bitwarden 官方服务器轻量级替代方案的个人用户和小型组织。它也适合熟悉 Docker 部署和对数据隐私有较高要求的用户。",
+      "degraded": false
+    },
+    {
+      "id": "freestylefly/awesome-gpt-image-2",
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "stars": 15451,
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "one_liner": "本项目将零散的AI绘画提示词整理成结构化、可复用的模板资产，旨在提高AI出图的稳定性、可控性和自动化程度。",
+      "detail_md": "**解决什么问题**\n本项目主要解决AI绘画中“能不能稳定、可控、可复用地出图”的问题，将“散文式提示词”压缩成“结构化协议”。这对于需要批量出图、构建模板系统或接入生产流程的场景尤为重要。\n\n**核心功能**\n核心功能包括将视觉要素（如主体、光影、材质、排版）拆解为可组合的原子化Schema，提供面向Agent和自动化工作流友好的模板，以及提高版式、文案和信息层级的结构化控制能力。例如，海报模板 (`tpl-poster`) 提供了工业级的结构，通过硬编码结构约束来解决AI生成中常见的“混乱布局”问题 <cite repo=\"freestylefly/awesome-gpt-image-2\" path=\"freestylefly/awesome-gpt-image-2\" start=\"3.3\" end=\"3.3\" />。\n\n**技术亮点**\n技术亮点在于其“Prompt-as-Code”的理念，通过JSON Schema等结构化方式定义提示词 <cite repo=\"freestylefly/awesome-gpt-image-2\" path=\"freestylefly/awesome-gpt-image-2\" start=\"3.3\" end=\"3.3\" />。这使得用户可以程序化地替换变量，而不会破坏整体布局结构 <cite repo=\"freestylefly/awesome-gpt-image-2\" path=\"freestylefly/awesome-gpt-image-2\" start=\"3.3\" end=\"3.3\" />。例如，海报模板通过明确定义标题、主体大小规则和构图锚点来确保视觉平衡 <cite repo=\"freestylefly/awesome-gpt-image-2\" path=\"freestylefly/awesome-gpt-image-2\" start=\"3.3\" end=\"3.3\" />。\n\n**适合谁用**\n本项目适合需要批量生成图像、构建自动化工作流、或希望对AI生成图像有更高可控性和复用性的设计师、开发者和Agent系统。特别是对于需要将AI绘画集成到生产流程中的用户，这些结构化模板比单纯的案例堆砌更有价值。",
+      "degraded": false
+    },
+    {
+      "id": "VoltAgent/awesome-agent-skills",
+      "owner": "VoltAgent",
+      "name": "awesome-agent-skills",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "stars": 31851,
+      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "one_liner": "VoltAgent/awesome-agent-skills 是一个精选的 Agent Skills 集合，旨在帮助 AI 编码助手执行特定任务，提升开发效率和代码质量。",
+      "detail_md": "&#xA0;\n\n解决什么问题\n\n该项目旨在解决 AI 编码助手在执行特定任务时缺乏专业能力的问题。通过提供一个集中的、经过社区验证的技能库，它使得 AI 能够更好地理解和执行复杂的开发任务，例如文档创建、代码测试、UI/UX 设计和安全审计等。这有助于提高 AI 助手的实用性和准确性，减少人工干预的需求。\n\n核心功能\n\n核心功能是提供一个可供 AI 编码助手使用的 Agent Skills 目录。这些技能以链接的形式组织，指向外部存储库中维护的实际技能实现。项目将技能分为官方团队技能（如 Anthropic、Vercel、Cloudflare 等）和社区技能，并进一步细分为营销、生产力、开发与测试、上下文工程、专业领域和 n8n 自动化等类别。用户可以根据需求查找和集成这些技能，以扩展其 AI 助手的应用范围。\n\n技术亮点\n\n该项目采用“去中心化内容，集中式发现”的架构。技能的实际实现和文档由各自的作者在外部仓库中维护，而此仓库仅负责收集和展示这些技能的链接。这种方式确保了技能的独立性和灵活性，同时通过一个统一的 `README.md` 文件提供便捷的发现机制。贡献流程包括严格的 PR 审查，要求技能具有公共仓库、文档、作者/组织前缀、简洁描述和实际社区使用情况，以确保技能质量。\n\n适合谁用\n\n该项目适合使用 AI 编码助手（如 Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot 等）的开发者、团队和个人。特别是那些希望扩展 AI 助手能力、提高开发效率、或寻找特定领域（如安全、前端、数据科学）AI 技能的用户。同时，它也适合希望分享自己开发的 Agent Skills 并获得社区认可的技能作者和开发团队。",
+      "degraded": false
+    },
+    {
+      "id": "tinyhumansai/openhuman",
+      "owner": "tinyhumansai",
+      "name": "openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "stars": 37244,
+      "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+      "one_liner": "OpenHuman 是一个个人 AI 超级智能，集成了记忆、编排和深度研究能力，旨在提供本地优先、私密且强大的 AI 体验。",
+      "detail_md": "**解决什么问题** \nOpenHuman 旨在解决传统 AI 助手缺乏持久记忆、编排能力不足以及上下文理解不深入的问题。 它通过构建本地化的记忆图谱， 实现智能体之间的复杂协作， 并在用户提问前主动收集和分析相关信息， 避免冷启动问题。 \n\n**核心功能**    \n项目核心功能包括：\n*   **记忆树与 Obsidian Wiki**：将用户数据（聊天、邮件、文档等）压缩为 Markdown 树，存储在本地 SQLite 中，并镜像到 Obsidian 仓库，提供结构化、可查询的持久记忆。  \n*   **智能体编排**：支持在持久化图上调度智能体， 通过检查点式图运行实现工作流的暂停、恢复和根因报告。 \n*   **深度研究与工具集成**：具备网络搜索、抓取、编码工具集、浏览器、语音识别及图像/视频生成等开箱即用的能力， 并支持 100+ OAuth 集成和 17 个消息渠道。  \n*   **隐私与安全**：提供设备端加密数据、审批关卡、操作系统钥匙串密钥和可选沙箱， 以及强制执行的“隐私模式”，确保推理不离开本地机器。 \n\n**技术亮点**    \n*   **本地优先架构**：Rust 核心 `openhuman-core` 可在本地运行， 所有数据存储在本地， 确保用户隐私。 \n*   **QuickJS Skills Runtime**：提供沙盒环境执行 JavaScript 技能， 支持技能的动态发现、安装和注入。 \n*   **多语言支持**：通过 `I18nProvider` 提供多语言框架， 支持包括简体中文在内的多种语言。  \n*   **TokenJuice 压缩**：在工具输出到达模型前进行压缩， 最高可减少 80% 的 Token 使用量，降低成本。 \n\n**适合谁用** \nOpenHuman 适合希望拥有一个私密、强大且能深度理解个人上下文的 AI 助手的用户。 尤其适合需要 AI 助手进行复杂任务编排、 深度信息检索 以及跨应用集成的个人用户和开发者。",
+      "degraded": false
+    }
+  ]
+}
