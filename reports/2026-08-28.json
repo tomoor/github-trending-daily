@@ -1,0 +1,204 @@
+{
+  "doc_token": "TFYsdUU89orHK9xJRbqclhSLnHb",
+  "doc_url": "https://my.feishu.cn/docx/TFYsdUU89orHK9xJRbqclhSLnHb",
+  "items": [
+    {
+      "id": "zedeus/nitter",
+      "owner": "zedeus",
+      "name": "nitter",
+      "url": "https://github.com/zedeus/nitter",
+      "stars": 13785,
+      "description": "Alternative Twitter front-end",
+      "one_liner": "Nitter是一个免费开源的Twitter前端替代品，专注于隐私保护和性能优化，无需JavaScript即可浏览Twitter内容。",
+      "detail_md": "**解决什么问题**\nNitter旨在解决Twitter官方界面存在的隐私和性能问题。 官方Twitter需要启用JavaScript并强制用户登录，导致用户IP地址和浏览器指纹被追踪。 Nitter通过在后端处理所有请求，防止Twitter追踪用户IP和JavaScript指纹，并允许用户无需账户即可浏览内容。\n\n**核心功能**\nNitter提供无JavaScript浏览、无广告、所有请求通过后端代理、防止IP和JavaScript指纹追踪、支持RSS订阅、多主题选择和响应式移动端设计等功能。 它还支持通过非官方API访问Twitter内容，无需开发者账户。\n\n**技术亮点**\nNitter使用Nim语言实现，采用服务器端渲染，不依赖客户端JavaScript。 它通过`nitter.nim`作为主入口处理请求，并利用`redis_cache.nim`进行API响应缓存，以减少速率限制压力。 页面加载速度比官方Twitter快2-4倍，文件大小减少约15倍。\n\n**适合谁用**\nNitter适合注重隐私、希望避免被追踪的用户，以及追求更快速、轻量级Twitter浏览体验的用户。 对于那些希望在没有JavaScript和广告干扰的情况下访问Twitter内容，或者需要RSS订阅功能的用户来说，Nitter是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "freestylefly/awesome-gpt-image-2",
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "stars": 22892,
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "one_liner": "本项目将零散的AI绘画案例整理成结构化提示词模板，旨在实现AI图像生成的可控、稳定和自动化。",
+      "detail_md": "## 解决什么问题\n本项目旨在解决AI绘画中“能不能稳定、可控、可复用地出图”的问题，将“散文式提示词”转化为“结构化协议”，避免AI生成图像时常见的“混乱布局”问题。   特别是在海报设计中，通过硬编码结构约束来确保排版、文字和主体位置的平衡。 \n\n## 核心功能\n核心功能包括将视觉要素原子化为可组合的Schema，例如主体、光影、材质和排版等。项目提供了多种工业级提示词模板，如UI与界面、图表与信息可视化、海报与排版等，并支持JSON进阶模板，方便Agent和自动化工作流调用。  \n\n## 技术亮点\n技术亮点在于其“Prompt-as-Code”的理念，将提示词视为可编程资产，实现结构化控制。   通过明确的约束条件，如强制文字锁定、控制模块数量、指定长宽比等，提高了生成图像的精确性和可控性。  \n\n## 适合谁用\n本项目适合需要批量出图、构建模板系统、或将AI图像生成接入生产流程的开发者、设计师和自动化工作流用户。  特别是对于希望通过Agent或脚本调用AI绘画能力的用户，其JSON模板提供了极大的便利。",
+      "degraded": false
+    },
+    {
+      "id": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "url": "https://github.com/tt-a1i/archify",
+      "stars": 22587,
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "one_liner": "Archify 是一个将代码库或系统描述转化为精美、可交互技术图表的 Node.js 渲染和校验系统，支持多种大型语言模型（LLM）代理。",
+      "detail_md": "**解决什么问题**\nArchify 旨在解决传统技术图表绘制效率低、难以与代码同步、缺乏交互性以及在 LLM 环境中生成图表不精确的问题。它通过将自然语言描述转化为结构化的 JSON 中间表示（IR），然后确定性地编译为可信赖的 HTML/SVG 图表，从而弥合了自然语言与专业图表之间的鸿沟。\n\n**核心功能**\nArchify 提供五种主要图表类型：架构图 (Architecture)、工作流图 (Workflow)、时序图 (Sequence)、数据流图 (Data Flow) 和生命周期图 (Lifecycle)。它支持多种视觉预设、深浅主题，并能生成独立的 HTML 文件，包含 PNG、SVG、WebM 等多种导出格式。此外，Archify 还能在合并前对比架构变化，追踪作者定义的上下游可达范围，并提供交互式探索功能。\n\n**技术亮点**\n该项目采用基于 Node.js 的渲染和校验系统。其核心在于 Typed JSON IR 和确定性校验，确保生成的图表准确可靠。Archify 强调“布局判断代替通用自动布局”，允许代理根据语义选择布局，而非机械填充空间。它还提供结构化的修复回执，帮助代理自动修复校验失败的图表。\n\n**适合谁用**\nArchify 主要适用于使用 Cursor、Claude Code、Codex CLI 和 OpenCode 等 LLM 代理的开发者和团队。它特别适合需要快速生成、验证和分享高质量技术图表，并希望通过自然语言进行迭代和协作的用户。对于进行架构评审、设计讨论、代码库导览或需要清晰展示系统流程和数据流的场景，Archify 都能提供有力的支持。",
+      "degraded": false
+    },
+    {
+      "id": "JetBrains/go-modern-guidelines",
+      "owner": "JetBrains",
+      "name": "go-modern-guidelines",
+      "url": "https://github.com/JetBrains/go-modern-guidelines",
+      "stars": 2005,
+      "description": "Help AI coding agents write modern Go",
+      "one_liner": "本项目为AI编程助手提供现代Go语言编码规范，解决AI生成过时Go代码的问题。",
+      "detail_md": "## 解决什么问题\nAI编程助手在生成Go代码时，常因训练数据滞后和频率偏差导致代码过时或不符合现代Go语言习惯。本项目通过提供明确的编码规范，使AI能够生成符合Go 1.0到Go 1.27版本（包括`modernize`分析器目标的所有特性）的现代、惯用Go代码，减少后期重构工作。\n\n## 核心功能\n该项目提供了一套Go语言编码规范，以插件形式集成到多种AI编程助手中。核心功能包括：检测项目Go版本、根据版本应用语言特性和标准库更新、以及优先使用现代惯用法。AI助手可以调用`list`子命令获取适用指南列表，或调用`explain`子命令获取特定指南的详细解释和示例。\n\n## 技术亮点\n项目采用“共享技能，独立清单”的架构，核心逻辑位于`plugin/skills/use-modern-go/`目录，并通过代理特定的`plugin.json`或`extension.json`文件引用。它支持Junie、Claude Code、Codex和Cursor等多个AI平台，并通过`skills.sh`协议支持其他代理。执行流程标准化，从代理环境通过包装脚本调用Go CLI，返回现代Go建议。\n\n## 适合谁用\n本项目适合使用AI编程助手进行Go语言开发的开发者。特别是那些希望AI助手能生成最新、最惯用Go代码，并避免手动更新旧代码模式的用户。它也适用于希望通过AI工具提高Go代码质量和一致性的团队。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 34610,
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "one_liner": "该项目提供了一个结构化的多阶段工作流，用于将遗留代码库（如COBOL、遗留Java或.NET Framework）迁移到现代架构。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决遗留代码库现代化过程中常见的失败问题，例如在理解业务逻辑之前进行代码转换，或在没有行为等效性验证的情况下发布。它通过强制执行严格的现代化流程来确保成功迁移。\n\n**核心功能**\n核心功能包括：发现阶段（`/modernize-preflight`、`/modernize-assess`、`/modernize-map`、`/modernize-extract-rules`）用于分析代码库和提取信息；规划阶段（`/modernize-brief`）用于生成并批准现代化计划；执行阶段（`/modernize-reimagine`、`/modernize-transform`、`/modernize-uplift`）支持不同的现代化策略；以及验证阶段（`/modernize-harden`、`/modernize-status`）用于安全扫描和状态报告。\n\n**技术亮点**\n技术亮点包括：严格的“人机协作”（HITL）审批门槛，例如`/modernize-brief`命令；支持多种现代化策略，如跨栈重写（`transform`）、绿地重建（`reimagine`）和同栈升级（`uplift`）；以及通过专门的代理（如`architecture-critic`、`security-auditor`）和工作流（如`portfolio-assess.js`、`harden-scan.js`）实现多代理编排和自动化分析。\n\n**适合谁用**\n该项目适合需要将遗留代码库迁移到现代架构的组织和开发团队。特别是那些处理COBOL、遗留Java、C++或单体Web应用程序，并希望通过结构化、多阶段的方法降低现代化风险的团队。",
+      "degraded": false
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 35212,
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "one_liner": "本项目提供163项科学研究技能，将AI智能体转变为专业的科研助手，支持跨学科复杂工作流。</cite>",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI智能体在科学研究领域缺乏专业知识和执行复杂多步骤工作流能力的问题。</cite>通过提供预构建的科学技能，它使AI能够理解自然语言的研究意图，并将其转化为可执行的科学代码和API调用，从而加速生物学、化学、医学和工程等领域的科研进程。</cite>\n\n**核心功能**\n核心功能包括统一访问78+公共REST API和专业数据集，精选70+科学Python库的文档，以及与LIMS、实验室自动化和云基因组学平台的集成。此外，它还提供用于假设生成、文献综述和科学写作的专业分析工具。\n\n**技术亮点**\n技术亮点在于其遵循开放的Agent Skills标准，使得技能可与任何支持该协议的智能体兼容，如Cursor、Claude Code等。每个技能都包含一个`SKILL.md`规范，定义了其能力、环境要求和YAML元数据，实现了从自然语言到代码空间的无缝转换。\n\n**适合谁用**\n本项目适合需要AI辅助进行复杂科学研究的科研人员、数据科学家和工程师。特别是那些在生物、化学、医学和工程领域，希望利用AI智能体加速数据分析、文献检索、实验设计和报告撰写等工作的人群。",
+      "degraded": false
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 113839,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail是一个AI代理规则集，旨在通过强制执行极简主义原则来减少代码臃肿和过度工程化，从而提高效率和降低成本。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在生成代码时常见的过度工程化、代码臃肿和不必要的复杂性问题。它通过引导AI代理优先使用现有解决方案（如标准库、原生平台功能）和最少代码量来解决问题，从而减少代码行数、降低成本并缩短开发时间。\n\n**核心功能**\n核心功能是“阶梯”决策层次结构，它指导AI代理在编写代码前按顺序评估七个步骤：是否需要存在（YAGNI）、是否已存在于代码库中、标准库是否提供、原生平台功能是否覆盖、已安装依赖是否解决、是否能用一行代码实现，最后才是编写最少量的代码。项目还支持“lite”、“full”和“ultra”三种强度模式，以适应不同的极简主义需求。\n\n**技术亮点**\nPonytail采用“中心辐射”模型分发规则，核心行为定义在 `skills/` 目录和 `AGENTS.md` 文件中。它通过薄适配器（thin adapters）支持多种AI代理环境，确保“懒惰高级开发人员”的行为一致性。项目在代码行数、token使用、成本和时间方面均显示出显著优化，同时保持100%的安全性。\n\n**适合谁用**\nPonytail适合希望提高AI代理代码生成效率、减少代码量、降低开发和运行成本的开发人员和团队。它特别适用于那些希望AI代理遵循“YAGNI”（你不需要它）原则，优先使用现有资源，并避免不必要的抽象和依赖的场景。",
+      "degraded": false
+    },
+    {
+      "id": "calesthio/OpenMontage",
+      "owner": "calesthio",
+      "name": "OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "stars": 52179,
+      "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "one_liner": "OpenMontage 是首个开源的代理化视频制作系统，能将 AI 编程助手转变为完整的视频制作工作室，自动处理视频创作全流程。",
+      "detail_md": "**解决什么问题**\nOpenMontage 解决了传统 AI 视频工具仅提供单一剪辑片段、无法实现端到端制作流程的问题，以及“免费 AI 视频”多为静态图片动画而非真实动态影像的问题。  它通过自动化研究、脚本、资产生成、剪辑和合成，降低了视频制作的门槛和成本。 \n\n**核心功能**\n该项目提供 12 条生产流水线，涵盖动画解说、纪录片蒙太奇等多种视频类型。  它集成了 52 种生产工具，包括视频生成、图像创建、文本转语音、音乐等，并支持免费/本地与云端提供商。  用户可以通过粘贴参考视频或自然语言提示词来启动制作。 \n\n**技术亮点**\nOpenMontage 采用“智能体优先”架构，将 AI 编程助手作为编排器，通过 YAML 清单和 Markdown 技能文件指导制作流程。   它具备实时网络研究、基于评分的提供商选择、多重质量检验门和预算控制等生产级治理机制，确保输出质量并避免意外成本。  \n\n**适合谁用**\nOpenMontage 适合希望利用 AI 编程助手高效制作视频的个人和团队。  尤其适用于需要制作教育内容、产品演示、社交媒体短片、纪录片蒙太奇等多种类型视频的用户，无论是零 API 密钥的免费用户，还是配置了付费提供商的高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "stars": 50064,
+      "description": "Learn it. Build it. Ship it for others.",
+      "one_liner": "这是一个从数学基础到构建自主多智能体系统的AI工程课程，强调从零开始实现核心算法。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统AI学习中碎片化、依赖高级框架的问题，帮助工程师深入理解AI底层机制，从“AI用户”转变为“AI工程师”。 它通过手工构建每个核心组件（如反向传播、分词器、注意力机制和智能体循环），确保学习者在导入任何框架之前就掌握其工作原理。\n\n**核心功能**\n项目提供了一个包含503节课程、20个阶段的全面课程路线图，涵盖从线性代数到多智能体系统的AI全栈。 每节课都遵循“构建它/使用它/发布它”的六步生命周期，产出可重用的工件，如提示、技能、智能体或MCP服务器。 这些工件被聚合到中央`outputs/`目录中，并通过网站基础设施自动发现和索引。<cite repo=\"rohitg00/ai-engineering-from-scratch\" path=\"site/index.html\" start=\"site/index.html\" start=\"site/index.html\" end=\"site/index.html\" />\n\n**技术亮点**\n该项目强调从原始数学概念开始构建算法，支持Python、TypeScript、Rust和Julia四种编程语言。 它通过Model Context Protocol (MCP) 服务器实现LLM与本地或远程数据和工具的安全交互。 课程还包括构建生产级LLM应用，集成提示管理、RAG、函数调用、缓存和安全防护等组件，并实现流式传输、错误处理和可观测性。\n\n**适合谁用**\n该项目适合希望深入理解AI底层原理、从零开始构建AI系统、并最终能够开发和部署生产级AI应用的工程师和学习者。 它也适合那些希望将AI知识转化为可重用工件，并构建专业作品集的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "ConardLi/garden-skills",
+      "owner": "ConardLi",
+      "name": "garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills",
+      "stars": 11271,
+      "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+      "one_liner": "本项目是为AI编程代理提供的一系列生产级技能集合，旨在增强其在网页视频、视觉设计、图像生成和本地知识检索等方面的能力。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI代理在处理复杂任务时缺乏特定领域能力的问题。通过提供预定义的“技能包”，它使得AI代理能够执行网页视频制作、高质量视觉设计、图像生成 和本地知识库检索 等专业任务，从而提升AI代理的实用性和效率。\n\n**核心功能**\n核心功能包括四个主要技能：`web-video-presentation` 用于将文章或口播稿转换为点击驱动的网页视频演示；`web-design-engineer` 专注于将AI生成的Web产物优化为精致、有设计判断的前端作品；`gpt-image-2` 提供面向GPT Image 2的图像生成和编辑能力；`kb-retriever` 则用于从本地知识库中谨慎、渐进地检索信息并回答问题。\n\n**技术亮点**\n项目采用标准化的 `SKILL.md` 格式作为技能的契约文件，确保了技能在不同AI代理（如Claude Code, Cursor, Codex）间的兼容性和可移植性。每个技能都是一个自包含的文件夹，包含 `SKILL.md`、`manifest.json`、可选的 `references/` 和 `scripts/` 目录。安装方式多样，支持 `skills` CLI、Claude Code 插件市场、手动拷贝 和Git Submodule。\n\n**适合谁用**\n本项目适合使用Claude Code、Cursor、Codex等支持 `SKILL.md` 格式的AI编程代理的用户。特别是需要AI代理辅助进行网页视频制作、前端设计、图像生成 或本地知识检索 的开发者、设计师和内容创作者。",
+      "degraded": false
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 92177,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 AI 代理（主要是 Claude Code）设计的持久化记忆系统，它能自动捕获、压缩并检索会话上下文。",
+      "detail_md": "**解决什么问题**\nAI 代理在每次新会话开始时通常缺乏对之前工作的记忆，导致上下文丢失和效率低下。 Claude-Mem 通过捕获工具使用观察、生成语义摘要并将其注入未来会话，解决了这一问题，确保了知识的连续性。\n\n**核心功能**\nClaude-Mem 提供持久化记忆、自动生成项目文件夹中的 `CLAUDE.md` 上下文文件、多语言支持、模式切换、自然语言搜索工具、知识代理以及实时 Web 查看器 UI。 它通过生命周期钩子集成到代理工作流中，并使用 `Worker Service` 处理数据和 API 请求。\n\n**技术亮点**\n该项目采用双数据库策略，使用 SQLite 存储结构化数据和 FTS5 全文搜索，并可选地使用 ChromaDB 进行语义向量嵌入搜索。 它支持异步处理，将观察结果排队，并在后台进行 AI 处理，以避免阻塞用户会话。 此外，它还提供隐私控制，允许使用 `<private>` 标签排除敏感内容。\n\n**适合谁用**\nClaude-Mem 主要适用于使用 Claude Code 或其他支持的 IDE（如 Cursor、OpenClaw）的 AI 代理开发者和用户。 任何希望 AI 代理在不同会话中保持上下文、提高工作效率并能够通过自然语言查询项目历史的用户都将受益。",
+      "degraded": false
+    },
+    {
+      "id": "google/googletest",
+      "owner": "google",
+      "name": "googletest",
+      "url": "https://github.com/google/googletest",
+      "stars": 39012,
+      "description": "GoogleTest - Google Testing and Mocking Framework",
+      "one_liner": "GoogleTest 是一个 C++ 测试框架，旨在帮助开发者编写高质量、可维护的测试代码。",
+      "detail_md": "**解决什么问题**\nGoogleTest 解决了 C++ 项目中测试代码的编写、组织、执行和结果报告等问题。它通过提供一套丰富的断言、测试套件和测试用例管理机制，确保测试的独立性、可重复性和可移植性。框架还支持多种平台和编译器，使得测试代码可以在不同环境下运行。\n\n**核心功能**\nGoogleTest 的核心功能包括：自动测试发现和运行；提供丰富的断言，如相等、不等、异常等，并支持用户自定义断言；支持死亡测试，用于验证程序是否按预期终止；支持参数化测试和类型参数化测试，以不同输入或数据类型运行相同测试逻辑；以及提供多种测试运行选项，例如运行单个测试或并行运行测试。\n\n**技术亮点**\nGoogleTest 的技术亮点在于其基于 xUnit 的测试框架架构，以及对测试的独立性和可重复性的强调。它通过 `UnitTest`、`TestSuite` 和 `TestInfo` 等核心类来管理测试的注册和执行。此外，它还提供了平台抽象层，确保在不同操作系统和编译器上的兼容性，并支持通过事件监听器进行灵活的测试结果报告，包括控制台、XML 和 JSON 输出。\n\n**适合谁用**\nGoogleTest 适合所有编写 C++ 代码的开发者，无论是在 Linux、Windows 还是 Mac 平台。它特别适用于需要进行单元测试、集成测试以及其他类型测试的 C++ 项目。许多知名项目，如 Chromium、LLVM、Protocol Buffers 和 OpenCV，都在使用 GoogleTest 进行测试。",
+      "degraded": false
+    },
+    {
+      "id": "AgriciDaniel/claude-obsidian",
+      "owner": "AgriciDaniel",
+      "name": "claude-obsidian",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian",
+      "stars": 13881,
+      "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+      "one_liner": "`claude-obsidian` 是一个本地优先的 Agent Skills 包和 Claude Code 插件，用于构建和维护带有来源引用的 Obsidian 知识库。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在 Obsidian 中构建和维护结构化知识库的挑战，特别是如何将原始来源转化为可追溯、可验证的知识，并确保数据的一致性和安全性。它通过提供事务安全的写入、确定性的检索和可选的知识组织方法来解决这些问题。\n\n**核心功能**\n核心功能包括：知识库的初始化和采纳；可恢复的操作事务，确保数据完整性；确定性的 lint 和检索功能，用于检查链接、元数据和索引；来源和声明的分类账本，用于追踪知识的来源；以及支持多种知识组织方法（如 LYT, PARA, Zettelkasten）。\n\n**技术亮点**\n技术亮点包括：**MutationLock** 确保一次只有一个代理或脚本可以修改知识库，保证事务安全；**dirfd Confinement** 通过目录文件描述符限制文件系统操作，防止符号链接逃逸；**内容寻址捕获** 将来源文件以内容哈希命名存储，确保不变性和去重；以及 **检索管道**，它结合了 BM25 索引、上下文前缀和可选的余弦重排序来提高检索质量。\n\n**适合谁用**\n该项目适合希望利用大型语言模型（LLM）和 Obsidian 构建个人或团队知识库的用户。特别是那些重视数据本地化、来源可追溯性、事务安全以及灵活知识组织方式的用户。它也适用于需要将原始信息转化为结构化、可检索知识的研究人员、内容创作者和开发者。",
+      "degraded": false
+    },
+    {
+      "id": "marin-community/marin",
+      "owner": "marin-community",
+      "name": "marin",
+      "url": "https://github.com/marin-community/marin",
+      "stars": 2658,
+      "description": "Open-source framework for the research and development of foundation models.",
+      "one_liner": "Marin 是一个用于基础模型研究的开源框架，专注于可复现、版本化的机器学习管道。</cite>",
+      "detail_md": "**解决什么问题**\nMarin 旨在解决语言模型开发生命周期中的挑战，包括数据处理、训练、评估和部署。</cite>它通过内容寻址版本控制确保实验的可复现性，即使在失败后也能理解和重现实验。</cite>该框架支持从头开始训练或微调现有模型，处理大规模数据集，并跟踪跨不同阶段的实验。</cite>\n\n**核心功能**\nMarin 提供可复现的执行，每个步骤都通过配置和代码依赖进行版本控制，输出路径是确定性的，支持自动缓存。</cite>它采用单体仓库架构，包含 `marin`、`levanter`、`fray` 等核心库，分别用于训练 API、JAX ML 框架和分布式执行。</cite>实验定义为 `ExecutorStep` 对象，形成有向无环图 (DAG)，自动解析依赖并跳过已完成的步骤。</cite>\n\n**技术亮点**\nMarin 的技术亮点包括内容寻址版本控制，通过配置、代码和依赖项的哈希值计算版本哈希。</cite>它使用 `fray` 将作业提交到 Ray 集群进行分布式执行，支持 CPU、GPU 和 TPU 等多种硬件后端。</cite>此外，它还集成了 Weights & Biases、Hugging Face 和 Google Cloud Storage 等外部服务，用于实验跟踪、模型/数据集访问和工件存储。</cite>\n\n**适合谁用**\nMarin 适用于需要训练语言模型、处理大规模数据集、跟踪实验并扩展训练到多区域 TPU 集群的研究人员。</cite>它也适合那些需要维护研究过程完整审计追踪，并希望利用 JAX、Ray 和 WandB 等流行 ML 工具的研究人员和工程师。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "ComposioHQ/awesome-claude-skills",
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "stars": 73537,
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "one_liner": "这是一个精选的Claude技能市场，旨在提升Claude.ai、Claude Code和Claude API的生产力。",
+      "detail_md": "**解决什么问题**\n该项目通过提供可定制的工作流，解决了Claude模型在执行特定任务时缺乏标准化、可重复操作的问题。它允许Claude执行文本生成之外的实际操作，例如发送电子邮件、创建问题或发布到Slack等，从而扩展了Claude的能力。\n\n**核心功能**\n该项目提供了一个集中的技能目录，通过`.claude-plugin/marketplace.json`文件进行管理，包含27个实用技能，涵盖了商业营销、开发、创意媒体、生产力组织等多个类别。用户可以在Claude.ai界面、Claude Code CLI或通过Claude API使用这些技能。\n\n**技术亮点**\n每个技能都遵循标准化的目录结构，包含一个`SKILL.md`文件，其中定义了技能的元数据和指令。项目支持与外部技术集成，例如Model Context Protocol (MCP)用于集成外部API和服务，Composio平台用于连接500多个应用程序，以及Playwright用于浏览器自动化。\n\n**适合谁用**\n该项目适合希望提升Claude模型生产力的用户，包括需要进行商业营销、软件开发、内容创作、数据分析以及日常生产力管理的用户。它也适合希望为Claude贡献新技能的开发者和社区成员。",
+      "degraded": false
+    },
+    {
+      "id": "actions/checkout",
+      "owner": "actions",
+      "name": "checkout",
+      "url": "https://github.com/actions/checkout",
+      "stars": 8694,
+      "description": "Action for checking out a repo",
+      "one_liner": "此项目是GitHub Actions的`checkout`操作，用于在工作流中检出Git仓库代码，支持多种高级配置选项。",
+      "detail_md": "**解决什么问题**\n该项目解决了GitHub Actions工作流中获取代码的问题，允许用户灵活控制代码的检出方式，例如只检出部分文件、处理大型文件存储（LFS）或子模块，以及优化检出性能 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"2.3\" end=\"2.3\" />。它还通过默认阻止不安全的fork PR检出，增强了安全性。\n\n**核心功能**\n核心功能包括：\n*   **稀疏检出 (Sparse Checkout)**：允许用户只检出仓库中的特定目录或文件，减少下载量和磁盘占用 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"1.1\" end=\"1.1\" />。通过 `sparse-checkout` 输入参数配置。\n*   **Git LFS 支持 (Git LFS Support)**：在检出过程中下载Git LFS管理的大文件 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"2.0\" end=\"2.0\" />。通过 `lfs: true` 启用。\n*   **子模块支持 (Submodule Support)**：支持检出仓库中的子模块，包括递归子模块 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"3.0\" end=\"3.0\" />。通过 `submodules` 输入参数配置。\n*   **抓取深度控制 (Fetch Depth Control)**：控制Git抓取历史的深度，可以进行浅克隆或抓取完整历史 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"4.0\" end=\"4.0\" />。通过 `fetch-depth` 输入参数配置。\n\n**技术亮点**\n*   **模块化设计**：代码结构清晰，例如 `git-source-provider.ts`  负责协调整个检出流程，`git-command-manager.ts`  封装了Git命令行操作，`ref-helper.ts`  处理引用信息。\n*   **安全性增强**：默认情况下，对于 `pull_request_target` 或 `workflow_run` 触发的工作流，会阻止检出fork仓库的PR代码，以防止“pwn request”漏洞。\n*   **性能优化**：支持稀疏检出和基于过滤器的部分检出 (`filter: blob:none`) <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"5.0\" end=\"5.0\" />，以及浅克隆 (`fetch-depth: 1`) <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"4.0\" end=\"4.0\" />，显著减少了网络传输和磁盘占用。\n*   **兼容性与回退机制**：如果Git版本不满足要求（例如低于Git 2.18），会自动回退到GitHub REST API下载仓库，但会限制部分高级功能。\n\n**适合谁用**\n该项目适合所有使用GitHub Actions进行持续集成/持续部署（CI/CD）的开发者和团队。特别是：\n*   需要优化大型仓库检出速度的用户 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"1.1\" end=\"1.1\" />。\n*   工作流中包含Git LFS文件或子模块的用户 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"2.0\" end=\"2.0\" /> <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"3.0\" end=\"3.0\" />。\n*   对工作流安全性有较高要求的用户，尤其是处理来自fork仓库的PR时。\n*   希望精细控制Git检出行为以适应特定构建或测试需求的用户 <cite repo=\"actions/checkout\" path=\"wiki_page\" start=\"2.3\" end=\"2.3\" />。",
+      "degraded": false
+    },
+    {
+      "id": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "stars": 87306,
+      "description": "The open-source CapCut alternative",
+      "one_liner": "OpenCut 是一个免费开源的视频编辑器，旨在通过 Rust 核心提供跨桌面、Web 和移动平台的统一体验，并支持 AI 代理和插件化架构。",
+      "detail_md": "**解决什么问题**\nOpenCut 旨在解决传统视频编辑器在跨平台兼容性、可扩展性和自动化方面的不足。 它通过统一的 Rust 核心，实现桌面、Web 和移动端的一致体验，并引入插件优先架构和 AI 代理支持，以提升编辑效率和功能多样性。\n\n**核心功能**\n该项目提供一个编辑器 API，支持第一方和第三方插件，实现功能的高度可扩展性。 它还包含一个 MCP (Model Context Protocol) 服务器，用于连接 AI 代理以执行编辑任务或查询项目状态。 此外，还支持无头模式（Headless Mode）用于自动化和批量渲染。\n\n**技术亮点**\nOpenCut 的技术亮点在于其跨平台架构，使用 Rust 语言作为核心，并通过 GPUI 框架构建桌面应用，实现高性能渲染。 Web 应用则采用 TanStack Start 框架，支持 SSR 和客户端导航。 项目使用 Moon 作为任务运行器和仓库管理工具，Proto 管理多语言工具链。\n\n**适合谁用**\nOpenCut 适合需要免费、开源、跨平台视频编辑解决方案的用户和开发者。 对于希望通过插件扩展功能或利用 AI 辅助编辑的创作者，以及需要自动化视频处理流程的专业人士，该项目提供了强大的工具和灵活性。",
+      "degraded": false
+    },
+    {
+      "id": "TauricResearch/TradingAgents",
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "stars": 101089,
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "one_liner": "TradingAgents 是一个基于 LangGraph 的多智能体 LLM 金融交易框架，通过协调专业智能体分析市场并生成交易决策。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统金融交易中信息处理复杂、决策效率低下的问题。它通过模拟真实交易公司的运作模式，利用大型语言模型（LLM）驱动的专业智能体团队，自动化市场分析、策略制定和风险管理，从而提高交易决策的智能化和效率。\n\n**核心功能**\nTradingAgents 实现了五阶段顺序交易决策流程：分析师团队、研究团队、交易员智能体、风险管理团队和投资组合经理。分析师团队负责收集市场、情绪、新闻和基本面数据；研究团队进行多空辩论并生成投资计划；交易员智能体根据报告制定交易决策；风险管理团队评估风险；投资组合经理最终批准或拒绝交易提案。\n\n**技术亮点**\n该框架基于 LangGraph 构建，支持多提供商 LLM（如 OpenAI、Anthropic、Google 等），并采用双模型策略，即 `deep_think_llm` 用于复杂推理，`quick_think_llm` 用于快速任务。它还具备持久化决策日志和 LangGraph 检查点功能，支持中断后恢复运行。数据层通过统一接口抽象了多个数据供应商（如 yfinance、Alpha Vantage），并支持数据缓存和自动回退。\n\n**适合谁用**\nTradingAgents 框架主要面向金融研究人员、量化交易员以及对 LLM 驱动的智能交易系统感兴趣的开发者。它提供了一个可扩展的平台，用于探索和开发基于多智能体协作的金融市场分析和交易策略。",
+      "degraded": false
+    }
+  ]
+}
