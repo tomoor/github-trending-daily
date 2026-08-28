@@ -199,6 +199,17 @@
       "one_liner": "TradingAgents 是一个基于 LangGraph 的多智能体 LLM 金融交易框架，通过协调专业智能体分析市场并生成交易决策。",
       "detail_md": "**解决什么问题**\n该项目旨在解决传统金融交易中信息处理复杂、决策效率低下的问题。它通过模拟真实交易公司的运作模式，利用大型语言模型（LLM）驱动的专业智能体团队，自动化市场分析、策略制定和风险管理，从而提高交易决策的智能化和效率。\n\n**核心功能**\nTradingAgents 实现了五阶段顺序交易决策流程：分析师团队、研究团队、交易员智能体、风险管理团队和投资组合经理。分析师团队负责收集市场、情绪、新闻和基本面数据；研究团队进行多空辩论并生成投资计划；交易员智能体根据报告制定交易决策；风险管理团队评估风险；投资组合经理最终批准或拒绝交易提案。\n\n**技术亮点**\n该框架基于 LangGraph 构建，支持多提供商 LLM（如 OpenAI、Anthropic、Google 等），并采用双模型策略，即 `deep_think_llm` 用于复杂推理，`quick_think_llm` 用于快速任务。它还具备持久化决策日志和 LangGraph 检查点功能，支持中断后恢复运行。数据层通过统一接口抽象了多个数据供应商（如 yfinance、Alpha Vantage），并支持数据缓存和自动回退。\n\n**适合谁用**\nTradingAgents 框架主要面向金融研究人员、量化交易员以及对 LLM 驱动的智能交易系统感兴趣的开发者。它提供了一个可扩展的平台，用于探索和开发基于多智能体协作的金融市场分析和交易策略。",
       "degraded": false
+    },
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "stars": 7919,
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "one_liner": "这是一个高性能、浏览器内运行的空间智能平台，将实时公共数据聚合到逼真的3D地球上，提供交互式“间谍卫星”体验。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统开源情报（OSINT）中数据分散、界面瓶颈的问题。它将来自不同来源的实时公共信号（如ADS-B航班遥测、AIS海事信标、轨道元素和公共CCTV馈送）整合到一个统一的、交互式的3D地球界面中，使用户能够直观地查看和分析全球实时动态。\n\n**核心功能**\n核心功能包括：驾驶舱视角，实时联系人追踪，语音控制和世界标注，3D模型显示，多种传感器模式（如热成像、夜视），以及智能HUD。它还支持多种实时数据层，如航班、船舶、卫星、地震、交通和公共摄像头。\n\n**技术亮点**\n项目采用“香草”架构哲学，优先使用直接DOM和WebGL操作，而非重型框架，以确保高帧率和低延迟。它基于CesiumJS和Google Photorealistic 3D Tiles构建地球模型。敏感API密钥通过Vite代理中间件在服务器端处理，防止凭据暴露。数据层采用模块化设计，遵循严格的生命周期管理。\n\n**适合谁用**\n该项目适合对开源情报（OSINT）、地理空间智能（GEOINT）感兴趣的分析师、研究人员、开发者以及任何希望以交互式3D方式探索全球实时公共数据的人。它提供了一个可扩展的平台，鼓励用户添加新的数据源、城市包、视觉样式或语音工具。",
+      "degraded": false
     }
   ]
 }
