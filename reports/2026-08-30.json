@@ -210,6 +210,160 @@
       "one_liner": "这是一个智能路由代理，用于优化大型语言模型（LLM）请求，实现成本效益和性能提升。",
       "detail_md": "**解决什么问题**\n该项目旨在解决LLM使用中的成本、性能和模型选择问题。 它通过智能路由、会话保持和跨格式翻译，确保请求被发送到最适合的LLM，同时优化成本和用户体验。\n\n**核心功能**\n核心功能包括请求路由与模型选择，通过 `internal/proxy/service.go` 中的 `runTurnLoop` 函数协调处理。 它支持多种LLM提供商（如Anthropic, OpenAI, Gemini）的请求格式转换，由 `internal/translate` 包负责。 此外，它还提供会话固定（Session Pinning）以提高缓存命中率，以及基于预期价值（EV Planner）的决策机制来平衡模型切换的成本和收益。\n\n**技术亮点**\n技术亮点包括分层架构设计，确保模块化和可维护性。 使用ONNX模型进行嵌入和聚类评分，实现智能模型选择。 跨格式翻译层能够处理不同LLM API之间的请求和响应转换。 此外，还支持BYOK（Bring Your Own Key）和基于信用的计费系统。\n\n**适合谁用**\n该项目适合需要管理和优化LLM使用成本及性能的开发者和企业。 特别是那些使用多种LLM提供商，并希望通过智能路由、会话保持和成本控制来提升效率的用户。 它也适用于需要灵活配置和部署LLM代理的场景，支持自托管和托管两种模式。",
       "degraded": false
+    },
+    {
+      "id": "Lakr233/vphone-cli",
+      "owner": "Lakr233",
+      "name": "vphone-cli",
+      "url": "https://github.com/Lakr233/vphone-cli",
+      "stars": 9403,
+      "description": "",
+      "one_liner": "`vphone-cli` 是一个在 Apple Silicon Mac 上启动虚拟 iPhone (iOS 26) 的命令行工具。",
+      "detail_md": "**解决什么问题**\n该项目旨在为安全研究人员提供一个在固件级别运行、检查和调试 iOS 环境的工具。它解决了在 Apple Silicon Mac 上使用 `Virtualization.framework` 启动虚拟 iOS 设备，并进行固件修补、越狱工具集成以及 SSH/VNC 访问等需求。\n\n**核心功能**\n`vphone-cli` 的核心功能包括：下载、合并、修补和签名启动链组件以创建混合固件映像；创建虚拟机目录，通过 `Virtualization.framework` 启动 Swift 虚拟机；刷写固件，加载 SSH ramdisk，安装自定义固件 (CFW)，然后启动一个功能齐全的越狱 iOS 环境。它支持多种固件变体，包括 Patchless、常规版、开发版和越狱版，提供不同级别的安全绕过。\n\n**技术亮点**\n该项目利用 Apple 的 `Virtualization.framework` 实现虚拟化。它通过合并 iPhone IPSW 和 CloudOS IPSW 创建混合固件。项目使用 Swift 编写主机应用程序，Objective-C 编写访客守护程序，并使用 Python 工具进行固件操作。它需要特定的私有 `Virtualization.framework` 权限，并通过禁用 SIP/AMFI 或使用 `amfidont` 进行绕过。\n\n**适合谁用**\n`vphone-cli` 主要面向安全研究人员。它适用于需要在固件级别运行、检查和调试 iOS 环境的用户，例如进行启动链修补、越狱工具开发以及对 iOS 系统进行深入分析的专业人士。",
+      "degraded": false
+    },
+    {
+      "id": "unclecode/crawl4ai",
+      "owner": "unclecode",
+      "name": "crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "stars": 80030,
+      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+      "one_liner": "Crawl4AI 是一个开源的、LLM 友好的网络爬虫和数据提取系统，能将网页内容转化为结构化的 Markdown 和 JSON，专为 AI 应用优化。",
+      "detail_md": "**解决什么问题**\nCrawl4AI 旨在解决传统网络爬虫在为大型语言模型（LLM）和 AI 应用提供高质量、结构化数据时面临的挑战。它将复杂的网页内容转化为干净、LLM 友好的 Markdown 和 JSON 格式，消除了数据预处理的繁琐工作，使数据可以直接用于 RAG 系统、AI 代理和数据管道。\n\n**核心功能**\n该项目提供 LLM 优化的 Markdown 生成、结构化数据提取、高级浏览器控制和高性能爬取能力。它支持会话管理、代理、Cookie 和用户脚本，并能自适应地学习网站模式，处理无限滚动等复杂元素。用户可以通过 Python SDK (`AsyncWebCrawler`)、命令行工具 (`crwl`) 或 Docker REST API 进行交互。\n\n**技术亮点**\nCrawl4AI 的技术亮点包括：LLM 友好的输出（智能 Markdown 包含标题、表格、代码块和引用提示），实践中快速的异步浏览器池和缓存机制，以及自适应智能，能够学习网站模式并处理动态内容。此外，它还提供安全默认的 Docker API，并支持声明式钩子以防止代码注入。\n\n**适合谁用**\nCrawl4AI 适合需要为 LLM 应用、AI 代理和数据管道获取高质量、结构化网络数据的开发者、数据科学家和研究人员。无论是进行 RAG 系统的数据准备、构建智能代理，还是进行大规模数据抓取，Crawl4AI 都能提供高效、灵活且可控的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 60333,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "`/last30days` 是一个AI代理驱动的搜索引擎，它聚合、评分并综合来自Reddit、X、YouTube等十多个平台在过去30天内的内容，以提供基于真实用户参与度的研究报告。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLMs）的“时效性差距”问题，通过提供基于实时社交信号的、有事实依据的信息。它通过优先考虑人类参与度（如点赞、转发、观看量和真实货币投注量）而非传统搜索引擎的SEO排名，来提供更具相关性和时效性的内容。\n\n**核心功能**\n核心功能包括智能预研究，它能在搜索前解析实体（如X句柄、subreddit和YouTube频道）以进行精准搜索。它还具备多源社交数据聚合能力，涵盖Reddit、X、YouTube、TikTok、Instagram、Hacker News、Polymarket和GitHub等平台。此外，项目能自动将每次研究运行的结果保存为Markdown文件，形成一个可搜索的个人研究库。\n\n**技术亮点**\n技术亮点包括其V3引擎的智能搜索能力，它在搜索开始前确定搜索位置，并能理解主题，然后搜索相关人员和社区。它还采用了“趣味评判”功能，通过第二个LLM评判幽默、机智和病毒性，并在报告中突出“最佳观点”。跨源集群合并功能能够将来自不同平台（如Reddit、X、YouTube）的相同故事合并为一个集群，避免重复。\n\n**适合谁用**\n该项目适合需要快速了解社区情绪和实时动态的用户，例如在会议前了解某人的最新动态，进行工具比较，分析市场情绪，或快速学习新事物。它特别适用于那些需要基于真实用户参与度而非编辑选择来获取信息的场景。",
+      "degraded": false
+    },
+    {
+      "id": "majd/ipatool",
+      "owner": "majd",
+      "name": "ipatool",
+      "url": "https://github.com/majd/ipatool",
+      "stars": 10057,
+      "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
+      "one_liner": "`ipatool` 是一个命令行工具，用于搜索、购买和下载 iOS 应用的 IPA 包。",
+      "detail_md": "**解决什么问题**\n`ipatool` 解决了用户通过命令行与 Apple App Store 交互的需求，无需使用 iTunes 或 App Store 应用等图形界面工具即可搜索、购买和下载 iOS 应用的 IPA 文件。 \n\n**核心功能**\n核心功能包括 App Store 认证、应用搜索、应用许可证购买、IPA 文件下载  以及版本管理（列出可用版本和获取版本元数据）。\n\n**技术亮点**\n该工具采用 Go 语言开发，使用 `cobra` 库构建命令行界面，并通过 `keyring` 库安全存储用户凭据。它支持跨平台运行（Windows, Linux, macOS），并实现了复杂的下载重试逻辑以处理令牌过期和许可证缺失等情况。\n\n**适合谁用**\n`ipatool` 适合需要通过自动化脚本或命令行界面管理 iOS 应用下载的开发者、测试人员以及高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "punkpeye/awesome-mcp-servers",
+      "owner": "punkpeye",
+      "name": "awesome-mcp-servers",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "stars": 93134,
+      "description": "A collection of MCP servers.",
+      "one_liner": "精选的MCP服务器列表，旨在扩展AI模型与本地和远程资源的交互能力。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI模型与各种本地和远程资源（如文件系统、数据库、API等）安全交互的问题。它通过提供标准化的MCP服务器实现，扩展了AI模型的功能。\n\n**核心功能**\n核心功能是提供一个精选的MCP服务器列表，这些服务器涵盖了多种应用场景。包括聚合器、浏览器自动化、艺术与文化、生物医学、云平台、编程智能体、命令行工具、社交、数据库、数据平台、开发者工具、数据科学工具、文件系统、金融科技、游戏、知识与记忆、法律、位置服务、营销、监控、搜索、安全、嵌入式系统、客户支持、体育、翻译服务、旅行与交通、版本控制以及其他工具和集成。\n\n**技术亮点**\n该项目采用模型上下文协议（MCP）作为开放协议，允许AI模型安全地与资源交互。它支持多种编程语言实现的服务器，如Python、TypeScript、Go、Rust、C#和Java。项目还提供了本地和云服务两种部署范围，并支持多种操作系统。\n\n**适合谁用**\n该项目适合需要扩展AI模型能力，使其能够与各种外部系统和数据源进行交互的开发者、研究人员和企业。特别是那些希望利用AI进行自动化、数据分析、编程、内容管理和系统监控等任务的用户。",
+      "degraded": false
+    },
+    {
+      "id": "checkstyle/checkstyle",
+      "owner": "checkstyle",
+      "name": "checkstyle",
+      "url": "https://github.com/checkstyle/checkstyle",
+      "stars": 9122,
+      "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
+      "one_liner": "Checkstyle 是一个静态代码分析工具，用于帮助程序员编写符合编码标准的 Java 代码。",
+      "detail_md": "**解决什么问题**\n\nCheckstyle 旨在通过自动化检查 Java 源代码，确保代码遵循一致的编码规范和最佳实践，从而提高代码质量、可读性和可维护性。\n\n**核心功能**\n\n该工具能够解析 Java 源代码，将其转换为抽象语法树（AST），并在此基础上应用一系列可配置的检查规则。 它支持多种检查类别，包括编码规范、Javadoc、命名约定、导入语句和空白符等。 检查结果可以通过不同的格式（如纯文本、XML、SARIF）进行报告。\n\n**技术亮点**\n\nCheckstyle 采用模块化架构，核心组件包括 `Checker` 协调检查流程，`TreeWalker` 处理 AST 遍历和基于 token 的检查。 它使用 XML 文件进行灵活的配置，支持自定义检查、过滤器和报告监听器。 该工具可与 Maven、Gradle 等构建工具以及主流 IDE 集成，并提供命令行接口。\n\n**适合谁用**\n\nCheckstyle 适合 Java 开发团队和个人开发者，特别是那些需要强制执行统一编码标准、提高代码质量和减少代码审查工作量的项目。 它也适用于持续集成/持续部署（CI/CD）流程，以在代码提交前自动检查代码规范。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 73700,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 是一个用于逆向工程任务的集成开发环境 (IDE)。",
+      "detail_md": "**解决什么问题**\nGhidra 旨在解决软件逆向工程中的挑战，它提供了一个平台来分析二进制文件和可执行文件，理解其内部工作原理，并支持多人协作进行逆向工程项目。它通过提供一个高度可配置和可扩展的环境来处理大型数据集，从而简化了复杂的分析任务。\n\n**核心功能**\nGhidra 的核心功能包括程序管理、插件系统、工具集、项目管理器和服务器。它能够存储和管理二进制文件的所有数据，如符号、字节、引用、指令、数据和注释。通过插件，Ghidra 提供了特定的功能，并且用户可以自定义和编写自己的插件。项目管理器用于组织项目、工具和数据，而 Ghidra 服务器则支持多用户协作和版本控制。\n\n**技术亮点**\nGhidra 的技术亮点在于其高度可扩展的架构，它基于一个通用的应用程序框架，所有特定功能都由插件提供。它支持跨平台运行（Linux、macOS、Windows），并且主要用 Java 编写。用户可以通过 Java 或 Python 编写脚本来扩展其功能，并且这些脚本支持运行时编译以实现快速开发周期。\n\n**适合谁用**\nGhidra 适合需要进行软件逆向工程的专业人士、安全研究员、恶意软件分析师以及任何需要深入理解二进制代码的人员。其协作功能使其特别适合团队项目，允许多个用户在同一个程序或程序集上协同工作。",
+      "degraded": false
+    },
+    {
+      "id": "pollen-robotics/microduck_rl",
+      "owner": "pollen-robotics",
+      "name": "microduck_rl",
+      "url": "https://github.com/pollen-robotics/microduck_rl",
+      "stars": 668,
+      "description": "RL training environments for Microduck (mjlab)",
+      "one_liner": "本项目为Microduck机器人提供强化学习训练环境，实现从仿真到现实的策略迁移。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决小型仿人机器人（如Microduck）的复杂运动控制问题，特别是如何将仿真环境中训练出的策略高效、准确地迁移到真实机器人上。 它通过高保真度的执行器模型、领域随机化和齿隙模拟等技术，弥合了仿真与现实之间的差距。\n\n**核心功能**\n核心功能包括为Microduck机器人提供多种强化学习训练任务，例如行走、站立、坐下、跌倒恢复、地面拾取、踢球和翻滚等。 训练出的策略可以导出为ONNX格式，并在真实机器人上进行部署和热切换。\n\n**技术亮点**\n技术亮点包括使用BAM（Brushless Actuator Model）执行器模型进行高精度仿真，该模型考虑了电压控制、反电动势和负载相关摩擦。 项目还引入了齿隙模拟，以训练对机械间隙具有鲁棒性的策略。 统一的61维观察契约确保了不同策略在运行时可以无缝切换。\n\n**适合谁用**\n本项目适合机器人研究人员、开发人员以及任何对小型仿人机器人强化学习和sim2real迁移感兴趣的工程师。 它为开发和测试机器人运动控制策略提供了一个全面的框架，特别是对于需要高精度物理仿真和真实世界部署的场景。",
+      "degraded": false
+    },
+    {
+      "id": "handsomestWei/patent-disclosure-skill",
+      "owner": "handsomestWei",
+      "name": "patent-disclosure-skill",
+      "url": "https://github.com/handsomestWei/patent-disclosure-skill",
+      "stars": 5545,
+      "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+      "one_liner": "本项目是一个AI代理技能，用于自动化中国专利技术交底书的生成、查新和修订全流程。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决专利申请过程中技术交底书撰写耗时、查新困难、格式不规范以及多轮修订追溯复杂等问题。它通过自动化流程，将项目文档转化为符合要求的技术交底书，并支持迭代修改和版本追溯。\n\n### 核心功能\n核心功能包括：项目文档扫描与专利点挖掘；优先使用国家知识产权局公布公告站进行查新，并支持WebSearch降级；生成脱敏模板的技术交底书，支持Mermaid图示自动渲染为PNG并输出Word文档；对交底书进行自检；以及支持迭代模式下的材料合并与错误纠正，并记录修订历史。\n\n### 技术亮点\n技术亮点包括：遵循AgentSkills标准，通过`SKILL.md`编排整个工作流；利用`tools/cnipa_epub_search.py`实现对国家知识产权局公布公告站的精准爬取和解析；使用`tools/mermaid_render.py`将Mermaid图示转换为PNG图片并嵌入Word文档；支持`.docx`和`.pptx`文件转换为Markdown进行扫描；以及严格的文件命名规范，确保版本可追溯。\n\n### 适合谁用\n本项目适合需要撰写中国专利技术交底书的工程师、研发人员以及专利代理人。特别是那些希望自动化专利点挖掘、查新、文档生成和修订流程，并确保文档规范性和可追溯性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "corsairdev/corsair",
+      "owner": "corsairdev",
+      "name": "corsair",
+      "url": "https://github.com/corsairdev/corsair",
+      "stars": 10790,
+      "description": "Connect your users to their apps",
+      "one_liner": "Corsair 是一个为 AI 代理和多租户 SaaS 应用设计的集成层，统一管理数百个第三方平台集成。",
+      "detail_md": "**解决什么问题**\nCorsair 旨在解决构建集成时重复的样板代码问题，例如身份验证、令牌刷新、Webhook 路由、速率限制和加密凭证存储。它将集成中的 95% 的“管道”工作抽象化，让开发者只需关注特定于其用例的少量核心逻辑。\n\n**核心功能**\nCorsair 提供统一的、强类型接口来访问数百个第三方平台。它通过插件系统实现集成，每个插件定义其端点、Webhook 和身份验证要求。对于 AI 代理，它通过 Model Context Protocol (MCP) 将这些集成暴露为工具，允许代理发现和执行跨服务的操作。它还支持多租户 SaaS 应用，自动将 API 调用限定到特定租户的凭证。\n\n**技术亮点**\nCorsair 采用自托管和数据库无关的设计，确保敏感用户数据保留在您的基础设施内。它使用信封加密模型来安全存储凭证，通过环境变量提供主密钥 (KEK) 来加密数据库中存储的数据加密密钥 (DEK)。Corsair 使用 Kysely 作为主要查询构建器，以保持类型安全并支持 PostgreSQL 和 SQLite 等多种数据库后端。\n\n**适合谁用**\nCorsair 适合需要与大量第三方服务集成的 AI 代理开发者和多租户 SaaS 应用开发者。它特别适用于希望减少集成开发中的样板代码，并确保数据安全地保留在自己基础设施内的团队。",
+      "degraded": false
+    },
+    {
+      "id": "colinhacks/zod",
+      "owner": "colinhacks",
+      "name": "zod",
+      "url": "https://github.com/colinhacks/zod",
+      "stars": 43590,
+      "description": "TypeScript-first schema validation with static type inference",
+      "one_liner": "Zod 是一个 TypeScript 优先的模式验证库，支持运行时类型检查和静态类型推断。",
+      "detail_md": "**解决什么问题**\nZod 解决了在运行时验证数据同时保持 TypeScript 类型安全的问题。它弥补了外部数据源（如 API、用户输入）在运行时缺乏类型保证的不足。\n\n**核心功能**\nZod 的核心功能包括零依赖、小巧的打包体积（核心包约 2kb gzip 压缩后）、自动 TypeScript 类型推断、不可变 API、AOT 编译以提高性能，以及内置的 JSON Schema 转换。它通过声明式地定义模式来解析非信任数据，并返回强类型验证结果。\n\n**技术亮点**\nZod v4 引入了显著的性能改进、可摇树优化的函数式 API 和预编译（AOT）功能。它采用模块化架构，将核心逻辑与 API 分离，支持经典 API 和函数式 Mini API。Zod Mini 版本进一步减小了前端用例的包大小。\n\n**适合谁用**\nZod 适合需要对数据进行运行时验证的 TypeScript 开发者。特别是处理外部数据源（如 API 响应、用户输入）的应用程序，以及对包大小有严格要求的前端项目（可使用 `zod/mini`）。库作者也可以利用其核心原语进行构建。",
+      "degraded": false
+    },
+    {
+      "id": "tashfeenahmed/freellmapi",
+      "owner": "tashfeenahmed",
+      "name": "freellmapi",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "stars": 22462,
+      "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+      "one_liner": "FreeLLMAPI 将多个免费大型语言模型 (LLM) 提供商聚合到一个兼容 OpenAI 的 API 端点，并智能路由请求以优化性能和成本。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决手动管理和整合来自不同提供商的免费 LLM 额度所带来的复杂性。它通过将数十家提供商的免费额度统一到一个 OpenAI 兼容的 API 端点，并自动处理限流和模型选择，从而简化了 LLM 的使用。\n\n**核心功能**\nFreeLLMAPI 提供智能路由功能，根据实时速度、能力和稳定性评分选择最佳模型。它支持故障转移，当一个提供商达到限流时自动切换到下一个可用模型。项目还包括统一模型管理、按密钥跟踪限流、自更新模型目录以及可选的提示词压缩功能。\n\n**技术亮点**\n该项目采用 AES-256-GCM 加密存储提供商密钥，确保安全性。它提供一个管理仪表盘，用于密钥管理、回退链调整和性能分析。路由器能够自行从 `freellmapi.co` 同步模型目录，无需手动更新即可获取最新的模型和额度信息。\n\n**适合谁用**\nFreeLLMAPI 适合希望利用多个免费 LLM 提供商的开发者和个人用户。它特别适用于原型开发和个人实验，但不建议用于生产环境，因为免费额度存在不稳定性、延迟波动和无 SLA 的限制。",
+      "degraded": false
+    },
+    {
+      "id": "livekit/agents",
+      "owner": "livekit",
+      "name": "agents",
+      "url": "https://github.com/livekit/agents",
+      "stars": 13608,
+      "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+      "one_liner": "LiveKit Agents 是一个用于构建实时、可编程语音 AI 代理的 Python 框架。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决构建实时、多模态对话式 AI 语音代理的复杂性问题。 它通过提供抽象层、运行时编排和语音管道管理，简化了语音代理的开发，使开发者能够专注于定义代理指令和实现功能工具，而无需处理底层流媒体逻辑、轮次检测和工具编排。\n\n## 核心功能\nLiveKit Agents 提供了灵活的集成能力，支持多种 STT、LLM、TTS 和实时 API。 它包含集成的任务调度和分发机制，用于连接终端用户与代理。 此外，它还支持广泛的 WebRTC 客户端和电话集成，允许代理进行电话呼叫或接听电话。 框架还具备语义轮次检测功能，以减少中断，并支持 MCP（多方通信平台）工具集成。\n\n## 技术亮点\n该框架采用分层架构，将部署基础设施与代理逻辑分离，并将特定于提供商的实现隔离到插件中。 它提供了一个包含 60 多个提供商集成的插件生态系统，包括 OpenAI、Google、Anthropic、Deepgram 和 ElevenLabs 等。 核心组件如 `AgentServer` 负责协调作业调度和启动代理会话，`AgentSession` 管理语音对话生命周期，而 `RoomIO` 则处理代理与 LiveKit 房间之间的音频和文本 I/O。\n\n## 适合谁用\nLiveKit Agents 适合希望构建实时、可编程的对话式 AI 语音代理的开发者。 特别是那些需要集成多种 AI 模型（如 STT、LLM、TTS）并处理实时音频流的场景。 它也适用于需要将 AI 代理部署到服务器端，并与 LiveKit 客户端或电话系统进行交互的应用。",
+      "degraded": false
+    },
+    {
+      "id": "abhigyanpatwari/GitNexus",
+      "owner": "abhigyanpatwari",
+      "name": "GitNexus",
+      "url": "https://github.com/abhigyanpatwari/GitNexus",
+      "stars": 46458,
+      "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+      "one_liner": "GitNexus 是一个为 AI 代理提供代码智能的平台，通过知识图谱增强代码理解和交互能力。",
+      "detail_md": "**解决什么问题**\nGitNexus 旨在解决 AI 代理在理解和操作复杂代码库时面临的挑战。  它通过构建代码知识图谱，帮助 AI 代理进行影响分析、变更检测、代码探索和重构等任务，避免了传统基于文本搜索的局限性。   \n\n**核心功能**\n核心功能包括代码库索引与分析，生成详细的符号、关系和执行流知识图谱。  它提供 MCP (Model Context Protocol) 工具进行程序化知识图谱访问，以及代理技能（如 `/gitnexus-plan`、`/gitnexus-work`、`/gitnexus-review`）来指导工作流。   此外，还支持 PR Swarm Review 进行多角色代码审查。 \n\n**技术亮点**\nGitNexus 的技术亮点在于其多层集成架构，包括 MCP 工具、代理技能、上下文文件和钩子系统。  它利用 Tree-sitter 进行 AST 解析，LadybugDB 作为嵌入式图数据库，并结合 HuggingFace transformers.js 进行嵌入式处理。     项目支持多种 AI 编辑器和代理，如 Claude Code、Cursor、Antigravity 等。 \n\n**适合谁用**\nGitNexus 适合需要深度代码理解和自动化辅助的 AI 代理开发者、软件工程师以及希望提高代码审查效率的团队。  它特别适用于使用 Claude Code、Cursor 等 AI 编码工具的用户，通过提供精确的代码上下文和强制性工作流，确保代码修改的安全性和准确性。",
+      "degraded": false
     }
   ]
 }
