@@ -1,0 +1,215 @@
+{
+  "doc_token": "RMG0d48wcof5f4xToXKcp3aWnwf",
+  "doc_url": "https://my.feishu.cn/docx/RMG0d48wcof5f4xToXKcp3aWnwf",
+  "items": [
+    {
+      "id": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "stars": 23907,
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "one_liner": "OpenMAIC是一个开源AI平台，通过多智能体协作将任何主题或文档转化为互动式教育体验。",
+      "detail_md": "**解决什么问题**\nOpenMAIC旨在解决传统在线学习中互动性不足的问题，通过AI自动生成演示幻灯片、测验、交互式模拟实验和项目制学习活动，并由AI教师和AI同学进行语音讲解、白板绘图和实时讨论，从而提供沉浸式的互动学习体验。 \n\n**核心功能**\n核心功能包括一键生成课堂、多智能体课堂互动、支持幻灯片、测验、HTML交互式模拟和项目制学习（PBL）等多种场景类型。此外，还支持白板绘图和语音讲解，以及灵活导出为可编辑的PPTX或交互式HTML。项目还集成了OpenClaw，允许在聊天应用中直接生成课堂。\n\n**技术亮点**\nOpenMAIC采用Next.js构建，利用LangGraph进行多智能体编排。它支持两阶段的课堂生成流水线（大纲生成 → 场景内容生成），以及驱动课堂回放和实时互动的回放引擎 和动作引擎。平台还抽象了多种LLM服务商 和媒体服务商，并支持多语言国际化。\n\n**适合谁用**\nOpenMAIC适合希望通过AI技术提升学习体验的个人学习者，教育工作者，以及需要快速生成互动课程内容的企业或机构。它能帮助用户在短时间内掌握新知识，或分析复杂信息。",
+      "degraded": false
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 39182,
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "one_liner": "本项目旨在提供一套工具和指南，帮助科研人员撰写高质量的科研项目申请书和学术海报。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决科研人员在撰写科研项目申请书和制作学术海报时面临的挑战，例如如何使申请书更具竞争力、如何清晰有效地传达研究成果、以及如何避免常见的错误等。  \n\n**核心功能**\n核心功能包括提供撰写科研项目申请书的指导原则，  例如如何构建有说服力的论证、  如何有效利用视觉传达，  以及预算准备技巧。  此外，还提供了学术海报的设计布局建议  和AI图形生成脚本，  帮助用户创建清晰、简洁的视觉内容。 \n\n**技术亮点**\n技术亮点在于结合了科研申请和海报制作的实践经验与工具。例如，在科研申请方面，强调了SMART原则  和四维度评审标准  的应用。在海报制作方面，提供了AI图形生成脚本，  能够根据指令生成符合海报展示要求的简洁图形，  并提供了严格的审查标准以确保图形质量。 \n\n**适合谁用**\n本项目适合需要撰写科研项目申请书的科研人员、  尤其是新进教师，  以及需要制作学术海报以展示研究成果的学者和学生。",
+      "degraded": false
+    },
+    {
+      "id": "Lakr233/vphone-cli",
+      "owner": "Lakr233",
+      "name": "vphone-cli",
+      "url": "https://github.com/Lakr233/vphone-cli",
+      "stars": 9589,
+      "description": "",
+      "one_liner": "`vphone-cli` 是一个命令行工具，用于在 Apple Silicon Mac 上使用 Apple 的 `Virtualization.framework` 启动虚拟 iPhone (iOS…",
+      "detail_md": "`vphone-cli` 是一个命令行工具，用于在 Apple Silicon Mac 上使用 Apple 的 `Virtualization.framework` 启动虚拟 iPhone (iOS 26)，并支持固件层面的研究与调试。\n\n**解决什么问题**\n该项目旨在为安全研究人员提供一个在 Apple Silicon Mac 上运行、检查和调试 iOS 环境的工具。 它解决了在固件层面（包括启动链修补、越狱工具和 SSH/VNC 访问）对 iOS 环境进行操作的难题。\n\n**核心功能**\n`vphone-cli` 的核心功能包括：下载、合并、修补和签名混合固件镜像，以便 `idevicerestore` 可以将其刷入虚拟机。 其次，它能够创建虚拟机目录，通过 `Virtualization.framework` 启动基于 Swift 的虚拟机，刷写固件，加载 SSH ramdisk，安装自定义固件 (CFW)，最终启动一个功能齐全的越狱 iOS 环境。 项目提供了多种固件变体，包括 Patchless、常规版、开发版和越狱版，以满足不同安全绕过级别的需求。\n\n**技术亮点**\n该项目利用 Apple 的 `Virtualization.framework` 在 Apple Silicon Mac 上实现高性能虚拟化。 它通过合并 iPhone IPSW 和 PCC CloudOS IPSW 创建混合固件，以提供研究所需的启动链和 iOS 用户态环境。 项目还包含一个基于 Swift 的主机应用程序、一个 Objective-C 访客守护程序和一套基于 Python 的固件操作工具。 此外，它支持通过 `Makefile` 进行自动化操作，简化了从环境设置到首次启动的整个流程。\n\n**适合谁用**\n`vphone-cli` 主要面向安全研究人员。 尤其是那些需要对 iOS 固件进行深度分析、漏洞利用开发、越狱工具测试以及需要 SSH/VNC 访问 iOS 虚拟机环境的用户。 它也适用于需要定制 iOS 环境进行特定测试或开发的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "url": "https://github.com/tt-a1i/archify",
+      "stars": 34438,
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "one_liner": "Archify是一个Agent技能，能将自然语言描述转化为专业、可信赖、可交互的HTML/SVG技术图表。",
+      "detail_md": "**解决什么问题**\nArchify旨在解决传统图表工具在生成和维护技术图表时效率低下、难以与代码同步的问题。它通过将自然语言描述转化为结构化JSON IR，并进行确定性编译和校验，确保图表的准确性和可靠性。项目还解决了图表在合并前难以审查架构变化的问题，通过对比前后快照，精确区分新增、删除、语义变化等。\n\n**核心功能**\nArchify提供五种核心图表类型：架构图（Architecture）、工作流图（Workflow）、时序图（Sequence）、数据流图（Data Flow）和生命周期图（Lifecycle）。它支持四套视觉预设和深浅主题，并能生成独立的HTML文件，方便分享和交付。此外，它还具备交互式探索功能，如搜索节点、追踪路径、对比角色和播放故事。\n\n**技术亮点**\nArchify采用Typed JSON IR作为输入，并通过内置的Validator和布局规则进行原子交付前校验。它提供结构化的修复回执，帮助Agent精确修改问题部分。图表支持4倍分辨率导出为PNG、JPEG、WebP，以及内置深浅主题的SVG。其布局判断基于Agent对架构语义的理解，而非通用自动布局。\n\n**适合谁用**\nArchify主要适用于需要快速、准确生成和维护技术图表的开发者、架构师和团队。特别是那些使用LLM（如Cursor, Claude Code, Codex CLI, OpenCode）作为Agent进行开发的用户，Archify可以作为其技能集，将对话中的系统描述转化为可信赖的图表。它也适合进行代码审查和设计评审的团队，以可视化方式理解和沟通系统架构变化。",
+      "degraded": false
+    },
+    {
+      "id": "p-e-w/heretic",
+      "owner": "p-e-w",
+      "name": "heretic",
+      "url": "https://github.com/p-e-w/heretic",
+      "stars": 29150,
+      "description": "Fully automatic censorship removal for language models",
+      "one_liner": "Heretic 是一个用于语言模型的全自动审查移除系统，无需昂贵的后期训练即可去除安全对齐。",
+      "detail_md": "**解决什么问题**\nHeretic 旨在解决大型语言模型中存在的“安全对齐”或“审查”问题，这些问题可能导致模型拒绝回答某些“有害”提示，即使这些提示在某些场景下是合理或必要的。 它通过自动化的方式，在不损害模型原有能力的前提下，减少模型的拒绝行为。\n\n**核心功能**\nHeretic 的核心功能是利用定向消融（abliteration）技术，结合 TPE-based 超参数优化，自动寻找高质量的去审查模型。 它通过计算模型激活空间中的“拒绝方向”，并对权重矩阵进行正交化，从而抑制模型的拒绝行为。 该系统能够自动平衡拒绝减少和质量保持，通过共同最小化拒绝计数和与原始模型的 KL 散度来实现。\n\n**技术亮点**\n该项目的主要技术亮点包括：\n*   **全自动化操作**：无需人工干预或对 Transformer 内部机制的深入理解，即可完成去审查过程。\n*   **多目标优化**：使用 Optuna 的 `TPESampler` 进行超参数优化，以最小化拒绝计数和 KL 散度，从而在去审查效果和模型质量之间取得平衡。\n*   **广泛的模型架构支持**：支持大多数密集模型、多模态模型以及多种 MoE 架构。\n*   **灵活的消融权重核**：消融权重核的形状高度灵活，结合自动参数优化，可以改善合规性/质量权衡。\n\n**适合谁用**\nHeretic 适合希望去除大型语言模型中审查机制的用户和研究人员。 尤其适用于那些不具备 Transformer 内部知识，但需要一个简单、自动化工具来生成去审查模型的用户。 此外，对于需要对模型行为进行定量分析和优化的研究人员，Heretic 提供了详细的残差几何分析和可视化功能。",
+      "degraded": false
+    },
+    {
+      "id": "unclecode/crawl4ai",
+      "owner": "unclecode",
+      "name": "crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "stars": 80219,
+      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+      "one_liner": "Crawl4AI 是一个开源的、LLM友好的网络爬虫和数据提取系统，能将网页内容转化为结构化的Markdown和JSON，供AI应用使用。",
+      "detail_md": "**解决什么问题**\nCrawl4AI旨在解决传统网络爬虫在为大型语言模型（LLM）和AI代理提供数据时面临的挑战。  它将复杂的网页内容转化为干净、结构化的Markdown和JSON格式，使其可以直接用于RAG系统、AI代理和数据管道，从而避免了手动数据清洗和格式化的繁琐工作。 \n\n**核心功能**\n该项目提供LLM优化的输出，生成包含标题、表格、代码块和引用提示的智能Markdown。  它支持快速抓取，通过异步浏览器池、缓存和最小化跳转实现高效运行。  用户可以完全控制会话、代理、Cookie和用户脚本，并利用强大的钩子系统。  此外，它还具备自适应智能，能够学习网站模式并处理无限滚动等复杂元素。 \n\n**技术亮点**\nCrawl4AI采用多层架构，清晰分离了浏览器管理、内容处理和数据提取。  它提供了Python SDK (`AsyncWebCrawler`)、命令行工具 (`crwl`) 和Docker REST API三种主要接口。  特别是Docker API在0.9.0版本中引入了安全强化，默认启用认证并限制请求边界。  项目还支持LLM驱动的结构化数据提取、多种分块策略和基于余弦相似度的内容查找。 \n\n**适合谁用**\nCrawl4AI适合需要为LLM应用、AI代理和数据管道获取高质量、结构化网络数据的开发者、数据科学家和研究人员。  它也适用于希望通过开源工具实现数据民主化，并构建自己的数据管道而无需受限于API密钥或高昂成本的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 60495,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "这是一个由AI代理驱动的搜索引擎，它根据社交媒体互动和真实市场数据而非编辑意见来评分和汇总信息，专注于过去30天内的热点话题。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统搜索引擎和大型语言模型在获取实时社交媒体信息方面的“时效性差距”问题。 它通过聚合来自Reddit、X (Twitter)、YouTube、TikTok、Instagram、Hacker News、Polymarket和GitHub等多个平台的数据，提供基于用户参与度（如点赞、转发、观看量和真实资金投注）的实时、有根据的社交信号。  \n\n**核心功能**\n该工具的核心功能包括智能预研究，它能在搜索前解析实体（如X句柄、Reddit社区、YouTube频道），进行有针对性的深度搜索。  它还具备跨源聚合能力，能将来自不同平台讨论同一事件的内容合并成一个集群，避免重复。  此外，它能自动将研究报告保存为Markdown或HTML文件，方便用户建立个人研究库。  \n\n**技术亮点**\n该项目采用多源社交管道，整合了超过10个平台的数据，并通过加权倒数排名融合（RRF）算法对结果进行评分和排序。  它支持无配置使用，并通过设置向导快速解锁X和TikTok等高级数据源。  项目还实现了“趣味判断”功能，能识别并突出显示社交媒体上幽默、机智或病毒式传播的内容。 \n\n**适合谁用**\n该工具适用于需要快速了解特定主题在社交媒体上最新动态的用户，例如在销售会议前了解客户的最新情况、在会议前研究某人的近期言论、或在产品开发前了解用户痛点。  它特别适合AI开发者、市场分析师、研究人员以及任何需要基于社区真实反馈而非传统新闻来源做出决策的专业人士。",
+      "degraded": false
+    },
+    {
+      "id": "majd/ipatool",
+      "owner": "majd",
+      "name": "ipatool",
+      "url": "https://github.com/majd/ipatool",
+      "stars": 10191,
+      "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
+      "one_liner": "`ipatool` 是一个命令行工具，用于搜索、购买和下载 iOS/tvOS 应用的 IPA 文件。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决用户从 Apple App Store 搜索、购买和下载 iOS/tvOS 应用包（IPA 文件）的需求，尤其是在需要获取特定版本或在非交互式环境下操作时。\n\n### 核心功能\n`ipatool` 提供了以下核心功能：\n*   **认证**：允许用户登录 App Store 并管理其凭据。\n*   **搜索**：根据关键词搜索 App Store 中的 iOS 和 tvOS 应用。\n*   **购买**：为应用获取许可证，支持免费应用。\n*   **列出版本**：列出特定应用的所有可用版本。\n*   **下载**：下载加密的 iOS 和 tvOS 应用包（IPA 文件），支持指定应用 ID、Bundle ID 或外部版本 ID。\n*   **获取版本元数据**：检索特定应用版本的元数据。\n\n### 技术亮点\n*   **Go 语言实现**：项目使用 Go 语言编写，提供了良好的性能和跨平台兼容性。\n*   **模块化设计**：通过 `AppStore` 接口抽象了与 App Store 的交互逻辑，包括登录、搜索、购买和下载等操作。\n*   **HTTP 客户端封装**：`pkg/http/client.go` 提供了通用的 HTTP 客户端，处理 JSON/XML 数据的自动解组。\n*   **认证重试机制**：`download` 命令实现了复杂的重试逻辑，可以在令牌过期时自动重新登录。\n*   **Plist 规范化**：能够从 Apple 的响应中提取并解析嵌入的 XML Property Lists (plists)。\n\n### 适合谁用\n该工具适合需要自动化或脚本化 App Store 应用下载流程的开发者、测试人员以及系统管理员。 它也适用于那些希望获取特定版本应用或在没有图形界面的服务器环境中管理 iOS/tvOS 应用的用户。",
+      "degraded": false
+    },
+    {
+      "id": "punkpeye/awesome-mcp-servers",
+      "owner": "punkpeye",
+      "name": "awesome-mcp-servers",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "stars": 93300,
+      "description": "A collection of MCP servers.",
+      "one_liner": "这是一个精选的MCP服务器列表，旨在扩展AI模型的功能，使其能够与各种应用程序和数据源交互。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决大型语言模型（LLM）与外部应用程序和数据源交互的局限性。通过提供一个标准化的协议（Model Context Protocol, MCP），它允许LLM执行超出其训练数据范围的任务，例如访问实时信息、控制外部系统或与特定服务集成。\n\n**核心功能**\n核心功能是提供一个广泛的MCP服务器列表，这些服务器涵盖了多种应用场景，包括数据库操作、文件系统访问、网页搜索、社交媒体集成、金融数据分析、开发工具、知识管理、安全服务、嵌入式系统控制、客户支持、翻译服务、旅行交通、版本控制以及其他通用工具。每个服务器都作为一个特定领域的工具，使LLM能够执行相应的任务。\n\n**技术亮点**\n技术亮点在于其“规范源模型”的翻译架构，以`README.md`作为权威英文版本，并由此派生出七种语言的翻译版本，确保内容一致性。项目采用扁平化的文件结构和统一的命名约定（`README-{language_code}.md`），便于文件发现和维护。此外，通过语言徽章实现了无缝的跨语言导航。\n\n**适合谁用**\n本项目适合需要扩展LLM能力以与外部世界交互的开发者、AI研究人员和企业。特别是那些希望利用AI进行自动化、数据分析、智能客服、代码生成或任何需要LLM与特定API或服务集成的用户。",
+      "degraded": false
+    },
+    {
+      "id": "checkstyle/checkstyle",
+      "owner": "checkstyle",
+      "name": "checkstyle",
+      "url": "https://github.com/checkstyle/checkstyle",
+      "stars": 9189,
+      "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
+      "one_liner": "Checkstyle 是一个静态代码分析工具，用于帮助开发者编写符合编码规范的 Java 代码。",
+      "detail_md": "**解决什么问题**\nCheckstyle 旨在解决 Java 项目中代码风格不一致、潜在错误和不符合编码标准的问题。它通过自动化检查，帮助开发团队维护统一的代码质量和可读性，减少代码审查的负担，并确保项目遵循预定义的规范。  \n\n**核心功能**\nCheckstyle 的核心功能包括：解析 Java 源代码并构建抽象语法树（AST） , 运行各种可配置的检查（如编码规范、Javadoc、命名约定、导入语句和空白符等） , 以及生成违规报告。它支持通过 XML 配置文件进行高度定制 , 并能集成到 Ant、Maven、Gradle 等构建工具和 IDE 中。\n\n**技术亮点**\n该项目采用模块化架构，主要组件包括 `Checker`（协调检查过程） , `TreeWalker`（处理 AST 并应用基于 token 的检查） , 和 `AuditListeners`（收集和报告违规）。它使用 ANTLR 进行词法分析和语法解析 , 并提供扩展点以允许用户创建自定义检查、过滤器和报告格式。\n\n**适合谁用**\nCheckstyle 适合所有 Java 开发者、开发团队以及项目经理，特别是那些需要强制执行编码标准、提高代码质量、确保团队代码风格一致性的项目。它对于进行代码审查、自动化质量门禁和持续集成/持续部署（CI/CD）流程的团队尤其有用。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 73880,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 提供了一个强大的脚本和扩展框架，旨在自动化逆向工程任务，支持多种语言和运行时环境。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决逆向工程中重复性任务的自动化问题，通过提供可编程接口，让用户能够自定义和扩展 Ghidra 的功能，从而提高分析效率和灵活性。\n\n**核心功能**\n核心功能包括支持 Java 和 Python 脚本，通过 OSGi 框架实现 Java 脚本的按需编译和管理，以及通过 PyGhidra 实现 Python 脚本对 Ghidra API 的访问。它还提供脚本发现、元数据解析和无头执行等功能。\n\n**技术亮点**\n技术亮点在于其模块化的 OSGi 架构，允许 Java 脚本按需编译并作为 Bundle 动态加载和管理。此外，PyGhidra 通过 JPype 桥接 CPython 解释器与 JVM，实现了 Python 对 Ghidra 完整 API 的无缝访问。\n\n**适合谁用**\n该项目适合需要对二进制文件进行逆向工程分析的专业人员、安全研究员以及希望通过自动化脚本提高工作效率的开发者。它也适用于需要团队协作分析大型数据集的场景。",
+      "degraded": false
+    },
+    {
+      "id": "pollen-robotics/microduck_rl",
+      "owner": "pollen-robotics",
+      "name": "microduck_rl",
+      "url": "https://github.com/pollen-robotics/microduck_rl",
+      "stars": 777,
+      "description": "RL training environments for Microduck (mjlab)",
+      "one_liner": "本项目为Microduck机器人提供强化学习训练环境，实现从仿真到现实的策略迁移。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决小型仿人机器人Microduck的运动控制问题，特别是如何将仿真环境中训练出的强化学习策略成功迁移到真实机器人上。这包括处理电机动力学、机械齿隙等复杂的物理现象，以实现稳定的步态、跌倒恢复和各种特技动作。\n\n**核心功能**\n核心功能包括为Microduck机器人提供多种强化学习训练环境，例如行走、跌倒恢复、站立、坐下站起、地面拾取、踢球、翻滚和滑轮滑行等。它支持策略训练、可视化和导出为ONNX格式，以便部署到真实机器人上。\n\n**技术亮点**\n技术亮点包括使用高保真度的BAM（Brushless Actuator Model）执行器模型模拟电机动力学，以及齿隙仿真以提高策略的鲁棒性。所有策略都遵循统一的61维观测契约，确保运行时策略可以热切换。此外，还采用了领域随机化和NaN安全补丁来增强训练的稳定性和sim2real迁移能力。\n\n**适合谁用**\n本项目适合需要为小型仿人机器人开发和部署运动控制策略的机器人工程师和研究人员。特别是那些关注sim2real迁移、高保真物理仿真和强化学习在机器人领域应用的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "handsomestWei/patent-disclosure-skill",
+      "owner": "handsomestWei",
+      "name": "patent-disclosure-skill",
+      "url": "https://github.com/handsomestWei/patent-disclosure-skill",
+      "stars": 5631,
+      "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+      "one_liner": "本项目是一个AgentSkills技能，能将项目材料转化为专业的中文技术专利交底书，并支持查新和迭代修订。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决专利申请过程中技术交底书撰写耗时、查新困难、格式不规范以及修订追溯不便等问题。 它能自动化从项目文档和代码中提取专利点、进行现有技术检索、生成符合规范的交底书，并提供迭代修订功能。\n\n**核心功能**\n核心功能包括：项目材料扫描与专利点挖掘，支持`.docx`、`.pptx`和源代码的转换与分析；优先使用国家知识产权局公布公告站进行查新，并能降级到WebSearch；生成包含Mermaid图的标准化六章节交底书，并输出Markdown和Word格式；支持交底书的迭代合并与纠正，并记录修订对话日志。\n\n**技术亮点**\n技术亮点在于其AgentSkills标准化的工作流编排，通过`SKILL.md`协调`prompts/`中的指令模板和`tools/`中的执行脚本。例如，`tools/cnipa_epub_search.py`实现了对国知局公布公告站的精准爬取，`tools/mermaid_render.py`能将Mermaid图渲染为PNG并嵌入Word文档。此外，还包括Office文档到Markdown的转换工具和严格的交付文件命名规范。\n\n**适合谁用**\n本技能适合需要高效撰写技术交底书的研发人员、专利工程师以及知识产权代理人。 特别是那些希望自动化专利点挖掘、查新和文档生成，并需要可追溯修订记录的用户。",
+      "degraded": false
+    },
+    {
+      "id": "corsairdev/corsair",
+      "owner": "corsairdev",
+      "name": "corsair",
+      "url": "https://github.com/corsairdev/corsair",
+      "stars": 10936,
+      "description": "Connect your users to their apps",
+      "one_liner": "Corsair 是一个为 AI 代理和多租户 SaaS 应用设计的集成层，它统一了数百个第三方平台的接口，并处理集成中的繁琐工作。",
+      "detail_md": "**解决什么问题**\nCorsair 旨在解决构建集成时重复的开销问题。在大多数集成代码中，95% 的代码是重复的“管道”工作，例如认证、令牌刷新、Webhook 路由、速率限制和加密凭证存储。Corsair 将这些繁琐的工作抽象为一个插件系统，让开发者只需关注其用例独有的逻辑。\n\n**核心功能**\nCorsair 提供统一的、强类型接口，连接数百个第三方平台（如 Slack、GitHub、Gmail）。它通过插件系统管理认证、令牌刷新、Webhook 路由、速率限制和加密凭证存储。对于 AI 代理，它通过模型上下文协议 (MCP) 暴露这些集成，允许代理通过一致的工具集发现和执行跨不同服务的操作。\n\n**技术亮点**\nCorsair 是自托管且与数据库无关的，确保敏感用户数据保留在您的基础设施内。它使用信封加密模型来保护凭证，通过环境变量提供的 Master Key (KEK) 加密存储在数据库中的数据加密密钥 (DEK)。Corsair 使用 Kysely 作为查询构建器，支持 PostgreSQL 和 SQLite 等多种后端，并保持类型安全。\n\n**适合谁用**\nCorsair 适合需要与多个第三方平台集成，尤其是 AI 代理和多租户 SaaS 应用程序的开发者。它简化了集成开发，减少了重复的样板代码，并确保数据安全。对于需要构建可扩展、安全且易于维护的集成解决方案的团队来说，Corsair 是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "every-app/open-seo",
+      "owner": "every-app",
+      "name": "open-seo",
+      "url": "https://github.com/every-app/open-seo",
+      "stars": 15134,
+      "description": "Open source alternative to Semrush and Ahrefs",
+      "one_liner": "OpenSEO 是一个开源的SEO平台，提供关键词研究、外链分析、排名追踪和AI可见性等功能，支持自托管或托管服务。",
+      "detail_md": "### 解决什么问题\n该项目旨在为用户提供一个自托管的SEO工具替代方案，解决传统SEO工具（如Semrush和Ahrefs）的成本高昂和数据不透明问题。它通过集成AI代理工作流，帮助用户更高效地进行SEO任务，并提供对Google Search Console数据的直接访问，无需复杂的Google Cloud设置。\n\n### 核心功能\nOpenSEO提供一系列核心功能，包括：\n*   **AI代理工作流**：支持AI代理（如Claude、Codex）执行关键词研究、SERP分析、外链分析和Google Search Console数据读取等任务。\n*   **关键词研究与聚类**：帮助用户发现关键词机会，评估搜索量、难度和CPC，并将关键词按意图进行聚类，映射到现有或新页面。\n*   **竞争对手分析**：分析竞争对手的关键词、内容主题和外链概况。\n*   **外链建设**：寻找潜在的外链机会并起草外联邮件。\n*   **网站审计与排名追踪**：提供网站健康度检查和关键词排名趋势追踪功能。\n\n### 技术亮点\n该项目采用现代Web技术栈，包括：\n*   **TanStack Start**：用于服务器端渲染（SSR）和路由，构建高性能的营销网站。\n*   **Fumadocs**：用于管理MDX格式的文档和博客内容。\n*   **Tailwind CSS**：用于快速构建响应式和可读性强的用户界面。\n*   **AI Agent Skills**：通过`SKILL.md`文件定义可重用的AI代理工作流，实现自然语言到MCP工具的映射。\n*   **自托管与Cloudflare部署**：支持通过Docker或Cloudflare进行自托管，提供灵活的部署选项。\n\n### 适合谁用\nOpenSEO适合以下用户：\n*   **创始人与初创企业**：希望以经济高效的方式管理SEO，并利用AI提升效率。\n*   **开发者与技术团队**：寻求开源、可自托管的SEO解决方案，并希望能够自定义和扩展功能。\n*   **SEO专业人士**：需要一个集成AI代理、提供关键词、SERP、外链和Google Search Console数据的平台。",
+      "degraded": false
+    },
+    {
+      "id": "colinhacks/zod",
+      "owner": "colinhacks",
+      "name": "zod",
+      "url": "https://github.com/colinhacks/zod",
+      "stars": 43645,
+      "description": "TypeScript-first schema validation with static type inference",
+      "one_liner": "Zod 是一个 TypeScript 优先的模式验证库，支持运行时类型检查和静态类型推断。",
+      "detail_md": "**解决什么问题**\nZod 解决了在运行时验证数据同时保持 TypeScript 类型安全的问题。  当处理外部数据源（如 API 响应、用户输入或配置文件）时，标准的 TypeScript 类型无法提供运行时保证。  Zod 通过提供既能在运行时验证数据又能推断静态类型以进行编译时检查的模式来弥补这一差距。 \n\n**核心功能**\nZod 的核心功能包括零依赖、小巧的打包体积（核心包约 2kb gzip 压缩后），以及通过 `z.infer<>` 自动从模式中提取 TypeScript 类型。  它提供不可变 API，方法返回新实例而非修改现有实例。  Zod 还支持 AOT 编译以提高验证性能，并内置 JSON Schema 转换功能。 \n\n**技术亮点**\nZod v4 引入了显著的性能改进、可 tree-shaking 的函数式 API 和预编译（AOT）功能。  它采用模块化架构，将核心逻辑与 API 风格分离，支持经典（方法链式）和 Mini（函数式）API。  `zod/mini` 包提供了更小的打包体积，适用于对大小有严格限制的项目。 \n\n**适合谁用**\nZod 适合需要对数据进行严格验证的 TypeScript 开发者，尤其是在处理来自不可信来源的数据时。  它适用于构建健壮的 API、处理用户输入、解析配置文件等场景。  此外，其丰富的生态系统使其能与 tRPC、React Hook Form 等流行库无缝集成。",
+      "degraded": false
+    },
+    {
+      "id": "tashfeenahmed/freellmapi",
+      "owner": "tashfeenahmed",
+      "name": "freellmapi",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "stars": 22757,
+      "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+      "one_liner": "FreeLLMAPI 聚合了数十家免费大型语言模型提供方的额度，通过一个兼容 OpenAI 的 API 端点，实现智能路由和用量跟踪。",
+      "detail_md": "**解决什么问题**\n当前，许多AI实验室提供免费LLM额度，但管理这些分散的额度（每月约74亿词元，覆盖474个模型系列/635个端点）非常复杂，需要处理不同的SDK、限流规则和潜在的请求失败。  FreeLLMAPI通过将这些免费额度统一到一个OpenAI兼容的API端点，解决了手动管理和透明路由的难题。  此外，它还能自动跟踪免费额度的变化，无需手动更新。 \n\n**核心功能**\n项目提供OpenAI的全部接口（如`/v1/chat/completions`、`/v1/images/generations`、`/v1/audio/speech`、`/v1/embeddings`），  以及Anthropic Messages API和原生Gemini与Ollama接口。  它支持Fusion（多模型合成）、图像生成、文本转语音、工具调用和结构化输出。  智能路由功能包含六种策略，能根据模型速度、能力和稳定性进行实时决策，并在遇到限流时自动转移。  其他功能包括统一模型与配置档、按密钥的限流跟踪、自更新模型目录、粘性会话与上下文交接、可选的提示词压缩、密钥加密存储、管理仪表盘与分析，以及MCP服务与交互式文档。 \n\n**技术亮点**\nFreeLLMAPI采用智能路由策略，根据实时性能指标（如可靠性、速度和智能评分）动态调整模型优先级，  并在模型失败时自动回退到链中的下一个模型。  密钥以AES-256-GCM加密存储在SQLite中，确保安全性。  项目支持60种语言的仪表盘，并能自动处理右到左（RTL）语言布局。  路由器每天两次从freellmapi.co同步签名的模型目录，确保模型信息始终最新。 \n\n**适合谁用**\n该项目适合希望充分利用免费LLM额度的开发者和用户，特别是那些需要聚合多个提供方、简化API调用、并希望通过统一接口管理不同模型和限流的用户。  它也适用于使用OpenAI兼容客户端、Anthropic SDK、Gemini SDK或支持Ollama的应用的编程智能体开发者。  项目提供桌面应用和Docker部署方式，方便个人实验和学习。",
+      "degraded": false
+    },
+    {
+      "id": "livekit/agents",
+      "owner": "livekit",
+      "name": "agents",
+      "url": "https://github.com/livekit/agents",
+      "stars": 13745,
+      "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+      "one_liner": "LiveKit Agents 是一个用于构建实时、可编程语音 AI 代理的 Python 框架。",
+      "detail_md": "**解决什么问题**\n该框架旨在解决构建会话式、多模态语音代理的复杂性，这些代理能够感知、听到和理解。 它抽象了底层流媒体逻辑、轮次检测和工具编排，使开发人员能够专注于定义代理指令和实现功能工具。 \n\n**核心功能**\nLiveKit Agents 提供灵活的集成，支持多种 STT、LLM、TTS 和实时 API。 它包含内置的任务调度和分发功能，用于连接用户与代理。 该框架还支持与 LiveKit 的电话堆栈无缝集成，允许代理拨打或接听电话。 此外，它还具有语义轮次检测功能，可减少中断。 \n\n**技术亮点**\nLiveKit Agents 采用分层架构，将部署基础设施与代理逻辑分离，并将特定于提供商的实现隔离到插件中。 它提供了一个包含 60 多个提供商集成的插件生态系统，包括 OpenAI、Google 和 Deepgram。 该框架还支持多代理工作流，通过 `AgentHandoff` 和 `AgentTask` 抽象实现复杂的代理切换。 \n\n**适合谁用**\n该框架适合希望构建实时、会话式、多模态语音 AI 代理的开发人员。 它特别适用于需要集成各种 AI 模型（如 STT、LLM、TTS）并处理实时音频交互的场景。",
+      "degraded": false
+    },
+    {
+      "id": "abhigyanpatwari/GitNexus",
+      "owner": "abhigyanpatwari",
+      "name": "GitNexus",
+      "url": "https://github.com/abhigyanpatwari/GitNexus",
+      "stars": 46558,
+      "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+      "one_liner": "GitNexus是一个代码智能平台，通过知识图谱和AI代理集成，帮助开发者理解、分析和安全地修改代码。",
+      "detail_md": "**解决什么问题**\nGitNexus旨在解决大型复杂代码库难以理解、修改和维护的问题。 它通过构建代码的知识图谱，提供影响分析、变更检测和代码重构等工具，帮助开发者避免引入高风险变更，并确保代码质量和安全性。\n\n**核心功能**\n核心功能包括：代码知识图谱构建、影响分析、变更检测、代码搜索与上下文查询、以及AI代理集成。 它能识别代码符号、关系和执行流，并提供跨仓库分析能力。 AI代理可以通过MCP工具和技能系统与GitNexus交互，执行复杂的工程任务。\n\n**技术亮点**\nGitNexus采用LadybugDB作为嵌入式图数据库，支持Tree-sitter进行多语言AST解析，并利用transformers.js进行语义嵌入。 它提供多层集成架构，包括MCP工具、代理技能和上下文文件，以实现深度代码感知。 此外，它还支持多种编辑器和AI编码代理的集成。\n\n**适合谁用**\nGitNexus适合需要深入理解和安全修改大型复杂代码库的软件工程师、架构师和AI编码代理。 特别是那些在多语言、多仓库环境中工作，并希望利用AI工具提升开发效率和代码质量的团队。",
+      "degraded": false
+    }
+  ]
+}
