@@ -177,6 +177,105 @@
       "one_liner": "本项目为Microduck机器人提供强化学习训练环境，实现从仿真到真实机器人的策略迁移。",
       "detail_md": "**解决什么问题**\n本项目旨在解决小型双足机器人Microduck的强化学习策略训练和仿真到真实环境的迁移问题。通过高保真度的仿真环境，包括精确的执行器模型和机械间隙模拟，减少仿真与现实之间的差距，确保在仿真中训练的策略能有效部署到真实机器人上。 \n\n**核心功能**\n核心功能包括多种任务的强化学习环境，例如行走、站立、地面拾取和滑行等。  它支持策略训练、可视化以及将训练好的策略导出为ONNX格式以便部署。  此外，还包含配置回归测试，用于验证任务配置的结构完整性，防止潜在的运行时错误。 \n\n**技术亮点**\n技术亮点在于采用`mjlab` (MuJoCo Warp) 和PPO算法进行训练，并集成了BAM (Better Actuator Models) M6执行器模型以提高仿真精度。项目还通过领域随机化和间隙模拟来增强策略的鲁棒性。  所有策略都遵循严格的61维观测合同，支持运行时策略热切换。 \n\n**适合谁用**\n本项目适合需要为Microduck机器人开发和测试强化学习策略的研究人员和工程师。  特别是那些关注仿真到现实迁移、机器人控制和高保真度物理仿真的用户。",
       "degraded": false
+    },
+    {
+      "id": "Gitlawb/openclaude",
+      "owner": "Gitlawb",
+      "name": "openclaude",
+      "url": "https://github.com/Gitlawb/openclaude",
+      "stars": 31020,
+      "description": "runs anywhere. uses anything",
+      "one_liner": "OpenClaude 是一个开源的编码代理 CLI，它统一了高级代理工作流与多种 LLM 后端。</cite>",
+      "detail_md": "**解决什么问题**\nOpenClaude 旨在解决大型语言模型 (LLM) 后端碎片化的问题，它提供了一个统一的、与模型无关的代理 CLI 工作流，使其能够无缝地跨云 API 和本地模型后端工作。</cite> 它通过抽象层支持多种 LLM，包括 OpenAI 兼容 API、Anthropic、Gemini、AWS Bedrock 以及 Ollama 等本地提供商。</cite> 这使得用户可以根据任务需求选择不同的模型，从而优化成本和性能。</cite>\n\n**核心功能**\nOpenClaude 的核心功能包括：支持本地模型运行私有工作流，通过智能路由优化成本，以及提供统一的编码代理工具，如 `BashTool` 和 `FileEditTool`。 它还包含一个基于 React 的终端 UI 和复杂的工具调用循环。 此外，它还提供一个 Python `smart_router` 工具，用于动态多提供商请求路由。\n\n**技术亮点**\n该项目引入了一个 OpenAI 兼容性 shim，用于在不同 LLM 提供商之间转换 API 调用和工具使用，从而增强了互操作性。 它还通过一个配置文件系统管理环境变量和提供商设置，将凭据和设置持久化在 `.openclaude-profile.json` 中。 智能路由和发现功能可以自动检测并推荐提供商/模型，并动态路由调用以优化成本和延迟。\n\n**适合谁用**\nOpenClaude 适合需要统一编码代理工作流的开发者和团队，特别是那些希望在不同 LLM 后端（包括云端和本地模型）之间灵活切换的用户。 它也适用于希望通过选择更经济或专业模型来优化成本的用户。 此外，对于希望利用强大的编码代理工具进行开发的用户，OpenClaude 提供了一致的体验。",
+      "degraded": false
+    },
+    {
+      "id": "Imbad0202/academic-research-skills",
+      "owner": "Imbad0202",
+      "name": "academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "stars": 44608,
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "one_liner": "本项目是一套全面的Claude Code学术研究技能包，旨在支持从研究到论文发表的全流程，强调人机协作与质量保障。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决学术研究过程中效率低下、文献管理混乱、论文质量难以保证以及AI工具可能带来的幻觉和偏见等问题。它通过提供结构化的工作流程和智能辅助，帮助研究人员专注于高层次的思考，同时确保研究的严谨性和学术诚信。  \n\n**核心功能**\n核心功能包括深度研究、学术论文撰写、学术论文审查和学术流程编排。深度研究技能提供研究问题制定、系统性文献检索和证据综合等功能。学术论文技能支持论文写作、章节规划、修订指导和多种格式输出。论文审查技能提供多视角同行评审和质量评估。学术流程编排器则协调整个10阶段的工作流程，并设有强制性的诚信验证关卡。\n\n**技术亮点**\n技术亮点包括多Agent架构、人机协作模式、强大的学术诚信保障机制和多语言支持。系统采用35个Agent协同工作，通过“副驾驶”模式辅助用户。它集成了L3主张忠实度审计、跨索引三角验证和Material Passport等机制，有效防止幻觉和确保引用准确性。此外，系统支持中文和英文，并通过意图匹配实现多语言模式激活。\n\n**适合谁用**\n本项目适合需要高效、高质量完成学术研究和论文撰写的学者、研究人员和学生。特别是那些希望利用AI工具提升研究效率，同时又重视学术诚信、避免AI潜在缺陷的用户。",
+      "degraded": false
+    },
+    {
+      "id": "iv-org/invidious",
+      "owner": "iv-org",
+      "name": "invidious",
+      "url": "https://github.com/iv-org/invidious",
+      "stars": 23642,
+      "description": "Invidious is an alternative front-end to YouTube",
+      "one_liner": "Invidious 是一个注重隐私的 YouTube 替代前端，它允许用户在没有广告和跟踪的情况下观看 YouTube 视频。",
+      "detail_md": "**解决什么问题**\nInvidious 旨在解决 YouTube 官方平台存在的隐私侵犯、广告干扰和跟踪问题。它提供了一个无广告、无跟踪的观看体验，并允许用户绕过地理限制。\n\n**核心功能**\n核心功能包括视频观看、订阅管理、播放列表创建与编辑、观看历史记录、数据导入导出以及用户偏好设置。它还支持多语言界面，例如中文（简体和繁体）。\n\n**技术亮点**\n项目采用国际化（i18n）系统，通过 JSON 语言文件实现多语言支持，并处理复杂的复数规则和变量插值。配置系统支持通过 YAML 文件或环境变量进行灵活配置，包括数据库、服务器和用户默认偏好设置。\n\n**适合谁用**\nInvidious 适合注重隐私、希望摆脱 YouTube 广告和跟踪的用户。对于希望自定义观看体验、管理订阅和数据的用户也同样适用。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 13141,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的 ElevenLabs 替代品，可在本地设备上进行实时听写、零样本语音克隆和电影级视频配音，支持 646 种语言，无需云端或 API 密钥。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 旨在解决传统语音工具依赖云服务、按月收费、数据隐私和高昂成本的问题。  它提供了一个完全本地化的解决方案，让用户可以在自己的硬件上进行语音克隆、设计和配音，确保数据不离开设备，并且没有按字符计费或使用上限。 \n\n**核心功能**\n该项目提供零样本语音克隆，只需 3 秒音频即可复刻任何声音，支持 646 种语言。  用户可以从零开始设计新声音，调整性别、年龄、口音、音高和情感等参数。  此外，它还支持端到端的视频配音，包括转录、翻译和时间轴对齐，最终可导出为 MP4 格式。 \n\n**技术亮点**\nVoiceStudio 采用本地优先的理念，所有操作都在用户设备上完成，无需账号、API 密钥或云端服务。  它支持 14 个 TTS 引擎和 10 个 ASR 引擎，并提供引擎兼容性矩阵和 GPU 预检功能。  项目还包含一个一键模型商店，可自动检测平台并推荐合适的模型。  此外，它还支持 21 种语言的国际化 (i18n) 系统，确保多语言用户体验。   \n\n**适合谁用**\nVoiceStudio 适合关心数据隐私、希望避免订阅费用和云服务依赖的创作者和开发者。  它特别适合需要进行语音克隆、声音设计、视频配音以及多语言内容创作的用户。  商业用户也可以免费使用，但如果修改了 VoiceStudio 并通过网络提供给他人，则需要遵守 AGPL-3.0 许可证条款。",
+      "degraded": false
+    },
+    {
+      "id": "3b1b/manim",
+      "owner": "3b1b",
+      "name": "manim",
+      "url": "https://github.com/3b1b/manim",
+      "stars": 92403,
+      "description": "Animation engine for explanatory math videos",
+      "one_liner": "ManimGL 是一个基于 OpenGL 的动画引擎，用于创建精确的数学解释视频和交互式演示。",
+      "detail_md": "**解决什么问题**\nManimGL 旨在解决传统视频制作中难以精确可视化数学概念和复杂动画的问题。它通过编程方式生成动画，使得数学公式、图形和概念能够以动态、直观的方式呈现，极大地提升了数学教学和科学传播的效率和表现力。\n\n**核心功能**\nManimGL 的核心功能包括：场景管理 (`Scene` 类)、数学对象 (`Mobject` 及其子类，如 `VMobject` 用于矢量图形)、动画引擎 (`Animation` 类)  和渲染管线。它支持通过命令行界面 (`manimgl`) 运行场景并生成视频或实时预览，并提供交互式开发模式 (`InteractiveScene`)。\n\n**技术亮点**\n该项目的主要技术亮点在于其基于 OpenGL 的 GPU 加速渲染，能够高效处理复杂的图形和动画。它利用 Python 3.10+ 作为运行时环境，并集成了 NumPy 进行数值计算、Pango 和 LaTeX 进行文本和数学排版，以及 FFmpeg 进行视频编码和处理。项目还提供了灵活的配置系统，允许用户通过 `custom_config.yml` 文件自定义渲染设置和文件路径。\n\n**适合谁用**\nManimGL 适合需要创建高质量数学解释视频的教育工作者、科学传播者、内容创作者以及任何希望通过动态可视化来呈现复杂概念的人群。对于希望深入了解 ManimGL 源代码并为其贡献的开发者，项目也提供了详细的开发安装指南。",
+      "degraded": false
+    },
+    {
+      "id": "browser-use/video-use",
+      "owner": "browser-use",
+      "name": "video-use",
+      "url": "https://github.com/browser-use/video-use",
+      "stars": 22614,
+      "description": "Edit videos with coding agents",
+      "one_liner": "本项目通过大语言模型（LLM）驱动，实现视频的智能编辑，包括剪辑、调色、字幕和动画，无需预设或菜单，仅通过对话即可完成视频制作。",
+      "detail_md": "## 解决什么问题\n本项目旨在解决传统视频编辑流程复杂、耗时的问题，特别是对于非专业用户而言，通过自然语言交互，降低视频制作门槛。它避免了LLM直接处理大量视频帧的低效方式，转而通过文本转录和按需视觉复合图来理解视频内容，从而实现高效且精确的编辑。\n\n## 核心功能\n*   **智能剪辑**：自动剪除冗余词汇和片段间的空白，并能根据LLM的编辑决策列表（EDL）进行精确剪辑。\n*   **自动调色**：对每个视频片段进行自动色彩校正，支持预设或自定义FFmpeg滤镜链。\n*   **音频处理**：在每个剪辑边界应用30毫秒的音频淡入淡出，防止爆音。\n*   **字幕烧录**：支持自定义风格的字幕烧录，例如默认的2词大写块。\n*   **动画叠加**：通过并行子代理生成动画叠加，支持HyperFrames、Remotion、Manim或PIL等工具。\n*   **自评估与迭代**：在向用户展示之前，系统会自评估渲染输出，检查视觉跳变、音频爆音和字幕对齐等问题，并进行最多3次自动修复。\n\n## 技术亮点\n*   **文本优先，按需视觉**：LLM通过处理音频转录生成的`takes_packed.md`来“阅读”视频，仅在需要精确视觉判断时才按需生成`timeline_view`视觉复合图。\n*   **分段渲染与无损拼接**：采用分段提取、应用调色和音频淡入淡出，然后进行无损拼接的渲染流程，避免重复编码。\n*   **硬性规则保障生产质量**：项目遵循12条不可协商的“硬性规则”，例如字幕最后应用、30毫秒音频淡入淡出等，确保输出的生产级正确性。\n*   **会话记忆持久化**：编辑会话的上下文、推理过程和已批准的策略会持久化到`project.md`文件中，以便LLM在多次会话中恢复工作。\n\n## 适合谁用\n本项目适合需要快速、高效制作视频的用户，特别是那些不具备专业视频编辑技能，但希望通过自然语言描述来指导视频制作的创作者、营销人员或内容生产者。它也适用于需要自动化视频后期制作流程，并确保输出质量的团队。",
+      "degraded": false
+    },
+    {
+      "id": "VoltAgent/awesome-design-md",
+      "owner": "VoltAgent",
+      "name": "awesome-design-md",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "stars": 112311,
+      "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+      "one_liner": "这是一个精选的 `DESIGN.md` 文件集合，旨在帮助 AI 编码代理生成像素级精确且一致的用户界面。",
+      "detail_md": "**解决什么问题**\n传统的设计交付方式（如 Figma 导出或 JSON Schema）对大型语言模型 (LLM) 来说难以理解。本项目通过提供结构化的 Markdown 格式 `DESIGN.md` 文件，解决了 AI 代理在生成 UI 时难以理解设计规范、导致 UI 不一致的问题。它使得 AI 代理能够直接读取设计系统，从而生成符合设计要求的代码。\n\n**核心功能**\n该项目的核心功能是提供一系列从真实网站中提取的、即用型 `DESIGN.md` 文件。每个 `DESIGN.md` 文件都遵循 Google Stitch 引入的格式，并扩展为九个强制性部分，涵盖视觉主题、颜色、排版、组件样式、布局原则等。每个条目还包含 `preview.html` 和 `preview-dark.html` 文件，用于视觉验证。\n\n**技术亮点**\n项目采用 Markdown 作为设计系统文档格式，因为 Markdown 是 LLM 读取效率最高的格式，无需解析或配置。每个 `DESIGN.md` 文件都包含详细的设计规范，例如 VoltAgent 的设计文件就详细描述了其布局原则、间距系统和独特的组件样式。这种标准化结构确保了 AI 代理能够准确理解和应用设计规则。\n\n**适合谁用**\n本项目主要适用于希望利用 AI 代理快速生成像素级精确 UI 的开发者和团队。它也适合 AI 编码代理的开发者，为他们提供结构化的设计参考。此外，任何希望学习和借鉴领先网站设计系统的设计师和前端工程师也可以从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "averygan/reclip",
+      "owner": "averygan",
+      "name": "reclip",
+      "url": "https://github.com/averygan/reclip",
+      "stars": 7401,
+      "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+      "one_liner": "ReClip 是一个自托管的开源媒体下载工具，提供简洁的网页界面，支持从 1000 多个网站下载视频或音频。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户从 YouTube、TikTok、Instagram 等主流平台以及其他 1000 多个网站下载视频或提取音频的需求。它提供了一个统一且易于使用的界面，避免了为不同平台寻找不同下载工具的麻烦。\n\n**核心功能**\nReClip 的核心功能包括：支持 MP4 视频或 MP3 音频提取；提供质量/分辨率选择器；支持批量下载，用户可以一次粘贴多个 URL；自动进行 URL 去重；以及下载完成后自动文件交付。\n\n**技术亮点**\n该项目后端使用 Python 和 Flask 构建，代码量少（约 150 行）。前端采用原生 HTML/CSS/JS，无需构建步骤，界面简洁响应迅速。其下载引擎依赖 `yt-dlp` 和 `ffmpeg`，从而支持广泛的网站和灵活的格式转换。\n\n**适合谁用**\nReClip 适合需要从各种在线平台下载视频或音频的个人用户。特别是那些希望拥有一个自托管解决方案，并重视简洁界面和批量处理能力的用户。",
+      "degraded": false
+    },
+    {
+      "id": "unclecode/crawl4ai",
+      "owner": "unclecode",
+      "name": "crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "stars": 80684,
+      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+      "one_liner": "Crawl4AI 是一个开源的、LLM 友好的网络爬虫和数据提取系统，专为 AI 应用优化。</cite>",
+      "detail_md": "**解决什么问题**\nCrawl4AI 旨在解决传统网络爬虫在为大型语言模型（LLM）和 AI 应用提供数据时面临的挑战。</cite>它将网页内容转换为干净、结构化的 Markdown 和 JSON 格式，使其可以直接用于 RAG 系统、AI 代理和数据管道，从而避免了手动数据清洗和格式化的繁琐工作。</cite>\n\n**核心功能**\n该项目提供异步爬取、多种提取策略（如 CSS、XPath 和基于 LLM 的提取）、</cite>以及内置的 Markdown 生成和内容过滤功能。</cite>它支持会话管理、浏览器自动化、高级反检测功能，并能部署为 Docker 化的 REST API。</cite>此外，它还具备智能表格提取功能，能够处理复杂和大规模的表格数据。</cite>\n\n**技术亮点**\nCrawl4AI 的技术亮点包括：LLM 优化的输出，生成带有标题、表格、代码块和引用提示的智能 Markdown；</cite>实践中的快速性能，得益于异步浏览器池、缓存和最小化跳转；</cite>全面的控制能力，支持会话、代理、Cookie 和用户脚本；</cite>以及自适应智能，能够学习网站模式并处理无限滚动等复杂元素。</cite>\n\n**适合谁用**\nCrawl4AI 适合需要将网页内容转化为 AI 可用格式的开发者、数据科学家、研究人员和企业。</cite>特别是那些构建 RAG 系统、AI 代理或数据管道的用户，以及需要大规模、高精度网络数据提取的场景。</cite>它也适用于希望通过开源工具实现数据民主化和数据资本化的个人和组织。</cite>",
+      "degraded": false
     }
   ]
 }
