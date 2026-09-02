@@ -1,0 +1,160 @@
+{
+  "doc_token": "Uqmgdcjz0osnrUxMSAkcVe6EnAg",
+  "doc_url": "https://my.feishu.cn/docx/Uqmgdcjz0osnrUxMSAkcVe6EnAg",
+  "items": [
+    {
+      "id": "Gitlawb/openclaude",
+      "owner": "Gitlawb",
+      "name": "openclaude",
+      "url": "https://github.com/Gitlawb/openclaude",
+      "stars": 31262,
+      "description": "runs anywhere. uses anything",
+      "one_liner": "OpenClaude 是一个开源编码代理 CLI，连接高级代理工作流与多样化 LLM 后端。",
+      "detail_md": "**解决什么问题**\nOpenClaude 旨在解决大型语言模型 (LLM) 后端多样化与统一代理工作流之间的兼容性问题。 它通过提供一个模型无关的 CLI 代理，使用户能够无缝地在云端 API 和本地模型后端之间切换，从而避免了为每个提供商使用不同工具的麻烦。 此外，它还通过智能路由和支持本地模型来优化成本和延迟。\n\n**核心功能**\nOpenClaude 的核心功能包括：统一的编码代理工作流，支持 `BashTool`、`FileEditTool` 和 `MCP` 等工具，无论后端提供商如何。 它支持多种 LLM 提供商，包括 OpenAI 兼容 API、Anthropic、Google Gemini、AWS Bedrock 以及 Ollama 等本地提供商。 项目还包含一个持久化记忆系统，通过“memdir”和知识图谱来维护代理的状态和项目上下文。<cite repo=\"Gitlawb/openclaude\" path=\"Gitlawb/openclaude\" start=\"8.2\" end=\"8.2\" /> 此外，它提供了一个基于 React 的终端 UI，以及一个用于动态多提供商请求路由的 Python `smart_router` 工具。\n\n**技术亮点**\n该项目引入了一个 OpenAI 兼容层 (shim)，能够将 Anthropic 风格的 SDK 调用转换为 OpenAI Chat Completions API 格式，反之亦然，从而增强了提供商的互操作性。 它采用分层架构，通过提供商层、工具系统和代理循环连接用户终端到各种 LLM 后端。 启动过程包括环境引导、配置加载、提供商验证和风格化的启动屏幕渲染。<cite repo=\"Gitlawb/openclaude\" path=\"Gitlawb/openclaude\" start=\"2.1\" end=\"2.1\" /> 记忆系统采用混合存储架构，结合 SQLite、JSON 和 Orama 进行知识图谱的存储和检索。<cite repo=\"Gitlawb/openclaude\" path=\"Gitlawb/openclaude\" start=\"8.2\" end=\"8.2\" />\n\n**适合谁用**\nOpenClaude 适合需要统一、模型无关的编码代理 CLI 工作流的开发者和团队。 它特别适用于希望利用本地模型进行私有工作流、优化 LLM 使用成本，或在不同 LLM 提供商之间无缝切换的用户。 此外，对于需要持久化项目上下文和团队知识，并通过知识图谱进行检索的软件工程师和项目团队，OpenClaude 也是一个理想选择。<cite repo=\"Gitlawb/openclaude\" path=\"Gitlawb/openclaude\" start=\"8.2\" end=\"8.2\" />",
+      "degraded": false
+    },
+    {
+      "id": "Imbad0202/academic-research-skills",
+      "owner": "Imbad0202",
+      "name": "academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "stars": 44859,
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "one_liner": "本项目是一套全面的Claude Code学术研究技能套件，支持从研究到论文发表的全流程，旨在提升学术产出质量与效率。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决学术研究和论文撰写过程中效率低下、质量难以保证以及AI工具可能引入的幻觉和不一致性问题。它通过提供结构化的工作流和严格的质量控制，帮助研究人员避免AI生成内容的常见缺陷，例如实现错误、幻觉实验结果和引用幻觉等。\n\n**核心功能**\n本项目包含四个核心技能：深度研究（`deep-research`）、学术论文撰写（`academic-paper`）、学术论文评审（`academic-paper-reviewer`）和学术流程编排（`academic-pipeline`）。这些技能可以独立使用，也可以通过10阶段的编排器协同工作，覆盖研究问题制定、文献综述、论文撰写、同行评审和修订等环节。例如，`deep-research` 提供8种模式进行深度研究，包括系统性文献回顾和事实核查；`academic-paper` 提供11种模式用于论文撰写，支持多种引用格式和论文结构；`academic-paper-reviewer` 提供6种模式进行多视角评审，并有0-100分的质量评分标准。\n\n**技术亮点**\n项目采用“人机协作”模式，强调AI作为“副驾驶”而非“机长”。它集成了多项创新技术，如L3主张忠实度审计（`L3 Claim-Faithfulness Audit`）以验证引用内容的准确性，跨索引三角验证（`Cross-Index Triangulation`）来检测幻觉引用，以及“材料护照”（`Material Passport`）机制追踪研究产物的来源和验证状态。此外，项目还引入了“魔鬼代言人让步阈值”（`Devil's Advocate Concession Threshold`）和“对话健康度指标”（`Dialogue Health Indicator`）等机制，以对抗AI的谄媚倾向和框架锁定问题。\n\n**适合谁用**\n本项目主要面向需要进行严谨学术研究和撰写高质量论文的研究人员、学者和学生。特别是那些希望利用AI工具提升效率，同时又关注学术诚信和内容质量的用户。它支持多种语言和引用格式，并能适应不同类型的论文结构，使其适用于广泛的学术领域。",
+      "degraded": false
+    },
+    {
+      "id": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "stars": 29441,
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "one_liner": "OpenMAIC 是一个开源的 AI 互动课堂平台，通过多智能体协作，将任何主题或文档转化为丰富的互动学习体验。",
+      "detail_md": "**解决什么问题**\nOpenMAIC 旨在解决传统在线教育中互动性不足、内容生成效率低下的问题。  它通过 AI 自动生成课程内容，并引入多智能体进行实时讲解和讨论，从而提升学习体验的沉浸感和互动性。 \n\n**核心功能**\n该平台的核心功能包括一键生成课堂，用户只需提供主题或材料，AI 即可在几分钟内构建完整课程。  它支持多智能体课堂，AI 教师和同学能够实时授课、讨论和互动。  此外，OpenMAIC 提供丰富的场景类型，如幻灯片、测验、交互式模拟和项目制学习（PBL）。  智能体还支持白板绘图和语音讲解，并能灵活导出为 `.pptx` 或 `.html` 格式。 \n\n**技术亮点**\nOpenMAIC 的技术亮点在于其多智能体编排能力，通过 LangGraph 状态机管理智能体间的轮次和讨论。  它采用两阶段生成流水线，先生成大纲再生成场景内容。  平台还具备回放引擎和动作引擎，支持 28 种以上动作类型，如语音、白板绘图、聚光灯等。  此外，它支持多种 LLM 服务商和媒体提供商，并能通过 OpenClaw 集成到聊天应用中。 \n\n**适合谁用**\nOpenMAIC 适合需要高效创建互动式学习内容的教育工作者、培训师以及希望通过 AI 提升学习体验的学生。  对于开发者而言，其模块化的架构和开源特性也为二次开发和定制提供了便利。",
+      "degraded": false
+    },
+    {
+      "id": "iv-org/invidious",
+      "owner": "iv-org",
+      "name": "invidious",
+      "url": "https://github.com/iv-org/invidious",
+      "stars": 23754,
+      "description": "Invidious is an alternative front-end to YouTube",
+      "one_liner": "Invidious 是一个开源的 YouTube 替代前端，旨在提供无广告、无追踪的 YouTube 观看体验。",
+      "detail_md": "**解决什么问题**\nInvidious 旨在解决 YouTube 官方平台存在的广告、用户追踪以及对用户隐私的侵犯问题。  它通过提供一个轻量级、无 JavaScript 依赖的替代方案，让用户能够更纯粹地观看视频。 \n\n**核心功能**\n核心功能包括视频播放、订阅管理（独立于 Google）、通知、仅音频模式、支持 Reddit 评论以及多语言界面。  它还支持导入/导出用户数据和订阅，以及嵌入视频。  视频播放页面 (`src/invidious/views/watch.ecr`) 提供了视频播放器、视频元数据、描述、评论区和相关视频等功能。 \n\n**技术亮点**\nInvidious 不使用官方 YouTube API，而是通过与 YouTube 的内部 API (InnerTube) 交互来获取视频数据，从而避免追踪和 API 限制。   它使用 Crystal 语言开发，并利用 Kemal 框架处理路由。  项目支持国际化，通过 JSON 语言文件 (`locales/*.json`) 实现多语言界面和复杂的复数规则。  \n\n**适合谁用**\nInvidious 适合注重隐私、希望摆脱广告和追踪的用户，以及希望在没有 Google 账户的情况下管理 YouTube 订阅的用户。   对于开发者而言，它提供了一个开放的 API，可用于构建自己的应用。",
+      "degraded": false
+    },
+    {
+      "id": "jingyaogong/minimind",
+      "owner": "jingyaogong",
+      "name": "minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "stars": 57029,
+      "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+      "one_liner": "MiniMind 是一个开源项目，旨在以极低的成本和时间训练小型语言模型，并提供完整的LLM训练链路和教程。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决大型语言模型训练门槛高、资源消耗大、底层机制难以理解的问题。  它通过提供一个可复现、可理解、可扩展的起点，让个人用户也能从零开始训练小型语言模型，从而深入理解LLM的内部运作机制。 \n\n**核心功能**\nMiniMind 提供完整的LLM结构代码（Dense + MoE），并对齐 `Qwen3 / Qwen3-MoE` 生态。  它覆盖了预训练（Pretrain）、监督微调（SFT）、LoRA、RLHF（DPO）、RLAIF（PPO / GRPO / CISPO）、工具使用（Tool Use）、Agentic RL、自适应思考和模型蒸馏等完整的训练流程。  项目还提供了全阶段开源数据、Tokenizer训练代码，并兼容主流框架如 `transformers`、`trl`、`peft` 以及推理引擎 `llama.cpp`、`vllm`、`ollama`。 \n\n**技术亮点**\n该项目所有核心算法代码均从零使用 PyTorch 原生实现，不依赖第三方库的高层抽象接口。  它支持单机单卡与单机多卡训练，并支持 `wandb` / `swanlab` 可视化。  MiniMind-3 的Tokenizer基于 `BPE + ByteLevel` 更新，词表大小为6400，并新增了工具调用和思考标记。   此外，它还支持通过 YaRN 实现 RoPE 长文本外推。 \n\n**适合谁用**\n本项目适合希望深入理解LLM底层机制、从零开始训练语言模型的开发者和学习者。  对于资源有限但希望进行LLM实践的个人用户，MiniMind 提供了一个低成本（约3块钱）和短时间（约2小时）的训练路径。   同时，它也为希望进行Agentic RL、工具使用等高级功能研究的用户提供了完整的训练和推理支持。",
+      "degraded": false
+    },
+    {
+      "id": "3b1b/manim",
+      "owner": "3b1b",
+      "name": "manim",
+      "url": "https://github.com/3b1b/manim",
+      "stars": 92540,
+      "description": "Animation engine for explanatory math videos",
+      "one_liner": "ManimGL 是一个用于创建精确的程序化动画，特别是解释性数学视频的 OpenGL 动画引擎。",
+      "detail_md": "## 解决什么问题\nManimGL 旨在解决创建高质量、精确且易于理解的数学解释视频的挑战。它通过提供一个基于 Python 的框架，让用户能够以编程方式定义复杂的数学概念和动画，从而避免了传统动画制作的繁琐和不精确。\n\n## 核心功能\nManimGL 的核心功能包括场景管理、Mobject（数学对象）层次结构、动画引擎和渲染管道。`Scene` 类作为动画的主要容器，管理从设置到渲染的生命周期。所有视觉元素都继承自 `Mobject`，其中 `VMobject` 提供矢量图形功能。`Animation` 基类定义了所有动画的接口，并通过 `Scene` 的 `play()` 调用进行编排。`SceneFileWriter` 负责通过 FFmpeg 生成视频输出。\n\n## 技术亮点\nManimGL 的技术亮点在于其 GPU 加速渲染能力，通过 OpenGL 和 GLSL 实现。它支持 Python 3.10+，并利用 NumPy 进行数值计算，Pango 和 LaTeX 进行文本和数学排版。该项目还提供了交互式开发模式，允许用户通过 `embed()` 方法在 IPython shell 中实时操作场景。\n\n## 适合谁用\nManimGL 主要适合需要创建高质量数学解释视频的教育工作者、数学家、科学家和内容创作者。它也适用于希望通过编程方式精确控制动画的开发者和研究人员。对于希望贡献代码或进行深度定制的用户，项目提供了开发安装方式。",
+      "degraded": false
+    },
+    {
+      "id": "firecrawl/pdf-inspector",
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "stars": 17903,
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "one_liner": "`pdf-inspector` 是一个快速的 Rust PDF 解析器，用于分类 PDF 并将原生文本提取为结构化 Markdown，支持多种语言绑定。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决从 PDF 中高效提取结构化文本的问题，特别是区分文本型 PDF 和扫描型 PDF，并为 AI 代理提供优化过的、语义质量高的 Markdown 输出。它通过智能类型检测避免了不必要的 OCR 处理，从而提高了处理速度和效率。\n\n### 核心功能\n`pdf-inspector` 的核心功能包括 PDF 类型分类（TextBased, Scanned, ImageBased, Mixed）、文本提取、布局分析（如列检测和阅读顺序重构）、表格结构恢复 以及将提取内容转换为语义化 Markdown。它还支持选择性 OCR，仅对需要 OCR 的页面进行处理。\n\n### 技术亮点\n该项目采用 Rust 编写，以实现高性能。它使用三种表格检测策略（基于矩形、基于线条和启发式）按优先级顺序运行。列检测使用水平投影直方图。此外，它还支持多种语言绑定，包括 Node.js (通过 `napi-rs`)、Python (通过 `PyO3`)  和 WebAssembly。\n\n### 适合谁用\n`pdf-inspector` 适合需要从 PDF 中快速、准确地提取结构化文本并转换为 Markdown 的开发者和系统，特别是那些为 AI 代理处理文档的场景。它也适用于需要对 PDF 进行分类、分析布局或进行表格提取的应用程序。",
+      "degraded": false
+    },
+    {
+      "id": "browser-use/video-use",
+      "owner": "browser-use",
+      "name": "video-use",
+      "url": "https://github.com/browser-use/video-use",
+      "stars": 22911,
+      "description": "Edit videos with coding agents",
+      "one_liner": "本项目通过对话式交互，利用大型语言模型（LLM）智能编辑视频，实现从原始素材到精修成片的自动化流程，无需预设或菜单。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统视频编辑中耗时且复杂的痛点，特别是对于非专业用户而言。它通过将高层级的编辑意图（例如“让视频更具电影感”）转化为低层级的媒体操作，弥合了自然语言指令与视频处理之间的鸿沟。LLM无需观看视频，而是通过“阅读”视频的文本转录和按需生成的视觉合成图来理解和编辑视频，从而避免了处理大量原始视频帧的低效问题。\n\n**核心功能**\n核心功能包括自动剪辑填充词和静默片段、自动色彩校正每个片段、在每次剪辑处应用30毫秒的音频淡入淡出以消除爆音、根据用户风格烧录字幕、通过并行子代理生成动画叠加层，以及在向用户展示之前对渲染输出进行自我评估。项目还支持会话记忆持久化，以便在不同会话间恢复工作。\n\n**技术亮点**\n该项目采用“文本优先，按需视觉”的哲学。它将视频转换为结构化的文本格式`takes_packed.md`，作为LLM的主要“阅读”视图。当需要特定视觉决策时，系统会按需生成高密度的视觉合成图`timeline_view.py`，结合影片胶片、音频波形和文字标签，以PNG图像形式呈现。渲染管道遵循严格的“硬性规则”，例如字幕最后应用、分段提取后进行无损拼接，以及30毫秒的音频淡入淡出，确保生产质量。\n\n**适合谁用**\n本项目适合任何希望通过对话式交互快速、高效地编辑视频的用户。无论是制作访谈、教程、旅行视频还是蒙太奇，它都能处理各种内容类型，无需预设或复杂的菜单操作。对于需要自动化视频编辑流程，并希望LLM能够理解并执行复杂编辑指令的开发者和内容创作者来说，这是一个理想的工具。",
+      "degraded": false
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 41518,
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "one_liner": "该项目是一个全面的AI代理技能集合，旨在将AI编码代理转变为专业的科研助手，支持生物、化学、医学和工程领域的复杂多步骤工作流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决科研人员在进行科学研究时面临的数据获取、分析、可视化和报告撰写等复杂任务。  它通过提供预构建的技能，将自然语言的研究意图转化为可执行的科学代码，从而简化和加速科研工作流程。 \n\n**核心功能**\n核心功能包括统一访问78+公共科学数据库、精选的70+科学Python包、与实验室信息管理系统（LIMS）和云平台的集成，以及用于假设生成、文献综述和科学写作的分析工具。例如，它提供了生成信息图表、LaTeX海报 和科学示意图 的技能。\n\n**技术亮点**\n该项目遵循开放的Agent Skills标准，使其兼容多种AI代理。每个技能都是一个自包含的目录，包含定义其能力和环境要求的`SKILL.md`规范。系统架构依赖于`SKILL.md`前端信息来告知AI代理可用工具和约束。\n\n**适合谁用**\n该项目适合需要AI辅助进行科学研究的科研人员、生物学家、化学家、医学专家和工程师。它也适用于希望将AI编码代理转化为专业研究助手的开发者和组织。",
+      "degraded": false
+    },
+    {
+      "id": "handsomestWei/patent-disclosure-skill",
+      "owner": "handsomestWei",
+      "name": "patent-disclosure-skill",
+      "url": "https://github.com/handsomestWei/patent-disclosure-skill",
+      "stars": 6676,
+      "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+      "one_liner": "本项目能将项目文档转化为专业的中国专利技术交底书，并支持查新、脱敏、图示生成及版本迭代管理。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决专利申请过程中技术交底书撰写效率低、格式不规范、查新困难以及版本管理混乱等问题。它自动化了从项目文档中挖掘专利点、进行现有技术检索、生成符合规范的交底书，并支持对交底书进行迭代修订和追溯修改记录。  \n\n**核心功能**\n核心功能包括项目文档扫描与专利点挖掘、优先检索中国国家知识产权局公布公告站进行查新、基于脱敏模板生成技术交底书（支持 Mermaid 图示自动渲染为 PNG 并输出 Word 格式）、交底书自检，以及支持迭代模式下的合并与纠错，并记录修订历史。\n\n**技术亮点**\n技术亮点在于其遵循 AgentSkills 标准，通过 `SKILL.md` 编排整个工作流。它能将 Word/PPT 文档转换为 Markdown 进行扫描，利用 `cnipa_epub_search.py` 精准爬取国知局数据，并使用 `mermaid_render.py` 将 Mermaid 图示渲染为 PNG 嵌入 Word 文档。交付文件采用严格的 `{案件名}_{YYYYMMDDHHmmss}.md/.docx` 命名规范，确保版本可追溯。\n\n**适合谁用**\n本工具适合需要撰写中国专利技术交底书的工程师、研发人员以及专利代理人。特别是那些拥有大量项目文档但缺乏专利撰写经验，或希望提高交底书撰写效率、确保格式规范、并有效管理修订历史的用户。",
+      "degraded": false
+    },
+    {
+      "id": "VoltAgent/awesome-design-md",
+      "owner": "VoltAgent",
+      "name": "awesome-design-md",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "stars": 112696,
+      "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+      "one_liner": "该项目是一个精选的设计系统规范集合，旨在帮助AI编码代理生成像素完美的UI。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决AI代理在生成用户界面时难以实现像素完美和设计一致性的问题。。传统的Figma导出或JSON Schema对LLM不友好，而Markdown格式的`DESIGN.md`文件能被LLM高效读取，从而弥合了抽象设计规则与具体实现之间的鸿沟。\n\n\n\n## 核心功能\n核心功能是提供一系列遵循`DESIGN.md`格式的设计系统规范。每个设计系统条目都包含一个`DESIGN.md`文件（供AI代理读取的设计系统）、一个`preview.html`文件（展示颜色样本、排版等）和一个`preview-dark.html`文件（暗色模式下的视觉目录）。用户可以将选定的`DESIGN.md`文件复制到项目根目录，并指示AI代理使用它来构建页面。\n\n\n\n## 技术亮点\n该项目的技术亮点在于采用了Google Stitch引入的`DESIGN.md`概念。`DESIGN.md`是一个纯文本设计系统文档，优化了LLM的消费方式，使其能够直接理解设计规范，无需复杂的解析或配置。每个`DESIGN.md`文件都遵循扩展的Stitch格式，包含九个强制性部分，如视觉主题、调色板、排版规则、组件样式等。\n\n\n\n## 适合谁用\n该项目适合需要AI编码代理生成一致且像素完美UI的开发者和团队。特别是那些希望利用AI代理快速构建前端界面，并确保设计系统严格遵循的开发者。它也适用于希望为AI代理提供结构化设计参考的设计师和工程师。",
+      "degraded": false
+    },
+    {
+      "id": "averygan/reclip",
+      "owner": "averygan",
+      "name": "reclip",
+      "url": "https://github.com/averygan/reclip",
+      "stars": 7630,
+      "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+      "one_liner": "ReClip 是一个自托管的开源媒体下载工具，提供简洁的网页界面，支持从 1000 多个网站下载视频和音频。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决用户从各种在线平台下载视频和音频的痛点，特别是那些不提供直接下载选项的网站。  它通过统一的界面和强大的后端工具 `yt-dlp`，简化了从 YouTube、TikTok、Instagram 等 1000 多个网站获取媒体内容的过程。 \n\n## 核心功能\nReClip 的核心功能包括：支持从 1000 多个网站下载视频；可选择下载 MP4 视频或 MP3 音频；提供质量/分辨率选择器；支持批量下载，用户可以一次粘贴多个 URL；以及自动 URL 去重功能。\n\n## 技术亮点\n该项目后端使用 Python 和 Flask 实现，代码量少（约 150 行）；前端采用原生 HTML/CSS/JS，无需构建步骤。它利用 `yt-dlp` 作为下载引擎，支持广泛的平台，并使用 `ffmpeg` 进行音频转换和视频合并。下载任务通过后台线程 `threading.Thread`  处理，并通过 `/api/status/<job_id>` 接口  实时更新下载状态。\n\n## 适合谁用\nReClip 适合需要从各种在线平台下载媒体内容的用户，特别是那些希望拥有一个简洁、自托管且功能强大的下载工具的用户。它也适合开发者或技术爱好者，可以轻松部署和定制。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 245749,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "ECC 是一个将 AI 编码助手转变为高自主性工程伙伴的智能体操作系统。",
+      "detail_md": "**解决什么问题**\nECC 旨在弥合大型语言模型 (LLM) 能力与专业软件工程之间的鸿沟，通过强制执行测试驱动开发 (TDD)、安全优先验证和不变性模式来提升 AI 编码助手的自主性。它将自然语言意图转化为可操作的代码实体。\n\n**核心功能**\n该项目提供 68 个专业智能体、286+ 技能和跨平台控制平面，支持多种 AI 编码环境，如 Claude Code、Codex、OpenCode、Cursor 和 Gemini。核心组件包括用于特定领域指令的 `agents/`、可重用工作流的 `skills/`、编码标准的 `rules/`、事件触发自动化的 `hooks/` 以及兼容性命令的 `commands/`。它还集成了 AgentShield 进行安全扫描和供应链强化。\n\n**技术亮点**\nECC 具有多平台可移植性，允许在不同 AI 编码环境中重用技能和规则。它通过 `ecc memory` 使用可检查的 Markdown 文档在不同平台间传递上下文，并支持持续学习，从会话中提取模式以形成可重用技能。项目结构模块化，允许通过配置文件选择性安装组件。\n\n**适合谁用**\nECC 适合希望将 AI 编码助手转变为高自主性工程伙伴的开发者和团队。它特别适用于需要强制执行 TDD、安全标准和不变性模式的专业软件工程环境。",
+      "degraded": false
+    },
+    {
+      "id": "unclecode/crawl4ai",
+      "owner": "unclecode",
+      "name": "crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "stars": 80837,
+      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+      "one_liner": "Crawl4AI 是一个开源的、对 LLM 友好的网络爬虫和数据抓取工具，能将网页内容转化为结构化的 Markdown 格式。",
+      "detail_md": "**解决什么问题**\nCrawl4AI 旨在解决传统网络爬虫在为大型语言模型（LLM）提供数据时面临的挑战，例如输出格式不统一、包含大量无关信息以及难以进行结构化数据提取等问题。   它通过生成干净、结构化的 Markdown 内容，并支持 LLM 驱动的提取，使得网络数据能够高效、准确地用于 RAG (Retrieval Augmented Generation) 系统、智能代理和数据管道。  \n\n**核心功能**\n该项目提供多项核心功能，包括生成对 LLM 友好的 Markdown 输出，支持结构化数据提取（如 CSS、XPath 和 LLM 驱动的提取），以及高级浏览器控制（如会话管理、代理和隐身模式）。    它还具备高性能特性，例如异步浏览器池和缓存机制，以实现快速抓取。  \n\n**技术亮点**\nCrawl4AI 的技术亮点在于其 LLM 就绪的输出能力，能够生成带有标题、表格、代码和引用提示的智能 Markdown。  它采用 BM25 算法进行内容过滤，以提取核心信息并去除无关内容。  此外，它支持多种浏览器（Chromium, Firefox, WebKit），并提供动态视口调整和全页扫描等功能，以应对动态网页内容。  \n\n**适合谁用**\nCrawl4AI 适合需要从网络获取高质量、结构化数据以供 LLM 使用的开发者、数据科学家、研究人员和企业。   尤其适用于构建 RAG 管道、智能代理或需要大规模、经济高效地进行网络数据提取的场景。",
+      "degraded": false
+    }
+  ]
+}
