@@ -1,0 +1,215 @@
+{
+  "doc_token": "GyXidaEixohTUVxvFRwceZlonqb",
+  "doc_url": "https://my.feishu.cn/docx/GyXidaEixohTUVxvFRwceZlonqb",
+  "items": [
+    {
+      "id": "fmtlib/fmt",
+      "owner": "fmtlib",
+      "name": "fmt",
+      "url": "https://github.com/fmtlib/fmt",
+      "stars": 24226,
+      "description": "A modern formatting library",
+      "one_liner": "{fmt} 是一个开源的 C++ 格式化库，提供比 C `stdio` 和 C++ `iostreams` 更快、更安全的替代方案，并支持 C++20 `std::format` 和 C++23 `…",
+      "detail_md": "{fmt} 是一个开源的 C++ 格式化库，提供比 C `stdio` 和 C++ `iostreams` 更快、更安全的替代方案，并支持 C++20 `std::format` 和 C++23 `std::print` 标准。\n\n### 解决什么问题\n{fmt} 库旨在解决 C `stdio` 和 C++ `iostreams` 在性能、类型安全和易用性方面的不足。 它通过在编译时报告格式字符串错误来防止缓冲区溢出，并提供比标准库实现更快的格式化速度。\n\n### 核心功能\n该库提供类似 Python 的格式化语法，支持位置参数，并实现了 C++20 `std::format` 和 C++23 `std::print` 的大部分功能。 它还包括一个类型安全的 `printf` 实现， 以及对用户自定义类型的扩展支持。 此外，它还提供日期时间格式化 (`fmt/chrono.h`)、容器格式化 (`fmt/ranges.h`)、文件 I/O (`fmt/os.h`) 和终端样式 (`fmt/color.h`) 等专业模块。\n\n### 技术亮点\n{fmt} 库以其高性能著称，例如使用 Dragonbox 算法进行浮点格式化， 并且在许多基准测试中优于 `printf` 和 `iostreams`。 它采用类型擦除技术来减少模板实例化膨胀，从而实现快速编译和较小的二进制文件大小。 库的核心代码量小，无外部依赖，并支持多种平台和编译器。\n\n### 适合谁用\n该库适用于需要高性能、类型安全和易用性的 C++ 开发者，特别是那些希望替代传统 `stdio` 或 `iostreams` 进行字符串格式化和输出的场景。 它被许多知名项目使用，包括 Blender、PyTorch、Apple 的 FoundationDB 和 Windows Terminal 等， 表明其在工业级应用中的可靠性和广泛认可。",
+      "degraded": false
+    },
+    {
+      "id": "google-research/timesfm",
+      "owner": "google-research",
+      "name": "timesfm",
+      "url": "https://github.com/google-research/timesfm",
+      "stars": 29741,
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "one_liner": "TimesFM 是 Google Research 开发的预训练时间序列基础模型，用于零样本时间序列预测。",
+      "detail_md": "### 解决什么问题\nTimesFM 旨在解决传统时间序列预测方法需要为每个时间序列单独训练模型的问题。它提供了一种零样本预测能力，无需针对特定数据集进行训练，即可对各种单变量时间序列（如销售、传感器读数、股票价格等）进行预测。此外，它还能提供带有校准预测区间的概率预测。\n\n### 核心功能\nTimesFM 的核心功能包括：\n*   **零样本预测**：无需训练即可对任何单变量时间序列进行预测。\n*   **点预测和分位数预测**：生成单个预测值和多达 10 个分位数水平的分布预测。\n*   **协变量支持**：通过 XReg 支持动态数值/分类和静态分类协变量。\n*   **长上下文和长预测范围**：支持高达 16,384 个时间步的上下文长度和高达 1,000 个时间步的预测范围。\n\n### 技术亮点\nTimesFM 的技术亮点包括：\n*   **基于 Transformer 的基础模型**：TimesFM 2.5 是一个 200M 参数的解码器专用 Transformer 模型。\n*   **多后端支持**：提供 PyTorch 和 Flax/JAX 两种推理后端。\n*   **高效的内存管理**：通过 `ForecastConfig` 配置 `max_context` 和 `per_core_batch_size` 来优化内存使用。\n*   **系统预检工具**：提供 `check_system.py` 脚本，用于在模型加载前检查系统资源，防止内存溢出。\n\n### 适合谁用\nTimesFM 适合需要对各种单变量时间序列进行零样本预测的用户。它适用于需要概率预测（带有预测区间）的场景，以及需要批量预测大量时间序列的用户。对于希望利用基础模型方法而非手动调整传统统计模型参数的用户，TimesFM 也是一个理想选择。此外，它还支持通过协变量进行更复杂的预测。",
+      "degraded": false
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 121473,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail 是一个 AI 代理规则集，旨在通过强制执行极简主义和优先使用现有解决方案来减少代码臃肿和过度工程化。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 代理在生成代码时常见的过度工程化、代码臃肿和不必要的依赖问题。通过遵循一套“懒惰高级开发者”的原则，Ponytail 显著减少了代码行数、降低了开发成本并提高了开发速度，同时确保了代码的安全性。\n\n**核心功能**\nPonytail 的核心功能是其“阶梯”决策逻辑。在编写代码之前，AI 代理会按照以下步骤进行决策：首先判断功能是否需要存在（YAGNI原则），然后依次考虑是否可重用现有代码、标准库功能、原生平台特性、已安装依赖，最后才编写最少量的代码。它还提供多种模式（lite、full、ultra）来控制严格程度。\n\n**技术亮点**\nPonytail 的技术亮点在于其高度的可移植性和跨平台支持。它通过薄适配器（thin adapters）将核心规则分发到各种 AI 代理环境，如 Claude Code、Codex、GitHub Copilot CLI、Gemini CLI 等。项目结构清晰，将核心逻辑（`skills/`）与平台特定的适配器代码分离。\n\n**适合谁用**\nPonytail 适合希望提高 AI 代理生成代码质量、减少代码量、降低开发和运行成本的开发者和团队。特别是那些在使用 AI 代理时遇到过度工程化、不必要的抽象或依赖问题的用户。它支持多种主流 AI 代理平台，因此适用于广泛的开发场景。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 14668,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的桌面应用，提供实时听写、零样本语音克隆和电影级视频配音功能，支持 646 种语言，所有操作均在本地设备上完成，无需云服务或 API 密钥。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 旨在解决传统语音工具依赖云服务、按字符收费、数据隐私风险以及语言支持有限的问题。它通过在本地设备上运行所有功能，确保用户数据的隐私和安全，并提供广泛的语言支持，避免了高昂的云服务费用和使用限制。\n\n**核心功能**\n*   **语音克隆**：通过短音频样本（通常 3-10 秒）即可复制任何声音，支持零样本克隆。\n*   **声音设计**：用户可以从零开始创建新声音，自定义性别、年龄、口音、音高和情感等属性。\n*   **视频配音**：提供端到端的配音流程，包括转录、翻译、重新配音和时间轴对齐，最终可导出为 MP4 格式。\n*   **多语言支持**：支持 646 种语言的 TTS（文本转语音）和 99 种语言的转录。\n*   **有声书编辑器**：支持将文本、EPUB 或 PDF 转换为分章的 .m4b 有声书。\n\n**技术亮点**\n*   **本地优先架构**：所有功能均在用户本地设备上运行，无需账号、API 密钥或云端交互，确保数据隐私和安全性。\n*   **多引擎支持**：集成了 14 个 TTS 引擎和 10 个 ASR（自动语音识别）引擎，并支持 GPU 预检和智能路由，避免静默回退到 CPU。\n*   **AI 溯源**：所有合成音频都嵌入了 AudioSeal 不可见水印，以确保安全性和可追溯性。\n*   **跨平台兼容性**：提供 macOS、Windows 和 Linux 桌面安装程序，并自动检测 CUDA、MPS 或 ROCm 加速。\n*   **国际化支持**：内置强大的国际化系统，支持 21 种语言的 UI 界面，并通过 Locale Parity Ratchet Test 确保翻译质量。\n\n**适合谁用**\nVoiceStudio 适合关心声音质量、注重数据隐私的创作者、视频制作人、有声书作者以及任何需要进行语音合成、克隆或配音的用户。它特别适合那些希望在本地设备上完成所有工作，避免云服务依赖和高昂费用的用户。",
+      "degraded": false
+    },
+    {
+      "id": "sngyai/Sequoia-X",
+      "owner": "sngyai",
+      "name": "Sequoia-X",
+      "url": "https://github.com/sngyai/Sequoia-X",
+      "stars": 6029,
+      "description": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
+      "one_liner": "Sequoia-X V2 是一个面向 A 股市场的量化选股系统，每日自动筛选股票并推送结果。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 A 股市场中量化选股的自动化问题，通过自动化数据获取、策略执行和结果通知，规避了东方财富等数据源的反爬问题，并确保了数据的一致性和准确性。\n\n### 核心功能\nSequoia-X V2 的核心功能包括：\n*   **数据同步**：从 `baostock` 免费获取 A 股历史及增量日 K 数据（后复权），并存储于本地 SQLite 数据库。支持日常模式（8 进程增量更新）和回填模式（全市场历史数据一次性灌入）。\n*   **策略执行**：内置多种量化选股策略，如海龟交易、均线放量突破、RPS 相对强度突破等。策略通过 `BaseStrategy.run()` 接口执行。\n*   **结果通知**：将选股结果通过飞书（Lark）互动卡片的形式推送给用户，支持根据策略类型路由到不同的飞书机器人。\n\n### 技术亮点\n*   **OOP 架构与工程化**：系统基于现代 Python 工程化标准重构，采用面向对象编程（OOP）架构。\n*   **向量化计算**：策略执行中广泛使用 `pandas` 进行向量化计算，提高数据处理效率。例如，`TurtleTradeStrategy` 在计算滚动最高价时避免了 `iterrows`。\n*   **增量数据更新与多进程**：数据引擎 `DataEngine` 支持增量数据更新，并通过 `multiprocessing.Pool` 实现多进程并行拉取数据，显著提升了数据同步速度。\n*   **Pydantic 配置管理**：使用 `Pydantic` 进行环境配置管理和验证，支持 `.env` 文件和环境变量覆盖。\n\n### 适合谁用\n该项目适合需要自动化 A 股市场量化选股、希望通过技术分析策略筛选股票，并接收实时选股通知的个人投资者或量化研究者。特别是那些希望利用免费数据源 `baostock`，并能接受飞书作为通知渠道的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 50625,
+      "description": "Chrome DevTools for coding agents",
+      "one_liner": "本项目提供了一个响应格式化系统，用于聚合来自多个收集器的数据，并为MCP客户端生成结构化输出。",
+      "detail_md": "**解决什么问题**\n该项目解决了将各种工具执行结果和收集到的数据，统一格式化为人类可读文本、图像和机器可读结构化内容的问题。它通过一个两阶段模式实现，即配置阶段和执行阶段，从而简化了数据处理和输出的复杂性。\n\n**核心功能**\n核心功能包括数据聚合和输出格式生成。`McpResponse` 类允许工具配置要包含的数据，例如页面列表、快照、网络请求和控制台数据。然后，它会从 `McpContext` 中检索这些数据，并将其格式化为文本内容数组、图像内容数组和结构化对象。\n\n**技术亮点**\n技术亮点在于其构建器模式和灵活的输出格式化能力。`McpResponse` 类通过一系列配置方法（如 `setIncludePages()`、`includeSnapshot()`、`setIncludeNetworkRequests()` 等）来声明要包含的数据。它还提供了 `NetworkFormatter` 和 `ConsoleFormatter`，用于处理网络请求和控制台消息的详细格式化，包括请求体截断、重定向链解析、堆栈跟踪生成和消息分组等。\n\n**适合谁用**\n该项目适合需要从Chrome DevTools中收集和处理各种浏览器数据，并以统一、可编程的方式输出的开发者和工具。例如，自动化测试框架、性能分析工具或任何需要与浏览器交互并获取详细调试信息的应用程序都可以利用此项目。",
+      "degraded": false
+    },
+    {
+      "id": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": 240108,
+      "description": "The agent that grows with you",
+      "one_liner": "Hermes Kanban 是一个持久化任务看板，用于协调多个 Hermes Agent 配置文件协作完成工作。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统 `delegate_task` 模式下任务无法持久化、难以人工介入、缺乏审计追踪以及无法跨 Agent 协作的问题。它通过提供一个共享的、持久化的任务协调框架，支持多配置文件和多项目协作，确保工作在 Agent 重启后仍能继续，并允许人类操作员进行干预。\n\n**核心功能**\n核心功能包括任务的创建、列表、显示、认领、完成、阻塞和解除阻塞。它通过 `hermes kanban` CLI 命令  和 Agent 专用的 `kanban_*` 工具集  提供两种操作界面。此外，还提供了一个可视化的 Web 仪表盘插件，支持任务的拖放、实时更新和批量操作。\n\n**技术亮点**\n项目采用 SQLite 数据库作为后端，实现任务、状态转换、消息和 Agent 间通信的持久化。数据库支持 WAL 模式以实现并发读写，并使用 `BEGIN IMMEDIATE` 和比较交换（CAS）语义处理并发和原子性操作。Agent 工具集 `kanban_tools.py` 提供结构化的 JSON 序列化工具，避免了 shell 命令的脆弱性，并提供丰富的错误信息。\n\n**适合谁用**\n该项目适合需要 Agent 之间协作、任务需要持久化、可能需要人工介入、或工作流涉及多个 Agent 角色和项目协调的用户。例如，研究分诊、定时运维、数字孪生、工程流水线和批量任务等场景。",
+      "degraded": false
+    },
+    {
+      "id": "superlinked/sie",
+      "owner": "superlinked",
+      "name": "sie",
+      "url": "https://github.com/superlinked/sie",
+      "stars": 3048,
+      "description": "Open-source inference server and production cluster for all the models your agent needs.",
+      "one_liner": "Superlinked Inference Engine (SIE) 是一个高性能的 Python 推理服务，用于搜索工作负载的嵌入、重排序和小型模型推理。",
+      "detail_md": "**解决什么问题**\nSIE 旨在解决机器学习模型推理在搜索和推荐系统中的性能和部署挑战。它通过提供一个可扩展的推理服务来处理模型加载、GPU 内存管理、自适应批处理和推理任务执行，从而优化了机器学习模型的部署和运行效率。 \n\n**核心功能**\nSIE 的核心功能包括生成嵌入（`encode`）、计算相似度分数（`score`）和执行零样本实体提取（`extract`）。     它支持多种模型，并能通过 REST API 或 Python/TypeScript SDK 进行访问。  \n\n**技术亮点**\nSIE 采用 Python 实现，并利用 FastAPI 提供 REST 接口。   它具备模型热加载、LRU 缓存、动态 LoRA 管理和自适应批处理等高级功能，以最大化 GPU 吞吐量并保持低延迟。     此外，它还支持 OOM 恢复机制，确保系统稳定性。 \n\n**适合谁用**\nSIE 适用于需要高性能、可扩展机器学习推理服务的开发者和企业，特别是在搜索、推荐和自然语言处理等领域。  它支持 LangChain 集成，方便与现有 AI 应用集成。",
+      "degraded": false
+    },
+    {
+      "id": "pacifio/atlas",
+      "owner": "pacifio",
+      "name": "atlas",
+      "url": "https://github.com/pacifio/atlas",
+      "stars": 2855,
+      "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+      "one_liner": "Atlas is a language-agnostic tool for managing and migrating database schemas using modern DevOps p…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nAtlas is a language-agnostic tool for managing and migrating database schemas using modern DevOps principles, offering declarative and versioned workflows for schema definition and migration planning.",
+      "degraded": true
+    },
+    {
+      "id": "zyronon/TypeWords",
+      "owner": "zyronon",
+      "name": "TypeWords",
+      "url": "https://github.com/zyronon/TypeWords",
+      "stars": 9291,
+      "description": "Practice English, one strike, one step forward; 练习英语，一次敲击，一点进步；",
+      "one_liner": "TypeWords 是一个开源的打字学习应用，通过打字练习单词和文章，结合科学复习算法，帮助用户高效提升语言能力和记忆力。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决传统语言学习中死记硬背效率低下、记忆不持久的问题。通过强制用户打字输入，强化肌肉记忆和拼写准确性，并利用间隔重复算法优化复习周期，从而实现更智能、更高效的记忆。  \n\n### 核心功能\n*   **单词练习**：提供跟写、听写、自测、默写等多种模式，并内置音标、发音、例句、词根词源等详细信息。 \n*   **文章记忆**：支持内置经典教材或自定义文章，提供跟写和默写双模式，并支持边听边写，强化语感。 \n*   **智能复习**：集成 FSRS (Free Spaced Repetition Scheduler) 算法，智能规划复习时机，将错词自动加入错词本。  \n*   **高度自定义**：支持丰富的键盘音效、自定义快捷键、词典和文章，以及个性化学习计划。  \n\n### 技术亮点\n*   **多平台支持**：采用高性能 Monorepo 架构，支持 Web 应用和 VS Code 扩展。 \n*   **本地优先数据存储**：数据默认存储在浏览器 IndexedDB 中，支持离线使用，并可选择通过 Supabase 进行云同步。  \n*   **国际化与翻译系统**：提供多语言支持，并集成百度翻译等外部翻译服务，实现学习内容的动态翻译。 \n*   **文本转语音 (TTS)**：支持单词发音和文章朗读，并具备发音 API 失败时回退到浏览器 TTS 的机制。 \n\n### 适合谁用\n该项目适合希望通过打字练习来提高英语词汇量、拼写能力和文章理解能力的用户。尤其适合需要高效记忆、喜欢键盘操作、注重学习数据隐私，以及希望高度定制学习体验的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Imbad0202/academic-research-skills",
+      "owner": "Imbad0202",
+      "name": "academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "stars": 45542,
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "one_liner": "本项目是一套全面的Claude Code技能包，旨在支持学术研究到论文发表的全流程，通过人机协作提升研究质量和效率。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决学术研究过程中AI工具可能带来的结构性限制，例如框架锁定、谄媚倾向和意图检测错误等问题。它通过引入学术诚信验证、反幻觉机制和人机协作模式，确保研究的质量、来源可信度和逻辑一致性，避免AI生成内容中常见的错误和偏见。\n\n**核心功能**\n项目包含四个核心技能：深度研究（`deep-research`）用于研究问题制定和文献综述；学术论文撰写（`academic-paper`）支持论文规划、写作和修订；学术论文评审（`academic-paper-reviewer`）提供多视角同行评审和质量评估；以及学术流程调度器（`academic-pipeline`）协调端到端的研究工作流，包含10个阶段和强制性质量门控。\n\n**技术亮点**\n项目采用多Agent架构，共有35个Agent协同工作。它集成了L3主张忠实度审计、跨索引三角验证和材料护照等反幻觉机制。支持LaTeX、DOCX和PDF等多种输出格式，并能进行引用格式转换。此外，还通过意图匹配和对话健康度指标优化了人机交互，以应对AI的结构性限制。\n\n**适合谁用**\n本项目适合需要AI辅助进行学术研究和论文撰写的学者、研究人员和学生。特别是那些希望在利用AI效率的同时，确保研究成果的质量、准确性和学术诚信的用户。它作为一个“副驾驶”工具，帮助用户处理繁琐工作，让人类专注于高层次的思考和决策。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 246312,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code (ECC) 是一个生产就绪的智能体操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。",
+      "detail_md": "Everything Claude Code (ECC) 是一个生产就绪的智能体操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。它通过集成测试驱动开发、安全优先验证和不变性模式，弥合了大型语言模型能力与专业软件工程之间的鸿沟。\n\n### 解决什么问题\nECC 旨在解决 AI 编码助手在实际软件工程中面临的挑战，例如缺乏高自主性、难以遵循专业开发实践（如 TDD 和安全标准），以及在不同 AI 平台之间缺乏可移植性。它通过提供一个统一的框架来管理和协调 AI 智能体、技能和规则，从而提升开发效率和代码质量。\n\n### 核心功能\nECC 的核心功能包括：\n*   **多 Harness 可移植性**：支持 Claude Code、Codex、Cursor、OpenCode、Gemini 等多种 AI 智能体平台，确保技能和规则的跨平台使用。\n*   **专业智能体舰队**：包含 68 个专业智能体和 286+ 个技能，用于处理复杂的工程任务，如规划、安全审查和构建错误解决。\n*   **安全与持续学习**：集成 AgentShield 进行安全扫描，并通过持续学习系统从会话中提取模式以适应项目需求。\n\n### 技术亮点\nECC 的技术亮点在于其模块化架构和跨平台兼容性。它通过 `agents/`、`skills/`、`rules/`、`hooks/` 和 `commands/` 等组件实现功能分离和可扩展性。特别是，它使用 Rust 编写的控制平面 `ecc2/` 提供会话管理和守护进程功能。此外，ECC 还支持多语言规则架构和交互式安装向导，提升了用户体验。\n\n### 适合谁用\nECC 适合需要将 AI 编码助手集成到专业软件开发流程中的开发者、团队和组织。特别是那些追求高代码质量、强调测试驱动开发、关注安全性和希望在不同 AI 平台之间保持一致开发体验的用户。它也适用于希望通过自动化和智能体编排来优化开发工作流的个人和企业。",
+      "degraded": false
+    },
+    {
+      "id": "protocolbuffers/protobuf",
+      "owner": "protocolbuffers",
+      "name": "protobuf",
+      "url": "https://github.com/protocolbuffers/protobuf",
+      "stars": 71932,
+      "description": "Protocol Buffers - Google's data interchange format",
+      "one_liner": "本项目提供高效、可扩展的数据编码格式，支持多语言平台的数据交换和序列化。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决跨平台、跨语言环境下的数据结构定义、序列化和反序列化问题。它通过定义`.proto`文件来统一数据格式，并自动生成各语言的代码，从而简化数据通信的复杂性。\n\n**核心功能**\n核心功能包括：定义数据结构（通过`.proto`文件）、生成多语言代码（如Java、Objective-C、Python）、数据序列化与反序列化。它还提供针对不同环境优化的运行时，例如Java的完整版和Lite版，以及Python的C++扩展和UPB后端。\n\n**技术亮点**\n技术亮点在于其多语言支持和性能优化。Java实现提供了`protobuf-java`（完整功能）和`protobuf-java-lite`（针对Android优化，无反射）。Objective-C通过`GPBMessage`和`GPBDescriptor`实现消息处理和元数据管理。Python则支持纯Python、C++扩展和UPB多种后端，可根据环境动态选择。Bazel构建系统用于协调多语言代码生成。\n\n**适合谁用**\n本项目适合需要进行高效、可靠跨语言数据交换的开发者和系统。特别是对于微服务架构、移动应用（如Android上的Java Lite）、Web服务（通过JSON转换）以及任何需要结构化数据序列化的场景。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/portless",
+      "owner": "vercel-labs",
+      "name": "portless",
+      "url": "https://github.com/vercel-labs/portless",
+      "stars": 11735,
+      "description": "Replace port numbers with stable, named local URLs. For humans and agents.",
+      "one_liner": "`portless` 是一个 CLI 工具，它将本地开发中的端口号替换为稳定、命名的 `.localhost` URL，并支持局域网共享和公共网络暴露。",
+      "detail_md": "### 解决什么问题\n`portless` 解决了本地开发中常见的端口冲突、记住端口号的麻烦、浏览器标签页内容混淆、单体仓库复杂性、移动端测试以及 HTTPS 配置繁琐等问题。 它通过为每个应用分配一个随机的空闲端口（通常在 4000-4999 范围内）来避免端口冲突，并通过稳定的命名 URL（例如 `myapp.localhost`）来简化访问。此外，它还自动生成并信任本地 CA 证书，从而简化了 HTTPS 的设置。\n\n### 核心功能\n`portless` 的核心功能包括：\n*   **命名 URL 代理**：将本地开发服务器的端口号替换为易于记忆的 `https://<name>.localhost` 形式的 URL。\n*   **自动代理启动与路由注册**：当你运行一个应用时，代理会自动启动（如果尚未运行），并为你的应用注册路由。\n*   **多应用支持**：支持同时运行多个服务，每个服务都可以通过其子域名访问，例如 `https://api.myapp.localhost`。\n*   **Git Worktree 集成**：在 Git worktree 中，会自动将分支名称作为子域名前缀，为每个 worktree 提供唯一的 URL。\n*   **局域网和公共网络共享**：通过 `--lan` 模式支持局域网访问，并通过 `--tailscale`、`--funnel` 和 `--ngrok` 标志支持公共网络暴露。\n*   **诊断工具**：提供 `portless doctor` 命令来检查本地环境健康状况，并提供修复建议。\n\n### 技术亮点\n`portless` 的技术亮点包括：\n*   **持久化反向代理守护进程**：运行一个持久化的反向代理守护进程，通过匹配 `Host` 头将请求路由到正确的应用。\n*   **自动 HTTPS 和 HTTP/2**：默认启用 HTTPS 和 HTTP/2，并自动生成本地 CA 证书并添加到系统信任存储中，无需浏览器警告。\n*   **智能端口分配**：为每个应用分配一个随机的空闲端口，并通过 `PORT` 环境变量注入到子进程中。\n*   **框架兼容性**：对于忽略 `PORT` 环境变量的框架（如 Vite、Astro），`portless` 会自动注入正确的 `--port` 和 `--host` 标志。\n*   **状态管理**：所有代理状态都存储在 `~/.portless` 目录中，包括路由信息、PID 文件和 CA 证书。\n*   **跨平台支持**：支持 macOS、Linux 和 Windows 操作系统。\n\n### 适合谁用\n`portless` 适合需要简化本地开发环境的开发者，特别是那些：\n*   经常遇到端口冲突问题的开发者。\n*   在单体仓库中工作，需要同时运行多个服务的开发者。\n*   需要通过稳定、命名 URL 访问本地应用的开发者。\n*   需要在移动设备或局域网内测试应用的开发者。\n*   需要与团队成员共享本地开发服务器或将其暴露到公共网络的开发者。\n*   希望简化 HTTPS 配置流程的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "blader/humanizer",
+      "owner": "blader",
+      "name": "humanizer",
+      "url": "https://github.com/blader/humanizer",
+      "stars": 40347,
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "one_liner": "本项目是一个用于消除文本中AI生成痕迹的工具，使内容听起来更自然、更具人情味，基于维基百科的AI写作特征指南开发。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决AI生成文本中普遍存在的“AI痕迹”问题。这些痕迹包括过度使用特定词汇、僵化的句式结构、缺乏个性和情感表达等，导致文本听起来不自然、缺乏人情味。通过识别并修正这些模式，本项目帮助用户将AI生成的文本转化为更像人类写作的风格。\n\n### 核心功能\n核心功能是识别并移除文本中的29种AI写作模式。这些模式分为内容、语言、风格、交流以及填充词和模糊表达五大类。此外，它还提供可选的“语音校准”功能，通过分析用户提供的写作样本来匹配其个人写作风格。最终，项目会进行一次“反AI审计”，确保输出文本彻底摆脱AI痕迹并注入个性。\n\n### 技术亮点\n技术亮点在于其双路径处理架构。它结合了“技术路径”进行基于规则的模式修正（如词汇替换、句法简化），以及“创意路径”注入个性（如改变节奏、表达观点）。模式检测采用词法、句法、语义和文体四个分析层。整个系统以Markdown文件 (`SKILL.md`) 实现，通过YAML前置数据定义元数据和运行时指令。\n\n### 适合谁用\n本项目适合任何希望将AI生成文本变得更自然、更具人情味的用户。特别是内容创作者、编辑、学生以及需要确保其书面沟通具有真实人类声音的专业人士。它兼容Claude Code和OpenCode等工具。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 102622,
+      "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+      "one_liner": "Caveman 是一个多层令牌压缩系统，旨在降低 AI 代理（如 Claude Code、Codex、Gemini CLI 等）的交互成本和延迟，同时保持技术准确性。",
+      "detail_md": "**解决什么问题**\n该项目主要解决大型语言模型 (LLM) 交互中高昂的令牌成本和延迟问题。 它通过压缩代理的输入和输出，减少了与 LLM 交互所需的令牌数量。 例如，它能将模型输出令牌减少约 65%， 并将提供商报告的输入令牌减少约 33.2%。\n\n**核心功能**\nCaveman 具有两个主要层：技能层和引擎层。 技能层通过基于系统提示的指令集，使代理生成更简洁的输出，去除冗余词汇和客套话，同时保持 100% 的技术准确性。 引擎层是一个本地 Go 运行时，通过有损但可恢复的压缩技术，缩小代理读取的输入（如日志、工具模式、文件），从而减少输入令牌。 它还支持将密集文本渲染为 PNG 图像，供视觉模型读取，进一步节省令牌。\n\n**技术亮点**\n该项目采用“少用令牌，事半功倍”的核心理念。 它通过 `SKILL.md` 文件作为代理行为的单一事实来源，将自然语言触发器映射到复杂的钩子、规则和二进制压缩器。 引擎层能够识别不同类型的数据（如 JSON、日志、代码），并应用特定的压缩策略，例如保留 JSON 结构、代码签名和错误信息。 此外，它还提供了多种压缩强度级别，包括 `lite`、`full`、`ultra` 和 `wenyan`（文言文模式）， 以及在关键任务中防止误解的“自动清晰度”安全覆盖功能。\n\n**适合谁用**\nCaveman 适用于使用 AI 编码代理（如 Claude Code、Codex、Gemini CLI、Cursor 等 30 多个代理）的开发者和团队。 它可以帮助他们显著降低 LLM 交互的成本和延迟，同时确保技术输出的准确性。 对于希望优化代理性能、减少令牌消耗并保持代码和命令精确性的用户来说，这是一个理想的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 245203,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "本项目是Matt Pocock为AI代理开发的一系列模块化技能，旨在提升软件开发工作流的效率和质量，避免“凭感觉编程”。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决AI代理在软件开发中常见的痛点，包括代理与用户意图不一致、输出过于冗长以及软件熵增过快等问题。通过提供结构化的技能，它帮助AI代理更好地理解需求、减少沟通成本，并遵循工程最佳实践。\n\n### 核心功能\n核心功能包括：通过`/grill-me`和`/grill-with-docs`进行“拷问式”沟通以确保对齐；利用`CONTEXT.md`建立共享语言以减少冗余输出；通过`/tdd`技能实现测试驱动开发，确保代码质量；以及`/improve-codebase-architecture`帮助维护代码库架构。\n\n### 技术亮点\n技术亮点在于其模块化和可组合的技能设计，每个技能都是一个包含`SKILL.md`文件的独立目录。技能分为用户调用型（如`/ask-matt`）和模型调用型（如`/tdd`），并通过`.claude-plugin/plugin.json`清单进行管理和部署。项目还强调使用共享领域语言（`CONTEXT.md`）来优化AI代理的推理和表达。\n\n### 适合谁用\n本项目适合希望提升AI代理在软件开发中表现的工程师和团队。特别是那些在使用Claude Code、Codex或其他编码代理时遇到沟通不畅、代码质量不稳定或项目管理混乱等问题的用户。它也适用于希望将工程最佳实践融入AI辅助开发流程的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "Gitlawb/openclaude",
+      "owner": "Gitlawb",
+      "name": "openclaude",
+      "url": "https://github.com/Gitlawb/openclaude",
+      "stars": 31965,
+      "description": "runs anywhere. uses anything",
+      "one_liner": "OpenClaude 是一个开源的编码代理 CLI 工具，旨在连接高级代理工作流与多种 LLM 后端，提供统一的开发体验。",
+      "detail_md": "**解决什么问题**\nOpenClaude 旨在解决大型语言模型 (LLM) 生态系统中碎片化的问题，它通过提供一个统一的命令行界面 (CLI)，将不同的 LLM 后端（包括云端 API 和本地模型）整合到一个代理工作流中。这使得开发者可以使用一致的工具和命令，无论他们选择哪种 LLM 提供商。\n\n**核心功能**\nOpenClaude 的核心功能包括：支持多种 LLM 提供商，如 OpenAI 兼容 API、Gemini、Ollama 等；提供工具驱动的编码工作流，例如 Bash、文件读写、grep、glob、代理、任务和斜杠命令；支持流式响应和工具调用；以及通过 `/provider` 命令进行引导式提供商设置和保存配置文件。它还包含一个像素艺术的伴侣，在用户输入时提供视觉反馈。\n\n**技术亮点**\n该项目引入了一个 OpenAI 兼容垫片 (shim)，能够将 Anthropic 风格的 SDK 调用和工具使用转换为 OpenAI Chat Completions API 格式，反之亦然，从而增强了提供商之间的互操作性。它还具备智能路由和发现功能，可以自动检测并推荐提供商/模型，并支持通过 Python `smart_router` 实用程序进行动态请求路由。此外，OpenClaude 采用基于 React 的 Ink 终端 UI，提供丰富的交互体验。\n\n**适合谁用**\nOpenClaude 适合需要统一 LLM 交互界面的开发者、希望在不同 LLM 后端之间无缝切换的团队，以及寻求通过本地模型支持和智能路由来优化成本和延迟的用户。它也适用于希望利用强大的编码代理工具（如 `BashTool`、`FileEditTool` 和 `MCP`）进行开发工作流的工程师。",
+      "degraded": false
+    },
+    {
+      "id": "firecrawl/pdf-inspector",
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "stars": 18488,
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "one_liner": "`pdf-inspector` 是一个快速、开源的 Rust 驱动的 PDF 解析器，用于将 PDF 文本提取为结构化 Markdown，并支持 PDF 类型分类和布局分析。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决从 PDF 中高效、准确地提取文本和结构信息的问题，特别是针对 AI 代理优化输出，以提高 token 效率和语义质量。它避免了在存在原生文本时使用昂贵的 OCR 服务，并能将扫描或图像型 PDF 路由到本地推理模型进行 OCR 处理。\n\n### 核心功能\n1.  **PDF 类型分类**：能够识别 PDF 为文本型 (TextBased)、扫描型 (Scanned)、混合型 (Mixed) 或图像型 (ImageBased)，并提供置信度分数和每页信号用于后续处理。\n2.  **文本提取与布局分析**：从 PDF 中提取文本、字体、矩形和链接，并重建多列和报纸布局的阅读顺序，同时保留页面间的逻辑流。\n3.  **表格结构恢复**：结合矩形、线网格和对齐启发式方法，恢复表格的单元格、财务表格以及跨页的连续表格。\n4.  **语义化 Markdown 输出**：将提取的信息转换为结构化的 Markdown，包括标题、列表、表格、链接、代码、强调、标题、页面标记，并进行 token 效率优化。\n\n### 技术亮点\n1.  **Rust 核心**：项目使用 Rust 编写，提供高性能的 PDF 处理能力，文本型 PDF 处理速度通常低于 200 毫秒。\n2.  **多语言绑定**：提供 Node.js (npm)、Python (PyPI)  和 Rust (crates.io)  的包，以及命令行工具 `pdf2md` 和 `detect-pdf`。\n3.  **WebAssembly 支持**：提供 WASM 版本，可在浏览器环境中运行，确保文档处理在本地进行，保护用户隐私。\n4.  **模块化架构**：将原始 PDF 处理、布局分析和语义转换分离，每个阶段职责明确，模块直接对应仓库结构，易于嵌入和维护。\n\n### 适合谁用\n1.  **AI 代理开发者**：输出针对 token 效率和语义质量进行了优化，非常适合需要从 PDF 中提取结构化数据进行进一步处理的 AI 代理。\n2.  **需要高性能 PDF 处理的开发者**：Rust 核心提供了极快的处理速度，适用于需要快速分类和提取大量 PDF 文件的场景。\n3.  **多语言环境开发者**：通过 Node.js、Python 和 Rust 绑定，以及命令行工具，方便不同技术栈的开发者集成和使用。\n4.  **注重隐私和本地处理的用户**：WebAssembly 版本允许在浏览器中本地处理 PDF，无需将文档上传到服务器，保护用户数据隐私 .",
+      "degraded": false
+    }
+  ]
+}
