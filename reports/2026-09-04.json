@@ -210,6 +210,61 @@
       "one_liner": "Superpowers 是一个为 AI 编码代理设计的完整软件开发方法论和技能库，旨在提升开发效率和代码质量。",
       "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码代理在软件开发过程中缺乏系统性方法、难以遵循最佳实践以及效率低下等问题。它通过提供一套可组合的技能和初始指令，确保代理能够进行测试驱动开发（TDD）、系统化调试、子代理驱动开发等复杂工作流。\n\n**核心功能**\nSuperpowers 的核心功能包括：引导代理进行需求分析和设计（头脑风暴）、制定详细的实施计划、执行子代理驱动的开发流程、代码审查、以及支持多种 AI 编码平台。它通过在会话开始时注入 `using-superpowers` 引导程序来自动触发相关技能。\n\n**技术亮点**\n技术亮点包括：跨平台兼容性，支持 Claude Code、Cursor、Devin CLI、Kimi Code 等多种代理平台；模块化的技能设计，允许代理根据任务自动调用相应技能；以及通过 `plugin.json` 或其他配置文件进行平台适配和工具映射。项目还引入了可视化头脑风暴伴侣，以图形化方式辅助设计过程。\n\n**适合谁用**\nSuperpowers 适合使用 AI 编码代理进行软件开发，并希望提升代理工作效率、确保开发流程规范化、以及提高代码质量的开发者和团队。它特别适用于需要代理执行复杂开发任务，如从需求分析到代码实现的完整流程的场景。",
       "degraded": false
+    },
+    {
+      "id": "bikini/exploitarium",
+      "owner": "bikini",
+      "name": "exploitarium",
+      "url": "https://github.com/bikini/exploitarium",
+      "stars": 4385,
+      "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+      "one_liner": "这是一个漏洞研究存档库，包含公开的漏洞概念验证和研究报告。",
+      "detail_md": "**解决什么问题**\n该项目旨在整合并归档作者公开的漏洞概念验证（PoC）和漏洞研究报告。它解决了分散的漏洞研究成果难以查找和管理的问题，通过统一的存储库提供了一个集中的访问点。\n\n**核心功能**\n核心功能是提供一个包含多种漏洞PoC的存档，例如 `c-ares` 的TCP UAF漏洞、`floci` 的API Gateway VTL RCE漏洞、`libssh2` 的CVE-2026-55200漏洞  和 `nghttpx` 的HTTP/1.1升级响应队列中毒漏洞。每个PoC通常包含原始的README文件和跟踪文件。\n\n**技术亮点**\n技术亮点包括对内存损坏漏洞（如UAF）的利用、远程代码执行（RCE）技术，以及本地权限提升（LPE）方法。项目还展示了如堆喷射（Heap Grooming）  和响应队列中毒（Response Queue Poisoning）  等高级漏洞利用技术。\n\n**适合谁用**\n该项目适合对网络安全、漏洞研究和渗透测试感兴趣的个人和团队。它为安全研究人员提供了学习和理解各种漏洞及其利用方式的实际案例。",
+      "degraded": false
+    },
+    {
+      "id": "radixark/miles",
+      "owner": "radixark",
+      "name": "miles",
+      "url": "https://github.com/radixark/miles",
+      "stars": 2467,
+      "description": "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+      "one_liner": "Miles 是一个企业级的强化学习框架，专为大规模模型后训练优化，提供高性能、低精度训练和生产稳定性。",
+      "detail_md": "### 解决什么问题\nMiles 旨在解决大规模模型训练中强化学习的稳定性、效率和可复现性问题，特别是针对 MoE (Mixture of Experts) 模型在训练和推理之间存在的量化不一致性问题。 它通过统一 FP8 采样和训练、引入 Rollout Routing Replay (R3) 等技术来消除这些不一致性。\n\n### 核心功能\nMiles 的核心功能包括：\n*   **高级 MoE 与低精度训练**：支持统一的 FP8 训练推理管线和 INT4 量化感知训练 (QAT)，以减少内存占用并提高效率。\n*   **消除训练-推理不匹配**：通过系统级优化和算法校正（如截断重要性采样 TIS 和掩码重要性采样 MIS）确保训练和推理的确定性。\n*   **极致性能与效率**：实现推测性 RL 训练、零拷贝权重同步和部分 Rollout/过采样，显著提升吞吐量和 GPU 利用率。\n*   **广泛的模型支持与训练多样性**：支持 DeepSeek、Qwen、Llama 等主流模型，并优化多轮交互、VLM/LLM、推理和多智能体训练场景。\n\n### 技术亮点\nMiles 的技术亮点在于其对底层系统优化的深入：\n*   **Ray 集群编排**：利用 Ray 框架协调 Trainer、SGLang 服务器和 Miles Router 等多个进程，实现分布式训练和推理。\n*   **SGLang 与 Megatron-LM 集成**：将 SGLang 用于高吞吐量 Rollout，Megatron-LM 用于可扩展训练，并在此基础上进行大量补丁以实现特定功能。\n*   **Rollout Routing Replay (R3)**：记录 SGLang 推理时的专家路由决策，并在训练时重放，解决 MoE 模型的训练不稳定性。\n*   **INT4 QAT**：支持 INT4 W4A16 量化感知训练，使万亿参数模型能在单机 VRAM 中运行，同时保持 BF16 等效精度。\n*   **模块化架构与扩展点**：提供超过二十个插件点，允许用户自定义 Rollout、奖励函数、损失函数或过滤器，而无需修改核心训练器。\n\n### 适合谁用\nMiles 适合需要对大规模语言模型进行强化学习后训练的开发者、研究人员和企业。 特别是那些关注模型训练效率、低精度优化、生产稳定性以及 MoE 模型训练挑战的用户。 它也适用于希望在 NVIDIA Hopper/Blackwell 系列和 AMD MI300X 等高性能硬件上运行 RL 任务的用户。",
+      "degraded": false
+    },
+    {
+      "id": "anomalyco/opencode",
+      "owner": "anomalyco",
+      "name": "opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "stars": 203746,
+      "description": "The open source coding agent.",
+      "one_liner": "OpenCode 是一个开源 AI 编程代理，旨在帮助开发者在终端、IDE 或桌面端高效编写代码。",
+      "detail_md": "**解决什么问题**\nOpenCode 旨在解决开发者在代码编写过程中对 AI 辅助的需求，提供一个灵活、多平台且支持多种大型语言模型 (LLM) 的解决方案。它通过自动化加载 LSP、支持多会话 以及提供可分享的会话链接，提升开发效率和协作能力。 \n\n**核心功能**\n该项目提供原生终端用户界面 (TUI)、桌面应用程序 和 IDE 扩展，支持超过 75 种 LLM 提供商，包括本地模型。它还集成了 GitHub Copilot 和 ChatGPT Plus/Pro 账户，并提供工作区管理功能。\n\n**技术亮点**\nOpenCode 前端基于 SolidStart 和 SolidJS 构建，优化了服务器端渲染 (SSR) 和路由。它支持超过 20 种语言的国际化，并利用 CSS 变量和数据属性进行主题化和响应式布局。认证通过 OpenAuth 处理，数据交互使用 Drizzle ORM。\n\n**适合谁用**\nOpenCode 适合需要 AI 辅助编程的开发者，无论他们偏好终端、IDE 还是桌面应用。对于希望利用现有 LLM 订阅（如 Claude、GPT、Gemini） 或免费内置模型 的个人开发者和团队都非常适用。企业用户也可以通过企业版确保代码和数据不离开其基础设施。",
+      "degraded": false
+    },
+    {
+      "id": "clshortfuse/renodx",
+      "owner": "clshortfuse",
+      "name": "renodx",
+      "url": "https://github.com/clshortfuse/renodx",
+      "stars": 3412,
+      "description": "Renovation Engine for DirectX Games",
+      "one_liner": "RenoDX 是一个通过着色器替换和资源升级来修改 DirectX 游戏的框架。",
+      "detail_md": "<br />\n**解决什么问题** \nRenoDX 旨在通过着色器替换、资源升级和视觉增强来修改 DirectX 游戏，提供跨多个游戏引擎和图形 API 的标准化游戏修改方法。  它解决了游戏画面效果不佳、不支持 HDR 输出以及缺乏自定义视觉效果的问题。 \n<br />\n**核心功能** \n核心功能包括着色器注入和替换，允许在运行时替换游戏着色器并注入自定义参数。   此外，它还提供交换链管理系统，用于显示缓冲区升级和格式转换，以实现 HDR 输出和改进的色彩精度。   项目还包含一个设置和配置系统，用于持久化用户配置并自动生成 UI。 \n<br />\n**技术亮点** \nRenoDX 作为基于 ReShade 插件 API 的分层系统运行，提供运行时修改框架和开发工具链。  它通过 CRC32 哈希匹配拦截着色器创建，并替换为自定义着色器。  数据注入系统允许通过常量缓冲区将运行时配置数据传递给自定义着色器。  此外，它还支持多种游戏集成模式，包括针对虚幻引擎和 FromSoftware 游戏的特定模式。 \n<br />\n**适合谁用** \nRenoDX 适合希望通过自定义着色器、HDR 输出和高级色彩处理来增强游戏视觉效果的玩家和模组开发者。  它也适用于需要标准化游戏修改框架的开发者，以便在不同游戏和图形 API 之间工作。 \n<br />",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 30545,
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "`diagram-design` 是一个用于创建高质量技术和产品图表的代理技能和设计系统。它能生成独立的 HTML 文件，包含内联 SVG 和 CSS，无需外部依赖。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统图表工具生成的图表视觉效果通用、缺乏品牌一致性，以及在不同环境中部署和展示时需要额外依赖的问题。它通过提供一套“自信克制”的美学设计系统，并支持自动化品牌配色和排版，确保图表与品牌风格一致。\n\n**核心功能**\n核心功能包括生成 28 种不同类型的技术和产品图表，例如架构图、流程图、序列图和状态机图。它支持从网站提取品牌标识（颜色、字体）并应用到图表，还能重新绘制 `.drawio` 或 Mermaid 格式的图表，并导出为 HTML、SVG 或 PNG 格式。\n\n**技术亮点**\n技术亮点在于其“意见鲜明”的设计系统，强调“最高质量的举动通常是删除”的理念，以保持图表的简洁和信息密度。图表以独立的 HTML 文件形式输出，内联 SVG 和 CSS，无需 JavaScript 或构建步骤。它还支持语义模式，将系统行为与视觉布局分离，并提供可选的无障碍动画效果。\n\n**适合谁用**\n该项目适合需要创建高质量、品牌一致且易于分享的技术和产品图表的工程师、产品经理和设计师。特别是那些希望将图表无缝集成到文档、演示文稿或网站中，并保持统一视觉风格的用户。它也适用于需要将现有 `.drawio` 或 Mermaid 图表转换为统一品牌风格的用户。",
+      "degraded": false
     }
   ]
 }
