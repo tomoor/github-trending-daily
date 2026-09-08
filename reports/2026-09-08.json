@@ -155,6 +155,83 @@
       "one_liner": "Ruflo 是一个企业级 AI 编排平台，通过群体智能、自学习和多层内存系统协调 60 多个专业代理。",
       "detail_md": "**解决什么问题**\nRuflo 旨在解决企业级 AI 应用中代理协调、任务学习和跨会话记忆的复杂性问题。它为 Claude Code 提供了一个“线束”，使代理能够自组织、从任务中学习并在会话之间记忆。\n\n**核心功能**\nRuflo 的核心功能包括：\n*   **代理和集群编排**：通过 `swarm` 系统协调专业代理，遵循“1 消息 = 所有并行”原则。支持初始化、列出和监控代理集群。\n*   **智能与学习**：利用 `@ruvector/sona` 引擎实现自优化神经网络架构，通过 Q-Learning 路由根据历史性能选择最佳代理或工具。\n*   **多层内存系统**：提供“无限上下文”，包括 AgentDB 向量数据库、RuVector 高性能向量引擎、SQLite 本地持久化和 HNSW 索引。\n*   **丰富的工具集**：通过 MCP 服务器向 Claude Code 暴露超过 200 种工具，涵盖 `agentdb`、`task` 和 `guidance` 等类别。\n\n**技术亮点**\n*   **群体智能**：协调 60 多个专业代理，实现自组织和共识协议。\n*   **自优化神经网络架构 (SONA)**：通过 `@ruvector/sona` 学习最佳路由模式，实现亚毫秒级延迟。\n*   **高性能向量搜索**：利用 RuVector 和 HNSW 算法实现快速向量搜索，速度提升 150 到 12,500 倍。\n*   **多入口点**：提供 CLI、MCP 服务器和 MCP Bridge 等多种入口点，适应不同使用场景。\n\n**适合谁用**\nRuflo 适合需要高级 AI 代理协调、复杂任务自动化、持续学习和大规模 AI 部署的企业和开发者。特别是那些希望利用多代理系统、优化 AI 性能和管理“无限上下文”的场景。",
       "degraded": false
+    },
+    {
+      "id": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "stars": 28244,
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "one_liner": "该项目通过AI代理技能，将AI代码助手的输出转化为ADHD友好的格式，优先行动，减少认知负担。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI编码代理（如Claude Code、Codex和Cursor）输出冗长、包含过多寒暄语和非必要信息的问题。这些问题会增加认知负担，尤其对于注意力不集中或偏好直接行动的用户。它通过强制AI代理以行动为先、提供结构化步骤来消除认知开销。\n\n**核心功能**\n核心功能是根据10条核心规则，将AI代理的输出进行转换，使其更具操作性。这些规则包括：行动优先、步骤编号、每次响应只提供一个具体下一步、抑制无关内容、重述当前状态、提供具体时间估算、使成功可见、直接报告错误、限制列表项数量（不超过5项）以及消除冗余的客套话。\n\n**技术亮点**\n该项目通过一个名为 `i-have-adhd` 的“技能”实现，该技能可以作为插件集成到Claude Code、Codex和Cursor等AI代理中。其技术亮点在于将自然语言规则定义在 `SKILL.md` 文件中，并通过不同的清单文件（如 `.claude-plugin/plugin.json`  和 `.codex-plugin/plugin.json` ）映射到特定代理格式，实现跨平台的行为一致性。用户还可以通过Fork项目并修改 `SKILL.md` 文件来自定义规则。\n\n**适合谁用**\n该项目主要适用于希望从AI编码助手中获得高信号、低噪音技术交流的开发者。虽然项目名称为 `i-have-adhd`，但其设计原则对任何偏好即时行动、结构化和易于管理步骤的开发者都有益。它特别适合那些容易被冗长解释分散注意力，或需要明确、简洁指令来提高工作效率的用户。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 33777,
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "`diagram-design` 是一个用于创建高质量技术和产品图表的代理技能和设计系统，可自动适配品牌风格并生成独立的 HTML 文件。",
+      "detail_md": "**解决什么问题**\n该项目解决了传统图表工具生成图表样式不统一、难以与品牌风格集成、以及输出格式不灵活的问题。它通过提供一套规范的设计系统和自动化流程，确保生成的图表具有编辑级质量，并能轻松适配不同的品牌视觉规范。  \n\n**核心功能**\n核心功能包括支持 28 种不同的图表类型（如架构图、流程图、状态机图等），  能够从网站 URL 提取品牌样式并应用到图表，  以及将 `.drawio` 或 Mermaid 源代码重绘为符合设计规范的图表。  生成的图表是包含内联 SVG 和 CSS 的独立 HTML 文件，无需外部依赖。 \n\n**技术亮点**\n技术亮点在于其“自信的克制”美学设计理念，  强制执行“样式指南门禁”以确保图表简洁，  并采用 4px 网格系统保证视觉一致性。  它还支持语义模式，将系统行为与视觉布局分离，  并提供可访问的 SVG 输出，确保图表对辅助技术友好。 \n\n**适合谁用**\n该项目适合需要创建高质量、品牌一致的技术和产品图表的软件工程师、产品经理、设计师以及任何希望通过视觉方式清晰传达复杂概念的用户。  它特别适用于那些希望自动化图表设计流程、确保图表符合特定品牌指南，并需要多种输出格式（HTML、SVG、PNG）的团队和个人。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 283082,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编码代理设计的完整软件开发方法论，通过可组合的技能集和初始指令，确保代理有效利用这些技能来完成开发任务。",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决 AI 编码代理在软件开发过程中缺乏系统性方法和一致性行为的问题。它通过提供一套预定义的技能和工作流程，帮助代理进行需求分析、设计规划、测试驱动开发 (TDD)、系统调试和子代理协作，从而提高开发效率和代码质量。\n\n**核心功能**\n核心功能包括：需求澄清和设计规划（`brainstorming` 技能），通过对话引导代理理解用户意图并制定设计；测试驱动开发 (TDD)；系统调试；以及子代理驱动开发，使代理能够自主完成复杂的工程任务。它还支持代码审查和分支管理等协作模式。\n\n**技术亮点**\nSuperpowers 的技术亮点在于其可组合的技能集和自动触发机制。它支持多种 AI 平台，如 Claude Code、Cursor、Codex 和 Gemini CLI 等。通过 `using-superpowers` 引导程序，确保技能在适当的时机自动激活，遵循“1% 规则”——即使有微小机会，代理也必须调用相关技能。此外，它还引入了可视化伴侣功能，用于在需要时展示 UI 模型或架构图。\n\n**适合谁用**\nSuperpowers 适合使用 AI 编码代理进行软件开发的个人开发者和团队。特别是那些希望通过结构化方法论提高 AI 代理开发效率、确保代码质量、并实现自动化工作流程的用户。它支持多种主流 AI 编码平台，因此适用于广泛的用户群体。",
+      "degraded": false
+    },
+    {
+      "id": "multica-ai/andrej-karpathy-skills",
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 211100,
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "one_liner": "本项目提供一套基于 Andrej Karpathy 观察的 LLM 编码行为指南，旨在减少常见编码错误，提升代码质量和开发效率。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决大型语言模型（LLM）在编码过程中常出现的“错误假设”、“过度复杂化代码”、“不清理死代码”以及“改动与任务无关的代码”等问题。  通过引入行为指南，它帮助 LLM 避免在没有充分理解或澄清的情况下盲目执行任务，从而减少不必要的返工和错误。 \n\n**核心功能**\n核心功能是提供四项行为原则： \n1.  **编码前思考**：强制 LLM 明确假设、呈现多种解释、适时提出异议并在困惑时寻求澄清。 \n2.  **简洁优先**：要求 LLM 用最少的代码解决问题，避免过度工程和不必要的抽象。 \n3.  **精准修改**：限制 LLM 只修改与用户请求直接相关的代码，并只清理自己造成的“孤儿代码”。 \n4.  **目标驱动执行**：将指令式任务转化为可验证的成功标准（例如，通过编写测试），使 LLM 能够独立循环执行直到目标达成。 \n\n**技术亮点**\n本项目以多种形式分发这些指南，以适应不同的 AI 开发环境。  它提供 Claude Code 插件安装方式，  也支持通过 `CLAUDE.md` 文件进行项目级集成，  并且为 Cursor IDE 用户提供了 `.cursor/rules/karpathy-guidelines.mdc` 规则文件，实现自动应用。  这种多平台兼容性确保了指南的广泛应用。 \n\n**适合谁用**\n本项目适用于使用 Claude Code、Cursor 或其他 LLM 辅助编码工具的开发者和团队。  特别是那些希望提高 LLM 编码质量、减少不必要修改、避免过度工程化，并希望 LLM 能更自主、更准确地完成编码任务的用户。  这些指南偏向于“谨慎而非速度”，因此对于需要高质量、可维护代码的非琐碎项目尤其有价值。",
+      "degraded": false
+    },
+    {
+      "id": "browser-use/browser-use",
+      "owner": "browser-use",
+      "name": "browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "stars": 113084,
+      "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+      "one_liner": "Browser-use 是一个开源 Python 框架，使大型语言模型 (LLM) 能够自主控制和与网络浏览器交互，模拟人类操作来完成复杂的自动化任务。",
+      "detail_md": "**解决什么问题**\nBrowser-use 解决了 LLM 与网络浏览器交互的难题，通过将网页内容转换为 LLM 可读的格式，并执行 LLM 的决策作为浏览器操作，从而实现网页自动化。 它能够让 AI 代理像人类一样使用浏览器，例如填写表单、提取数据等。\n\n**核心功能**\n该框架的核心功能包括将网页翻译成 LLM 可读的格式、将 LLM 决策转化为浏览器操作（如 `click`、`type`、`navigate`、`extract`），以及管理执行状态。 它支持多种部署模式，包括本地开发、通过 `use_cloud=True` 使用云端浏览器以及通过 CLI 和 MCP 集成进行生产部署。\n\n**技术亮点**\nBrowser-use 的技术亮点在于其分层架构，将编排、执行和浏览器控制分离，并采用事件驱动架构实现组件解耦。 它通过 `DomService` 构建网页的语义树，并简化处理以供 LLM 使用。 此外，它提供了统一的 LLM 集成层，支持 OpenAI、Google、Anthropic 等多种 LLM 提供商。\n\n**适合谁用**\nBrowser-use 适合需要自动化网页任务的开发者和企业。 如果您希望通过 AI 代理完成一次性浏览器任务，可以使用 CLI；如果您正在构建需要大规模自动化网页的软件，例如进行数据抓取、监控或 QA，则推荐使用 Python 库。",
+      "degraded": false
+    },
+    {
+      "id": "viarotel-org/escrcpy",
+      "owner": "viarotel-org",
+      "name": "escrcpy",
+      "url": "https://github.com/viarotel-org/escrcpy",
+      "stars": 11192,
+      "description": "📱 Display and control your Android device graphically with scrcpy.",
+      "one_liner": "Escrcpy 是一个基于 Electron 的跨平台桌面应用，用于图形化显示和控制 Android 设备。",
+      "detail_md": "**解决什么问题**\nEscrcpy 解决了用户通过命令行工具 `scrcpy`、`adb` 和 `gnirehtet` 控制 Android 设备时操作复杂、效率低下的问题。 它提供了一个直观的图形用户界面，集成了多设备管理、自动化脚本和文件传输等功能，极大地简化了 Android 设备的管理和控制。\n\n**核心功能**\n项目核心功能包括内嵌镜像、键盘映射、多设备群控、集成控制栏、自动化脚本、无线连接和反向供网。 内嵌镜像提供自动适配分辨率和屏幕方向的显示窗口。 键盘映射允许用户直接在镜像上配置触摸、摇杆和滑动等操作。 多设备群控支持单窗口同时控制多台设备，并进行批量截图和 APK 安装。 自动化脚本功能通过图形化界面编排工作流，支持屏幕识图和多设备批量执行。\n\n**技术亮点**\nEscrcpy 基于 Electron 和 Vue 3 构建， 整合了 `scrcpy`、`adbkit` 和 `gnirehtet` 等底层工具， 实现了高性能、低延迟的屏幕镜像和控制。 它还支持无线 ADB 连接和 Gnirehtet 反向供网， 并通过 MCP 协议集成了 AI 助手，支持多模型对话和智能设备控制。\n\n**适合谁用**\nEscrcpy 适合需要频繁操作 Android 设备的用户，包括开发者、测试人员以及需要进行多设备管理和自动化操作的个人或团队。 尤其适用于那些希望通过图形界面而非命令行来提高工作效率的用户。",
+      "degraded": false
+    },
+    {
+      "id": "openai/plugins",
+      "owner": "openai",
+      "name": "plugins",
+      "url": "https://github.com/openai/plugins",
+      "stars": 5572,
+      "description": "OpenAI Plugins",
+      "one_liner": "该项目提供了一系列插件，旨在通过自然语言处理增强金融数据分析和生产力工具的功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决金融专业人士在处理大量金融数据、进行信用风险分析、股权研究、基金筛选以及商业身份验证时面临的效率低下和复杂性问题。 此外，它还通过集成生产力工具（如Asana和Linear）来简化任务管理和团队协作。\n\n**核心功能**\n核心功能包括机构级金融数据提供商的集成，例如穆迪（Moody's）用于信用风险分析和报告生成， 标普全球（S&P Global）用于查询金融数据集， 以及晨星（Morningstar）用于基金筛选和比较。 它还提供了任务和项目管理功能，例如Asana插件允许用户管理任务、子任务和项目细节， 而Linear插件则用于查找和引用问题及项目。\n\n**技术亮点**\n技术亮点在于其模块化的技能系统（Skills System）， 允许模型执行结构化、多步骤的任务。该系统通过`SKILL.md`文件定义工作流程和指令， 并通过`openai.yaml`文件定义技能在用户界面中的展示。 穆迪插件利用Model Context Protocol (MCP) 服务器进行数据检索，并生成专业的HTML报告。\n\n**适合谁用**\n该项目适合金融服务领域的工程师、产品经理和业务团队， 以及任何需要通过自然语言查询金融数据、进行复杂分析或管理项目和任务的用户。",
+      "degraded": false
     }
   ]
 }
