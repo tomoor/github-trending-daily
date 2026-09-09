@@ -1,0 +1,182 @@
+{
+  "doc_token": "C31odNDwdo0x1ExQI6McQbc6nJe",
+  "doc_url": "https://my.feishu.cn/docx/C31odNDwdo0x1ExQI6McQbc6nJe",
+  "items": [
+    {
+      "id": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "stars": 30339,
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "one_liner": "该项目提供一个AI助手技能，旨在生成对ADHD人群友好的输出，强调行动、清晰和简洁。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决AI助手输出冗长、包含不必要寒暄或信息组织不清晰的问题，这些问题可能对注意力缺陷多动障碍（ADHD）人群造成理解和执行困难。   它通过提供一套明确的规则，使AI输出更直接、更易于理解和操作。 \n\n### 核心功能\n核心功能是根据10条预设规则（例如“以下一步行动开头”、“多步骤任务编号”、“无前言、无总结、无结束语”等）来塑造AI的输出。  这些规则定义在 `skills/i-have-adhd/SKILL.md` 文件中，指导AI生成行动优先、步骤清晰、状态明确、无冗余信息的回复。  \n\n### 技术亮点\n该项目采用Markdown作为规则引擎，使得技能逻辑易于理解和修改。  用户可以通过Fork仓库、编辑 `skills/i-have-adhd/SKILL.md` 文件来自定义规则，并将其注册到AI代理（如Claude Code、Codex、Cursor）中。  它支持“始终开启”配置，允许用户将这些规则应用于所有交互，而无需手动触发。 \n\n### 适合谁用\n该项目适合任何希望AI助手输出更清晰、更直接的用户，尤其是有ADHD或偏好简洁明了信息的用户。   它也适合开发者和高级用户，他们可以根据个人需求定制AI的响应行为。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 34749,
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "`diagram-design` 是一个代理技能和设计系统，用于创建高质量的技术和产品图表，支持多种图表类型和品牌定制。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统图表工具生成图表时缺乏统一美学、难以品牌定制以及输出格式不灵活的问题。它通过提供一套有主见的代理技能和设计系统，确保生成的图表具有“自信的克制”美学，并能自动适配特定品牌的调色板和排版。\n\n## 核心功能\n*   **图表生成**：支持生成28种不同类型的图表，包括架构图、流程图、状态机图、ER图、时间线图等。\n*   **品牌定制**：可以从网站URL提取品牌颜色和字体，并将其应用到图表样式中，实现图表的品牌化。\n*   **导入与导出**：能够重新绘制 `.drawio` 或 Mermaid 格式的图表源文件，并支持导出为独立的HTML、SVG或PNG格式。\n*   **语义模式**：引入语义模式来描述系统行为，独立于视觉布局，例如“安全铺设路径”、“扇入队列”等。\n\n## 技术亮点\n*   **自包含HTML输出**：生成的图表是包含内联SVG和CSS的独立HTML文件，无需外部依赖、JavaScript或构建步骤。\n*   **渐进式披露架构**：核心逻辑和路由位于 `SKILL.md`，类型特定的规则和约定仅在选择特定图表类型时才从 `references/` 目录延迟加载。\n*   **设计系统**：遵循“最高质量的举动通常是删除”的设计理念，通过“样式指南门禁”确保图表简洁，目标密度为4/10。\n*   **可访问性**：所有图表模板都为内联SVG提供了可访问的名称和描述，并支持可选的动态模式，同时保持静态HTML为默认输出。\n\n## 适合谁用\n该项目适合需要创建高质量、品牌化技术和产品图表的用户，特别是那些希望图表具有统一美学、易于定制和多种输出格式的开发者、设计师和产品经理。它作为Claude Code、Codex和Pi的代理技能，方便集成到现有工作流程中。",
+      "degraded": false
+    },
+    {
+      "id": "openai/skills",
+      "owner": "openai",
+      "name": "skills",
+      "url": "https://github.com/openai/skills",
+      "stars": 26497,
+      "description": "Skills Catalog for Codex",
+      "one_liner": "本项目旨在为Codex AI代理提供模块化能力，通过技能贡献、改进和文档更新来增强其功能。",
+      "detail_md": "### 解决什么问题\n本项目解决了Codex AI代理在执行复杂任务时，缺乏标准化、可扩展的模块化能力的问题。它提供了一个框架，允许开发者贡献和管理各种“技能”，从而扩展AI代理的功能，避免重复开发，并确保技能的质量和安全性。  \n\n### 核心功能\n核心功能包括技能的创建、验证、管理和分发。开发者可以使用 `init_skill.py` 脚本初始化新技能，并通过 `quick_validate.py` 进行验证。技能分为实验性 (`.experimental/`) 和精选 (`.curated/`) 两个阶段，确保只有稳定和经过审查的技能才能广泛使用。 \n\n### 技术亮点\n技术亮点在于其结构化的技能开发流程和严格的验证机制。项目定义了清晰的技能命名规范 和 `SKILL.md` 文件格式，确保技能元数据的一致性。此外，它还支持通过 `FORMS.md`、`REFERENCE.md` 和 `EXAMPLES.md` 等文件提供高级功能和领域特定组织，使Codex AI代理能够按需加载相关上下文。 \n\n### 适合谁用\n本项目适合希望扩展Codex AI代理能力的开发者、AI研究人员以及需要为AI代理提供特定领域知识和操作的用户。它为贡献新技能、改进现有技能、修复错误和更新文档提供了明确的指导和工具。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 254282,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code (ECC) 是一个生产就绪的智能体操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。",
+      "detail_md": "**解决什么问题**\nECC 旨在弥合大型语言模型 (LLM) 能力与专业软件工程之间的鸿沟。它通过强制执行测试驱动开发 (TDD)、安全优先验证和不变性模式来解决 AI 编码助手在实际开发中缺乏自主性和可靠性的问题。\n\n**核心功能**\nECC 提供了多项核心功能，包括：多 Harness 可移植性，允许在 Claude Code、Cursor 等平台使用相同的技能和规则；一个包含 68 个专业智能体的智能体舰队，用于处理复杂的工程任务；集成的 AgentShield 用于安全扫描和供应链强化；以及通过从会话中提取模式来持续学习和演进项目特定技能的能力。\n\n**技术亮点**\n该项目采用模块化架构，包含智能体、技能、规则、钩子、命令和 Rust 编写的控制平面。它支持多种语言生态系统，并提供选择性安装架构。此外，它还具备上下文窗口管理和令牌优化功能，以提高效率和降低成本。\n\n**适合谁用**\nECC 适用于希望将 AI 编码助手提升为高自主性工程伙伴的开发者、团队和组织。它特别适合需要跨多个 AI 智能体平台（如 Claude Code、Codex、Cursor、OpenCode、Gemini）进行开发，并重视测试驱动开发、安全性和代码质量的用户。",
+      "degraded": false
+    },
+    {
+      "id": "heygen-com/hyperframes",
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "stars": 47735,
+      "description": "Write HTML. Render video. Built for agents.",
+      "one_liner": "HyperFrames 是一个开源框架，用于通过 HTML+JS 创建确定性视频，并支持 AI 代理生成和编辑视频内容。",
+      "detail_md": "**解决什么问题**\nHyperFrames 旨在解决传统视频制作中，AI 代理难以生成符合特定框架规范的视频内容的问题。它通过将领域特定模式、约束和最佳实践嵌入到 AI 代理模型中，确保 AI 生成的视频符合确定性渲染和时序模型。\n\n**核心功能**\n该项目提供了一个 AI 技能系统，包含多种技能，如核心合成、GSAP 动画、网站转 HyperFrames、媒体使用和 Figma 集成。它允许 AI 代理将自然语言意图转化为符合框架的 HTML+JS 代码，并支持通过 CLI 工具进行项目初始化、技能管理、预览和渲染。\n\n**技术亮点**\nHyperFrames 的技术亮点在于其“HTML 即视频”的理念，通过 HTML 元素上的 `data-*` 属性来定义时间、持续时间和轨道。它强制执行确定性渲染，避免使用非确定性 API。项目还通过 `npm run check` 命令提供严格的 linting 和验证机制，确保代码质量和视觉完整性。\n\n**适合谁用**\nHyperFrames 适合需要通过 AI 代理自动化视频内容生成、希望将网站内容快速转换为视频，以及追求视频制作流程中高确定性和可重复性的开发者和团队。例如，HeyGen 和 tldraw 等公司已将其用于 AI 生成视频合成和自动化 PR 演示视频。",
+      "degraded": false
+    },
+    {
+      "id": "coreyhaines31/marketingskills",
+      "owner": "coreyhaines31",
+      "name": "marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "stars": 48790,
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "one_liner": "该项目是一个营销技能库，旨在为企业提供全面的营销策略规划和客户洞察分析工具。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决企业在制定营销策略时面临的缺乏系统性、数据驱动的规划和深入客户理解的挑战。它通过提供结构化的营销计划生成和客户研究框架，帮助企业从原始数据中提取可操作的营销资产，避免“凭空捏造”的营销方案和偏颇的客户画像。\n\n## 核心功能\n核心功能包括生成全面的13节营销计划，该计划基于AARRR（获取、激活、留存、推荐、收入）框架，并根据客户的融资阶段进行调整。同时，它还提供客户研究能力，能够分析内部资产（如访谈记录、工单、调查）和外部来源（如Reddit、G2、Hacker News），提取“待完成工作”（JTBD）、痛点、触发事件等关键客户洞察。\n\n## 技术亮点\n技术亮点在于其三阶段状态机操作模式，确保营销计划的逐步生成和用户交互确认。它集成了多种API和MCP（如Ahrefs、GA4、Stripe、Customer.io）以获取实时数据，并根据客户的融资阶段动态调整营销策略。在客户研究方面，它实现了结构化提取框架，并设有质量保障机制，如最小样本量、置信度标签和时效性检查，以确保洞察的准确性和可靠性。\n\n## 适合谁用\n该项目适合需要制定全面、数据驱动营销策略的企业，尤其是那些希望深入了解客户、优化营销活动并提高转化率的企业。它对于初创公司、成长型企业以及希望通过系统化方法提升营销效率的营销专业人士和团队都非常有价值。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 283342,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 为 AI 编码代理提供一套完整的软件开发方法论和可组合技能集。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码代理在软件开发过程中缺乏系统性方法的问题。它通过提供一套预设的技能和指令，确保代理能够进行测试驱动开发（TDD）、系统化调试、子代理驱动开发等，从而提高开发效率和代码质量。\n\n**核心功能**\nSuperpowers 的核心功能包括：\n*   **自动化工作流**：代理在接收任务后，不会立即编写代码，而是首先理解需求，制定详细的实现计划，并进行设计审批。\n*   **子代理驱动开发**：一旦设计获得批准，代理会启动子代理驱动的开发流程，由子代理执行各项工程任务，并进行审查和评估。\n*   **可组合技能集**：项目提供了一系列可组合的技能，例如头脑风暴、规划、TDD、调试和代码审查等，这些技能会自动触发，无需用户特殊干预。\n\n**技术亮点**\n*   **跨平台兼容性**：Superpowers 支持多种 AI 编码代理平台，如 Claude Code、Cursor、OpenCode、Codex、Gemini CLI、Devin CLI 等，通过平台特定的插件和引导机制实现集成。\n*   **零依赖设计**：核心插件设计为零第三方依赖，确保了其轻量级和稳定性。\n*   **智能技能触发**：通过 `using-superpowers` 引导程序，确保代理在会话开始时加载相关技能，并遵循“1% 规则”自动调用技能。\n\n**适合谁用**\nSuperpowers 适合希望提升 AI 编码代理开发效率和质量的开发者和团队。特别是那些在企业环境中需要商业支持、额外工具或托管支出的用户，可以联系项目团队获取商业服务。",
+      "degraded": false
+    },
+    {
+      "id": "multica-ai/andrej-karpathy-skills",
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 211431,
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "one_liner": "本项目提供基于 Andrej Karpathy 观察的指南，旨在改善大型语言模型（LLM）的代码生成行为，减少常见编码错误。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决 LLM 在代码生成过程中常出现的几个问题，包括：模型做出错误假设、不寻求澄清、不呈现权衡、过度复杂化代码和 API、堆砌抽象、不清理死代码，以及在不完全理解的情况下修改或删除代码和注释等。\n\n### 核心功能\n项目通过四个核心原则来改善 LLM 的编码行为：\n1.  **编码前思考**：强制 LLM 明确说明假设、呈现多种解释、适时提出异议并在困惑时寻求澄清，以避免错误假设和隐藏困惑。\n2.  **简洁优先**：指导 LLM 编写最少代码解决问题，避免过度工程、不必要的抽象和未请求的功能。\n3.  **精准修改**：要求 LLM 只修改与任务直接相关的代码，不“改进”相邻代码、注释或格式，并只清理自己造成的“孤儿代码”。\n4.  **目标驱动执行**：将指令式任务转化为可验证的成功标准（例如，通过编写测试），使 LLM 能够独立循环执行并验证结果。\n\n### 技术亮点\n本项目将这些行为指南以多种格式分发，以确保与不同的 AI 开发环境兼容。\n*   **Claude Code 插件**：通过 `plugin.json` 和 `marketplace.json` 文件，将指南作为可安装的插件提供给 Claude Code CLI 用户。\n*   **Cursor 集成**：通过 `.cursor/rules/karpathy-guidelines.mdc` 文件，在 Cursor IDE 中实现规则的自动应用。\n*   **可移植纯文本格式**：提供 `CLAUDE.md` 和 `skills/karpathy-guidelines/SKILL.md` 文件，适用于不支持特定插件架构或 `.mdc` 规则的环境。\n\n### 适合谁用\n本项目适用于希望提高 LLM 生成代码质量的开发者和团队。 特别是那些使用 Claude Code 或 Cursor IDE 的用户，可以通过安装插件或配置项目规则来直接应用这些指南。 对于其他 LLM 工具的用户，也可以通过复制 `CLAUDE.md` 或 `SKILL.md` 文件来手动集成这些原则。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/markitdown",
+      "owner": "microsoft",
+      "name": "markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "stars": 181657,
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "one_liner": "MarkItDown 是一个轻量级 Python 工具，用于将各种文件转换为 Markdown 格式，以便与大型语言模型 (LLM) 和文本分析管道配合使用。",
+      "detail_md": "**解决什么问题**\nMarkItDown 旨在解决将多种文件格式（如 PDF、PowerPoint、Word、Excel、图像、音频、HTML 等） 转换为 LLM 易于理解和处理的 Markdown 格式的问题。它专注于保留文档的重要结构和内容，例如标题、列表、表格和链接，同时保持输出接近纯文本，以提高 LLM 的处理效率和准确性。\n\n**核心功能**\n该项目提供了一个 `MarkItDown` 类  作为库的中心协调器和入口点，用于管理 `DocumentConverter` 的注册和插件加载。它支持多种文件类型的转换，包括 PDF、Office 文档、图像、音频、HTML 和压缩文件等。通过命令行工具 `markitdown`  或 Python API，用户可以轻松地将文件转换为 Markdown。它还支持通过插件扩展功能，例如 `markitdown-ocr` 插件可以为 PDF、DOCX、PPTX 和 XLSX 文件添加 OCR 支持。\n\n**技术亮点**\nMarkItDown 的技术亮点包括：\n*   **模块化转换器系统**：通过 `DocumentConverter` 抽象基类，允许为不同文件类型实现特定的转换逻辑。\n*   **优先级系统**：每个转换器都有一个优先级值，决定了执行顺序，确保最合适的转换器被优先使用。\n*   **LLM 集成**：支持使用 LLM 进行图像描述  和 OCR，例如通过 OpenAI 或 Azure OpenAI 客户端。\n*   **云服务集成**：与 Azure Document Intelligence  和 Azure Content Understanding  等云服务集成，提供更高质量的多模态提取和结构化字段输出。\n*   **插件架构**：通过 Python 的 `entry_points` 机制，支持第三方插件扩展功能。\n\n**适合谁用**\nMarkItDown 适合需要将各种文件转换为 Markdown 格式以供 LLM 和文本分析工具使用的开发者和数据科学家。特别是那些处理大量非结构化数据，并希望利用 LLM 进行信息提取、摘要或问答的场景。它也适用于需要集成 Azure 云服务以获取更高级文档处理能力的用户。",
+      "degraded": false
+    },
+    {
+      "id": "jo-inc/camofox-browser",
+      "owner": "jo-inc",
+      "name": "camofox-browser",
+      "url": "https://github.com/jo-inc/camofox-browser",
+      "stars": 10471,
+      "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+      "one_liner": "`camofox-browser` 是一个为 AI 代理设计的反检测浏览器自动化服务器。</cite>",
+      "detail_md": "### 解决什么问题\n传统的浏览器自动化工具（如 Playwright 和 Headless Chrome）容易被网站检测并阻止，导致 AI 代理无法有效浏览真实网页。</cite> `camofox-browser` 通过在 C++ 层面进行指纹欺骗来解决这个问题，从而绕过 Google、Cloudflare 和大多数机器人检测。</cite>\n\n### 核心功能\n该项目提供了一个 REST API，用于浏览器自动化任务，包括创建标签页、导航、获取可访问性快照、元素交互（点击、输入）以及会话管理。</cite> 它支持元素引用（`e1`, `e2` 等）以实现稳定的交互，并提供搜索宏以简化常见网站的导航。</cite> 此外，它还具备会话隔离、Cookie 导入、代理支持、YouTube 字幕提取和屏幕截图等功能。</cite>\n\n### 技术亮点\n`camofox-browser` 的核心是基于 Camoufox 浏览器，这是一个在 C++ 级别进行指纹欺骗的 Firefox 分支。</cite> 它将浏览器引擎封装在一个 REST API 中，提供轻量级的可访问性快照，而不是臃肿的 HTML，从而提高效率。</cite> 项目设计为低资源消耗，空闲时内存占用约为 40MB，支持在 Raspberry Pi 或低成本 VPS 上运行。</cite> 它还具有插件系统，允许扩展功能，并遵循严格的代码分离约定，以提高清晰度和可审计性。</cite>\n\n### 适合谁用\n该项目主要适用于需要进行浏览器自动化任务的 AI 代理开发者和团队。</cite> 特别是那些面临网站反机器人检测，需要稳定、可靠地与真实网页交互的场景。</cite> 它可以作为 OpenClaw 插件使用，也可以作为独立的服务器部署在各种环境中，包括 Docker、Fly.io 和 Railway。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "MoonTechLab/LunaTV",
+      "owner": "MoonTechLab",
+      "name": "LunaTV",
+      "url": "https://github.com/MoonTechLab/LunaTV",
+      "stars": 10152,
+      "description": "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+      "one_liner": "MoonTV 是一个开箱即用、跨平台的影视聚合播放器，支持多资源搜索、在线播放、收藏同步和云端存储。",
+      "detail_md": "## 解决什么问题\nMoonTV 旨在解决用户在寻找和观看免费影视内容时遇到的痛点，例如资源分散、播放体验不佳、多设备同步困难等问题。它通过聚合多源搜索、提供流畅的在线播放和支持云端存储来提升用户体验。\n\n## 核心功能\n*   **多源聚合搜索**：用户可以一次性搜索多个影视资源，并返回全源结果。\n*   **在线播放**：集成了 `HLS.js` 和 `ArtPlayer`，提供流畅的在线播放体验。\n*   **收藏与观看记录同步**：支持 `Kvrocks`、`Redis` 或 `Upstash` 等存储方式，实现多设备间的收藏和播放进度同步。\n*   **PWA 支持**：提供离线缓存和安装到桌面/主屏功能，优化移动端原生体验。\n*   **响应式布局**：自适应不同屏幕尺寸，提供桌面侧边栏和移动底部导航。\n*   **智能去广告**：实验性功能，自动跳过视频中的切片广告。\n*   **数据导入导出**：支持站长导入导出整站数据。\n\n## 技术亮点\n*   **前端技术栈**：基于 `Next.js 14` (App Router)、`Tailwind CSS 3` 和 `TypeScript 4` 构建。\n*   **播放器集成**：采用 `ArtPlayer` 和 `HLS.js` 提供视频播放功能。\n*   **存储系统**：支持 `Kvrocks` (推荐)、`Redis` 或 `Upstash` 进行数据持久化和多端同步。\n*   **版本管理**：系统包含版本追踪、更新检测和用户界面显示，确保版本一致性并提供更新通知。\n\n## 适合谁用\nMoonTV 适合希望在一个平台便捷地搜索、观看和管理免费影视内容的用户。尤其适合那些需要多设备同步观看进度、注重播放体验和希望减少广告干扰的用户。对于站长而言，项目支持数据导入导出和在线配置，方便管理。",
+      "degraded": false
+    },
+    {
+      "id": "browser-use/browser-use",
+      "owner": "browser-use",
+      "name": "browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "stars": 113470,
+      "description": "Agents that use the browser.",
+      "one_liner": "本项目是一个开源Python框架，使大型语言模型（LLMs）能够自主控制和与网络浏览器交互，实现自动化任务。",
+      "detail_md": "**解决什么问题**\n该项目旨在弥合大型语言模型（LLMs）与网络浏览器之间的鸿沟，让LLMs能够像人类一样操作浏览器，执行复杂的网络自动化任务。 它解决了传统自动化工具难以处理动态网页和复杂交互的问题，通过将网页内容转换为LLM可读的格式，并执行LLM的决策作为浏览器操作。\n\n**核心功能**\n核心功能包括将网页翻译成LLM可读的格式，通过DOM处理引擎简化HTML/CSS/JavaScript为结构化文本。 它能将LLM的决策（如点击、输入、导航、提取）转化为Chrome DevTools Protocol (CDP) 命令执行。 项目还提供一个`Agent`系统来管理执行状态、跟踪对话历史和检测循环。\n\n**技术亮点**\n技术亮点在于其分层架构，将编排、执行和浏览器控制分离，使得各层可以独立演进。 它采用事件驱动架构，通过`EventBus`解耦组件。 `DomService`能够构建并简化网页的语义树，为LLM提供带有数字索引的交互元素。 此外，它还提供了统一的LLM集成层，支持OpenAI、Google、Anthropic等多个LLM提供商，并有专门优化的`ChatBrowserUse`模型。\n\n**适合谁用**\n该项目适合需要自动化网络任务的AI代理开发者和企业。 对于希望在自己的代码中大规模自动化网络操作的用户，可以使用Python库进行深度集成和控制。 对于需要快速实验或通过现有代理（如Claude Code）执行一次性浏览器任务的用户，可以使用CLI或TUI接口。 此外，它也适合需要高性能、可扩展的云端浏览器基础设施和高级隐身功能（如代理轮换、验证码解决）的生产用例。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 21372,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP (Model Context Protocol) 插件，通过沙盒执行、FTS5 知识库和会话连续性，为 AI 编码助手节省 94-99% 的上下文窗口。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口被工具输出数据淹没和上下文窗口压缩时状态丢失的问题。  例如，一个 Playwright 快照会消耗 56 KB，GitHub 问题会消耗 59 KB，而访问日志则会消耗 45 KB，导致 30 分钟内 40% 的上下文窗口被工具输出而非代码和对话占据。  当上下文窗口填满时，代理会通过丢弃旧消息来压缩对话，从而丢失工作记忆。 \n\n**核心功能**\n`context-mode` 通过以下三种机制解决这些问题：\n1.  **沙盒执行**：`PolyglotExecutor` 为 12 种语言创建隔离的子进程，只有执行结果进入上下文，可实现 99% 的上下文节省。 \n2.  **知识库**：`ContentStore` 使用 SQLite FTS5 和 BM25 排名将内容索引，可实现 99% 的上下文节省。 \n3.  **会话连续性**：`SessionDB` 将事件捕获到持久存储中，并通过优先级分层的快照恢复状态，防止 100% 的状态丢失。 \n\n**技术亮点**\n该项目是一个用 TypeScript 实现的 MCP 服务器，通过 Model Context Protocol 标准暴露工具。  它支持 17 种以上的 AI 平台，并通过钩子系统（`PreToolUse`、`PostToolUse`、`PreCompact`、`SessionStart`）拦截工具调用以强制路由和捕获事件。   核心执行在多语言执行器 `PolyglotExecutor` 中进行，并由安全逻辑进行检查。 \n\n**适合谁用**\n`context-mode` 适合使用 AI 编码助手的开发者，特别是那些希望优化上下文窗口使用、提高效率并保持会话连续性的开发者。  它也适用于希望通过平台解决方案（如 `Context Mode Insight`）获取 AI 辅助团队工程信号的工程组织，以了解团队活动、工具使用和错误率等。",
+      "degraded": false
+    },
+    {
+      "id": "The-Swarm-Corporation/AutoHedge",
+      "owner": "The-Swarm-Corporation",
+      "name": "AutoHedge",
+      "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "stars": 5691,
+      "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+      "one_liner": "AutoHedge 是一个利用多智能体AI自动化市场分析、风险管理和交易执行的对冲基金系统。",
+      "detail_md": "**解决什么问题**\n\n该项目旨在通过自动化市场分析、风险管理和交易执行，解决传统对冲基金运营中效率低下、决策受人为情绪影响以及难以实时响应市场变化的问题。它通过多智能体架构，将复杂的交易流程分解为专业化的任务，从而提高交易决策的准确性和执行效率。\n\n**核心功能**\n\nAutoHedge 的核心功能包括：多智能体架构，由主管代理、量化分析代理、风险管理代理和执行代理组成，分别负责策略生成、技术分析、风险评估和交易执行。它能进行实时市场分析，整合市场数据提供实时洞察。系统内置风险管理和头寸调整功能，确保风险优先。此外，它还提供结构化的JSON格式交易建议和分析输出，并具备全面的日志记录功能。\n\n**技术亮点**\n\n该项目采用基于Swarms框架的多智能体系统，每个代理都使用大型语言模型（如Deepseek R1 Distill Llama 70B和GPT-4O Mini）进行决策和分析。它通过`TickrAgent`集成市场数据，实现实时分析。系统还提供了可扩展的API接口，支持用户管理、交易操作和历史分析。日志系统使用`loguru`库，提供详细的日志记录、轮换和保留策略。\n\n**适合谁用**\n\nAutoHedge 适合希望自动化交易策略、进行量化分析和风险管理的个人投资者、对冲基金经理以及金融机构。它特别适用于那些寻求利用AI和多智能体技术来提升交易效率、减少人为错误并优化投资组合表现的用户。通过其API，开发者和机构可以将其集成到现有的金融科技解决方案中。",
+      "degraded": false
+    },
+    {
+      "id": "viarotel-org/escrcpy",
+      "owner": "viarotel-org",
+      "name": "escrcpy",
+      "url": "https://github.com/viarotel-org/escrcpy",
+      "stars": 11377,
+      "description": "📱 Display and control your Android device graphically with scrcpy.",
+      "one_liner": "Escrcpy是一款基于Electron和Vue 3开发的桌面应用，用于图形化显示和控制Android设备，集成了Scrcpy、ADB和Gnirehtet工具，提供多设备管理和自动化功能。",
+      "detail_md": "**解决什么问题**\nEscrcpy旨在解决用户在管理和控制Android设备时遇到的复杂性问题，通过提供一个统一的图形界面，简化了传统命令行工具（如`scrcpy`、`adb`和`gnirehtet`）的操作难度。  它使得用户无需root权限或在设备上安装应用即可进行屏幕镜像、设备控制、文件管理和自动化操作。\n\n**核心功能**\n*   **内嵌镜像**：提供独立的内嵌窗口，自动适配设备分辨率和屏幕方向，并内置快捷操作。\n*   **键盘映射**：允许用户直接在镜像界面上配置点击、摇杆、滑动、滚动和自动化映射。\n*   **多设备群控**：支持在单个窗口中同时控制多台设备，广播输入，并支持批量截图和APK安装。\n*   **自动化脚本**：提供图形化工作流编排，支持屏幕识图条件判断和多设备批量执行。\n*   **无线连接与反向供网**：支持无线ADB连接、局域网自动发现以及Gnirehtet反向网络共享。\n\n**技术亮点**\nEscrcpy基于高性能、低延迟的`scrcpy`内核实现屏幕镜像与控制。 它采用Electron作为桌面应用框架，并结合Vue 3构建用户界面，确保了跨平台兼容性和现代化的用户体验。 项目还集成了`adbkit`进行设备通信，以及`gnirehtet`实现反向网络共享。 此外，它还支持基于MCP协议的AI自动操控，实现多模型对话与智能设备控制。\n\n**适合谁用**\nEscrcpy适合需要频繁与Android设备交互的开发者、测试人员、内容创作者以及任何希望通过桌面端高效管理和控制Android设备的用户。 特别是对于需要进行多设备操作、自动化测试或远程协助的用户，其群控和自动化脚本功能将大大提高工作效率。",
+      "degraded": false
+    },
+    {
+      "id": "openai/plugins",
+      "owner": "openai",
+      "name": "plugins",
+      "url": "https://github.com/openai/plugins",
+      "stars": 5776,
+      "description": "OpenAI Plugins",
+      "one_liner": "该项目提供金融分析、产品分析、法律研究和科学计算领域的专业插件，将自然语言查询与复杂数据结构连接起来。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户在金融分析、产品分析、法律研究和科学计算领域中，通过自然语言查询复杂数据结构（如信用评级记分卡、并购数据室和高性能数据仓库）的难题。它通过集成各种专业数据提供商的插件，简化了对市场数据、财报和信用研究的访问。\n\n**核心功能**\n核心功能包括：\n*   **金融数据查询**：提供对主要金融数据提供商（如Moody's、S&P Global、Morningstar）的数据访问，支持信用评级、财务数据、市场数据和基金分析等。例如，S&P Global 插件允许通过自然语言查询其金融数据集，包括 Capital IQ 财务数据和财报。\n*   **私人资本与并购支持**：提供用于监控投资组合KPI、跟踪承诺和执行公司估值的工具，以及管理虚拟数据室（VDR）和进行法律研究的功能。\n*   **分析与商业智能**：涵盖产品分析、市场情报和数据仓库集成，使用户能够从提问到生成可视化或运行查询。\n*   **实体解析**：将自然语言中提及的公司映射到唯一的标识符（如CUSIP、ISIN或Moody's OrgID）。\n\n**技术亮点**\n该项目利用 **Model Context Protocol (MCP)** 或 **App Connectors** 实现与外部数据源的实时连接。它通过技能层（Skill Layer）将自然语言查询路由到机构数据提供商。例如，金融研究编排图展示了用户提示如何通过意图解析器路由到不同的技能（如 `morningstar/skills/fund-comparison` 和 `s-p/interface/defaultPrompt`），再通过 `AppConnector` 或 `MCP Server` 访问外部数据。\n\n**适合谁用**\n该项目适合需要进行机构级金融分析、产品分析、法律研究和科学计算的专业人士和团队。特别是金融服务领域的工程、产品和业务团队，可以通过它节省时间和资源，简化对公司信息、财务报表和历史市场数据的访问。",
+      "degraded": false
+    }
+  ]
+}
