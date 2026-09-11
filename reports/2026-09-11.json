@@ -1,0 +1,182 @@
+{
+  "doc_token": "KZI1dXhn9oD72DxOGTHckVRZnwb",
+  "doc_url": "https://my.feishu.cn/docx/KZI1dXhn9oD72DxOGTHckVRZnwb",
+  "items": [
+    {
+      "id": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "stars": 38225,
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "one_liner": "这是一个为大语言模型（LLM）设计的技能，旨在优化其输出，使其更符合注意力缺陷多动障碍（ADHD）人群的阅读习惯，提供直接、清晰、可操作的信息。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决LLM生成内容冗长、包含不必要寒暄或信息分散的问题，这些特点可能对ADHD人群造成阅读和理解障碍。它通过强制LLM输出简洁、行动导向的指令，减少认知负担，提高信息获取效率。\n\n**核心功能**\n核心功能是根据10条预设规则，重塑LLM的输出格式。这些规则包括：以行动为先导、多步骤任务编号、明确的下一步行动、抑制离题内容、重复当前状态、具体的时间估算、使成果可见、客观描述错误、限制列表项数量，以及去除前言、回顾和结束语。这些规则定义在 `skills/i-have-adhd/SKILL.md` 文件中。\n\n**技术亮点**\n该项目采用模块化设计，允许用户通过修改 `skills/i-have-adhd/SKILL.md` 文件来自定义规则。它支持多种代理（如Claude Code、Codex和Cursor），并通过插件机制集成，无需本地克隆即可安装和更新。用户可以将其配置为手动触发或“始终开启”模式，确保所有交互都遵循ADHD友好格式。\n\n**适合谁用**\n该项目适合任何希望LLM输出更简洁、直接、易于理解的用户，尤其是有ADHD倾向或需要高效获取信息的用户。对于开发者而言，它提供了一个可定制的框架，可以根据个人或团队需求调整LLM的响应风格。",
+      "degraded": false
+    },
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "stars": 24197,
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "one_liner": "God's Eye View 是一个高性能、浏览器内的空间智能平台，将实时公共数据聚合到逼真的 3D 地球上。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统开源情报分散在多个浏览器标签页中的问题，通过将分散的信号（如航班应答器、船舶信标、轨道元素、地震仪和公共摄像头）整合到一个统一的、交互式的 3D 地球界面中，使其可视化。它将这些信号转化为一个“地点”，让用户能够实时查看世界。\n\n**核心功能**\n核心功能包括驾驶舱视角、实时联系人追踪、点击追踪任何目标、语音白板、3D 机库、多种传感器视觉模式（如 FLIR/热成像）、检测叠加层、军事 HUD 和全局上下文等。它支持十三个实时数据层，其中十个无需任何密钥即可使用，包括实时航班、船舶、卫星、地震、交通和公共摄像头等。\n\n**技术亮点**\n该平台采用“香草”架构，优先使用直接 DOM 和 WebGL 操作，而非重型框架，以确保复杂地理空间可视化的高帧率和低延迟。它基于 `CesiumJS` 和 `Google Photorealistic 3D Tiles` 构建，并利用 `OpenAI Realtime API` 实现语音控制。系统还包括渲染管理器 (`renderGovernor.js`)，用于在空闲时节省系统资源，以及服务器端代理 (`vite.config.js`) 来处理敏感 API 交互，防止凭据暴露。\n\n**适合谁用**\n该项目适合对开源情报 (OSINT)、地理空间智能 (GEOINT) 感兴趣的开发者、研究人员和普通用户。它提供了一个可检查的代码库和开放的信号源，鼓励用户扩展和贡献新的数据层、视觉样式或语音工具。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 284691,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为编码代理设计的完整软件开发方法论，提供规划、TDD、调试和协作工作流。",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决编码代理在软件开发过程中面临的挑战，通过提供一套结构化的技能和方法，帮助代理进行规划、测试驱动开发（TDD）、系统调试、并行执行、代码审查和分支完成工作流。它避免了代理在没有明确计划的情况下直接编写代码，而是引导代理首先理解需求并制定详细的实施计划。\n\n**核心功能**\n该项目的核心功能包括：\n*   **智能规划**：代理在开始编码前会与用户沟通，明确需求并制定详细的实施计划。\n*   **测试驱动开发 (TDD)**：强调真正的红/绿 TDD 实践。\n*   **子代理驱动开发**：通过子代理执行工程任务，并对其工作进行检查和审查。\n*   **多平台集成**：支持多种 AI 编码平台，如 Claude Code、Codex、Cursor、Kimi Code、Gemini CLI 等，通过平台特定的配置和工具映射实现无缝集成 <cite repo=\"obra/superpowers\" path=\"obra/superpowers\" start=\"10.2\" end=\"10.2\" />。\n\n**技术亮点**\nSuperpowers 的技术亮点在于其跨平台兼容性和灵活的配置系统 <cite repo=\"obra/superpowers\" path=\"obra/superpowers\" start=\"10.2\" end=\"10.2\" />。它使用统一的技能库，并通过平台特定的引导机制和工具映射层来适应不同的 AI 平台 <cite repo=\"obra/superpowers\" path=\"obra/superpowers\" start=\"2.6\" end=\"2.6\" />。例如，Kimi Code 通过 `skillInstructions` 块将 Superpowers 的通用工具要求映射到 Kimi 特定的工具。此外，它还包括一个零依赖的 Brainstorm 服务器，用于可视化协作。\n\n**适合谁用**\nSuperpowers 适合使用 AI 编码代理进行软件开发的开发者和团队。特别是那些希望通过结构化方法论提高代理开发效率、确保代码质量、并促进团队协作的用户。它支持多种主流 AI 编码环境，使得在不同平台上的用户都能受益于其提供的开发工作流 <cite repo=\"obra/superpowers\" path=\"obra/superpowers\" start=\"10.2\" end=\"10.2\" />。",
+      "degraded": false
+    },
+    {
+      "id": "alsk1992/CloddsBot",
+      "owner": "alsk1992",
+      "name": "CloddsBot",
+      "url": "https://github.com/alsk1992/CloddsBot",
+      "stars": 1625,
+      "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+      "one_liner": "CloddsBot是一个高性能、自托管的AI交易终端，用于预测市场、加密货币现货、永续期货和DeFi生态系统。",
+      "detail_md": "**解决什么问题** \nCloddsBot旨在解决传统金融交易中操作复杂、多平台管理困难以及缺乏智能自动化的问题。它通过自然语言交互，将复杂的交易操作简化，并整合了多种交易策略和风险管理工具，帮助用户在预测市场、加密货币和DeFi领域进行高效交易。\n\n**核心功能** \n该项目提供全渠道接口，支持通过Telegram、Discord等21种消息平台进行交互。它集成了10个预测市场和7个期货交易所，支持Solana和EVM链上的DeFi交易。核心功能包括119+种交易策略、鲸鱼追踪、套利检测、复制交易、DCA机器人以及Bittensor子网挖矿。此外，它还具备统一的风险引擎和安全防护模块。\n\n**技术亮点** \nCloddsBot采用模块化分层架构，包括网关层、AI代理层、消息通道层、市场数据层和交易执行层。它由Anthropic的Claude提供支持，拥有双层技能系统（基于Prompt和TypeScript），能够执行复杂的多步骤金融工作流。系统还包含一个75条规则的“安全盾”扫描器、加密凭证管理和带有断路器的统一风险引擎。\n\n**适合谁用** \nCloddsBot适合希望通过AI和自然语言管理复杂交易操作的交易员、投资者和DeFi用户。特别是那些活跃在预测市场、加密货币现货、永续期货和DeFi生态系统，并寻求自动化交易策略和高级风险管理功能的个人或机构。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/teamai-cli",
+      "owner": "Tencent",
+      "name": "teamai-cli",
+      "url": "https://github.com/Tencent/teamai-cli",
+      "stars": 3763,
+      "description": "Make Every Team AI Native",
+      "one_liner": "TeamAI CLI 是一个团队级 AI Agent 协作平台，通过 Git 统一管理和共享 AI Agents 的技能、规则和知识库，促进团队知识沉淀与复用。",
+      "detail_md": "**解决什么问题**\nTeamAI CLI 旨在解决 AI Agent 在团队协作中面临的技能碎片化、知识难以共享和重复造轮子的问题。它通过将团队共享的 Skills、Rules、Docs 和 Env 等资源集中存储在一个 Git 仓库（Team Repo）中，并自动同步到团队成员的本地 AI 编程工具（如 Claude Code、Cursor、Codex 等），确保所有成员使用统一的 AI 能力和标准。\n\n**核心功能**\nTeamAI CLI 的核心功能包括：\n*   **资源同步**：`teamai pull` 命令将团队仓库中的 Skills、Rules、Docs 和 Env 自动同步到本地 AI 工具。\n*   **知识贡献**：`teamai contribute` 命令允许开发者将 AI 会话中的经验（Learnings）分享到团队仓库，形成团队知识库。\n*   **知识检索**：`teamai recall <query>` 命令支持在团队知识库中进行搜索，结合 BM25 和代码知识图谱提供增强检索能力。\n*   **使用追踪与报告**：通过 Hooks 机制追踪 AI Agent 的技能使用情况，并自动上报到团队仓库，生成团队周报 `teamai digest`。\n\n**技术亮点**\n*   **Git-native 管理**：所有共享资源通过 Git 仓库进行版本控制和分发，天然支持协作和历史追溯。\n*   **Hooks 机制**：通过 `SessionStart`、`UserPromptSubmit`、`PostToolUse` 和 `Stop` 等生命周期钩子，实现自动化同步、使用追踪和知识贡献提示。\n*   **智能评分与贡献**：`Stop` Hook 会计算会话的“摩擦分”（SmartScore），识别有价值的会话并提示用户贡献知识。\n*   **混合检索**：结合 BM25 搜索索引和代码知识图谱，提供结构感知的检索能力，帮助 AI Agent 快速定位相关知识和代码。\n\n**适合谁用**\nTeamAI CLI 适合任何希望提升 AI Agent 在团队中协作效率的开发团队。特别是那些使用 Claude Code、Cursor、Codex 等 AI 编程工具的团队，可以通过它来统一 AI Agent 的行为、共享最佳实践、沉淀团队知识，并加速新成员的上手过程。",
+      "degraded": false
+    },
+    {
+      "id": "AlexsJones/llmfit",
+      "owner": "AlexsJones",
+      "name": "llmfit",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "stars": 35719,
+      "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+      "one_liner": "`llmfit` 是一个硬件感知的 LLM 模型推荐工具，可根据您的系统硬件能力匹配并推荐合适的模型。",
+      "detail_md": "**解决什么问题**\n`llmfit` 解决了本地部署大型语言模型 (LLM) 时，用户难以确定哪些模型能在其特定硬件上有效运行的问题，避免了手动计算或反复试错的麻烦。 它通过自动检测硬件并评估模型来提供解决方案。 \n\n**核心功能**\n该工具的核心功能包括：自动检测系统硬件（RAM、CPU、GPU、VRAM）， 维护一个包含数百个模型的数据库， 支持混合专家 (MoE) 架构， 动态选择最佳量化级别， 以及多维度评分（质量、速度、适配度、上下文）以推荐最适合的模型。 它还集成了本地运行时提供商（如 Ollama、llama.cpp、MLX），并提供社区排行榜数据。  \n\n**技术亮点**\n`llmfit` 的技术亮点在于其全面的硬件检测能力，支持 NVIDIA、AMD、Intel Arc 和 Apple Silicon 等多种 GPU 平台。 它能根据 GPU 内存带宽估算模型速度， 并对 MoE 模型进行精确的内存需求计算。 此外，它提供交互式终端用户界面 (TUI)、命令行界面 (CLI) 和 Web 仪表盘， 并支持硬件模拟和高级配置调整。  \n\n**适合谁用**\n`llmfit` 适合希望在本地机器上运行 LLM 的开发者、研究人员和爱好者。 特别是那些需要根据自身硬件配置快速找到最佳模型、优化模型性能或评估不同硬件配置下模型运行情况的用户。 它也适用于需要集成 LLM 推荐功能的代理系统（如 OpenClaw）。",
+      "degraded": false
+    },
+    {
+      "id": "liquidslr/system-design-notes",
+      "owner": "liquidslr",
+      "name": "system-design-notes",
+      "url": "https://github.com/liquidslr/system-design-notes",
+      "stars": 18757,
+      "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+      "one_liner": "本项目是基于《系统设计面试：内部人指南》系列书籍的学习笔记集合。",
+      "detail_md": "**解决什么问题**\n本项目旨在为准备系统设计面试的工程师提供结构化的学习资料，帮助他们理解从基础概念到复杂应用设计的系统设计原理。它将复杂的系统设计知识分解为易于理解的章节，并提供关键主题和架构图，以应对面试挑战。\n\n**核心功能**\n该项目包含两大部分核心内容：基础概念和应用设计。基础概念部分涵盖了可伸缩性、估算、限流、一致性哈希、分布式存储和唯一ID生成等主题。应用设计部分则提供了URL缩短器、聊天系统、YouTube、Google Drive等20多种实际应用的端到端系统设计。\n\n**技术亮点**\n项目通过结构化的目录和详细的Wiki页面组织内容，清晰地展示了基础构建块如何支撑复杂的应用系统。例如，它通过Mermaid图表展示了组件依赖关系，并提供了架构与代码实体的映射。此外，还收录了与设计原则相关的外部资源和工程博客链接。\n\n**适合谁用**\n本项目非常适合正在准备系统设计面试的软件工程师，以及希望深入理解分布式系统和大规模应用架构的开发者。它提供了一个全面的学习路径，从理论基础到实际案例，帮助用户构建扎实的系统设计知识体系。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 37716,
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "`diagram-design` 是一个用于创建高质量技术和产品图表的智能体技能和设计系统，支持多种图表类型和品牌定制。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统图表工具生成图表样式不统一、难以品牌化、以及在不同场景下复用性差的问题。它通过提供一套统一的设计系统和自动化流程，帮助用户快速生成符合品牌规范、具有编辑质量的图表，并支持从现有图表源（如 `draw.io` 或 Mermaid）进行重绘，以适应不同的输出需求。\n\n**核心功能**\n核心功能包括：支持 28 种不同类型的图表生成；能够从网站提取品牌颜色和字体，并自动应用到图表样式中；支持导入 `draw.io` 和 Mermaid 格式的图表并进行重绘，同时提供格式、尺寸、细节和受众等“四种拨盘”来精细控制输出；生成的图表是独立的 HTML 文件，包含内联 SVG 和 CSS，无需外部依赖。\n\n**技术亮点**\n技术亮点在于其“渐进式披露”的架构，核心逻辑和路由在 `SKILL.md` 中，而特定类型的规则和约定则按需从 `references/` 目录加载。它强制执行“样式指南门禁”，确保图表简洁且符合设计哲学。此外，它还支持语义模式，将系统行为与视觉布局分离，并提供可选的无障碍动画模式。\n\n**适合谁用**\n该项目适合需要创建高质量、品牌一致的技术和产品图表的工程师、产品经理、设计师以及内容创作者。特别是那些希望将现有 `draw.io` 或 Mermaid 图表转换为统一品牌风格，或需要为不同发布渠道（如博客、幻灯片、社交媒体）定制图表输出的用户。它作为 Claude Code、Codex 和 Pi 的技能，方便集成到现有工作流中。",
+      "degraded": false
+    },
+    {
+      "id": "freestylefly/awesome-gpt-image-2",
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "stars": 30817,
+      "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
+      "one_liner": "GPT-Image2 将零散的AI图像生成灵感重构为结构化、可控、可复用的提示词资产，旨在提升图像生成效率与质量。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI图像生成中“散文式提示词”带来的不稳定、不可控和难以复用的问题。通过将提示词转化为结构化协议，它使得批量出图、模板系统构建和生产流程集成成为可能。\n\n**核心功能**\n核心功能包括原子化Schema，将视觉要素拆解为可组合组件（如主体、光影、材质、排版）；提供工作流友好的JSON模板，便于Agent和自动化系统调用；以及通过结构化控制，提高版式、文案和信息层级的可控性。项目还提供了353个经过逆向整理的案例画廊。\n\n**技术亮点**\n技术亮点在于“Prompt-as-Code”方法论，将提示词视为结构化、版本控制和可复用的代码资产。它通过定义结构约束（如比例、布局、模块数量）和提供工业级提示词模板（如UI、信息图、海报模板），有效避免了AI生成中的常见问题，并附带“避坑指南”。\n\n**适合谁用**\n本项目适合需要批量生成图像、构建模板系统、将AI图像生成集成到自动化工作流的开发者和设计师。也适用于希望学习和研究结构化提示词方法论的AI爱好者和研究人员。",
+      "degraded": false
+    },
+    {
+      "id": "armory3d/armorpaint",
+      "owner": "armory3d",
+      "name": "armorpaint",
+      "url": "https://github.com/armory3d/armorpaint",
+      "stars": 4404,
+      "description": "Graphics Creation Tools",
+      "one_liner": "ArmorPaint 是一个用于 3D 模型的 PBR 纹理绘制软件，支持多种绘制工具和节点编辑，提供高效的纹理导出功能。",
+      "detail_md": "**解决什么问题**\nArmorPaint 旨在解决 3D 模型 PBR（基于物理渲染）纹理绘制的复杂性问题，提供一个直观且功能丰富的环境，让艺术家和开发者能够直接在 3D 模型上进行纹理绘制、材质烘焙和节点编辑。它通过提供多种工作区（如 3D 绘制、2D 绘制和节点编辑）来适应不同的工作流程。\n\n**核心功能**\n该项目提供核心功能包括：\n*   **3D 纹理绘制**：允许用户直接在 3D 模型上绘制纹理。\n*   **材质和笔刷节点编辑**：通过节点系统创建和编辑复杂的材质和笔刷效果。\n*   **纹理和模型导入导出**：支持导入各种纹理和网格文件，并能将绘制好的纹理导出为多种格式。\n*   **多工作区支持**：提供 3D 绘制、2D 绘制、节点编辑和脚本编辑等多种工作区，以适应不同需求。\n*   **烘焙功能**：支持将材质烘焙到纹理中。\n\n**技术亮点**\n*   **基于 `iron` 引擎**：应用程序构建在 `iron` 引擎之上，提供了高性能的渲染和交互能力。\n*   **全局状态管理**：通过 `context_t` 结构体集中管理应用程序的全局状态，包括活动工具、渲染脏标记和视口设置，确保数据一致性。\n*   **脏标记系统**：`pdirty` 和 `rdirty` 等脏标记用于协调 UI 和渲染管线，优化纹理更新和视图重绘的性能。\n*   **插件架构**：支持插件扩展功能，例如 UV 展开插件。\n*   **本地化支持**：通过 `zh_cn.json` 等文件提供多语言支持。\n\n**适合谁用**\nArmorPaint 适合需要进行 3D 模型纹理绘制的艺术家、游戏开发者和 3D 内容创作者。特别是那些寻求高效 PBR 纹理工作流程、希望直接在模型上绘制、以及需要通过节点系统进行复杂材质编辑的用户。它也适用于需要将材质烘焙到纹理或导出多种纹理格式的专业人士。",
+      "degraded": false
+    },
+    {
+      "id": "diegosouzapw/OmniRoute",
+      "owner": "diegosouzapw",
+      "name": "OmniRoute",
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "stars": 64224,
+      "description": "Never stop coding. Free MIT AI gateway: one endpoint, 352 providers (150+ free), 1200+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 550+ contributors",
+      "one_liner": "OmniRoute 是一个本地优先的 AI API 路由网关，通过智能路由、多层回退和上下文压缩，统一访问 352+ AI 提供商，降低成本并提高可用性。",
+      "detail_md": "**解决什么问题**\nOmniRoute 旨在解决 AI API 使用中的“配额耗尽”和“提供商锁定”问题，通过在多个提供商之间自动路由请求，确保 AI 驱动的 IDE 和 CLI 工具的持续可用性，同时最大限度地降低成本。   它还通过上下文压缩技术，显著减少 AI 请求的 Token 使用量，从而进一步降低成本。 \n\n**核心功能**\nOmniRoute 提供统一的 AI 提供商访问，支持 352+ AI 提供商和 1300+ 独特的聊天模型 ID。   它具备 4 层自动回退系统（订阅 → API 密钥 → 廉价 → 免费），确保服务不中断。   项目支持多协议访问，包括 OpenAI 兼容的 REST API、模型上下文协议 (MCP) 和代理到代理 (A2A) JSON-RPC 2.0。   此外，它还集成了 RTK+Caveman 压缩管道，可节省 15-95% 的 Token。  \n\n**技术亮点**\n该项目采用 Node.js 22.x 或 24.x LTS 和 TypeScript 6.0 开发，核心模块实现 100% TypeScript。   界面使用 Next.js 16、React 19 和 Tailwind CSS 4 构建。  数据存储采用 better-sqlite3 (SQLite) 和 LowDB。  OmniRoute 实现了 19 种智能路由策略，如 `priority`、`weighted` 和 `cost-optimized`。  国际化支持超过 41 种语言，通过 `next-intl` 框架实现。 \n\n**适合谁用**\nOmniRoute 适合需要稳定、经济且灵活地访问多种 AI 提供商的开发者和团队。   特别适用于 AI 驱动的 IDE 和 CLI 工具用户，以及希望通过智能路由和 Token 压缩来优化成本和提高可用性的场景。",
+      "degraded": false
+    },
+    {
+      "id": "JustVugg/colibri",
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "stars": 27444,
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "one_liner": "Colibrì 是一个轻量级推理引擎，旨在消费级硬件上运行前沿的混合专家（MoE）模型。",
+      "detail_md": "**解决什么问题**\nColibrì 旨在解决前沿大型语言模型（LLMs）对数据中心级硬件的依赖问题，使得 744B 到 2.8T 参数的 MoE 模型能够在消费级和异构硬件上运行。   它通过优化推理路径、降低硬件依赖和总成本，让用户能够在现有硬件上运行大型模型，并实时观察和改进模型行为。 \n\n**核心功能**\nColibrì 的核心功能包括统一的内存层级管理，将 VRAM、RAM 和 NVMe 视为同一份权重的不同放置层级，以实现高效的权重流式加载。  它实现了权重的即时编译（JIT），通过测量路由热度驱动逐层 LRU 缓存、学习型热门专家固定区和提前预取，避免加载所有专家。  引擎还支持异构执行，可以在 CPU、CUDA、Metal 等多种硬件后端上运行，并能根据机器条件进行组合。  此外，它还提供忠实模型下的压缩状态和诚实的推测解码功能，确保优化不牺牲模型精度。  \n\n**技术亮点**\n该项目采用纯 C 语言实现，零引擎依赖，注重效率和可移植性。  它将存储（NVMe）、RAM 和 VRAM 视为一个统一的推理层级，允许大型模型在内存有限的机器上运行。  技术亮点包括 AI 内存多层级、常驻与流式权重管理、权重 JIT 与专家缓存、异构执行以及无损推测解码。  例如，它能将 744B 模型在 25 GB RAM 的机器上运行，并支持 CUDA、Metal 等多种后端。 \n\n**适合谁用**\nColibrì 适合希望在消费级或异构硬件上运行大型 MoE 模型，而不必依赖昂贵的数据中心级硬件的开发者和研究人员。  它也适合对 LLM 推理系统优化感兴趣的用户，特别是那些希望深入了解模型格式、内存层级、存储 I/O、调度、CPU/GPU 内核、异构重叠、KV 状态和路由感知推测等方面的研究者。  此外，对于希望贡献硬件基准测试数据或参与开源项目优化的社区成员，Colibrì 也提供了明确的参与方式。",
+      "degraded": false
+    },
+    {
+      "id": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "stars": 35283,
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "one_liner": "OpenMAIC 是一个开源的 AI 互动课堂平台，能将任何主题或文档转化为丰富的互动学习体验。",
+      "detail_md": "**解决什么问题**\nOpenMAIC 旨在解决传统在线学习中互动性不足、内容生成效率低下的问题。它通过 AI 自动生成课程内容，并引入多智能体进行实时互动，极大地提升了学习体验的沉浸感和个性化。\n\n**核心功能**\nOpenMAIC 的核心功能包括：一键生成课堂，用户只需描述主题或提供材料，AI 即可在几分钟内构建完整课程；多智能体课堂，AI 老师和同学能实时授课、讨论和互动；支持幻灯片、测验、交互式模拟和项目制学习（PBL）等多种场景类型；智能体支持白板绘图和语音讲解；可灵活导出为可编辑的 `.pptx` 或交互式 `.html` 网页；以及通过 OpenClaw 集成，直接在聊天应用中生成课堂。\n\n**技术亮点**\n该项目采用 Next.js、React 和 TypeScript 构建，利用 LangGraph 实现多智能体编排。其生成流水线分为大纲生成和场景生成两阶段。支持多种 LLM 服务商（如 OpenAI、Anthropic、Google 等）和媒体服务商。深度交互模式提供 3D 可视化、模拟实验、游戏、思维导图和在线编程等五种交互界面。此外，还支持语音合成（TTS）和语音识别、网络搜索、国际化（支持 11 种语言）和暗色模式。\n\n**适合谁用**\nOpenMAIC 适合需要高效创建互动式学习内容的教育工作者、培训师。对于希望通过 AI 提升学习体验的学生和自学者，它提供了沉浸式的多智能体互动课堂。同时，其开源性质和灵活的集成能力也适合开发者和研究人员进行二次开发和定制。",
+      "degraded": false
+    },
+    {
+      "id": "nashsu/llm_wiki",
+      "owner": "nashsu",
+      "name": "llm_wiki",
+      "url": "https://github.com/nashsu/llm_wiki",
+      "stars": 18082,
+      "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+      "one_liner": "LLM Wiki 是一个跨平台桌面应用，能将文档自动转化为有组织、相互关联的知识库，并持续更新。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统RAG系统每次查询都从头检索和回答效率低下的问题。它通过增量构建和维护一个持久化的Wiki，实现知识的编译一次并持续更新，避免重复推导。\n\n**核心功能**\nLLM Wiki 提供两步思维链摄入、多模态图片摄入、多格式文档解析、四信号知识图谱、Louvain社区检测、图谱洞察、向量语义搜索、持久化摄入队列、Rust后端Chat Agent、深度研究、异步审核系统和Chrome网页剪藏等功能。它还支持本地HTTP API，允许外部AI Agent查询知识库。\n\n**技术亮点**\n该应用基于Tauri v2框架构建，结合Rust后端和React 19前端。它采用三层数据架构：原始资料、Wiki和Schema。技术栈包括LanceDB用于向量搜索，sigma.js和graphology用于知识图谱可视化，以及多种文档解析器。\n\n**适合谁用**\nLLM Wiki 适合需要将大量非结构化文档转化为结构化、可查询知识库的个人或团队。特别是那些希望利用LLM能力进行知识管理、研究、内容创作和信息检索的用户。它也适用于希望将AI Agent与个人知识库集成的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/skills",
+      "owner": "vercel-labs",
+      "name": "skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "stars": 31128,
+      "description": "The open agent skills tool - npx skills",
+      "one_liner": "`skills` 是一个用于管理 AI 代理技能的命令行工具，支持技能的发现、安装、管理和版本追踪。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 代理技能的碎片化管理问题，提供一个统一的接口来发现、安装和管理来自不同来源（如 GitHub、GitLab、本地文件等）的技能。它简化了将技能集成到各种 AI 代理（支持超过 70 种代理类型）的过程。\n\n**核心功能**\n`skills` CLI 提供以下核心功能：\n*   **技能安装**：通过 `npx skills add <source>` 命令从 GitHub 仓库、GitLab URL 或本地路径安装技能。\n*   **技能使用**：通过 `npx skills use <source>@<skill>` 命令在不安装的情况下使用技能，并可选择与支持的编码代理交互。\n*   **技能管理**：包括列出已安装技能 (`npx skills list`)、搜索技能 (`npx skills find [query]`)、移除技能 (`npx skills remove [skills]`)  和更新技能 (`npx skills update [skills]`)。\n*   **技能初始化**：通过 `npx skills init [name]` 创建新的 `SKILL.md` 模板。\n\n**技术亮点**\n*   **多源支持**：能够解析和处理来自 GitHub、GitLab、任意 Git URL 和本地路径的技能源。\n*   **灵活的安装方式**：支持符号链接 (Symlink) 和复制 (Copy) 两种安装方法，以适应不同环境的需求。\n*   **代理兼容性**：与超过 70 种 AI 代理兼容，并遵循共享的 Agent Skills 规范。\n*   **锁文件机制**：使用 `skills-lock.json` 文件进行项目级别的技能版本追踪和恢复。\n\n**适合谁用**\n该工具适合需要利用 AI 代理技能的开发者和 AI 代理用户。特别是那些希望：\n*   快速发现和集成各种 AI 代理技能的用户。\n*   在不同项目和代理之间管理技能的开发者。\n*   希望扩展 AI 代理能力，使其具备专业知识、工作流和工具的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "vastsa/PI-Desktop",
+      "owner": "vastsa",
+      "name": "PI-Desktop",
+      "url": "https://github.com/vastsa/PI-Desktop",
+      "stars": 2277,
+      "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+      "one_liner": "PI-Desktop 是一个本地优先的 AI 编程助手桌面应用，旨在提升开发者的工作效率和体验。",
+      "detail_md": "**解决什么问题**\nPI-Desktop 旨在解决开发者在使用 AI 助手时面临的效率、隐私和集成问题。它通过提供一个本地运行的桌面环境，确保数据安全和更强的沙盒隔离，同时避免了云端服务的潜在延迟和隐私风险。项目还通过精细的 UI/UX 设计，如会话面板保留 和响应式布局，优化了用户交互体验。\n\n**核心功能**\n该项目提供多项核心功能，包括：\n*   **本地 AI 编程助手**：通过集成 AI 代理引擎 (`@earendil-works/pi-agent-core`)，提供智能编程辅助。\n*   **项目与会话管理**：支持创建、管理项目和会话，并提供会话面板保留功能，确保切换会话时内容不丢失。\n*   **插件系统**：允许用户安装和管理本地插件，扩展应用功能。\n*   **多语言支持**：提供中文等多种语言界面，提升用户体验。\n*   **可配置的关闭行为**：用户可以选择关闭应用到系统托盘或完全退出。\n\n**技术亮点**\nPI-Desktop 的技术栈融合了多种现代技术：\n*   **Electron 桌面壳**：提供跨平台的桌面应用体验。\n*   **Rust 后端核心**：使用 Rust (`host-core`) 处理特权进程、RPC 和持久化，提供更强的沙盒隔离和性能。\n*   **React 19 + TypeScript UI**：构建现代化、响应迅速的用户界面。\n*   **Tailwind CSS 4**：实现高效的样式管理和统一的视觉设计。\n*   **SQLite 数据库**：用于会话和设置的本地持久化存储。\n\n**适合谁用**\nPI-Desktop 适合需要本地化、高性能 AI 编程助手的开发者。特别是那些关注代码隐私、希望在本地环境中运行 AI 工具，并寻求高度可定制和集成开发体验的用户。它也适合希望通过插件扩展功能，并享受流畅、响应式 UI 的开发者。",
+      "degraded": false
+    }
+  ]
+}
