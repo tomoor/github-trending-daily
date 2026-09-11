@@ -177,6 +177,105 @@
       "one_liner": "PI-Desktop 是一个本地优先的 AI 编程助手桌面应用，旨在提升开发者的工作效率和体验。",
       "detail_md": "**解决什么问题**\nPI-Desktop 旨在解决开发者在使用 AI 助手时面临的效率、隐私和集成问题。它通过提供一个本地运行的桌面环境，确保数据安全和更强的沙盒隔离，同时避免了云端服务的潜在延迟和隐私风险。项目还通过精细的 UI/UX 设计，如会话面板保留 和响应式布局，优化了用户交互体验。\n\n**核心功能**\n该项目提供多项核心功能，包括：\n*   **本地 AI 编程助手**：通过集成 AI 代理引擎 (`@earendil-works/pi-agent-core`)，提供智能编程辅助。\n*   **项目与会话管理**：支持创建、管理项目和会话，并提供会话面板保留功能，确保切换会话时内容不丢失。\n*   **插件系统**：允许用户安装和管理本地插件，扩展应用功能。\n*   **多语言支持**：提供中文等多种语言界面，提升用户体验。\n*   **可配置的关闭行为**：用户可以选择关闭应用到系统托盘或完全退出。\n\n**技术亮点**\nPI-Desktop 的技术栈融合了多种现代技术：\n*   **Electron 桌面壳**：提供跨平台的桌面应用体验。\n*   **Rust 后端核心**：使用 Rust (`host-core`) 处理特权进程、RPC 和持久化，提供更强的沙盒隔离和性能。\n*   **React 19 + TypeScript UI**：构建现代化、响应迅速的用户界面。\n*   **Tailwind CSS 4**：实现高效的样式管理和统一的视觉设计。\n*   **SQLite 数据库**：用于会话和设置的本地持久化存储。\n\n**适合谁用**\nPI-Desktop 适合需要本地化、高性能 AI 编程助手的开发者。特别是那些关注代码隐私、希望在本地环境中运行 AI 工具，并寻求高度可定制和集成开发体验的用户。它也适合希望通过插件扩展功能，并享受流畅、响应式 UI 的开发者。",
       "degraded": false
+    },
+    {
+      "id": "nab138/iloader",
+      "owner": "nab138",
+      "name": "iloader",
+      "url": "https://github.com/nab138/iloader",
+      "stars": 2800,
+      "description": "User friendly sideloader",
+      "one_liner": "iloader 是一款用户友好的桌面应用，旨在简化 iOS 设备上的应用侧载、证书和配对文件管理。",
+      "detail_md": "**解决什么问题**\n该项目解决了 iOS 用户在非越狱设备上安装第三方应用（如 SideStore）的复杂性问题。它通过自动化证书管理、配对文件处理和应用安装流程，降低了侧载的技术门槛，使用户无需手动处理繁琐的步骤。  \n\n**核心功能**\niloader 提供以下核心功能：安装 SideStore 或 LiveContainer + SideStore，并自动导入证书和放置配对文件；安装其他 IPA 文件；管理 SideStore、StikDebug 等常见应用中的配对文件；查看和撤销开发证书；查看 App ID；以及保存多个 Apple ID 凭据。 \n\n**技术亮点**\n该项目采用 Tauri 框架构建，结合 Rust 后端和 React + TypeScript 前端，实现了跨平台桌面应用。   后端利用 `idevice` 库与 iOS 设备通信，`isideload` 库处理应用安装，并通过 `keyring` 库安全存储凭据。前端支持多语言（i18n），并提供详细的日志和错误处理机制。\n\n**适合谁用**\niloader 适合希望在 iOS 设备上安装第三方应用，但又不想处理复杂技术细节的普通用户。  也适合需要管理多个 Apple ID、开发证书和配对文件的开发者或高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "melgarafael/DeskcommCRM",
+      "owner": "melgarafael",
+      "name": "DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "stars": 1094,
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "one_liner": "DeskcommCRM 是一个开源销售操作系统，专为 WhatsApp 优先的业务设计，通过原生 AI 代理和人工代理共同管理和推进销售线索。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 WhatsApp 优先业务在销售运营中面临的挑战，例如线索管理、客户沟通效率低下以及缺乏自动化。  它通过提供一个集成的平台，使企业能够更好地管理客户关系、自动化销售流程并利用 AI 提升效率，同时确保数据主权和避免订阅费用。 \n\n**核心功能**\nDeskcommCRM 提供多项核心功能，包括：自学习 AI 代理，能够处理、筛选和推进销售线索；  支持通过 QR 码或 Meta 官方渠道进行 WhatsApp 双向沟通；  可配置的看板（Kanban）和销售漏斗管理；  以及强大的 Webhooks 和自动化功能，允许用户创建捕获源和 WHEN/IF/THEN 规则来触发各种操作。 \n\n**技术亮点**\n该项目采用 Next.js 16 App Router 作为前端和后端框架，使用 Supabase (Postgres + RLS + `vector`) 进行数据存储和行级安全，并集成 WAHA Plus 进行 WhatsApp 通信。  AI 能力通过 Vercel AI SDK 实现，支持 OpenRouter、Anthropic 和 OpenAI 等多种 AI 提供商。  此外，它还强调真正的自托管部署，确保用户数据存储在自己的 VPS 上，并提供一键安装和更新。 \n\n**适合谁用**\nDeskcommCRM 适合那些以 WhatsApp 为主要沟通渠道的企业，特别是中小型企业（PME），  如电商（已集成 Nuvemshop）、诊所、房地产和信息产品销售商。  对于重视数据主权、希望避免高昂订阅费用并寻求通过 AI 自动化销售流程的用户来说，这是一个理想的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "Sonarr/Sonarr",
+      "owner": "Sonarr",
+      "name": "Sonarr",
+      "url": "https://github.com/Sonarr/Sonarr",
+      "stars": 15618,
+      "description": "Smart PVR for newsgroup and bittorrent users.",
+      "one_liner": "该项目为 Sonarr 的本地化和国际化系统，提供多语言支持，特别是中文界面翻译。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 Sonarr 应用程序在不同语言环境下用户界面的可访问性问题，通过提供多语言支持，让全球用户能够以其母语使用该应用程序 <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。它通过一个基于 JSON 的键值翻译框架，支持超过 17 种语言，包括中文 <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。\n\n**核心功能**\n核心功能是提供一个集中式的翻译键值存储系统，其中包含特定语言的 JSON 文件 <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。当特定语言的字符串缺失时，系统会回退到英文 (`en.json`) <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。翻译文件 (`zh_CN.json`) 包含了 UI 元素、系统消息和帮助文本等内容的中文翻译。\n\n**技术亮点**\n技术亮点在于其基于 JSON 的键值对翻译框架，以及对字符串插值和模板的支持，允许动态内容的翻译 <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。例如，`AddSeriesWithTitle` 键可以使用 `{title}` 占位符来动态添加剧集名称。此外，系统还定义了键名约定，如以 `HealthCheckMessage` 结尾的键用于健康检查报告 <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。\n\n**适合谁用**\n该项目适合 Sonarr 的开发人员和贡献者，他们可以通过维护和扩展 JSON 翻译文件来改进应用程序的本地化支持 <cite repo=\"Sonarr/Sonarr\" path=\"Localization and Internationalization\" start=\"6.1\" end=\"6.1\" />。同时，它也适合需要使用 Sonarr 应用程序的非英语用户，特别是中文用户，因为它提供了完整的中文界面翻译，提升了用户体验。",
+      "degraded": false
+    },
+    {
+      "id": "jihe520/MathModelAgent",
+      "owner": "jihe520",
+      "name": "MathModelAgent",
+      "url": "https://github.com/jihe520/MathModelAgent",
+      "stars": 4750,
+      "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+      "one_liner": "MathModelAgent是一个数学建模智能体，能自动完成数学建模并生成可提交的论文。",
+      "detail_md": "**解决什么问题**\n该项目旨在将三天数学建模竞赛的工作量缩短至一小时，通过自动化分析、建模、编程和论文撰写过程，帮助用户快速生成高质量的数学建模论文，尤其适用于中国和国际数学建模竞赛。  \n\n**核心功能**\n核心功能包括自动问题分析、数学建模、代码编写、错误修正和论文撰写。 它利用Typst系统生成专业论文，并提供17种竞赛模板（包括14种中文和3种英文竞赛模板），以及`typst-author`技能用于生成符合Typst语法的代码。   \n\n**技术亮点**\n项目采用多智能体设计，通过`5writing`技能将自然语言描述转化为Typst代码实体，并由`typst-author`技能处理Typst语法细节和模板集成。  此外，`doctor`技能负责环境配置检查，确保Typst编译环境的完整性。 项目还支持Docker部署，简化了环境配置。 \n\n**适合谁用**\n该项目适合需要参加数学建模竞赛的学生、研究人员以及希望提高论文撰写效率的用户。 对于Agent开发者，项目提供了SKILLS层的迭代和优化机会，鼓励社区贡献。",
+      "degraded": false
+    },
+    {
+      "id": "p1neappleXpress/OpenFlux",
+      "owner": "p1neappleXpress",
+      "name": "OpenFlux",
+      "url": "https://github.com/p1neappleXpress/OpenFlux",
+      "stars": 952,
+      "description": "Network stack research tool. TCP tunnel with pluggable transports.",
+      "one_liner": "OpenFlux 是一个网络栈研究工具，通过可插拔的传输方式实现 TCP 隧道，以绕过网络限制。",
+      "detail_md": "**解决什么问题**\nOpenFlux 旨在解决在受限网络环境中进行数据传输的问题，它通过将任意 TCP 流量封装在应用层协议（如 Yandex Docs 光标更新或 WebRTC 数据通道）中，从而绕过网络限制和审查。\n\n**核心功能**\n该项目提供客户端和出口节点两种运行模式。客户端运行一个本地 SOCKS5 代理服务器，并将 TCP 流量通过 gVisor 用户空间 TCP/IP 栈  和可插拔的传输层发送。出口节点则负责解封装传入的传输层数据包，并将其注入 gVisor 网络栈，然后使用原始套接字将流量转发到互联网。\n\n**技术亮点**\nOpenFlux 的技术亮点包括：\n*   **可插拔传输层**：支持多种传输后端，目前包括通过 Yandex Docs 光标消息发送数据包 和通过 MAX Messenger 的 WebRTC DataChannel 发送数据包。\n*   **gVisor 网络栈集成**：利用 gVisor 实现用户空间 TCP/IP 栈，提供虚拟网络接口 (`tunnel.TunnelLinkEndpoint`) 来处理数据包的注入和转发。\n*   **跨平台支持**：支持桌面（Linux、macOS、Windows）、Android 和 iOS 平台。\n*   **LZ4 压缩**：传输层支持 LZ4 压缩，以提高传输效率。\n\n**适合谁用**\n该工具主要适用于网络研究人员、开发者以及需要绕过网络限制的用户。它也适合那些希望了解和实现自定义传输协议的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "jordan-gibbs/hyperresearch",
+      "owner": "jordan-gibbs",
+      "name": "hyperresearch",
+      "url": "https://github.com/jordan-gibbs/hyperresearch",
+      "stars": 2251,
+      "description": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki.",
+      "one_liner": "Hyperresearch 是一个自适应分层的 16 步研究框架，能将 Claude Code 转化为深度研究代理，并构建可搜索的知识库。",
+      "detail_md": "**解决什么问题**\nHyperresearch 旨在解决传统报告生成器“一次性”的局限性，通过持久化、可搜索的知识库，避免知识流失，并提供经过对抗性审计的高质量研究报告。   它通过精细的 16 步流程和“只打补丁，不重新生成”的原则，确保报告的质量和结构完整性，避免了长流程中常见的上下文丢失问题。  \n\n**核心功能**\n该项目核心功能包括一个 16 步的自适应研究管道，能够根据查询复杂性调整研究深度（`light` 或 `full` 模式）。   它将所有获取的来源存储在一个持久化、可搜索的 Vault 中，并以 Markdown 格式索引到 SQLite 数据库。   用户可以通过命令行界面 (`hyperresearch` 或 `hpr`) 与 Vault 交互，进行搜索、图谱分析和健康检查。 \n\n**技术亮点**\n技术亮点在于其“分层自适应”的 16 步管道，每个步骤的逻辑仅在需要时加载，有效避免了上下文丢失。  采用“只打补丁，不重新生成”的策略，通过工具锁定 (`[Read, Edit]`) 确保报告修改的精确性。  此外，它支持直接抓取 PDF 内容，并能进行认证爬取，处理登录墙等复杂情况。  \n\n**适合谁用**\nHyperresearch 适合需要进行深度研究、生成高质量报告的开发者和研究人员。  特别是那些希望通过结构化、可追溯的方式管理研究资料，并利用 AI 代理进行辅助分析和报告生成的用户。  它也适用于需要对研究过程进行严格审计和验证的场景。",
+      "degraded": false
+    },
+    {
+      "id": "alphaXiv/OpenResearch",
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "stars": 1067,
+      "description": "Run parallel research agents with any model",
+      "one_liner": "OpenResearch 是一个用于跟踪实验、产物、算力、技能和代码的平台，支持多语言和可配置的计算目标。",
+      "detail_md": "**解决什么问题**\nOpenResearch 旨在解决科研项目中实验管理、代码版本控制、计算资源配置以及多语言支持等方面的复杂性问题。  它通过提供统一的界面来管理不同计算目标（如 Slurm、Kubernetes、Modal 等）上的实验，并确保代码、数据和实验历史的本地化存储。  \n\n**核心功能**\n核心功能包括：\n*   **实验与项目管理**：用户可以创建新项目，跟踪实验、产物和代码。  \n*   **计算目标配置**：支持多种计算环境，如本地机器、SSH、Kubernetes、Slurm、Modal 和 Hugging Face Jobs 等。 \n*   **多语言支持**：通过 Paraglide 和 JSON 消息包实现国际化，目前支持英语、简体中文和波斯语。  \n*   **UI 配置与设计系统**：提供统一的设置页面 (`SettingsPage`)  和基于 Tailwind CSS 的设计系统，确保视觉一致性。 \n\n**技术亮点**\n*   **模块化设置架构**：`SettingsPage`  通过 TanStack Query hooks  与后端交互，管理计算目标、环境变量等配置。\n*   **国际化系统**：利用 Paraglide 管理 `ui/messages/`  目录下的多语言 JSON 消息包，实现运行时语言选择。  \n*   **Tailwind CSS 设计系统**：通过 CSS layers  有序集成第三方库和自定义样式，避免样式冲突。 \n*   **共享 UI 组件**：提供 `Tooltip`  和 `StatusBadge`  等可重用组件，提升开发效率和用户体验。\n\n**适合谁用**\nOpenResearch 适合需要管理和跟踪科研实验、代码、计算资源的研究人员和开发者。  特别是那些在不同计算环境中工作，并需要多语言界面支持的用户。",
+      "degraded": false
+    },
+    {
+      "id": "github/spec-kit",
+      "owner": "github",
+      "name": "spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "stars": 135517,
+      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+      "one_liner": "Spec Kit 是一个开源工具包，通过可执行规范和 AI 代理，实现规范驱动开发。",
+      "detail_md": "**解决什么问题**\nSpec Kit 旨在解决传统软件开发中规范与代码脱节的问题。它将规范视为单一事实来源，通过 AI 代理直接生成代码，从而弥合了意图与实现之间的差距。这有助于确保代码始终与最新的规范保持同步，减少了文档过时和开发过程中细节遗漏的问题。\n\n**核心功能**\nSpec Kit 的核心功能围绕其规范驱动开发 (SDD) 工作流展开。它提供了一系列斜杠命令，用于指导开发过程，包括：`/speckit.constitution` 用于建立项目原则，`/speckit.specify` 用于定义功能需求，`/speckit.plan` 用于创建技术实现计划，`/speckit.tasks` 用于生成可执行任务列表，以及 `/speckit.implement` 用于执行这些任务以构建功能。此外，`/speckit.converge` 命令用于验证代码库与规范、计划和任务的一致性。\n\n**技术亮点**\n该项目的主要技术亮点包括：对 30 多个 AI 编码代理的抽象支持，通过 `INTEGRATION_REGISTRY` 实现统一管理；标准化的工作流，通过斜杠命令将自然语言意图转化为可运行代码；跨平台脚本层，支持 Bash/PowerShell/Python，用于核心操作；以及模块化的扩展、预设和捆绑系统，以适应特定项目需求。模板在引导大型语言模型 (LLM) 行为方面发挥着关键作用，确保生成高质量的规范，避免过早的实现细节，强制明确的不确定性标记，并通过清单和宪法合规性检查来结构化思考。\n\n**适合谁用**\nSpec Kit 适用于希望利用 AI 编码代理提高开发效率和代码质量的开发人员和团队。它特别适合那些寻求结构化、可重复和可追溯的 AI 辅助开发流程的组织。无论是新项目启动、现有项目集成，还是需要处理复杂功能和企业级约束的场景，Spec Kit 都能提供支持。",
+      "degraded": false
+    },
+    {
+      "id": "pascalorg/editor",
+      "owner": "pascalorg",
+      "name": "editor",
+      "url": "https://github.com/pascalorg/editor",
+      "stars": 23329,
+      "description": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+      "one_liner": "该项目是一个AI驱动的3D建筑编辑器，通过无头服务器让AI代理读写和管理3D场景。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统3D场景编辑对浏览器和GPU的依赖问题，允许大型语言模型（LLMs）通过自然语言指令直接操作3D场景。它提供了一个桥梁，将自然语言指令转换为Pascal编辑器结构化的`AnyNode`模式，从而实现自动化生成和修改3D场景。\n\n**核心功能**\n核心功能包括：\n*   **无头场景编辑**：`@pascal-app/mcp` 包实现了一个模型上下文协议（MCP）服务器，使AI代理能够无头地读取、修改和管理3D场景。\n*   **自然语言到3D场景转换**：支持从文本描述生成平面图、根据照片翻新房间以及执行复杂的空间查询。\n*   **实时同步**：MCP服务器与Pascal编辑器协同工作，通过共享`PASCAL_DATA_DIR`和事件流实现近实时同步。\n*   **丰富的工具集**：提供创建墙体、物品、开口等核心构建操作，以及视觉工具（如`analyze_floorplan_image`和`analyze_room_photo`）用于从图像中提取3D场景数据。\n\n**技术亮点**\n*   **无头架构**：MCP服务器在Node.js或Bun环境中运行，通过“无头桥接”架构模拟浏览器API，将数据逻辑与渲染逻辑分离。\n*   **数据持久化与事件流**：场景数据持久化到本地SQLite数据库，并通过Server-Sent Events (SSE) 将AI执行的修改流式传输到编辑器UI，实现自动更新。\n*   **模块化工具注册**：服务器使用`createPascalMcpServer`工厂函数，通过`registerTools`、`registerVisionTools`等方法管理其工具集。\n*   **Zod验证**：所有工具都使用Zod进行输入和输出验证，确保数据一致性和可靠性。\n\n**适合谁用**\n该项目适合需要自动化3D场景生成和编辑的AI代理开发者、建筑师、室内设计师以及任何希望通过自然语言或图像输入来创建和修改3D建筑模型的用户。它也适用于希望将3D编辑功能集成到其AI应用中的开发者。",
+      "degraded": false
     }
   ]
 }
