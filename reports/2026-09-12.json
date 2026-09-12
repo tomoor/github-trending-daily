@@ -177,6 +177,94 @@
       "one_liner": "Pascal Editor 是一个使用 React Three Fiber 和 WebGPU 构建的 3D 建筑编辑器。",
       "detail_md": "## 解决什么问题\n该项目旨在提供一个 3D 建筑设计和编辑平台，允许用户创建、修改和管理 3D 场景中的建筑元素，如墙壁、楼板和物品。它还通过 Model Context Protocol (MCP) 服务器支持 AI 代理进行场景编辑和视觉分析，从而实现自然语言指令到 3D 场景的转换。\n\n## 核心功能\n核心功能包括 3D 场景渲染、节点管理（如墙壁、楼板、物品等）、状态管理（使用 Zustand 进行场景数据、查看器状态和编辑器状态的持久化和撤销/重做）以及通过工具（如选择工具、墙壁工具、区域工具、物品工具、楼板工具）进行交互式编辑。此外，它还包含一个 IFC 转换器，用于将 IFC 建筑文件转换为 Pascal 场景图。\n\n## 技术亮点\n该项目采用 React Three Fiber 和 WebGPU 进行 3D 渲染，使用 Zustand 进行状态管理并支持 Zundo 实现撤销/重做功能。它是一个基于 Bun 和 Turborepo 的 Monorepo 架构，将核心逻辑、3D 渲染和编辑器 UI 分离到不同的包中。特别值得一提的是，它通过 MCP 服务器实现了 AI 驱动的场景编辑，允许 AI 代理无头地读取、修改和管理 3D 场景。\n\n## 适合谁用\n该项目适合需要进行 3D 建筑设计和编辑的专业人士或爱好者。它也适用于希望利用 AI 代理进行自动化 3D 场景生成和修改的开发者和研究人员。此外，由于其模块化的架构，它也适合作为其他 3D 应用或工具的基础库。",
       "degraded": false
+    },
+    {
+      "id": "asgeirtj/system_prompts_leaks",
+      "owner": "asgeirtj",
+      "name": "system_prompts_leaks",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "stars": 65006,
+      "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+      "one_liner": "本项目收集并整理了主流AI聊天机器人（如ChatGPT、Claude、Gemini等）的系统提示词。",
+      "detail_md": "**解决什么问题**\n本项目旨在揭示AI聊天机器人在与用户互动前接收的“隐藏指令和规则”。通过公开这些系统提示词，它帮助用户理解AI的行为逻辑和限制，从而更好地与AI进行交互。\n\n**核心功能**\n核心功能是提供一个集中式的存储库，包含来自不同AI模型（如Anthropic的Claude系列、OpenAI的ChatGPT和Codex系列、Google的Gemini系列 等）的系统提示词。这些提示词涵盖了通用对话、代码生成、设计辅助、科学研究等多种应用场景。\n\n**技术亮点**\n该项目通过收集和整理“泄露”的系统提示词，提供了一个独特的视角来研究AI模型的内部工作机制。它展示了AI模型如何通过预设指令来管理对话流程、执行工具调用以及维护用户福祉。例如，Claude模型会根据提示词在必要时使用工具检索信息，并在处理敏感话题时遵循用户福祉指南。\n\n**适合谁用**\n本项目适合AI研究人员、开发者、对AI内部机制感兴趣的用户以及希望优化与AI交互方式的个人。它为理解和分析不同AI模型的行为模式提供了宝贵的资源。",
+      "degraded": false
+    },
+    {
+      "id": "Flowseal/zapret-discord-youtube",
+      "owner": "Flowseal",
+      "name": "zapret-discord-youtube",
+      "url": "https://github.com/Flowseal/zapret-discord-youtube",
+      "stars": 33162,
+      "description": "",
+      "one_liner": "本项目通过深度包检测（DPI）绕过技术，帮助用户访问受限的Discord、YouTube等网络服务。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决因深度包检测（DPI）导致的特定网络服务（如Discord、YouTube）访问受限问题。  它通过修改或伪造网络数据包来迷惑DPI设备，从而绕过网络审查和限制。 \n\n### 核心功能\n核心功能包括使用`winws.exe`进行数据包拦截、分析和修改，  以及利用`WinDivert`库在Windows系统上实现网络层的数据包捕获和注入。  它提供了多种DPI欺骗技术，如`fake`（伪造数据包）、`multisplit`（多段拆分）和`hostfakesplit`（主机伪造拆分）等，  并通过`service.bat`脚本提供服务安装、过滤器管理和诊断工具。 \n\n### 技术亮点\n技术亮点在于其DPI绕过机制，通过发送带有无效TCP序列号的伪造数据包（`badseq`）、操纵TCP时间戳（`ts`）或使用TCP-MD5签名（`md5sig`）来欺骗DPI设备。   项目还支持基于IPSet和游戏过滤器的精细化流量控制，  允许用户自定义绕过规则。 \n\n### 适合谁用\n本项目适合需要绕过网络审查和DPI限制，以访问Discord、YouTube等服务的Windows用户。  对于游戏玩家，它也提供了游戏流量的DPI绕过功能。  用户可以通过`service.bat`轻松管理和配置绕过策略。",
+      "degraded": false
+    },
+    {
+      "id": "yuliskov/SmartTube",
+      "owner": "yuliskov",
+      "name": "SmartTube",
+      "url": "https://github.com/yuliskov/SmartTube",
+      "stars": 33078,
+      "description": "Browse media content with your own rules on Android TV",
+      "one_liner": "SmartTube是一款专为Android TV设计的开源媒体播放器，提供无Google服务的丰富视频流体验。",
+      "detail_md": "**解决什么问题**\n\nSmartTube旨在为Android TV和电视盒子用户提供一个功能丰富的替代视频播放方案，特别是在没有Google服务的情况下也能流畅播放高达8K分辨率、HDR和60fps的视频，同时解决广告干扰、隐私追踪等问题。\n\n**核心功能**\n\n该项目支持多种高级播放功能，包括画中画（PiP）模式、播放速度调整、语音搜索（需安装桥接应用）、视频投屏、以及对SponsorBlock、DeArrow和Return YouTube Dislike (RYD)等第三方服务的集成，以增强观看体验和隐私保护。它还提供丰富的设置选项，如视频质量预设、字幕样式、后台播放模式等。\n\n**技术亮点**\n\nSmartTube采用模块化MVP（Model-View-Presenter）架构，将UI与业务逻辑分离，并使用定制的ExoPlayer（v2.10.6）作为媒体引擎，支持Amazon扩展和SABR。它通过`MediaServiceCore`处理API通信，并利用`SharedModules`提供跨项目工具函数。应用还支持多模块构建，针对不同ABI和产品风味生成特定APK，以优化性能和兼容性。此外，它强调隐私保护，不进行遥测和后端追踪。\n\n**适合谁用**\n\nSmartTube适合拥有Android TV或电视盒子，希望获得无广告、高分辨率、功能丰富的视频播放体验的用户。特别是那些注重隐私、不希望依赖Google服务，以及希望自定义播放设置和集成第三方内容过滤服务的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Shubhamsaboo/awesome-llm-apps",
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "stars": 137349,
+      "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "one_liner": "这个项目是一个包含 100 多个开源 AI 应用的精选集合，涵盖智能体、智能体技能和 RAG 系统，旨在帮助开发者构建生产级 LLM 应用。",
+      "detail_md": "**解决什么问题**\n该项目旨在弥合“自然语言空间”（用户目标）与“代码实体空间”（可执行智能体和工具）之间的鸿沟。它为开发者提供了端到端测试的实现，以快速构建和部署基于大型语言模型的应用程序。\n\n**核心功能**\n项目提供了多种核心功能，包括：智能体技能、入门级 AI 智能体、高级 AI 智能体、RAG 系统、MCP AI 智能体、常驻智能体  和生成式 UI。这些功能支持从简单的原型到复杂的、具有记忆和多步推理能力的系统。\n\n**技术亮点**\n该项目利用了现代 AI 技术栈，包括 Google Agent Development Kit (ADK)、OpenAI Agents SDK 等编排框架。它还集成了 Qdrant、ChromaDB 等向量数据库，以及 Streamlit 和 CopilotKit 等 UI 层。一个技术亮点是研究规划与执行器，它使用 Gemini Interactions API 管理复杂工作流。\n\n**适合谁用**\n该项目适合希望构建或学习生产级 LLM 应用程序的开发者、研究人员和企业。无论是需要快速原型开发的个人，还是需要复杂多智能体系统解决方案的团队，都能从中找到合适的模板和工具。",
+      "degraded": false
+    },
+    {
+      "id": "SnailSploit/Claude-Red",
+      "owner": "SnailSploit",
+      "name": "Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "stars": 3351,
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "one_liner": "`claude-red` 是一个为 Claude AI 设计的进攻性安全技能库，旨在将其转变为上下文感知的红队操作员。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统大型系统提示在进攻性安全领域中持续上下文成本高昂的问题。通过提供模块化的 `SKILL.md` 文件，`claude-red` 允许 Claude 根据对话触发器按需加载专业知识，从而避免为不使用的技能支付上下文费用。\n\n**核心功能**\n`claude-red` 的核心功能是提供一个包含 58 种进攻性安全技能的精选库，涵盖了从 Web 应用程序漏洞到 Active Directory 攻击和无线协议攻击等多个领域。这些技能以结构化的 `SKILL.md` 文件形式存在，其中包含 YAML frontmatter，用于指定对话触发器。用户可以通过多种方式部署和加载这些技能，包括 Claude Skills 系统、Claude Code CLI 或手动粘贴。\n\n**技术亮点**\n该项目的技术亮点在于其模块化的技能加载模型，允许 Claude 根据上下文动态加载相关技能。每个技能都通过 `SKILL.md` 文件定义，其中包含专家级的方法论、工具和边缘案例。库被组织成 13 个不同的类别，并通过 `claude-skills.json` 文件进行清单管理。\n\n**适合谁用**\n`claude-red` 适用于授权的红队行动、渗透测试、漏洞赏金计划、安全研究、CTF 准备和操作员培训。它旨在帮助安全专业人员系统地探索复杂的攻击面。",
+      "degraded": false
+    },
+    {
+      "id": "multimodal-art-projection/YuE",
+      "owner": "multimodal-art-projection",
+      "name": "YuE",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "stars": 7024,
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "one_liner": "YuE2是一个前沿的音乐生成系统，能将歌词和风格提示转化为可编辑的乐谱和高质量歌曲。",
+      "detail_md": "## 解决什么问题\nYuE2旨在解决音乐生成领域中，符号创作与音频生成之间的质量差距和编辑灵活性问题。它通过提供可编辑的乐谱，让用户在渲染最终歌曲前检查和修改旋律与和弦，从而实现“白盒”音乐生成。此外，它还支持零样本翻唱和智能体编辑，允许用户将现有歌曲改编为新风格或通过对话修改乐谱。\n\n## 核心功能\nYuE2的核心功能包括：\n*   **高质量歌曲生成**：根据歌词和风格提示生成包含人声和伴奏的完整歌曲，其质量与专有系统竞争。\n*   **符号规划与编辑**：生成可编辑的旋律和和弦乐谱（ABC格式），用户可以在渲染前进行检查和修改。\n*   **零样本翻唱**：通过SheetSage2转录源录音的旋律，然后用YuE2以新风格重新演绎。\n*   **智能体辅助编辑**：支持通过智能体对乐谱、编排和歌词进行修改，实现多步骤的音乐创作工作流。\n\n## 技术亮点\nYuE2的技术亮点在于其统一符号和音频音乐生成的能力。它采用**AR–NAR Transformer混合骨干网络**，自回归预测乐谱和语义token，然后通过流匹配生成声学潜变量，最后由VAE解码为立体声音频。系统提供了分阶段的Python API，暴露了`plan()`、`generate_semantic()`、`synthesize()`和`decode()`等步骤，允许灵活控制生成过程。此外，它集成了**SheetSage2**进行音频到乐谱的转录，以及**MERT2**进行音乐理解，这些都是各自领域的最新技术。\n\n## 适合谁用\nYuE2适合需要高质量音乐生成能力的用户，特别是那些希望对音乐创作过程有更多控制和编辑灵活性的创作者。它也适用于音乐制作人、作曲家以及希望进行音乐研究和实验的开发者。对于需要将现有录音改编为新风格，或通过智能体辅助进行复杂音乐编辑的用户，YuE2提供了强大的工具集。",
+      "degraded": false
+    },
+    {
+      "id": "max-sixty/worktrunk",
+      "owner": "max-sixty",
+      "name": "worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "stars": 7022,
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "one_liner": "Worktrunk 是一个 Git 工作区管理器，旨在通过 LLM 驱动的自动化功能增强 AI 代理工作流程。",
+      "detail_md": "**解决什么问题** \n该项目旨在解决在并行 AI 代理工作流程中管理 Git 工作区和自动化重复任务（如提交消息生成）的复杂性。 它通过提供结构化的提示、智能的差异过滤和可定制的模板来简化与大型语言模型 (LLM) 的集成，从而实现自动提交消息生成。 \n\n**核心功能** \nWorktrunk 的核心功能包括自动提交消息和 squash 消息生成，通过与外部 LLM CLI 工具（如 Claude Code、Codex、OpenCode 和 Gemini CLI）集成实现。 它支持使用 Minijinja 模板进行提示定制，并能处理大型差异，确保在 LLM 上下文窗口内进行有效处理。 此外，它还提供 AI 代理集成功能，例如活动跟踪、Claude Code 状态行和工作区隔离。 \n\n**技术亮点** \n该项目利用 Rust 语言实现，具有模块化的系统架构，包括配置流、命令执行和模板上下文构建。 它采用差异处理管道来管理大型 Git 差异，通过截断逻辑和字节预算来优化 LLM 输入。 其插件架构支持多种 LLM 代理，并提供诊断报告生成功能，以便于问题报告。 \n\n**适合谁用** \nWorktrunk 适用于需要高效管理 Git 工作区并希望利用 AI 自动化提交消息和 squash 消息生成的开发人员和团队。 特别是，它对使用 AI 代理进行并行开发工作流程的用户非常有用，因为它提供了活动跟踪和工作区隔离等功能。",
+      "degraded": false
+    },
+    {
+      "id": "vxcontrol/pentagi",
+      "owner": "vxcontrol",
+      "name": "pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "stars": 23088,
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "one_liner": "PentAGI 是一个利用人工智能代理进行自动化渗透测试的安全平台。</cite>",
+      "detail_md": "**解决什么问题**\nPentAGI 旨在解决传统渗透测试中效率低下、重复性高的问题，通过 AI 自动化执行渗透测试流程，提供安全、隔离的测试环境，并支持多种 LLM 模型和专业工具集成，从而帮助信息安全专业人员更高效地发现和报告漏洞。</cite>\n\n**核心功能**\n核心功能包括：在沙盒 Docker 环境中进行安全隔离操作；AI 驱动的自主渗透测试代理，具备智能任务规划和执行监控能力；内置 20 多种专业渗透测试工具；智能记忆系统用于长期存储研究结果和成功方法；可选的知识图谱集成以进行语义关系跟踪；以及详细的报告生成和现代化的 Web 用户界面。</cite>\n\n**技术亮点**\nPentAGI 采用分层微服务架构，支持水平扩展和可插拔的 LLM 提供商。它集成了多种 LLM 提供商（如 OpenAI、Anthropic、Gemini、GLM、Qwen 等），通过 Docker 容器提供沙盒执行环境。系统还具备高级代理监督机制，包括执行监控和智能恢复功能，以及基于 PostgreSQL 和 pgvector 的持久化存储和语义搜索能力。</cite>\n\n**适合谁用**\nPentAGI 适合信息安全专业人员、安全研究员和对道德黑客攻击感兴趣的爱好者。它为需要强大且灵活的自动化渗透测试解决方案的用户提供支持，尤其适用于那些希望利用 AI 提高测试效率和覆盖范围的团队和个人。</cite>",
+      "degraded": false
     }
   ]
 }
