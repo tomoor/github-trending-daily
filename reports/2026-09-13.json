@@ -177,6 +177,127 @@
       "one_liner": "PentAGI 是一个利用人工智能进行自动化渗透测试的工具，旨在提升安全测试的效率和深度。</cite>",
       "detail_md": "**解决什么问题**\nPentAGI 旨在解决传统渗透测试中效率低下、重复性高以及对专家经验依赖过强的问题。</cite>它通过自动化和智能化的方式，帮助信息安全专业人员、研究人员和爱好者更有效地进行安全测试，发现潜在漏洞。</cite>\n\n**核心功能**\n该项目提供多项核心功能，包括在沙盒 Docker 环境中执行所有操作，确保安全隔离。</cite>它拥有一个由 AI 驱动的自主代理，能够自动规划和执行渗透测试步骤，并支持可选的执行监控和智能任务规划。</cite>PentAGI 内置了 20 多种专业的渗透测试工具，如 Nmap、Metasploit、Sqlmap 等。</cite>此外，它还具备智能记忆系统，用于长期存储研究结果和成功经验，并支持可选的知识图谱集成，以跟踪语义关系和增强上下文理解。</cite>\n\n**技术亮点**\nPentAGI 采用分层微服务架构，实现了表示层、应用层、领域层和基础设施层之间的清晰分离，支持水平扩展。</cite>它通过 `ProviderController` 工厂抽象了 LLM 提供商，支持包括 OpenAI、Anthropic、Gemini、Bedrock、Ollama 等 10 多种模型。</cite>所有操作都在沙盒 Docker 环境中执行，由 `DockerClient` 管理容器的创建、移除和命令执行，确保隔离性。</cite>数据持久化通过 PostgreSQL 和 pgvector 实现，用于存储命令、输出、流程和任务，并支持语义搜索。</cite>项目还集成了 Langfuse 进行 LLM 追踪和成本管理，以及 Grafana 和 Prometheus 进行实时系统监控。</cite>\n\n**适合谁用**\nPentAGI 适合信息安全专业人员、安全研究员以及对自动化渗透测试感兴趣的爱好者。</cite>它特别适用于需要进行大规模、重复性安全评估的团队，以及希望通过 AI 提升渗透测试效率和准确性的个人。</cite>对于希望在本地部署并完全控制数据和环境的用户，PentAGI 也是一个理想的选择。</cite>",
       "degraded": false
+    },
+    {
+      "id": "JustVugg/colibri",
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "stars": 28988,
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "one_liner": "colibrì 是一个轻量级推理引擎，旨在消费级硬件上运行前沿MoE模型。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决前沿Mixture-of-Experts (MoE) 模型（如744B到2.8T参数）对数据中心级硬件的依赖问题。它通过优化推理路径，降低硬件依赖和总成本，使得大型模型能在消费级和异构硬件上运行。\n\n**核心功能**\ncolibrì 的核心功能包括AI内存分层管理，将VRAM、RAM和NVMe视为统一的内存层级。它能将模型权重分为常驻部分和按需流式加载的专家部分。引擎还实现了权重JIT、专家缓存、异构执行（CPU、CUDA、Metal、Vulkan）以及无损推测解码等功能。\n\n**技术亮点**\n技术亮点在于其纯C语言实现，零引擎依赖，注重效率和可移植性。它采用统一的内存层级，通过学习型缓存自动固定热门专家，实现“越用越快”。此外，它还支持多SSD流式读取、N盘分片存储，以及多种量化格式（如int3-g64）。\n\n**适合谁用**\ncolibrì 适合希望在个人电脑、笔记本或工作站等消费级硬件上运行大型MoE模型的研究人员、开发者和爱好者。它也适用于那些希望深入理解模型运行机制，并能直接修改和改进实现的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ever-co/ever-gauzy",
+      "owner": "ever-co",
+      "name": "ever-gauzy",
+      "url": "https://github.com/ever-co/ever-gauzy",
+      "stars": 4604,
+      "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+      "one_liner": "Ever® Gauzy™ 是一个面向协作、按需与共享经济的开放式业务管理平台，集 ERP、CRM、HRM、ATS 与项目管理于一体，并内置时间跟踪功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决企业在协作、按需和共享经济模式下，对企业资源规划（ERP）、客户关系管理（CRM）、人力资源管理（HRM）、申请人跟踪系统（ATS）以及项目管理等多个业务领域进行集成化管理的需求。它通过提供统一的平台，简化了业务流程，提高了运营效率，并支持多语言环境以适应全球化业务需求。\n\n**核心功能**\n核心功能包括全面的业务管理，如发票、收入、费用、支付、提案、销售渠道、任务看板、招聘、员工管理、时间与活动跟踪、考勤表、日程安排、产品库存、项目管理、组织团队及文档管理、潜在客户/客户管理、目标与目的设定、各类报告、用户与组织管理、应用程序集成、电子邮件历史记录、系统设置、实体导入导出、自定义SMTP以及角色权限管理。此外，还集成了时间跟踪功能，并支持与Upwork、Hubstaff等第三方应用集成。\n\n**技术亮点**\n该项目采用 `@ngx-translate/core` 进行运行时字符串翻译，支持14种语言，包括中文。翻译文件采用分层JSON结构组织，确保了多语言界面的统一性和可维护性。系统通过 `LanguageInterceptor` 确保API请求的语言头与应用当前语言状态同步。\n\n**适合谁用**\nEver® Gauzy™ 适合需要全面业务管理解决方案的企业和组织，尤其是在协作、按需和共享经济领域运营的实体。它也适用于需要多语言支持、集成时间跟踪、项目管理以及与第三方应用无缝对接的用户。",
+      "degraded": false
+    },
+    {
+      "id": "tech-leads-club/agent-skills",
+      "owner": "tech-leads-club",
+      "name": "agent-skills",
+      "url": "https://github.com/tech-leads-club/agent-skills",
+      "stars": 5410,
+      "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+      "one_liner": "AI 编码代理技能管理系统，提供可复用技能，统一安装，提升开发效率。",
+      "detail_md": "**解决什么问题**\nAI 编码代理在处理专业任务时面临上下文碎片化、知识重复、技能发现困难、安装复杂和版本管理不易等挑战。本项目通过提供统一的安装界面、支持知识复用、提供全局和项目本地安装、使用符号链接实现单源更新以及基于类别组织技能来解决这些问题。 \n\n**核心功能**\n该项目提供一个 CLI 工具，用于发现、安装和管理 AI 编码代理的技能。它支持超过 16 种 AI 代理，包括 Cursor、Claude Code 和 GitHub Copilot 等。技能以 Markdown 格式存储，并可选择包含脚本、参考资料和模板。安装过程是交互式的，允许用户选择技能、代理、安装方法（符号链接或复制）和范围（全局或本地）。\n\n**技术亮点**\n项目采用 Nx Monorepo 架构，使用 TypeScript 和 esbuild 进行构建。它通过 `packages/cli/src/agents.ts` 文件中的 `detectInstalledAgents()` 函数自动检测已安装的 AI 代理。技能通过 `skills/` 目录中的文件系统结构进行分类管理。版本管理采用 Nx Release 和 Conventional Commits 自动化实现语义化版本控制。\n\n**适合谁用**\n本项目适合使用 AI 编码代理（如 Antigravity、Claude Code、Cursor、GitHub Copilot 等）的开发者。它帮助开发者扩展 AI 代理的能力，通过复用预定义技能来提高开发效率和一致性。对于希望贡献新技能或改进现有技能的社区成员，项目也提供了清晰的贡献指南和技能生成器。",
+      "degraded": false
+    },
+    {
+      "id": "calesthio/OpenMontage",
+      "owner": "calesthio",
+      "name": "OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "stars": 58106,
+      "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "one_liner": "OpenMontage 是首个开源的、代理化视频制作系统，能将 AI 编程助手转变为完整的视频制作工作室，自动处理视频制作流程。",
+      "detail_md": "**解决什么问题**\nOpenMontage 解决了传统 AI 视频工具仅提供单一剪辑片段，以及“免费 AI 视频”多为静态图像动画的问题。它提供端到端的制作流水线，并能利用免费/开源的真实素材制作完整的视频，而非仅仅是让图片动起来。\n\n**核心功能**\n该项目将 AI 编程助手转化为视频制作工作室，通过自然语言描述即可实现研究、脚本编写、资产生成、剪辑和最终合成。它支持 12 种生产流水线，涵盖动画解说、纪录片蒙太奇等，并提供 52 种生产工具，用于视频生成、图像创建、文本转语音等。\n\n**技术亮点**\nOpenMontage 采用“智能体优先”架构，AI 编程助手作为编排器，通过 YAML 清单和 Markdown 技能文件指导工作流。它具备生产级质量关卡，如合成前验证和渲染后自我审查，以确保视频质量。此外，它还支持基于评分的提供商选择和内置预算管控功能。\n\n**适合谁用**\nOpenMontage 适合希望利用 AI 编程助手进行视频制作的个人和团队，特别是那些需要端到端视频制作流程、注重视频质量和预算控制的用户。它兼容多种 AI 编程助手，如 Claude Code、Cursor、Copilot 等。",
+      "degraded": false
+    },
+    {
+      "id": "alphaXiv/OpenResearch",
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "stars": 1797,
+      "description": "Run parallel research agents with any model",
+      "one_liner": "OpenResearch 是一个研究工作区，通过智能体、实验跟踪和版本控制来加速 AI 研究。",
+      "detail_md": "**解决什么问题**\nOpenResearch 旨在解决 AI 研究中项目管理、实验版本控制和协作的复杂性问题。它通过提供一个统一的平台来跟踪实验、管理代码和数据，并支持多语言界面，简化了研究流程。\n\n**核心功能**\n该项目提供以下核心功能：\n*   **项目与实验管理**：用户可以创建新项目，管理实验分支，并跟踪实验运行。每个实验都对应一个独立的 Git 分支，确保版本隔离。\n*   **智能体交互**：通过聊天界面与研究智能体互动，智能体可以执行代码、运行实验和分析结果。\n*   **本地化支持**：支持英语、简体中文和波斯语等多种语言，通过消息包实现界面国际化。\n*   **文件与产物管理**：项目产物和生成的文件存储在本地文件系统中，并提供安全的文件访问机制。\n\n**技术亮点**\n*   **Git 驱动的版本控制**：利用 Git 管理实验版本，每个实验对应一个独立的 Git 分支 (`orx/<slug>`)，确保实验的可复现性和可追溯性。\n*   **模块化 UI 设计**：采用 React SPA 架构，结合 Tailwind CSS 和共享 UI 组件，实现一致的用户体验和高效开发。\n*   **本地化消息架构**：使用 Paraglide 和 JSON 消息包实现多语言支持，易于扩展和维护。\n*   **智能体编排后端**：通过 `ChatHost::send_message` 协调本地编码智能体，管理会话生命周期、实时流传输和命令权限。\n\n**适合谁用**\nOpenResearch 适合需要高效管理 AI 研究项目、跟踪实验、与智能体协作以及确保研究可复现性的研究人员和团队。它特别适用于那些希望将代码、数据和实验历史保留在本地，并利用智能体加速研究流程的用户。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 25532,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的 ElevenLabs 替代品，可在本地设备上提供实时听写、零样本语音克隆和电影级视频配音功能，支持 646 种语言，无需云服务或 API 密钥。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 旨在解决传统语音工具依赖云服务、按字符收费、存在数据隐私风险的问题。  它允许用户在自己的硬件上进行语音克隆、设计、配音和听写，确保数据不离开设备，且无需支付月费或担心使用量上限。 \n\n**核心功能**\n项目提供零样本语音克隆，仅需 3 秒音频即可复刻任何声音。  此外，它还支持声音设计，用户可以从零开始构建新声音，调整性别、年龄、口音、音高和情感等参数。  视频配音功能可实现端到端的转录、翻译和重新配音，并对齐时间轴。  此外，还包括一个声音库，用于浏览和管理预设或自定义的声音。 \n\n**技术亮点**\nVoiceStudio 采用本地优先的架构，所有处理都在用户设备上完成，支持 646 种语言。  它集成了 14 个 TTS 引擎和 10 个 ASR 引擎，包括 OmniVoice、WhisperX 等，并支持 GPU 加速（CUDA/MPS）和 CPU 运行。   项目还内置了 AudioSeal 水印技术，用于确保生成音频的可追溯性。 \n\n**适合谁用**\nVoiceStudio 适合关心数据隐私、希望在本地设备上进行语音生成和处理的创作者、开发者和企业。  尤其适用于需要多语言支持、语音克隆、视频配音以及声音设计的用户，商业用途也免费。",
+      "degraded": false
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 22910,
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review 是一个 AI 驱动的代码审查命令行工具，源自阿里巴巴集团，旨在通过结合确定性工程和 AI Agent 提升代码审查的效率和质量。",
+      "detail_md": "**解决什么问题**\n通用 AI Agent 在代码审查中存在覆盖不全、位置漂移和质量不稳定等问题，尤其在处理大型代码变更时表现不佳。Open Code Review 旨在解决这些痛点，提供更精准、稳定且高效的 AI 代码审查解决方案。\n\n**核心功能**\n该工具能够读取 Git diff，通过具备工具调用能力的 Agent 将变更文件发送给可配置的 LLM，生成具有行级精度的结构化审查意见。它支持全文件扫描 (`ocr scan`)，用于审计不熟悉的代码库或没有明显 diff 的目录。项目还提供了多语言支持，包括中文、英文、日文、韩文和俄文。\n\n**技术亮点**\nOpen Code Review 采用“确定性工程 × Agent 混合驱动”的核心设计理念。确定性工程负责精准文件筛选、智能文件打包、精细化规则匹配以及外部定位与反思组件，确保审查流程的强约束和准确性。Agent 则专注于动态决策和上下文召回，通过场景化提示词调优和专用工具集，优化审查效果并降低 Token 消耗。\n\n**适合谁用**\n该工具适用于独立开发者，可将其嵌入本地 AI 辅助开发工作流，获得即时、高质量的代码审查反馈。平台团队可以无缝集成到内部系统，完全掌控数据流和审查策略。ML 研究者可将其作为强化学习训练流水线中的代码质量验证器，为代码生成模型提供可靠的奖励信号。",
+      "degraded": false
+    },
+    {
+      "id": "tonhowtf/omniget",
+      "owner": "tonhowtf",
+      "name": "omniget",
+      "url": "https://github.com/tonhowtf/omniget",
+      "stars": 11159,
+      "description": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+      "one_liner": "OmniGet 是一款跨平台桌面应用，旨在简化媒体获取和数字化学习，支持多平台下载和内容管理。",
+      "detail_md": "## 解决什么问题\nOmniGet 解决了用户从各种在线平台下载媒体内容（如视频、课程、社交媒体内容）的复杂性，并提供了一个集成的学习环境，用于离线课程和书籍的阅读与管理。 它抽象了 `yt-dlp` 和 `ffmpeg` 等后端工具的复杂操作，让用户能够轻松获取和组织数字内容。\n\n## 核心功能\n*   **多平台下载**：支持从 YouTube、Instagram、TikTok、Hotmart 等 10 多个主流平台以及通过 `yt-dlp` 支持的 1000 多个网站下载视频和音频。\n*   **课程下载与管理**：支持 Hotmart 等平台的课程下载，包括视频、附件和描述，并提供课程库管理功能，如标签、收藏、进度跟踪和健康检查。\n*   **文档阅读器**：内置 PDF、EPUB、CBZ、TXT 和 HTML 阅读器，支持两种阅读模式、目录、书签、高亮、笔记、搜索和多种主题。\n*   **P2P 与种子下载**：内置 BitTorrent 客户端，支持 `.torrent` 文件和磁力链接下载，以及点对点文件传输。\n*   **插件系统**：提供可扩展的插件架构，支持动态加载功能，例如课程、Telegram 和转换插件。\n\n## 技术亮点\n*   **Tauri + Rust 架构**：采用 Tauri 框架，结合高性能的 Rust 后端处理网络、文件 I/O 和进程管理等任务，Svelte 5 前端提供响应式用户界面，实现快速轻量级的应用体验。\n*   **国际化支持**：通过 `sveltekit-i18n` 实现多语言支持，包括英语、葡萄牙语、中文、日语、意大利语、法语和希腊语。\n*   **实时下载进度**：显示实时下载进度、预计完成时间和速度。\n*   **主题定制**：提供 11 种主题，包括 Dark、Light、Catppuccin 等，满足用户个性化需求。\n*   **全局快捷键**：支持通过全局快捷键快速下载剪贴板中的链接。\n\n## 适合谁用\nOmniGet 适合需要从各种在线平台下载媒体内容的用户，包括：\n*   **学生和学习者**：用于下载在线课程、学习资料和电子书籍，并进行离线学习和管理。\n*   **内容消费者**：希望从 YouTube、Instagram、TikTok 等平台下载视频、音乐或其他媒体内容的用户。\n*   **数字内容收藏者**：需要管理大量下载内容，包括课程、书籍和各种媒体文件的用户。\n*   **开发者和技术爱好者**：对开源软件感兴趣，希望使用基于 Rust 和 Svelte 的高性能应用，并可能参与贡献的用户。",
+      "degraded": false
+    },
+    {
+      "id": "jiji262/douyin-downloader",
+      "owner": "jiji262",
+      "name": "douyin-downloader",
+      "url": "https://github.com/jiji262/douyin-downloader",
+      "stars": 11228,
+      "description": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+      "one_liner": "DouYin Downloader 是一个基于抖音API的工具，用于批量下载抖音视频、图集、音乐和直播内容，支持多种链接类型和灵活配置。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户批量下载抖音内容的需求，包括去水印下载视频和图集。它支持从个人主页、作品分享、直播、合集和音乐集合等多种来源下载内容。此外，它还提供了增量更新功能，避免重复下载已有的内容。\n\n**核心功能**\n核心功能包括：支持视频、图集、音乐、直播信息的下载；能够处理多种抖音链接类型；提供多线程并发下载和批量下载能力；支持通过命令行参数或YAML配置文件进行灵活配置，如自定义下载路径、线程数、下载数量限制等；以及支持增量更新和时间范围过滤功能。\n\n**技术亮点**\n项目基于抖音API实现，通过 `Douyin` 类处理链接解析和数据获取，例如 `getShareLink` 提取分享链接  和 `getKey` 获取资源ID。下载过程由 `Download` 类管理，支持断点续传。配置管理通过 `DownloadConfig` 类实现，支持从YAML文件或命令行参数加载配置。数据库模块 `DataBase` 用于数据持久化，支持增量更新的判断。\n\n**适合谁用**\n该工具适合需要批量下载抖音内容的用户，包括但不限于内容创作者、数据分析师以及希望备份个人或他人抖音内容的用户。对于需要定期更新下载内容的用户，其增量更新功能尤为实用。",
+      "degraded": false
+    },
+    {
+      "id": "Swordfish90/cool-retro-term",
+      "owner": "Swordfish90",
+      "name": "cool-retro-term",
+      "url": "https://github.com/Swordfish90/cool-retro-term",
+      "stars": 26139,
+      "description": "A good looking terminal emulator which mimics the old cathode display...",
+      "one_liner": "Cool Retro Term 是一款模拟旧式 CRT 显示器外观的终端模拟器。",
+      "detail_md": "**解决什么问题**\n该项目旨在为用户提供一个高度可定制的复古终端体验，解决现代终端界面缺乏个性和怀旧感的问题。它通过模拟旧式阴极射线管（CRT）显示器的视觉效果，如屏幕弯曲、扫描线、辉光和烧屏等，让用户在命令行界面中重温经典计算机的视觉风格。   \n\n**核心功能**\n核心功能包括终端仿真、丰富的视觉效果渲染和灵活的配置管理。它使用 QML 处理用户界面和视觉效果，C++ 提供核心功能。  视觉效果通过着色器实现，例如屏幕弯曲、闪烁、水平同步、静态噪声、抖动、烧屏和辉光效果。     此外，它还提供一个配置文件系统，允许用户保存和切换不同的视觉风格。 \n\n**技术亮点**\n该项目采用混合架构，结合 QML 进行 UI 和视觉效果渲染，C++ 处理核心逻辑。  视觉效果系统是其一大亮点，通过 GLSL 着色器实现多种 CRT 模拟效果。  配置系统以 `ApplicationSettings.qml` 为中心，管理所有可配置属性，并支持持久化存储和配置文件管理。  \n\n**适合谁用**\nCool Retro Term 适合那些希望在日常终端使用中增加怀旧感和个性化体验的用户。  无论是开发者、系统管理员还是普通用户，只要对复古计算机美学感兴趣，并希望通过独特的视觉风格来提升命令行界面的使用乐趣，都可以使用此项目。",
+      "degraded": false
+    },
+    {
+      "id": "huggingface/transformers",
+      "owner": "huggingface",
+      "name": "transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "stars": 165289,
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+      "one_liner": "Hugging Face Transformers 库提供数千种预训练模型，涵盖文本、视觉和音频等多种模态，旨在简化最先进机器学习模型的应用。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决机器学习模型开发和应用中的复杂性与高门槛问题。它通过提供统一的API和大量预训练模型，让开发者能够轻松地在不同模态（如文本、图像、音频）上执行各种任务，无需从零开始训练模型，从而降低了计算成本和碳足迹。  \n\n**核心功能**\n核心功能包括提供用于推理的 `pipeline()` API，支持文本分类、图像识别、语音识别等多种任务。  此外，它还提供 `AutoModel` 和 `AutoTokenizer` 等 AutoClass，用于加载预训练模型和预处理器，并支持在 PyTorch、JAX 和 TensorFlow 2.0 之间无缝切换模型。 \n\n**技术亮点**\n技术亮点在于其“单文件一模型”的设计哲学，强调模块化和可修改性，方便研究人员快速迭代。   库还深度集成了优化的注意力后端（如 Flash Attention）、量化后端（如 BitsAndBytes）和分布式训练（如 DeepSpeed），以最大化性能和可扩展性。 \n\n**适合谁用**\n该项目适合开发者、研究人员、学生、教授和工程师等，任何希望利用最先进机器学习模型进行文本、视觉、音频及多模态任务的人群。  它特别适合那些需要快速原型开发、模型微调或部署预训练模型的用户。",
+      "degraded": false
     }
   ]
 }
