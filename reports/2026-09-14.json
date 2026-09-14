@@ -210,6 +210,127 @@
       "one_liner": "Hugging Face Transformers 库提供数千种预训练模型，涵盖文本、视觉和音频等多种模态，旨在简化最先进机器学习模型的应用与研究。",
       "detail_md": "**解决什么问题**\n该项目旨在解决机器学习领域中模型开发和应用复杂性高的问题。  它通过提供统一的API和大量预训练模型，让研究人员和开发者能够快速迭代和部署最先进的AI模型，无需从头开始训练，从而降低了技术门槛和计算成本。 \n\n**核心功能**\n核心功能包括提供用于文本、图像、音频及多模态任务的数千种预训练模型。  用户可以通过 `pipeline()` API 轻松进行推理，  使用 `AutoModel` 和 `AutoTokenizer` 加载模型和预处理器，  并利用 `Trainer` 类进行模型微调和训练。 \n\n**技术亮点**\n技术亮点在于其统一、灵活的API设计，支持JAX、PyTorch和TensorFlow三大深度学习框架的无缝集成。  采用“单文件每模型”设计理念，强调模块化和可扩展性，便于快速研究迭代。  此外，还集成了优化后的注意力机制和量化技术，以提升性能和可伸缩性。 \n\n**适合谁用**\n该项目适合机器学习开发者、研究人员、学生以及任何希望利用最先进AI模型解决实际问题的人。  无论是进行文本分类、图像识别、语音处理，还是开发多模态应用，Transformers都提供了便捷高效的工具和资源。",
       "degraded": false
+    },
+    {
+      "id": "666ghj/MiroFish",
+      "owner": "666ghj",
+      "name": "MiroFish",
+      "url": "https://github.com/666ghj/MiroFish",
+      "stars": 72935,
+      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+      "one_liner": "MiroFish是一个简洁通用的群体智能引擎，通过多智能体模拟预测未来事件发展和决策影响。",
+      "detail_md": "**解决什么问题**\nMiroFish旨在解决传统预测的局限性，为决策者提供一个零风险的预演实验室，测试政策和公共关系的影响。同时，它也为个人用户提供一个创意沙盒，探索替代叙事和新颖结局。通过模拟数百万智能体的社会演化，它能帮助用户从“上帝视角”注入变量，精确推导未来轨迹。\n\n**核心功能**\nMiroFish的核心功能围绕其五阶段模拟生命周期展开：\n1.  **图谱构建**：从上传的文档（如PDF、MD、TXT）中提取“现实种子”，构建知识图谱（GraphRAG）。\n2.  **环境搭建**：生成智能体人设，并配置模拟参数，如时间流速、推荐算法、智能体活跃时间等。\n3.  **开始模拟**：在模拟的社交网络上运行双平台并行模拟，并动态更新时序记忆。\n4.  **报告生成**：`ReportAgent`利用丰富的工具集分析模拟结果，生成预测报告。\n5.  **深度互动**：用户可以直接与模拟世界中的任意智能体或`ReportAgent`进行对话。\n\n**技术亮点**\nMiroFish结合了现代Web前端框架和强大的Python后端：\n*   **多智能体技术**：由OASIS仿真引擎驱动，支持百万级智能体模拟。\n*   **GraphRAG**：利用Zep Cloud作为图存储，构建知识图谱，保留实体间的关系，形成时序记忆和社区摘要。\n*   **ReACT推理循环**：`ReportAgent`采用Thought -> Action (Tool Call) -> Observation (Tool Result) -> Final Answer的认知模式进行报告生成和深度归因分析。\n*   **可扩展的LLM集成**：支持OpenAI SDK格式的任意LLM API，推荐使用阿里云通义千问qwen-plus模型。\n\n**适合谁用**\nMiroFish适合需要进行复杂事件预测和决策预演的用户。\n*   **宏观层面**：决策者可以将其作为风险规避的预演实验室，测试政策和公共关系的影响。\n*   **微观层面**：个人用户可以将其作为创意沙盒，探索小说结局或想象场景。\n*   **开发者**：对多智能体应用、AI预测引擎和GraphRAG技术感兴趣的开发者和研究人员。",
+      "degraded": false
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 80927,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 是一款 Python CLI 工具，旨在为 AI Agent 提供统一、便捷的互联网内容访问能力，支持多平台阅读与搜索。",
+      "detail_md": "### 解决什么问题\nAI Agent 在访问互联网内容时面临诸多障碍，例如不同平台的 API 收费、IP 封锁、登录限制和反爬措施等。Agent Reach 通过预选、集成和管理各种工具，将这些复杂的访问过程简化为统一的命令行操作，让 Agent 无需关心底层实现细节，即可轻松获取互联网信息。\n\n### 核心功能\nAgent Reach 提供以下核心功能：\n*   **多平台内容访问**：支持包括网页、YouTube、Twitter、Bilibili、Reddit、小红书、GitHub、LinkedIn 等在内的 15 个平台的内容阅读和搜索。\n*   **统一的命令行接口**：通过 `agent-reach read <url>` 或 `agent-reach search-twitter \"query\"` 等命令，Agent 可以一致地调用不同平台的访问能力。\n*   **自动化安装与配置**：提供 `agent-reach install` 命令，帮助 Agent 自动安装所需工具、检查系统环境并配置渠道。\n*   **健康诊断**：`agent-reach doctor` 命令可以诊断各个渠道的可用状态，并提供修复建议。\n*   **多后端路由与故障切换**：每个平台都配置了首选和备用后端列表，当某个接入方式失效时，系统会自动切换到下一个可用后端，确保访问的稳定性。\n\n### 技术亮点\n*   **胶水层设计**：Agent Reach 作为一个“胶水层”，负责工具的选择、安装、体检和路由，而不直接进行底层读取，实际读取由 Agent 直接调用上游工具完成。\n*   **可插拔的渠道架构**：每个平台对应一个独立的 Python 文件 (`agent_reach/channels/` 目录下)，继承自 `BaseChannel`，方便替换或扩展后端工具。\n*   **零强制 API 费用**：默认后端均采用免费工具和 API，降低使用成本。\n*   **AI Agent 优先设计**：通过 `SKILL.md` 文件与 AI Agent 集成，Agent 可以读取该文件来理解如何调用 Agent Reach 的能力。\n*   **凭据本地存储与安全**：Cookie 和 Token 等敏感信息仅存储在本地 `~/.agent-reach/config.yaml` 文件中，并设置严格的权限，确保隐私安全。\n\n### 适合谁用\n*   **AI Agent 开发者和使用者**：任何需要为 AI Agent 赋予互联网访问能力的开发者和用户，特别是使用 Claude Code, OpenClaw, Cursor 等能运行命令行工具的 Agent。\n*   **需要稳定、免费互联网数据源的研究人员**：对于需要从 Twitter、Reddit、小红书等平台获取数据进行研究，但不希望承担高昂 API 费用或频繁处理反爬问题的用户。\n*   **希望简化工具链管理的个人或团队**：Agent Reach 负责管理和更新底层工具，用户无需手动追踪各平台的变化或工具的更新。",
+      "degraded": false
+    },
+    {
+      "id": "rlaope/oh-my-hermes",
+      "owner": "rlaope",
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "stars": 1877,
+      "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+      "one_liner": "oh-my-hermes (OMH) 是 Hermes Agent 的专业操作层，提供确定性路由、92 种可安装工作流技能和明确的证据边界，以增强现有 Hermes 工作流。",
+      "detail_md": "**解决什么问题**\nOMH 旨在将 Hermes Agent 的普通请求转化为合适的功能、明确的下一步，以及对“已经发生”和“尚未发生”的诚实状态。  它通过提供一个本地契约层来解决自然语言请求与实际执行之间的不确定性问题，确保工作流有清晰的下一步，并防止系统对未经验证的成就进行过度声明。 \n\n**核心功能**\nOMH 提供 92 种可安装的工作流技能，分为六个易于理解的能力族，包括规划与决策、学习与收集、资料与视觉制作、编码委派与交付、运维与观测、以及知识保留。  它还提供一个智能路由器，能够本地分类多语言请求，并返回推荐的能力族、技能、负责人和下一步行动。 \n\n**技术亮点**\nOMH 的核心设计理念包括“证据边界”，严格区分“已准备”状态和“已观测”状态，防止过度声明。  它采用“委托优先”原则，为外部编码执行器（如 Codex 或 Claude Code）准备高质量的交接，而不是直接在聊天编排器中执行代码。  此外，OMH 具有“执行器中立”的架构，为各种运行时提供统一接口，并保持本地优先的控制面。 \n\n**适合谁用**\nOMH 适合希望像专业人士一样使用 Hermes Agent 的用户。  它为 AI Agent 提供了强大的智能工作层，特别适用于需要明确规划、研究、内容制作、编码交接、运维和项目记忆，并要求清晰证据边界的场景。",
+      "degraded": false
+    },
+    {
+      "id": "localsend/localsend",
+      "owner": "localsend",
+      "name": "localsend",
+      "url": "https://github.com/localsend/localsend",
+      "stars": 91079,
+      "description": "An open-source cross-platform alternative to AirDrop",
+      "one_liner": "LocalSend 是一款免费开源的跨平台应用，无需网络即可在本地设备间安全分享文件和消息。",
+      "detail_md": "**解决什么问题**\nLocalSend 解决了在没有互联网连接的情况下，用户无法在本地网络中的设备之间安全、快速地分享文件和消息的问题。  它避免了依赖外部服务器，从而提高了通信速度和可靠性。 \n\n**核心功能**\n该项目提供在本地网络上安全地分享文件和消息的功能。  它支持多种操作系统，包括 Android、iOS、macOS、Windows 和 Linux。  用户可以通过链接接收文件，并支持自动接受请求和PIN码保护等功能。  \n\n**技术亮点**\nLocalSend 使用 REST API 和 HTTPS 加密实现设备间的安全通信。  它不依赖互联网连接或第三方服务器，确保了本地通信的快速和可靠。  项目还采用了 Slang 框架进行国际化管理，支持多种语言，并通过代码生成实现类型安全的翻译。   \n\n**适合谁用**\nLocalSend 适合需要在没有互联网连接或不希望依赖第三方服务器的情况下，在不同设备（如手机、电脑）之间快速、安全地传输文件和消息的个人用户。",
+      "degraded": false
+    },
+    {
+      "id": "dani-garcia/vaultwarden",
+      "owner": "dani-garcia",
+      "name": "vaultwarden",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "stars": 67445,
+      "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+      "one_liner": "Vaultwarden 是一个用 Rust 编写的 Bitwarden 服务器 API 替代实现，适用于自托管部署，资源占用少，兼容官方客户端。",
+      "detail_md": "### 解决什么问题\nVaultwarden 旨在解决官方 Bitwarden 服务器资源消耗高的问题，为那些希望自托管密码管理服务但硬件资源有限的用户提供一个轻量级、高效的替代方案。  \n\n### 核心功能\n该项目提供了与官方 Bitwarden 服务器几乎完整的功能对等性，包括个人密码库管理、组织功能（如共享、成员角色、群组）、多因素认证（如 Authenticator、Email、FIDO2 WebAuthn）、Bitwarden Send、紧急访问以及一个管理后台。  \n\n### 技术亮点\nVaultwarden 使用 Rust 语言开发，基于 Rocket Web 框架，支持 SQLite、MySQL 和 PostgreSQL 数据库，并通过 Diesel ORM 进行数据库交互。   文件存储通过 Apache OpenDAL 抽象，支持本地文件系统和 S3。   认证采用 JWT (RS256) 签名，并提供 Docker 镜像进行部署。  \n\n### 适合谁用\nVaultwarden 适合希望自托管 Bitwarden 兼容密码管理服务，且对资源占用有较高要求，或偏好 Rust 技术栈的用户。   它特别适合个人用户、小型团队或对隐私和数据控制有严格要求的组织。",
+      "degraded": false
+    },
+    {
+      "id": "TauricResearch/TradingAgents",
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "stars": 105793,
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "one_liner": "TradingAgents 是一个多智能体LLM金融交易框架，通过模拟真实交易团队进行市场分析和决策。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统金融交易中信息过载和决策复杂性的问题，通过部署专业化的LLM驱动智能体团队，模拟真实交易公司的运作模式，协同评估市场状况并辅助交易决策。 它将复杂的交易任务分解为专业角色，例如基本面分析、情绪分析、新闻分析和技术分析，并通过结构化辩论来平衡潜在收益与固有风险。 \n\n**核心功能**\nTradingAgents 框架的核心功能包括一个五阶段的顺序工作流：分析师团队、研究员团队、交易员智能体、风险管理团队和投资组合经理。  分析师团队负责数据收集和领域分析，生成各类报告。 研究员团队通过多空辩论评估分析师的洞察，并由研究经理生成投资计划。 交易员智能体根据投资计划制定具体的交易提案。 风险管理团队评估投资组合风险，最终由投资组合经理批准或拒绝交易提案。 \n\n**技术亮点**\n该框架基于LangGraph构建，采用五层系统架构，包括用户界面、编排层、多智能体团队、LLM提供商层和数据访问层。 它支持多提供商LLM，并采用“深度思考”和“快速思考”双模型策略，以优化复杂推理和快速任务。 数据访问层通过验证的数据访问契约和供应商路由实现数据抽象，支持多种金融数据源。 此外，它还具备持久化决策日志和LangGraph检查点恢复功能，以确保运行的稳定性和可恢复性。 \n\n**适合谁用**\n该项目主要面向金融研究人员、量化交易员、AI开发者以及对LLM在金融领域应用感兴趣的团队。 它提供了一个可扩展的框架，用于探索和开发基于多智能体系统的金融交易策略，但需注意其设计初衷是研究用途，不作为金融、投资或交易建议。",
+      "degraded": false
+    },
+    {
+      "id": "ruvnet/RuView",
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "stars": 93696,
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "one_liner": "RuView是一个利用WiFi信号进行非接触式人体感知、姿态估计和生命体征监测的边缘AI系统。",
+      "detail_md": "**解决什么问题** \n该项目旨在解决传统人体感知技术（如摄像头、可穿戴设备）在隐私、穿墙能力和互联网依赖方面的局限性。  它通过分析WiFi信道状态信息（CSI）实现无摄像头、无穿戴设备的人体存在、姿态和生命体征检测。 \n\n**核心功能** \nRuView的核心功能包括：人体姿态估计（17个COCO关键点）、非接触式呼吸和心率检测、运动分类、多目标追踪、穿墙感知以及与Home Assistant的集成。   系统在ESP32-S3等边缘硬件上运行，无需云端依赖。 \n\n**技术亮点** \n项目采用Rust语言进行核心处理，实现了高性能和低延迟。  它利用先进的信号处理（如Hampel滤波、BVP提取）和机器学习模型（如图神经网络、注意力机制）从CSI数据中提取特征并进行推理。  此外，还支持边缘AI模型部署和OTA更新。 \n\n**适合谁用** \nRuView适合需要隐私保护、全天候监控、或在传统传感器受限环境下进行人体感知的用户和开发者。  例如，智能家居集成（通过MQTT）、灾害响应（穿墙探测幸存者）、以及需要精确人体行为分析的工业和零售场景。",
+      "degraded": false
+    },
+    {
+      "id": "OpenBMB/VoxCPM",
+      "owner": "OpenBMB",
+      "name": "VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "stars": 37249,
+      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+      "one_liner": "VoxCPM2是一个无离散音频分词器的多语言语音合成系统，支持音色设计、可控克隆和极致克隆，输出48kHz高质量音频。",
+      "detail_md": "**解决什么问题**\nVoxCPM2旨在解决传统语音合成系统在自然度、表现力、多语言支持和音色控制方面的局限性。它通过绕过离散音频编码，直接生成连续语音表征，从而实现高度自然和富有表现力的语音合成。  此外，它还解决了在没有参考音频的情况下创建新音色，以及在克隆音色的同时灵活控制说话风格的需求。 \n\n**核心功能**\n该项目提供三大核心功能： \n*   **音色设计**: 仅通过自然语言描述（如性别、年龄、语气、情绪、语速）即可凭空创建全新音色，无需参考音频。 \n*   **可控声音克隆**: 上传参考音频后，模型克隆其音色，并可叠加风格指令（如情绪、语速）来调节说话风格。 \n*   **极致克隆**: 提供参考音频及其精确文本转录，模型将参考音频视为已说出的前文，以音频续写的方式完整还原所有声音细节。 \n\n**技术亮点**\nVoxCPM2的技术亮点包括： \n*   **无离散音频分词器**: 采用端到端的扩散自回归架构，直接生成连续语音表征，避免了离散编码的限制。 \n*   **多语言支持**: 支持30种全球语言和9种中文方言。  \n*   **48kHz高质量音频输出**: 通过AudioVAE V2的非对称编解码设计，原生输出48kHz录音室级别音频，并内置超分能力。 \n*   **实时流式合成**: 在NVIDIA RTX 4090上RTF（实时因子）低至~0.3，通过Nano-vLLM或vLLM-Omni加速后可达~0.13。 \n\n**适合谁用**\nVoxCPM2适合需要高质量、多语言、可控语音合成能力的开发者、内容创作者和企业。  尤其适用于对音色有定制化需求（如音色设计）、需要精确克隆特定人声（如极致克隆），或在克隆基础上进行风格调整（如可控克隆）的场景。  同时，其完全开源和商用就绪的特性，也使其成为研究人员和商业应用的理想选择。",
+      "degraded": false
+    },
+    {
+      "id": "Crosstalk-Solutions/project-nomad",
+      "owner": "Crosstalk-Solutions",
+      "name": "project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "stars": 36778,
+      "description": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+      "one_liner": "Project NOMAD 是一个自给自足、离线优先的知识和教育服务器，集成了关键工具、知识和AI功能，确保您随时随地获取信息和能力。",
+      "detail_md": "**解决什么问题**\nProject NOMAD 旨在解决在没有互联网连接的情况下获取知识、教育和AI辅助的问题。它提供了一个个人服务器，即使在离线状态下也能访问维基百科、可汗学院课程、AI助手和离线地图等资源。   这对于应急准备、偏远地区部署、无网络环境下的家庭教育以及注重隐私的信息获取场景尤为重要。 \n\n**核心功能**\nProject NOMAD 的核心功能包括：信息库（通过 Kiwix 提供离线维基百科、医疗参考资料等）、AI 助手（通过 Ollama 和 Qdrant 提供本地 LLM 聊天和文档问答）、教育平台（通过 Kolibri 提供可汗学院课程）、离线地图（通过 ProtoMaps 提供区域地图下载和导航）、数据工具（通过 CyberChef 提供加密、编码等功能）和笔记（通过 FlatNotes 提供本地 Markdown 笔记）。   它还具备系统基准测试和自动更新功能。  \n\n**技术亮点**\n该项目采用容器化应用生态系统，通过 Docker 编排工具和资源。  AI 助手支持 GPU 加速，并利用检索增强生成 (RAG) 技术实现文档感知响应。   内容管理系统支持分层内容（如维基百科的“基本”、“标准”和“综合”版本）和创作者包。   此外，它还提供自动更新功能，确保软件和内容保持最新。 \n\n**适合谁用**\nProject NOMAD 适合需要离线访问大量知识和教育资源的用户，包括应急准备人员、生活在网络连接受限地区的个人、进行家庭教育的家庭以及注重数据隐私的用户。  它推荐在配备强大硬件（尤其是带 GPU 的设备）上运行，以充分利用其 AI 功能。",
+      "degraded": false
+    },
+    {
+      "id": "reconurge/flowsint",
+      "owner": "reconurge",
+      "name": "flowsint",
+      "url": "https://github.com/reconurge/flowsint",
+      "stars": 8210,
+      "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+      "one_liner": "Flowsint 是一个基于图的调查和情报平台，用于发现实体间的隐藏关系和洞察力。",
+      "detail_md": "**解决什么问题**\nFlowsint 旨在解决复杂调查工作流中数据分散、难以可视化和理解的问题。它帮助用户将电子邮件、域名、社交账户、IP 等碎片化数据连接成一个调查图谱，并支持通过可视化转换探索实体间的关系。\n\n**核心功能**\n该平台提供交互式图可视化、流编辑、调查管理和 AI 聊天功能。它支持多种图可视化模式，可根据节点数量自动调整以优化性能。核心功能包括连接分散数据、提供可视化转换以发现相关实体、跟踪和保存调查状态以及支持实时数据丰富。\n\n**技术亮点**\nFlowsint 采用现代前端技术栈，包括 Vite、TypeScript 和 Yarn workspaces。它使用 Zustand 进行客户端状态管理，TanStack Query 处理服务器状态。路由系统采用 TanStack Router 实现类型安全和文件路由。图可视化方面，集成了 ReactFlow、Sigma.js 和 Force graphs 等多种渲染引擎。\n\n**适合谁用**\nFlowsint 适用于需要对调查逻辑有完全控制的专业人士，例如进行网络调查、绘制欺诈网络、收集威胁情报的分析师和团队。它特别适合需要快速行动、自由探索并理解部分或混乱数据的用户。",
+      "degraded": false
+    },
+    {
+      "id": "peetzweg/opendisplay",
+      "owner": "peetzweg",
+      "name": "opendisplay",
+      "url": "https://github.com/peetzweg/opendisplay",
+      "stars": 3405,
+      "description": "Free, open-source Sidecar/Duet alternative — use your iPhone or iPad as a true second monitor for your Mac over USB or WiFi. Low latency H.264, Retina HiDPI, touch input.",
+      "one_liner": "OpenDisplay 是一款免费开源的软件，能将您的 iPhone 或 iPad 变成 Mac 的第二显示器，支持 USB 或 WiFi 连接，提供 Retina 级清晰度和触摸输入。",
+      "detail_md": "**解决什么问题**\nOpenDisplay 旨在解决现有第二显示器解决方案的局限性，例如 Apple Sidecar 仅支持 iPad 且限制 Apple ID，Duet Display 和 Luna Display 需要订阅或硬件加密狗。 它提供了一个免费、开源、无需账户和硬件的替代方案，让用户可以利用闲置的 Apple 设备作为 Mac 的扩展显示器。 \n\n**核心功能**\n该项目提供真正的显示扩展功能，将 iOS 设备视为 Mac 的独立第二显示器，而非镜像。 它支持通过 USB 线缆实现低延迟连接， 或通过 Bonjour 实现零配置 WiFi 连接。 虚拟显示器支持 Retina/HiDPI，确保文本清晰， 并内置触摸输入，支持点击、拖动和双指滚动。 设备旋转时，虚拟显示器会自动调整为纵向或横向模式。 \n\n**技术亮点**\nOpenDisplay 的核心技术包括使用私有 `CGVirtualDisplay` API 创建虚拟显示器， 通过 ScreenCaptureKit 捕获屏幕， 并使用 VideoToolbox 进行 H.264 硬件编码。 数据通过 TCP 连接传输， iOS 端使用 `AVSampleBufferDisplayLayer` 进行解码和渲染。 它还实现了低延迟的视频管道，包括帧丢弃背压和关键帧恢复机制。 输入通过 JSON 控制消息从 iOS 设备发送到 Mac，并注入为 `CGEvent`。 \n\n**适合谁用**\nOpenDisplay 适合拥有闲置 iPhone 或 iPad，并希望将其用作 Mac 额外显示器的用户。 它特别适合那些寻求免费、开源、注重隐私且无需订阅或额外硬件的解决方案的用户。 开发者也可以通过贡献代码来改进项目。",
+      "degraded": false
     }
   ]
 }
