@@ -221,6 +221,116 @@
       "one_liner": "`claude-red` 是一个为 Claude AI 设计的进攻性安全技能库，旨在将其转变为上下文感知的红队操作员。",
       "detail_md": "**解决什么问题**\n该项目解决了传统大型系统提示在进攻性安全领域持续上下文成本高昂的问题。通过按需加载技能，`claude-red` 使得 Claude 能够根据对话触发器动态获取专业知识，从而在授权的红队行动、漏洞赏金分类、安全研究和 CTF 准备中提供高效且专业的支持。\n\n**核心功能**\n`claude-red` 的核心功能是提供一个包含 58 种进攻性安全技能的精选库，这些技能以结构化的 `SKILL.md` 文件形式存在。每个 `SKILL.md` 文件都包含 YAML frontmatter，用于指定对话触发器。当 Claude 检测到相关触发词时，它会按需加载相应的技能，从而获得特定攻击面的专业方法、工具和边缘案例知识。\n\n**技术亮点**\n该项目的技术亮点在于其模块化加载模型和上下文感知能力。技能通过 `SKILL.md` 文件定义，并利用 YAML frontmatter 中的描述字段进行触发匹配。`tools/build_manifest.py` 脚本负责从这些 `SKILL.md` 文件中解析 frontmatter 并生成一个 `claude-skills.json` 清单文件，该文件索引了所有技能及其类别和描述，为工具提供了机器可读的索引。\n\n**适合谁用**\n`claude-red` 适用于需要高级进攻性安全能力的专业人士，包括红队工程师、渗透测试人员、漏洞赏金猎人、安全研究员以及进行 CTF 准备和操作员培训的人员。它旨在帮助用户系统地探索复杂的攻击面。",
       "degraded": false
+    },
+    {
+      "id": "Homebrew/BrewUI",
+      "owner": "Homebrew",
+      "name": "BrewUI",
+      "url": "https://github.com/Homebrew/BrewUI",
+      "stars": 1087,
+      "description": "📺 Homebrew's official macOS GUI",
+      "one_liner": "BrewUI 是 Homebrew 官方 macOS 图形用户界面，旨在通过直观的界面简化包管理，同时保持操作透明。",
+      "detail_md": "**解决什么问题**\nBrewUI 旨在为不习惯命令行界面的用户提供一个友好的图形界面，以便他们能够安全地发现、安装、更新和管理 Homebrew 包。它解决了传统命令行工具对部分用户不够亲和的问题，同时确保所有底层 Homebrew 操作的完全透明性。\n\n**核心功能**\n该项目提供包的安装、更新、卸载和管理功能。用户可以通过侧边栏导航到“已安装”、“升级”、“发现”、“诊断”和“配置”等功能模块。它还包含一个控制台面板，用于显示 Homebrew 命令的实时输出，确保操作透明。\n\n**技术亮点**\nBrewUI 采用 Swift 6.0 和 SwiftUI 构建，强制执行严格的并发模式。它遵循 MVVM-C（Model-View-ViewModel-Coordinator）架构模式和 Clean Architecture 原则，确保代码的可维护性和可测试性。数据流向是单向的，从外部数据源（`brew` CLI 和 Homebrew JSON API）通过存储库和视图模型流向 SwiftUI 视图。项目还包含强大的 UI 测试框架，通过模拟进程边界和使用 Page Object Model 来确保测试的确定性。\n\n**适合谁用**\nBrewUI 适合所有 macOS 用户，特别是那些更喜欢图形界面而非命令行来管理 Homebrew 包的用户。它也适用于希望通过透明的方式了解 Homebrew 操作的开发者和系统管理员。",
+      "degraded": false
+    },
+    {
+      "id": "melgarafael/DeskcommCRM",
+      "owner": "melgarafael",
+      "name": "DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "stars": 2623,
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "one_liner": "DeskcommCRM 是一个开源的销售操作系统，专为 WhatsApp 优先的业务设计，集成了 AI 代理和自托管能力。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 WhatsApp 优先业务在销售运营中面临的挑战，例如线索管理、客户沟通、自动化不足以及数据主权问题。它通过提供一个集成的平台，让人工代理和 AI 代理协同工作，处理、筛选和推进销售漏斗中的线索，同时确保数据由用户完全掌控。\n\n**核心功能**\n*   **AI 代理与 CRM 运营**：AI 代理能够处理对话、筛选线索、在销售漏斗中移动线索，并触发自动化操作，甚至在必要时将线索转交给人工代理。\n*   **WhatsApp 双向集成**：支持通过 QR 码（WAHA 引擎）或 Meta 官方渠道进行 WhatsApp 通信，具备防封禁机制和媒体存储功能。\n*   **自托管与数据主权**：项目设计为真正的自托管解决方案，用户可以在自己的 VPS 上部署，确保数据完全由自己控制，并提供一键安装和更新脚本。\n*   **Webhooks 与自动化**：允许租户创建捕获源以接收来自外部系统（如落地页、Zapier）的线索，并基于这些事件创建 WHEN/IF/THEN 规则来自动化任务。\n*   **多租户与隐私设计**：通过数据库层面的行级安全（RLS）实现多租户隔离，并遵循 LGPD（通用数据保护法）原则，优先匿名化而非删除数据，并提供审计日志。\n\n**技术亮点**\n*   **Next.js 16 App Router**：前端和后端 API 均采用 Next.js 16 App Router，利用 Server Components 和 Route Handlers。\n*   **Supabase**：作为数据库层，提供 Postgres、行级安全（RLS）、向量搜索和身份验证功能。\n*   **AI 运行时**：使用 Vercel AI SDK，支持 Anthropic、OpenAI 等多种 AI 提供商，并允许用户在安装时选择或后续切换。\n*   **事件驱动架构**：通过 `event_log` 表和 Node.js Workers 实现轻量级事件溯源和异步任务处理，确保数据库触发器不直接进行 HTTP 调用。\n*   **严格的开发与治理**：项目遵循“活系统”原则，所有更改都必须通过 `gov:verify` 门禁，包括类型检查、linting 和单元测试，并强调数据库迁移的幂等性。\n\n**适合谁用**\n该项目适合任何通过 WhatsApp 进行销售的业务，包括电子商务、诊所、房地产、信息产品、代理机构和各类服务提供商。特别是那些重视数据主权、希望通过 AI 提升销售效率、并寻求可定制和自托管解决方案的企业或个人。",
+      "degraded": false
+    },
+    {
+      "id": "alphaXiv/OpenResearch",
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "stars": 2957,
+      "description": "Turn your coding agents into research agents",
+      "one_liner": "OpenResearch 是一个面向 AI 研究的工作空间，旨在帮助研究人员管理实验、代码和文档，并与智能体协作。",
+      "detail_md": "**解决什么问题**\n该项目旨在为 AI 研究提供一个集成环境，解决研究过程中实验管理、代码版本控制、文档同步以及与智能体协作的痛点。它通过提供结构化的项目存储、Git 工作树和外部文档同步功能，简化了研究工作流程。\n\n**核心功能**\n*   **项目与实验管理**：用户可以创建和管理研究项目，每个项目都对应一个本地目录和 Git 仓库。实验以独立分支的形式存在，用于记录智能体代码修改。\n*   **Git 与 GitHub 集成**：项目利用本地 Git 二进制文件管理代码版本，并支持 GitHub 同步，方便团队协作和实验分支的发布。\n*   **LaTeX 与 Overleaf 同步**：提供 LaTeX 编译工具和与 Overleaf 的双向同步功能，支持通过 Git 桥接和实时通道进行文档更新。\n*   **多语言支持**：界面支持英语、简体中文和波斯语，通过 JSON 消息包实现本地化。\n\n**技术亮点**\n*   **Git 工作树**：为每个聊天会话分配独立的 Git 工作树，避免并发 AI 智能体执行时的写入冲突。\n*   **模块化 UI 组件**：采用 Tailwind CSS 和 React 构建，提供可重用的 UI 原始组件，如工具提示和状态徽章。\n*   **演示模式**：包含一个预设的 nanochat 演示项目，展示了端到端的工作流程，包括训练、评估和模型交互。\n*   **智能体启动提示**：为新项目生成初始提示，帮助用户快速启动实验，并根据项目内容（如 README、论文）提供定制化建议。\n\n**适合谁用**\n该项目适合需要高效管理 AI 研究项目、进行实验版本控制、与智能体协作以及同步学术论文（特别是 LaTeX 和 Overleaf 用户）的研究人员和团队。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 76341,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 是一个用于逆向工程任务的集成开发环境，支持多种处理器架构和文件格式，提供静态和动态分析功能，并支持团队协作。",
+      "detail_md": "**解决什么问题**\nGhidra 旨在解决软件逆向工程中的挑战，例如理解二进制程序的行为、分析恶意软件、以及进行漏洞研究等。它通过提供一套全面的工具来帮助用户分析和理解编译后的代码，即使没有源代码也能进行深入分析。\n\n**核心功能**\nGhidra 的核心功能包括：\n*   **程序分析**：能够导入和分析各种二进制文件，存储符号、字节、引用、指令、数据和注释等信息。\n*   **插件系统**：基于插件架构，每个插件提供特定功能，用户可以根据需要添加或移除插件，甚至编写自己的插件来扩展功能。\n*   **项目管理**：通过 `Project Manager` 管理项目、工具和数据，支持将程序导入项目进行工作，并保存项目配置。\n*   **团队协作**：`Ghidra Server` 允许团队成员在同一个项目上协作，提供网络共享仓库、用户访问控制和版本历史管理等功能。\n*   **调试器系统**：提供动态分析能力，通过基于跟踪的架构记录和显示程序执行状态，支持时间旅行调试和静态分析与动态目标的无缝集成。\n\n**技术亮点**\n*   **P-code**：Ghidra 使用 P-code (Register Transfer Language) 作为平台无关的中间表示，描述处理器指令的语义，是数据流分析的基础。\n*   **Sleigh**：一种领域特定语言，用于描述处理器指令编码及其 P-code 语义，通过 `.slaspec` 和 `.sinc` 文件定义，并编译成 `.sla` 文件。\n*   **SSA (Static Single Assignment)**：数据流图的一个属性，确保每个 Varnode 只有一个定义 P-code 操作，由 `Heritage` 类负责转换为 SSA 形式。\n*   **高度可扩展性**：通过插件和脚本（支持 Java 和 Python）实现高度可配置和可扩展的环境。\n\n**适合谁用**\nGhidra 适合需要进行软件逆向工程的专业人士，包括安全研究员、恶意软件分析师、漏洞研究员以及任何需要深入理解二进制程序行为的开发者。其团队协作功能也使其适用于多用户共同分析大型项目的场景。",
+      "degraded": false
+    },
+    {
+      "id": "danny-avila/LibreChat",
+      "owner": "danny-avila",
+      "name": "LibreChat",
+      "url": "https://github.com/danny-avila/LibreChat",
+      "stars": 43657,
+      "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
+      "one_liner": "LibreChat 是一个自托管的 AI 对话平台，整合了多种 AI 服务，提供丰富功能和高度可定制性。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户在管理和使用多个 AI 服务时遇到的碎片化问题，通过统一的界面提供多模态对话、智能体集成、代码解释器等功能，同时强调隐私保护和自主可控。\n\n**核心功能**\nLibreChat 提供受 ChatGPT 启发的 UI 体验，支持 Anthropic、OpenAI、Google 等多种 AI 模型，以及自定义端点。 它还集成了代码解释器、智能体与工具、网页搜索、图像生成与编辑等高级功能。 此外，项目支持预设与上下文管理、多模态与文件交互、多语言 UI、可恢复流以及多用户安全访问。\n\n**技术亮点**\n项目采用 Zod 模式进行配置、对话和预设的运行时验证，确保数据类型安全和一致性。 后端通过 `buildEndpointOption.js` 中间件处理请求，验证并规范化参数，然后传递给 AI 客户端。 前端通过 `parameterSettings.ts` 定义的元数据渲染 UI 控件，实现参数的验证和一致性。\n\n**适合谁用**\nLibreChat 适合重视 AI 基础设施自主可控、需要统一管理和使用多种 AI 服务、以及对隐私和数据安全有较高要求的个人用户和企业。 它也适合开发者和社区贡献者，因为它是一个完全开源的项目，鼓励贡献、建议和错误报告。",
+      "degraded": false
+    },
+    {
+      "id": "pacifio/atlas",
+      "owner": "pacifio",
+      "name": "atlas",
+      "url": "https://github.com/pacifio/atlas",
+      "stars": 4480,
+      "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+      "one_liner": "Atlas 是一个以智能体为先、本地优先的 IDE 和版本控制系统，专为编码智能体设计，可无缝集成智能体工作流。",
+      "detail_md": "**解决什么问题**\nAtlas 旨在解决传统开发环境中编码智能体集成度低、上下文管理复杂以及协作困难的问题。 它通过提供一个统一的平台来管理智能体的执行、上下文、共享内存和会话历史，同时结合传统版本控制，从而简化开发人员与智能体协作的流程。\n\n**核心功能**\n*   **智能体优先设计**：支持多种智能体运行时（如 Claude Code、Codex 或原生 Atlas 智能体）在统一工作区中原生且并发运行。\n*   **本地优先数据模型**：所有代码、笔记、智能体会话和检查点默认存储在本地，确保隐私和离线能力。\n*   **检查点溯源**：每个 Git 提交都与详细的智能体会话数据（提示、调用、推理）关联，称为“检查点”，允许审查和查询每个更改背后的智能体活动。\n*   **共享语义记忆**：智能体共享持久的上下文知识、笔记和先前的会话，实现无缝智能体切换而不会丢失状态。\n*   **团队协作**：支持创建组织、邀请成员、实时共同编辑提示草稿、在画布上进行草图绘制，并将消息直接发送给智能体。\n\n**技术亮点**\nAtlas 采用 React 前端和 Rust 后端构建，通过 Tauri 框架实现桌面应用。 前端使用 Zustand 进行状态管理，并通过 Tauri 的 IPC 命令与 Rust 后端通信。 后端使用 Rust 编写，包含 `atlas-agent-servers`（智能体运行时服务器）、`atlas-agent-manager`（智能体生命周期管理）和 `atlas-native-agent`（基于 Codex 的原生智能体）等内部 crate。 特别是，原生智能体是 OpenAI Codex 引擎的一个硬分叉，确保深度集成。\n\n**适合谁用**\nAtlas 主要面向 macOS 用户，作为原生桌面应用分发，但也可以在 Linux 和 Windows 上从相同的 Tauri 代码库构建。 它适合需要集成编码智能体、管理其工作流、追踪更改并进行团队协作的开发人员和团队。",
+      "degraded": false
+    },
+    {
+      "id": "MG1937/ASC",
+      "owner": "MG1937",
+      "name": "ASC",
+      "url": "https://github.com/MG1937/ASC",
+      "stars": 1033,
+      "description": "ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+      "one_liner": "Droid ASC：利用R8编译器优化实现快速、低内存的Android逆向工程工具。",
+      "detail_md": "**解决什么问题**\n传统的Android应用逆向工程工具在处理大型APK时，需要耗费大量内存和时间来完全解压APK、构建全局索引和交叉引用数据库，导致效率低下。 Droid ASC旨在解决这一痛点，通过直接查询编译后的APK文件，避免了耗时的预处理和内存占用。\n\n**核心功能**\n该项目提供命令行界面和图形用户界面（GUI）两种交互方式。 核心功能包括：根据类名快速定位并反编译指定类 (`getclass`)，以及在整个APK中查找字符串、类型、方法和字段的引用 (`findrefs`)。GUI版本还支持包树导航、多标签页源代码视图和异步搜索等功能。\n\n**技术亮点**\nDroid ASC利用R8编译器的布局确定性，特别是常量重定位和指令去重，实现对字节码的快速定位和查询。 它通过内存映射直接访问APK文件，避免完全解压，并按需提取DEX文件，显著减少内存消耗和处理时间。 项目采用多线程/多进程并行处理DEX文件，进一步提升搜索效率。\n\n**适合谁用**\n该工具适合需要高效分析大型Android APK的逆向工程师、安全研究人员以及对Android应用内部结构感兴趣的开发者。 尤其适用于那些希望在不进行大量预处理的情况下，快速获取代码关系和进行反编译的场景。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 94531,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "本项目为AI编码代理提供一套生产级工程技能，旨在标准化开发流程，提升代码质量和交付效率。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI编码代理在软件开发生命周期中面临的标准化、质量保证和效率问题。 它通过提供结构化的工作流程和可验证的输出，确保AI代理能够遵循最佳实践，避免生成低质量或不符合规范的代码。\n\n**核心功能**\n核心功能包括定义（`/spec`、`/constraints`）、 规划（`/plan`）、 构建（`/build`）、 测试（`/test`）、 审查（`/review`、`/code-simplify`） 和发布（`/ship`） 等阶段的技能。 每个技能都提供详细的步骤、验证标准和反驳常见借口的机制，确保代理行为可预测且高质量。\n\n**技术亮点**\n技术亮点在于其“命令到技能”的映射架构， 将自然语言指令转化为具体的技能调用和文件操作。 技能定义以Markdown（Claude） 和TOML（Gemini） 格式存储，实现了跨不同AI编码环境的一致性。 项目还支持通过`npx skills` CLI进行安装和管理。\n\n**适合谁用**\n本项目适合希望标准化AI编码代理工作流程、提高软件开发质量和效率的开发者、团队和组织。 无论是新项目（绿地项目）还是现有项目（棕地项目）， 都可以通过逐步采用或全面集成这些技能来提升开发实践。",
+      "degraded": false
+    },
+    {
+      "id": "tonhowtf/omniget",
+      "owner": "tonhowtf",
+      "name": "omniget",
+      "url": "https://github.com/tonhowtf/omniget",
+      "stars": 12506,
+      "description": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+      "one_liner": "OmniGet 是一款开源免费的媒体下载器，支持多平台下载，提供实时进度和多语言界面。",
+      "detail_md": "**解决什么问题**\nOmniGet 旨在解决用户从互联网上下载各种媒体内容（如视频、音频、课程等）的需求。它简化了从多个平台获取内容的复杂性，并提供了友好的用户界面和实时下载反馈。\n\n**核心功能**\n*   **多平台下载支持**：支持 YouTube、Instagram、TikTok 等 10 多个主流平台，并通过 `yt-dlp` 扩展支持 1000 多个网站。\n*   **Hotmart 课程下载**：支持登录后下载 Hotmart 课程的视频、附件和描述。\n*   **实时下载进度**：提供下载进度、预计剩余时间 (ETA) 和下载速度的实时显示。\n*   **多语言界面**：支持英语、葡萄牙语、中文、日语、意大利语、法语和希腊语等多种语言。\n*   **主题定制**：提供 11 种主题选择，包括 Dark、Light、Catppuccin 等。\n*   **插件市场**：通过插件系统支持课程、Telegram 和转换功能，并可通过 Marketplace 独立安装和管理。\n\n**技术亮点**\n*   **Tauri + Rust 构建**：项目采用 Tauri 和 Rust 构建，确保了应用的快速和轻量。\n*   **国际化系统**：使用 `sveltekit-i18n` 构建了强大的国际化系统，支持 JSON 格式的本地化文件，并能将后端错误信息映射为本地化消息。\n*   **类型安全**：通过代码生成脚本 `generate-i18n-keys.js` 扫描 `en.json` 文件，生成 `src/lib/i18n/keys.ts`，提供类型安全的翻译键，防止运行时错误。\n\n**适合谁用**\nOmniGet 适合需要从各种在线平台下载视频、音频和课程的用户。特别是那些希望拥有一个开源、免费、快速且支持多语言界面的下载工具的用户。它也适合希望通过插件扩展功能的用户。",
+      "degraded": false
+    },
+    {
+      "id": "earendil-works/pi",
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "stars": 105467,
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "one_liner": "`pi` 是一个模块化的终端编码工具和 AI 代理框架，用于构建、运行和嵌入自主代理。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在终端环境中构建交互式 CLI 应用程序的挑战，特别是需要高性能、无闪烁的用户界面和复杂的 AI 代理集成时。它还提供了一个统一的框架，用于管理 LLM 抽象、代理逻辑和终端 UI 组件。\n\n**核心功能**\n核心功能包括一个高性能的终端用户界面 (TUI) 框架，支持差分渲染、同步输出和组件模型。它还提供了一个统一的 LLM 提供程序抽象层，一个通用的代理循环和状态管理，以及一个用于编码特定工具和交互模式的主 CLI 应用程序。\n\n**技术亮点**\n技术亮点包括：使用 CSI 2026 同步输出实现无闪烁的屏幕更新；通过 Kitty 键盘协议实现高保真输入；支持 Kitty 和 iTerm2 图形协议的内联图像渲染；以及用于精确硬件光标定位的零宽度 APC 序列。此外，它还具有组件化的 UI 架构和可扩展的插件系统。\n\n**适合谁用**\n该项目适合希望构建、运行和嵌入自主 AI 代理的开发人员，特别是那些需要高度可扩展性、自定义工具和交互式终端体验的场景。它也适用于需要高效、无闪烁的终端 UI 框架来开发 CLI 应用程序的开发者。",
+      "degraded": false
     }
   ]
 }
