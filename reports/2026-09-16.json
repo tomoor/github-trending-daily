@@ -155,6 +155,171 @@
       "one_liner": "Pi 是一个极简的终端编码工具，通过可扩展的架构，让开发者能够根据自己的工作流进行定制，而非被工具限制。",
       "detail_md": "**解决什么问题**\nPi 旨在解决传统编码工具灵活性不足的问题，允许用户通过扩展、技能、提示模板和包来适应其工作流程，而无需修改工具内部代码。它还通过会话持久化和上下文压缩来管理大型语言模型 (LLM) 的上下文窗口限制。\n\n**核心功能**\n*   **交互模式**：提供一个终端用户界面 (TUI)，支持文件引用、路径补全、多行输入、外部编辑器集成、剪贴板操作和 Bash 命令执行。\n*   **会话管理**：支持会话的保存、恢复、分支和压缩，以优化 LLM 的上下文使用。会话历史以 JSON Lines (JSONL) 格式持久化，支持恢复和分支。\n*   **可扩展性**：通过扩展系统，用户可以注册自定义工具、命令、事件处理器和 UI 组件，以增强功能。\n*   **多模型支持**：支持多种 LLM 提供商和模型，包括 OpenAI、Anthropic、Google、GitHub Copilot 等，并允许自定义提供商和模型配置。\n\n**技术亮点**\n*   **持久化会话**：会话历史以 JSONL 格式存储，支持崩溃恢复和多分支会话。\n*   **上下文压缩**：通过总结和修剪旧消息来管理 LLM 的上下文窗口，支持手动和自动触发。\n*   **模块化架构**：核心功能保持精简，将特定工作流行为推送到扩展、技能和提示模板中，实现高度定制化。\n*   **终端用户界面 (TUI)**：提供交互式终端界面，支持差分渲染和多种终端功能。\n\n**适合谁用**\nPi 适合需要高度定制化编码环境的开发者，特别是那些希望将 LLM 集成到其工作流中，并能灵活定义工具和命令的用户。它也适合希望分享和重用其定制化配置（通过 Pi 包）的团队和个人。",
       "degraded": false
+    },
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 5687,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "该项目是一个六阶段安全审计工具，通过自动化代理发现代码中的可利用漏洞。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统安全审计中发现可利用漏洞效率低下的问题，通过结构化的六阶段流程，自动化地识别代码库中的安全缺陷，并提供详细的报告和验证，确保发现的漏洞具有实际影响而非理论问题。</cite></cite>\n\n**核心功能**\n核心功能包括：侦察（Recon）阶段，映射应用程序架构和输入面；</cite> 漏洞搜寻（Hunt）阶段，多代理并行攻击代码库；</cite> 验证（Validate）阶段，通过对抗性审查消除误报；</cite> 报告（Report）阶段，生成人类可读的报告和详细发现；</cite> 结构化输出（Structured output）阶段，生成机器可读的JSON格式漏洞数据；</cite> 以及独立验证（Independent verification）阶段，确保所有发现的事实准确性。</cite>\n\n**技术亮点**\n该项目采用多代理并行处理的架构，通过 `Task tool` 协调 `research` 代理和 `general` 代理执行不同阶段的任务。</cite> 它强调只报告可利用的漏洞，并进行对抗性验证以减少误报。</cite></cite> 此外，它支持结构化输出 `findings.json` 并通过 `report-schema.json` 和 `validate-findings.cjs` 进行严格验证，确保数据质量。</cite></cite>\n\n**适合谁用**\n该工具适合需要对代码库进行安全审计、漏洞审查或渗透测试的开发者和安全工程师。</cite> 特别是那些希望通过自动化手段提高审计效率，并确保发现的漏洞具有实际可利用性的团队。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "abue-ammar/tinycast",
+      "owner": "abue-ammar",
+      "name": "tinycast",
+      "url": "https://github.com/abue-ammar/tinycast",
+      "stars": 5242,
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "one_liner": "Tinycast 是一个轻量级的 macOS 原生启动器，提供快速应用启动、文件搜索、剪贴板历史等功能，且支持 Raycast 扩展。",
+      "detail_md": "**解决什么问题**\nTinycast 旨在解决传统 macOS 启动器臃肿、占用资源过多的问题，提供一个快速、原生、无广告、无遥测的替代方案。 它通过极小的磁盘占用和内存使用，确保系统流畅运行。\n\n**核心功能**\n该项目提供多项核心功能，包括：应用启动器，支持模糊搜索和收藏； 全局快捷键和应用内快捷键； 文件搜索； 剪贴板历史记录； 计算器（支持单位、货币转换）； Quicklinks； 代码片段； 自定义命令； 窗口管理； 系统操作； 日历和会议管理； 以及笔记功能。\n\n**技术亮点**\nTinycast 采用 SwiftUI 和 AppKit 构建，实现完全原生体验，无 Electron 依赖。 它支持 Raycast 扩展，并利用 macOS 内置的 JavaScriptCore 运行，无需额外二进制大小。 项目严格控制内存占用（通常低于 100MB）和磁盘空间（约 5MB）。 网站部分使用 Next.js、React 和 TypeScript 构建，采用“Liquid Glass”设计美学。\n\n**适合谁用**\nTinycast 适合追求极致性能、简洁体验的 macOS 用户。 尤其是那些希望减少系统资源占用，同时需要强大启动器功能（包括 Raycast 扩展支持）的开发者和高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "jamiepine/voicebox",
+      "owner": "jamiepine",
+      "name": "voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "stars": 54111,
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "one_liner": "Voicebox 是一个开源的本地 AI 语音工作室，提供语音克隆、语音生成和语音输入功能，支持多平台运行。",
+      "detail_md": "## 解决什么问题\nVoicebox 旨在提供一个完全本地化、免费且开源的 ElevenLabs 和 WisprFlow 替代方案，解决云端语音服务在隐私、费用和集成方面的限制。 它将语音输入（STT）和语音输出（TTS）整合到一个应用中，并结合本地 LLM 进行文本优化和个性化处理，填补了市场上缺乏此类本地化全功能语音工具的空白。\n\n## 核心功能\n*   **语音克隆与生成**：支持从几秒钟的音频克隆声音，并使用 7 种 TTS 引擎生成 23 种语言的语音。\n*   **语音输入与听写**：提供全局热键听写功能，可将语音转录为文本并自动粘贴到任何应用程序中。\n*   **AI 代理集成**：内置 Model Context Protocol (MCP) 服务器，允许 Claude Code、Cursor 等 AI 代理通过 `voicebox.speak` 等工具调用本地语音功能。\n*   **语音个性化**：为语音配置文件添加个性描述，通过本地 LLM 实现“角色扮演”的文本生成和语音输出。\n*   **文本优化**：通过本地 Qwen3 LLM 对转录文本进行精炼，去除冗余词、修正标点和自纠正。\n\n## 技术亮点\n*   **本地优先**：所有模型、语音数据和捕获内容都在本地机器上运行和处理，确保用户隐私。\n*   **多引擎支持**：后端采用 FastAPI (Python) 实现，支持 Qwen3-TTS、LuxTTS、Chatterbox 等多种 TTS 引擎，并可根据平台（如 macOS 上的 MLX，Windows/Linux 上的 PyTorch）自动选择最佳推理后端。\n*   **跨平台原生应用**：使用 Tauri (Rust) 构建桌面应用，提供 macOS、Windows 和 Linux 上的原生性能和系统集成。\n*   **API 驱动**：提供 REST API 和 MCP 服务器，方便开发者将语音 I/O 集成到自己的应用程序和代理中。\n\n## 适合谁用\n*   **开发者和 AI 代理用户**：希望将语音功能集成到自己的应用程序、游戏或 AI 代理中，并需要本地化、无 API 密钥和无速率限制的解决方案。\n*   **内容创作者**：需要克隆声音、生成高质量语音、制作播客或叙事内容，并希望对音频进行后期处理。\n*   **注重隐私的用户**：不希望语音数据离开本地机器，寻求完全私有的语音解决方案。\n*   **多语言用户**：需要支持多种语言的语音生成和转录功能。",
+      "degraded": false
+    },
+    {
+      "id": "Lakr233/vphone-cli",
+      "owner": "Lakr233",
+      "name": "vphone-cli",
+      "url": "https://github.com/Lakr233/vphone-cli",
+      "stars": 13164,
+      "description": "",
+      "one_liner": "`vphone-cli` 是一个利用 Apple Virtualization.framework 启动虚拟 iPhone 的命令行工具，支持多种固件变体和高级研究功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在为安全研究人员提供一个在 macOS 上运行虚拟 iPhone 的环境，以进行固件分析、漏洞研究和越狱开发等工作。它解决了在真实设备上进行这些操作的复杂性和风险，并提供了高度可控和可定制的虚拟化平台。\n\n**核心功能**\n`vphone-cli` 的核心功能包括：\n*   **虚拟机管理**：创建、启动、配置、克隆、导出、导入和删除虚拟 iPhone 实例。\n*   **固件处理**：下载、合并 IPSW 文件，并对引导链进行补丁。\n*   **自定义固件 (CFW) 安装**：支持安装不同安全绕过程度的固件变体，包括越狱 (jailbreak) 和实验性 (experimental) 版本。\n*   **DFU 模式恢复**：支持在 DFU 模式下启动虚拟机并进行固件恢复。\n*   **宿主-访客通信**：通过 `vphoned` 守护进程和 `VPhoneControl` 实现文件管理、应用安装、HID 注入等功能。\n\n**技术亮点**\n*   **基于 Apple Virtualization.framework**：利用 macOS 原生虚拟化框架，实现高性能的虚拟 iPhone 运行。\n*   **私有 API 访问**：通过 `Dynamic` 库在纯 Swift 中调用私有 `Virtualization.framework` API，以支持 PV=3 虚拟化模型。\n*   **多阶段固件补丁**：提供 `less`、`regular`、`dev`、`jb` 和 `exp` 等多种固件变体，以满足不同安全研究需求。\n*   **SwiftUI 驱动的 UI**：文件浏览器等功能采用 SwiftUI 实现，提供现代化的用户体验。\n*   **自动化脚本**：通过 `Makefile` 和 shell 脚本实现一键式环境设置、构建和虚拟机创建流程。\n\n**适合谁用**\n该项目主要面向：\n*   **iOS 安全研究人员**：需要一个可控环境来分析 iOS 固件、研究漏洞和测试安全绕过技术。\n*   **越狱开发者**：希望在虚拟环境中开发和测试越狱工具及插件。\n*   **移动安全测试人员**：需要一个隔离的 iOS 环境进行应用安全测试和逆向工程。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 24155,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "one_liner": "该项目通过插件扩展Claude的能力，连接外部工具和数据源，自动化工作流程，提升效率。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决Claude在处理复杂任务时，需要与外部数据源和工具交互的问题。 它通过提供一个统一的插件系统，使得Claude能够集成各种行业特定的工作流程，例如生物研究、金融、法律和销售等，从而自动化和优化这些领域的知识工作。\n\n**核心功能**\n核心功能包括插件管理，允许用户创建、定制和管理插件，以适应其组织工具和工作流程。 插件通过技能（`Skill`）定义领域专业知识和工作流程，通过命令（`Command`）触发明确的操作，并通过连接器（`Connector`）与外部工具集成。 例如，生物研究插件集成了多个MCP服务器和分析技能，用于文献搜索、基因组分析和靶点优先级排序。\n\n**技术亮点**\n技术亮点在于其模块化的插件架构和Model Context Protocol (MCP) 标准。 MCP是一个开放标准，使Claude能够连接到外部数据源和工具，而插件则将领域专业知识、操作和工具集成捆绑在一起。 此外，还引入了占位符（`Placeholder`）机制，允许插件使用通用模板，在定制时替换为特定的工具。\n\n**适合谁用**\n该项目适合需要扩展Claude功能以处理特定领域任务的用户和组织。 例如，生物研究人员可以使用生物研究插件进行文献搜索和基因组分析。 销售团队可以使用销售插件进行客户开发和外展。 金融和法律专业人士可以利用相应的插件简化工作流程。 此外，任何希望定制Claude以适应其独特工具和工作流程的组织都可以使用插件管理功能。",
+      "degraded": false
+    },
+    {
+      "id": "ankitects/anki",
+      "owner": "ankitects",
+      "name": "anki",
+      "url": "https://github.com/ankitects/anki",
+      "stars": 30645,
+      "description": "Anki is a smart spaced repetition flashcard program",
+      "one_liner": "Anki 是一个跨平台的间隔重复闪卡程序，旨在帮助用户高效记忆信息，通过算法优化复习间隔，提升学习效果。",
+      "detail_md": "**解决什么问题**\nAnki 解决了传统学习方法中记忆效率低下的问题，特别是对于需要长期记忆大量信息的用户。它通过间隔重复算法，根据用户对知识点的掌握程度，智能调整复习时间，确保在遗忘前进行复习，从而最大限度地提高记忆效率和持久性。\n\n**核心功能**\nAnki 的核心功能包括：卡片创建与管理、牌组组织、智能复习调度（特别是 FSRS 算法）、以及跨平台同步。 用户可以创建包含文本、图片、音频等多种媒体格式的闪卡，并将其组织到不同的牌组中。 智能调度系统会根据用户每次复习的反馈（如“再次”、“困难”、“良好”、“简单”）来调整卡片的下一次复习时间。\n\n**技术亮点**\n该项目采用三层架构：基于 Qt 的用户界面（Python）、Python 逻辑/API 层和高性能 Rust 核心层。 Python 和 Rust 之间通过 Protocol Buffers 进行通信，确保类型安全和高效数据传输。 Rust 后端负责数据库操作、调度逻辑和同步等性能关键任务。 此外，它还支持插件系统，允许第三方开发者扩展功能。\n\n**适合谁用**\nAnki 适合任何需要记忆大量信息的人群，包括学生、语言学习者、医学生、律师等。 尤其适合那些希望通过科学方法提高学习效率，减少死记硬背，并能长期巩固记忆的用户。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 145275,
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "one_liner": "Claude Code 是一个 AI 辅助开发工具，通过插件、代理和工作流增强代码开发体验。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过自动化和智能化来解决软件开发中的常见挑战，例如代码审查、功能开发、Git 工作流管理以及前端设计等。     它通过提供专门的代理和工具来提高开发效率和代码质量。 \n\n**核心功能**\n*   **插件系统**: 允许通过自定义命令、代理、钩子和 MCP 服务器扩展功能。  例如，`code-review` 插件提供自动化的 PR 代码审查，`feature-dev` 插件提供全面的功能开发工作流。  \n*   **代理 (Agents)**: 由大型语言模型 (LLM) 驱动的自主执行单元，可以利用工具完成任务。  项目中包含多种专业代理，如 `code-explorer`、`code-architect` 和 `code-reviewer`。 \n*   **工具 (Tools)**: 代理可以使用的功能或能力，例如运行 Bash 命令、读取文件或与 GitHub 交互。 \n*   **钩子 (Hooks)**: 在代理生命周期的特定点触发逻辑的事件监听器，例如 `SessionStart` 和 `PreToolUse`。  \n\n**技术亮点**\n*   **模块化架构**: 通过插件系统实现功能扩展，允许用户根据需求定制工具。 \n*   **AI 驱动的自动化**: 利用 LLM 驱动的代理进行代码审查、功能开发和 Git 操作，提高开发效率和质量。  \n*   **安全沙盒环境**: 为 Bash 命令提供受限的执行环境，通过防火墙规则确保安全性。 \n*   **持续集成与更新**: 通过 `CHANGELOG.md` 记录了大量的错误修复、性能改进和新功能，例如跨会话消息传递、远程控制改进和自动模式安全增强。  \n\n**适合谁用**\n该项目适合需要提高开发效率、自动化重复任务、确保代码质量以及希望通过 AI 辅助进行软件开发的开发者和团队。  特别是那些希望利用 AI 进行代码审查、功能开发和 Git 工作流管理的团队。",
+      "degraded": false
+    },
+    {
+      "id": "roboflow/supervision",
+      "owner": "roboflow",
+      "name": "supervision",
+      "url": "https://github.com/roboflow/supervision",
+      "stars": 50433,
+      "description": "We write your reusable computer vision tools. 💜",
+      "one_liner": "Supervision 是一个开源 Python 库，用于简化计算机视觉工作流程，提供模型无关的工具集。</cite>",
+      "detail_md": "**解决什么问题**\nSupervision 旨在解决计算机视觉开发中模型输出多样性、可视化复杂性、对象跟踪、数据集管理和模型评估等常见挑战。</cite>它通过提供一个统一的 `Detections` API 来标准化不同模型（如 Ultralytics YOLO、SAM、Hugging Face Transformers 等）的输出，从而允许开发者在不重写代码的情况下更换模型。</cite>\n\n**核心功能**\n该库提供了一系列核心功能，包括：加载和转换数据集（支持 YOLO、COCO JSON 和 Pascal VOC 格式），</cite>图像和视频标注（边界框、掩码、标签），</cite>对象跟踪（通过 `sv.ByteTrack` 分配持久 ID），</cite>区域分析（`sv.PolygonZone` 和 `sv.LineZone` 用于计数），</cite>以及模型性能评估（mAP 和混淆矩阵）。</cite>\n\n**技术亮点**\nSupervision 的技术亮点在于其模型无关性，</cite>统一的 `Detections` 对象作为核心数据结构，</cite>以及对多种主流计算机视觉模型输出的广泛支持。</cite>它还提供了高效的内存管理，例如 `sv.CompactMask` 用于减少分割掩码的内存占用，</cite>以及 `sv.InferenceSlicer` 用于小目标检测。</cite>\n\n**适合谁用**\nSupervision 适合需要快速构建和部署计算机视觉应用的开发者、研究人员和工程师。</cite>无论您是需要处理数据集、标注图像、跟踪对象、进行区域分析还是评估模型性能，Supervision 都能提供开箱即用的工具，帮助您加速开发流程。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "supabase/supabase",
+      "owner": "supabase",
+      "name": "supabase",
+      "url": "https://github.com/supabase/supabase",
+      "stars": 109418,
+      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "one_liner": "该项目提供了一套AI命令包，用于在Supabase生态系统中集成和管理LLM功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在Supabase单体仓库中集成大型语言模型（LLM）功能时，代码重复、不一致以及管理复杂性等问题。它通过提供共享的工具和抽象层，确保AI交互的统一实现，并减少在不同应用（如Studio、Docs和WWW）中的重复开发。\n\n\n**核心功能**\n核心功能包括AI命令处理、token管理、模式验证和响应解析。它集成了Vercel AI SDK以支持多种LLM提供商，并直接与OpenAI API交互以实现流式完成、嵌入生成和函数调用。此外，它还使用`js-tiktoken`进行token计数和管理，`zod`和`@serafin/schema-builder`进行模式验证和构建，以及`jsonrepair`来修复LLM生成的JSON响应中的格式错误。\n\n\n**技术亮点**\n技术亮点在于其模块化架构，能够无缝集成外部AI服务，并支持Supabase单体仓库中的多个消费应用。它利用`common-tags`模板字面量标签来改进提示构建的可读性和可维护性。在开发和测试方面，该项目使用Vitest进行测试，并通过Braintrust AI评估管道对AI助手功能进行持续质量验证。\n\n\n**适合谁用**\n该项目主要适用于Supabase的开发者和内部团队。特别是对于需要AI助手聊天功能、自然语言到SQL查询生成、模式内省和上下文增强的Studio应用开发者，以及需要AI驱动搜索和嵌入功能的Docs应用开发者，还有需要AI相关营销功能的WWW应用开发者。\n\nNotes\n\n`apps/studio/lib/ai/generate-assistant-response.ts` 文件展示了如何生成AI助手的响应，包括消息处理、模式获取和系统提示的构建，是AI命令包在Studio应用中实际应用的一个例子。\n`apps/studio/components/ui/AIAssistantPanel/AIOnboarding.tsx` 文件则展示了AI助手面板的UI组件，包括如何显示建议提示和处理用户输入，是AI助手用户界面的一个组成部分。",
+      "degraded": false
+    },
+    {
+      "id": "rlaope/oh-my-hermes",
+      "owner": "rlaope",
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "stars": 2421,
+      "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+      "one_liner": "oh-my-hermes (OMH) 是 Hermes Agent 的专业操作层，提供确定性路由、92 种工作流技能和明确的证据边界，以增强现有 Hermes 工作流。",
+      "detail_md": "**解决什么问题**\nOMH 旨在解决 Hermes Agent 在处理自然语言请求时，如何将其转化为明确、可执行的步骤，并确保执行过程的透明性和可验证性。 它通过提供一个操作层，避免了 Hermes 直接执行代码，而是将任务委托给外部编码执行器，同时记录所有操作的证据。\n\n**核心功能**\nOMH 的核心功能包括：将 Hermes Agent 的普通请求转化为合适的能力、明确的下一步行动，以及对“已发生”和“尚未发生”的诚实状态声明。 它管理着 92 种可安装的工作流技能，并将其组织成 6 个能力族，用于规划、学习、制作、编码委派、运维和知识保留。 OMH 还提供项目记忆功能，以“先审查后使用”的策略管理项目记忆。\n\n**技术亮点**\nOMH 的技术亮点在于其“证据边界”设计，严格区分“已准备”状态（计划）和“已观察”状态（实际执行或验证），确保只有经过验证的信息才被采纳。 它采用“委托优先”原则，为外部编码执行器（如 Codex 或 Claude Code）准备高质量的交接，而不是在聊天编排器内部直接执行代码。 此外，OMH 还是“执行器中立”的，为各种运行时提供统一接口，不将用户锁定到特定的编码代理。\n\n**适合谁用**\nOMH 适合希望增强 Hermes Agent 能力的用户和团队，特别是那些需要清晰、可验证的工作流、精确的任务路由和可靠的项目记忆的场景。 它适用于需要将模糊请求转化为明确计划、进行研究、内容创作、编码任务交接、运维管理以及知识保留的开发者和项目经理。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/WeKnora",
+      "owner": "Tencent",
+      "name": "WeKnora",
+      "url": "https://github.com/Tencent/WeKnora",
+      "stars": 24891,
+      "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "one_liner": "WeKnora 是一个开源的企业级知识管理框架，通过 RAG、Agent 推理和自动 Wiki，让文档被理解和运用。",
+      "detail_md": "**解决什么问题**\nWeKnora 旨在解决企业文档分散、难以理解和利用的问题。它将 PDF、Word、网页等多种来源的资料汇入知识库，提供智能问答能力，并能追溯答案出处。此外，它还通过 Wiki 模式将非结构化文档转化为结构化知识，并支持多渠道访问和企业级安全管理。\n\n**核心功能**\nWeKnora 的核心功能包括：\n*   **智能对话**：提供基于 RAG 的快速问答、ReAct Agent 智能推理、技能目录与沙箱、长期记忆 和工具调用。\n*   **知识管理**：支持多种知识库类型（FAQ、文档、Wiki）、文件夹树管理、分块编辑与版本历史、多源数据导入 和多种文档格式解析。\n*   **集成与扩展**：广泛支持主流 LLM、向量数据库、对象存储 和 IM 平台。\n\n**技术亮点**\n*   **模块化架构**：从文档解析到大模型推理，全流程模块化解耦，组件可灵活替换与扩展。\n*   **Agentic RAG**：结合 ReAct 推理、工具调用和多步思考，实现智能问答。\n*   **混合检索策略**：支持 BM25、向量和知识图谱的混合检索，提高检索准确性。\n*   **Wiki 模式**：Agent 驱动从原始文档中自动生成结构化、相互链接的 Markdown Wiki 页面和知识图谱。\n*   **企业级特性**：提供多空间隔离、四级 RBAC 权限控制、作用域 API Key、审计日志 和 Langfuse 全链路可观测性。\n\n**适合谁用**\nWeKnora 适合需要对企业内部文档进行高效管理、智能检索和推理的团队和组织。特别是那些希望将分散的文档沉淀为可查询、可推理、可持续演进的专属知识资产的用户。它支持私有化部署，数据自主可控，适用于对数据安全和定制化有较高要求的场景。",
+      "degraded": false
+    },
+    {
+      "id": "SnailSploit/Claude-Red",
+      "owner": "SnailSploit",
+      "name": "Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "stars": 5553,
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "one_liner": "`claude-red` 是一个为 Claude AI 设计的进攻性安全技能库，旨在将其转变为上下文感知的红队操作员。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过提供结构化的 `SKILL.md` 文件，解决 Claude AI 在执行进攻性安全任务时缺乏专业知识和上下文感知能力的问题。它允许 Claude 根据对话触发器按需加载特定技能，从而避免了为不使用的技能支付持续上下文成本。\n\n**核心功能**\n`claude-red` 的核心功能是提供一个包含多种进攻性安全技能的库。这些技能涵盖了从 Web 应用程序漏洞到 Active Directory 攻击和无线协议攻击等多个领域。每个技能都以 `SKILL.md` 文件的形式存在，其中包含 YAML frontmatter，用于定义技能的名称、描述和触发机制。项目还提供了一个 `claude-skills.json` 文件，作为所有技能的机器可读索引。\n\n**技术亮点**\n该项目的技术亮点在于其模块化的技能加载系统。Claude 可以根据对话中的关键词自动加载相关技能，例如，提及 \"SQLi\" 会加载 `offensive-sqli` 技能。此外，项目还通过 `tools/build_manifest.py` 脚本自动生成 `claude-skills.json` 清单文件，确保技能库的最新和准确性。所有提交都经过加密签名，以确保供应链的完整性。\n\n**适合谁用**\n`claude-red` 适用于专业的安全从业人员，包括授权的红队成员、渗透测试人员和安全研究人员。它可用于授权的红队行动、漏洞赏金计划、安全研究、CTF 竞赛准备以及操作员培训。",
+      "degraded": false
+    },
+    {
+      "id": "multimodal-art-projection/YuE",
+      "owner": "multimodal-art-projection",
+      "name": "YuE",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "stars": 9180,
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "one_liner": "YuE2是一个前沿的音乐生成系统，它能将歌词和风格提示转化为可编辑的乐谱和高质量的歌曲音频，支持创作、翻唱和编辑功能。",
+      "detail_md": "**解决什么问题**\nYuE2解决了音乐创作中符号（乐谱）和音频生成之间的鸿沟，允许用户通过歌词和风格提示生成高质量的歌曲，并提供可编辑的乐谱进行精细控制。它还支持将现有录音转录为乐谱，并在此基础上进行风格翻唱或编辑，极大地提升了音乐创作的灵活性和可控性。\n\n**核心功能**\n该项目的核心功能包括：\n*   **歌曲生成**：根据歌词和风格提示生成完整的歌曲，包括旋律、和弦计划和音频渲染。\n*   **可编辑的符号计划**：生成过程中会创建可编辑的旋律和和弦乐谱（ABC格式），用户可以在渲染音频前进行检查和修改。\n*   **零样本翻唱**：通过SheetSage2将音频转录为乐谱，然后使用YuE2以新风格重新演绎歌曲。\n*   **智能体辅助编辑**：支持通过智能体对乐谱、编曲和歌词进行修改，实现音乐的迭代编辑。\n\n**技术亮点**\nYuE2的技术亮点在于其统一了符号和音频音乐生成，采用了**AR–NAR Mixture-of-Transformers**骨干网络，先自回归预测乐谱和语义音乐标记，然后通过流匹配生成声学潜在变量，最后由VAE解码为立体声音频。它提供了三种生成模式：`cot=\"full\"`（生成可编辑的旋律和和弦计划）、`cot=\"melody\"`（仅生成旋律计划）和`cot=\"off\"`（直接从歌词和风格生成），以适应不同的创作需求。\n\n**适合谁用**\nYuE2适合音乐制作人、作曲家、音乐爱好者以及需要进行音乐创作、翻唱或编辑的开发者和研究人员。特别是那些希望在生成音乐前对乐谱进行精细控制，或希望将现有音频作品进行风格转换和再创作的用户。它也适用于需要进行音乐理解和转录的场景，例如结合SheetSage2进行音频到乐谱的转换。",
+      "degraded": false
+    },
+    {
+      "id": "cline/cline",
+      "owner": "cline",
+      "name": "cline",
+      "url": "https://github.com/cline/cline",
+      "stars": 68185,
+      "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+      "one_liner": "Cline 是一个开源的 AI 编码代理，可在 IDE 和终端中协助开发者，通过自然语言理解、代码修改和命令执行来完成复杂任务，并始终保持用户控制。",
+      "detail_md": "**解决什么问题**\nCline 旨在解决开发者在日常编码中遇到的效率低下和重复性工作问题。它通过 AI 代理自动化代码修改、运行命令和浏览网页等任务，从而加速开发流程。同时，它通过“人在回路”的审批机制，确保开发者始终对代码变更和命令执行拥有完全控制权，避免 AI 意外修改代码。\n\n**核心功能**\nCline 提供多平台支持，包括 VS Code 扩展、JetBrains 插件和命令行工具 (CLI)。它能够理解项目结构，进行跨文件协调修改，并监控 linter 和编译器错误。用户可以在“计划模式”和“执行模式”之间切换，先规划策略再执行。Cline 还支持多种 AI 模型，允许用户选择最适合工作流程的模型。此外，它还具备插件扩展能力、多代理协作、定时任务和与消息平台集成等高级功能。\n\n**技术亮点**\nCline 的技术亮点在于其“人在回路”的安全模型，所有关键操作（如文件写入、命令执行）都需要用户明确确认。它通过 Git 快照实现检查点功能，方便用户比较和恢复工作区状态。项目支持通过 `.clinerules` 文件定义项目特定规则，指导 AI 行为。其 SDK 允许开发者构建自定义 AI 代理和集成，提供了高度的灵活性和可扩展性。\n\n**适合谁用**\nCline 适合需要提高编码效率的开发者、希望自动化重复性任务的团队，以及希望构建自定义 AI 代理和集成方案的工程师。无论是个人开发者还是企业用户，都可以利用 Cline 提升开发体验和生产力。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 259764,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code (ECC) 是一个 AI 智能体性能优化系统，提供生产就绪的智能体、技能和自动化工作流，以加速软件开发。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 智能体在软件开发中效率不高、上下文管理复杂、缺乏标准化工作流等问题。它通过提供一套经过实战检验的智能体、技能和自动化钩子，帮助 AI 智能体更好地理解和执行复杂的开发任务，优化性能并确保代码质量和安全性。\n\n**核心功能**\nECC 提供了 60 多个专业智能体、286 项技能和 94 条命令，用于处理软件开发生命周期的不同阶段。它支持多语言文档和配置，确保全球开发者社区的可用性。项目还包含一个“目录真实性强制”系统，通过 `scripts/ci/catalog.js` 脚本确保代码库与文档之间的一致性。此外，它还提供项目模板和示例，指导如何将 ECC 规则应用于特定的技术栈。\n\n**技术亮点**\n该项目采用 Rust 编写的 `ecc2` 作为控制平面，管理会话持久性、后台守护进程和 TUI 仪表板，提供高性能基础。它引入了“本能系统”（持续学习 v2），通过观察智能体行为将成功模式提升为可重用技能。“GateGuard”安全钩子 (`scripts/hooks/gateguard-fact-force.js`) 强制执行事实强制策略，防止未经审查的文件修改。项目还通过 Git worktrees 实现工作树隔离，防止智能体任务之间的干扰。\n\n**适合谁用**\nECC 适用于使用 Claude Code、Codex、Cursor、OpenCode、Gemini 等 AI 智能体平台的开发者和团队。它特别适合需要优化 AI 辅助开发流程、提高代码质量、确保安全性和标准化工作流的软件工程师、架构师和项目经理。项目还鼓励社区贡献，欢迎开发者分享有用的智能体、技能、钩子和 MCP 配置。",
+      "degraded": false
     }
   ]
 }
