@@ -1,0 +1,160 @@
+{
+  "doc_token": "Qpp5drKJGobjcNxQv1NcByOZnce",
+  "doc_url": "https://my.feishu.cn/docx/Qpp5drKJGobjcNxQv1NcByOZnce",
+  "items": [
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 28454,
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review (OCR) 是一个AI驱动的代码审查CLI工具，它将阿里巴巴内部验证过的AI代码审查能力带给开发者，旨在通过结合确定性工程和LLM Agent来提供精准、高效的代码…",
+      "detail_md": "Open Code Review (OCR) 是一个AI驱动的代码审查CLI工具，它将阿里巴巴内部验证过的AI代码审查能力带给开发者，旨在通过结合确定性工程和LLM Agent来提供精准、高效的代码审查。\n\n## 解决什么问题\nOpen Code Review 旨在解决通用AI代码审查工具存在的覆盖不全、位置漂移和效果不稳定等问题。通用Agent在处理大型代码变更时可能遗漏文件，报告的问题位置不准确，并且审查质量受提示词影响大。OCR通过结合确定性工程和LLM Agent，确保审查的全面性、准确性和稳定性。\n\n## 核心功能\n*   **AI驱动的代码审查**：读取Git diff，通过具备工具调用能力的Agent将变更文件发送至可配置的LLM，生成具有行级精度的结构化审查意见。\n*   **深度审查能力**：Agent可以读取完整文件内容、搜索代码库、检查其他变更文件以获取上下文，从而进行深度审查，而非仅停留在表面的diff反馈。\n*   **多模式操作**：支持审查本地工作区变更、特定Git分支差异、单个提交，或通过`ocr scan`对整个文件进行审计。\n*   **多语言支持**：内置审查规则覆盖40多种语言和文件类型，包括Java、TypeScript、Go、Python等，并提供NPE、线程安全、XSS、SQL注入等专项检查。\n\n## 技术亮点\n*   **混合架构：确定性工程 × Agent**：将确定性工程（如文件筛选、打包、规则匹配）与LLM Agent推理（风险检测、上下文探索）解耦，优化质量、Token成本和速度。\n*   **精准评论定位与反思**：独立的行级评论定位模块采用三级渐进式LLM策略精确定位问题，反思模块提前拦截幻觉和知识偏移。\n*   **智能记忆压缩**：专为代码审查构建的三分区（冻结/压缩/活跃）上下文管理方案，突破Token限制实现深度审查。\n*   **多模型协议支持**：支持Anthropic Messages API、OpenAI Chat Completions API和OpenAI Responses API，内置多种预设提供商，并支持自定义模型端点。\n\n## 适合谁用\n*   **独立开发者**：将Open Code Review嵌入本地AI辅助开发工作流，获得即时、高质量的代码审查反馈。\n*   **平台团队**：无缝集成到内部系统中，完全掌控数据流和审查策略。\n*   **ML研究者**：作为RL训练流水线中的代码质量验证器，为代码生成模型提供可靠的奖励信号。",
+      "degraded": false
+    },
+    {
+      "id": "JustVugg/colibri",
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "stars": 33780,
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "one_liner": "colibrì 是一个纯 C 语言实现、零依赖的推理引擎，旨在消费级硬件上高效运行 744B 到 2.8T 的前沿 MoE 模型，通过分层存储管理模型权重。",
+      "detail_md": "**解决什么问题**\ncolibrì 旨在解决前沿大型 MoE 模型对数据中心级硬件的依赖问题，使这些模型能够在消费级和异构硬件上运行，降低推理的硬件要求和总成本。它通过优化推理路径的每个环节，包括权重表示、内存层级、存储 I/O、调度和异构计算，来提高模型的可访问性。\n\n**核心功能**\ncolibrì 的核心功能包括：\n*   **统一内存层级管理**：将 VRAM、RAM 和 NVMe 视为同一份权重的不同放置层级，高速内存不足只会影响速度，不改变模型语义。\n*   **权重即时加载 (JIT)**：根据路由热度驱动逐层 LRU 缓存、学习型热门专家固定区和提前一层预取，按需流式加载专家，无需加载所有专家。\n*   **I/O 优化**：通过专家批次并集、读算重叠、`O_DIRECT` 和加权双 SSD 分流等技术，直接优化流式路径，减少存储延迟。\n*   **异构执行**：支持 CPU、CUDA、Metal、NUMA 内存以及专家部分或全部常驻，可在不同硬件条件下灵活组合。\n*   **压缩状态与推测解码**：采用 57 倍更小的 MLA KV 状态和持久化热会话，并支持原生 MTP 和语法强制草稿的推测解码，且所有优化都以端到端测量为准，确保正确性。\n\n**技术亮点**\n*   **纯 C 语言实现与零依赖**：引擎核心 `c/colibri.c` 是纯 C 语言实现，运行时无 Python 依赖，也不强制要求 GPU。\n*   **多模型支持**：目前支持 GLM-5.2 (744B)、Inkling (975B)、Kimi K3 (2.8T) 和 OLMoE (7B) 等多个 MoE 模型家族。\n*   **交互式 Web UI**：提供带有实时指标、专家皮层大脑页面和专家图谱 3D 星系的 Web 仪表盘，方便用户观察和理解模型运行状态。\n*   **OpenAI 兼容 API**：提供 `coli serve` 命令启动 OpenAI 兼容的 HTTP API 服务，支持 SSE 流式传输和 KV slots。\n*   **跨平台支持**：可在 Linux、macOS 和 Windows 11 等多种操作系统上运行。\n\n**适合谁用**\n*   **希望在消费级硬件上运行大型 MoE 模型的研究人员和开发者**：colibrì 使得在有限资源下运行和实验前沿大型模型成为可能。\n*   **对模型推理系统优化感兴趣的工程师**：项目提供了一个开放的研究平台，鼓励社区贡献和验证各种系统优化假设。\n*   **需要本地部署大型语言模型进行聊天或 API 服务的用户**：通过 `coli chat` 或 `coli serve` 命令，用户可以轻松地在本地运行模型进行交互或提供服务。",
+      "degraded": false
+    },
+    {
+      "id": "ever-co/ever-gauzy",
+      "owner": "ever-co",
+      "name": "ever-gauzy",
+      "url": "https://github.com/ever-co/ever-gauzy",
+      "stars": 6605,
+      "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+      "one_liner": "Ever® Gauzy™ 是一个面向协作、按需与共享经济的开放式业务管理平台，集 ERP、CRM、HRM、ATS 与项目管理于一体，并内置时间跟踪功能。",
+      "detail_md": "**解决什么问题**\n\nEver® Gauzy™ 旨在解决企业在协作、按需和共享经济模式下，对企业资源规划（ERP）、客户关系管理（CRM）、人力资源管理（HRM）、申请人跟踪系统（ATS）以及项目管理等多个业务领域进行集成化管理的需求。 它通过提供统一的平台，简化了业务流程，提高了运营效率，并支持多语言环境以适应全球化业务需求。\n\n**核心功能**\n\n该平台提供广泛的核心功能，包括但不限于：发票管理、收入和费用跟踪、支付处理、提案管理、销售流程管理、任务看板、职位管理、员工管理、时间与活动跟踪、日程安排、候选人管理、组织管理、产品库存、项目管理、团队管理、文档管理、潜在客户/客户管理、目标与目的设定、各类报告（如费用、时间活动等）、用户和组织管理、应用程序集成、电子邮件历史记录、系统设置、实体导入导出、自定义 SMTP 以及角色和权限管理。 此外，它还支持时间跟踪功能，包括桌面应用程序和屏幕截图捕获。\n\n**技术亮点**\n\nEver® Gauzy™ 的技术亮点在于其国际化和本地化系统，支持包括中文在内的14种语言。 它使用 @ngx-translate/core 进行运行时字符串翻译，翻译字符串存储在 JSON 文件中，并采用分层 JSON 结构组织。 系统通过 LanguageInterceptor 确保 Accept-Language 头与应用程序的当前语言状态同步，并支持用户在运行时切换语言。 此外，它还集成了时间跟踪桌面应用程序，支持键盘鼠标活动跟踪和屏幕截图功能。\n\n**适合谁用**\n\nEver® Gauzy™ 适合需要全面业务管理解决方案的企业和组织，特别是那些在协作、按需和共享经济领域运营的实体。 它适用于需要集成 ERP、CRM、HRM、ATS 和项目管理功能，并重视时间跟踪和多语言支持的团队。 无论是小型企业还是大型组织，只要有管理员工、项目、客户、财务和时间的需求，都可以从该平台中受益。\n\nNotes\n本回答主要基于 ever-co/ever-gauzy 仓库中的国际化文件（例如 zh.json, en.json, ru.json 等）以及相关的维基页面信息。 这些文件包含了项目的功能描述、设置项以及关于页面的详细信息，从而能够全面地介绍项目。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 30891,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的 ElevenLabs 替代品，可在本地设备上进行实时语音克隆、设计和视频配音，支持 646 种语言，无需云端或账户。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 旨在解决主流语音工具依赖云服务、按月收费且数据隐私性差的问题。它提供了一个完全在用户本地设备上运行的解决方案，确保用户数据的私密性，无需账户、API 密钥或云端处理。\n\n**核心功能**\n该项目提供零样本语音克隆，只需 3 秒音频即可复刻任何声音。用户可以设计新的声音，通过自然语言描述或参数调整声音的性别、年龄、口音和情绪。此外，它还支持电影级视频配音，包括转录、翻译和重新配音，并能保持说话人身份和时间轴对齐。项目还包含一个多语音有声书编辑器，支持章节划分和角色语音分配。\n\n**技术亮点**\nVoiceStudio 采用本地优先的设计理念，所有处理都在用户设备上完成，不涉及云端。它支持 646 种语言，并集成了多种 TTS 引擎。项目还具备国际化（i18n）系统，支持 21 种语言的本地化界面。所有生成的合成音频都嵌入了不可见的 AudioSeal 水印，以确保安全性和可追溯性。\n\n**适合谁用**\nVoiceStudio 适合关心数据隐私、希望在本地设备上进行语音创作的创作者、视频制作人以及需要多语言配音和有声书制作的用户。对于企业用户，它提供了商业许可选项，允许在闭源产品中嵌入 VoiceStudio 而无需遵守 AGPL-3.0 的 copyleft 义务。",
+      "degraded": false
+    },
+    {
+      "id": "Homebrew/BrewUI",
+      "owner": "Homebrew",
+      "name": "BrewUI",
+      "url": "https://github.com/Homebrew/BrewUI",
+      "stars": 1321,
+      "description": "📺 Homebrew's official macOS GUI",
+      "one_liner": "BrewUI 是 Homebrew 官方 macOS 图形用户界面，旨在简化包管理，同时完全透明地显示底层操作。</cite>",
+      "detail_md": "**解决什么问题**\nBrewUI 旨在为不习惯使用终端的用户提供一个友好的图形界面来管理 Homebrew 包。</cite>它解决了命令行操作的复杂性，让用户能够安全地发现、安装、更新和管理 Homebrew 包，同时保持对 Homebrew 所执行操作的完全透明。</cite>\n\n**核心功能**\n该项目提供包的发现、安装、更新和管理功能。</cite>用户可以通过 `MainWindowView` 浏览已安装的包、可升级的包以及发现新的包。</cite>它还包括一个“Doctor”功能，用于检查 Homebrew 安装中存在的问题，以及一个“Configuration”视图来显示 Homebrew 的环境和诊断信息。</cite>\n\n**技术亮点**\nBrewUI 使用 Swift 6.0 和 SwiftUI 构建，并强制执行严格的并发模式。</cite></cite>它采用轻量级的 MVVM-C (Model-View-ViewModel-Coordinator) 架构模式，遵循 Clean Architecture 原则。</cite>数据流从外部数据源（`brew` CLI 子进程和 Homebrew JSON API）通过存储库和视图模型单向流向 SwiftUI 视图层次结构。</cite></cite>\n\n**适合谁用**\nBrewUI 适合那些更喜欢图形界面而非终端来管理 Homebrew 包的 macOS 用户。</cite>它也适用于希望对 Homebrew 操作保持透明度的用户，因为它会显示底层执行的命令。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "melgarafael/DeskcommCRM",
+      "owner": "melgarafael",
+      "name": "DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "stars": 2804,
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "one_liner": "DeskcommCRM 是一个开源的销售操作系统，通过 AI 代理在 WhatsApp 上处理销售和支持，自托管且无订阅费。</cite>",
+      "detail_md": "### 解决什么问题\n该项目旨在为依赖 WhatsApp 进行销售的企业提供一个自托管、无订阅费的销售操作系统，解决传统 CRM 成本高昂、数据主权缺失以及 AI 代理无法真正操作 CRM 的问题。</cite> 它通过集成 AI 代理来自动化销售流程，并确保用户数据完全由自己掌控。</cite>\n\n### 核心功能\nDeskcommCRM 的核心功能包括：\n*   **AI 代理操作 CRM**：AI 代理能够处理、筛选和推进 WhatsApp 上的潜在客户，并能执行 CRM 操作，如移动销售漏斗中的线索、触发自动化等。</cite>\n*   **多渠道 WhatsApp 集成**：支持通过 QR 码（WAHA 引擎）或 Meta 官方 Cloud API 连接 WhatsApp，具备防封禁机制和媒体处理能力。</cite>\n*   **自托管与数据主权**：用户可在自己的 VPS 上安装和运行整个系统，确保数据安全和隐私，无需支付月费。</cite>\n*   **自动化与 Webhooks**：提供可配置的捕获源和 WHEN/IF/THEN 规则，实现销售流程的自动化，并支持与外部系统通过 Webhooks 集成。</cite>\n*   **多租户与隐私设计**：采用行级安全（RLS）实现多租户隔离，并符合 LGPD 法规，支持数据匿名化和审计日志。</cite>\n\n### 技术亮点\n该项目采用现代技术栈，主要亮点包括：\n*   **Next.js 16 (App Router) + React 19**：用于构建前端界面和后端 API 路由。</cite>\n*   **Supabase (Postgres + RLS)**：作为数据库层，提供多租户支持、行级安全和向量搜索能力，用于 RAG（检索增强生成）。</cite>\n*   **Vercel AI SDK**：支持 Anthropic、OpenAI 等多种 AI 提供商，用于 AI 代理的推理和 RAG。</cite>\n*   **WAHA Plus**：用于 WhatsApp 集成，支持多号码和防封禁策略。</cite>\n*   **一键部署与更新**：提供 `hostgator-setup-kit` 脚本，支持在 VPS 上一键安装和更新整个 CRM 系统。</cite>\n\n### 适合谁用\nDeskcommCRM 适合任何通过 WhatsApp 进行销售的企业，包括：\n*   **电商、诊所、房地产、信息产品、代理机构、商店和服务提供商**等。</cite>\n*   希望拥有数据主权，不愿支付高昂订阅费用的企业。</cite>\n*   寻求通过 AI 自动化销售和客户支持流程，并希望 AI 代理能真正操作 CRM 的企业。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "alphaXiv/OpenResearch",
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "stars": 3308,
+      "description": "Turn your coding agents into research agents",
+      "one_liner": "本项目提供了一个名为 `nanochat` 的示例研究项目，包含源代码、Git 历史和预设对话，旨在帮助新用户快速上手 OpenResearch 平台。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决新用户和评估者在没有外部依赖或长时间预训练的情况下，难以立即与功能齐全的研究项目进行交互的问题。 它通过提供一个预先填充的 `nanochat` 示例项目，让用户能够直接体验 OpenResearch 的功能。\n\n**核心功能**\n核心功能包括嵌入源代码、确定性的本地 Git 历史以及三个精选的、原生对话记录。 它还定义了项目常量、Git 提交和分支名称，以确定性地构建 `nanochat` 工作区。 此外，它通过预设的系统提示和用户提示，引导代理执行端到端 CPU/Apple-Silicon 管道、生成图表和进行文献分析。\n\n**技术亮点**\n技术亮点在于其确定性的工作区构建和预设的交互流程。 它利用 `src/local/demo.rs` 模块定义了各种常量，如 `PROJECT_ID`、`EXPERIMENT_ID` 和 `SESSION_ID`，确保每次演示的一致性。 通过 `TURN_CONTEXT` 等系统提示，它能够约束代理行为，即使在缺少大型模型检查点的情况下也能正常运行。\n\n**适合谁用**\n本项目适合 OpenResearch 平台的新用户和评估者。 它为他们提供了一个无需复杂配置即可立即体验平台功能的沙盒环境。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 76675,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 是一个由 NSA 开发的软件逆向工程套件，用于分析恶意代码和二进制文件，支持多种处理器架构和操作系统，并提供协作功能。",
+      "detail_md": "**解决什么问题**\nGhidra 旨在解决二进制文件分析和逆向工程中的挑战，例如理解未知可执行文件的功能、识别漏洞以及分析恶意软件。 它通过提供一套全面的工具来帮助用户深入检查程序的内部结构，包括符号、字节、内存、引用、指令和数据等信息。\n\n**核心功能**\nGhidra 的核心功能包括代码分析、标记、导航、搜索、选择和基本数据创建，以支持逆向工程过程。 它提供了字节查看器、反编译器、程序树、符号表、符号树、函数图和函数调用树等工具。 此外，Ghidra 还支持多用户协作，通过服务器提供网络共享存储库、用户访问控制和修订历史记录。\n\n**技术亮点**\nGhidra 的技术亮点在于其高度可配置和可扩展的环境。 用户可以通过插件和脚本（支持 Java 或 Python）来扩展其功能。 它被设计用于处理大型数据集，并支持跨平台操作（Linux、Mac、Windows）。\n\n**适合谁用**\nGhidra 适合需要进行软件逆向工程的专业人士，包括安全研究员、恶意软件分析师、漏洞研究员以及任何需要理解二进制代码内部工作原理的开发者。 其协作功能也使其适用于团队项目。",
+      "degraded": false
+    },
+    {
+      "id": "danny-avila/LibreChat",
+      "owner": "danny-avila",
+      "name": "LibreChat",
+      "url": "https://github.com/danny-avila/LibreChat",
+      "stars": 43801,
+      "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
+      "one_liner": "LibreChat 是一个自托管、开源的 AI 聊天平台，在一个统一界面中整合了多种 AI 服务提供商，并提供高级对话功能和数据隐私控制。",
+      "detail_md": "**解决什么问题**\nLibreChat 旨在解决用户管理多个 AI 服务提供商接口的复杂性问题，提供一个统一的平台来访问和利用各种 AI 模型，同时确保用户对其 AI 基础设施和数据拥有完全控制权。 它还解决了对数据隐私和高级 AI 对话功能的需求。\n\n**核心功能**\nLibreChat 提供类似 ChatGPT 的用户体验，并集成了多项高级功能，包括：AI 智能体与技能、代码解释器、模型上下文协议 (MCP) 支持、多提供商 AI 集成（如 OpenAI、Anthropic、Google、AWS Bedrock、Azure 等）、网页搜索与 RAG、多模态与语音支持，以及企业级认证。 它还支持自定义端点，兼容本地和远程 AI 服务商。\n\n**技术亮点**\n该项目采用分层架构，客户端使用 React 和 TypeScript 构建，API 服务器基于 Express.js，AI 客户端采用 TypeScript 类层次结构。 数据持久化方面，使用 MongoDB 存储对话和用户数据，Redis 用于缓存和会话管理，MeiliSearch 提供全文搜索，pgvector (PostgreSQL) 支持 RAG 的向量相似性搜索。 配置系统支持环境变量和 YAML 文件，并通过 Zod 模式进行严格验证。\n\n**适合谁用**\nLibreChat 适合重视 AI 基础设施自主可控、数据隐私以及需要统一管理和使用多种 AI 模型的个人和企业用户。 它也适用于开发者，因为它是一个开源项目，支持社区贡献和定制化开发。",
+      "degraded": false
+    },
+    {
+      "id": "pacifio/atlas",
+      "owner": "pacifio",
+      "name": "atlas",
+      "url": "https://github.com/pacifio/atlas",
+      "stars": 4596,
+      "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+      "one_liner": "Atlas 是一个以智能体为先、本地优先的 IDE 和版本控制系统，旨在无缝集成编码智能体到开发工作流程中。",
+      "detail_md": "**解决什么问题** \nAtlas 旨在解决传统开发环境中编码智能体集成不足的问题，例如智能体执行、上下文管理、共享内存和会话历史记录的生命周期管理。它通过提供一个统一的平台来管理这些方面，并与传统版本控制相结合，从而解决了智能体工作流程中的痛点，例如连接中断、取消操作不可靠以及流式传输失败等问题。 \n\n**核心功能** \nAtlas 的核心功能包括：智能体优先设计，支持多种智能体运行时；本地优先数据模型，确保隐私和离线能力；基于检查点的溯源，将 Git 提交与详细的智能体活动数据（检查点）关联；共享语义内存，允许智能体共享上下文知识和会话历史；以及灵活的智能体生态系统，支持外部 ACP 兼容智能体和基于 Codex 引擎的本地智能体。  此外，它还提供集成终端、内置浏览器、并排差异视图、活动日志、影响分析和令牌透明度等功能。 \n\n**技术亮点** \nAtlas 采用 React 构建前端界面，使用 TypeScript 和 Zustand 进行状态管理，并通过 Tauri 的 API 与 Rust 后端进行 IPC 通信。后端是一个基于 Tauri 的 Rust 应用程序，负责平台集成、会话持久化和本地智能体运行。它包含 `atlas-agent-servers`、`atlas-agent-manager` 和 `atlas-native-agent` 等 Rust crate，其中本地智能体是 OpenAI Codex 引擎的一个硬分叉。 \n\n**适合谁用** \nAtlas 主要面向 macOS 开发者，旨在为需要无缝集成编码智能体到其开发工作流程中的用户提供服务。它特别适合那些希望在一个统一环境中管理智能体生命周期、版本控制、团队协作和项目规划的开发者和团队。",
+      "degraded": false
+    },
+    {
+      "id": "MG1937/ASC",
+      "owner": "MG1937",
+      "name": "ASC",
+      "url": "https://github.com/MG1937/ASC",
+      "stars": 1145,
+      "description": "ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+      "one_liner": "Droid ASC是一个无状态的APK逆向工程引擎，可快速反编译和查找代码引用。",
+      "detail_md": "**解决什么问题**\n传统的Android应用（APK）反编译工具在处理大型APK时，通常需要耗费大量内存和时间来完全解压、构建全局索引和交叉引用，导致效率低下。 Droid ASC旨在解决这些瓶颈，通过直接查询编译后的构件，避免了耗时的预处理过程。\n\n**核心功能**\n该项目提供快速的类反编译和代码引用查找功能。 它支持查找字符串、类型、方法和字段的引用。 用户可以通过命令行界面（CLI）或图形用户界面（GUI）进行操作。 GUI (`AscGuiApp`) 提供了包树导航、多标签页源代码视图和异步搜索等功能。\n\n**技术亮点**\nDroid ASC利用R8编译器的布局确定性，直接在APK中进行按需查询，无需完全解压或构建重量级索引。 它通过内存映射 (`mmap`) 技术高效处理ZIP/APK文件，并能直接探测Deflate比特流以提取元数据。 项目实现了$O(1)$复杂度的指令定位 (`InsnLocator`)，即使在R8指令去重的情况下也能快速映射字节码偏移到方法。 此外，它采用最小DEX重建管道 (`DexBuilder`, `DexHollower`)，按需构建自洽的内存DEX文件。\n\n**适合谁用**\n该工具适合需要快速分析大型Android应用程序的逆向工程师、安全研究人员和开发人员。 对于那些希望避免传统反编译工具的内存和时间开销，并直接从编译构件中获取代码关系的用户，Droid ASC提供了高效的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 94754,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "`agent-skills` 项目为AI编码代理提供了一套结构化的工程技能，旨在通过明确的流程和验证来提高软件开发效率和质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在软件开发生命周期中可能遇到的问题，例如需求不明确、代码质量不稳定、测试覆盖不足以及部署缺乏信心等。它通过提供标准化的工作流程和质量门禁，帮助AI代理更有效地执行任务，并确保产出符合预期的质量标准。\n\n**核心功能**\n`agent-skills` 的核心功能是提供一系列“技能”（skills），每个技能都代表一个结构化的工作流程，用于指导AI代理完成特定的工程任务。这些技能涵盖了软件开发的各个阶段，包括需求定义（`/spec`）、任务规划（`/plan`）、代码构建（`/build`）、测试验证（`/test`）、代码审查（`/review`） 和发布部署（`/ship`）。此外，它还支持通过“斜杠命令”（Slash Commands）在AI代理界面中触发这些高层级工作流。\n\n**技术亮点**\n该项目的主要技术亮点在于其“命令到技能”的映射架构，以及技能的标准化解剖结构。每个技能都包含明确的步骤、验证门禁和反合理化表格，确保AI代理遵循既定流程并产出可验证的结果。命令定义在不同AI平台（如Claude Code和Gemini CLI）之间进行了镜像，以提供一致的用户体验。项目还引入了“约束驱动开发”（Constraint-Driven Development）技能，通过 `CONSTRAINTS.md` 文件定义并强制执行项目质量标准。\n\n**适合谁用**\n`agent-skills` 适用于希望提高AI编码代理在软件开发过程中效率和质量的开发者、团队和组织。无论是启动新项目、开发新功能，还是维护现有代码库，该框架都能提供结构化的指导。它特别适合那些需要确保AI代理遵循特定工程实践、遵守质量标准并生成可预测和高质量代码的场景。",
+      "degraded": false
+    },
+    {
+      "id": "tonhowtf/omniget",
+      "owner": "tonhowtf",
+      "name": "omniget",
+      "url": "https://github.com/tonhowtf/omniget",
+      "stars": 12872,
+      "description": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+      "one_liner": "OmniGet 是一款跨平台桌面应用，旨在简化媒体获取和数字学习，支持多平台下载和课程管理。",
+      "detail_md": "## 解决什么问题\nOmniGet 解决了用户从互联网上下载各种媒体内容（如视频、课程、社交媒体内容和种子文件）的复杂性问题。 它通过统一的界面，抽象了 `yt-dlp` 和 `ffmpeg` 等后端引擎的复杂操作，使用户能够轻松获取所需内容。 此外，它还提供了一个学习环境，用于离线课程和书籍的学习。\n\n## 核心功能\nOmniGet 的核心功能包括：\n*   **视频提取**：支持通过 `yt-dlp` 从 1000 多个网站下载视频，包括 YouTube、Instagram、TikTok 等。\n*   **课程下载**：支持批量下载 Hotmart 等平台的课程视频、附件和描述。\n*   **P2P & 种子**：内置 BitTorrent 客户端，支持种子文件下载。\n*   **学习模块**：集成了视频播放器和书籍阅读器（支持 PDF/EPUB），方便离线学习。\n*   **插件系统**：可扩展的架构，支持通过 `omniget-plugin-sdk` 动态加载功能。\n*   **多语言支持**：提供英语、葡萄牙语、中文、日语、意大利语、法语和希腊语等多种语言界面。\n\n## 技术亮点\nOmniGet 基于 **Tauri** 框架构建，利用高性能的 **Rust** 后端处理网络、文件 I/O 和进程管理等任务，而 **Svelte 5** 前端则提供了响应式用户界面。 项目采用了模块化的 Rust 工作区和 SvelteKit 前端结构。 国际化系统基于 `sveltekit-i18n`，通过 JSON 语言文件和代码生成确保翻译键的类型安全。\n\n## 适合谁用\nOmniGet 适合需要从各种在线平台下载媒体内容的用户，包括：\n*   **学生和学习者**：可以下载在线课程和学习资料，进行离线学习。\n*   **内容创作者和媒体爱好者**：可以方便地从社交媒体和视频平台获取内容。\n*   **开发者**：项目开源，并提供了详细的构建指南，方便开发者参与贡献或进行二次开发。\n*   **注重隐私和效率的用户**：Tauri + Rust 的技术栈保证了应用的快速和轻量，同时支持本地文件转换和多种主题。",
+      "degraded": false
+    },
+    {
+      "id": "earendil-works/pi",
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "stars": 105673,
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "one_liner": "Pi 是一个极简的终端编码工具，通过可扩展的架构，让开发者能够根据自己的工作流进行定制，而非被工具限制。",
+      "detail_md": "**解决什么问题**\nPi 旨在解决传统编码工具灵活性不足的问题，允许用户通过扩展、技能、提示模板和包来适应其工作流程，而无需修改工具内部代码。它还通过会话持久化和上下文压缩来管理大型语言模型 (LLM) 的上下文窗口限制。\n\n**核心功能**\n*   **交互模式**：提供一个终端用户界面 (TUI)，支持文件引用、路径补全、多行输入、外部编辑器集成、剪贴板操作和 Bash 命令执行。\n*   **会话管理**：支持会话的保存、恢复、分支和压缩，以优化 LLM 的上下文使用。会话历史以 JSON Lines (JSONL) 格式持久化，支持恢复和分支。\n*   **可扩展性**：通过扩展系统，用户可以注册自定义工具、命令、事件处理器和 UI 组件，以增强功能。\n*   **多模型支持**：支持多种 LLM 提供商和模型，包括 OpenAI、Anthropic、Google、GitHub Copilot 等，并允许自定义提供商和模型配置。\n\n**技术亮点**\n*   **持久化会话**：会话历史以 JSONL 格式存储，支持崩溃恢复和多分支会话。\n*   **上下文压缩**：通过总结和修剪旧消息来管理 LLM 的上下文窗口，支持手动和自动触发。\n*   **模块化架构**：核心功能保持精简，将特定工作流行为推送到扩展、技能和提示模板中，实现高度定制化。\n*   **终端用户界面 (TUI)**：提供交互式终端界面，支持差分渲染和多种终端功能。\n\n**适合谁用**\nPi 适合需要高度定制化编码环境的开发者，特别是那些希望将 LLM 集成到其工作流中，并能灵活定义工具和命令的用户。它也适合希望分享和重用其定制化配置（通过 Pi 包）的团队和个人。",
+      "degraded": false
+    }
+  ]
+}
