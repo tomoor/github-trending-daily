@@ -188,6 +188,105 @@
       "one_liner": "Hister 是一个私有、自托管的搜索引擎，用于索引您访问的网页和本地文件，以便进行全文搜索和知识管理。",
       "detail_md": "**解决什么问题**\nHister 解决了传统搜索引擎无法满足的隐私、个性化和知识管理需求。它允许用户建立一个可搜索的个人知识库，包含他们认为相关或重要的信息，而无需依赖外部云服务或担心数据被追踪。\n\n**核心功能**\nHister 的核心功能包括自动索引访问的网页、本地文件、导入浏览器历史记录和抓取网站。它提供精确的全文搜索，支持字段过滤、短语、通配符和否定词。此外，它还具备内容提取器以处理结构化数据，并支持索引规则来控制索引和排名。用户可以通过网页界面、终端客户端、命令行工具、HTTP API 和 MCP 服务器访问索引。\n\n**技术亮点**\nHister 后端使用 Go 语言和 Bleve 全文搜索引擎构建，支持 SQLite 或 PostgreSQL 存储，并可选支持 pgvector 进行语义搜索。前端采用 SvelteKit 和 Svelte 5 开发，样式使用 Tailwind CSS。它还提供浏览器扩展，用于自动索引访问的页面。Hister 强调隐私，不包含遥测功能，所有数据都存储在用户选择的服务器上。\n\n**适合谁用**\nHister 适合任何希望从个人信息中创建可搜索知识库的用户。这包括需要保护隐私、进行研究、查找参考资料、管理知识或提高生产力的个人。它也适用于网络安全分析师等专业人士，他们可以利用 Hister 建立个人威胁情报数据库，并与 AI 工具集成以增强工作流程。",
       "degraded": false
+    },
+    {
+      "id": "trycua/cua",
+      "owner": "trycua",
+      "name": "cua",
+      "url": "https://github.com/trycua/cua",
+      "stars": 23888,
+      "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+      "one_liner": "Cua 是一个用于构建、评估和部署计算机使用智能体的框架，支持跨操作系统自动化和强化学习。",
+      "detail_md": "**解决什么问题**\nCua 旨在解决构建能够自主与图形用户界面 (GUI) 或 shell 环境交互的智能体所面临的挑战。它提供了一个统一的 API，用于管理不同操作系统（如 Linux、macOS、Windows 和 Android）上的虚拟机或容器镜像中的沙盒环境。此外，它还解决了在不干扰用户的情况下，在后台驱动桌面应用程序的需求。\n\n**核心功能**\n*   **跨平台沙盒环境**：通过 `Sandbox` 类提供统一的 API，支持在云端或本地运行 Linux 容器、Linux VM、macOS、Windows 和 Android 沙盒。\n*   **后台计算机使用驱动**：`cua-driver` 允许智能体在后台执行点击、输入和验证操作，而不会抢占用户光标或焦点。\n*   **智能体开发 SDK**：提供 Python 和 TypeScript SDK，用于构建自定义智能体，包括 `ComputerAgent` 和 `Computer` 类。\n*   **基准测试与强化学习环境**：`cua-bench` 框架用于评估计算机使用智能体，支持 OSWorld、ScreenSpot 等基准测试，并可导出轨迹用于训练。\n*   **视觉定位 (Set-of-Mark, SOM)**：`cua-som` 组件通过在屏幕截图中叠加编号标记来帮助智能体识别和定位 UI 元素。\n\n**技术亮点**\n*   **统一 SDK**：`cua` 是一个元包，整合了 `cua-sandbox`、`cua-agent` 和 `cua-cli` 等核心组件，提供统一的开发体验。\n*   **多语言支持**：通过 UniFFI 工具，从 Rust 核心逻辑生成多语言绑定（Python、Kotlin、Swift、Ruby、TypeScript）。\n*   **高性能虚拟化**：Lume 利用 Apple 的 `Virtualization.framework` 在 Apple Silicon 上运行 macOS 和 Linux VM，提供接近原生的性能。\n*   **模型上下文协议 (MCP)**：Cua 实现 MCP 服务器，将计算机使用能力（如点击、输入、截图）暴露给 Claude 等模型。\n\n**适合谁用**\n*   **智能体开发者**：希望构建能够自主执行任务的计算机使用智能体的开发者。\n*   **研究人员**：从事强化学习、基准测试和智能体评估的研究人员，可利用 `cua-bench` 评估模型性能。\n*   **自动化工程师**：需要跨操作系统进行 GUI 自动化和后台操作的工程师。\n*   **对计算机使用智能体感兴趣的个人**：希望参与黑客马拉松或探索本地/混合推理应用的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Open-Dev-Society/OpenStock",
+      "owner": "Open-Dev-Society",
+      "name": "OpenStock",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "stars": 15712,
+      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+      "one_liner": "OpenStock是一个开源平台，提供免费实时市场数据、个性化提醒和公司洞察，旨在打破金融信息壁垒，让每个人都能轻松获取金融工具和知识。",
+      "detail_md": "**解决什么问题**\nOpenStock旨在解决金融知识和工具被高价订阅和付费墙限制的问题。它致力于消除信息偏差，并欢迎所有背景的用户参与，打破“不够格”的观念。项目承诺永远不锁定知识、不收取访问费用、不以信任换取金钱，而是依靠透明度、捐赠和社区力量运行。\n\n**核心功能**\nOpenStock提供实时股价追踪、个性化股票提醒和详细的公司洞察。主要功能包括：用户认证（邮箱/密码）、全球搜索和命令面板（Cmd+K）、个性化股票关注列表、详细的股票信息（TradingView图表、公司资料、财务数据）、市场概览（热力图、行情、头条新闻）以及AI个性化欢迎邮件和每日新闻摘要邮件。\n\n**技术亮点**\n项目采用现代技术栈，包括Next.js 15 (App Router)、TypeScript、Tailwind CSS v4、shadcn/ui和Radix UI构建用户界面。认证系统使用Better Auth和MongoDB进行数据持久化。市场数据通过Finnhub API获取，图表和市场小部件则集成TradingView。Inngest用于处理可靠的后台任务和工作流，例如AI个性化欢迎邮件和每日新闻摘要。\n\n**适合谁用**\nOpenStock专为希望免费获取金融市场信息和工具的专业人士和学生设计。它特别适合那些觉得金融领域存在门槛、难以找到免费资源，或者希望参与开源项目并学习金融知识的初学者和开发者。项目鼓励社区贡献，并提供友好的环境，旨在让每个人都能参与构建开放的未来。",
+      "degraded": false
+    },
+    {
+      "id": "higgsfield-ai/higgsfield",
+      "owner": "higgsfield-ai",
+      "name": "higgsfield",
+      "url": "https://github.com/higgsfield-ai/higgsfield",
+      "stars": 4690,
+      "description": "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
+      "one_liner": "Higgsfield是一个开源的、容错的、高度可扩展的GPU编排和机器学习框架，用于训练万亿参数级大型语言模型（LLMs）。",
+      "detail_md": "**解决什么问题**\nHiggsfield旨在解决大型语言模型训练中的GPU资源管理、分布式训练复杂性、环境配置以及模型部署等挑战。它简化了多节点训练过程，消除了不同PyTorch版本、NVIDIA驱动和数据处理库带来的“环境地狱”问题，并避免了复杂的配置管理。\n\n**核心功能**\n该项目提供GPU资源分配、支持ZeRO-3 Deepspeed API和PyTorch的FSDP API以实现高效分片。它还提供了一个框架来启动、执行和监控大型神经网络的训练。此外，Higgsfield通过与GitHub和GitHub Actions的无缝集成，促进了机器学习开发的持续集成。它还支持多种数据集格式，如Prompt Completion、ChatGPT和Plain Text格式，并提供数据加载器来高效处理数据。\n\n**技术亮点**\nHiggsfield支持多种分布式训练技术，包括ZeRO-3和FSDP（FullyShardedDataParallel）。它还支持混合精度训练（如fp16、bf16、bf16_mixed）和激活检查点技术，以优化内存使用和训练速度。项目通过`@experiment`装饰器简化了训练函数的定义，并提供了模型保存和上传到Hugging Face Hub的功能。\n\n**适合谁用**\nHiggsfield适合需要训练万亿参数级大型语言模型的研究人员和开发者。特别是那些在分布式GPU环境中进行训练，并希望简化数据管理、模型训练和部署流程的用户。它也适用于希望通过GitHub进行持续集成和实验监控的团队。",
+      "degraded": false
+    },
+    {
+      "id": "docling-project/docling",
+      "owner": "docling-project",
+      "name": "docling",
+      "url": "https://github.com/docling-project/docling",
+      "stars": 66746,
+      "description": "Get your documents ready for gen AI",
+      "one_liner": "Docling 是一个模块化的 SDK 和 CLI，用于将各种文档格式解析为统一的 `DoclingDocument` 表示，以支持 RAG 和多模态 AI/ML 应用。",
+      "detail_md": "**解决什么问题**\nDocling 旨在简化文档处理的复杂性，通过提供统一的解析器 SDK 和 CLI，支持多种输入格式，并集成 OCR、布局模型、表格结构识别和视觉语言模型（VLMs）等强大功能。它解决了从不同文档类型中可靠提取语义内容以用于复杂 AI 工作流的挑战。\n\n**核心功能**\nDocling 的核心功能包括：解析多种文档格式（如 PDF, DOCX, HTML, 图像, 音频, 视频等）；高级文档理解，例如 PDF 布局分析、阅读顺序、表格结构、公式和代码检测；生成统一且富有表现力的 `DoclingDocument` 表示；支持多种导出格式，包括 Markdown, HTML, JSON；以及与 LangChain, LlamaIndex 等 AI 框架的集成。\n\n**技术亮点**\nDocling 的技术亮点在于其模块化架构，能够通过 `DocumentConverter` 类协调格式检测、管道和后端选择，并执行转换工作流。它利用丰富的机器学习模型生态系统，包括 OCR 引擎（如 Tesseract, RapidOCR）、布局检测模型（如 EGRET, HERON）、表格结构模型（如 TableFormer）和视觉语言模型（VLMs）。此外，它还支持本地执行，适用于敏感数据和隔离环境。\n\n**适合谁用**\nDocling 适合需要处理和理解各种文档格式的开发者、数据科学家和 AI 工程师。特别是那些构建检索增强生成 (RAG) 系统、结构化数据提取工具或多模态 AI/ML 应用程序的用户，可以利用 Docling 统一的文档表示和高级理解能力。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/quiche",
+      "owner": "cloudflare",
+      "name": "quiche",
+      "url": "https://github.com/cloudflare/quiche",
+      "stars": 11870,
+      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+      "one_liner": "quiche 是 Cloudflare 用 Rust 实现的 QUIC 传输协议和 HTTP/3 协议库。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个高效、可靠的 QUIC 传输协议和 HTTP/3 协议实现，以支持现代互联网应用对低延迟和高吞吐量的需求。它解决了在 Rust 生态系统中构建 QUIC/HTTP/3 应用时缺乏底层协议支持的问题。\n\n**核心功能**\nquiche 提供了 QUIC 协议的核心实现，包括连接管理、数据包处理、流多路复用和生命周期管理。它还集成了 HTTP/3 协议层，支持 QPACK 头部压缩和控制流管理。此外，项目还提供了 `tokio-quiche` 用于异步运行时集成，以及 C FFI 绑定，方便其他语言调用。\n\n**技术亮点**\n该项目采用 Rust 语言开发，确保了内存安全和高性能。它提供了低级别的 API，允许应用层灵活控制 I/O 和事件循环。`quiche::Config` 对象提供了丰富的配置选项，用于调整 QUIC 连接的各种参数，如流限制、拥塞控制和 TLS 设置。项目还包含 `h3i` 交互式调试工具和 `http3_test` 自动化测试框架，便于开发和测试。\n\n**适合谁用**\nquiche 适用于需要构建高性能 QUIC 和 HTTP/3 客户端或服务器的开发者。例如，Cloudflare 自身使用 quiche 支持其边缘网络的 HTTP/3，Android 的 DNS 解析器使用它实现 DNS over HTTP/3，以及 `curl` 也可以集成 quiche 来提供 HTTP/3 支持。",
+      "degraded": false
+    },
+    {
+      "id": "ruanyf/weekly",
+      "owner": "ruanyf",
+      "name": "weekly",
+      "url": "https://github.com/ruanyf/weekly",
+      "stars": 102968,
+      "description": "科技爱好者周刊，每周五发布",
+      "one_liner": "阮一峰的科技爱好者周刊是一个每周五发布的开源科技内容精选集，涵盖科技资讯、技术文章、工具推荐等。",
+      "detail_md": "**解决什么问题**\n该项目旨在为科技爱好者提供一个获取最新科技资讯、学习技术知识、发现实用工具和资源的平台。它通过精选内容，帮助读者在信息爆炸的时代高效地了解科技动态，并提供社区交流和招聘信息发布渠道。\n\n**核心功能**\n核心功能包括每周发布科技内容，内容涵盖文章、工具、资源、新闻等。它还提供社区投稿机制，允许用户推荐或自荐项目，并通过GitHub Issue提供招聘信息发布服务。\n\n**技术亮点**\n项目采用Markdown格式存储每期内容，并通过GitHub进行开源管理。内容分发至多个平台，包括个人博客、微信公众号和GitHub Pages，实现多渠道同步更新。社区互动主要通过GitHub Issues进行，形成内容提交、审核和发布的流程。\n\n**适合谁用**\n该项目适合对科技前沿、编程技术、实用工具和资源感兴趣的开发者、工程师、学生以及所有科技爱好者。同时，它也为需要发布或寻找技术岗位的个人和企业提供了交流平台。",
+      "degraded": false
+    },
+    {
+      "id": "ZuodaoTech/everyone-can-use-english",
+      "owner": "ZuodaoTech",
+      "name": "everyone-can-use-english",
+      "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+      "stars": 37666,
+      "description": "人人都能用英语",
+      "one_liner": "本项目通过AI辅助、媒体沉浸和结构化练习，帮助用户高效学习英语，提升语言能力。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统英语学习效率低下、缺乏个性化指导的问题。它通过整合AI技术和“1000小时学习法”，为用户提供一个系统化、沉浸式的语言学习环境，帮助用户提升英语听说读写能力，并最终实现“用一年时间把英语练成第一语言”的目标。\n\n**核心功能**\n核心功能包括：媒体播放与转录、AI对话、发音练习与评估、词典集成、跟读训练 以及文档阅读与翻译。用户可以通过 `Enjoy App` 导入在线或本地媒体资源进行学习，并利用AI助手进行个性化练习。\n\n**技术亮点**\n项目采用Electron/React构建桌面应用 `Enjoy App`，结合Node.js进行系统级操作。它集成了多种AI服务，如OpenAI (GPT, Whisper)、Azure AI (Speech Services) 和Cloudflare AI，实现语音转文本、文本转语音和智能对话。此外，还利用FFmpeg进行媒体处理，SQLite进行数据存储，并支持多平台部署。\n\n**适合谁用**\n本项目适合所有希望高效学习英语、提升语言能力的用户，特别是那些认同“1000小时学习法”，并希望通过AI辅助进行沉浸式训练的学习者。无论学习者是初学者还是希望进一步精进英语水平，都能从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "cactus-compute/needle",
+      "owner": "cactus-compute",
+      "name": "needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "stars": 11418,
+      "description": "Automation foundation model for tiny devices: 2-bit, 8-29 MB, tool calls, structured extraction and embeddings on phones, wearables, smart homes, robots, cars and microcontrollers.",
+      "one_liner": "Needle是一个为移动、可穿戴设备等边缘计算设计的紧凑型基础模型，专注于工具调用、设备控制和结构化数据提取。",
+      "detail_md": "**解决什么问题**\nNeedle旨在解决资源受限设备上的智能自动化问题，例如在移动设备、可穿戴设备、机器人和微控制器上实现高效的工具调用和数据提取。它通过优化模型大小和推理速度，使得这些设备能够执行复杂的任务，而无需依赖云端计算。\n\n**核心功能**\nNeedle提供三大核心功能：工具调用、结构化提取和文本嵌入。它能根据用户指令准确选择并执行应用程序提供的工具函数；能够从非结构化文本中提取特定格式的数据；同时，模型还能为句子生成向量，支持本地搜索和匹配。\n\n**技术亮点**\nNeedle 3采用“阶梯式简单注意力网络”（Laddered Simple Attention Network）架构，包含Monarch Hadamard MLP、GQA注意力机制、engram n-gram记忆和多通道超连接。模型经过训练，使其2到20层之间的每个深度都是一个可部署的模型。它还支持LoRA微调，并使用自定义的`.cact`二进制格式进行部署，该格式针对C++推理引擎进行了优化，并支持Cactus Quants (CQ) 2、3或4位量化。\n\n**适合谁用**\nNeedle适用于需要将AI能力部署到边缘设备（如手机、可穿戴设备、机器人、智能家居和微控制器）的开发者和企业。特别是那些对模型大小、推理速度和离线能力有严格要求的应用场景。它也适合需要进行本地LoRA微调以适应特定工具集的用户。",
+      "degraded": false
+    },
+    {
+      "id": "yynxxxxx/Codex-X",
+      "owner": "yynxxxxx",
+      "name": "Codex-X",
+      "url": "https://github.com/yynxxxxx/Codex-X",
+      "stars": 3316,
+      "description": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+      "one_liner": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nOpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+      "degraded": true
     }
   ]
 }
