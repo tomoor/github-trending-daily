@@ -1,0 +1,193 @@
+{
+  "doc_token": "FVw6dKd7MoKwMlxj0GncVYMGnbf",
+  "doc_url": "https://my.feishu.cn/docx/FVw6dKd7MoKwMlxj0GncVYMGnbf",
+  "items": [
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 13580,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "本项目是一个编码代理技能，通过六阶段流程对代码库进行安全审计，以发现可利用的漏洞。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统安全审计中发现可利用漏洞效率低下的问题，特别是那些具有实际影响而非理论担忧的漏洞。 它通过自动化和结构化的方法，减少人工审计的局限性，并提高漏洞发现的覆盖率和准确性。\n\n**核心功能**\n核心功能包括一个六阶段的审计流程：侦察（Recon）、漏洞搜寻（Hunt）、验证（Validate）、报告（Report）、结构化输出（Structured output）和独立验证（Independent verification）。 在侦察阶段，并行代理会映射应用程序的架构、信任边界和输入接口。 搜寻阶段，代理会从不同角度（如注入、访问控制、业务逻辑等）攻击代码库。 验证阶段，独立的代理会尝试证伪每个发现，以消除误报。 报告阶段会生成人类可读的报告和详细的发现追踪。 结构化输出阶段会生成符合特定模式的JSON文件。 最后，独立验证阶段会由新的代理核实结构化输出中的所有事实声明。\n\n**技术亮点**\n该项目采用多代理并行协作的架构，利用 `research` 代理进行专注的代码探索和事实验证，以及 `general` 代理进行广泛调查并可生成子代理。 它强调“只报告可利用的漏洞”和“严重性需要影响”的核心原则，确保发现的漏洞具有实际意义。 此外，通过读取先前的 `findings.json` 文件，项目能够跳过已知问题并针对性地弥补审计空白，实现多次运行的累加效果。\n\n**适合谁用**\n此技能适用于需要对代码库进行安全审计、查找安全漏洞、进行安全审查或渗透测试的用户。 特别适合那些希望通过自动化工具提高安全审计效率和质量的开发者、安全工程师和团队。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 146271,
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "one_liner": "Claude Code 是一个终端中的智能编码工具，通过自然语言命令帮助开发者提高效率。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中重复性任务耗时、代码理解复杂以及Git工作流繁琐等问题。</cite>它通过将大型语言模型（LLM）的推理能力与直接系统访问相结合，使开发者能够使用自然语言命令来执行日常任务、解释复杂代码和管理Git工作流。</cite>\n\n**核心功能**\nClaude Code 提供多项核心功能，包括：代理编排和执行，支持通过Task工具生成子代理、工作区隔离和代理协作。</cite>它还具备上下文管理能力，能自动压缩和剥离有效载荷以保持在令牌限制内。</cite>此外，它还集成了模型上下文协议（MCP）服务器，用于可扩展的工具注册和OAuth认证，并提供沙盒执行环境，包括网络限制、bash沙盒配置和命令排除匹配。</cite>\n\n**技术亮点**\n该项目的技术亮点在于其代理式架构，它将CLI入口点与核心代理系统、工具路由和状态管理相结合。</cite>通过`ToolRouter`，它能够执行`BashTool`和`FileTools`等操作，并在沙盒环境中确保安全性。</cite>此外，它还支持插件系统，允许通过`mods/`目录中的模块扩展功能。</cite>\n\n**适合谁用**\nClaude Code 适合需要提高编码效率的软件开发者。</cite>无论是希望通过自然语言命令简化日常任务、理解复杂代码，还是管理Git工作流，该工具都能提供帮助。</cite>它可以在终端、IDE中使用，甚至可以通过在GitHub上提及`@claude`来使用。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 36631,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review 是一个 AI 驱动的代码审查 CLI 工具，旨在高精度识别代码缺陷，并支持多种语言和模型。",
+      "detail_md": "**解决什么问题**\nOpen Code Review 解决了传统通用 AI Agent 在代码审查中存在的覆盖不全、位置漂移和质量不稳定等问题。  它通过结合确定性工程和 Agent 混合驱动的架构，确保审查的准确性和稳定性。 \n\n**核心功能**\n该工具能够读取 Git diff，通过具备工具调用能力的 Agent 将变更文件发送至可配置的 LLM，生成具有行级精度的结构化审查意见。  它支持深度上下文审查、多模式操作（如审查工作区变更、特定 Git 分支差异、单个提交或执行全文件审计）、高效率和广泛的语言支持。  \n\n**技术亮点**\nOpen Code Review 采用“确定性工程 × Agent 混合驱动”的核心设计理念。  确定性工程负责精准的文件筛选、智能的文件打包、精细化规则匹配以及外挂的定位与反思组件，确保审查过程的强约束和准确性。  Agent 则负责动态决策，处理语义理解和探索。  此外，它还支持多模型协议，并内置了经过大规模真实场景验证的审查规则。  \n\n**适合谁用**\nOpen Code Review 适合独立开发者，可将其嵌入本地 AI 辅助开发工作流，获得即时、高质量的代码审查反馈。  也适用于平台团队，可无缝集成到内部系统，完全掌控数据流和审查策略。  对于 ML 研究者，它可作为 RL 训练流水线中的代码质量验证器，为代码生成模型提供可靠的奖励信号。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 262030,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "ECC 是一个生产级的智能体操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。",
+      "detail_md": "**解决什么问题**\nECC 旨在弥合大型语言模型 (LLM) 能力与专业软件工程之间的鸿沟。它通过强制执行测试驱动开发 (TDD)、安全优先验证和不变性模式来解决 AI 编码助手在实际工程场景中缺乏结构化和可靠性的问题。\n\n**核心功能**\nECC 提供多 Harness 兼容性，支持 Claude Code、Codex、OpenCode、Cursor、Gemini 等平台。它包含 68 个专业智能体和 286+ 技能，用于处理复杂的工程任务。核心功能包括 AgentShield 安全扫描、持续学习机制以及通过模块化组件（如智能体、技能、规则、钩子和命令）实现的工作流自动化。\n\n**技术亮点**\n该项目采用模块化架构，允许通过配置文件选择性安装组件。它支持多种编程语言，并提供跨平台一致性。ECC 2.0 引入了基于 Rust 的控制层，提供仪表盘和会话管理功能。其统一记忆库 `ecc.memory.v1` 可以在不同 Harness 之间传递上下文，并支持可检查的 Markdown 文档。\n\n**适合谁用**\nECC 适合希望将 AI 编码助手集成到专业软件开发流程中的开发者和团队。它特别适用于需要自动化代码审查、TDD 实践、安全验证以及跨多个 AI 平台保持一致工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/BrowserSkill",
+      "owner": "Tencent",
+      "name": "BrowserSkill",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "stars": 5266,
+      "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+      "one_liner": "BrowserSkill 是一款本地桥接工具，让 AI Agent 能在独立浏览器窗口中安全地使用你已登录的浏览器，而不中断你的工作。",
+      "detail_md": "**解决什么问题**\nBrowserSkill 解决了 AI Agent 自动化浏览器操作时，需要复用用户真实登录状态和避免干扰用户工作流的问题。它允许 Agent 在不影响用户主浏览器窗口的情况下，通过独立的“Agent Window”执行任务。同时，它还支持在遇到验证码、登录等需要人工介入的场景时，Agent 可以请求用户协助，完成后继续任务。\n\n**核心功能**\n核心功能包括：连接支持 Shell 的 AI Agent 到浏览器；在独立的 Agent Window 中执行浏览器任务；支持显式借用和归还用户已打开的标签页；提供丰富的浏览器交互命令，如点击、填写、导航等；以及内置 human-in-loop 机制，允许 Agent 在必要时请求用户帮助。\n\n**技术亮点**\nBrowserSkill 采用 Rust 编写的 CLI/Daemon 和 TypeScript 编写的浏览器扩展组成。CLI 作为 Agent 的入口，Daemon 通过 WebSocket 与浏览器扩展通信。扩展利用 Chrome DevTools Protocol (CDP) 实现浏览器自动化。它支持 macOS、Linux、Windows 操作系统，以及 Chrome 和 Edge 浏览器。\n\n**适合谁用**\nBrowserSkill 适合需要自动化浏览器操作的 AI Agent 开发者和用户。特别是使用 Cursor、Claude Code、Codex 等支持 Shell 的 AI Agent 的用户，可以通过 `bsk` CLI 轻松集成 BrowserSkill，让 Agent 能够处理需要浏览器交互的任务。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 96382,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "`agent-skills`项目旨在通过结构化工作流和质量门禁，提升AI代理在软件开发生命周期中的表现和产出质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在软件开发中可能出现的意图理解模糊、产出质量不稳定、缺乏统一标准以及难以持续集成的问题。它通过将模糊的人类意图转化为具体的、可执行的技术规范，并确保代码质量符合预设标准，从而弥合自然语言空间和代码实体空间之间的鸿沟。\n\n**核心功能**\n项目提供了一系列“技能”（skills），覆盖软件开发生命周期的各个阶段。主要功能包括：\n*   **意图提取 (`interview-me`)**：通过单问题对话循环，精确理解用户需求。\n*   **想法提炼 (`idea-refine`)**：将原始概念转化为可操作的方案，并生成详细的Markdown文档。\n*   **规范驱动开发 (`spec-driven-development`)**：在编写代码前制定详细的技术规范，包括目标、命令、项目结构、代码风格、测试策略和边界。\n*   **约束驱动开发 (`constraint-driven-development`)**：定义并强制执行项目质量标准，通过`CONSTRAINTS.md`文件记录可量化的质量指标，并防止AI代理降低质量门槛。\n*   **规划与任务分解 (`planning-and-task-breakdown`)**：将规范分解为可验证的原子任务，并生成实施计划。\n\n**技术亮点**\n*   **结构化工作流**：每个技能都遵循一致的结构，包含概述、使用场景、核心流程、反驳理由、风险提示和验证标准，确保AI代理按步骤执行。\n*   **质量门禁与验证**：强制性的验证步骤和可量化的质量指标（如测试覆盖率、性能指标），确保产出符合高标准。\n*   **多代理工具集成**：支持与多种AI编码助手（如Claude Code, Codex, Gemini CLI）集成，通过CLI或插件市场安装和使用技能。\n*   **渐进式披露**：技能内容按需加载，仅在需要时引用支持性文档，以最小化token使用。\n\n**适合谁用**\n该项目适用于希望提高AI辅助开发效率和质量的开发者、团队和组织。无论是从零开始的新项目（Greenfield），还是需要逐步改进的现有项目（Brownfield），都可以通过选择性地采用这些技能来规范开发流程、确保代码质量和提升团队协作效率。它特别适合需要自动化质量检查、标准化开发流程以及确保AI代理产出可靠代码的场景。",
+      "degraded": false
+    },
+    {
+      "id": "TencentCloud/Octop",
+      "owner": "TencentCloud",
+      "name": "Octop",
+      "url": "https://github.com/TencentCloud/Octop",
+      "stars": 3942,
+      "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+      "one_liner": "Octop 是一个开源、自托管的 AI 助手平台，支持多用户、多 Agent，旨在为个人、家庭和小型团队提供智能化的工作与生活助理服务。",
+      "detail_md": "**解决什么问题**\nOctop 旨在解决传统 AI 助手在隐私、多用户协作和个性化方面的不足。它通过自托管的方式确保用户数据安全，所有对话、工作区和凭据都存储在用户本地机器上。同时，它支持多用户和多 Agent 架构，允许不同用户拥有独立的 AI 助手，并能根据不同场景切换专业角色，实现团队和家庭的协作与个性化需求。\n\n**核心功能**\nOctop 提供多 Agent 专家团、MBTI 人格设定、内置安全机制、可插拔后端存储和可迁移记忆系统等核心功能。它支持通过 Web 控制台、CLI 和多种 IM 渠道（如飞书、钉钉、QQ、Discord、企业微信）与 AI 助手进行交互。此外，它还具备 ACP 双向集成能力，可增强 IDE 和终端 AI 工具的使用，以及浏览器 AI+ 和远程桌面功能，实现网页自动化和远程 GUI 操作。\n\n**技术亮点**\n项目基于 Python 3.12+ 和 FastAPI 构建后端，前端采用 React 18、TypeScript 和 Ant Design。核心技术栈包括 `harness-agent` 用于 Agent 运行时、`harness-gateway` 用于多平台 IM 桥接、`harness-memory` 提供层级召回与全文搜索，以及 `harness-browser` 实现 CDP 浏览器自动化。Octop 采用单进程架构，所有状态从本地 SQLite 数据库重建，支持可选的 PostgreSQL 作为控制面数据库。\n\n**适合谁用**\nOctop 适合需要高度隐私保护的个人、家庭和小型团队。它可以作为个人助理，帮助处理日常任务；家庭用户可以共享管理，并为不同成员分配 Agent；团队可以利用多 Agent 协作，对接企业 IM 平台；开发者可借助 ACP 和终端 AI+ 提升编码效率和故障排查能力。",
+      "degraded": false
+    },
+    {
+      "id": "Fission-AI/OpenSpec",
+      "owner": "Fission-AI",
+      "name": "OpenSpec",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "stars": 69329,
+      "description": "Spec-driven development (SDD) for AI coding assistants.",
+      "one_liner": "OpenSpec 是一个 AI 原生、规范驱动的软件开发系统，旨在通过结构化规范和变更提案，帮助开发者和 AI 编码助手高效协作。",
+      "detail_md": "**解决什么问题**\nAI 编码助手在没有明确需求时容易产生错误或不可预测的结果。OpenSpec 通过引入轻量级规范层，确保在编写任何代码之前，开发者和 AI 都能就构建内容达成一致。这避免了在开发后期才发现 AI 构建了错误内容的问题，从而降低了修复错误的成本。\n\n**核心功能**\nOpenSpec 提供了一套名为 OPSX (OpenSpec eXperience) 的流畅工作流。核心命令包括：`/opsx:explore` 用于探索和细化想法；`/opsx:propose` 用于创建变更提案，并生成规划文档（如 `proposal.md`、`specs/`、`design.md`、`tasks.md`）；`/opsx:apply` 用于执行任务列表并构建变更；`/opsx:archive` 用于归档已完成的变更并将规范合并到主 `specs/` 目录。\n\n**技术亮点**\nOpenSpec 采用多层架构，CLI 作为引擎，处理规则和文件结构。它支持 30 多种 AI 编码助手，通过技能（Skills）和命令（Commands）两种方式进行集成。技能是跨工具的通用格式，而命令则适应特定工具的斜杠命令格式。项目配置 (`openspec/config.yaml`) 允许自定义规则和上下文注入。\n\n**适合谁用**\nOpenSpec 适用于个人开发者和团队。对于个人，它能帮助与 AI 保持一致；对于团队，它支持跨代码库功能、共享需求和在编码前进行规划。它特别适合那些希望在大型现有代码库上采用规范驱动开发，而无需预先完整文档化整个应用程序的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ankitects/anki",
+      "owner": "ankitects",
+      "name": "anki",
+      "url": "https://github.com/ankitects/anki",
+      "stars": 31205,
+      "description": "Anki is a smart spaced repetition flashcard program",
+      "one_liner": "Anki 是一个跨平台的间隔重复抽认卡程序，旨在帮助用户高效记忆信息，并通过算法优化复习间隔。",
+      "detail_md": "**解决什么问题**\nAnki 旨在解决传统学习方法中记忆效率低下的问题。它通过间隔重复学习系统，根据用户对知识点的记忆程度，智能安排复习时间，从而提高长期记忆效果。\n\n**核心功能**\nAnki 的核心功能包括：\n*   **抽认卡管理**：用户可以创建、编辑和组织抽认卡，支持富文本、图片、音频和视频。\n*   **智能复习调度**：基于算法（如 FSRS）自动调整复习间隔，确保在遗忘前进行复习。\n*   **多平台支持**：提供桌面版（Windows, macOS, Linux）以及移动版，实现学习数据的同步。\n*   **插件系统**：提供强大的插件机制，允许第三方开发者扩展功能和自定义行为。\n\n**技术亮点**\nAnki 采用多层架构，结合了多种技术栈以实现高性能和灵活性：\n*   **Rust 核心**：性能关键的操作和数据存储由 Rust 后端处理，确保效率。\n*   **Python 应用层**：提供 `Collection` API，作为 UI 和 Rust 后端之间的桥梁。\n*   **混合 UI**：桌面应用使用 PyQt 构建，并嵌入 TypeScript/Svelte 开发的 Web 组件，实现现代化的用户界面。\n*   **Protocol Buffers**：用于 Rust 和 Python 层之间的高效进程间通信 (IPC)。\n\n**适合谁用**\nAnki 适合任何需要记忆大量信息并希望提高学习效率的用户。包括学生、语言学习者、医学生、程序员等，以及希望通过间隔重复法优化记忆过程的专业人士。同时，其开放的插件系统也吸引了开发者社区为其贡献功能扩展。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 24868,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "one_liner": "这个项目是一个为Claude设计的插件生态系统，旨在通过集成外部工具和领域专业知识来扩展其能力，以自动化和优化各种工作流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）在处理特定领域任务和与外部系统交互时的局限性。它通过提供一个标准化的框架，使Claude能够连接到各种数据源和工具，从而实现更智能、更自动化的工作流程。例如，它可以帮助生物研究人员进行基因组分析，或帮助销售团队进行客户拓展。\n\n**核心功能**\n核心功能包括插件管理、技能定义、命令执行和连接器集成。插件是自包含的目录，包含领域专业知识（Skills）、明确的操作（Commands）和工具集成（Connectors）。技能（Skills）定义了Claude在对话中自动调用的专业知识和工作流程，而连接器（Connectors）则将插件与外部工具（如Google BigQuery、PubMed）连接起来。\n\n**技术亮点**\n技术亮点在于其模块化和可扩展的架构。它使用Model Context Protocol (MCP) 作为开放标准，使Claude能够与外部数据源和工具进行交互。插件使用占位符（`~~`）实现工具无关性，允许在定制时替换为特定的工具。此外，还支持事件钩子（Hooks）和子代理（Agents）来处理复杂任务和系统事件。\n\n**适合谁用**\n该项目适合需要扩展Claude功能以适应特定行业或工作流程的用户和组织。这包括生物研究人员、金融分析师、法律专业人士、销售和营销团队、产品经理以及需要自动化日常任务和管理知识的个人。它还适用于希望通过集成现有工具来提高生产力的开发者和企业。",
+      "degraded": false
+    },
+    {
+      "id": "supermemoryai/supermemory",
+      "owner": "supermemoryai",
+      "name": "supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "stars": 30254,
+      "description": "Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.",
+      "one_liner": "Supermemory 是一个面向 AI 的记忆与上下文引擎，为 AI 应用提供持久记忆、用户画像和混合检索能力。",
+      "detail_md": "**解决什么问题**\nAI 在对话之间会遗忘信息，导致缺乏上下文和个性化能力。Supermemory 旨在解决这一问题，通过自动从对话中学习、提取事实、构建用户画像、处理知识更新与冲突，并在合适时机提供相关上下文，使 AI 能够记住用户偏好、项目和历史讨论，从而实现更智能、更个性化的交互。 \n\n**核心功能**\nSupermemory 提供多项核心功能：记忆提取，能将原始对话或文本转化为结构化、可查询的事实；  用户画像，自动维护用户的静态和动态上下文；  混合检索，结合 RAG（检索增强生成）和个性化记忆上下文进行搜索；  连接器，自动同步 Google Drive、Gmail、Notion 等外部数据源；  以及多模态抽取，支持处理 PDF、图片、视频和代码等多种内容类型。 \n\n**技术亮点**\nSupermemory 在 AI 记忆基准测试中表现卓越，例如在 LongMemEval、LoCoMo 和 ConvoMem 上均位列第一。  它提供统一的记忆结构和本体，支持通过 `container tags` 隔离不同上下文。  此外，它还支持本地部署，允许用户在本地运行完整的记忆 API，并可选择完全离线使用。 \n\n**适合谁用**\nSupermemory 适合两类用户：一是 AI 工具的普通用户，可以通过其应用、浏览器扩展或 MCP 服务器为 AI 助手提供持久记忆，让 AI 记住个人偏好和历史交互；  二是 AI 产品开发者，可以通过其 API 和 SDK（支持 TypeScript/Python）轻松为 agent 和应用集成记忆、RAG、用户画像和连接器功能，无需复杂的向量数据库配置。",
+      "degraded": false
+    },
+    {
+      "id": "tradesdontlie/tradingview-mcp",
+      "owner": "tradesdontlie",
+      "name": "tradingview-mcp",
+      "url": "https://github.com/tradesdontlie/tradingview-mcp",
+      "stars": 6459,
+      "description": "AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+      "one_liner": "这个项目是一个模型上下文协议（MCP）桥接器，用于LLM代理与本地运行的TradingView桌面应用程序进行交互，实现图表分析、Pine脚本开发和工作流自动化。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决LLM代理如何与专业的、有状态的金融界面进行实时交互的问题。它探索了结构化工具API（MCP）如何连接LLM和桌面金融应用程序，以及代理在处理实时图表数据时面临的延迟、上下文和可靠性限制。\n\n**核心功能**\n核心功能包括Pine脚本开发（编写、注入、编译、调试）、图表导航（更改符号、时间范围、缩放）、视觉分析（读取指标值、价格水平、注释）、在图表上绘图、管理警报、回放练习、截图、多面板布局、监控图表数据流以及CLI访问。它提供了78个MCP工具，用于读取和控制实时TradingView桌面图表。\n\n**技术亮点**\n该项目采用三层架构：Claude/LLM层处理自然语言交互；MCP服务器层管理工具处理和与TradingView的连接；CDP/桌面层通过Chrome DevTools Protocol (CDP) 与TradingView桌面版通信，直接在TradingView渲染进程中注入和评估JavaScript。所有数据处理均在本地进行，不连接TradingView服务器。\n\n**适合谁用**\n该项目适合希望利用AI代理进行图表分析、Pine脚本开发和工作流自动化的研究人员和开发者。它特别适用于使用Claude Code或其他MCP兼容LLM客户端进行自主代理交互的用户，以及需要通过命令行界面手动控制图表或将数据传输到其他工具的用户。",
+      "degraded": false
+    },
+    {
+      "id": "rustfs/rustfs",
+      "owner": "rustfs",
+      "name": "rustfs",
+      "url": "https://github.com/rustfs/rustfs",
+      "stars": 33147,
+      "description": "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
+      "one_liner": "RustFS 是一个基于 Rust 构建的高性能分布式对象存储系统，提供 S3 兼容性，专为数据湖、AI 和大数据工作负载优化。",
+      "detail_md": "**解决什么问题**\nRustFS 旨在提供一个高性能、内存安全且具有商业友好许可证的分布式对象存储解决方案。它解决了传统对象存储系统（如 MinIO）可能存在的垃圾回收导致的延迟波动和受限的 AGPL 许可证问题。\n\n**核心功能**\nRustFS 提供广泛的 S3 API 兼容性，支持多协议（如 OpenStack Swift API）。它具备数据持久性，通过分布式纠删码和比特腐烂保护确保数据完整性和容错性。此外，还包括身份和访问管理 (IAM)、多租户、服务器端加密以及一个现代化的 Web 管理控制台。\n\n**技术亮点**\n该项目采用 Rust 语言开发，利用其内存安全、无垃圾回收和零成本抽象的特性，实现了卓越的性能和资源效率。RustFS 的架构是分层的，包括客户端接口、服务器核心、业务逻辑和存储层，确保了模块化和可扩展性。它还支持多种部署模式，包括单节点和分布式集群。\n\n**适合谁用**\nRustFS 适用于需要高性能、高可靠性对象存储的数据湖、人工智能 (AI) 和大数据工作负载。其 Apache 2.0 许可证使其成为寻求商业友好、完全开源替代方案的企业和开发者的理想选择。",
+      "degraded": false
+    },
+    {
+      "id": "supabase/supabase",
+      "owner": "supabase",
+      "name": "supabase",
+      "url": "https://github.com/supabase/supabase",
+      "stars": 110141,
+      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "one_liner": "Supabase 是一个开源的 Firebase 替代品，提供 Postgres 数据库、认证、即时 API 等后端服务。",
+      "detail_md": "**解决什么问题**\nSupabase 旨在为开发者提供一个类似 Firebase 的后端即服务体验，但基于企业级的开源工具，解决了传统后端开发中数据库管理、认证、API 构建等繁琐问题，让开发者能更专注于产品核心功能。 \n\n**核心功能**\nSupabase 的核心功能包括：PostgreSQL 数据库、GoTrue (JWT-based) 认证服务、PostgREST 提供的 REST API、Phoenix Framework 实现的实时订阅、Deno Runtime 支持的 Edge Functions、以及用于 AI/Vector 应用的 AI SDK 和 `pg-meta`。 它还提供了一个 SQL 编辑器，支持 AI SQL 编辑和行级安全策略。  \n\n**技术亮点**\n该项目基于 PostgreSQL 数据库，并集成了多种开源技术，如 GoTrue、PostgREST、Phoenix Framework 和 Deno。 整个仓库采用 pnpm monorepo 结构，并由 TurboRepo 管理，主要技术栈为 TypeScript、Next.js 和 Postgres。  它还支持 `pgvector` 扩展，用于 AI/ML 应用的快速语义搜索和嵌入存储。 \n\n**适合谁用**\nSupabase 适合需要快速构建应用后端，并希望利用开源技术栈的开发者。 特别是对于 AI 开发者，它提供了 AI 编辑器集成、自动生成 API 以及开发到生产的部署流程，简化了 AI 应用的开发和部署。",
+      "degraded": false
+    },
+    {
+      "id": "coder/coder",
+      "owner": "coder",
+      "name": "coder",
+      "url": "https://github.com/coder/coder",
+      "stars": 15274,
+      "description": "Secure environments for developers and their agents",
+      "one_liner": "Coder 是一个自托管平台，用于云开发环境和 AI 编码代理，通过 Terraform 定义工作区，并自动化生命周期管理以优化资源使用和成本。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统开发环境中资源利用率低、开发环境配置复杂、新员工入职慢以及 AI 编码代理集成困难等问题。它通过提供声明式、可自动管理生命周期的云开发环境，并支持在控制平面运行 AI 编码代理，从而提高开发效率和降低成本。\n\n**核心功能**\n*   **云开发环境**：使用 Terraform 定义开发环境，支持 EC2 VM、Kubernetes Pods 和 Docker 容器等。\n*   **AI 编码代理**：在控制平面运行 AI 编码代理，支持多种模型，并提供集中式模型治理、成本跟踪和审计日志。\n*   **自动化生命周期管理**：自动启动、停止、重建和停止闲置工作区，以优化资源使用和成本。\n*   **安全连接**：通过 Tailnet 覆盖网络提供用户、工作区和代理之间的安全网络连接。\n\n**技术亮点**\n*   **`coderd` 控制平面**：核心服务，负责工作区生命周期、资源调配编排和访问策略执行，所有状态存储在 PostgreSQL 中。\n*   **`provisionerd` 调配层**：解耦的守护进程，轮询 `coderd` API 执行调配任务，通常使用 Terraform 插件与云提供商 API 交互。\n*   **`agent` 工作区代理**：在每个工作区中运行，认证到 `coderd` 并建立多路复用 RPC 连接，提供 SSH、脚本运行和 Devcontainer 生命周期管理等服务。\n*   **`tailnet` 网络层**：基于 WireGuard 的覆盖 VPN 网络，提供安全的网络连接，抽象了复杂的网络和防火墙遍历。\n*   **前端 `site/`**：使用 TypeScript/React 构建的单页应用，通过 `coderd` 提供服务，集成了 React Query 进行 API 缓存和状态管理。\n\n**适合谁用**\n该平台适合需要高效管理云开发环境的平台团队和开发者。特别是那些希望通过自动化降低成本、加速新员工入职、并利用 AI 编码代理提高开发效率的组织。",
+      "degraded": false
+    },
+    {
+      "id": "ahmedkhaleel2004/gitdiagram",
+      "owner": "ahmedkhaleel2004",
+      "name": "gitdiagram",
+      "url": "https://github.com/ahmedkhaleel2004/gitdiagram",
+      "stars": 16455,
+      "description": "Free, simple, fast interactive diagrams for any GitHub repository",
+      "one_liner": "GitDiagram 将 GitHub 仓库转换为交互式系统设计图，帮助开发者快速理解项目架构。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者在理解大型或不熟悉的 GitHub 仓库代码库时遇到的困难。通过将复杂的代码结构可视化为交互式图表，它降低了新项目入门的门槛，并帮助开发者快速掌握项目架构和组件间的关系。\n\n**核心功能**\nGitDiagram 的核心功能包括：将 GitHub 仓库即时转换为系统设计图；图表组件可交互，点击可直接跳转到源代码文件和相关目录；支持公共和私有仓库（需提供 GitHub token）；通过用户指令定制和重新生成图表；以及通过替换 GitHub URL 中的 `hub` 为 `diagram` 快速访问图表。\n\n**技术亮点**\n该项目采用现代全栈架构，前端使用 Next.js 15、TypeScript 和 Tailwind CSS 渲染 Mermaid.js 图表。后端基于 FastAPI (Python) 处理仓库数据提取和复杂的提示工程。AI 集成是其关键，通过多阶段 AI 管道（使用 OpenAI o4-mini 等模型）分析文件树和 README 内容，生成详细的 Mermaid.js 图表代码。\n\n**适合谁用**\nGitDiagram 适合需要快速理解 GitHub 仓库结构和架构的开发者、开源贡献者以及任何希望通过可视化方式探索代码库的人。它对于新加入项目团队的成员、进行代码审查或学习新技术的开发者尤其有用。",
+      "degraded": false
+    },
+    {
+      "id": "asciimoo/hister",
+      "owner": "asciimoo",
+      "name": "hister",
+      "url": "https://github.com/asciimoo/hister",
+      "stars": 4950,
+      "description": "Your own search engine",
+      "one_liner": "Hister 是一个私有、自托管的搜索引擎，用于索引您访问的网页和本地文件，以便进行全文搜索和知识管理。",
+      "detail_md": "**解决什么问题**\nHister 解决了传统搜索引擎无法满足的隐私、个性化和知识管理需求。它允许用户建立一个可搜索的个人知识库，包含他们认为相关或重要的信息，而无需依赖外部云服务或担心数据被追踪。\n\n**核心功能**\nHister 的核心功能包括自动索引访问的网页、本地文件、导入浏览器历史记录和抓取网站。它提供精确的全文搜索，支持字段过滤、短语、通配符和否定词。此外，它还具备内容提取器以处理结构化数据，并支持索引规则来控制索引和排名。用户可以通过网页界面、终端客户端、命令行工具、HTTP API 和 MCP 服务器访问索引。\n\n**技术亮点**\nHister 后端使用 Go 语言和 Bleve 全文搜索引擎构建，支持 SQLite 或 PostgreSQL 存储，并可选支持 pgvector 进行语义搜索。前端采用 SvelteKit 和 Svelte 5 开发，样式使用 Tailwind CSS。它还提供浏览器扩展，用于自动索引访问的页面。Hister 强调隐私，不包含遥测功能，所有数据都存储在用户选择的服务器上。\n\n**适合谁用**\nHister 适合任何希望从个人信息中创建可搜索知识库的用户。这包括需要保护隐私、进行研究、查找参考资料、管理知识或提高生产力的个人。它也适用于网络安全分析师等专业人士，他们可以利用 Hister 建立个人威胁情报数据库，并与 AI 工具集成以增强工作流程。",
+      "degraded": false
+    }
+  ]
+}
