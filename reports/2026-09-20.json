@@ -166,6 +166,72 @@
       "one_liner": "Codex-X 是一款跨平台桌面工具，用于管理 OpenAI Codex 的提示词、API、会话和技能。",
       "detail_md": "**解决什么问题**\n当用户同时使用 Codex 桌面端、CLI、第三方 API 和多个提示词时，配置容易分散。Codex-X 将这些高频操作集中到一个可视化桌面界面中，方便用户管理和操作。\n\n**核心功能**\n*   **提示词管理**：支持分类、导入 Markdown、自定义编辑、一键启用/禁用提示词模板，并内置 5 套模板。\n*   **API/Provider 管理**：管理多个官方 Codex 登录配置和第三方 API 供应商，支持一键复制、切换、连接检测、模型获取/测试，并可从 cc-switch 导入。\n*   **会话管理**：搜索、整理、同步、检查和永久删除本地会话，并按项目路径分组。\n*   **Skills/MCP 管理**：可视化管理 Skills 与 MCP，支持导入、安装、启用/禁用和检查更新状态。\n*   **配置与用量统计**：集中查看 `config.toml` 和 `auth.json`，并提供 Token 用量统计、每日趋势和模型分布。\n\n**技术亮点**\n*   **跨平台桌面应用**：基于 Tauri 2 框架构建，结合 Rust 后端和 React/TypeScript 前端，支持 macOS、Windows 和 Linux。\n*   **可视化提示词注入中心**：提供灵活的提示词管理，支持 GitHub 同步、本地缓存和自定义编辑，并可在“保留原提示词”和“替换原提示词”两种模式间切换。\n*   **智能路由与故障转移**：支持本地路由管理、供应商优先级安排，并在服务异常时自动切换，提供超时和重试参数调整。\n*   **配置健康诊断**：新增后台配置检查功能，发现问题时提醒用户并提供修复选项。\n\n**适合谁用**\n适合同时使用 OpenAI Codex 桌面端、CLI、第三方 API、Skills/MCP 和多套提示词，希望通过可视化界面集中管理和优化工作流程的开发者和技术用户。",
       "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 263286,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code (ECC) 是一个生产就绪的智能体操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。",
+      "detail_md": "**解决什么问题**\nECC 旨在弥合大型语言模型 (LLM) 的原始能力与专业软件工程之间的鸿沟。它通过强制执行测试驱动开发 (TDD)、安全优先验证和不变性模式来解决 AI 编码助手在实际开发中缺乏自主性和可靠性的问题。\n\n**核心功能**\nECC 提供多平台兼容性，支持 Claude Code、Codex、OpenCode、Cursor 和 Gemini 等多种 AI 智能体平台。它包含 68 个专业智能体和 286 多个技能，用于处理复杂的工程任务。此外，它还集成了 AgentShield 进行安全扫描和规则验证，并具备持续学习能力，能从会话中提取模式以演进项目特定技能。\n\n**技术亮点**\n该项目采用模块化架构，组件可通过配置文件选择性安装。它通过 `scripts/ci/catalog.js` 脚本实现目录真值强制执行，确保文档与代码库的一致性。ECC 还支持 13 种语言的本地化，包括中文，并提供全面的文档标准。\n\n**适合谁用**\nECC 适用于希望提升 AI 编码助手自主性、确保代码质量和安全性的软件工程师、开发团队以及 AI 智能体平台开发者。它特别适合需要跨多个 AI 编码平台保持一致工作流和高效率的场景。",
+      "degraded": false
+    },
+    {
+      "id": "BuilderIO/agent-native",
+      "owner": "BuilderIO",
+      "name": "agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "stars": 4987,
+      "description": "A framework for building agentic apps",
+      "one_liner": "Agent-Native 是一个面向 agentic 应用的框架，旨在弥合传统应用与 AI Agent 之间的鸿沟，提供一体化开发体验。",
+      "detail_md": "**解决什么问题**\nAgent-Native 解决了传统应用开发中，UI、后端服务与 AI Agent 之间集成复杂、数据同步困难的问题。它通过统一的 action 定义，避免了在不同接口（如 UI、Agent、HTTP 端点）之间重复定义操作的低效性。\n\n**核心功能**\n该项目提供“一个 action 覆盖完整能力面”的核心功能，允许开发者一次定义操作，即可用于 UI action、agent 工具、HTTP 端点、CLI 命令等。它还包括自动状态同步、SQL 状态与 ORM、认证与治理、Agent 互操作 等模块化功能。\n\n**技术亮点**\nAgent-Native 的技术亮点在于其“真正面向代理，而不是外挂式 AI”的设计理念。它支持富上下文输入 和开放的 Agent 协议，并天生具备可观测性。此外，它还提供 LLM-First 文档，包含 `llms.txt` 和 `llms-full.txt` 等机器可读资产，方便 Agent 理解和使用文档。\n\n**适合谁用**\n该项目适合希望构建 Agentic 应用的开发者，特别是那些需要将 AI Agent 能力深度集成到应用中，并希望简化开发流程、提高效率的团队。它也适用于需要高度可定制、可观测和模块化应用架构的场景。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/financial-services",
+      "owner": "anthropics",
+      "name": "financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "stars": 35207,
+      "description": "",
+      "one_liner": "该项目旨在自动化金融服务领域中公司分析报告的生成，特别是投资银行和股权研究报告的创建。",
+      "detail_md": "**解决什么问题**\n该项目解决了金融专业人士在准备公司分析报告时面临的耗时且重复的手动数据收集、格式化和报告生成问题。 它通过自动化流程，提高了报告制作的效率和一致性，确保报告符合行业标准，例如投资银行的单页公司简介和股权研究的完整覆盖报告。\n\n**核心功能**\n核心功能包括根据公司名称或股票代码收集公司信息、财务数据和市场数据。 它能够生成符合特定布局和品牌指南的专业报告，例如四象限布局的单页公司简介。 对于股权研究，它支持分阶段生成报告，包括公司研究、财务建模、估值分析、图表生成和报告组装。\n\n**技术亮点**\n该项目利用技能（skills）来执行特定的任务，例如加载PPT模板技能和条带简介技能。 它能够分析模板结构、应用品牌颜色和布局。 在股权研究报告生成中，它强调使用工具进行文件操作，如读取Markdown和Excel文件，并使用DOCX技能创建和编辑Word文档，确保数据流的准确性和效率。\n\n**适合谁用**\n该项目主要适用于投资银行家、股权研究分析师以及任何需要快速、准确地生成专业公司分析报告的金融专业人士。 它通过自动化繁琐的报告制作过程，使他们能够专注于更高价值的分析和决策工作。",
+      "degraded": false
+    },
+    {
+      "id": "paperless-ngx/paperless-ngx",
+      "owner": "paperless-ngx",
+      "name": "paperless-ngx",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "stars": 45364,
+      "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "one_liner": "Paperless-ngx 是一个文档管理系统，支持多语言界面和后端消息本地化。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决文档管理中多语言支持的问题，确保用户界面和后端消息都能以用户偏好的语言显示，从而提升用户体验和系统的国际化适应性。它通过提供前端和后端双重本地化机制，解决了不同语言用户在使用系统时遇到的语言障碍问题。\n\n**核心功能**\n核心功能包括前端界面的多语言显示、后端模型字段和API错误消息的本地化。它支持通过 `django_language` cookie 和 `Accept-Language` 头来检测和激活用户语言偏好。此外，系统还集成了 Crowdin 平台，方便社区成员进行翻译贡献和管理。\n\n**技术亮点**\n技术亮点在于其双重国际化架构：前端使用 Angular 的 i18n 框架和 XLIFF 文件 (`.xlf`) 进行翻译，后端则采用 Django 的 gettext 系统和 `.po` 文件实现本地化。通过 GitHub Actions 自动化同步 Crowdin 上的翻译，实现了持续的社区驱动翻译流程。\n\n**适合谁用**\n该项目适合需要处理多语言文档、希望系统界面和消息能以母语显示的用户和组织。特别是对于拥有国际化团队或用户群体的企业，以及希望通过社区协作来扩展语言支持的开源项目，Paperless-ngx 提供了强大的多语言解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "mihail911/modern-software-dev-assignments",
+      "owner": "mihail911",
+      "name": "modern-software-dev-assignments",
+      "url": "https://github.com/mihail911/modern-software-dev-assignments",
+      "stars": 4421,
+      "description": "Assignments for CS146S: The Modern Software Dev (Stanford University Fall 2026/2025)",
+      "one_liner": "CS146S课程项目，旨在教授现代软件开发实践，强调AI辅助开发工作流，涵盖LLM提示工程到全栈Web应用开发。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统软件开发中效率低下、缺乏AI辅助的问题，通过实践教学，使学生掌握利用大型语言模型（LLM）进行开发、自动化工作流以及构建多技术栈应用的能力。</cite>它通过项目制学习，让学生熟悉AI工具（如Cursor IDE、GitHub Copilot、Ollama、OpenAI）在开发中的应用，从而提升开发效率和代码质量。</cite>\n\n**核心功能**\n项目涵盖了LLM提示工程、</cite>全栈Web应用开发（使用FastAPI、SQLAlchemy），</cite>以及本地（Ollama）和云端（OpenAI）LLM服务的集成。</cite>核心功能包括构建动作项提取器（Action Item Extractor）</cite>、实现MCP服务器</cite>、开发Warp代理工作流</cite>和AI代码审查</cite>，最终通过多技术栈构建同一应用来综合所学。</cite>\n\n**技术亮点**\n技术亮点在于其现代化的技术栈，包括Python 3.10-3.12、FastAPI、SQLAlchemy 2.0+、Pydantic v2。</cite>项目强调AI辅助开发，集成Ollama进行本地LLM推理 </cite>和OpenAI进行云端LLM访问。 </cite>此外，还使用了Poetry进行依赖管理</cite>，以及pytest、black、ruff和pre-commit等工具保证代码质量和自动化工作流。</cite>\n\n**适合谁用**\n该项目适合希望学习和掌握现代软件开发实践，特别是对AI辅助开发、LLM集成和全栈Web应用开发感兴趣的学生和开发者。</cite>它通过循序渐进的周度作业，从LLM提示基础到复杂的多技术栈开发，为学习者提供了全面的实践经验。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/json-render",
+      "owner": "vercel-labs",
+      "name": "json-render",
+      "url": "https://github.com/vercel-labs/json-render",
+      "stars": 17001,
+      "description": "The Generative UI framework",
+      "one_liner": "`json-render` 是一个生成式 UI 框架，通过 AI 生成界面，并确保其安全、可预测且可跨平台渲染。",
+      "detail_md": "**解决什么问题**\n`json-render` 旨在解决 AI 生成 UI 中的三个主要挑战：为 AI 输出提供“护栏”以确保其符合预定义组件目录、实现跨平台渲染以及支持渐进式流式更新。 它通过限制大型语言模型 (LLM) 生成符合开发者定义目录的有效 JSON 或 YAML 规范，从而确保在多个渲染平台上的可预测、类型安全输出。\n\n**核心功能**\n该框架的核心功能包括：定义组件和动作的“目录”，AI 根据提示生成符合目录的 JSON 规范，以及通过“注册表”将这些规范渲染为原生 UI 组件。它还支持 JSON Patch (RFC 6902) 或 YAML 流，实现增量 UI 更新，并提供动态属性和表达式、状态管理集成以及条件可见性等功能。\n\n**技术亮点**\n`json-render` 的技术亮点在于其模块化架构和跨平台渲染能力。 它是一个 TypeScript monorepo，包含 `@json-render` 范围下的 25 多个可发布包，支持 Web (React, Vue, Svelte, SolidJS)、移动 (React Native)、文档 (PDF, Email) 等多种平台。 框架使用 Zod 模式进行运行时验证和 AI 指导，并通过 `catalog.prompt()` 方法生成优化的系统提示来指导 LLM。\n\n**适合谁用**\n`json-render` 适合希望利用 AI 生成用户界面，同时需要确保输出安全、可预测和类型安全的开发者。 它特别适用于需要构建仪表板、小部件和应用程序，并希望通过 AI 提示来驱动界面生成，同时保持对组件和行为的完全控制的场景。",
+      "degraded": false
     }
   ]
 }
