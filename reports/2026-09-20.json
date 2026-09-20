@@ -1,0 +1,171 @@
+{
+  "doc_token": "B08gdvO6koimZ0x2ciVc7zHjnfg",
+  "doc_url": "https://my.feishu.cn/docx/B08gdvO6koimZ0x2ciVc7zHjnfg",
+  "items": [
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 16272,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "该项目是一个六阶段安全审计流程，旨在发现代码库中可利用的漏洞并生成详细报告。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过自动化和结构化的方式，解决传统安全审计中发现可利用漏洞效率低、报告不规范以及误报率高的问题。它专注于发现具有实际影响的漏洞，而非理论上的安全隐患。\n\n**核心功能**\n核心功能包括六个阶段：侦察（Recon）以映射应用架构和输入面；漏洞搜寻（Hunt）通过并行代理模拟攻击者寻找漏洞；对抗性验证（Validate）以排除误报；报告生成（Report）输出人类可读的审计报告；结构化输出（Structured output）生成机器可读的JSON格式结果；以及独立验证（Independent verification）以确保报告的准确性。\n\n**技术亮点**\n技术亮点在于其多代理并行工作流，例如在侦察阶段部署多个`research`代理，在搜寻阶段使用`general`代理并行发现漏洞，以及通过对抗性验证机制（`research`验证代理）和独立的报告验证来提高发现的准确性。此外，它还支持结构化输出`findings.json`并进行严格的Schema验证。\n\n**适合谁用**\n该项目适合需要对代码库进行安全审计的开发者、安全工程师和团队。它特别适用于希望通过自动化工具发现可利用漏洞、生成规范化报告，并确保审计结果准确性的场景。",
+      "degraded": false
+    },
+    {
+      "id": "trycua/cua",
+      "owner": "trycua",
+      "name": "cua",
+      "url": "https://github.com/trycua/cua",
+      "stars": 24376,
+      "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+      "one_liner": "Cua 是一个用于构建、评估和训练计算机使用智能体的开源框架。",
+      "detail_md": "**解决什么问题**\nCua 旨在解决 AI 智能体与图形用户界面 (GUI) 或 shell 环境交互的挑战，使其能够自主完成任务。  它通过提供跨操作系统（macOS, Windows, Linux）的驱动程序和沙盒环境，实现智能体在后台操作桌面应用程序，而无需占用用户光标或焦点。 \n\n**核心功能**\nCua 提供两种主要接口：CLI 和 SDK。 \n*   **CLI 接口**：包括 `cua` (沙盒管理)、`cuabot` (沙盒 GUI 环境中的协作计算机使用工具)、`lume` (macOS 虚拟化) 和 `cua-driver` (后台计算机使用驱动程序)。 \n*   **SDK 接口**：通过 Python 和 TypeScript 库提供编程控制，主要由 `ComputerAgent` 和 `Computer` 类组成，用于构建可与各种模型组合的自主智能体。  \n*   **沙盒环境**：支持云端、Docker、Lume (macOS 虚拟机) 和 QEMU 等多种执行环境。 \n*   **基准测试**：`cua-bench` 框架用于评估 CUA，支持 OSWorld 和 ScreenSpot 等标准基准测试。 \n\n**技术亮点**\n*   **后台计算机使用驱动**：`cua-driver` 允许智能体在后台操作桌面应用程序，不干扰用户。 \n*   **模型上下文协议 (MCP)**：用于连接 AI 模型到外部工具和数据源，`cua-driver` 通过 MCP 暴露计算机使用能力。 \n*   **Set-of-Mark (SOM)**：一种视觉定位技术，通过在屏幕截图中添加编号覆盖层，帮助模型精确识别 UI 组件。 \n*   **多语言支持**：通过 UniFFI 工具从 Rust 核心逻辑生成多语言绑定 (Python, Kotlin, Swift, Ruby, TypeScript)。 \n\n**适合谁用**\n*   **智能体开发者**：希望构建能够自主操作计算机的 AI 智能体。 \n*   **研究人员**：需要评估或训练计算机使用模型的学者和研究机构。 \n*   **需要 macOS 虚拟化**：利用 Lume 在 Apple Silicon 上运行 macOS 虚拟机。 \n*   **需要跨平台自动化**：在 macOS, Windows, Linux 上进行后台桌面应用自动化。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 97003,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "`agent-skills`项目为AI代理提供结构化工作流，以提高软件开发质量和效率。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决AI辅助开发中代码质量不一致、开发流程不规范以及AI代理难以遵循复杂工程实践的问题。它通过提供标准化的“技能”来弥合自然语言意图与具体代码实现之间的鸿沟，确保AI代理能够执行高质量的开发任务。\n\n## 核心功能\n`agent-skills`的核心功能是提供一系列结构化的“技能”（`SKILL.md`文件），指导AI代理完成软件开发生命周期（SDLC）的各个阶段。这些技能涵盖了从需求定义（如`spec-driven-development`）、任务规划（如`planning-and-task-breakdown`）、代码编写（如`incremental-implementation`、`test-driven-development`）、代码审查（如`code-review-and-quality`）到部署（如`shipping-and-launch`）等多个方面。项目还支持通过“命令”和“角色”来调用特定技能或执行专业审查。\n\n## 技术亮点\n该项目的主要技术亮点包括：\n*   **结构化技能工作流**：每个技能都定义了明确的步骤、验证标准和反驳常见借口的机制，确保AI代理遵循严格的工程实践。\n*   **多代理工具集成**：支持与多种AI编码助手（如Claude Code、Codex、Cursor、GitHub Copilot等）集成，通过CLI或原生插件方式安装和使用技能。\n*   **上下文工程**：通过`context-engineering`技能优化AI代理的上下文窗口管理，确保在长会话中保持连贯性和输出质量。\n*   **质量门禁与约束驱动开发**：`constraint-driven-development`技能允许项目定义可机械检查的质量标准，并将其写入`CONSTRAINTS.md`文件，防止AI代理降低质量门槛。\n\n## 适合谁用\n该项目适合希望提高AI辅助开发质量和效率的开发者、团队和组织。无论是新项目（绿地项目）还是现有项目（棕地项目），都可以通过逐步采用或全面集成这些技能来规范开发流程、确保代码质量和加速交付。特别适用于需要AI代理遵循特定工程标准、进行严格代码审查或自动化质量检查的场景。",
+      "degraded": false
+    },
+    {
+      "id": "coder/coder",
+      "owner": "coder",
+      "name": "coder",
+      "url": "https://github.com/coder/coder",
+      "stars": 15607,
+      "description": "Secure environments for developers and their agents",
+      "one_liner": "Coder 是一个自托管平台，用于云开发环境和 AI 编码代理，通过 Terraform 定义工作区并自动化生命周期管理。",
+      "detail_md": "**解决什么问题**\nCoder 解决了传统开发环境中配置复杂、资源利用率低以及团队协作效率不高的问题。它通过提供声明式、可重复的开发环境，加速开发人员入职，并优化云资源成本。此外，它还解决了 AI 编码代理在基础设施上运行的安全性和治理问题。\n\n**核心功能**\n核心功能包括使用 Terraform 定义云开发环境，自动关闭闲置资源以节省成本，以及支持 AI 编码代理在自托管基础设施上运行。它还提供了一个集中式控制平面 `coderd`，负责工作区生命周期、资源调配和访问策略执行。\n\n**技术亮点**\n技术亮点在于其基于 Terraform 的声明式工作区定义，通过安全的 WireGuard® 隧道连接，以及自动化的生命周期管理。后端使用 Go 语言开发，前端采用 TypeScript/React，并集成了 Tailnet 覆盖网络实现安全连接。\n\n**适合谁用**\nCoder 适合需要管理和提供标准化开发环境的平台团队，以及希望在云端或自托管基础设施上进行高效、安全开发的开发人员。对于需要利用 AI 编码代理并对其进行集中治理和成本控制的团队也同样适用。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 146696,
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "one_liner": "Claude Code 是一个终端智能编码工具，通过自然语言命令加速软件开发。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中重复性任务耗时、代码理解复杂以及Git工作流繁琐的问题。</cite>它通过结合大型语言模型（LLM）的推理能力和直接的系统访问，帮助开发者更高效地完成编码工作。</cite>\n\n**核心功能**\nClaude Code 提供以下核心功能：\n*   **自然语言交互**：用户可以通过自然语言命令执行编码任务、解释复杂代码和管理Git工作流。</cite>\n*   **代理式编排**：支持多代理工作流，包括子代理生成、工作区隔离和代理协作。</cite>\n*   **工具集成**：通过模型上下文协议（MCP）无缝集成工具，并提供沙盒执行环境，确保操作安全。</cite>\n*   **插件扩展**：支持通过插件扩展功能，例如代码审查和功能开发。</cite>\n\n**技术亮点**\n该项目的技术亮点包括：\n*   **LLM推理与系统访问结合**：将大型语言模型的智能与直接的系统操作能力相结合，实现自动化编码。</cite>\n*   **模块化架构**：代码库组织成模块化目录，支持核心运行时引擎、第一方插件和示例配置。</cite>\n*   **沙盒执行**：通过网络限制、Bash沙盒配置和命令排除，确保代码执行的安全性。</cite>\n*   **上下文管理**：自动压缩和负载剥离，以在令牌限制内保持效率。</cite>\n\n**适合谁用**\nClaude Code 适合需要提高编码效率的软件开发者。</cite>无论是希望自动化日常任务、快速理解复杂代码，还是简化Git操作，该工具都能提供帮助。</cite>它可以在终端、IDE中使用，也可以在GitHub上通过@claude标签使用。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "Open-Dev-Society/OpenStock",
+      "owner": "Open-Dev-Society",
+      "name": "OpenStock",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "stars": 16018,
+      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+      "one_liner": "OpenStock 是一个开源的股票市场平台，提供实时价格、个性化提醒和详细公司洞察，旨在打破付费墙，实现金融工具的普及化。",
+      "detail_md": "**解决什么问题**\nOpenStock 旨在解决当前金融市场信息和工具被付费墙和订阅服务限制的问题。它致力于让知识和工具对所有人开放、免费和可访问，并欢迎新手参与，而不是设置门槛。\n\n**核心功能**\n该项目提供认证功能、全球搜索和命令面板、用户个性化关注列表、详细的股票信息（包括 TradingView 图表和公司资料）、市场概览（热力图、行情和头条新闻）、个性化入职流程以及通过 AI 个性化的每日新闻摘要邮件。\n\n**技术亮点**\nOpenStock 基于 Next.js (App Router)、TypeScript 和 Tailwind CSS 构建。它使用 Better Auth 进行身份验证，MongoDB 进行数据持久化，Finnhub API 获取市场数据，TradingView 嵌入式组件提供图表，并利用 Inngest 处理可靠的后台任务和工作流。\n\n**适合谁用**\nOpenStock 专为希望无障碍使用金融工具的专业人士和学生设计。它特别适合那些觉得被现有技术门槛阻碍、难以找到免费资源或希望参与有意义的开源项目的人。",
+      "degraded": false
+    },
+    {
+      "id": "higgsfield-ai/higgsfield",
+      "owner": "higgsfield-ai",
+      "name": "higgsfield",
+      "url": "https://github.com/higgsfield-ai/higgsfield",
+      "stars": 4941,
+      "description": "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
+      "one_liner": "Higgsfield 是一个开源、容错、高度可扩展的 GPU 编排和机器学习框架，专为训练万亿参数级大型语言模型（LLMs）而设计。",
+      "detail_md": "**解决什么问题**\nHiggsfield 旨在解决大型语言模型训练中的资源分配、分布式训练复杂性、环境配置以及实验管理等问题。它通过提供统一的框架来简化多节点训练，避免了 PyTorch、NVIDIA 驱动和数据处理库版本不一致等“环境地狱”问题，并减少了复杂的配置管理。\n\n**核心功能**\n该项目提供五项核心功能：计算资源分配、支持 ZeRO-3 DeepSpeed API 和 PyTorch 的 FSDP API 以实现高效分片、大型神经网络训练的启动、执行和监控框架、资源竞争管理以及与 GitHub 和 GitHub Actions 的无缝集成以实现机器学习开发的持续集成。它还支持模型保存为分布式格式或 Hugging Face 格式，并可直接推送到 Hugging Face Hub。\n\n**技术亮点**\nHiggsfield 的技术亮点包括：支持 PyTorch 的 `FullyShardedDataParallel` (FSDP) 和 ZeRO-3 分片策略，以优化内存使用和训练速度。它还支持多种精度选项（如 `fp16`、`bf16`、`bf16_mixed`）和激活检查点技术，以进一步减少内存消耗。通过 `@experiment` 装饰器，它提供了一个简洁的接口来定义和管理实验。\n\n**适合谁用**\nHiggsfield 适合需要高效训练大型语言模型（LLMs）的开发者和研究人员。特别是那些在分布式 GPU 环境中工作，希望简化训练流程、管理计算资源、并确保实验可复现性的用户。它兼容 Ubuntu 操作系统，并支持 SSH 访问的节点，已在 Azure、LambdaLabs 和 FluidStack 等云平台上进行过测试。",
+      "degraded": false
+    },
+    {
+      "id": "docling-project/docling",
+      "owner": "docling-project",
+      "name": "docling",
+      "url": "https://github.com/docling-project/docling",
+      "stars": 67025,
+      "description": "Get your documents ready for gen AI",
+      "one_liner": "Docling 是一个模块化的 SDK 和 CLI 工具，用于将各种文档格式解析为统一的 `DoclingDocument` 表示，以支持下游 AI 工作流。",
+      "detail_md": "## 解决什么问题\nDocling 旨在简化文档处理的复杂性，通过提供统一的解析器 SDK 和 CLI，支持多种输入格式，并集成 OCR、布局分析、表格结构识别和视觉语言模型等高级文档理解功能。它解决了从不同文档类型中可靠提取语义内容以用于复杂 AI 工作流的挑战。\n\n## 核心功能\nDocling 的核心功能包括：\n*   **多格式解析**：支持 PDF、DOCX、PPTX、XLSX、HTML、图像、音频、视频等多种文档格式的解析。\n*   **统一文档表示**：将解析后的内容转换为结构化、统一的 `DoclingDocument` 格式，捕获内容、阅读顺序、层级和布局信息。\n*   **高级文档理解**：提供布局分析、OCR、表格结构识别、公式和代码检测、图像分类和描述以及音频/视频的自动语音识别 (ASR) 等功能。\n*   **多种导出格式**：支持将结果导出为 Markdown、HTML、JSON 等多种格式，便于下游应用使用。\n*   **AI 框架集成**：与 LangChain、LlamaIndex 和 Haystack 等 AI 框架无缝集成。\n\n## 技术亮点\n*   **模块化架构**：采用灵活的架构，支持后端解析器和可配置的管道，允许用户根据需求定制处理流程。\n*   **分阶段处理流程**：文档处理经过格式检测、后端选择、管道处理和 `DoclingDocument` 构建等阶段，确保高效和准确的转换。\n*   **丰富的 ML 模型生态系统**：集成了多种机器学习模型，包括 Tesseract、RapidOCR 等 OCR 引擎，EGRET、HERON 等布局检测模型，TableFormer 等表格结构模型，以及 GraniteDocling 等视觉语言模型和基于 Whisper 的 ASR 模型。\n*   **Python SDK 和 CLI**：提供 `DocumentConverter` 类作为核心编程接口，以及 `docling` 命令行工具，方便用户进行文档转换。\n\n## 适合谁用\nDocling 适合需要处理和理解各种文档格式的开发者、数据科学家和 AI 工程师。它特别适用于构建以下应用：\n*   **检索增强生成 (RAG)**：从文档中提取结构化信息，以增强大型语言模型的生成能力。\n*   **结构化数据提取**：从非结构化或半结构化文档中提取关键数据。\n*   **多模态 AI/ML 应用**：结合文本、图像、音频等多种模态信息进行分析和处理。\n*   **需要本地执行和敏感数据处理**：支持本地执行，适用于对数据隐私和安全有严格要求的环境。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/quiche",
+      "owner": "cloudflare",
+      "name": "quiche",
+      "url": "https://github.com/cloudflare/quiche",
+      "stars": 12009,
+      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+      "one_liner": "quiche 是 Cloudflare 用 Rust 实现的 QUIC 传输协议和 HTTP/3 协议库。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个低级别的 API，用于处理 QUIC 数据包和管理连接状态，从而实现 QUIC 和 HTTP/3 协议的传输。 它解决了在 Rust 应用程序中集成这些现代网络协议的复杂性，并支持高性能和可扩展性。\n\n**核心功能**\nquiche 提供了 QUIC 传输层和 HTTP/3 协议的实现。 核心功能包括 `quiche::Config` 用于配置连接参数， 以及 `quiche::Connection` 用于管理单个 QUIC 连接的状态。 它还通过 `tokio-quiche` 提供了异步集成， 并通过 FFI 提供了 C 语言绑定。\n\n**技术亮点**\n该项目采用模块化架构，将配置、连接管理、数据包处理、流处理和拥塞控制等功能分离。 它支持多种拥塞控制算法，包括 Reno、CUBIC 和 BBRv2。 此外，它还集成了 BoringSSL 进行加密操作， 并提供了 `qlog` 用于结构化日志记录。\n\n**适合谁用**\nquiche 适用于需要高性能 QUIC 和 HTTP/3 支持的 Rust 应用程序开发者。 Cloudflare 自身使用 quiche 来支持其边缘网络的 HTTP/3， Android 的 DNS 解析器也使用它来实现 DNS over HTTP/3， 并且可以集成到 curl 中以提供 HTTP/3 支持。",
+      "degraded": false
+    },
+    {
+      "id": "asciimoo/hister",
+      "owner": "asciimoo",
+      "name": "hister",
+      "url": "https://github.com/asciimoo/hister",
+      "stars": 5219,
+      "description": "Your own search engine",
+      "one_liner": "Hister 是一个私有、自托管的搜索引擎，用于索引您访问的网页和本地文件，并提供多种搜索接口。",
+      "detail_md": "**解决什么问题**\nHister 旨在解决传统在线搜索引擎带来的隐私问题、广告干扰、不准确的 AI 建议以及结果操纵等问题。它允许用户建立一个可搜索的知识库，将来自不同来源（如网页、浏览器历史记录、本地文件和爬取的网站）的内容整合到一个由用户控制的集合中。\n\n**核心功能**\nHister 提供全文本索引功能，可以搜索您访问过的网页和本地文件的实际内容。它支持高级搜索功能，包括字段过滤、短语搜索、通配符、否定、日期范围和查询别名。用户可以通过浏览器扩展自动索引访问的页面，也可以通过文件监控、历史记录导入和网站爬虫添加其他来源。Hister 还支持内容提取器，用于处理结构化数据并提供语义搜索。\n\n**技术亮点**\n该项目采用客户端-服务器架构，服务器负责存储和搜索文档，客户端则用于收集内容或运行搜索。Hister 使用 Go 语言构建，并利用 Bleve 搜索引擎实现全文本搜索功能。它支持多种部署方式，包括单二进制文件本地运行或共享服务器部署，并支持 SQLite 或 PostgreSQL 数据库。Hister 还提供 Web 界面、终端客户端、命令行工具和 HTTP API 等多种接口。\n\n**适合谁用**\nHister 适合任何希望从他们认为相关或重要的信息中创建可搜索知识库的人。它特别适用于注重隐私保护、进行研究、需要参考资料、进行知识管理以及提高生产力的用户。例如，研究人员可以快速查找已阅读文章和文档中的信息，开发者可以定位之前访问过的代码片段或教程。",
+      "degraded": false
+    },
+    {
+      "id": "ruanyf/weekly",
+      "owner": "ruanyf",
+      "name": "weekly",
+      "url": "https://github.com/ruanyf/weekly",
+      "stars": 103110,
+      "description": "科技爱好者周刊，每周五发布",
+      "one_liner": "本项目是《科技爱好者周刊》，每周五发布，分享科技内容，并提供社区互动平台。",
+      "detail_md": "**解决什么问题**\n本项目旨在为科技爱好者提供一个定期获取最新科技资讯、技术文章、实用工具和学习资源的平台。它解决了信息过载时代，个人难以系统性筛选和获取高质量科技内容的问题。同时，它也为技术社区成员提供了一个分享知识、推荐项目和发布招聘信息的渠道。\n\n**核心功能**\n核心功能包括每周发布一期科技周刊，内容涵盖科技动态、深度文章、实用工具、AI 相关进展等。周刊通过 GitHub 仓库进行内容管理和分发，并同步发布到个人博客、微信公众号和语雀等多个平台。此外，项目还设有“谁在招人”的 GitHub Issue 专区，方便社区成员发布和查找工作机会。\n\n**技术亮点**\n项目采用 Markdown 格式编写每期内容，存储在 `docs/issue-XXX.md` 文件中，便于版本控制和内容管理。通过 GitHub Issues 接收社区投稿和招聘信息，实现了社区驱动的内容生态。多平台分发机制确保了内容的广泛触达，利用 GitHub 作为主要分发中心，同步至其他平台，保证了内容的一致性。\n\n**适合谁用**\n本项目适合对科技前沿、编程技术、开源工具和行业动态感兴趣的开发者、技术爱好者、学生以及需要获取招聘信息的求职者。对于希望了解最新技术趋势、学习新知识、发现实用工具或寻找工作机会的人群，该周刊提供了有价值的信息和资源。",
+      "degraded": false
+    },
+    {
+      "id": "ZuodaoTech/everyone-can-use-english",
+      "owner": "ZuodaoTech",
+      "name": "everyone-can-use-english",
+      "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+      "stars": 37771,
+      "description": "人人都能用英语",
+      "one_liner": "本项目是一个 AI 辅助的英语学习生态系统，核心是 Enjoy 桌面应用，通过沉浸式媒体、AI 对话和发音练习，帮助用户高效提升英语能力。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统英语学习效率低下、缺乏个性化指导和沉浸式环境的问题。它利用 AI 技术，为用户提供一个能够模拟真实语言环境、纠正发音、拓展词汇和提升口语能力的平台。通过结构化的学习方法和丰富的学习资源，帮助用户在短时间内高效掌握英语。\n\n**核心功能**\nEnjoy 应用提供多项核心功能，包括：AI 纠正发音、AI 聊天对话、媒体播放与转录、跟读练习、发音评估、文档阅读与翻译、以及第三方词典导入。用户可以导入在线音视频素材进行学习，并跟踪学习记录。\n\n**技术亮点**\n项目采用 Electron 构建桌面应用，结合 React 和 TypeScript 提供丰富的用户界面。后端集成 OpenAI、Azure AI 和 Cloudflare AI 等多种 AI 服务，实现语音识别、自然语言处理和文本转语音功能。本地数据存储使用 SQLite，支持本地 Whisper 模型进行离线语音转文本。\n\n**适合谁用**\n本项目适合所有希望高效学习英语的用户，特别是那些希望通过 AI 辅助、沉浸式学习和结构化训练来提升英语口语、听力、阅读和发音能力的人群。无论是初学者还是希望进一步提高英语水平的学习者，都能从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 25117,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "one_liner": "该项目是Anthropic的开源插件集合，旨在扩展Claude在专业知识工作中的能力，通过集成工具和定制工作流程来提升效率。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决Claude在特定专业领域和工作流程中缺乏专业知识和工具集成的问题。它允许组织为特定角色配置Claude，使其能够理解领域知识、执行特定操作并连接外部工具。\n\n**核心功能**\n核心功能包括提供一个插件市场，其中包含各种预构建的插件，涵盖生产力、企业搜索、销售、财务、数据、法律等多个领域。每个插件都包含领域专业知识（技能）、明确的命令和外部工具连接。用户可以通过CLI或Web界面安装和管理插件。\n\n**技术亮点**\n技术亮点在于其文件化的插件结构，无需代码或基础设施，仅使用Markdown和JSON文件。插件采用工具无关的设计，通过`~~category`占位符实现工具的灵活替换。它还通过模型上下文协议（MCP）与外部工具集成，提供统一的接口。\n\n**适合谁用**\n该项目适合希望Claude理解其领域知识的终端用户（如销售、财务、法律、数据分析师等）。也适合团队管理员，他们可以根据公司特定的术语、流程和工具栈定制插件。此外，插件开发者也可以利用它创建新插件或扩展现有插件。",
+      "degraded": false
+    },
+    {
+      "id": "cactus-compute/needle",
+      "owner": "cactus-compute",
+      "name": "needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "stars": 11593,
+      "description": "Automation foundation model for tiny devices: 2-bit, 8-29 MB, tool calls, structured extraction and embeddings on phones, wearables, smart homes, robots, cars and microcontrollers.",
+      "one_liner": "Needle是一个紧凑的基础模型，专为移动设备、可穿戴设备、机器人和微控制器上的工具调用、设备控制和结构化数据提取而设计。",
+      "detail_md": "**解决什么问题**\nNeedle旨在解决资源受限设备（如移动设备、可穿戴设备、机器人和微控制器）上高效执行工具调用和结构化数据提取的挑战。它通过优化模型架构，在这些设备上实现快速、准确的工具调用和数据提取，同时保持较小的模型体积。\n\n**核心功能**\nNeedle提供以下核心功能：\n*   **工具调用**：根据用户输入，准确识别并调用应用程序暴露的函数，并填充所有参数。\n*   **结构化提取**：从非结构化文本中提取类型化的数据，例如发票、预订信息等，并保证输出格式的正确性。\n*   **文本嵌入**：生成句子的向量表示，支持本地搜索、匹配和路由功能。\n*   **本地微调**：支持使用LoRA（Low-Rank Adaptation）在本地进行模型微调，以适应特定产品需求。\n*   **部署工具**：提供将微调后的模型导出为`.cact`格式的二进制文件，并打包部署到不同平台的功能。\n\n**技术亮点**\nNeedle 3采用**Laddered Simple Attention Network (SAN)**架构，其技术亮点包括：\n*   **Monarch Hadamard MLP**：取代传统的FFN，提高效率。\n*   **GQA注意力与因果卷积抽头**：优化注意力机制，平衡内存占用和性能。\n*   **Engram n-gram记忆**：通过n-gram哈希从学习表中收集行，提供外部记忆形式。\n*   **多通道超连接**：一种残差架构变体，将隐藏状态分成多个通道进行处理。\n*   **可部署子网络**：模型训练使得从2到20层的每个深度都是一个可部署的子网络，实现了高参数效率。\n*   **字节级语法约束解码**：通过编译工具模式生成字节级语法，确保输出始终符合预期的JSON格式。\n\n**适合谁用**\nNeedle适用于需要在资源受限设备上实现智能交互和自动化功能的开发者和企业。具体包括：\n*   **移动应用开发者**：希望在手机应用中集成高效工具调用和数据提取功能。\n*   **可穿戴设备制造商**：为智能手表、智能眼镜等设备提供低延迟、高精度的设备控制和信息处理能力。\n*   **机器人和智能家居领域**：实现机器人指令执行、智能家居设备控制等功能。\n*   **微控制器应用**：在极低资源环境下运行AI模型，进行特定任务的自动化。\n*   **需要本地微调和部署定制化模型的用户**：允许用户根据自身数据进行模型微调，并导出为轻量级二进制文件进行部署。",
+      "degraded": false
+    },
+    {
+      "id": "yynxxxxx/Codex-X",
+      "owner": "yynxxxxx",
+      "name": "Codex-X",
+      "url": "https://github.com/yynxxxxx/Codex-X",
+      "stars": 3386,
+      "description": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+      "one_liner": "Codex-X 是一款跨平台桌面工具，用于管理 OpenAI Codex 的提示词、API、会话和技能。",
+      "detail_md": "**解决什么问题**\n当用户同时使用 Codex 桌面端、CLI、第三方 API 和多个提示词时，配置容易分散。Codex-X 将这些高频操作集中到一个可视化桌面界面中，方便用户管理和操作。\n\n**核心功能**\n*   **提示词管理**：支持分类、导入 Markdown、自定义编辑、一键启用/禁用提示词模板，并内置 5 套模板。\n*   **API/Provider 管理**：管理多个官方 Codex 登录配置和第三方 API 供应商，支持一键复制、切换、连接检测、模型获取/测试，并可从 cc-switch 导入。\n*   **会话管理**：搜索、整理、同步、检查和永久删除本地会话，并按项目路径分组。\n*   **Skills/MCP 管理**：可视化管理 Skills 与 MCP，支持导入、安装、启用/禁用和检查更新状态。\n*   **配置与用量统计**：集中查看 `config.toml` 和 `auth.json`，并提供 Token 用量统计、每日趋势和模型分布。\n\n**技术亮点**\n*   **跨平台桌面应用**：基于 Tauri 2 框架构建，结合 Rust 后端和 React/TypeScript 前端，支持 macOS、Windows 和 Linux。\n*   **可视化提示词注入中心**：提供灵活的提示词管理，支持 GitHub 同步、本地缓存和自定义编辑，并可在“保留原提示词”和“替换原提示词”两种模式间切换。\n*   **智能路由与故障转移**：支持本地路由管理、供应商优先级安排，并在服务异常时自动切换，提供超时和重试参数调整。\n*   **配置健康诊断**：新增后台配置检查功能，发现问题时提醒用户并提供修复选项。\n\n**适合谁用**\n适合同时使用 OpenAI Codex 桌面端、CLI、第三方 API、Skills/MCP 和多套提示词，希望通过可视化界面集中管理和优化工作流程的开发者和技术用户。",
+      "degraded": false
+    }
+  ]
+}
