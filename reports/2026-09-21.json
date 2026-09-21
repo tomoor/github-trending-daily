@@ -144,6 +144,83 @@
       "one_liner": "该项目提供了一套代理技能，旨在通过结构化的工作流程和质量门禁，提升AI辅助开发过程的效率和代码质量。",
       "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在软件开发过程中可能出现的代码质量不稳定、需求理解不准确、缺乏统一标准等问题。它通过引入明确的规范、测试和质量约束，确保AI代理产出的代码符合预设标准，并能持续交付高质量的软件。\n\n**核心功能**\n核心功能包括需求澄清（`interview-me`、`idea-refine`）、规范驱动开发（`spec-driven-development`）、约束驱动开发（`constraint-driven-development`）、任务分解（`planning-and-task-breakdown`） 以及代码审查和质量保证等。每个功能都以结构化的“技能”形式存在，指导AI代理完成特定任务。\n\n**技术亮点**\n技术亮点在于其“技能”的模块化设计，每个技能都是一个带有明确工作流程、验证标准和反驳理由的Markdown文件。项目强调“过程而非散文”，确保AI代理遵循可验证的步骤。此外，它还支持多种AI代理环境的集成，并通过“质量门禁”和“反合理化”机制来防止质量下降。\n\n**适合谁用**\n该项目适合希望提高AI辅助开发效率和代码质量的开发者、团队以及AI代理工具的构建者。特别适用于需要为AI代理设定明确开发标准、确保代码可维护性和可测试性，以及在项目启动或重要功能开发时建立质量基线的场景。",
       "degraded": false
+    },
+    {
+      "id": "akitaonrails/ai-memory",
+      "owner": "akitaonrails",
+      "name": "ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 7491,
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "one_liner": "ai-memory 是一个 Rust 应用程序，为 AI 编码代理提供长期、共享的记忆，通过 Markdown wiki 和 SQLite 索引管理知识。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码代理在不同会话和工具之间缺乏长期、共享记忆的问题。它通过自动捕获代理生命周期事件、将观察结果整合为结构化 Markdown wiki 页面，并提供高效检索机制，确保代理能够访问历史决策、经验和项目规则。\n\n**核心功能**\nai-memory 的核心功能包括：自动捕获代理生命周期事件；将这些事件整合为可读的 Markdown wiki 页面；通过 FTS5 全文搜索、实体匹配和可选向量嵌入进行高效知识检索；支持多代理和多项目隔离；以及提供一个只读的 Web UI 浏览器。\n\n**技术亮点**\n该项目采用“Markdown-in-git 作为事实来源，SQLite 作为派生索引”的双层存储模型。它是一个用 Rust 编写的单二进制应用程序，强调隐私保护（敏感数据清洗）  和自愈能力（启动时进行 schema 迁移和完整性审计）。LLM 功能是可选的，即使没有 LLM 也能进行搜索和基于规则的摘要。\n\n**适合谁用**\nai-memory 适合使用 AI 编码代理（如 Claude Code, Codex, OpenCode 等）的开发者和团队。它特别适用于需要在不同代理之间无缝切换、跨会话保持上下文、或在多项目环境中管理共享知识的用户。项目还支持家庭实验室部署，允许多个用户共享一个中央记忆服务器。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/quiche",
+      "owner": "cloudflare",
+      "name": "quiche",
+      "url": "https://github.com/cloudflare/quiche",
+      "stars": 12213,
+      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+      "one_liner": "quiche 是一个 QUIC 和 HTTP/3 协议的 Rust 实现，提供低级 API 和异步集成。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个高效、可靠的 QUIC 传输协议 和 HTTP/3 协议 的实现，以支持现代网络应用对低延迟和高吞吐量的需求。 它解决了在 Rust 环境中构建 QUIC/HTTP/3 应用程序的复杂性，并提供了 C FFI 绑定以方便与其他语言集成。 \n\n**核心功能**\nquiche 提供了核心的 QUIC 协议实现，包括连接状态管理、数据包处理和流多路复用。 它还集成了 HTTP/3 协议层，支持 QPACK 头部压缩和控制流管理。 通过 `tokio-quiche` crate，项目提供了异步/await 集成，方便与 Tokio 运行时配合使用。 此外，它还通过 C FFI 提供了 C 语言接口。 \n\n**技术亮点**\n该项目采用 Rust 语言实现，确保了内存安全和高性能。 它具有分层架构，允许应用程序根据需求在不同级别与协议栈交互。 项目还提供了丰富的工具，如 `quiche-client` 和 `quiche-server` 用于测试，以及 `h3i` 用于 HTTP/3 调试。 \n\n**适合谁用**\nquiche 适合需要构建高性能 QUIC 和 HTTP/3 应用程序的 Rust 开发者。 对于希望将 QUIC/HTTP/3 功能集成到 C/C++ 项目中的开发者，也可以通过 FFI 接口使用。 Cloudflare、Android 和 curl 等知名项目已在使用 quiche。",
+      "degraded": false
+    },
+    {
+      "id": "mvt-project/mvt",
+      "owner": "mvt-project",
+      "name": "mvt",
+      "url": "https://github.com/mvt-project/mvt",
+      "stars": 13423,
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "one_liner": "MVT是一个用于简化和自动化收集取证痕迹的工具集，以识别Android和iOS设备潜在的妥协情况。",
+      "detail_md": "**解决什么问题**\nMVT旨在帮助数字取证调查员和人权捍卫者，分析可能被间谍软件攻击的Android和iOS设备，从而识别潜在的妥协迹象。它通过收集和分析设备上的取证痕迹来解决这一问题。\n\n**核心功能**\nMVT提供三个主要的命令行接口：`mvt`、`mvt-ios` 和 `mvt-android`。`mvt-ios` 和 `mvt-android` 用于分析各自平台的设备数据，而 `mvt` 则处理通用功能，如版本信息、shell自动补全和IOC下载。它支持使用公共的妥协指标（IOCs）来扫描移动设备，以发现已知间谍软件活动的潜在痕迹。\n\n**技术亮点**\nMVT采用模块化架构，取证模块继承自 `MVTModule` 类，每个模块针对特定的数据源进行数据提取、解析和指标匹配。它支持动态加载自定义模块，可以通过 `--load-module` 命令行参数、`MVT_CUSTOM_MODULES` 环境变量或Python入口点进行扩展。MVT还利用 `ahocorasick` 算法实现高效的IOC匹配。\n\n**适合谁用**\nMVT主要面向数字取证调查员和人权捍卫者。它要求使用者具备数字取证知识和命令行工具使用经验，不适合普通用户进行自我评估。",
+      "degraded": false
+    },
+    {
+      "id": "zhouxiaoka/autoclip",
+      "owner": "zhouxiaoka",
+      "name": "autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "stars": 8069,
+      "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+      "one_liner": "AutoClip 是一个基于AI的智能视频处理系统，可自动下载、分析视频并生成精彩片段和合集。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决视频内容创作者在海量视频中手动提取精彩片段和制作合集效率低下的问题。它通过自动化流程，帮助用户从YouTube、Bilibili等平台下载视频，并利用AI技术进行智能分析，从而快速生成高质量的视频切片和主题合集。\n\n### 核心功能\nAutoClip 的核心功能包括：支持YouTube、Bilibili视频链接解析和本地文件上传；基于通义千问大语言模型进行AI智能分析，自动提取视频大纲、识别话题时间点并对片段进行精彩度评分；自动生成精彩片段和智能推荐合集组合，并支持手动编辑和排序；通过WebSocket提供实时进度监控，显示详细任务状态和错误处理机制。\n\n### 技术亮点\n该项目采用现代化的前后端分离架构。后端使用FastAPI构建RESTful API和业务逻辑，异步任务处理通过Celery和Redis实现。AI内容分析利用阿里云的通义千问大语言模型和DashScope API。前端则采用React 18、TypeScript和Ant Design构建直观的用户界面。系统还支持Docker一键部署，简化了环境配置。\n\n### 适合谁用\nAutoClip 适合需要高效处理视频内容、提取精华片段并制作合集的个人用户、内容创作者、营销人员以及教育机构。特别是那些经常从YouTube和Bilibili等平台获取视频素材，并希望通过AI技术提升视频剪辑效率的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ruanyf/weekly",
+      "owner": "ruanyf",
+      "name": "weekly",
+      "url": "https://github.com/ruanyf/weekly",
+      "stars": 103837,
+      "description": "科技爱好者周刊，每周五发布",
+      "one_liner": "阮一峰科技爱好者周刊提供免费和付费的招聘信息发布服务，旨在连接求职者与招聘方，同时资助周刊运营。",
+      "detail_md": "### 解决什么问题\n该项目解决了企业和团队招聘人才的需求，以及求职者寻找工作和实习岗位的需求。同时，通过付费招聘服务，为《科技爱好者周刊》提供了运营资金支持。\n\n### 核心功能\n核心功能包括：在GitHub Issues讨论区提供免费的招聘信息发布平台“谁在招人？”，以及在周刊正文中提供付费的“招聘信息”专栏。付费服务通过邮件联系阮一峰（yifeng.ruan@gmail.com）进行。\n\n### 技术亮点\n该项目利用GitHub Issues作为免费的社区招聘平台，实现了低成本、高透明度的信息共享。付费服务则通过邮件沟通和周刊内容整合，确保了招聘信息的精准触达和周刊的持续运营。\n\n### 适合谁用\n该项目适合需要招聘技术人才的企业和团队，以及正在寻找工作或实习岗位的科技爱好者和程序员。",
+      "degraded": false
+    },
+    {
+      "id": "Crosstalk-Solutions/project-nomad",
+      "owner": "Crosstalk-Solutions",
+      "name": "project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "stars": 37659,
+      "description": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+      "one_liner": "Project NOMAD 是一个自给自足、离线优先的知识和教育服务器，集成了关键工具、知识和人工智能，确保您随时随地获取信息和能力。",
+      "detail_md": "**解决什么问题**\nProject NOMAD 旨在解决在没有互联网连接的情况下获取知识、教育和人工智能辅助的问题。  它通过提供一个自包含的离线优先服务器，使用户能够在紧急情况、离网环境、远程部署、家庭教育以及注重隐私的信息访问场景中，持续获取信息和学习资源。 \n\n**核心功能**\n该项目提供多项核心功能，包括：离线维基百科、医疗参考资料和电子书等信息库；由 Ollama 和 Qdrant 提供支持的本地 AI 助手，具备文档上传和语义搜索（RAG）功能；通过 Kolibri 提供的可跟踪进度的可汗学院课程教育平台；可下载的离线地图；数据加密、编码和分析工具；本地笔记功能；以及系统基准测试和社区排行榜。\n\n**技术亮点**\nProject NOMAD 采用容器化架构，通过 Docker 编排各种服务。其管理界面（Command Center）使用 AdonisJS 6 作为后端，React 19 和 Inertia.js 作为前端。项目利用 Docker-outside-of-Docker (DooD) 模式，允许管理中心管理和协调主机上的其他 Docker 容器。此外，它还支持自动更新核心软件、应用程序和离线内容，并提供 GPU 加速的 AI 推理功能。\n\n**适合谁用**\nProject NOMAD 适用于需要离线访问知识和教育资源的个人和组织。这包括：应急准备和灾难响应人员、在离网或偏远地区工作的人员、进行家庭教育的学生和家长，以及注重隐私并希望在本地访问信息的用户。",
+      "degraded": false
+    },
+    {
+      "id": "yynxxxxx/Codex-X",
+      "owner": "yynxxxxx",
+      "name": "Codex-X",
+      "url": "https://github.com/yynxxxxx/Codex-X",
+      "stars": 3620,
+      "description": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+      "one_liner": "Codex-X 是一个跨平台桌面工具，用于管理 OpenAI Codex 的配置、API、会话和技能。",
+      "detail_md": "**解决什么问题**\n当用户同时使用 Codex 桌面端、CLI、第三方 API 和多套提示词时，配置容易分散在不同文件中，导致管理困难。 Codex-X 旨在将这些高频操作集中到一个桌面界面中，实现可视化管理，避免手动修改文件。 \n\n**核心功能**\nCodex-X 提供提示词注入管理、多供应商/API 切换、本地会话管理、Skills/MCP 管理、配置与登录凭据查看及编辑，以及 Token 用量统计等功能。 它支持内置模板和自定义 Markdown 提示词，并能同步 GitHub 模板。 用户可以管理多个官方 Codex 登录配置和第三方 API，进行连接检测和模型测试。 会话管理功能允许搜索、分组、同步和永久删除本地会话。 \n\n**技术亮点**\n该项目采用 Tauri 2 框架构建，结合 Rust 后端和 React/TypeScript 前端，实现了跨平台桌面应用。 它支持 SQLite 数据库进行本地数据存储，并使用 TOML 和 JSON 进行配置编辑。 项目还具备自动更新机制，支持 macOS、Windows 和 Linux 平台。 \n\n**适合谁用**\nCodex-X 适合 OpenAI Codex 桌面端和 Codex CLI 的用户，特别是那些需要频繁管理提示词模板、切换第三方 API、组织本地会话、管理 Skills/MCP 以及检查配置文件的开发者和技术人员。",
+      "degraded": false
     }
   ]
 }
