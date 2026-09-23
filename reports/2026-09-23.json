@@ -89,6 +89,105 @@
       "one_liner": "`video-use` 项目是一个开源工具，它允许用户通过对话式代理（如 Claude Code）编辑视频，实现自动化剪辑、调色、字幕和动画叠加等功能，无需预设或菜单。",
       "detail_md": "## 解决什么问题\n该项目旨在解决传统视频编辑流程中效率低下、操作复杂的问题，特别是对于大型语言模型（LLM）处理视频内容时的挑战。它通过将视频转换为结构化的文本格式（`takes_packed.md`）和按需生成高密度视觉复合图像（`timeline_view.py`），使 LLM 能够以文本为主要输入进行精确剪辑，从而避免了直接处理大量视频帧的计算开销。\n\n## 核心功能\n`video-use` 的核心功能包括：\n*   **智能剪辑**：自动删除冗余词（如“umm”、“uh”）和片段间的空白，并能根据音频事件（如笑声）保留关键时刻。\n*   **自动调色**：对每个视频片段进行自动色彩校正，支持预设或自定义 FFmpeg 滤镜链。\n*   **音频处理**：在每次剪辑边界应用 30 毫秒的音频淡入淡出，以消除爆音。\n*   **字幕烧录**：支持自定义风格的字幕烧录，例如默认的 2 词大写块。\n*   **动画叠加**：通过并行子代理生成动画叠加，支持 HyperFrames、Remotion、Manim 或 PIL 等工具。\n*   **自评估与持久化**：在向用户展示之前，系统会自评估渲染输出，并在 `project.md` 中持久化会话记忆，以便后续会话继续工作。\n\n## 技术亮点\n*   **文本优先，按需视觉**：LLM 主要通过 `takes_packed.md`（短语级转录）理解视频内容，仅在需要决策时才调用 `timeline_view.py` 生成视觉复合图像。\n*   **分层处理**：将视频编辑流程分解为转录、打包、LLM 推理、EDL 生成、渲染和自评估等阶段，每个阶段都有明确的输入和输出。\n*   **硬性规则保障生产质量**：遵循 12 条不可协商的“硬性规则”，例如字幕最后应用、分段提取后无损拼接、30 毫秒音频淡入淡出等，确保输出的生产级正确性。\n*   **模块化工具集**：提供 `transcribe.py`、`pack_transcripts.py`、`timeline_view.py`、`render.py` 和 `grade.py` 等辅助脚本，实现各项功能。\n*   **可扩展的动画框架**：支持多种动画工具，并通过并行子代理机制提高效率。\n\n## 适合谁用\n该项目适合需要自动化视频编辑的个人和团队，特别是那些希望利用大型语言模型进行内容创作和后期制作的用户。它适用于各种视频内容，包括访谈、教程、旅行日志、蒙太奇和脱口秀等，无需特定预设，提供高度的灵活性和定制性。",
       "degraded": false
+    },
+    {
+      "id": "BuilderIO/agent-native",
+      "owner": "BuilderIO",
+      "name": "agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "stars": 6394,
+      "description": "A framework for building agentic apps",
+      "one_liner": "Agent-Native 是一个面向 agentic 应用的框架，它将 AI 代理与传统 UI 深度融合，实现无缝协作和自动化。",
+      "detail_md": "**解决什么问题**\nAgent-Native 旨在解决传统应用开发中 AI 代理与用户界面（UI）之间割裂的问题。它通过统一的 `action` 定义，让 AI 代理和 UI 能够共享相同的操作逻辑和数据状态，从而消除两者之间的“桥梁”需求。这使得 AI 代理不再是外挂式的，而是应用的核心组成部分，能够检查、解释甚至修改应用本身。\n\n**核心功能**\n该项目提供了一系列核心功能，包括：\n*   **统一的 Action 定义**：一个 `action` 可以同时被 UI、AI 代理、HTTP 端点、MCP/A2A 接口和 CLI 调用。\n*   **模块化框架**：提供经过人工验证的生产级组件，如自动状态同步、SQL 状态与 ORM、认证与治理、实时协作等，避免代理从零开始发明。\n*   **LLM 优先的文档**：为大型语言模型（LLM）提供专门的文档包，包括 `llms.txt` 和 `llms-full.txt`，以及 Markdown 版本的页面，方便代理理解和利用文档。\n*   **丰富的应用模板**：提供多种开箱即用的模板，如内容编辑、幻灯片制作、设计原型、分析仪表盘、邮件客户端等，这些模板展示了 AI 代理与 UI 深度融合的应用场景。\n\n**技术亮点**\nAgent-Native 的技术亮点在于其“Agent-UI 平等”原则，即 AI 代理和人类用户在相同的状态上使用相同的操作。它通过以下方式实现：\n*   **共享 SQL 状态**：UI 和 AI 代理共享相同的 SQL 数据和操作，确保数据一致性。\n*   **双向通信桥接**：例如，在设计模板中，通过注入“桥接”脚本，实现主机与 iframe 中生成原型之间的双向通信，使代理能够实时操作 HTML 元素。\n*   **国际化支持**：通过 `i18n` 机制支持多语言，例如中文（简体和繁体），确保全球用户体验。\n\n**适合谁用**\nAgent-Native 适合希望构建高度自动化、AI 驱动的应用程序的开发者和团队。特别是那些需要 AI 代理深度参与应用逻辑、UI 交互和数据管理的场景，例如：\n*   **需要 AI 辅助内容创作的团队**：如内容模板，AI 代理可以起草、重写和发布内容。\n*   **需要 AI 驱动设计和原型开发的团队**：如设计模板，AI 代理可以生成和编辑交互式 HTML 原型。\n*   **希望将 AI 代理集成到现有工作流中的开发者**：通过其开放的代理协议和模块化设计，可以轻松地将 Agent-Native 的能力集成到各种应用中。\n*   **寻求开源、可定制解决方案的组织**：项目提供完整的源代码，允许用户检查、修改或替换模块以满足特定需求。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 290468,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 为编码代理提供了一套完整的软件开发方法论，通过可组合的技能和指导，确保代理高效工作。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决编码代理在软件开发过程中可能遇到的效率低下、上下文污染、缺乏结构化方法等问题。它通过引入结构化的技能、子代理驱动开发（SDD）和强制性的审批流程，确保代理在开发过程中遵循最佳实践，减少返工，提高开发质量。\n\n**核心功能**\nSuperpowers 的核心功能包括：\n*   **技能系统（Skills）**：模块化、可重用的 AI 指导单元，以 `SKILL.md` 文件形式存储，指导代理完成特定任务。\n*   **子代理驱动开发 (SDD)**：通过控制器代理将任务委托给独立的子代理，每个子代理拥有隔离的上下文，防止上下文污染。\n*   **硬门（Hard-Gate）**：工作流中的同步点，要求用户明确批准后代理才能进入下一阶段，例如在设计阶段。\n*   **可视化伴侣（Visual Companion）**：在架构头脑风暴期间提供基于浏览器的工具，以可视化复杂设计。\n\n**技术亮点**\n该项目采用了一系列技术亮点：\n*   **跨平台兼容性**：通过 Harness Adaptation Layer，Superpowers 可以在多种平台（如 Claude Code, Codex, Gemini CLI, Pi, Devin CLI 等）上运行。\n*   **上下文隔离**：子代理接收其所需的最小上下文，避免上下文窗口污染，提高效率。\n*   **TDD 方法论**：将测试驱动开发（TDD）应用于代码和技能文档，确保质量。\n*   **会话启动钩子（Session-Start Hook）**：在会话开始时注入 `using-superpowers` 引导程序，确保技能自动触发。\n\n**适合谁用**\nSuperpowers 适合希望提高编码代理开发效率和质量的开发者、团队以及企业。特别是那些使用 Claude Code、Codex、Devin CLI 等多种 AI 编码工具的用户，可以通过 Superpowers 获得统一且高效的开发体验。它也适用于需要结构化、可重复的软件开发流程，并希望通过 AI 代理实现自动化和协作的场景。",
+      "degraded": false
+    },
+    {
+      "id": "Open-Dev-Society/OpenStock",
+      "owner": "Open-Dev-Society",
+      "name": "OpenStock",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "stars": 18589,
+      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+      "one_liner": "OpenStock 是一个开源的股票市场平台，提供实时价格、个性化提醒和详细公司洞察，旨在消除金融工具的获取障碍，实现知识共享和社区协作。",
+      "detail_md": "**解决什么问题**\nOpenStock 旨在解决知识被付费墙隐藏、工具被订阅锁定、信息被偏见扭曲以及新手难以贡献的问题。它致力于让技术和金融知识对所有人开放、免费和可访问，并欢迎新手参与社区。\n\n**核心功能**\n该项目提供用户认证、全球搜索和命令面板、个性化股票关注列表、详细的股票信息（包括图表和公司概况）、市场概览（如热力图和新闻）、个性化入职流程  以及通过 AI 个性化的电子邮件自动化功能（如欢迎邮件和每日新闻摘要）。\n\n**技术亮点**\nOpenStock 基于 Next.js (App Router)、TypeScript、Tailwind CSS 和 shadcn/ui 构建。它使用 Better Auth 进行身份验证，MongoDB 进行数据持久化，Finnhub API 获取市场数据，TradingView 嵌入式组件提供图表，并利用 Inngest 处理可靠的后台任务和工作流。AI 驱动的个性化邮件通过 Google Gemini API 实现。\n\n**适合谁用**\n该项目适合希望免费获取市场数据和金融工具的专业人士和学生。它也欢迎所有技能水平的开发者贡献代码，共同构建开放、透明的社区。",
+      "degraded": false
+    },
+    {
+      "id": "strands-agents/harness-sdk",
+      "owner": "strands-agents",
+      "name": "harness-sdk",
+      "url": "https://github.com/strands-agents/harness-sdk",
+      "stars": 7648,
+      "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+      "one_liner": "Strands Agents SDK 是一个开源工具包，用于构建生产级 AI 代理，支持 Python 和 TypeScript 两种语言。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在生产环境中构建和部署 AI 代理时面临的挑战，例如上下文管理、执行限制、可观测性以及多语言 SDK 的统一开发体验。</cite> 特别是，它通过提供可插拔的上下文管理策略来解决代理在长时间对话中“遗忘”信息的问题，并确保代码示例与实际实现保持同步。</cite></cite>\n\n**核心功能**\n*   **多语言支持**：提供 Python 和 TypeScript SDK，方便不同技术栈的开发者使用。</cite>\n*   **可扩展的代理设计**：通过钩子（hooks）、提供者（providers）和管理器（managers）提供灵活的扩展点，支持自定义功能。</cite>\n*   **智能上下文管理**：通过 `ContextManager` 实现消息的截断、摘要和注入策略，优化代理的上下文窗口使用，防止信息丢失。</cite></cite>\n*   **自动化 API 生成与文档验证**：自动从源代码生成 API 参考文档，并验证文档中的代码片段，确保文档的准确性。</cite></cite>\n*   **AI 代理辅助开发**：提供 `docs-writer`、`docs-reviewer` 等 AI 代理技能，辅助文档编写和代码审查。</cite>\n\n**技术亮点**\n*   **基于 Astro 和 Starlight 的文档站点**：使用现代静态站点生成器 Astro 和 Starlight 主题构建文档，提供高性能和 AI 辅助内容创作。</cite>\n*   **模块化上下文策略**：`ContextManager` 采用策略模式，允许用户自定义或扩展上下文处理逻辑，例如截断（`truncate`）、摘要（`summarize`）和骨架化（`skeleton`）等表示形式。</cite></cite>\n*   **严格的开发准则**：遵循“简单、可扩展、可组合、直观、对人类和代理都可访问、拥抱通用标准”等开发原则，确保 SDK 的高质量和一致性。</cite>\n*   **集成测试与验证**：文档中的代码示例通过 `typecheck:snippets` 脚本进行类型检查，确保其有效性。</cite>\n\n**适合谁用**\n*   **AI 代理开发者**：希望构建、测试和部署生产级 AI 代理的开发者，特别是需要处理复杂对话、工具使用和上下文管理的场景。</cite>\n*   **企业级应用开发者**：需要将 AI 代理集成到现有系统，并要求高可靠性、可扩展性和可观测性的企业用户。</cite>\n*   **研究人员和创新者**：对 AI 代理的上下文管理策略、多模态交互和实验性功能感兴趣的团队。</cite>\n*   **文档作者和技术写作者**：希望利用 AI 辅助工具提高文档编写效率和准确性的团队。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 49765,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "本项目提供了一个基于Web的工具，用于管理和可视化Kubernetes集群中的资源，特别是Pod和Deployment。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决Kubernetes资源管理和监控的复杂性问题。它通过提供一个直观的Web界面，使用户能够轻松地查看、操作和理解集群中的Pod和Deployment状态。这对于不熟悉命令行工具或需要快速概览集群状态的用户尤其有用。\n\n**核心功能**\n核心功能包括：\n*   **Pod列表与详情**：展示所有Pod的列表，并能查看每个Pod的详细信息，如状态、IP地址、节点等。\n*   **Deployment列表与详情**：提供Deployment的列表及其详细信息，包括副本数、更新策略等。\n*   **资源操作**：允许用户通过Web界面对Pod和Deployment进行基本操作，例如删除Pod或调整Deployment的副本数。\n*   **Web界面**：提供一个用户友好的图形界面，简化Kubernetes资源的管理和监控。\n\n**技术亮点**\n*   **Go语言后端**：后端使用Go语言开发，利用其并发特性和高性能处理Kubernetes API请求。\n*   **Kubernetes API集成**：通过`client-go`库与Kubernetes API进行交互，实现对集群资源的动态管理。\n*   **Web框架**：可能使用了如Gin或Echo等Go语言Web框架来构建RESTful API和提供静态文件服务。\n*   **前端技术**：前端可能采用现代JavaScript框架（如React, Vue, Angular）来构建交互式用户界面。\n\n**适合谁用**\n*   **Kubernetes管理员**：需要一个直观工具来监控和管理集群资源。\n*   **开发人员**：希望快速查看其应用程序在Kubernetes中的运行状态。\n*   **运维工程师**：需要一个便捷的界面来诊断和解决集群中的问题。\n*   **对Kubernetes不熟悉的用户**：提供一个低门槛的入口，帮助他们理解和操作Kubernetes资源。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 70118,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "本项目旨在通过AI辅助设计工具，帮助开发者和设计师提升AI生成UI的设计质量，解决AI输出界面“看起来像AI生成”的问题，并提供实时编辑和设计审查功能。",
+      "detail_md": "**解决什么问题**\n本项目主要解决AI生成的用户界面（UI）缺乏专业设计感、容易出现“AI生成痕迹”的问题。它帮助用户摆脱AI输出的通用模板和设计反模式，使AI能够生成符合专业设计标准和品牌个性的界面。\n\n**核心功能**\n1.  **实时复制编辑与AI打补丁**：用户可以直接在浏览器中对文本内容进行实时编辑，这些修改会被暂存，并通过AI驱动的补丁机制应用回源代码。\n2.  **Svelte集成与组件注入**：为SvelteKit项目提供专门支持，能够将Live Mode运行时注入SvelteKit应用，并管理Svelte组件的生命周期和属性映射。\n3.  **设计批判与审计**：提供`/critique`和`/audit`技能，结合LLM的主观启发式评估和客观的代码扫描，识别设计反模式、可访问性缺陷和技术债务。\n4.  **项目初始化与设计规范生成**：通过`init`命令，扫描代码库并与用户交互，生成`PRODUCT.md`（产品战略）和`DESIGN.md`（视觉设计）文件，为AI提供设计指导。\n\n**技术亮点**\n1.  **AI驱动的源代码修补**：利用大型语言模型（如Codex或Claude）精确识别并修补源代码中与DOM元素对应的位置，实现手动编辑到代码的自动同步。\n2.  **双流评估模型**：`critique`技能采用LLM进行主观设计评估，同时结合确定性的浏览器注入和代码扫描，确保评估的全面性和准确性。\n3.  **框架无关性与Svelte深度集成**：通过适配器模式，不仅支持通用Web项目，还能深度集成SvelteKit，处理组件注入、属性映射和渲染捕获等复杂场景。\n4.  **可回滚和修复机制**：提供丢弃/回滚手动编辑的功能，并在源代码补丁失败时通过SSE（Server-Sent Event）通知用户进行冲突解决，确保操作的安全性。\n\n**适合谁用**\n本项目适合使用AI编码工具（如Cursor, Claude Code, GitHub Copilot, Gemini CLI等）的设计师、产品经理和工程师。特别是那些希望提升AI生成UI的设计质量，摆脱AI输出的通用性和“AI生成感”，并能精确指导AI进行设计优化的用户。",
+      "degraded": false
+    },
+    {
+      "id": "DeusData/codebase-memory-mcp",
+      "owner": "DeusData",
+      "name": "codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "stars": 44347,
+      "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+      "one_liner": "`codebase-memory-mcp` 是一个高性能代码智能引擎，为AI代理提供代码库的知识图谱，显著减少Token使用和延迟。",
+      "detail_md": "**解决什么问题**\n传统的AI编码助手通过逐文件读取（如`grep`和`cat`）来探索代码，这种方式成本高昂、延迟大，并且无法理解代码的语义关系。`codebase-memory-mcp` 通过构建持久化的SQLite知识图谱，将Token使用量减少约120倍，并将查询延迟降低到亚毫秒级。\n\n**核心功能**\n该项目能够快速索引代码库，例如在3分钟内索引Linux内核。它支持158种编程语言的Tree-sitter语法解析，并为Python、TypeScript等9种语言家族提供混合LSP语义类型解析。它还提供14种MCP工具，支持语义搜索、调用路径追踪、影响分析和架构决策记录管理等。此外，它还具备内置的3D图谱可视化界面。\n\n**技术亮点**\n`codebase-memory-mcp` 以纯C语言实现，作为一个独立的静态二进制文件发布，无需依赖或运行时配置。它通过多阶段索引管道将源代码转换为知识图谱，包括文件发现、AST提取、定义解析、调用解析和语义富化。项目高度重视安全性，每个版本都经过多层安全审计，包括VirusTotal扫描和SLSA Level 3证明。\n\n**适合谁用**\n该项目主要面向AI编码代理（如Claude Code、Cursor、VS Code）的开发者和用户。它通过提供高效、精确的代码智能，帮助AI代理更好地理解和分析代码，从而提高开发效率和代码质量。",
+      "degraded": false
+    },
+    {
+      "id": "harry7557558/spirula-studio",
+      "owner": "harry7557558",
+      "name": "spirula-studio",
+      "url": "https://github.com/harry7557558/spirula-studio",
+      "stars": 647,
+      "description": "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
+      "one_liner": "Spirula Studio 是一个独立的 C++ 3D Gaussian Splatting 训练和重建套件，可处理从原始照片或视频捕获到优化 3D Gaussian 和纹理网格的整个流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 3D 重建领域中，从原始图像或视频数据生成高质量 3D Gaussian Splatting 模型，并进行优化和网格提取的复杂流程问题。它提供了一个统一的解决方案，避免了对 Python 或 PyTorch 等外部依赖的需求。\n\n**核心功能**\n核心功能包括：3D Gaussian Splatting 训练器和重建套件；支持 NVIDIA CUDA 和跨厂商 Vulkan 计算的双后端架构；内置的 SfM (Structure-from-Motion) 流水线；嵌入式神经网络运行时；以及用于数据摄取、重建、训练和可视化的桌面 GUI。\n\n**技术亮点**\n技术亮点包括：单一自包含二进制文件 `spirula`，集成了所有重建工具；无需 Python 或 PyTorch 运行时依赖；支持多语言本地化，包括中文；以及通过异步运行器和工作线程实现 UI 与计算的解耦。\n\n**适合谁用**\n该项目适合需要进行 3D Gaussian Splatting 模型训练、重建和优化的开发者、研究人员以及对 3D 视觉和图形学感兴趣的用户。特别是那些寻求高性能、跨平台且不依赖 Python 生态系统的解决方案的用户。",
+      "degraded": false
+    },
+    {
+      "id": "TNT-Likely/PanWatch",
+      "owner": "TNT-Likely",
+      "name": "PanWatch",
+      "url": "https://github.com/TNT-Likely/PanWatch",
+      "stars": 1403,
+      "description": "盯盘侠 PanWatch · 自托管 AI 盯盘助手，集成 TradingAgents 多 Agent 投资决策 | A股/港股/美股实时监控、持仓管理、智能分析、全渠道推送",
+      "one_liner": "盯盘侠 PanWatch 是一个自托管的 AI 股票助手，提供实时市场监控、技术分析、多账户投资组合管理和模拟交易功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在为个人投资者提供一个私有、AI 原生的投资助手。它解决了传统交易平台无法满足的个性化交易风格理解、数据隐私保护以及多市场实时监控的需求。通过自托管部署，确保用户持仓数据不经过任何第三方。\n\n**核心功能**\n核心功能包括智能 Agent 系统，如盘前分析、盘中监测、盘后日报和新闻速递，这些 Agent 会在特定时间触发并提供策略或提醒。它还提供专业的股票技术分析，涵盖趋势、动量、量价分析和形态识别等多种指标。项目支持 A 股、港股、美股等多市场实时行情和多账户管理，并通过 Telegram、企业微信等渠道进行全渠道通知。\n\n**技术亮点**\n盯盘侠采用 FastAPI 作为后端框架，React 18、TypeScript 和 Tailwind CSS 构建前端。它集成了 `TradingAgents` 多 Agent 投资决策框架，实现深度分析。通过 Docker 一键部署，支持本地 SQLite 存储，并兼容 OpenAI、DeepSeek 等多种 AI 服务商。\n\n**适合谁用**\n该项目适合寻求数据隐私的个人投资者、需要多市场实时行情和技术分析的活跃交易者，以及希望利用 AI 进行投资决策的用户。特别是那些希望通过自托管方式管理投资组合，并接收智能分析和异动提醒的用户。",
+      "degraded": false
     }
   ]
 }
