@@ -188,6 +188,72 @@
       "one_liner": "PanWatch 是一个自托管的 AI 股票助手，提供实时市场监控、智能分析和多账户管理。",
       "detail_md": "## 解决什么问题\nPanWatch 旨在解决个人投资者在多市场（A股、港股、美股）进行投资时，面临的数据隐私、实时监控、智能分析和多账户管理等挑战。  它通过自托管部署确保用户持仓数据不经过任何第三方，保护数据隐私。  同时，它利用 AI 理解用户的交易风格、投资目标和风险承受能力，提供个性化建议，而非简单的指标堆砌。 \n\n## 核心功能\nPanWatch 的核心功能包括智能 Agent 系统、专业技术分析、多市场多账户管理以及全渠道通知。 \n*   **智能 Agent 系统**：包含盘前分析、盘中监测、盘后日报和新闻速递等 Agent，在不同时机提供策略、监控异动和复盘分析。  它还集成了 TradingAgents 框架进行深度分析，通过多分析师辩论形成投资决策。 \n*   **专业技术分析**：自动计算和监控趋势指标（如 MA、MACD、布林带）、动量指标（如 RSI、KDJ）以及量价分析和形态识别。 \n*   **多市场 & 多账户**：支持 A 股、港股、美股实时行情，并能独立管理多个券商账户，汇总展示总资产。 \n*   **全渠道通知**：支持 Telegram、企业微信、钉钉、飞书、Bark 等多种通知渠道，及时推送价格提醒和智能分析结果。 \n\n## 技术亮点\n该项目采用前后端分离架构，后端使用 FastAPI，前端使用 React 18、TypeScript、Tailwind CSS 和 shadcn/ui。  它通过 Docker 提供一键部署，支持本地 SQLite 存储，确保数据私有。  AI 集成方面，兼容 OpenAI SDK，支持 OpenAI、智谱、DeepSeek、Ollama 等多种 AI 服务商。  此外，系统还通过 `src/collectors/` 模块从 Akshare、efinance 等数据源采集行情数据。 \n\n## 适合谁用\nPanWatch 适合寻求数据隐私的个人投资者、需要多市场实时监控的活跃交易者、以及希望利用 AI 进行自动化分析和决策的投资者。  特别是那些希望通过自托管方式管理投资数据，并利用 AI 辅助投资决策的用户。",
       "degraded": false
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "stars": 55981,
+      "description": "Learn it. Build it. Ship it for others.",
+      "one_liner": "这个项目是一个免费、开源的AI工程课程，旨在从底层数学原理构建AI算法，并产出可重用的AI工具。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决当前AI学习材料零散、缺乏系统性的问题，帮助学习者深入理解AI算法的底层机制，而非仅仅停留在调用API的层面。它通过从数学基础开始构建每一个核心AI组件，如反向传播、分词器、注意力机制和智能体循环，使学习者在接触PyTorch等框架时能理解其内部工作原理。\n\n**核心功能**\n项目提供20个阶段、503节课程，涵盖Python、TypeScript、Rust、Julia四种语言。每节课程都遵循“问题-数学推导-代码实现-测试-产出可重用工件”的循环。这些工件包括提示词（Prompts）、技能（Skills）、智能体（Agents）和MCP服务器（Model Context Protocol Servers），它们是课程的主要产出，可直接用于日常工作流。\n\n**技术亮点**\n该课程强调从零开始构建AI算法，先用原始数学实现，再过渡到生产级库。它产出的工件是标准化的，例如Prompts是带有YAML头部的Markdown文件，Skills是封装的逻辑或“心智模型”，Agents定义了自主循环的执行逻辑，而MCP Servers则实现了模型上下文协议，允许LLM与数据和工具进行安全交互。项目还提供了智能体技能，如`/find-your-level`用于知识评估和个性化学习路径规划，`/check-understanding`用于阶段性测验。\n\n**适合谁用**\n该项目适合希望深入理解AI工作原理，而不仅仅是调用API的开发者。它面向能够编写代码（任何语言，Python更佳）的学习者。无论是想从数学基础开始系统学习AI，还是希望将概念代码转化为可重用工具的工程师，都能从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "vectorize-io/hindsight",
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "stars": 27001,
+      "description": "Hindsight: Agent Memory That Learns",
+      "one_liner": "Hindsight 自动检测输入语言，并以该语言响应，保留事实和实体。",
+      "detail_md": "**解决什么问题**\nHindsight 解决了在多语言环境中处理信息时，传统系统可能存在的语言障碍和信息失真问题。它确保了事实、实体和反射响应在原始语言中得到保留，无需翻译成英文，从而避免了语义损失和不准确性。\n\n**核心功能**\nHindsight 的核心功能包括自动检测输入内容的语言。它能够以原始语言提取事实，从而保留细微差别和含义。此外，它以原生脚本存储实体，并以相同的语言响应查询。\n\n**技术亮点**\n该项目的技术亮点在于其多语言支持机制。Hindsight 能够优雅地处理混合语言内容，并在适当的情况下保留两种语言。其多语言支持完全依赖于底层大型语言模型 (LLM) 的语言能力，只要 LLM 支持，Hindsight 就能工作。\n\n**适合谁用**\nHindsight 适合需要处理多语言数据并希望在原始语言中保留信息完整性的开发者和企业。例如，处理全球客户支持、多语言内容管理或跨文化团队协作的场景都将受益于 Hindsight 的多语言能力。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/Model-Optimizer",
+      "owner": "NVIDIA",
+      "name": "Model-Optimizer",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "stars": 3902,
+      "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+      "one_liner": "NVIDIA Model Optimizer (ModelOpt) 是一个统一的库，用于优化深度学习模型以加速推理。",
+      "detail_md": "**解决什么问题**\nModelOpt 旨在解决深度学习模型在部署时面临的性能瓶颈，通过应用量化、剪枝、蒸馏、稀疏化和推测解码等技术，减小模型大小并提高推理速度。  它支持将优化后的模型部署到 TensorRT-LLM、TensorRT 和 vLLM 等推理框架。 \n\n**核心功能**\nModelOpt 提供了一系列模型优化技术，包括 PyTorch 和 ONNX 模型的量化（PTQ/QAT）、模型剪枝（如 Minitron）、推测解码（如 EAGLE/Medusa）和稀疏化。    它还包含用于提交优化作业到 Slurm 集群或本地 Docker 环境的启动器工具。 \n\n**技术亮点**\n该项目支持 PyTorch 和 ONNX 框架，并与 HuggingFace Transformers 和 Diffusers 等库集成。   它利用 Triton 内核加速量化操作，可提升约 40% 的性能。  此外，它还集成了 AI Agent Skills，通过 Claude 和 MCP 进行 AI 辅助优化。 \n\n**适合谁用**\nModelOpt 适用于希望优化其深度学习模型以提高推理性能的开发者和研究人员。  特别是那些使用 PyTorch 或 ONNX 模型，并计划将其部署到 NVIDIA 推理平台（如 TensorRT-LLM、vLLM）的用户。",
+      "degraded": false
+    },
+    {
+      "id": "FxEmbed/FxEmbed",
+      "owner": "FxEmbed",
+      "name": "FxEmbed",
+      "url": "https://github.com/FxEmbed/FxEmbed",
+      "stars": 5281,
+      "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+      "one_liner": "FxEmbed 增强社交媒体链接在 Discord、Telegram 等平台上的嵌入效果，支持视频、投票、翻译等丰富内容。",
+      "detail_md": "**解决什么问题**\nFxEmbed 旨在解决社交媒体链接（如 X/Twitter、Bluesky）在 Discord、Telegram 等平台分享时，无法显示视频、图片、投票、引用和翻译等丰富内容的问题。  它通过将原始链接转换为富媒体嵌入，提升用户体验。 \n\n**核心功能**\nFxEmbed 的核心功能包括：\n*   **富媒体嵌入**：支持嵌入视频、GIF、投票、引用帖子和多图内容。 \n*   **多平台支持**：目前支持 X/Twitter 和 Bluesky，未来计划支持更多平台。 \n*   **链接修饰符**：通过在 URL 前添加特定前缀（如 `fx`、`fixup`）或子域名（如 `d.`、`t.`、`i.`、`g.`、`m.`），可以控制嵌入行为，例如直接显示媒体、仅显示文本、强制即时预览或画廊模式。  \n*   **翻译功能**：支持将帖子内容翻译成多种语言。 \n*   **公共 API**：提供 API 接口，允许开发者在自己的项目中使用 FxEmbed 的功能。 \n*   **RSS/Atom 订阅**：为 X/Twitter 和 Bluesky 个人资料提供 RSS 2.0 和 Atom 订阅源。 \n\n**技术亮点**\n该项目基于 Cloudflare Worker 构建，利用边缘计算的优势。  它使用 Hono 作为 Web 框架，TypeScript 进行类型安全开发，并采用 esbuild 进行快速打包。  核心的 `@fxembed/atmosphere` 包抽象了不同社交媒体平台的数据抓取和标准化逻辑。  项目还实现了领域架构（Realm Architecture），根据请求主机名将逻辑路由到不同的服务（如 Twitter、Bluesky、API）。 \n\n**适合谁用**\nFxEmbed 适合希望在 Discord、Telegram 等支持链接预览的平台上分享 X/Twitter 和 Bluesky 链接时，能够显示完整富媒体内容的用户。  也适合开发者通过其公共 API 或自托管解决方案，将富媒体嵌入功能集成到自己的应用中。",
+      "degraded": false
+    },
+    {
+      "id": "julyx10/lap",
+      "owner": "julyx10",
+      "name": "lap",
+      "url": "https://github.com/julyx10/lap",
+      "stars": 2707,
+      "description": "An offline-first photo manager for large local libraries",
+      "one_liner": "Lap：一款本地优先、AI 驱动的桌面照片管理器，专为大型本地媒体库设计。",
+      "detail_md": "**解决什么问题**\nLap 旨在解决传统云端照片服务带来的隐私问题和文件锁定问题，它允许用户在本地设备上管理其庞大的照片和视频库，无需强制上传到云端，从而确保用户对其数据的完全控制。   它还优化了对十万级以上文件库的流畅浏览和整理，解决了大型本地媒体库管理效率低下的痛点。 \n\n**核心功能**\nLap 提供多种核心功能，包括灵活的图库浏览（时间线、文件夹、地点、相机、镜头、标签、收藏、评分、主题和人脸筛选），  智能相册、收藏集托盘、本地 AI 搜索（文本搜索、视觉相似搜索、主题、人脸聚类，支持多语言），  以及对 Apple Live Photos 的支持。  此外，它还具备文件夹优先工作流、审阅与对比工具、重复文件清理工具和内置编辑功能。 \n\n**技术亮点**\nLap 采用 Tauri + Rust 作为核心后端，  结合 Vue + Vite + Tailwind CSS 构建前端界面，  并使用 SQLite 进行数据存储。  它支持 60 多种照片、RAW 和视频格式，  并集成了 LibRaw、libheif、libjpeg-turbo、FFmpeg 等关键库进行媒体处理。  本地 AI 功能通过 ONNX Runtime、CLIP 和 InsightFace 实现，支持图像-文本相似度搜索和人脸检测与识别。 \n\n**适合谁用**\nLap 适合需要管理大量本地照片和视频的用户，包括家庭用户、摄影师以及任何重视数据隐私、不希望将媒体文件上传到云端的个人。   它特别适合那些拥有十万级以上文件库，并希望获得流畅浏览和强大搜索整理功能的用户。",
+      "degraded": false
+    },
+    {
+      "id": "leejet/stable-diffusion.cpp",
+      "owner": "leejet",
+      "name": "stable-diffusion.cpp",
+      "url": "https://github.com/leejet/stable-diffusion.cpp",
+      "stars": 7162,
+      "description": "Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++",
+      "one_liner": "`stable-diffusion.cpp` 是一个纯 C/C++ 实现的扩散模型推理项目，支持多种模型和后端。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个轻量级、无外部依赖的解决方案，用于在各种硬件后端（如 CPU、CUDA、Vulkan、Metal 等）上高效运行扩散模型，包括图像生成和视频生成模型。   它解决了在不同平台上部署和运行复杂 AI 模型时的兼容性和性能问题。 \n\n**核心功能**\n`stable-diffusion.cpp` 的核心功能包括支持多种扩散模型，如 Stable Diffusion 1.x/2.x、SDXL、SD3、Flux、WAN 视频模型以及 MiniMax-H3 等。  它还支持 IP-Adapter、Control Net、LoRA 等高级功能，以增强图像生成和编辑能力。  项目提供了多种采样方法和量化类型，以平衡生成质量和内存使用。  \n\n**技术亮点**\n该项目基于 `ggml` 库，采用纯 C/C++ 实现，具有超轻量级和无外部依赖的特点。  它支持多种后端，包括 CPU (支持 AVX, AVX2, AVX512)、CUDA、Vulkan、Metal、OpenCL 和 SYCL。  项目还实现了 Flash Attention 优化内存使用，并支持将生成参数嵌入 PNG 输出，与 `stable-diffusion-webui` 兼容。  \n\n**适合谁用**\n`stable-diffusion.cpp` 适合需要将扩散模型集成到 C/C++ 应用程序中、在资源受限设备上运行模型、或寻求高性能和跨平台兼容性的开发者和研究人员。   它也适用于希望利用其丰富模型支持和高级功能的 AI 艺术创作者和研究者。",
+      "degraded": false
     }
   ]
 }
