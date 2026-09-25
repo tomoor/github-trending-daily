@@ -155,6 +155,116 @@
       "one_liner": "`stable-diffusion.cpp` 是一个纯 C/C++ 实现的扩散模型推理库，支持多种图像和视频生成模型，并针对 CPU 和 GPU 进行了优化。",
       "detail_md": "**解决什么问题**\n该项目旨在提供一个轻量级、无外部依赖的解决方案，用于在纯 C/C++ 环境中高效执行扩散模型推理。它解决了在不同硬件平台（包括 CPU、CUDA、Vulkan、Metal 等）上部署和运行各种 Stable Diffusion 模型（如 SD1.x、SDXL、FLUX、WAN 等）的挑战。\n\n**核心功能**\n核心功能包括文本到图像 (Text-to-Image, T2I) 生成、图像到图像 (Image-to-Image, I2I) 生成 以及视频生成 (Video Generation)。它支持多种模型架构，如 SD、FLUX、WAN、MiniMax-H3、HunyuanVideo 1.5 等。项目还提供了 LoRA、LCM、TAESD、ESRGAN 等高级功能支持，以及 GGUF 权重格式转换。\n\n**技术亮点**\n技术亮点包括基于 `ggml` 的纯 C/C++ 实现，支持多种后端（CPU、CUDA、Vulkan、Metal、OpenCL、SYCL）。它通过 Flash Attention 优化内存使用  和 VAE tiling 减少高分辨率图像/视频的显存占用。对于视频生成，它利用 3D 因果卷积和时间注意力机制确保时间一致性。\n\n**适合谁用**\n该项目适合需要高性能、低资源消耗的开发者和研究人员，尤其是在边缘设备或对性能有严格要求的场景下。它也适合希望在 C/C++ 环境中集成和部署扩散模型的用户，以及对图像和视频生成技术感兴趣的开发者。",
       "degraded": false
+    },
+    {
+      "id": "paperclipai/paperclip",
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "stars": 83613,
+      "description": "The open-source app everyone uses to manage agents at work",
+      "one_liner": "Paperclip 是一个自主代理编排平台，用于管理 AI 代理执行、任务分配和多公司工作流。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 代理在企业环境中协作和管理的问题。  它提供了一个集中式控制平面，用于调度代理运行、跟踪执行状态、管理访问控制以及协调人类操作员和自主代理之间的工作。  此外，它还解决了代理崩溃或任务停滞时，系统不会自动修复，而是通过仪表板和报告突出显示问题，由人类或专门的代理进行恢复的问题。 \n\n**核心功能**\nPaperclip 的核心功能包括公司管理、代理管理、任务管理和成本跟踪。  它允许用户创建公司、定义组织结构、配置代理及其行为。  任务通过分层管理，确保所有工作都与公司目标相关联。  平台还提供成本跟踪和预算控制功能，代理会报告令牌使用情况，并在达到预算阈值时自动暂停。 \n\n**技术亮点**\n该项目采用三层架构设计，包括前端（React, Vite）、后端（Express, Node.js）和数据库（Drizzle ORM, PostgreSQL）。  它支持插件扩展架构，允许添加新的适配器类型、知识库和外部收入跟踪等功能，而无需修改核心系统。  此外，它还强调了“控制平面而非执行平面”的原则，即 Paperclip 负责编排，而代理在其他地方运行。 \n\n**适合谁用**\nPaperclip 适合需要管理和协调大量 AI 代理以完成复杂任务的组织和个人。  特别是那些希望通过 AI 代理实现“自主 AI 公司”愿景的用户，他们可以利用 Paperclip 来定义公司目标、创建虚拟组织结构并分配任务，从而实现 100 倍的工作效率提升。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 36773,
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "one_liner": "该项目提供了一个结构化的多阶段系统，用于将遗留代码库（包括 COBOL、Java、C++ 和 .NET）迁移到现代架构。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决遗留代码现代化的问题，通过结构化的多阶段流程，将旧有系统迁移到现代架构，从而降低行为漂移的风险。它支持多种遗留技术，如 COBOL、Java、C++ 和 .NET。\n\n**核心功能**\n核心功能包括：\n*   **发现与评估**：通过 `/modernize-preflight` 检查环境准备情况，`/modernize-assess` 生成量化清单，`/modernize-map` 创建交互式拓扑图。\n*   **逻辑提取**：`/modernize-extract-rules` 将业务逻辑提取为“规则卡片”。\n*   **规划与审批**：`/modernize-brief` 将所有发现的工件综合为分阶段计划，作为人工审批的关卡。\n*   **执行**：根据策略，使用 `/modernize-transform` (重写)、`/modernize-reimagine` (全新构建) 或 `/modernize-uplift` (版本升级)。\n\n**技术亮点**\n该项目采用多代理编排，利用专业子代理处理特定领域任务，并通过 JavaScript 协调器管理复杂的、长时间运行的任务。现代化过程会生成标准化的工件，存储在 `analysis/` 和 `modernized/` 目录中。\n\n**适合谁用**\n该项目适合需要将遗留代码库（如 COBOL、Java、C++、.NET）迁移到现代架构的组织和开发者。特别是那些希望通过结构化、低风险的方式进行代码现代化，并利用自动化工具和人工审批相结合的团队。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 269445,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供一套AI代理技能，旨在提升软件开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助开发中的常见问题，例如代理与用户之间的理解偏差、AI输出冗长、代码质量不佳 以及代码库结构混乱。它通过引入“拷问”会话、共享语言（`CONTEXT.md`）、测试驱动开发（TDD） 和代码架构改进 等方法来解决这些痛点。\n\n**核心功能**\n项目提供多种核心技能，包括：\n*   **`/grill-with-docs`**：通过交互式“拷问”会话，帮助用户与AI代理达成共识，并记录领域模型和决策。\n*   **`/tdd`**：支持测试驱动开发流程，确保代码质量。\n*   **`/improve-codebase-architecture`**：扫描代码库以发现可优化的“深化机会”。\n*   **`/triage`**：管理和分类传入的问题，使其为AI代理做好准备。\n*   **`/ask-matt`**：作为技能路由器，帮助用户找到适合当前情况的技能或流程。\n\n**技术亮点**\n*   **模块化与可组合性**：技能被设计为小型、易于适应和可组合的单元。\n*   **共享语言**：通过`CONTEXT.md`文件建立项目特定的通用语言，减少AI代理的冗长输出并提高效率。\n*   **用户调用与模型调用**：技能分为用户手动调用和AI模型自动调用两种类型，以适应不同工作流。\n*   **Claude Code插件集成**：项目技能可作为Claude Code插件安装，实现自动更新和管理。\n\n**适合谁用**\n该项目适用于希望利用AI代理提升软件开发效率和代码质量的工程师和团队。特别是那些在使用AI辅助开发过程中遇到沟通障碍、代码质量问题或架构维护挑战的用户。它也适合希望通过结构化方法来规划、实施和维护代码库的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 178098,
+      "description": "Public repository for Agent Skills",
+      "one_liner": "该项目提供了一套全面的技能，旨在帮助开发者高效地使用 Claude API 和 Anthropic SDK 构建、调试和优化应用程序。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者在使用 Claude API 和 Anthropic SDK 时遇到的各种挑战，包括多语言开发、API 集成、工具使用、模型迁移、性能优化和错误处理等问题。它通过提供结构化的文档和代码示例，帮助开发者快速理解和应用 Claude 的各项功能。\n\n**核心功能**\n核心功能包括：提供多语言（Python, TypeScript, Go, Java, Ruby, PHP, C#, cURL）的 Claude API 使用指南和代码示例；支持工具使用和代理执行，包括自动化的 SDK 工具运行器和手动循环实现；提供提示缓存和优化策略，以提高 API 性能和降低成本；支持消息批处理和文件 API，用于处理大规模异步工作负载；以及提供模型迁移指南和错误代码参考。\n\n**技术亮点**\n技术亮点包括：通过 YAML frontmatter 定义技能激活触发器，实现基于代码分析和用户意图的智能文档路由；采用渐进式披露机制，根据需要加载文档内容，以优化上下文窗口使用；强制执行官方语言 SDK 命名空间和方法，确保跨语言实现的一致性；支持自适应思考 (`thinking: {type: \"adaptive\"}`)，以处理复杂的推理任务；以及提供服务器端和客户端 SDK 中间件的拒绝回退机制，以提高 API 调用的鲁棒性。\n\n**适合谁用**\n该项目适合使用 Claude API 和 Anthropic SDK 的开发者、工程师和团队。特别是那些需要构建、调试、优化基于 Claude 的应用程序，或者需要将现有系统迁移到新模型，以及希望提高开发效率和代码质量的用户。",
+      "degraded": false
+    },
+    {
+      "id": "androoAGI/starnet",
+      "owner": "androoAGI",
+      "name": "starnet",
+      "url": "https://github.com/androoAGI/starnet",
+      "stars": 309,
+      "description": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+      "one_liner": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - b…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nA living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+      "degraded": true
+    },
+    {
+      "id": "derv82/wifit3",
+      "owner": "derv82",
+      "name": "wifit3",
+      "url": "https://github.com/derv82/wifit3",
+      "stars": 718,
+      "description": "Wifite but USB-only & cross-platform.",
+      "one_liner": "Wifit3 是一个用户态 802.11 审计工具，通过 PyUSB 直接与 USB Wi-Fi 网卡通信，提供交互式终端用户界面。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个用户态的 802.11 审计工具，用于直接与 USB Wi-Fi 网卡进行通信，而不是依赖 `aircrack-ng` 封装或 `Scapy` 等工具。  它解决了传统 Wi-Fi 审计工具可能存在的局限性，并提供了一个更直接、更灵活的硬件交互方式。 \n\n**核心功能**\nWifit3 的核心功能包括：\n*   **直接硬件交互**：通过 PyUSB 直接与 USB Wi-Fi 网卡通信，实现对硬件的精细控制。  \n*   **芯片组驱动移植**：支持将 Linux 内核或供应商驱动程序移植到 Python 用户态，每个芯片组都有独立的驱动实现。  \n*   **多种攻击模式**：提供多种 Wi-Fi 攻击活动，例如 ARP 重放、ChopChop、自动解除认证 (AutoDeauth)、PMKID 提取、WPS PIN 攻击和邪恶双子 (EvilTwin) 攻击。 \n*   **交互式终端用户界面 (TUI)**：基于 Textual 框架构建，提供直观的屏幕（如 Splash、Scanner 和 Focus 视图）进行设备管理、AP 扫描和攻击配置。  \n\n**技术亮点**\n*   **Python 用户态驱动**：将通常在内核中运行的 Wi-Fi 驱动程序移植到 Python 用户态，提高了开发和调试的灵活性。 \n*   **模块化芯片组架构**：每个芯片组驱动程序都是独立的，避免了代码复用导致的回归问题，并支持热插拔设备。  \n*   **严格的移植方法论**：遵循详细的移植指南，包括从 C 源代码直接翻译、保持 C 语言命名、以及通过冷启动 PCAP 验证每个里程碑。  \n*   **Textual TUI 框架**：利用 Textual 库构建响应式和交互式的终端界面，提供良好的用户体验。  \n\n**适合谁用**\nWifit3 适合需要进行 802.11 网络审计的专业人员、安全研究员和爱好者。  特别是那些希望深入了解 Wi-Fi 硬件交互、开发自定义攻击或移植新芯片组驱动的用户。  由于涉及直接的硬件操作，项目警告存在硬件损坏的风险，因此建议在可承受损失的硬件上进行测试。",
+      "degraded": false
+    },
+    {
+      "id": "kelseyhightower/kubernetes-the-hard-way",
+      "owner": "kelseyhightower",
+      "name": "kubernetes-the-hard-way",
+      "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+      "stars": 50028,
+      "description": "Bootstrap Kubernetes the hard way. No scripts.",
+      "one_liner": "本项目通过手动方式从零开始搭建 Kubernetes 集群，旨在深入理解其核心组件和工作原理。",
+      "detail_md": "**解决什么问题**\n本项目解决了自动化工具掩盖的 Kubernetes 内部机制不透明的问题。通过“硬核”方式手动部署，用户可以深入了解 Kubernetes 各组件如何协同工作，以及它们之间的依赖关系，从而更好地进行故障排除和优化。\n\n**核心功能**\n核心功能包括：手动配置证书颁发机构 (CA) 和生成 TLS 证书；生成 Kubernetes 认证配置文件 (kubeconfig)；引导 etcd 集群；以及引导 Kubernetes 控制平面和工作节点。此外，还包括配置 `kubectl` 远程访问和 Pod 网络路由。\n\n**技术亮点**\n技术亮点在于其对安全基础设施的详细处理，包括 PKI 基础设施的建立、TLS 证书的生成与分发，以及认证配置文件的创建。项目还强调了数据静态加密的重要性，并提供了详细的步骤来配置这些安全组件。\n\n**适合谁用**\n本项目适合希望深入理解 Kubernetes 基础原理和组件之间如何协同工作的技术人员。它不适用于寻求自动化部署工具的用户，而是为那些希望通过手动实践来掌握 Kubernetes 架构的工程师和学习者设计。",
+      "degraded": false
+    },
+    {
+      "id": "shy3130/tick-stock-panel",
+      "owner": "shy3130",
+      "name": "tick-stock-panel",
+      "url": "https://github.com/shy3130/tick-stock-panel",
+      "stars": 5051,
+      "description": "TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源",
+      "one_liner": "Tick Stock Panel 是一个自托管、零运维的 A 股量化工作台，集选股、监控、回测、AI 分析于一体。",
+      "detail_md": "**解决什么问题**\n本项目旨在为个人散户和量化爱好者提供一个端到端的解决方案，解决 A 股市场数据获取、策略筛选、回测验证、实时监控以及智能分析的痛点。   它通过本地化部署，避免了对第三方服务的过度依赖，并强调客观分析，不提供直接投资建议。 \n\n**核心功能**\n*   **选股引擎与策略回测**：支持 18 种内置策略、自定义信号和 AI 生成逻辑，能够毫秒级扫描全 A 股，并进行 T+1、滑点、费用等约束下的策略回测。 \n*   **实时监控与异动告警**：提供多条件监控（价格、信号、异常波动），支持语音播报和飞书/企业微信推送。  \n*   **AI 辅助分析**：通过大型语言模型（LLMs）对个股进行技术、基本面、财务和消息面的四维分析，并能自动生成市场复盘报告。   \n*   **市场情绪与连板梯队**：跟踪市场情绪周期和连板梯队，帮助用户理解市场投机周期。 \n\n**技术亮点**\n项目采用现代高性能技术栈，后端基于 Python 3.11+ 和 FastAPI，数据处理使用 Polars，存储采用 DuckDB/Parquet。  前端则使用 React 18、Vite 和 Tailwind CSS。  AI 分析服务通过 `ai_provider.py` 抽象层支持多种 LLM 后端，并具备输入净化功能，确保分析的客观性。  \n\n**适合谁用**\n本项目适合对 A 股市场有深入研究需求，希望通过量化工具提升分析效率的个人散户和量化爱好者。  它尤其适合那些希望自托管、对数据隐私有要求，并愿意进行一定配置和二次开发的进阶用户。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 70956,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个为 AI 编码工具设计的系统，旨在通过共享词汇和专业设计知识解决 AI 生成内容中的设计缺陷问题。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型 (LLM) 在生成设计时常出现的“AI Slop”问题，即 LLM 倾向于生成可预测、通用且存在设计缺陷的内容，例如使用 Inter 字体、紫蓝色渐变和嵌套卡片等。  它通过提供一个设计技能系统来帮助 AI 编码工具生成更高质量、更符合设计规范的 UI。 \n\n**核心功能**\nImpeccable 包含一个核心技能 (`impeccable`)，提供 23 个用户可调用的命令（例如 `/impeccable polish`、`/impeccable audit`）用于转换 UI。  它还拥有 46 条确定性检测规则和 LLM 专属的批判性检查功能，用于识别设计反模式。  此外，它还提供“实时模式”（Live Mode），一个基于浏览器的可视化迭代系统，用于元素选择和基于 HMR 的变体生成。  系统通过 `PRODUCT.md` 和 `DESIGN.md` 文件获取项目的设计上下文，并根据“品牌”或“产品”注册调整设计默认值。 \n\n**技术亮点**\n该项目采用“单一事实来源”架构，内容以通用格式编写，然后转换为特定于提供商的输出，以支持多种 AI 工具。  其构建系统 (`scripts/build.js`) 负责生成计数、验证文本内容，并进行多提供商转换。  反模式检测引擎 (`cli/engine/detect-antipatterns.mjs`) 是一个确定性引擎，能够识别“AI slop”和设计质量问题，并支持多种环境。 \n\n**适合谁用**\nImpeccable 适合使用 AI 编码工具进行前端开发的设计师和开发者，特别是那些希望确保 AI 生成的 UI 符合特定设计系统和品牌规范的用户。  它也适用于需要自动化设计提醒和检查，以在代理编辑会话期间保持设计质量的团队。",
+      "degraded": false
+    },
+    {
+      "id": "openbao/openbao",
+      "owner": "openbao",
+      "name": "openbao",
+      "url": "https://github.com/openbao/openbao",
+      "stars": 7544,
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "one_liner": "OpenBao 是一个开源的、社区驱动的身份型秘密和加密管理系统，旨在安全存储、管理和分发敏感数据。",
+      "detail_md": "### 解决什么问题\n现代系统需要访问大量秘密，如数据库凭据、API 密钥等，管理这些秘密的访问权限、密钥轮换、安全存储和详细审计日志非常困难。  OpenBao 通过集中管理这些凭据来解决凭据蔓延问题，确保用户、应用程序和系统经过身份验证和明确授权才能访问资源，并提供审计跟踪。 \n\n### 核心功能\nOpenBao 提供安全秘密存储、动态秘密生成、数据加密、租约与续订以及撤销等核心功能。  它能将任意键/值秘密加密存储，并能按需生成 AWS 或 SQL 数据库等系统的动态秘密。  OpenBao 还可以作为加密服务，在不存储数据的情况下进行加密和解密。  所有秘密都附带租约，到期后会自动撤销，并支持手动撤销单个或整棵秘密树。  此外，OpenBao 还支持多租户的命名空间功能，允许在单个实例中创建逻辑隔离的环境。 \n\n### 技术亮点\nOpenBao 采用 Go 语言开发，具有模块化插件架构，核心组件包括 `Core` 结构体、`Router`、`TokenStore` 和 `ExpirationManager`。  它使用安全屏障对所有写入存储的数据进行 AES-GCM 加密，并支持 Raft 集成存储实现高可用性。   OpenBao 还支持多种认证方法和 ACL 策略，以实现细粒度的访问控制。  \n\n### 适合谁用\nOpenBao 适用于需要安全管理、存储和分发敏感数据的开发者、IT 技术人员、IT 管理员、系统工程师、DevOps 工程师和安全专家。  尤其适合那些希望通过集中化解决方案解决凭据蔓延问题，并需要细粒度访问控制和详细审计跟踪的组织。",
+      "degraded": false
     }
   ]
 }
