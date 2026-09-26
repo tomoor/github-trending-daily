@@ -177,6 +177,105 @@
       "one_liner": "OpenBao 是一个开源的、社区驱动的秘密管理系统，用于安全地存储、管理和分发敏感数据，如 API 密钥、密码和证书。",
       "detail_md": "### 解决什么问题\nOpenBao 旨在解决现代系统中管理大量敏感数据（如数据库凭证、外部服务 API 密钥、服务间通信凭证等）的复杂性问题。它通过提供强大的加密服务来确保敏感数据的安全，并严格控制访问权限。\n\n### 核心功能\nOpenBao 的核心功能包括：\n*   **安全秘密存储**：将任意键/值秘密加密存储到持久化存储中。\n*   **动态秘密**：按需生成 AWS 或 SQL 数据库等系统的秘密，并在租约到期后自动撤销。\n*   **数据加密**：提供传输引擎，用于应用程序级别的加密即服务，OpenBao 不存储数据本身。\n*   **租约和续订**：所有秘密都附带租约，OpenBao 会在租约结束时自动撤销秘密，客户端可以通过 API 续订租约。\n*   **撤销**：支持撤销单个秘密或秘密树，例如特定用户读取的所有秘密或特定类型的所有秘密。\n*   **多租户支持**：通过命名空间功能，为团队、组织或应用程序提供独立的逻辑分区，实现强大的多租户和细粒度隔离。\n\n### 技术亮点\nOpenBao 是一个模块化的 Go 应用程序，具有插件架构。它采用分层存储架构，所有写入操作在到达物理后端之前都会经过安全屏障（AES-GCM）加密。项目遵循语义化版本控制，并积极开发，定期发布测试版和稳定版。OpenBao 的文档网站使用 Docusaurus 构建，支持本地搜索和版本化文档。\n\n### 适合谁用\nOpenBao 适用于需要安全管理和分发敏感数据的开发者、IT 技术人员、IT 管理员、系统工程师、DevOps 工程师和安全专家。它特别适合那些需要对 API 密钥、加密密钥、密码和证书等秘密进行严格访问控制、审计和自动化管理的组织。",
       "degraded": false
+    },
+    {
+      "id": "tensorflow/tensorflow",
+      "owner": "tensorflow",
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "stars": 200354,
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "one_liner": "OpenXLA 是一个开源项目，旨在为机器学习提供高性能、可移植的编译器和运行时。",
+      "detail_md": "**解决什么问题**\nOpenXLA 旨在解决机器学习模型在不同硬件平台（如 GPU、TPU 等）上部署时遇到的性能和兼容性问题。它通过优化编译过程，提高计算效率，并减少技术债务，从而加速机器学习模型的执行。\n\n**核心功能**\nOpenXLA 的核心功能包括对高级语言操作 (HLO) 进行优化转换，以提升计算效率。它支持跨多种工作负载的通用优化，以及针对特定硬件（如 NVIDIA GPU）的调整。此外，它还提供了将 NumPy 数组转换为 XLA 字面量并进行往返测试的功能，确保数据转换的准确性。\n\n**技术亮点**\n该项目的一个技术亮点是其编译器架构，它通过优化通道对 HLO 进行转换。它还包含一个协同维护者计划，以确保代码质量并加速代码审查和合并过程。此外，它能够处理不同类型的事件，例如急切执行的 GPU 操作和函数，并通过关联 ID 进行事件分组和分析。\n\n**适合谁用**\nOpenXLA 适合机器学习开发者、研究人员以及希望在不同硬件平台上优化和部署机器学习模型的团队。特别是那些需要高性能计算和希望通过贡献代码、改进文档或回答问题来参与开源社区的用户。",
+      "degraded": false
+    },
+    {
+      "id": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "stars": 34709,
+      "description": "A hive mind communication platform",
+      "one_liner": "Buzz 是一个自托管的工作空间，人类和 AI 代理可以在其中协作，所有交互都记录在一个由 Nostr 协议驱动的单一事件日志中。",
+      "detail_md": "**解决什么问题**\nBuzz 旨在解决传统开发工具链（如聊天系统、Git 仓库、CI 仪表板和机器人）碎片化的问题。它通过将所有工作空间状态集中到中继上，提供一个统一的事件模型，确保人类和 AI 代理在同一个环境中以相同的身份模型和审计轨迹进行协作。\n\n**核心功能**\nBuzz 提供实时聊天（Stream）、异步讨论（Forum）、私信（DMs）等多种协作模式。它还支持 YAML 即代码的自动化工作流引擎，并允许 AI 代理作为第一类成员参与，执行代码审查、运行工作流、编辑画布等任务。\n\n**技术亮点**\n该项目基于 Nostr 协议构建，将所有消息和事件视为加密签名的事件。其架构包括一个 Rust 后端的中继服务器 `buzz-relay`，一个使用 Tauri 和 React 构建的桌面应用，以及一个 Flutter 移动应用。AI 代理通过 `buzz-acp` 协调器和 `buzz-agent` LLM 运行器与平台集成。\n\n**适合谁用**\nBuzz 适合需要紧密协作的团队，特别是那些希望将 AI 代理无缝集成到开发工作流中的团队。它适用于追求数据主权，希望自托管工作空间，并希望所有团队活动（包括人类和 AI 代理的交互）都能被统一记录和审计的用户。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/vscode",
+      "owner": "microsoft",
+      "name": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "stars": 192974,
+      "description": "Visual Studio Code",
+      "one_liner": "本项目是 VS Code Copilot 扩展的一部分，旨在帮助用户生成项目规范。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户在创建新项目时，需要手动编写项目文件结构和内容描述的问题。它通过接收用户对项目需求的描述和文件树结构，自动生成详细的项目规范，包括每个文件的作用、导出的类、类型、接口、函数和常量，以及配置文件的特殊设置等，从而简化项目初始化过程并提高效率。 \n\n**核心功能**\n核心功能是根据用户提供的项目描述和文件树结构，生成一份详细的项目规范。这包括对每个文件的文本描述，列出代码文件中的导出和导入项（如类、类型、接口、函数、常量），以及配置文件的特殊设置（如 `package.json` 或 `tsconfig.json`）。 \n\n**技术亮点**\n技术亮点在于其作为 VS Code 助手的角色，能够理解用户意图并结合项目文件结构，生成结构化且详细的文本描述。它通过 `SystemMessage` 定义了一系列规则，指导 AI 助手如何分析文件、识别编程语言、列出公共属性和方法，并避免使用代码块等格式限制，确保输出的规范清晰易读。 \n\n**适合谁用**\n该项目适合需要快速启动新项目、希望自动化项目文档生成、或者在 VS Code 环境下寻求智能辅助的开发者。特别是对于需要创建 TypeScript Express 应用等具有明确文件结构的项目，它能显著提高开发效率。",
+      "degraded": false
+    },
+    {
+      "id": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "stars": 37746,
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "one_liner": "AI 驱动的逆向工程与安全测试技能路由框架，赋能智能体高效执行任务。",
+      "detail_md": "**解决什么问题** \n本项目旨在解决 AI Agent 在执行逆向工程、渗透测试和安全研究任务时，面临的工具选择困难、工作流程不规范以及经验难以复用等问题。  它通过智能路由机制，帮助 AI Agent 识别任务类型，并自动匹配正确的工具链和方法论，避免盲目尝试和重复踩坑。 \n\n**核心功能** \n核心功能包括任务智能路由、按需自举工具链和自动进化经验库。  它能根据用户任务（如 APK 分析、二进制逆向、前端 JS 加密等），通过 `RULES.md` 和 `skills/MASTER-ROUTING.md` 进行路由决策，并利用 `skills/tool-index.md` 检查本地工具状态，自动安装或更新所需工具。  项目还支持多种安全场景，如恶意软件分析、渗透测试、CTF 竞赛等。 \n\n**技术亮点** \n项目采用客户端中立架构，路由核心与 AI 客户端适配层分离，确保灵活性。  路由规则由单一结构化配置 `skills/config/routing.json` 驱动，并通过 175 条回归基准用例进行验证。  它还集成了模型上下文协议（MCP），能够与 IDA Pro、BurpSuite 等专业工具进行深度交互。 \n\n**适合谁用** \n本项目适合使用 Claude Code、Codex、Cursor、OpenCode 等 AI Agent 进行逆向工程、授权渗透测试和安全研究的专业人士。  它为安全分析师、CTF 选手和红队成员提供了一个高效、可复用且自动化的工作框架。",
+      "degraded": false
+    },
+    {
+      "id": "llvm/llvm-project",
+      "owner": "llvm",
+      "name": "llvm-project",
+      "url": "https://github.com/llvm/llvm-project",
+      "stars": 40690,
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+      "one_liner": "Clang 是一个开源的 C/C++/Objective-C 编译器前端，提供高效、标准兼容的编译能力。",
+      "detail_md": "**解决什么问题**\nClang 旨在提供一个高性能、标准兼容的 C 家族语言编译器前端，解决传统编译器在编译速度、诊断信息、模块化和工具集成方面的不足。它通过模块化架构支持编译、静态分析、IDE 工具和源码转换等多种应用场景。\n\n**核心功能**\nClang 的核心功能包括将 C/C++/Objective-C 源代码转换为中间表示 (IR)。它通过词法分析、预处理、语法分析和语义分析等阶段处理源代码，生成抽象语法树 (AST)，并最终生成 LLVM IR 或 CIR。它还支持多种语言标准和扩展，并提供与 GCC 和 Visual C++ 兼容的驱动程序。\n\n**技术亮点**\nClang 的技术亮点在于其模块化、库 기반 的架构。它拥有清晰的编译管线，包括 `clang::Preprocessor` 进行预处理、`clang::Parser` 进行语法分析、`clang::Sema` 进行语义分析和 `AST` 生成。此外，它支持两种 IR 生成路径：传统的 `CodeGenModule` 直接生成 LLVM IR，以及基于 MLIR 的 `CIRGenModule` 保留更丰富的 C++ 语义信息。Clang 还具备强大的驱动程序 (`clang::driver::Driver`)，能够解析命令行参数并构建编译任务。\n\n**适合谁用**\nClang 适合需要高性能、标准兼容的 C/C++/Objective-C 编译器的开发者和项目。它也适用于需要进行静态分析、代码格式化、代码重构以及构建 IDE 工具的场景。对于追求最新 C++ 标准支持和良好诊断信息的开发者来说，Clang 是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code-action",
+      "owner": "anthropics",
+      "name": "claude-code-action",
+      "url": "https://github.com/anthropics/claude-code-action",
+      "stars": 8981,
+      "description": "",
+      "one_liner": "Claude Code Action 是一个 GitHub Action，它将 Claude AI 集成到 GitHub 工作流中，用于代码辅助、自动化审查和仓库自动化。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在通过将 Claude AI 集成到 GitHub 工作流中，解决软件开发中代码审查、问题解答和自动化代码修改的效率问题。</cite>它能够自动检测工作流上下文，根据 `@claude` 提及、问题分配或明确的 `prompt` 输入来响应，从而实现交互式代码辅助和自动化任务。</cite>\n\n**核心功能**\n该项目提供智能模式检测，自动根据工作流上下文选择执行模式。</cite>它作为交互式代码助手，可以回答代码、架构和编程问题。</cite>此外，它还能进行代码审查，分析 PR 更改并提出改进建议，并能实现代码修改，包括简单的修复、重构和新功能开发。</cite>项目还支持 PR/Issue 集成、灵活的工具访问、进度跟踪和结构化输出。</cite>\n\n**技术亮点**\n该项目采用双层架构，将 GitHub 自动化关注点（主 Action）与 Claude Code 执行关注点（基础 Action）分离。</cite>主 Action (`action.yml`) 负责 GitHub 集成、模式检测和权限验证，而基础 Action (`base-action/action.yml`) 则专注于执行 Claude Code CLI，具有最小的 GitHub 依赖。</cite>这种架构提高了可重用性、可维护性，并支持将基础 Action 同步到独立的镜像仓库。</cite>它还支持多种认证方法，包括 Anthropic API、AWS Bedrock、Google Vertex AI 和 Microsoft Foundry 的 OIDC 认证。</cite>\n\n**适合谁用**\n该项目适合需要自动化代码审查、代码修改和交互式代码辅助的开发者和团队。</cite>它特别适用于希望在 GitHub 工作流中集成 AI 能力，以提高开发效率和代码质量的用户。</cite>无论是进行自动 PR 代码审查、路径特定审查、外部贡献者审查，还是自定义审查清单，该项目都能提供相应的解决方案。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "actions/runner-images",
+      "owner": "actions",
+      "name": "runner-images",
+      "url": "https://github.com/actions/runner-images",
+      "stars": 13220,
+      "description": "GitHub Actions runner images",
+      "one_liner": "GitHub Actions Runner 镜像生成项目，自动化构建和验证多种操作系统环境的虚拟机镜像。",
+      "detail_md": "**解决什么问题**\n\n该项目旨在解决为 GitHub Actions 和 Azure DevOps 提供预配置的、包含各种开发工具和环境的虚拟机镜像的需求。它自动化了镜像的构建、配置、软件安装和验证过程，确保了镜像的一致性和可靠性。\n\n**核心功能**\n\n核心功能包括使用 Packer 作为编排工具，支持 Windows、Ubuntu 和 macOS 等多种操作系统镜像的生成。它能够进行 Azure 资源设置、Packer 模板处理、临时 VM 创建、软件配置、镜像捕获以及最终的验证和清理。项目还包含生成软件报告 和运行 Pester 测试 以验证安装的软件。\n\n**技术亮点**\n\n技术亮点在于其高度自动化的镜像生成流程，利用 PowerShell 脚本 和 Packer HCL2 模板 实现跨平台支持。对于 Windows 和 Ubuntu 镜像，它使用 Azure ARM 构建器；对于 macOS 镜像，则使用 Anka 虚拟化技术。此外，它还集成了详细的软件版本报告 和全面的 Pester 测试，确保镜像质量。\n\n**适合谁用**\n\n该项目适合需要为 CI/CD 管道（特别是 GitHub Actions 和 Azure DevOps）提供标准化、预装开发工具的虚拟机镜像的开发者、运维工程师和团队。它也适用于那些希望自动化镜像构建过程、减少手动配置错误并确保开发环境一致性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mobile-next/mobile-mcp",
+      "owner": "mobile-next",
+      "name": "mobile-mcp",
+      "url": "https://github.com/mobile-next/mobile-mcp",
+      "stars": 7082,
+      "description": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
+      "one_liner": "Mobile MCP 是一个跨平台的移动自动化服务器，通过统一接口实现 iOS 和 Android 设备交互，支持模拟器、真机及大语言模型驱动的自动化。",
+      "detail_md": "### 解决什么问题\n该项目旨在通过提供一个平台无关的接口，简化移动自动化和开发过程，消除对特定 iOS 或 Android 知识的需求。它使得代理和大型语言模型 (LLMs) 能够与原生 iOS/Android 应用程序和设备进行交互，无论是通过结构化的可访问性快照还是基于屏幕截图的坐标点击。\n\n### 核心功能\nMobile MCP 提供设备管理、应用管理、屏幕交互以及输入与导航等核心功能。例如，它可以列出可用设备、获取屏幕尺寸、安装/卸载应用、截屏、点击屏幕坐标、滑动以及输入文本等。它支持 iOS 模拟器和真机，以及 Android 模拟器和真机。\n\n### 技术亮点\n该项目快速轻量，主要利用原生可访问性树进行交互，在无障碍标签不可用时才回退到基于屏幕截图的坐标。它对 LLM 友好，无需计算机视觉模型即可处理可访问性快照。此外，它具有视觉感知能力，能够评估屏幕渲染内容以决定下一步操作，并能从屏幕上提取结构化数据。\n\n### 适合谁用\nMobile MCP 适合需要进行原生应用自动化测试、数据录入、LLM 驱动的多步骤用户旅程自动化、代理框架的通用移动应用交互以及代理间通信等场景的开发者和团队。它也适用于使用 MCP 支持的基础模型或代理（如 Claude MCP, OpenAI Agent SDK, Copilot Studio）的用户。",
+      "degraded": false
+    },
+    {
+      "id": "vercel/next.js",
+      "owner": "vercel",
+      "name": "next.js",
+      "url": "https://github.com/vercel/next.js",
+      "stars": 142471,
+      "description": "The React Framework",
+      "one_liner": "Next.js 通过 AI 代理集成，提供版本匹配的文档和自动化开发工作流。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码代理在处理 Next.js 项目时可能遇到的版本不匹配和过时训练数据的问题。它通过提供与当前框架版本一致的文档和工具，确保 AI 代理能够编写出最新且准确的代码。\n\n**核心功能**\n核心功能包括：版本匹配的文档，存储在 `node_modules/next/dist/docs/` 中，供 AI 代理直接访问；`AGENTS.md` 文件，指导 AI 代理使用这些文档；以及 `.agents/skills/` 目录中的技能定义，用于自动化多步骤任务。`create-next-app` CLI 工具在创建新项目时会自动生成 `AGENTS.md` 文件。\n\n**技术亮点**\n技术亮点在于其 AI 代理集成架构，通过 `AGENTS.md` 和 `CLAUDE.md` 文件，为 AI 代理提供版本化的文档和指导。此外，`evals/` 目录提供了自动化评估系统，用于测试和改进 AI 代理的性能和准确性。项目还支持流式传输，特别是在与大型语言模型 (LLMs) 结合使用时。\n\n**适合谁用**\n该项目适合 Next.js 开发者，尤其是那些希望利用 AI 编码代理提高开发效率和代码质量的开发者。它也适用于希望确保 AI 代理始终使用最新框架指南和 API 的团队。",
+      "degraded": false
     }
   ]
 }
