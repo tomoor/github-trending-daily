@@ -1,0 +1,171 @@
+{
+  "doc_token": "CERDdMgXHoS324xpQNTcUHI6nyg",
+  "doc_url": "https://my.feishu.cn/docx/CERDdMgXHoS324xpQNTcUHI6nyg",
+  "items": [
+    {
+      "id": "paperclipai/paperclip",
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "stars": 87228,
+      "description": "The open-source app everyone uses to manage agents at work",
+      "one_liner": "Paperclip 是一个开源的 AI 代理编排平台，用于管理 AI 代理的执行、任务分配和多公司工作流。",
+      "detail_md": "**解决什么问题**\nPaperclip 旨在解决管理大量 AI 代理时遇到的挑战，例如任务跟踪混乱、成本失控、缺乏统一的治理和协调机制等问题。它将 AI 代理视为“员工”，提供一个“公司”层面的管理平台，而非仅仅是任务管理器。\n\n**核心功能**\n核心功能包括代理管理（招聘、组织、跟踪）、组织结构定义、实时工作跟踪、成本控制、目标对齐以及工作上下文保存。它还支持多种代理适配器，允许集成不同的 AI 模型和执行环境。\n\n**技术亮点**\nPaperclip 采用三层架构，包括前端 UI、后端编排服务和数据库持久层。它提供插件/扩展架构，允许通过插件注册新的适配器类型、挂钩生命周期事件和贡献 UI 组件。\n\n**适合谁用**\nPaperclip 适合希望构建自主 AI 组织、协调多个不同代理以实现共同目标、需要监控成本和预算、以及希望代理 24/7 自主运行但仍需审计工作的团队和个人。",
+      "degraded": false
+    },
+    {
+      "id": "vectorize-io/hindsight",
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "stars": 32121,
+      "description": "Hindsight: Agent Memory That Learns",
+      "one_liner": "Hindsight：像人类记忆一样工作的AI智能体记忆系统",
+      "detail_md": "**解决什么问题**\nHindsight 旨在解决 AI 智能体记忆的挑战，通过自动从原始记忆中合成高层观察，并跟踪这些观察的生命周期，包括创建、更新和历史记录，从而提供更像人类记忆的记忆管理方式。 <cite repo=\"vectorize-io/hindsight\" path=\"vectorize-io/hindsight\" start=\"4.7\" end=\"4.7\" />\n\n**核心功能**\nHindsight 的核心功能包括自动化的“观察”生成，这些观察是经过大型语言模型 (LLM) 提取和整合的知识模式，而非原始事实。 <cite repo=\"vectorize-io/hindsight\" path=\"vectorize-io/hindsight\" start=\"4.7\" end=\"4.7\" /> 它支持多语言内容处理，能够自动检测输入语言并以相同语言提取事实、存储实体和生成响应。  此外，它还具备语义去重功能，通过文本标准化和语义检索来合并或保留相似的观察。 <cite repo=\"vectorize-io/hindsight\" path=\"vectorize-io/hindsight\" start=\"4.7\" end=\"4.7\" />\n\n**技术亮点**\n该项目利用 LLM 进行知识合成和语义去重，并支持多语言处理，通过配置多语言嵌入模型和重排模型来优化非英语内容的性能。  它还通过历史跟踪功能保留观察的演变过程，确保记忆的完整性。 <cite repo=\"vectorize-io/hindsight\" path=\"vectorize-io/hindsight\" start=\"4.7\" end=\"4.7\" />\n\n**适合谁用**\nHindsight 适合需要为 AI 智能体构建高级记忆系统的开发者和研究人员，特别是那些处理多语言数据、需要智能体能够从大量信息中学习并形成高层理解的场景。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/Model-Optimizer",
+      "owner": "NVIDIA",
+      "name": "Model-Optimizer",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "stars": 4736,
+      "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+      "one_liner": "NVIDIA Model Optimizer (ModelOpt) 是一个用于优化深度学习模型的库，旨在提高推理速度和效率。",
+      "detail_md": "**解决什么问题**\nModelOpt 旨在解决深度学习模型在部署时面临的性能和效率挑战。它通过量化、剪枝、蒸馏、稀疏化和推测解码等技术，压缩模型并优化推理速度，使其能够更好地部署到 TensorRT-LLM、vLLM 等下游框架中。\n\n**核心功能**\n该项目提供了一系列模型优化技术，包括 PyTorch 模型的量化 (PTQ/QAT)、剪枝、推测解码  和稀疏化，以及 ONNX 模型的量化。它还支持 HuggingFace 模型，并提供用于提交优化作业的启动器工具。\n\n**技术亮点**\nModelOpt 的技术亮点包括：支持 Python 3.10 至 3.14；通过 `pyproject.toml` 管理依赖；使用 GitHub Actions 进行 CI/CD，包括单元测试、GPU 测试和代码质量检查；以及 AI 辅助的代码审查流程。它还包含优化的 Triton 内核，可加速量化操作。\n\n**适合谁用**\n该项目适合希望优化其深度学习模型以提高推理性能和效率的开发者、研究人员和工程师。特别是那些使用 PyTorch、ONNX 或 HuggingFace 框架，并计划将模型部署到 TensorRT-LLM、vLLM 等推理引擎的用户。",
+      "degraded": false
+    },
+    {
+      "id": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "stars": 19191,
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "one_liner": "Univer 是一个全栈、同构的办公 SDK，用于构建电子表格、文档和演示文稿应用。",
+      "detail_md": "**解决什么问题**\nUniver 旨在解决在 SaaS 产品、内部工具、BI 流程或 AI 应用中嵌入电子表格或文档编辑能力的需求，同时支持在服务端运行处理逻辑，并提供灵活的插件化功能组合与扩展能力。 \n\n**核心功能**\nUniver 提供电子表格、文档和演示文稿三种核心文档类型，支持 Canvas 渲染、独立的公式引擎、统一的 Facade API，以及插件化的功能扩展。   它允许用户通过 Preset Mode 快速集成，或通过 Plugin Mode 进行深度定制。  \n\n**技术亮点**\n项目采用同构设计，支持在浏览器和 Node.js 环境中运行，具备插件优先架构，所有功能均以可组合插件形式提供。  其 Canvas 渲染引擎确保大型场景下的流畅性，并提供统一的 Facade API 简化操作。 \n\n**适合谁用**\nUniver 适合需要将办公应用能力嵌入自身产品、希望在服务端进行文档处理、或需要高度定制化和可扩展办公解决方案的开发者和企业。",
+      "degraded": false
+    },
+    {
+      "id": "tensorflow/tensorflow",
+      "owner": "tensorflow",
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "stars": 200442,
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "one_liner": "我无法提供关于此项目的详细介绍，因为我没有找到足够的项目代码和相关信息来回答您的问题。",
+      "detail_md": "我无法提供关于此项目的详细介绍，因为我没有找到足够的项目代码和相关信息来回答您的问题。我只能访问到 `tensorflow/tensorflow` 仓库中的 `THIRD_PARTY_NOTICES.txt` 文件，该文件主要包含第三方许可证信息，无法提供项目的功能、技术亮点等具体细节。",
+      "degraded": false
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "stars": 58343,
+      "description": "Learn it. Build it. Ship it for others.",
+      "one_liner": "从零开始的AI工程课程，通过构建核心AI算法，培养AI工程师。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统AI学习材料碎片化的问题，这些材料通常只关注特定论文、微调或演示，导致学习者难以系统地理解AI系统的工作原理。  它通过提供一个结构化的课程，从数学基础到自主多智能体系统，帮助学习者从“AI用户”转变为“AI工程师”，深入理解AI的底层机制。 \n\n**核心功能**\n该项目提供了一个包含20个阶段、503个课程的全面课程体系，涵盖了从线性代数到自主智能体的广泛AI主题。  每个课程都遵循“构建它/使用它/交付它”的循环，要求学习者从原始数学开始实现算法，然后使用生产库，并最终生成可重用的工件，如提示、技能、智能体或MCP服务器。 \n\n**技术亮点**\n项目强调从头开始构建每个核心AI算法，包括反向传播、分词器、注意力机制和智能体循环，支持Python、TypeScript、Rust和Julia四种语言。  它还引入了“工具包”概念，将每个课程的输出标准化为可重用的资产，并通过Model Context Protocol (MCP) 服务器实现LLM与数据和工具的安全交互。 \n\n**适合谁用**\n本项目适合那些希望深入理解AI工作原理，而不仅仅是调用API的开发者和工程师。  它也适用于希望通过构建实际可用的AI工具来丰富其专业作品集的人。",
+      "degraded": false
+    },
+    {
+      "id": "openbao/openbao",
+      "owner": "openbao",
+      "name": "openbao",
+      "url": "https://github.com/openbao/openbao",
+      "stars": 7999,
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "one_liner": "OpenBao 是一个开源的、社区驱动的身份型秘密和加密管理系统，用于安全地存储、管理和分发敏感数据。",
+      "detail_md": "**解决什么问题**\n现代系统需要访问大量敏感数据，如数据库凭证、API密钥等，管理这些秘密的访问、安全存储和审计日志非常复杂。OpenBao 旨在解决凭证分散、难以追踪访问者以及缺乏详细审计记录的问题，从而降低安全风险并简化秘密管理。  \n\n**核心功能**\nOpenBao 提供安全秘密存储、动态秘密生成、数据加密和租约管理。它能加密存储任意键/值秘密，按需生成 AWS 或 SQL 数据库等系统的秘密并自动撤销，以及在不存储数据的情况下进行加密和解密。所有秘密都附带租约，到期后自动撤销，并支持手动撤销单个或整棵秘密树。\n\n**技术亮点**\nOpenBao 采用基于 Raft 共识协议的集成存储，确保数据在节点间复制和高可用性。它支持自动解封（Auto-Unseal）功能，可与云 KMS 或 HSM 集成。此外，OpenBao 还具备命名空间（Namespaces）功能，提供多租户和隔离能力，并通过插件系统支持可扩展的认证方法和秘密引擎。\n\n**适合谁用**\nOpenBao 适用于需要管理、存储和分发敏感数据的开发者、IT 技术人员、IT 管理员、系统工程师、DevOps 工程师和安全专家。特别是那些寻求安全自动化、多租户架构、合规性审计以及希望避免供应商锁定的组织和团队。",
+      "degraded": false
+    },
+    {
+      "id": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "stars": 34822,
+      "description": "A hive mind communication platform",
+      "one_liner": "Buzz 是一个基于 Nostr 协议的自托管协作平台，集成了人类与 AI 代理的协作工作空间。",
+      "detail_md": "**解决什么问题**\nBuzz 旨在解决传统开发工具链（如聊天系统、Git 仓库、CI 仪表盘和机器人）碎片化的问题，通过将所有工作空间状态集中到中继器上，提供一个统一的事件模型。它通过将所有交互（消息、反应、工作流步骤、代码事件）视为加密签名的事件，确保人类和 AI 代理之间身份的对等性，并提供强大的社区边界和租户范围。\n\n**核心功能**\nBuzz 提供多种核心功能，包括实时主题聊天（Stream）、异步讨论论坛（Forum）、私信（DMs）、以及 YAML 即代码的自动化工作流（Workflows）。它还支持 Git 仓库托管，将分支视为频道，并在其中集成 CI 结果和代码审查。AI 代理是平台的一等公民，可以参与协作、执行任务和管理工作流。\n\n**技术亮点**\nBuzz 的技术亮点在于其基于 Nostr 协议的架构，将中继器作为所有事件的单一事实来源。它使用 Rust 构建后端服务（`buzz-relay`），采用 Tauri + React 构建桌面应用，并使用 Flutter 开发移动应用。所有事件都经过加密签名，确保可审计性和身份对等。\n\n**适合谁用**\nBuzz 适合需要高度自主权和数据主权的团队和个人。用户可以自托管中继器，拥有自己的数据和身份。它特别适用于软件开发团队，因为它将代码、讨论、CI/CD 和自动化工作流整合到一个统一的协作环境中。同时，它也适用于任何需要人类与 AI 代理紧密协作的项目。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/vscode",
+      "owner": "microsoft",
+      "name": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "stars": 193066,
+      "description": "Visual Studio Code",
+      "one_liner": "本项目旨在通过AI辅助生成项目规范，简化新项目创建流程。",
+      "detail_md": "### 解决什么问题\n该项目解决了用户在创建新项目时，需要手动编写项目文件结构和详细规范的繁琐问题。  它通过AI自动生成项目规范，包括文件描述、类、接口、函数、常量以及配置文件的特殊设置，从而提高开发效率。 \n\n### 核心功能\n核心功能是根据用户提供的项目描述和文件树结构，由AI生成详细的项目规范。  生成的规范会列出每个文件的作用、导出的类、类型、接口、函数和常量，以及配置文件的编译设置等。 \n\n### 技术亮点\n技术亮点在于利用AI作为VS Code助手，能够理解用户意图并生成结构化的项目规范。  它能够根据文件名和文件扩展名判断编程语言，并提供详细的公共属性和方法列表。 \n\n### 适合谁用\n该项目适合需要快速启动新项目、希望自动化项目规范生成过程的开发者。  特别是对于需要创建TypeScript Express应用等具有明确文件结构的项目，它能显著提升效率。",
+      "degraded": false
+    },
+    {
+      "id": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "stars": 37992,
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "one_liner": "本项目是一个AI驱动的逆向工程、授权渗透测试和安全研究技能路由包。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI Agent在面对逆向工程、渗透测试等任务时，不知道如何选择工具、工具链分散以及经验无法复用的问题。  它通过智能路由将AI Agent引导至正确的方法论和本地工具执行，避免盲目猜测命令。 \n\n**核心功能**\n核心功能包括AI自动路由、按需自举工具链和自动进化经验库。  它提供了一个路由核心，由结构化配置驱动，并通过跨平台CI进行验证。  支持多种场景，如APK逆向、二进制逆向、前端JS分析、渗透测试和CTF竞赛等。 \n\n**技术亮点**\n项目采用客户端中立架构，通过`RULES.md`定义全局路由规则，`skills/MASTER-ROUTING.md`作为主要快路径，并使用`skills/config/routing.json`作为路由的单一事实来源。  它还集成了模型上下文协议（MCP），将IDA Pro、BurpSuite等复杂工具通过标准化接口暴露给AI。 \n\n**适合谁用**\n该项目适合AI Agent（如Claude Code、Codex、Cursor等）进行逆向工程、授权渗透测试和安全研究。  也适用于需要自动化安全分析流程、管理分散工具链以及复用安全经验的安全研究人员和团队。",
+      "degraded": false
+    },
+    {
+      "id": "llvm/llvm-project",
+      "owner": "llvm",
+      "name": "llvm-project",
+      "url": "https://github.com/llvm/llvm-project",
+      "stars": 40746,
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+      "one_liner": "LLVM is a modular compiler infrastructure that provides reusable components for building highly opt…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nLLVM is a modular compiler infrastructure that provides reusable components for building highly optimized compilers, including frontends like Clang, a C++ standard library, linker, and binary optimization tools.",
+      "degraded": true
+    },
+    {
+      "id": "anthropics/claude-code-action",
+      "owner": "anthropics",
+      "name": "claude-code-action",
+      "url": "https://github.com/anthropics/claude-code-action",
+      "stars": 9084,
+      "description": "",
+      "one_liner": "Claude Code Action 是一个 GitHub Action，它将 Claude AI 集成到 GitHub 工作流中，用于代码协助、自动化审查和仓库自动化。",
+      "detail_md": "**解决什么问题**\n该项目解决了在软件开发生命周期中，人工代码审查和自动化任务效率低下的问题。  它通过引入 AI 驱动的自动化，帮助开发者更快地获得代码反馈、实施修复、进行代码审查，并处理重复性任务，从而提高开发效率和代码质量。 \n\n**核心功能**\n该项目提供智能模式检测，根据工作流上下文自动选择交互式（Tag Mode）或自动化（Agent Mode）执行模式。  它能作为交互式代码助手回答代码问题、进行代码审查和实施代码更改。  此外，它还支持 PR/Issue 集成、灵活的工具访问、进度跟踪和结构化输出。 \n\n**技术亮点**\n该项目采用双层架构，主 Action (`action.yml`) 负责 GitHub 集成，而基础 Action (`base-action/action.yml`) 负责执行 Claude Code CLI。   它支持多种认证方式，包括 Anthropic API、AWS Bedrock、Google Vertex AI 和 Microsoft Foundry，并利用 OIDC 避免长期密钥。  此外，它还具备安全机制，如子进程清理、内容净化和提交签名，以防止提示注入和秘密泄露。  \n\n**适合谁用**\n该项目适合需要自动化代码审查、代码修改和仓库管理任务的开发者、团队和组织。  无论是希望通过 `@claude` 提及进行交互式代码协助，还是通过预定义提示进行自动化任务，如定期维护、问题分类或文档同步，都能从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "actions/runner-images",
+      "owner": "actions",
+      "name": "runner-images",
+      "url": "https://github.com/actions/runner-images",
+      "stars": 13296,
+      "description": "GitHub Actions runner images",
+      "one_liner": "该项目为GitHub Actions和Azure Pipelines构建虚拟机镜像，预装了大量开发工具和运行时环境。",
+      "detail_md": "**解决什么问题**\n该项目解决了GitHub Actions和Azure Pipelines用户在CI/CD工作流中需要预配置开发环境的问题。 它通过提供包含各种操作系统（Windows、Ubuntu、macOS）和预装软件的虚拟机镜像， 避免了用户每次运行工作流时手动配置环境的繁琐和耗时。\n\n**核心功能**\n核心功能包括：提供多种操作系统（Windows Server、Ubuntu、macOS）的虚拟机镜像， 预装了大量的开发工具、SDK和运行时环境， 并通过JSON工具集文件定义软件版本和组件。 它还支持自动化构建基础设施， 以及通过Pester测试和软件报告生成进行验证。\n\n**技术亮点**\n技术亮点在于其声明式镜像定义，通过JSON文件精确控制预装软件及其版本。 自动化构建流程使用Packer和Azure ARM进行镜像生成， 确保了构建效率和一致性。 此外，项目还采用了多版本工具策略，允许在单个镜像上安装同一工具的多个版本， 以满足不同项目的需求。\n\n**适合谁用**\n该项目适合使用GitHub Actions和Azure Pipelines进行CI/CD的开发者和团队。 特别是那些需要稳定、预配置且包含多种开发工具的虚拟机环境，以快速启动和执行其构建、测试和部署工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mobile-next/mobile-mcp",
+      "owner": "mobile-next",
+      "name": "mobile-mcp",
+      "url": "https://github.com/mobile-next/mobile-mcp",
+      "stars": 7325,
+      "description": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
+      "one_liner": "`mobile-mcp` 是一个 MCP 服务器，为 iOS 和 Android 设备提供统一的自动化和开发接口，支持模拟器、真机和 LLM 交互。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决移动应用自动化和开发中平台碎片化的问题。它通过提供一个平台无关的接口，消除了对特定 iOS 或 Android 知识的需求，使得 AI 模型和代理能够与原生移动应用和设备进行交互。\n\n**核心功能**\n`mobile-mcp` 提供了一系列核心功能，包括设备管理（如列出可用设备、获取屏幕尺寸）、应用管理（如安装、启动、终止应用）、屏幕交互（如截图、点击、滑动、列出屏幕元素），以及输入与导航（如发送按键、按下按钮、打开 URL）。这些功能通过统一的 `Robot` 接口实现。\n\n**技术亮点**\n该项目采用四层架构设计，分离了 MCP 协议层、工具抽象层、Robot 接口层和平台集成层。它使用 `Robot` 接口模式  来抽象平台差异，并通过工厂模式 `getRobotFromDevice()` <cite repo=\"mobile-next/mobile-mcp\" path=\"mobile-mcp\" start=\"1.1\" end=\"1.1\" /> 实现设备解析 <cite repo=\"mobile-next/mobile-mcp\" path=\"mobile-mcp\" start=\"1.1\" end=\"1.1\" />。错误处理采用 `ActionableError`，提供用户友好的错误信息 <cite repo=\"mobile-next/mobile-mcp\" path=\"mobile-mcp\" start=\"1.1\" end=\"1.1\" />。\n\n**适合谁用**\n`mobile-mcp` 适用于需要进行原生应用自动化测试、数据录入、LLM 驱动的多步骤用户旅程自动化以及基于代理框架的通用移动应用交互的开发者和团队。它支持 iOS 和 Android 的真机、模拟器和模拟器。",
+      "degraded": false
+    },
+    {
+      "id": "vercel/next.js",
+      "owner": "vercel",
+      "name": "next.js",
+      "url": "https://github.com/vercel/next.js",
+      "stars": 142619,
+      "description": "The React Framework",
+      "one_liner": "Next.js 是一个全栈 React 框架，它利用 Rust 驱动的工具链实现快速构建和开发体验。",
+      "detail_md": "**解决什么问题**\nNext.js 旨在解决现代 Web 应用开发中的性能和效率问题。它通过集成高性能的 Rust 工具链（如 Turbopack 和 SWC）来加速构建过程和开发体验，从而减少开发者的等待时间，提高生产力。\n\n**核心功能**\nNext.js 提供了构建全栈 Web 应用所需的核心功能，包括：基于 React 的前端开发、路由管理（App Router 和 Pages Router）、API 路由、服务器端渲染 (SSR)、静态站点生成 (SSG) 以及优化的构建和部署流程。\n\n**技术亮点**\n该项目的主要技术亮点是其高性能的 Rust 驱动的构建系统。它集成了 Turbopack 作为增量打包器，利用 `turbo-tasks` 实现反应式计算引擎，并通过 SWC 提供快速的 JavaScript/TypeScript 编译和转换。此外，它还支持热模块重载 (HMR) 和上下文敏感的代码分块策略。\n\n**适合谁用**\nNext.js 适合需要构建高性能、可扩展的 Web 应用程序的开发者和团队。特别是那些追求快速开发迭代、优化构建时间以及利用最新 React 特性的用户。它被一些全球最大的公司使用。",
+      "degraded": false
+    }
+  ]
+}
