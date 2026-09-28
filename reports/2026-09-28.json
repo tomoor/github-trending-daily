@@ -1,0 +1,105 @@
+{
+  "doc_token": "HFd1dNurZoykohxxMBrcuEqlnDh",
+  "doc_url": "https://my.feishu.cn/docx/HFd1dNurZoykohxxMBrcuEqlnDh",
+  "items": [
+    {
+      "id": "paperclipai/paperclip",
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "stars": 89778,
+      "description": "The open-source app everyone uses to manage agents at work",
+      "one_liner": "该项目是一个用于管理AI代理的开源平台，旨在帮助人类更高效地完成工作，实现AI驱动的组织自动化和协作。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在企业或组织中部署和管理的问题，包括代理的创建、配置、任务分配、成本跟踪、预算控制以及团队协作等。它提供了一个统一的控制平面，使人类操作员能够监督和治理AI代理的工作，确保AI代理能够安全、高效地执行任务，并与人类团队无缝协作。  \n\n**核心功能**\n核心功能包括公司（Company）管理、代理（Agent）管理、任务（Task/Issue）管理、项目（Project）管理、技能（Skill）管理以及公司配置的导入导出（Company Portability）功能。用户可以通过Web UI或CLI创建和管理公司、代理、任务和项目。项目支持将公司配置导出为人类可读的Markdown包，并支持从本地文件或GitHub URL导入。此外，还提供了组织结构图渲染、成本和预算控制、以及插件扩展等功能。\n\n**技术亮点**\n项目采用“Markdown优先”的设计理念，将核心实体数据（如代理、技能、项目）存储在Markdown文件的Frontmatter中，确保了配置的人类可读性和版本控制友好性。它支持多种适配器（Adapter）类型，用于与不同的AI模型或执行环境进行通信。在导入导出方面，支持冲突解决策略和环境变量解析，并能处理大型公司的分块传输和异步导入。项目还提供了丰富的API接口和CLI工具，方便集成和自动化。\n\n**适合谁用**\n该项目适合需要管理和协调AI代理工作的个人开发者、团队和企业。特别是那些希望通过AI代理实现业务流程自动化、提高工作效率、并对AI代理行为进行有效治理的用户。它也适合希望构建可移植、可版本控制的AI代理配置，并在不同环境或团队之间共享这些配置的用户。",
+      "degraded": false
+    },
+    {
+      "id": "vectorize-io/hindsight",
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "stars": 37226,
+      "description": "Hindsight: Agent Memory That Learns",
+      "one_liner": "Hindsight 是一个多语言语义记忆系统，能自动从原始数据中提取、整合知识，并以原始语言响应查询。",
+      "detail_md": "**解决什么问题**\nHindsight 旨在解决传统信息检索和知识管理中存在的语言障碍和信息碎片化问题。它通过自动语言检测和多语言处理，确保信息在不同语言环境下的一致性和准确性。此外，它还能将零散的记忆整合为高层次的“观察”，从而提供更具洞察力的知识模式。\n\n**核心功能**\n1.  **多语言支持**：自动检测输入语言，并以该语言提取事实、存储实体和生成响应，无需翻译。\n2.  **记忆保留与召回**：能够保留多语言内容，并根据查询召回相关事实。\n3.  **知识整合**：通过后台任务自动将原始记忆整合为高层次的“观察”，并跟踪其演变历史。\n4.  **语义去重**：自动合并或更新语义相似的观察，避免重复信息。\n\n**技术亮点**\n1.  **LLM 驱动**：利用大型语言模型（LLM）进行语言检测、事实提取、知识整合和响应生成。\n2.  **可配置的整合引擎**：允许用户通过配置 `observations_mission` 等参数来指导 LLM 如何合成观察。\n3.  **多语言嵌入模型**：支持配置多语言嵌入模型（如 `BAAI/bge-m3`）以优化非英语内容的语义检索。\n4.  **历史追踪**：记录观察的每次更新，保留知识演变的时间线。\n\n**适合谁用**\nHindsight 适合需要处理多语言信息、从大量非结构化数据中提取和管理知识的开发者和企业。例如，构建智能客服系统、知识库、多语言内容分析平台或需要跨语言理解用户意图的应用。它也适用于希望通过自动化整合来减少信息过载，并从原始数据中发现高层次模式的场景。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 40055,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的 ElevenLabs 替代品，提供本地化的语音克隆、设计和视频配音功能，支持 646 种语言，无需云端或 API 密钥。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 旨在解决主流语音工具依赖云服务、按月收费、数据隐私和语言支持有限的问题。 它通过在用户本地设备上运行所有功能，确保数据不离开设备，并提供广泛的语言支持。\n\n**核心功能**\n该项目提供零样本语音克隆，仅需 3 秒音频即可复刻任何声音；声音设计功能允许用户从零开始构建新声音，调整性别、年龄、口音、音高和情感等属性；以及电影级视频配音，包括转录、翻译、重新配音和时间轴对齐，最终可导出为 MP4 格式。 此外，它还支持多轨有声书制作。\n\n**技术亮点**\nVoiceStudio 的技术亮点在于其本地优先的架构，所有处理都在用户设备上完成，无需账号或 API 密钥。 它支持 646 种语言的 TTS（文本转语音），并提供引擎兼容性矩阵，对 14 个 TTS 引擎进行 GPU 预检，避免静默回退到 CPU。 项目还包含一个模型商店，能自动检测平台并推荐合适的模型。\n\n**适合谁用**\nVoiceStudio 适合关心数据隐私、不希望音频数据离开本地设备的用户；需要广泛语言支持的创作者和开发者；以及希望完全控制语音生成和视频配音流程，并能根据需求定制和扩展功能的用户。 商业用户也可以免费使用，但修改后通过网络提供服务需遵守 AGPL-3.0 许可证条款。",
+      "degraded": false
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "stars": 59242,
+      "description": "Learn it. Build it. Ship it for others.",
+      "one_liner": "本项目提供一个免费开源的AI工程课程，从数学基础到自主智能体，亲手构建核心AI算法。",
+      "detail_md": "## 解决什么问题\n本项目旨在解决AI学习材料分散、理论与实践脱节的问题，通过亲手实现核心AI算法，帮助学习者深入理解AI系统的工作原理，避免将框架视为“黑箱”。它还解决了生产环境中LLM应用面临的挑战，例如上下文溢出、成本控制、错误处理和性能优化等。\n\n## 核心功能\n该项目提供一个包含503节课程、20个阶段的全面AI工程课程。课程内容涵盖从线性代数、微积分等数学基础，到机器学习、深度学习、大型语言模型（LLMs）和多智能体系统。每个课程都要求学习者从零开始构建算法，例如反向传播、分词器、注意力机制和智能体循环。项目还包括一系列毕业设计，如终端原生编码智能体、代码库RAG和生产级RAG聊天机器人等。\n\n## 技术亮点\n项目强调“从零开始”的工程哲学，所有算法都从原始数学概念开始实现。它支持Python, TypeScript, Rust, 和 Julia 四种编程语言。在LLM工程方面，项目涵盖了提示工程、嵌入和向量搜索、函数调用、缓存、安全防护、流式传输、错误处理、可观测性和成本跟踪等生产级应用的关键技术。例如，它展示了如何构建一个生产级的LLM服务，集成API网关、提示路由器、语义缓存和安全防护等组件。\n\n## 适合谁用\n本项目适合希望深入理解AI算法底层原理、从头构建AI系统、并掌握生产级AI应用开发技能的工程师和学习者。特别是那些希望弥合AI理论与实践之间鸿沟，以及对LLM应用在生产环境中的挑战和解决方案感兴趣的人群。",
+      "degraded": false
+    },
+    {
+      "id": "InfinityLoop1308/PipePipe",
+      "owner": "InfinityLoop1308",
+      "name": "PipePipe",
+      "url": "https://github.com/InfinityLoop1308/PipePipe",
+      "stars": 6559,
+      "description": "An open-source Android app to let you browse YouTube and other services freely.",
+      "one_liner": "PipePipe是一款开源安卓应用，旨在提供更快、更稳定、功能更丰富的YouTube、BiliBili和NicoNico视频浏览与播放体验。",
+      "detail_md": "**解决什么问题**\nPipePipe解决了官方应用存在的诸多限制，例如广告干扰、隐私问题以及功能缺失等。它通过提供无广告、增强的播放控制和多平台支持，提升用户观看体验。\n\n**核心功能**\n核心功能包括：支持SponsorBlock跳过赞助内容、恢复YouTube踩赞数、弹幕显示、背景播放、手势控制、睡眠定时器、高级内容过滤以及播放列表管理。它还支持登录以访问受限内容。\n\n**技术亮点**\nPipePipe是NewPipe的硬分叉项目，独立开发，不与NewPipe同步更新。它采用模块化架构，将提取逻辑与UI分离，支持YouTube、BiliBili和NicoNico三大平台。项目通过频繁更新和快速修复来解决问题，并支持Android Auto。\n\n**适合谁用**\nPipePipe适合追求无广告、注重隐私、需要增强播放功能（如SponsorBlock、弹幕）以及希望在YouTube、BiliBili和NicoNico等多个平台获得统一且优化观看体验的安卓用户。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/scriptc",
+      "owner": "vercel-labs",
+      "name": "scriptc",
+      "url": "https://github.com/vercel-labs/scriptc",
+      "stars": 5389,
+      "description": "TypeScript-to-Native Compiler",
+      "one_liner": "这是一个将TypeScript/JavaScript代码编译为小型、快速、自包含原生可执行文件的编译器，无需Node.js或V8运行时环境。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统JavaScript应用在部署和运行时的体积大、启动慢、依赖Node.js环境的问题。通过将TypeScript代码直接编译为原生可执行文件，`scriptc` 实现了更小的二进制文件体积和更快的启动速度。它还提供了“Node-exact”的正确性，确保编译后的二进制文件行为与在Node.js中运行一致。\n\n**核心功能**\n`scriptc` 的核心功能是将TypeScript和JavaScript源代码编译成原生可执行文件、目标文件、库归档或WebAssembly模块。它支持静态编译（默认模式），将大部分TypeScript语言特性和Node.js API（如`fs`、`path`、`http`等）转换为原生代码。对于无法静态编译的代码（如npm依赖和`any`类型代码），可以通过`--dynamic`选项嵌入一个小型JavaScript引擎（QuickJS）来动态执行。此外，它还提供`scriptc run`用于编译并运行，`scriptc build`用于生成可执行文件，以及`scriptc coverage`用于分析代码的静态编译兼容性。\n\n**技术亮点**\n该项目采用三层评估模型：静态编译（Tier 1）、动态运行（Tier 2）和编译时拒绝（Tier 3）。它无需修改现有TypeScript代码，不引入自定义方言或特殊库。编译后的二进制文件体积小（例如，一个“hello-world”程序约320KB）且启动速度快（约4毫秒）。通过差异化测试，确保编译后的行为与Node.js严格一致。\n\n**适合谁用**\n`scriptc` 适合希望将TypeScript/JavaScript应用打包成轻量级、高性能原生可执行文件的开发者。特别是那些对启动速度、内存占用有严格要求，或需要在没有Node.js环境的场景下部署应用的场景。它也适用于需要明确了解代码静态编译兼容性的团队，通过`scriptc coverage`工具可以清晰地看到哪些部分是静态的，哪些需要动态引擎。",
+      "degraded": false
+    },
+    {
+      "id": "mvschwarz/openrig",
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "stars": 943,
+      "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+      "one_liner": "OpenRig is an open-source multi-agent harness for defining, launching, and coordinating AI coding a…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nOpenRig is an open-source multi-agent harness for defining, launching, and coordinating AI coding agent teams in persistent terminal sessions.",
+      "degraded": true
+    },
+    {
+      "id": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "stars": 20149,
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "one_liner": "Univer 是一个全栈、同构的办公 SDK，用于构建电子表格、文档和演示文稿应用。",
+      "detail_md": "**解决什么问题**\nUniver 旨在解决在 SaaS 产品、内部工具、BI 流程或 AI 应用中嵌入电子表格、文档和演示文稿编辑能力的需求，同时提供在浏览器和 Node.js 中运行的统一架构。  它允许开发者按需组合功能，或通过预设快速启动，并通过自定义插件、命令、服务、UI 组件和 Facade API 扩展行为。 \n\n**核心功能**\nUniver 提供电子表格、文档和演示文稿三种核心文档类型。 \n*   **电子表格**：支持工作簿、工作表、范围、选择、公式、数字格式、筛选、排序、数据验证、条件格式、超链接、评论、查找替换、批注、表格、绘图集成和可扩展 UI 插件等功能。 \n*   **文档**：提供富文本文档模型、编辑 UI、列表、超链接、绘图集成、评论、快速插入和共享文档架构。 \n*   **演示文稿**：提供演示文稿数据模型和 UI 套件，目前仍在积极开发中。 \n\n**技术亮点**\nUniver 采用插件化架构、Canvas 渲染引擎、公式引擎和统一的 Facade API。 \n*   **同构设计**：支持在浏览器中运行 UI 应用，并在 Node.js 中运行无头处理逻辑。 \n*   **插件优先架构**：所有功能都以可组合插件的形式提供，支持按需加载和扩展。 \n*   **Canvas 渲染引擎**：提供流畅的大型场景渲染能力，并支持浅色与深色主题。 \n*   **Facade API**：提供统一的高层 API，简化了对工作簿、区域、公式和文档的操作。 \n\n**适合谁用**\nUniver 适合需要将电子表格、文档或演示文稿编辑能力嵌入到其产品中的开发者和企业。  它特别适用于构建 SaaS 产品、内部工具、BI 流程或 AI 应用，以及需要在服务端运行工作簿/文档处理逻辑的场景。",
+      "degraded": false
+    },
+    {
+      "id": "willfaust/Madeira",
+      "owner": "willfaust",
+      "name": "Madeira",
+      "url": "https://github.com/willfaust/Madeira",
+      "stars": 803,
+      "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+      "one_liner": "Madeira 是一个研究项目，旨在非越狱 iOS 设备上运行 x86/x86-64 Windows PC 游戏。",
+      "detail_md": "## 解决什么问题\nMadeira 解决了在非越狱 iOS 设备上运行 Windows PC 游戏的问题。 iOS 设备通常有严格的沙盒限制和 JIT 限制，Madeira 通过结合 Wine、FEX-Emu 和 DXMT 等技术，在一个 Mach 进程中运行这些组件，从而绕过这些限制。\n\n## 核心功能\nMadeira 的核心功能包括：\n*   **x86-64 到 ARM64 翻译**：使用 FEX-Emu 将 x86-64 指令翻译成 ARM64 指令，使得 Windows 游戏可以在 ARM 架构的 iOS 设备上运行。\n*   **DirectX 到 Metal 图形翻译**：通过 DXMT 将 DirectX 11 API 调用翻译成 Apple Metal 命令，以利用 iOS 设备的原生图形性能。\n*   **单进程模型**：将 Wine、wineserver、FEX-Emu 和 DXMT 运行在同一个 Mach 应用程序进程中，以规避 iOS 的进程隔离限制。\n*   **JIT 内存管理**：通过预分配的 JIT 内存池和 W^X Demotion 机制，在 iOS 上实现运行时代码生成和修改。\n\n## 技术亮点\n*   **ARM64EC 混合翻译**：利用 Microsoft 的 ARM64EC ABI，允许 ARM64 和 x64/混合代码在同一进程中互操作，从而在 iOS 上运行 Windows 二进制文件。\n*   **伪进程模型**：在 iOS 单个 Mach 任务中实现逻辑上的 Wine 进程抽象，通过共享地址空间和隔离的 PEB、NTDLL 函数表来模拟多进程环境。\n*   **定制的 Win32 用户/显示驱动**：`winios.drv` 替换了传统的 X11 或 Wayland 显示输出，通过 UIKit 和 Metal 桥接 iOS 的原生图形和输入系统。\n*   **JIT 权限管理**：需要 `StikDebug` 等调试伴侣来附加并提供 JIT 权限，以绕过 iOS 对原始 JIT 执行的限制。\n\n## 适合谁用\nMadeira 适合希望在非越狱 iPhone 上体验 Windows PC 游戏的 iOS 用户。 它也适合对在移动设备上运行桌面应用程序的仿真和兼容性技术感兴趣的开发者和研究人员。 需要注意的是，这是一个研究项目，可能存在一些问题和局限性。",
+      "degraded": false
+    }
+  ]
+}
