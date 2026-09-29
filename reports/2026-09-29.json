@@ -89,6 +89,94 @@
       "one_liner": "Univer 是一个全栈、同构的办公 SDK，用于构建可嵌入的电子表格、文档和演示文稿应用。",
       "detail_md": "**解决什么问题**\nUniver 旨在解决在 SaaS 产品、内部工具、BI 流程或 AI 应用中嵌入办公编辑能力的需求。它允许开发者在浏览器和 Node.js 环境中运行工作簿/文档处理逻辑，并提供高度可定制的插件化架构，避免强制使用固定的托管应用或 UI。\n\n**核心功能**\nUniver 提供电子表格、文档和演示文稿的核心能力。它支持 Canvas 渲染、独立的公式引擎、插件化扩展和统一的 Facade API。核心功能包括活页簿、工作表、范围、公式、数字格式、筛选、排序、数据验证、条件格式、超链接、评论、查找替换、批注、表格和绘图集成等。\n\n**技术亮点**\n该项目采用同构设计，支持在浏览器中运行 UI 应用，同时在 Node.js 中进行无头处理。其插件优先架构允许功能按需组合、替换或延迟加载。Univer 还拥有高性能的 Canvas 渲染引擎，适用于大型可编辑文档界面，并提供统一的 Facade API 来简化操作。\n\n**适合谁用**\nUniver 适合需要将电子表格或文档编辑能力嵌入到其 SaaS 产品、内部工具、BI 流程或 AI 应用的开发者和企业。它也适用于需要在服务端运行工作簿/文档处理逻辑，并希望通过自定义插件、命令、服务和 UI 组件扩展行为的用户。",
       "degraded": false
+    },
+    {
+      "id": "NVIDIA/OpenShell",
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 10148,
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "one_liner": "OpenShell 是一个为自主 AI 代理提供安全、私有运行时环境的项目。",
+      "detail_md": "**解决什么问题**\nOpenShell 旨在解决 AI 代理在执行过程中可能带来的数据泄露、凭证滥用和基础设施风险问题。  它通过提供沙盒执行环境，并结合声明式 YAML 策略，防止未经授权的文件访问、数据外泄和不受控制的网络活动，从而确保 AI 代理的安全运行。 \n\n**核心功能**\n项目核心功能包括提供沙盒执行环境、基于声明式 YAML 策略的安全治理，以及一套用于使用和操作 OpenShell 的公共代理技能。此外，它还包含用于贡献者和维护者的内部工作流技能，以支持项目本身的“代理优先”开发模式。  \n\n**技术亮点**\nOpenShell 采用“代理优先”的开发理念，利用 AI 代理来设计和实现系统。  它使用 `mise` 工具管理开发环境和任务，并通过 vouch 系统来管理首次贡献者，以应对 AI 生成内容可能带来的低质量贡献问题。  项目还提供了实时终端仪表板 (TUI) 用于监控网关、沙盒和提供者。 \n\n**适合谁用**\nOpenShell 适合需要安全、隔离环境来运行自主 AI 代理的开发者和组织。  它也适用于希望利用 AI 代理进行软件开发和维护的团队，特别是那些寻求通过代理技能自动化工作流的贡献者和维护者。",
+      "degraded": false
+    },
+    {
+      "id": "t8y2/dbx",
+      "owner": "t8y2",
+      "name": "dbx",
+      "url": "https://github.com/t8y2/dbx",
+      "stars": 21741,
+      "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+      "one_liner": "DBX 是一个轻量级开源数据库管理工具，集成了 AI 助手，支持 90 多种数据库，提供桌面、Docker 和 Web 版本。",
+      "detail_md": "**解决什么问题** \nDBX 旨在解决传统数据库管理工具体积庞大、依赖复杂、功能单一的问题。它提供了一个轻量级、跨平台且功能丰富的解决方案，帮助开发者和数据专业人员高效管理多种数据库，并利用 AI 提升工作效率。\n\n**核心功能** \n*   **多数据库支持**：统一管理 90 多种 SQL、NoSQL、向量、时序和嵌入式数据库，以及消息队列。\n*   **AI SQL 助手**：通过自然语言生成、解释、优化和修复 SQL，并内置安全检查。\n*   **查询编辑器**：提供语法高亮、元数据感知自动补全、SQL 格式化、查询历史等功能。\n*   **数据表格**：支持虚拟滚动、行内编辑、数据过滤、排序、全文搜索和多种格式导出。\n*   **Schema 工具**：包括结构浏览、对象浏览、表结构编辑器、ER 关系图、Schema 对比、执行计划和字段血缘分析。\n*   **数据操作**：支持数据导入（CSV、Excel）、数据迁移、数据库导出和数据对比。\n\n**技术亮点** \n*   **极致轻量**：整个应用仅约 25MB，无需 Java、Python 或 Chromium 等额外运行时环境。\n*   **AI 原生集成**：AI 助手直接集成在编辑器中，支持 Claude、OpenAI 或本地模型。\n*   **MCP 协议支持**：原生支持 Model Context Protocol，使 AI 编程助手能直接查询数据库。\n*   **多平台部署**：提供 macOS、Windows、Linux 桌面应用，以及 Docker 自托管和 Web 版本。\n*   **Rust 原生驱动**：后端使用 Rust 编写，提供高性能和低资源占用。\n\n**适合谁用** \nDBX 适合需要高效管理多种数据库的开发者、数据分析师和数据库管理员。特别是那些追求轻量级工具、重视 AI 辅助功能以及需要在不同平台（桌面、Docker、Web）之间无缝切换的用户。",
+      "degraded": false
+    },
+    {
+      "id": "oblien/openship",
+      "owner": "oblien",
+      "name": "openship",
+      "url": "https://github.com/oblien/openship",
+      "stars": 13631,
+      "description": "Self-hosted deployment platform",
+      "one_liner": "Openship 是一个开源平台，用于自动化部署、管理和监控应用程序，支持云端和自托管。",
+      "detail_md": "**解决什么问题**\nOpenship 旨在解决应用程序部署和管理中的复杂性问题。它简化了从代码到生产环境的流程，并提供了统一的界面来管理不同环境下的应用。对于 AWS 和 Azure 等云服务，它提供了一个更简洁的控制层，避免了复杂性。\n\n**核心功能**\n*   **自动化部署**：连接 GitHub 仓库后，每次推送都会自动部署。\n*   **多环境支持**：支持云端（Openship Cloud）和自托管部署，用户可自由选择和切换。\n*   **项目管理**：提供项目概览、部署状态、API 请求和资源使用情况监控。\n*   **日志与监控**：提供实时日志、服务器请求日志和分析功能，帮助用户快速定位问题。\n*   **集成能力**：计划支持 GitLab、Cloudflare 等集成，并已支持 Amazon SES 和 SMTP 邮件服务。\n\n**技术亮点**\n*   **灵活的部署选项**：用户可以选择由 Openship 托管的云服务，也可以在自己的服务器上自托管，完全掌控数据。\n*   **简洁的云管理**：为 AWS 和 Azure 提供了一个精简的控制台，只显示用户实际使用的 20% 功能，避免了 80% 的复杂性。\n*   **一键回滚**：支持一键回滚到任何先前的部署版本。\n*   **自动 HTTPS**：为自定义域名自动配置 HTTPS。\n\n**适合谁用**\nOpenship 适合需要简化部署流程的开发者和团队。对于希望完全掌控数据并运行在自己硬件上的用户，自托管选项非常合适。同时，它也适用于需要管理 AWS 或 Azure 资源但又不想面对其复杂性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "averygan/reclip",
+      "owner": "averygan",
+      "name": "reclip",
+      "url": "https://github.com/averygan/reclip",
+      "stars": 9891,
+      "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+      "one_liner": "ReClip 是一个自托管的开源媒体下载工具，提供简洁的网页界面，支持从 1000 多个网站下载视频和音频。",
+      "detail_md": "**解决什么问题**\nReClip 解决了用户从 YouTube、TikTok、Instagram 等 1000 多个平台下载视频或提取音频的需求。   它提供了一个统一的界面来处理不同来源的媒体下载，并支持批量处理和质量选择。 \n\n**核心功能**\n该项目提供以下核心功能：\n*   **多平台支持**：通过 `yt-dlp` 支持超过 1000 个网站的视频下载。 \n*   **双输出模式**：可选择下载为 MP4 视频或 MP3 音频。 \n*   **质量/分辨率选择**：在下载视频前，用户可以选择所需的视频质量或分辨率。 \n*   **批量下载与去重**：支持一次性粘贴多个 URL 进行批量下载，并自动去除重复链接。 \n*   **自动文件交付**：下载完成后，文件会自动通过浏览器下载到用户设备。 \n\n**技术亮点**\nReClip 的技术亮点包括：\n*   **轻量级后端**：使用 Python Flask 构建，后端代码量少，约 150 行。  \n*   **简洁前端**：采用原生 HTML/CSS/JS 实现，无框架，无需构建步骤。  \n*   **yt-dlp 集成**：利用 `yt-dlp` 作为下载引擎，实现强大的媒体抓取能力。 \n*   **异步下载处理**：通过 `threading.Thread` 在后台处理下载任务，避免阻塞主应用。 \n*   **状态管理**：使用内存中的 `jobs` 字典跟踪下载任务的状态，并通过 API 接口 `/api/status/<job_id>` 供前端轮询。  \n\n**适合谁用**\nReClip 适合需要从各种在线平台下载视频或音频的用户，特别是那些希望自托管服务、注重简洁界面和批量处理能力的用户。   它也适合开发者学习如何使用 `yt-dlp` 和 Flask 构建一个轻量级的 Web 应用。",
+      "degraded": false
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "stars": 60957,
+      "description": "Learn it. Build it. Ship it for others.",
+      "one_liner": "本项目是一个从零开始构建AI系统的综合课程，涵盖数学基础到多智能体系统。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决当前AI学习材料碎片化的问题，帮助学习者从底层数学原理开始，逐步构建AI核心算法，避免仅停留在调用API的层面。它将“AI用户”转变为“AI工程师”，使其深入理解AI系统的内部工作机制。\n\n**核心功能**\n课程包含20个阶段和503个课程，涵盖从线性代数到自主多智能体系统。每个课程都遵循“问题-概念-构建-使用-交付”的循环，最终产出可重用的AI工具包，包括提示词、技能、智能体和MCP服务器。\n\n**技术亮点**\n项目强调从零开始构建每个核心AI算法，例如反向传播、分词器、注意力机制和智能体循环，支持Python、TypeScript、Rust和Julia四种语言。每个课程都会生成标准化的可重用资产，并由网站基础设施自动发现和索引。\n\n**适合谁用**\n本项目适合希望深入理解AI工作原理，而不仅仅是使用API的工程师。它为那些想要从第一性原理设计和构建AI系统的人提供了参考手册。",
+      "degraded": false
+    },
+    {
+      "id": "VectifyAI/PageIndex",
+      "owner": "VectifyAI",
+      "name": "PageIndex",
+      "url": "https://github.com/VectifyAI/PageIndex",
+      "stars": 36904,
+      "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+      "one_liner": "PageIndex 是一个无向量、基于推理的 RAG 引擎，通过模拟人类阅读方式，为长文档提供可追溯、可解释且上下文感知的检索能力。",
+      "detail_md": "### 解决什么问题\nPageIndex 旨在解决传统向量数据库在处理长而复杂文档时检索准确性不足的问题。  传统的向量 RAG 依赖语义相似性进行检索，但这往往无法捕捉到真正的相关性，尤其是在需要上下文理解、领域专业知识和多步骤推理的专业文档中。 \n\n### 核心功能\nPageIndex 的核心功能包括：\n*   **树结构索引生成**：为每个文档生成一个分层的树结构索引，而不是传统的向量索引。  这可以通过 `page_index_flash()` 函数实现，它利用文档布局统计信息和启发式标题检测来构建树结构。 \n*   **基于 LLM 推理的检索**：使用大型语言模型 (LLM) 在生成的树索引中进行推理搜索，模拟人类专家阅读长篇报告以找到相关部分的方式。 \n*   **本地和云端模式**：提供本地 SDK 模式，允许用户在本地机器上索引、检索和聊天；同时支持云端模式，通过 PageIndex API 密钥实现索引和存储在 PageIndex Cloud 中。 \n\n### 技术亮点\n*   **无向量数据库，无分块**：PageIndex 摒弃了传统的向量数据库和文档分块方法，转而使用树索引和 LLM 推理。  \n*   **推理型检索**：通过 LLM 对文档结构进行“思考”，选择包含所需信息的特定节点或页面范围。 \n*   **PageIndex Flash**：一种多阶段管道，使用布局统计和启发式标题检测从 PDF 构建树结构，速度显著快于标准模式。  \n*   **可追溯和可解释**：检索结果可追溯到明确的参考文献，而非不透明的“模糊检索”。 \n\n### 适合谁用\nPageIndex 适用于需要处理长而复杂专业文档的用户，例如金融报告、法律文件、监管备案、技术手册、医学文献和学术教科书等。  它特别适合那些对传统向量 RAG 的检索准确性感到不满，并寻求更具上下文感知和推理能力的解决方案的开发者和企业。",
+      "degraded": false
+    },
+    {
+      "id": "willfaust/Madeira",
+      "owner": "willfaust",
+      "name": "Madeira",
+      "url": "https://github.com/willfaust/Madeira",
+      "stars": 1038,
+      "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+      "one_liner": "Madeira 是一个研究项目，旨在非越狱 iOS 设备上运行 x86/x86-64 Windows PC 游戏。",
+      "detail_md": "### 解决什么问题\nMadeira 解决了在非越狱 iOS 设备上运行 Windows PC 游戏的问题。 iOS 设备通常有严格的沙盒限制，禁止多进程应用和运行时代码生成（JIT）。 Madeira 通过将 Wine、FEX-Emu 和 DXMT 整合到单个 Mach 进程中，并利用调试器附加来获取 JIT 权限，从而绕过这些限制。\n\n### 核心功能\n该项目通过以下核心功能实现 Windows 游戏在 iOS 上的运行：\n*   **x86-64 到 ARM64 转换**：使用 FEX-Emu 将 x86-64 指令转换为 ARM64 指令。\n*   **DirectX 到 Metal 图形转换**：利用 DXMT 将 DirectX 11 API 调用转换为 Apple Metal 命令，以在 iOS GPU 上执行。\n*   **Wine 环境**：提供一个打过补丁的 Wine 版本，支持 ARM64EC 混合转换，使 Windows 二进制文件能够在 iOS 上运行。\n*   **单进程模型**：Wine、wineserver、FEX-Emu 和 DXMT 在单个 Mach 应用程序进程中运行，以规避 iOS 的进程隔离限制。\n\n### 技术亮点\n*   **ARM64EC 混合转换**：允许 ARM64 和 x64/混合代码在同一进程中互操作，将 ARM64EC NTDLL 镜像和 PE 模块映射到共享的 iOS 进程空间。\n*   **JIT 运行时代码生成**：通过 `StikDebug` 等调试器附加来获取 JIT 权限，从而在非越狱设备上执行翻译后的机器码。\n*   **自定义 Win32 用户/显示驱动**：`winios.drv` 替换了 X11 或 Wayland 显示输出，通过 UIKit 和 Metal 合成器桥接，将窗口创建、事件处理和光标更新路由到原生的 Cocoa 触摸/键盘处理程序。\n*   **内存管理优化**：通过预分配的 JIT 内存池和 W^X 降级处理，绕过 iOS 对运行时代码生成的限制。\n\n### 适合谁用\nMadeira 适合希望在非越狱 iPhone 上玩 Windows PC 游戏的用户。它也适用于对 iOS 平台上的 x86 仿真、图形转换和绕过系统限制等研究领域感兴趣的开发者和研究人员。由于这是一个研究项目，用户应预期存在一些问题和不稳定性。",
+      "degraded": false
+    },
+    {
+      "id": "rakyll/hey",
+      "owner": "rakyll",
+      "name": "hey",
+      "url": "https://github.com/rakyll/hey",
+      "stars": 20406,
+      "description": "HTTP load generator, ApacheBench (ab) replacement",
+      "one_liner": "`hey` 是一个轻量级的 HTTP 负载生成工具，用于对 Web 应用程序和服务进行性能测试和基准测试。",
+      "detail_md": "### 解决什么问题\n`hey` 旨在解决对 HTTP/HTTPS 端点进行压力测试和性能评估的问题。它通过模拟大量并发请求来测量应用程序在不同负载下的响应时间、吞吐量和错误率。\n\n### 核心功能\n`hey` 的核心功能包括：\n*   **并发请求生成**：能够以指定数量的并发工作者 (`-c` 标志) 发送 HTTP 请求。\n*   **请求定制**：支持自定义 HTTP 方法 (`-m`)、请求头 (`-H`)、请求体 (`-d` 或 `-D`)、基本认证 (`-a`) 和代理设置 (`-x`)。\n*   **性能指标收集**：收集响应时间、状态码分布、错误分布、吞吐量和数据传输量等关键性能指标。\n*   **报告输出**：可以将结果以摘要或 CSV 格式输出。\n\n### 技术亮点\n`hey` 利用 Go 语言的并发特性，通过工作协程池 (`runWorkers`) 高效地生成负载。它采用生产者-消费者模式，工作协程产生请求结果，报告器 (`runReporter`) 消费这些结果进行聚合和报告。此外，它支持 HTTP/2 (`-h2` 标志)，并提供了请求超时 (`-t`)、禁用压缩、禁用 Keep-Alive 和禁用重定向等高级选项。\n\n### 适合谁用\n`hey` 适合需要快速进行 HTTP 性能测试和基准测试的开发人员和测试人员。它简单易用，无需复杂的配置，非常适合在开发过程中进行快速迭代和验证。",
+      "degraded": false
     }
   ]
 }
