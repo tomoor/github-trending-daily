@@ -188,6 +188,94 @@
       "one_liner": "PageIndex 是一个无向量、基于推理的 RAG 引擎，它像人类一样阅读文档。",
       "detail_md": "**解决什么问题**\nPageIndex 旨在解决传统向量数据库在处理长而复杂文档时检索准确性不足的问题。  传统向量 RAG 依赖语义相似性，但这并不等同于实际所需的上下文相关性，导致在需要深入理解和多步推理的专业文档中检索效果不佳。 \n\n**核心功能**\nPageIndex 的核心功能包括文档索引和基于 LLM 推理的检索。  它通过生成文档的层次树结构索引，并利用大型语言模型（LLM）在此树结构中进行代理式搜索，模拟人类专家阅读报告的方式。  它支持本地 CLI 工具 `run_pageindex.py` 进行 PDF 和 Markdown 文件的快速本地索引，  以及 `PageIndexClient` SDK 进行程序化访问。 \n\n**技术亮点**\nPageIndex 的技术亮点在于其“无向量”和“基于推理”的 RAG 方法。  它不使用向量数据库和分块，而是通过构建分层树索引来组织文档内容。  检索过程由 LLM 驱动，能够提供可追溯、可解释且上下文感知的检索结果。  此外，PageIndex Flash 模式  能够通过布局统计和启发式标题检测快速构建 PDF 的树结构，显著提高长文档的索引速度。 \n\n**适合谁用**\nPageIndex 非常适合处理金融报告、法律文件、监管备案、技术手册、医学文献和学术教科书等任何长而复杂的专业文档。  它适用于需要高准确性、可追溯性和上下文理解的文档问答系统开发者和研究人员。",
       "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 9267,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "Cursor插件项目提供了一系列官方插件，旨在增强开发者工作流程、智能体编排、UI渲染和第三方集成能力，以提升开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中效率低下、代码质量参差不齐、智能体协作复杂以及与第三方服务集成困难等问题。  它通过提供自动化工具、严格的代码审查机制和可扩展的集成方案，帮助开发者更高效地构建和维护高质量的软件。 \n\n**核心功能**\n核心功能包括：开发者工作流程自动化（如CI/CD验证、代码审查）、  智能体编排（如并行任务执行、增量记忆更新）、  UI渲染和实用工具（如PR审查画布、文档画布）、  高严谨性系统（如`pstack`）  以及语音和模型咨询功能（如Grok语音、Advisor模型咨询）。  此外，还提供了超过60种第三方服务集成。 \n\n**技术亮点**\n技术亮点包括：模块化的插件架构，每个插件都是独立的目录，拥有自己的`plugin.json`清单文件；  采用Model Context Protocol (MCP) 实现智能体与外部工具和SaaS API的标准化连接；  `pstack`插件提供高严谨性的智能体工作流，强调深度架构规划和高质量代码；  以及`minClientVersions`机制确保插件与客户端主机的兼容性。 \n\n**适合谁用**\n该项目适合需要提升开发效率、自动化工作流程、确保代码质量的开发者和团队。  特别是那些希望通过智能体技术优化代码审查、CI/CD、项目管理和与各种第三方服务集成的用户。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 293764,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编码代理设计的完整软件开发方法论，它通过可组合的技能和初始指令来指导代理工作。",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决 AI 编码代理在软件开发过程中可能遇到的问题，例如缺乏系统化的开发流程、代码质量不稳定、以及难以进行有效的协作和调试。它通过提供一套标准化的开发方法，包括测试驱动开发（TDD）、系统化调试和子代理驱动开发，来确保代理能够高效且高质量地完成开发任务。\n\n**核心功能**\nSuperpowers 的核心功能包括：\n*   **需求分析与设计**：在编写代码之前，代理会通过“头脑风暴”（`brainstorming`）技能与用户协作，明确需求并制定设计规范。\n*   **计划制定**：代理会根据设计制定详细的实施计划，强调 TDD、YAGNI（You Aren't Gonna Need It）和 DRY（Don't Repeat Yourself）原则。\n*   **子代理驱动开发（SDD）**：通过分派任务给独立的子代理来执行实施计划，每个子代理都有隔离的上下文，以避免上下文污染。\n*   **强制技能检查（1% 规则）**：即使只有 1% 的可能性适用，代理也必须调用相关技能，确保开发流程的规范性。\n\n**技术亮点**\n*   **跨平台兼容性**：支持多种 AI 编码平台，如 Claude Code、Cursor、OpenCode、Codex、Gemini CLI 和 Devin CLI 等。\n*   **模块化技能库**：技能是模块化、可重用的 AI 指导单元，以 `SKILL.md` 文件形式存储，并遵循特定的生命周期。\n*   **硬门（Hard-Gate）机制**：在关键开发阶段（如设计批准前）强制用户审批，防止代理在未经确认的情况下进行实施。\n*   **文档自审查系统**：在规范和计划文档生成后，通过子代理进行自动审查，以捕获占位符和不一致之处。\n\n**适合谁用**\nSuperpowers 适合使用 AI 编码代理进行软件开发的企业和个人开发者。特别是那些希望通过结构化方法论提高开发效率、确保代码质量、并有效管理 AI 代理开发流程的用户。它也适用于需要商业支持、额外工具或托管支出的企业用户。",
+      "degraded": false
+    },
+    {
+      "id": "earendil-works/pi",
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "stars": 110993,
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "one_liner": "Pi 是一个可扩展的 AI 代理框架，可在终端中运行，帮助开发者构建和部署自主代理。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在终端环境中构建和运行 AI 代理的复杂性问题。它提供了一个统一的框架，使代理能够与本地文件系统交互、执行 shell 命令，并处理多步骤任务。此外，它还通过模块化设计解决了可扩展性问题，允许用户根据特定工作流进行定制。\n\n**核心功能**\nPi 的核心功能包括：交互式终端用户界面 (TUI)，支持差分渲染和同步输出，以实现无闪烁的交互体验。它还提供了一个统一的 LLM (大型语言模型) 提供程序抽象层，以及一个通用的代理循环，用于管理对话状态和协调任务执行。Pi 还内置了编码专用工具，如 `read`、`write`、`edit` 和 `bash`，并支持会话管理、扩展系统和多模式执行（交互模式、打印模式、RPC 模式）。\n\n**技术亮点**\n该项目的技术亮点在于其模块化架构，将核心代理逻辑、LLM 抽象和终端 UI 组件分离到不同的可重用包中。`@earendil-works/pi-tui` 包实现了差分渲染和 CSI 2026 同步输出，确保了高效且无闪烁的终端更新。此外，它还支持 Kitty 键盘协议和图形协议，以及组件化的 UI 模型。\n\n**适合谁用**\nPi 适合需要构建、运行和嵌入自主代理的开发者。它可以用于软件开发、研究笔记、写作项目、数据文件或业余工作。对于希望定制工作流的用户，Pi 提供了 TypeScript 扩展、技能、提示模板和主题等多种定制方式。",
+      "degraded": false
+    },
+    {
+      "id": "tile-ai/tilelang",
+      "owner": "tile-ai",
+      "name": "tilelang",
+      "url": "https://github.com/tile-ai/tilelang",
+      "stars": 8009,
+      "description": "Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels",
+      "one_liner": "TileLang 是一个领域特定语言 (DSL)，旨在简化高性能 GPU 和 CPU 内核的开发，同时提供与手写优化代码相当的性能。",
+      "detail_md": "**解决什么问题**\nTileLang 解决了在保持生产力的同时，为 GPU 和 CPU 编写高性能内核的挑战。 它通过提供一个 Pythonic 语法和基于 Apache TVM 的编译器基础设施，使开发者能够专注于高级抽象，而无需牺牲低级优化。\n\n**核心功能**\nTileLang 的核心功能包括一个 Python 嵌入式 DSL，用于使用 `@tilelang.jit` 和 `T.Kernel` 等构造表达计算。 它提供了一个多阶段编译管道，支持 Warp Specialization、Software Pipelining 和 Layout Inference 等高级优化。 此外，它还包含一个执行运行时，支持即时 (JIT) 编译、多级缓存和通过 NVRTC、Cython、TVM FFI 和 CuTeDSL 等后端适配器进行内核调用。\n\n**技术亮点**\n该项目的一个技术亮点是其模块化的后端架构，允许支持多种硬件，包括 NVIDIA CUDA (SM70 到 SM120)、AMD ROCm/HIP (CDNA 和 RDNA GPU)、Apple Metal 和 LLVM CPU。 它还支持实验性的 WebGPU 后端和生态系统适配器，如华为 Ascend、MetaX MACA、Moore Threads MUSA、HYGON 和 Sunrise-AI TANG。 TileLang 能够通过 `T.gemm_sp` 支持 2:4 稀疏张量核，并集成了 Z3 求解器进行符号推理。\n\n**适合谁用**\nTileLang 适合需要开发高性能 GPU 和 CPU 内核的开发者和研究人员，特别是那些从事机器学习和深度学习领域的人。 它适用于希望在不牺牲性能的情况下提高生产力的用户，例如实现 GEMM、Dequant GEMM、FlashAttention 和 LinearAttention 等操作。",
+      "degraded": false
+    },
+    {
+      "id": "pablostanley/yoinks",
+      "owner": "pablostanley",
+      "name": "yoinks",
+      "url": "https://github.com/pablostanley/yoinks",
+      "stars": 2711,
+      "description": "yoink any video from your terminal. no shady ads.",
+      "one_liner": "yoinks is a command-line tool that allows users to download videos and audio from YouTube, X, Insta…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nyoinks is a command-line tool that allows users to download videos and audio from YouTube, X, Instagram, Threads, and over 1,800 other sites directly from the terminal.",
+      "degraded": true
+    },
+    {
+      "id": "HunxByts/GhostTrack",
+      "owner": "HunxByts",
+      "name": "GhostTrack",
+      "url": "https://github.com/HunxByts/GhostTrack",
+      "stars": 16227,
+      "description": "Useful tool to track location or mobile number",
+      "one_liner": "GhostTrack是一个用于跟踪IP地址、电话号码和社交媒体用户名的开源情报工具。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过提供IP地址、电话号码和社交媒体用户名的跟踪功能，帮助用户进行开源情报（OSINT）或信息收集。 它解决了需要快速获取目标基本信息的需求，例如IP地址的地理位置、电话号码的运营商和归属地，以及用户在不同社交平台上的存在。\n\n**核心功能**\nGhostTrack提供以下核心功能：\n*   **IP地址跟踪**：输入IP地址后，可以获取其类型、国家、城市、经纬度、ISP等详细信息，并生成谷歌地图链接。\n*   **电话号码跟踪**：输入电话号码后，可以查询其归属地、运营商、时区、有效性等信息。\n*   **用户名跟踪**：通过在多个社交媒体平台（如Facebook, Twitter, Instagram, GitHub等）上搜索用户名，判断用户是否存在于这些平台。\n*   **显示本机IP**：查询并显示用户当前的公共IP地址。\n\n**技术亮点**\n该项目主要使用Python语言开发。 它利用`requests`库进行网络请求以获取IP信息和检查社交媒体用户名。 电话号码跟踪功能则依赖`phonenumbers`库来解析和验证电话号码。 此外，它还使用了`os`模块来清空终端屏幕，并定义了颜色变量以美化命令行界面。\n\n**适合谁用**\nGhostTrack适合需要进行信息收集、OSINT研究、网络安全分析或对特定目标进行初步侦察的用户。 无论是安全研究人员、渗透测试人员，还是对信息追踪感兴趣的普通用户，都可以利用此工具获取公开可用的信息。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 73398,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个为 AI 编码工具设计的系统，旨在通过提供共享词汇和专业设计知识来解决 AI 生成界面中的设计缺陷问题。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决“AI Slop”问题，即大型语言模型 (LLM) 在生成用户界面时容易出现可预测的、通用的设计错误，例如使用 Inter 字体、紫蓝色渐变和嵌套卡片等。它通过为 AI 编码工具提供一个设计技能系统，确保 AI 生成的设计能够通过专业的设计审查，而不是看起来像是 AI 制作的。\n\n**核心功能**\nImpeccable 包含一个核心技能 (`impeccable`)，提供 23 个命令和领域特定的参考文件（如排版、颜色、动效等）。它还拥有 46 条确定性检测规则，用于识别“AI Slop”和设计质量问题。此外，项目还提供“实时模式”（Live Mode），一个基于浏览器的可视化迭代系统，用于元素选择和基于 HMR 的变体生成，以及“设计钩子”（Design Hooks），在代理编辑会话期间运行自动设计提醒和检查。\n\n**技术亮点**\n该系统采用“单一事实来源”架构，内容以通用格式编写一次，然后转换为特定于提供商的输出，适用于多种 AI 工具。它通过一个构建管道 (`scripts/build.js`) 将源技能转换为特定格式（如 Cursor、Claude Code、Gemini 等）。Impeccable 还引入了“注册器”（Register）系统，根据项目意图（“品牌”或“产品”）调整设计默认值。其反模式检测引擎 (`cli/engine/detect-antipatterns.mjs`) 能够识别设计缺陷，并支持多种环境。\n\n**适合谁用**\nImpeccable 适用于使用 AI 编码工具（如 Cursor、Claude Code、GitHub Copilot、Gemini CLI、Codex CLI 等）的设计师、产品经理和工程师。这些用户通常已经意识到 AI 生成的用户界面存在质量问题，并正在寻找一个实用的解决方案，以便能够精确地指导 AI 输出，并确保 AI 生成的界面符合专业设计标准。",
+      "degraded": false
+    },
+    {
+      "id": "Friedrich-M/UniMate",
+      "owner": "Friedrich-M",
+      "name": "UniMate",
+      "url": "https://github.com/Friedrich-M/UniMate",
+      "stars": 986,
+      "description": "[SIGGRAPH Asia 2026] UniMate: One Unified Model to Animate Diverse Skeletons",
+      "one_liner": "UniMate是一个统一模型，能够为各种骨骼生成文本驱动的3D动画。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决为具有不同骨骼拓扑（如双足、四足、鸟类、海洋生物、昆虫、蛇形和关节刚体）的3D资产生成动画的挑战。</cite>它通过引入一个统一的规范化框架来处理异构骨骼结构，从而无需为每种骨骼类型进行单独的训练或优化。</cite>\n\n**核心功能**\nUniMate的核心功能包括：\n*   **多拓扑3D运动数据集UniML3D**：一个包含13,006个文本配对运动序列的大规模数据集，涵盖多种骨骼类型，并统一到规范空间中。</cite>\n*   **文本到运动生成**：给定一个带骨骼的3D资产和文本提示，UniMate可以实时生成关节运动。</cite>\n*   **数据处理流水线**：一个多阶段流水线，将原始资产（如FBX/GLB文件）转换为UniML3D数据集，包括导出、渲染、字幕、关节标注和特征提取。</cite></cite>\n*   **运动编辑应用**：支持运动中间帧生成、运动扩展和运动编辑等功能，允许用户通过文本提示和约束条件修改或创建运动。</cite></cite>\n\n**技术亮点**\n该项目的技术亮点包括：\n*   **统一规范化**：通过多阶段数据处理流水线将异构骨骼结构标准化为统一的规范空间。</cite>\n*   **Flow Matching**：使用连续归一化流目标来参数化速度场，将噪声分布传输到目标运动数据分布。</cite></cite>\n*   **自适应层归一化 (adaLN)** 和 **Classifier-Free Guidance (CFG)**：用于增强文本提示对生成运动的对齐保真度。</cite></cite>\n*   **RIC (Root-Relative In-Root Coordinates)**：一种运动特征表示格式，编码相对于根关节坐标系的关节位置和旋转，确保运动建模与平移无关。</cite>\n\n**适合谁用**\nUniMate适合需要为各种3D角色和对象生成高质量、文本驱动动画的动画师、游戏开发者、研究人员以及任何处理多样化骨骼资产的创作者。</cite>它特别适用于那些希望避免为每种骨骼类型进行重复训练，并寻求统一解决方案以简化动画工作流程的用户。</cite>",
+      "degraded": false
     }
   ]
 }
