@@ -1,0 +1,171 @@
+{
+  "doc_token": "PbrFdeqfyoORF2x8iRbceQ1ZnVU",
+  "doc_url": "https://my.feishu.cn/docx/PbrFdeqfyoORF2x8iRbceQ1ZnVU",
+  "items": [
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 150461,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail 项目旨在通过将 AI 代理转变为“懒惰的高级开发人员”来优化代码生成，从而减少代码量、降低成本并提高开发效率，同时确保代码质量和安全性。",
+      "detail_md": "**解决什么问题**\n该项目解决了 AI 代理在代码生成过程中可能出现的过度工程、代码冗余和效率低下等问题。  它通过强制 AI 代理遵循“懒惰的高级开发人员”原则，优先使用最简单、最短且有效的解决方案，从而显著减少生成的代码量，降低开发成本和时间。 \n\n**核心功能**\nPonytail 的核心功能是其“梯子”决策层次结构，指导 AI 代理在编写代码前进行七步评估：是否存在必要性、是否可复用现有代码、是否可使用标准库、是否可利用原生平台功能、是否可使用现有依赖、是否可简化为一行代码，最后才编写最少量的代码。  它还支持三种强度级别（`lite`、`full`、`ultra`），以适应不同的开发需求。 \n\n**技术亮点**\n该项目采用代理可移植的技能分发架构，通过薄适配器将核心规则分发到各种 AI 代理环境，如 Claude Code、Codex、Gemini CLI、GitHub Copilot 等。   这种架构确保了“懒惰的高级开发人员”行为在不同平台之间的一致性，同时保持了适配器的轻量化。 \n\n**适合谁用**\nPonytail 适合任何希望提高 AI 辅助代码开发效率、减少代码冗余、降低项目成本的开发者和团队。  它特别适用于那些追求代码简洁、注重维护性，并希望 AI 代理能像经验丰富的高级工程师一样思考和行动的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 273869,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "这是一个为软件工程师设计的AI代理技能集合，旨在提升开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助开发中常见的痛点，包括代理与用户之间的理解偏差、AI代理输出冗长以及代码质量下降等问题。它通过引入“拷问会话”（grilling session）来确保AI理解用户意图，通过共享语言（`CONTEXT.md`）减少冗余沟通，并通过TDD和架构改进技能提升代码质量。\n\n**核心功能**\n项目提供了一系列模块化的技能，涵盖了从产品规划到代码实现和质量保证的整个软件开发生命周期。主要功能包括：`/grill-with-docs` 用于需求澄清和领域模型构建；`/tdd` 支持测试驱动开发；`/to-spec` 和 `/to-tickets` 用于将对话转化为规范和可执行的任务票据；`/improve-codebase-architecture` 用于发现并改进代码库架构；以及 `/ask-matt` 作为技能路由器，帮助用户找到合适的技能。\n\n**技术亮点**\n该项目采用模块化设计，技能可组合且易于适应。它支持多种AI代理（如Claude Code）并通过插件形式安装。项目强调“深度模块”设计原则，通过小接口实现大量行为，提高代码的可测试性和可维护性。此外，它还通过 `CONTEXT.md` 文件建立项目特定的通用语言，优化AI代理的沟通效率和token使用。\n\n**适合谁用**\n该项目适合希望利用AI代理提升软件开发效率和代码质量的工程师。特别是那些在使用AI代理时遇到沟通障碍、代码冗余或架构混乱问题的开发者。它也适用于需要对大型或遗留代码库进行维护和改进的团队。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/OpenShell",
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 13992,
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "one_liner": "OpenShell 为自主 AI 代理提供安全、私密的沙盒执行环境，通过声明式策略保护数据和基础设施。",
+      "detail_md": "**解决什么问题**\nOpenShell 解决了 AI 代理在执行过程中可能带来的数据泄露、凭证滥用和基础设施安全风险问题。  它通过提供受策略控制的沙盒环境，防止未经授权的文件访问、数据外泄和不受控制的网络活动。 \n\n**核心功能**\n核心功能包括提供沙盒执行环境、  通过 YAML 策略进行安全治理、  以及内置的 AI 代理技能，用于操作和开发 OpenShell。  它还提供了一个实时终端仪表板 `openshell term`，用于监控网关、沙盒和提供商。 \n\n**技术亮点**\nOpenShell 采用“代理优先”的开发理念，  使用 AI 代理作为主要贡献者。  它使用 `mise` 管理开发工具和任务，  并通过 vouch 系统确保首次贡献者的质量。  项目主要使用 Rust 编写，并提供 Python CLI 和 SDK。 \n\n**适合谁用**\nOpenShell 适合需要安全运行自主 AI 代理的开发者和组织。  它也适用于希望利用 AI 代理进行软件开发和维护的团队。",
+      "degraded": false
+    },
+    {
+      "id": "firebase/firebase-ios-sdk",
+      "owner": "firebase",
+      "name": "firebase-ios-sdk",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "stars": 6855,
+      "description": "Firebase SDK for Apple App Development",
+      "one_liner": "这是一个用于iOS平台的Firebase SDK，提供多种服务，帮助开发者构建高质量应用。",
+      "detail_md": "**解决什么问题**\n该项目旨在为iOS应用开发者提供一套全面的工具和服务，简化应用开发、增长和维护过程，例如用户认证、数据存储、消息推送、性能监控和崩溃报告等，从而加速开发周期并提升应用质量。\n\n**核心功能**\n核心功能包括：\n*   **数据存储**：提供`Firestore`（NoSQL数据库）和`FirebaseDatabase`（实时数据库）用于数据持久化和同步。\n*   **用户认证**：通过`FirebaseAuth`模块实现用户身份验证功能。\n*   **消息与通知**：`FirebaseMessaging`支持推送通知，`FirebaseInAppMessaging`用于应用内消息活动。\n*   **性能与质量**：`FirebasePerformance`用于性能监控，`FirebaseCrashlytics`提供崩溃报告。\n*   **远程配置**：`FirebaseRemoteConfig`允许动态更改应用行为和外观。\n*   **分析**：`FirebaseAnalytics`提供免费的应用使用分析功能。\n\n**技术亮点**\n*   **模块化设计**：每个Firebase产品都有独立的目录和`podspec`文件，方便按需集成。\n*   **多平台支持**：支持iOS、macOS、tvOS、watchOS、catalyst和visionOS等多种Apple平台。\n*   **多种集成方式**：支持CocoaPods、Swift Package Manager和手动集成XCFrameworks。\n*   **自动化构建与测试**：使用`scripts/build.sh`和`scripts/sync_project.rb`等脚本自动化构建、测试和项目同步，确保代码质量和一致性。\n*   **心跳日志机制**：通过`HeartbeatController`和`HeartbeatStorage`记录和上报SDK使用情况，帮助Firebase团队了解SDK的健康状况和使用模式。\n\n**适合谁用**\n该项目适合希望在iOS应用中快速集成后端服务、提升开发效率、实现用户增长和应用质量监控的开发者。无论是小型独立开发者还是大型企业团队，都可以利用Firebase iOS SDK提供的丰富功能来构建和扩展其应用。",
+      "degraded": false
+    },
+    {
+      "id": "mvschwarz/openrig",
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "stars": 3696,
+      "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+      "one_liner": "OpenRig 是一个本地控制平面，用于管理多智能体编程拓扑，旨在将分散的终端会话转化为有组织、持久且可检查的软件工程团队。",
+      "detail_md": "**解决什么问题**\nOpenRig 旨在解决多智能体协作编程中缺乏组织、持久性和可检查性的问题。它通过提供一个统一的控制平面来管理“rigs”、“pods”、“seats”和“sessions”等概念，将原本分散的终端会话整合为一个有凝聚力的软件工程团队。\n\n**核心功能**\n该项目提供了一个基于 Hono 的 HTTP/WebSocket 守护进程，支持 SQLite 持久化和 tmux 终端复用。它通过命令行界面 (CLI)、终端用户界面 (TUI) 和 React Web 控制台等多种客户端接口进行交互。核心功能包括管理多智能体编码工作流，通过“波次模型”并行执行任务，并确保文档和代码库的一致性。\n\n**技术亮点**\nOpenRig 的技术亮点在于其清晰的客户端与核心编排引擎分离的架构。它通过 `docs/as-built/` 和 `docs/reference/` 目录下的文档结构来维护系统状态和参考规范。项目还实现了内置权限策略 (`packages/daemon/policies/builtin/`) 和验证机制 (`scripts/verify-packaged-builtins.mjs`)，以确保代码库的完整性和安全性。\n\n**适合谁用**\nOpenRig 适合需要协调多个智能体进行软件开发工作的团队和个人。特别是那些希望将复杂的编码任务分解为可管理、可追溯的“任务切片”（mission slices）并进行并行处理的用户。它也适用于需要严格遵循 SDLC 规范、进行代码审查和知识管理的开发环境。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 9318,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "Cursor插件市场提供AI开发工具、框架规则、MCP集成和智能体技能。",
+      "detail_md": "**解决什么问题**\n该项目旨在为Cursor IDE提供一个集中的插件市场，解决开发者在AI开发过程中对各种工具、框架和SaaS产品集成需求的问题。它通过提供一系列官方和第三方插件，简化了AI智能体的工作流，提高了开发效率和代码质量。  \n\n**核心功能**\n核心功能包括插件的发现、安装和管理。  每个插件都包含自己的清单文件 (`plugin.json`)，定义了插件的名称、版本、作者、描述以及指向其组件目录（如 `skills/`、`agents/` 和 `rules/`）的指针。   例如，`pstack` 插件提供了一系列严谨的智能体工作流，帮助开发者编写更高质量的代码。 \n\n**技术亮点**\n项目采用两级清单系统和客户端版本控制机制。  市场清单 (`.cursor-plugin/marketplace.json`) 作为所有可用插件的权威索引，而每个插件的清单 (`.cursor-plugin/plugin.json`) 则定义了其具体功能和元数据。  `minClientVersions` 字段确保插件与不同客户端（如 `cursor`、`grokbot`）的兼容性。  此外，还支持Model Context Protocol (MCP) 用于连接AI智能体和LLM到外部工具。 \n\n**适合谁用**\n该项目适合需要集成各种开发工具、框架和SaaS产品以增强AI开发能力的开发者。  特别是那些希望通过严谨的智能体工作流提高代码质量和开发效率的工程师，例如使用 `pstack` 插件进行高质量代码开发。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 293953,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为编码代理设计的完整软件开发方法论和技能库。",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决编码代理在软件开发过程中缺乏系统性方法的问题。它通过提供一套可组合的技能和初始指令，确保代理能够遵循结构化的开发流程，例如测试驱动开发 (TDD)、调试、协作模式和子代理驱动开发。这有助于代理在没有人工干预的情况下，自主完成从需求理解到实施的复杂任务。\n\n**核心功能**\n该项目提供了一套核心技能，包括头脑风暴、计划制定、子代理驱动开发和代码审查。它引导代理在编写代码之前，先理解用户意图、需求和设计。通过分阶段的审批流程，确保设计和计划得到用户确认后才进行实施。此外，它还支持多种 AI 平台集成，如 Claude Code、Devin、Pi、Antigravity 和 Kimi Code，实现技能的自动触发和跨平台兼容。\n\n**技术亮点**\nSuperpowers 的技术亮点在于其统一的技能库和平台特定的引导机制。它通过 `plugin.json` 或 `plugin.yaml` 等配置文件，将技能目录和初始化钩子注册到不同的 AI 平台。例如，Pi 平台通过 TypeScript 扩展管理会话生命周期和上下文注入。项目还强调了上下文隔离原则，确保子代理只接收必要的上下文，避免上下文窗口污染。\n\n**适合谁用**\nSuperpowers 适合使用各种编码代理（如 Claude Code、Devin CLI、Pi、Antigravity、Kimi Code 等）的开发者和团队。它特别适用于希望通过结构化方法论提高代理开发效率、确保代码质量和遵循最佳实践的用户。对于企业用户，还提供商业支持和额外工具。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 24772,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP 插件，通过沙盒执行、知识库和会话连续性，为 AI 编码助手节省 94-99% 的上下文窗口。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口被工具输出淹没和压缩时状态丢失的问题。 `context-mode` 通过将原始数据排除在上下文窗口之外，并防止会话状态丢失来解决这些问题。\n\n**核心功能**\n该项目提供三大核心机制：沙盒执行 (`PolyglotExecutor`)，将工具输出限制在上下文之外，实现 99% 的上下文节省；基于 FTS5 的知识库 (`ContentStore`)，通过索引内容并按需检索，将 60KB 数据减少到 40B；以及会话连续性 (`SessionDB`)，通过捕获事件和构建快照，防止 100% 的状态丢失。\n\n**技术亮点**\n`context-mode` 是一个用 TypeScript 实现的 MCP 服务器。 它支持 12 种语言的沙盒代码执行，使用 SQLite FTS5 进行快速全文搜索和 BM25 排名。 该系统通过钩子机制（如 `PreToolUse`、`PostToolUse`、`PreCompact`、`SessionStart` 和 `UserPromptSubmit`）在会话生命周期的五个点进行拦截和管理。\n\n**适合谁用**\n`context-mode` 适用于使用 AI 编码助手的开发者，尤其是在 Claude Code、Cursor、Copilot、Codex、Gemini CLI 等 17 种支持的 AI 平台上工作的开发者。 它也适用于希望通过 `Context Mode Platform` 获得团队级洞察和成本归因的工程组织。",
+      "degraded": false
+    },
+    {
+      "id": "heygen-com/hyperframes",
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "stars": 55323,
+      "description": "Write HTML. Render video. Built for agents.",
+      "one_liner": "HyperFrames 是一个将 HTML 转换为视频的开源框架，支持 AI 驱动的视频创作和渲染。",
+      "detail_md": "**解决什么问题**\nHyperFrames 旨在解决传统视频制作流程复杂、效率低下、难以自动化的问题，特别是对于需要大规模个性化视频或将设计稿快速转换为动态视频的场景。它通过将 HTML 内容直接渲染为视频，简化了视频创作和渲染过程，并支持与 AI 工具集成，实现自动化内容生成和编辑。\n\n**核心功能**\n核心功能包括：\n*   **HTML 到视频渲染**：将 HTML、CSS 和 JavaScript 组成的“构图”渲染成视频，支持复杂的动画和交互效果。\n*   **可重用组件库**：提供 Blocks（独立构图）、Components（可重用 HTML/CSS/JS 片段）和 Example Projects（完整项目模板），通过 CLI 工具 `hyperframes add` 方便地安装和管理。\n*   **幻灯片制作**：支持创建具有离散幻灯片、片段显示、分支和热点导航的演示文稿，并提供演示者模式和演讲者备注。\n*   **移动媒体播放优化**：通过父框架媒体镜像和音量静音等技术，解决移动浏览器自动播放限制，确保媒体在移动设备上可靠播放。\n\n**技术亮点**\n*   **基于 Web 标准**：利用 HTML、CSS 和 JavaScript 进行视频创作，降低了学习门槛，并能与现有 Web 开发工作流无缝集成。\n*   **命令行工具 (CLI)**：提供 `hyperframes add` 用于安装注册表项，`hyperframes init --example` 用于初始化项目模板，以及 `hyperframes present` 用于演示幻灯片。\n*   **模块化架构**：通过注册表（Registry）管理可重用资产，并支持自动化的目录生成流程，包括文档和预览图/视频生成。\n*   **Shadow DOM UI**：播放器控件使用 Shadow DOM 封装，提供可定制的播放/暂停、进度条、时间显示、音量和速度控制，并支持自动隐藏。\n\n**适合谁用**\nHyperFrames 适合需要自动化视频生成、大规模个性化视频制作、将设计稿转换为动态视频的团队和开发者。例如，HeyGen 使用它来驱动 AI 生成的视频构图和渲染，tldraw 用它生成自动化的 PR 演练视频，以及需要创建交互式演示文稿或幻灯片的个人和组织。",
+      "degraded": false
+    },
+    {
+      "id": "earendil-works/pi",
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "stars": 111190,
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "one_liner": "Pi 是一个可扩展的 AI 代理和终端编码工具，用于自动化开发任务和管理会话。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中重复性任务的自动化问题，允许 AI 代理与本地文件系统交互并执行 shell 命令。它提供了一个框架，用于构建、运行和嵌入能够处理多步骤任务的自主代理。\n\n**核心功能**\n核心功能包括：交互式终端界面 (TUI)，支持文件检查、命令执行和内容编辑；统一的 LLM 提供程序抽象层；代理循环，用于管理对话状态和协调任务生命周期；以及会话管理，支持分支、派生和自动上下文压缩。\n\n**技术亮点**\n技术亮点包括：基于组件的差分渲染终端 UI 框架 `@earendil-works/pi-tui`，可实现无闪烁的交互式 CLI 应用程序；使用 CSI 2026 同步输出进行原子屏幕更新；以及可扩展的架构，允许通过 TypeScript 扩展、技能、提示模板和主题进行定制。\n\n**适合谁用**\n该项目适合软件开发人员、研究人员以及任何需要自动化终端任务或构建自定义 AI 代理的用户。它也适用于希望将 AI 代理功能嵌入到其他应用程序中的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "tile-ai/tilelang",
+      "owner": "tile-ai",
+      "name": "tilelang",
+      "url": "https://github.com/tile-ai/tilelang",
+      "stars": 8092,
+      "description": "Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels",
+      "one_liner": "TileLang 是一个高性能 GPU/CPU 内核开发的领域特定语言，通过 Pythonic 语法和 TVM 编译器基础设施实现高效优化。",
+      "detail_md": "**解决什么问题**\nTileLang 旨在解决高性能 GPU/CPU 内核开发中生产力与底层优化之间的矛盾。它通过提供一套工具来检查、调试和分析内核，帮助开发者解决代码生成、结果正确性和性能瓶颈等问题 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"9.4\" end=\"9.4\" />。\n\n**核心功能**\nTileLang 的核心功能包括：\n*   **高性能内核开发**：支持 GEMM、Dequant GEMM、FlashAttention 等多种高性能 GPU/CPU 内核的开发。\n*   **Pythonic 语法**：提供简洁的 Pythonic 语法，降低开发门槛。\n*   **调试和分析工具**：提供 Pass Visualizer 用于可视化 IR 转换 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"9.4\" end=\"9.4\" />，Layout Visualization 用于检查内存布局 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"9.4\" end=\"9.4\" />，Compile-Only 工具用于离线检查生成的内核代码 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"9.4\" end=\"9.4\" />，以及 AutoDD、IKET 和 Performance Analyzer 等专业工具 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"9.4\" end=\"9.4\" />。\n*   **多硬件后端支持**：支持 NVIDIA CUDA 和 AMD ROCm 等多种硬件后端 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"2.1\" end=\"2.1\" />。\n\n**技术亮点**\n*   **基于 TVM 编译器基础设施**：利用 TVM 强大的中间表示 (IR) 转换和优化能力。\n*   **渐进式降低 (Progressive Lowering)**：TileLang 程序通过多个 Pass 逐步转换为硬件可执行文件，方便调试和优化。\n*   **可观测的编译流程**：通过 Pass Visualizer 和 IR Lower Trace 等工具，开发者可以追踪 IR 在编译过程中的变化 <cite repo=\"tile-ai/tilelang\" path=\"wiki\" start=\"9.4\" end=\"9.4\" />。\n*   **灵活的后端架构**：将目标后端视为编译器垂直切片，明确语言方言、上下文贡献、Pass 管道和主机/设备代码生成等职责。\n\n**适合谁用**\nTileLang 适合需要开发和优化高性能 GPU/CPU 内核的开发者，特别是那些希望在保证生产力的同时，实现底层硬件性能优化的工程师和研究人员。",
+      "degraded": false
+    },
+    {
+      "id": "pablostanley/yoinks",
+      "owner": "pablostanley",
+      "name": "yoinks",
+      "url": "https://github.com/pablostanley/yoinks",
+      "stars": 2914,
+      "description": "yoink any video from your terminal. no shady ads.",
+      "one_liner": "yoinks is a command-line tool that allows users to download videos and audio from YouTube, X, Insta…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nyoinks is a command-line tool that allows users to download videos and audio from YouTube, X, Instagram, Threads, and over 1,800 other sites directly from the terminal.",
+      "degraded": true
+    },
+    {
+      "id": "HunxByts/GhostTrack",
+      "owner": "HunxByts",
+      "name": "GhostTrack",
+      "url": "https://github.com/HunxByts/GhostTrack",
+      "stars": 16384,
+      "description": "Useful tool to track location or mobile number",
+      "one_liner": "GhostTrack 是一个开源情报 (OSINT) 工具，用于追踪 IP 地址、手机号码和社交媒体用户名。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在帮助用户收集特定目标的信息，例如通过 IP 地址获取地理位置和网络服务提供商信息，通过手机号码查询归属地和运营商，以及在多个社交媒体平台上查找用户名是否存在。它提供了一个集成的解决方案，简化了信息收集过程。\n\n**核心功能**\nGhostTrack 的核心功能包括 IP 地址追踪，可以显示 IP 类型、国家、城市、经纬度等详细信息；手机号码追踪，能够识别号码归属地、运营商、时区和有效性；以及用户名追踪，用于在 Facebook、Twitter、Instagram 等多个社交媒体平台查找用户名的存在情况。此外，它还提供显示用户自身 IP 地址的功能。\n\n**技术亮点**\n该项目使用 Python 编写</cite>，利用 `requests` 库进行 API 调用以获取 IP 信息</cite>，并结合 `phonenumbers` 库处理手机号码数据</cite>。它通过结构化的菜单选项和清晰的命令行界面，提供了友好的用户体验。代码中还包含了颜色输出，以增强可读性。\n\n**适合谁用**\nGhostTrack 适合需要进行开源情报收集（OSINT）的安全研究人员、渗透测试人员，以及任何对信息追踪感兴趣的用户。它对于需要快速获取 IP、手机或社交媒体账户相关公开信息的用户来说是一个有用的工具。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 73648,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个面向 AI 编码工具的设计技能框架，旨在为前端开发提供共享词汇、确定性质量检查和实时视觉迭代。",
+      "detail_md": "**解决什么问题**\nImpeccable 解决了 AI 编码工具在前端开发中缺乏统一设计语言、质量难以保证以及视觉迭代效率低下的问题。  它通过提供一个结构化的框架，帮助 AI 理解设计意图，并生成符合设计规范的代码。 \n\n**核心功能**\n核心功能包括项目初始化 (`/impeccable init`)，它会生成 `PRODUCT.md`（战略性文件，定义产品目的、用户等）和 `DESIGN.md`（视觉性文件，定义视觉主题、组件等）来捕获设计上下文。  此外，它还能自动检测本地 AI 环境并安装相应的技能包。 \n\n**技术亮点**\n技术亮点在于其 CLI 工具能够自动检测 AI 环境（如 `.claude`, `.cursor` 等），并下载和安装预编译的通用技能包。  它通过扫描项目文件（如 `README`、`package.json`）来推断项目类型和设计需求，并能根据“品牌”或“产品”注册类型调整设计逻辑。 \n\n**适合谁用**\nImpeccable 适合使用 AI 编码工具进行前端开发的工程师和设计师。  它可以帮助他们确保 AI 生成的代码符合设计规范，提高开发效率，并实现更精确的视觉迭代。",
+      "degraded": false
+    },
+    {
+      "id": "Friedrich-M/UniMate",
+      "owner": "Friedrich-M",
+      "name": "UniMate",
+      "url": "https://github.com/Friedrich-M/UniMate",
+      "stars": 1064,
+      "description": "[SIGGRAPH Asia 2026] UniMate: One Unified Model to Animate Diverse Skeletons",
+      "one_liner": "UniMate 是一个统一模型，能够为各种骨骼生成文本驱动的动画，无需针对特定骨骼进行重新训练。",
+      "detail_md": "## 解决什么问题\nUniMate 旨在解决为具有不同拓扑结构的骨骼生成动画的挑战，例如双足、四足、鸟类、海洋生物、昆虫、蛇形生物和铰接式刚体对象。 传统方法通常需要针对每种骨骼类型进行重新训练或测试时优化，而 UniMate 通过一个统一的模型消除了这一需求。\n\n## 核心功能\n该项目提供了一个数据处理管道，用于将原始资产转换为标准化的 UniML3D 数据集， 以及一个基于流匹配的训练框架，用于学习从噪声分布到目标运动数据分布的映射。 核心功能包括：从文本提示生成动画、 运动扩展（将多个提示链接成一个长运动）、 以及将生成的运动驱动到 rigged mesh 上。\n\n## 技术亮点\nUniMate 的技术亮点在于其统一的规范化方法，它将异构骨骼结构转换为统一的规范空间。 它利用流匹配作为连续归一化流目标， 并采用自适应层归一化 (adaLN) 和分类器无关指导 (CFG) 等技术来增强文本提示对齐的保真度。 数据处理管道包括多阶段处理，如导出、渲染、VLM 标注、关节标注和特征提取。\n\n## 适合谁用\nUniMate 适合需要为各种 3D 角色和对象生成多样化动画的研究人员和开发者。 特别是那些处理多拓扑骨骼数据、需要文本到运动生成能力，并且希望避免为每个新骨骼重新训练模型的用户。 它也适用于需要大规模运动数据集 (UniML3D) 进行训练和评估的动画和计算机图形学领域。",
+      "degraded": false
+    }
+  ]
+}
