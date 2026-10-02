@@ -166,6 +166,83 @@
       "one_liner": "UniMate 是一个统一模型，能够为各种骨骼生成文本驱动的动画，无需针对特定骨骼进行重新训练。",
       "detail_md": "## 解决什么问题\nUniMate 旨在解决为具有不同拓扑结构的骨骼生成动画的挑战，例如双足、四足、鸟类、海洋生物、昆虫、蛇形生物和铰接式刚体对象。 传统方法通常需要针对每种骨骼类型进行重新训练或测试时优化，而 UniMate 通过一个统一的模型消除了这一需求。\n\n## 核心功能\n该项目提供了一个数据处理管道，用于将原始资产转换为标准化的 UniML3D 数据集， 以及一个基于流匹配的训练框架，用于学习从噪声分布到目标运动数据分布的映射。 核心功能包括：从文本提示生成动画、 运动扩展（将多个提示链接成一个长运动）、 以及将生成的运动驱动到 rigged mesh 上。\n\n## 技术亮点\nUniMate 的技术亮点在于其统一的规范化方法，它将异构骨骼结构转换为统一的规范空间。 它利用流匹配作为连续归一化流目标， 并采用自适应层归一化 (adaLN) 和分类器无关指导 (CFG) 等技术来增强文本提示对齐的保真度。 数据处理管道包括多阶段处理，如导出、渲染、VLM 标注、关节标注和特征提取。\n\n## 适合谁用\nUniMate 适合需要为各种 3D 角色和对象生成多样化动画的研究人员和开发者。 特别是那些处理多拓扑骨骼数据、需要文本到运动生成能力，并且希望避免为每个新骨骼重新训练模型的用户。 它也适用于需要大规模运动数据集 (UniML3D) 进行训练和评估的动画和计算机图形学领域。",
       "degraded": false
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 88022,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 是一款 Python CLI 工具，为 AI Agent 提供统一的互联网内容访问接口，解决多平台数据获取难题。",
+      "detail_md": "## 解决什么问题\nAI Agent 在获取互联网信息时面临诸多障碍，例如付费 API、IP 封锁、登录限制和反爬措施等。 Agent Reach 旨在解决这些问题，它预先选择、配置和管理各种工具，让 AI Agent 能够通过一个统一的命令行接口访问互联网内容，而无需处理每个平台的复杂性。\n\n## 核心功能\nAgent Reach 提供对超过 15 个平台（包括网页、YouTube、Twitter、Bilibili、Reddit、小红书、GitHub 等）的搜索和读取能力。 它通过 `agent-reach read <url>` 或 `agent-reach search-twitter \"query\"` 等命令，实现跨平台内容的统一访问。 项目还包含 `agent-reach doctor` 命令，用于诊断各渠道的连接状态和后端使用情况。\n\n## 技术亮点\nAgent Reach 的设计理念是作为一个“能力层”，而非另一个工具。 它负责工具选型、安装、健康检查和路由，底层读取由 Agent 直接调用上游工具完成，无包装层。 每个平台采用\"首选 + 备选\"的多后端路由策略，当某个接入方式失效时自动切换，用户无感知。 所有工具和 API 均为开源免费，Cookie 和 Token 仅存储在本地 `~/.agent-reach/config.yaml`，权限受限。\n\n## 适合谁用\nAgent Reach 适合使用 Claude Code、OpenClaw、Cursor、Windsurf 等 AI Agent 的开发者和用户。 特别是那些需要 Agent 进行网络调研、跨平台信息收集、内容分析的场景。 项目强调零配置快速上手，同时支持高级用户自定义后端和扩展功能。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 108910,
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "one_liner": "Caveman：AI编码助手的超压缩通信模式，减少输出令牌65%同时保持技术准确性。",
+      "detail_md": "**解决什么问题**\n\nLLM输出冗长导致令牌成本高、延迟长。Caveman通过强制\"聪慧洞穴人\"风格的语言压缩，减少65%的输出令牌，同时保留全部技术准确性、代码块、错误字符串和符号。\n\n**核心功能**\n\n支持六个强度级别：lite、full（默认）、ultra、wenyan-lite、wenyan-full、wenyan-ultra。删除冠词、填充词、客套语和修饰，保留技术术语、代码、API名称和精确错误。自动清晰规则：在安全警告、不可逆操作、复杂序列和用户困惑时自动降级为正常文本。作为Claude Code插件、Codex插件、Gemini CLI扩展和30+代理的规则文件发布。\n\n**技术亮点**\n\n采用单一真实源模式，核心指令在`skills/caveman/SKILL.md`维护，通过CI自动镜像到平台特定插件目录。统一安装器`bin/install.js`自动检测AI编码代理并为每个代理安装Caveman，支持JSONC容错的设置合并。包含`caveman-compress`子技能，压缩项目内存文件（CLAUDE.md、待办事项）为洞穴人格式，平均节省46%令牌。\n\n**适合谁用**\n\n使用Claude Code、Cursor、Windsurf、Cline、Copilot等AI编码助手的开发者，特别是需要长会话、大型项目上下文或频繁API调用的团队。支持30+代理类型，包括Gemini CLI、opencode、OpenClaw等，通过`npx skills add`或`npx caveman`一键安装。",
+      "degraded": false
+    },
+    {
+      "id": "coreyhaines31/marketingskills",
+      "owner": "coreyhaines31",
+      "name": "marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "stars": 52276,
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "one_liner": "这个项目是一个营销技能库，为AI代理提供专业知识，以自动化和优化各种营销任务，从而提高效率和效果。",
+      "detail_md": "**解决什么问题** \n该项目旨在解决营销人员在执行多样化营销任务时面临的效率低下和知识碎片化问题。它通过提供模块化的、基于Markdown的知识技能，使AI代理能够获得特定营销领域的专业知识，从而自动化和优化从内容创作到广告投放等一系列营销活动。 \n\n**核心功能** \n核心功能包括47种营销技能，涵盖转化优化、内容与文案、SEO与发现、付费广告、分析与测试、留存与变现、增长与策略以及销售与市场进入等八大类别。                                                                                                                        <cite repo=\"coreyhaines31/",
+      "degraded": false
+    },
+    {
+      "id": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "stars": 20636,
+      "description": "Agent Skills for Google products and technologies",
+      "one_liner": "这个项目为AI代理提供模块化的知识和指令，以简化Google Cloud产品和技术的学习与使用。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在理解和操作Google Cloud产品及技术时面临的复杂性问题。它通过提供结构化的技能模块，帮助代理快速获取特定领域的知识和操作指南，从而提高其在企业环境中的效率和准确性。\n\n**核心功能**\n核心功能包括为AI代理提供预定义的“技能”，这些技能涵盖Google Cloud的各种产品（如Gemini API、AlloyDB、BigQuery、GKE、Cloud Run等）、操作指南（如Google Cloud入门、身份验证）以及架构框架（如成本优化、安全性、可靠性）。每个技能都由一个`SKILL.md`文件定义，作为代理的主要入口和系统提示。\n\n**技术亮点**\n该项目利用`SKILL.md`文件作为技能定义的核心，并通过`skills.sh`工具进行安装和管理。它支持多种编程语言的SDK（如Python, JavaScript/TypeScript, Go, Java, C#）来与Gemini API交互。项目还强调使用Application Default Credentials (ADC)进行身份验证，并提供Model Context Protocol (MCP)以连接外部数据源和工具。\n\n**适合谁用**\n该项目适合需要利用AI代理管理和操作Google Cloud资源的企业用户和开发者。特别是那些希望通过自动化方式进行Google Cloud入门、部署服务、优化成本、增强安全性和提高可靠性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "getsentry/sentry",
+      "owner": "getsentry",
+      "name": "sentry",
+      "url": "https://github.com/getsentry/sentry",
+      "stars": 44941,
+      "description": "Developer-first error tracking and performance monitoring",
+      "one_liner": "Sentry 是一个实时错误跟踪和性能监控平台，帮助开发者快速发现、分类和解决生产环境中的问题。</cite>",
+      "detail_md": "**解决什么问题**\nSentry 旨在解决软件开发中遇到的错误和性能问题，通过实时监控应用程序的运行状况，帮助团队及时发现并修复崩溃、性能瓶颈和其他异常，从而提高应用程序的稳定性和用户体验。</cite>\n\n**核心功能**\nSentry 的核心功能包括错误跟踪、性能监控和 AI 辅助分析。</cite> 它能够收集和处理各种事件，如错误、事务和性能数据，并通过多阶段管道进行处理。</cite> 平台还集成了 Seer 微服务，提供 AI 驱动的分析，例如 Autofix 和问题检测。</cite> 此外，Sentry 提供了 API 端点用于管理项目、警报规则和监控器等。</cite>\n\n**技术亮点**\nSentry 采用混合云架构，并使用 Django 作为后端框架，React 作为前端框架。</cite> 它利用 Kafka 进行分布式事件流处理，并使用 PostgreSQL、Redis 和 ClickHouse 等多种存储系统。</cite> 在 AI 方面，Sentry 通过 Seer 服务与 OpenAI SDK、Tiktoken 等技术集成，实现智能化的错误分析和自动化修复。</cite>\n\n**适合谁用**\nSentry 适合需要实时监控应用程序健康状况的开发团队、运维工程师和产品经理。</cite> 无论是小型项目还是大型企业级应用，Sentry 都能提供全面的错误跟踪和性能洞察，帮助用户快速定位并解决问题，提升软件质量。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "colbymchenry/codegraph",
+      "owner": "colbymchenry",
+      "name": "codegraph",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "stars": 72857,
+      "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+      "one_liner": "CodeGraph 是一个本地优先的代码智能系统，它将源代码构建成语义知识图谱，以加速 AI 辅助开发。",
+      "detail_md": "**解决什么问题**\nAI 助手在探索代码库时，通常通过 `grep`、`glob` 和 `read_file` 等工具逐文件扫描，效率低下且消耗大量 token。CodeGraph 通过预先索引代码结构、关系和语义到 SQLite 数据库中，解决了 AI 代理重复扫描文件的问题。这显著减少了 LLM 探索的开销，提高了效率和准确性。\n\n**核心功能**\nCodeGraph 提供了一系列核心功能，包括：\n*   **语义代码智能**：将代码库转化为可查询的知识图谱，包含符号、调用图和代码结构。\n*   **多语言支持**：支持 TypeScript/JavaScript、Python、Go、Rust、Java、C# 等 20 多种语言。\n*   **快速查询工具**：提供 `codegraph_explore` 用于返回相关符号的源代码和调用流，`codegraph_search` 进行语义和关键词搜索，以及 `codegraph_impact` 进行影响分析。\n*   **自动同步**：通过文件监视器自动同步代码更改，确保索引始终保持最新。\n\n**技术亮点**\n*   **Rust 内核驱动**：解析引擎由原生 Rust 内核提供支持，实现高性能的代码解析和提取。\n*   **Tree-sitter 解析**：利用 `web-tree-sitter` 和 WASM 语法进行高保真 AST 解析。\n*   **本地优先**：所有数据存储在本地 SQLite 数据库中，不依赖外部 API，确保数据安全和隐私。\n*   **框架感知**：能够识别并链接各种 Web 框架的路由文件到其处理程序，并支持 iOS/React Native/Expo 混合项目的跨语言桥接。\n\n**适合谁用**\nCodeGraph 适用于需要提升 AI 辅助开发效率的开发者和团队。特别是使用 Claude Code、Cursor、GitHub Copilot 等 AI 助手的用户，CodeGraph 可以显著减少 token 消耗和工具调用次数，加快代码理解和修改的速度。它也适合处理大型复杂代码库，通过提供精确的上下文和影响分析，帮助开发者更好地理解和维护代码。",
+      "degraded": false
+    },
+    {
+      "id": "Effect-TS/effect",
+      "owner": "Effect-TS",
+      "name": "effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "stars": 16423,
+      "description": "Build production-ready applications in TypeScript",
+      "one_liner": "Effect-TS/effect 项目提供了一个统一的框架，用于构建类型安全的 HTTP API 和集成 AI 语言模型。它通过声明式定义简化了 API 开发，并为 AI 交互提供了抽象层。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统 API 开发中服务器、客户端和文档不同步的问题，通过一次定义即可生成所有组件。同时，它也解决了 AI 语言模型集成中缺乏统一、类型安全接口的问题，使得与不同 AI 服务提供商的交互更加标准化和可控。\n\n**核心功能**\n核心功能包括：声明式 HTTP API 定义，支持从单个定义生成服务器路由、类型安全客户端和 OpenAPI 文档。此外，它还提供了 AI 抽象层，用于与语言模型进行交互，支持结构化输出、会话管理和工具调用。\n\n**技术亮点**\n技术亮点在于其统一的声明式方法，使用 `Effect Schema` 定义类型安全的 HTTP API。AI 部分通过 `LanguageModel` 服务抽象了底层提供商，实现了业务逻辑与具体 AI 服务的解耦。它还支持 Model Context Protocol (MCP) 以暴露工具和资源给外部 AI 代理。\n\n**适合谁用**\n该项目适合需要构建健壮、可维护的后端服务和 AI 驱动应用的开发者。特别是那些重视类型安全、代码复用和简化 AI 集成流程的团队。它也适用于希望通过统一接口管理多个 AI 服务提供商的场景。",
+      "degraded": false
     }
   ]
 }
