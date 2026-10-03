@@ -1,0 +1,193 @@
+{
+  "doc_token": "UtVFdPwqhosBUJxfoFJcy3yqnad",
+  "doc_url": "https://my.feishu.cn/docx/UtVFdPwqhosBUJxfoFJcy3yqnad",
+  "items": [
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 88579,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 为 AI Agent 提供一键式互联网访问能力，支持多平台内容获取与路由。",
+      "detail_md": "**解决什么问题**\nAI Agent 在进行互联网信息获取时，常面临平台API付费、IP封锁、登录限制、反爬机制等障碍，导致无法有效获取Twitter、Reddit、小红书、Bilibili等平台的信息。Agent Reach旨在解决这些问题，通过预选、配置和管理各种工具，让Agent能够轻松访问这些平台，而无需用户手动处理复杂的配置和错误。\n\n**核心功能**\nAgent Reach 提供统一的命令行接口 (`agent-reach`)，让AI Agent能够通过简单的命令进行网页阅读、多平台搜索和内容获取。它支持超过15个平台，包括通用网页、YouTube、GitHub、Twitter、Reddit、小红书、Bilibili等。项目内置诊断工具 `agent-reach doctor`，可以检查每个渠道的可用状态和当前使用的后端。\n\n**技术亮点**\n1.  **多后端路由与自动切换**：每个平台都配置了“首选+备选”的多后端列表，当某个接入方式失效时，系统会自动切换到下一个可用后端，确保服务的持续性。\n2.  **零配置与免费**：大部分功能无需额外配置，且所有工具和API均为免费开源，降低了使用门槛。\n3.  **AI Agent优先设计**：项目核心设计理念是为AI Agent服务，通过 `SKILL.md` 文件向Agent提供能力定义和调用方式。\n4.  **安全与隐私**：凭据（如Cookie、Token）仅本地存储，不上传，且代码完全开源可审计。\n\n**适合谁用**\nAgent Reach 适合所有需要为AI Agent（如Claude Code、OpenClaw、Cursor等）提供稳定、便捷互联网访问能力的开发者和用户。特别是那些希望Agent能够进行全网调研、多平台信息搜索、内容阅读和总结，但不希望花费大量时间配置和维护各种工具的用户。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 109087,
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "one_liner": "`caveman` 项目是一个为AI代理设计的令牌压缩系统，旨在通过精简输出和结构化输入来降低LLM交互的成本和延迟。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）在交互过程中产生的冗余输出和高昂的令牌成本问题。它通过强制执行一种“智能穴居人”式的语言风格，并对输入进行结构化压缩，从而减少输出令牌数量，同时保持技术准确性。\n\n**核心功能**\n`caveman` 提供两层压缩机制：\n*   **技能层（语言层面）**：通过系统提示指令，使AI代理以精简的“穴居人”风格进行回复，去除冠词、填充词和客套语，将输出令牌减少约65%至75%，同时保持100%的技术准确性。\n*   **引擎层（结构层面）**：一个基于Go语言的本地运行时，在代理读取输入（如日志、工具模式、文件）之前对其进行结构化重编码，实现有损但可恢复的压缩。\n\n该项目还包括一个 `caveman-compress` 技能，用于压缩项目内存文件，进一步减少输入令牌。\n\n**技术亮点**\n*   **多平台插件架构**：`caveman` 被打包为适用于Claude Code、Codex、Gemini CLI等多种AI环境的插件，确保核心压缩逻辑的一致性。\n*   **智能压缩规则**：通过详细的语言转换规则，如删除冠词、填充词，使用短同义词等，实现高效压缩。\n*   **自动清晰度保障**：在安全警告、不可逆操作确认、复杂序列或用户困惑时，系统会自动切换回正常散文模式，确保关键信息的清晰传达。\n*   **多种压缩强度**：提供“lite”、“full”、“ultra”以及“wenyan”（文言文）等多种压缩强度级别，以适应不同场景的需求。\n\n**适合谁用**\n`caveman` 适用于希望降低LLM交互成本、提高响应效率的AI代理用户和开发者。特别是那些在Claude Code、Codex、Gemini CLI等环境中工作的用户，以及需要处理大量日志、工具定义等输入内容的场景。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 294443,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为编码代理设计的完整软件开发方法论和技能库。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI编码代理在软件开发过程中缺乏系统性方法、难以进行有效协作和测试的问题。它通过提供结构化的技能和工作流程，帮助代理更好地理解需求、规划实现、执行任务并进行自我审查，从而提高开发效率和代码质量。 \n\n**核心功能**\n核心功能包括：\n*   **技能系统（Skills）**：模块化、可重用的AI指导单元，以`SKILL.md`文件形式存储，包含发现机制和流程定义。 \n*   **子代理驱动开发（SDD）**：控制器代理将实现计划中的任务委托给独立的子代理，每个子代理拥有隔离的上下文以避免污染。 \n*   **TDD（测试驱动开发）**：将红-绿-重构循环应用于代码和技能文档。 \n*   **可视化伴侣（Visual Companion）**：在架构头脑风暴期间提供基于浏览器的工具，用于可视化复杂设计。 \n\n**技术亮点**\n*   **跨平台兼容性**：通过Harness Adaptation Layer，核心技能库可以在Claude Code、Codex、Gemini CLI等多个平台上运行。  \n*   **会话启动钩子（Session-Start Hook）**：在会话开始时注入`using-superpowers`引导程序，确保技能自动触发。 \n*   **零依赖头脑风暴服务器**：移除了所有vendored node_modules，`server.js`现在完全自包含，提高了可靠性和启动速度。 \n*   **指令优先级**：明确的用户指令（如`CLAUDE.md`）优先于Superpowers技能，Superpowers技能优先于默认系统提示。 \n\n**适合谁用**\n该项目适合使用AI编码代理进行软件开发，并希望提高代理工作效率、代码质量和协作能力的开发者和团队。特别是那些需要结构化开发流程、测试驱动开发以及多代理协作的场景。",
+      "degraded": false
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 151761,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "本项目旨在通过AI代理实现“懒惰高级开发者”模式，以减少代码量、降低成本并提高开发效率。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中常见的过度工程、代码冗余和效率低下问题。它通过强制AI代理遵循“YAGNI”（你不需要它）原则、优先使用标准库和原生功能、以及编写最少量的代码来避免不必要的复杂性。  \n\n**核心功能**\n核心功能是“懒惰高级开发者”模式，它通过一套“阶梯”规则指导AI代理编写代码。这些规则包括：首先判断功能是否需要存在、其次复用现有代码、再次使用标准库或原生功能、然后考虑单行实现，最后才编写最少量的代码。  该模式支持“lite”、“full”（默认）和“ultra”三种强度级别，以适应不同的开发需求。 \n\n**技术亮点**\n该项目通过多平台插件和清单文件实现广泛兼容性，支持Claude Code、Codex、GitHub Copilot、Gemini、Grok、Qoder和Devin等多种AI代理环境。   它还包含一个版本一致性检查脚本 `scripts/check-versions.js`，确保所有分发文件的版本同步。 \n\n**适合谁用**\n该项目适合希望提高AI代理开发效率、减少代码量、降低开发成本并避免过度工程的开发者和团队。它特别适用于需要AI代理遵循简洁、高效编码原则的场景，同时确保代码的安全性、可访问性和数据完整性不受影响。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 74297,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个面向 AI 编码工具的设计技能框架，旨在提供共享词汇、确定性质量检查和前端开发的实时视觉迭代。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码工具在前端开发中缺乏统一设计语言、质量检查不确定以及视觉迭代效率低下的问题。  它通过提供结构化的设计上下文（`PRODUCT.md`  和 `DESIGN.md` ）来确保 AI 生成的代码符合设计规范。 \n\n**核心功能**\n核心功能包括项目设置命令 `init`，它会抓取代码库信息并生成 `PRODUCT.md`（战略性设计文件）和 `DESIGN.md`（视觉设计文件）。  它还能根据项目类型（品牌或产品）和平台（Web、iOS、Android 或自适应）调整设计逻辑和默认设置。  此外，它支持实时模式配置，以便在开发过程中进行视觉迭代。 \n\n**技术亮点**\n技术亮点在于其 CLI 工具能够自动检测 AI 环境并下载相应的编译包。   它通过扫描项目文件（如 `README`、`package.json`）来形成设计假设，并与用户交互以确认这些假设。  项目还定义了 `PROVIDER_DIRS`  和 `PROVIDER_HOOK_ARTIFACTS`  等关键实体，以支持不同 AI 平台的集成。\n\n**适合谁用**\n该项目适合使用 AI 编码工具进行前端开发的工程师和设计师。  特别是那些希望在 AI 辅助开发过程中保持设计一致性、提高开发效率并实现实时视觉反馈的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 274684,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供一套模块化的AI代理技能，用于提升软件工程效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助开发中常见的痛点，例如代理未能准确理解用户意图、输出过于冗长、代码质量不佳 以及代码库复杂度加速增长。它通过提供结构化、可组合的技能来弥补AI代理在实际工程实践中的不足。 \n\n**核心功能**\n核心功能包括：通过“拷问”会话（`/grill-me` 或`/grill-with-docs` ）明确需求；利用共享语言（`GLOSSARY.md` ）减少冗余；通过测试驱动开发（`/tdd` ）和调试（`/diagnosing-bugs` ）提升代码质量；以及通过架构改进（`/improve-codebase-architecture` ）管理代码复杂度。 \n\n**技术亮点**\n项目采用模块化技能设计，易于适应和组合。它区分用户调用（`User-invoked`）和模型调用（`Model-invoked`）技能，并提供`/ask-matt` 作为技能路由器。项目还强调上下文管理，例如“智能区域”（`Smart Zone`） 和“阶段边界”（`Phase Boundary`），以优化AI代理的推理能力。 \n\n**适合谁用**\n该项目适合希望利用AI代理进行高效、高质量软件开发的工程师和团队。特别是那些在使用Claude Code、Codex或其他编码代理时遇到沟通障碍、代码质量问题或项目管理挑战的用户。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/OpenShell",
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 14420,
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "one_liner": "OpenShell 是一个为自主 AI 代理提供安全、私密运行时的平台。",
+      "detail_md": "**解决什么问题**\nOpenShell 解决了 AI 代理在执行过程中可能面临的数据泄露、凭证暴露和基础设施安全风险问题。  它通过提供沙盒执行环境和声明式 YAML 策略来防止未经授权的文件访问、数据外泄和不受控制的网络活动。 \n\n**核心功能**\n核心功能包括沙盒执行环境、基于 YAML 策略的安全控制、AI 代理技能管理以及推理路由。  沙盒确保代理在隔离环境中运行，策略则限制其行为。  项目还提供用于使用和操作 OpenShell 的公共代理技能，以及用于贡献和维护的仓库感知工作流。  推理路由功能通过 `inference.local` 端点处理 LLM API 请求，确保隐私并注入后端凭证。 \n\n**技术亮点**\nOpenShell 采用“代理优先”的开发理念，AI 代理是主要的贡献者。  它使用 `mise` 管理开发工具和任务。  项目支持多种高级功能，如文件同步、GPU 加速、社区沙盒、多语言 SDK (Python, Go, TypeScript) 和实验性的 VM 运行时。  特别是推理路由，通过 `openshell-router` 作为透明代理，剥离调用者凭证并注入配置的后端凭证。 \n\n**适合谁用**\nOpenShell 适合需要安全、可控环境来运行自主 AI 代理的开发者和组织。  它也适用于希望利用 AI 代理进行代码开发和项目维护的贡献者和维护者。  此外，对于需要对 AI 代理的计算和网络行为进行细粒度控制的用户，OpenShell 提供了强大的策略引擎。",
+      "degraded": false
+    },
+    {
+      "id": "coreyhaines31/marketingskills",
+      "owner": "coreyhaines31",
+      "name": "marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "stars": 52395,
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "one_liner": "本项目提供营销技能模块，赋能AI代理执行多样化营销任务，提升效率与效果。</cite>",
+      "detail_md": "**解决什么问题**\n本项目旨在解决营销人员在执行复杂营销任务时效率低下、专业知识分散的问题。</cite>通过提供模块化的AI营销技能，它使AI代理能够像经验丰富的营销专家一样思考和行动，从而自动化和优化营销流程。</cite>\n\n**核心功能**\n核心功能是提供47个营销技能模块，涵盖转化优化、内容与文案、SEO与发现、增长与策略等多个营销领域。</cite>每个技能都是一个基于Markdown的知识模块，为AI代理提供特定营销任务的专业知识。</cite>例如，`marketing-plan`技能可以生成全面的AARRR营销计划，而`competitor-profiling`技能则能进行竞争对手分析。</cite>\n\n**技术亮点**\n技术亮点包括模块化的技能架构，每个技能都由一个`SKILL.md`文件定义，并可包含参考文档。</cite>项目采用严格的版本控制，确保所有技能的更新和兼容性。</cite>此外，它支持自然语言触发技能，将用户意图映射到具体的代码实体，并通过MCP（Model Context Protocol）集成各种工具。</cite>\n\n**适合谁用**\n本项目适合需要自动化和优化营销流程的营销人员、AI代理开发者以及希望提升营销效率的企业。</cite>特别是对于需要快速生成营销计划、进行竞争对手分析、优化转化率或管理社交媒体内容的团队，这些技能模块能提供强大的支持。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "heygen-com/hyperframes",
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "stars": 55876,
+      "description": "Write HTML. Render video. Built for agents.",
+      "one_liner": "HyperFrames 是一个开源视频渲染框架，允许通过编写 HTML 来生成视频。",
+      "detail_md": "**解决什么问题**\nHyperFrames 旨在解决传统视频制作流程复杂、效率低下的问题，特别是对于需要频繁更新或大规模生成的视频内容。  它通过将视频创作转化为基于 HTML 的声明式编程，使得开发者和 AI 代理能够更高效地生成视频。  此外，它还解决了移动端浏览器自动播放限制的问题，通过父框架媒体代理确保音频播放。 \n\n**核心功能**\n*   **HTML 到视频渲染**：用户可以通过编写 HTML、CSS 和 JavaScript 来定义视频内容和动画，然后将其渲染成 MP4 视频。 \n*   **AI 代理技能集成**：提供多种 AI 代理技能，例如产品发布视频、无面讲解视频、PR 转视频等，简化视频创作流程。  \n*   **可嵌入播放器**：提供 `<hyperframes-player>` Web 组件，用于在网页中嵌入和播放 HyperFrames 视频或幻灯片。 \n*   **命令行工具 (CLI)**：提供 `hyperframes CLI` 用于创建、预览、lint 和渲染视频。 \n\n**技术亮点**\n*   **声明式视频创作**：利用 HTML 的声明式特性，将视频元素（如 `div`）作为关键帧，`data-*` 属性作为时间线，CSS 用于样式，GSAP 作为动画引擎。 \n*   **确定性渲染**：确保每次渲染都能产生相同的结果，避免 `Date.now()` 或未种子化的 `Math.random()` 等非确定性因素。 \n*   **沙盒化运行时**：播放器通过 `<iframe>` 沙盒隔离运行时环境，确保安全性和稳定性。 \n*   **PostMessage 通信桥**：播放器与运行时 iframe 之间通过结构化的 `postMessage` 协议进行通信，同步时间线和媒体播放状态。 \n\n**适合谁用**\n*   **开发者**：希望通过代码而非传统视频编辑软件来创建和自动化视频内容的开发者。 \n*   **AI 代理和工具**：需要集成视频生成能力的 AI 编码助手和自动化工具。 \n*   **内容创作者**：需要快速生成大量视频内容，例如产品演示、社交媒体短视频、技术讲解等。 \n*   **需要嵌入式视频播放的网站**：希望在网页中无缝集成和控制视频播放的网站。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 25023,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个开源插件和平台，旨在解决大型语言模型 (LLM) 上下文窗口的效率问题，通过沙盒化工具输出和智能索引来节省高达 98% 的上下文。",
+      "detail_md": "**解决什么问题**\nLLM 在处理工具输出时会迅速耗尽上下文窗口，导致模型遗忘、性能下降和成本增加。例如，一个 `gh issue list` 命令可能产生 59KB 的 JSON 输出，在 50 轮对话后会消耗 750,000 个输入 token，最终导致上下文窗口填满并强制模型进行压缩，从而丢失工作状态。  \n\n**核心功能**\n`context-mode` 通过三大核心机制解决此问题：上下文窗口保护、会话连续性和知识库。 \n1.  **上下文窗口保护**：通过 `PreToolUse` 钩子拦截工具调用，将数据密集型工具重定向到沙盒执行环境，并对超过 5KB 的输出进行意图驱动过滤，将其索引到本地 FTS5 知识库中，而不是直接返回给 LLM。  \n2.  **会话连续性**：捕获并持久化会话事件（如文件编辑、Git 操作、任务、错误和用户决策）到 SQLite 数据库 (`SessionDB`)。当上下文窗口压缩时，系统会构建一个精简的恢复快照，确保模型能够从上次中断的地方继续工作。  \n3.  **知识库 (FTS5)**：使用一个临时的 FTS5 搜索索引来存储沙盒化和过滤后的内容。它采用双分词器架构（Porter 和 Trigram）和多层回退搜索机制，以高效地检索相关信息。  \n\n**技术亮点**\n该项目实现了严格的压缩公式，确保只有真正从 LLM 上下文窗口中节省的字节才被计算在内。 它支持 17 种 AI 适配器，并在本地运行，不依赖云服务，保护用户隐私。   此外，它还提供了 `ctx_stats` 工具用于实时性能监控，`context-mode doctor` 用于诊断运行时问题，以及 `context-mode upgrade` 用于自动化更新。 \n\n**适合谁用**\n`context-mode` 插件适用于希望提高 AI 编码代理效率、减少上下文消耗和降低成本的开发者。 其商业平台 `Context Mode Platform` 则面向工程组织，提供团队协作洞察、审计追踪和成本分析等解决方案，帮助 CTO、EM 和 CISO 更好地管理 AI 辅助开发。",
+      "degraded": false
+    },
+    {
+      "id": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "stars": 20733,
+      "description": "Agent Skills for Google products and technologies",
+      "one_liner": "这个项目提供了一系列针对Google产品和技术的Agent Skills，旨在帮助用户高效管理和操作Google Cloud资源，并利用AI能力。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户在Google Cloud平台上管理和操作复杂资源、集成AI能力以及遵循最佳实践时遇到的挑战。它通过提供预定义的“技能”来简化Google Cloud产品的学习和使用，例如GKE集群的创建和配置、BigQuery的数据管理 以及Gemini API的集成。此外，它还提供了关于成本优化、可靠性 和安全 等方面的架构框架指导。\n\n**核心功能**\n核心功能包括：\n*   **Agent Skill管理**：通过`skills.sh`工具安装和管理各种Agent Skill。\n*   **Google Cloud产品操作**：提供针对BigQuery、Cloud Run、GKE 等产品的基本操作和配置。\n*   **AI能力集成**：指导如何在Agent Platform中使用Gemini API，包括文本生成、多模态理解、函数调用等。\n*   **架构框架指导**：提供Google Cloud Well-Architected Framework的可靠性、安全 和成本优化 等方面的最佳实践。\n*   **Google Cloud入门和认证**：提供Google Cloud入门指南 和认证方法。\n\n**技术亮点**\n该项目利用`SKILL.md`文件作为AI代理的入口和系统提示，通过“Reference Directory”机制根据触发关键词加载专业技术文档。它还采用了Model Context Protocol (MCP) 连接AI代理到外部数据源和工具，并强调使用Application Default Credentials (ADC) 进行身份验证，避免硬编码凭据。\n\n**适合谁用**\n该项目适合希望在Google Cloud上高效部署、管理和优化应用程序的开发者、架构师和运维工程师。特别是那些需要集成AI能力、遵循Well-Architected Framework最佳实践，以及寻求简化Google Cloud操作流程的用户。",
+      "degraded": false
+    },
+    {
+      "id": "getsentry/sentry",
+      "owner": "getsentry",
+      "name": "sentry",
+      "url": "https://github.com/getsentry/sentry",
+      "stars": 45025,
+      "description": "Developer-first error tracking and performance monitoring",
+      "one_liner": "Sentry 是一个实时错误跟踪和性能监控平台，通过动态采样优化数据摄取和存储。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统监控系统中数据量过大导致的存储和分析效率问题，通过动态调整事件和追踪的采样率，确保关键数据被捕获，同时减少不必要的噪音和资源消耗。具体来说，它通过 `Dynamic Sampling System`  实现了对事件和追踪的细粒度、自适应控制，以优化数据摄取和存储。\n\n**核心功能**\n核心功能包括采样规则的生成、管理和分发，以及基于项目活动、环境和事件特征的实时采样率调整。系统通过 `Relay`  将采样规则分发到摄取层，并利用 Celery 任务（如 `boost_low_volume_projects`  和 `boost_low_volume_transactions` ）周期性地根据实际数据量重新计算采样率。\n\n**技术亮点**\n技术亮点在于其自适应的规则引擎和偏置实现。采样规则是 JSON 对象，定义了如何对事件或追踪进行采样，并由 `Relay` 按照顺序评估。偏置（Biases）是模块化的规则生成器，实现了特定的采样策略，例如 `IgnoreHealthChecksBias`  用于降低健康检查的采样率，以及 `RecalibrationBias`  根据组织配额调整采样。\n\n**适合谁用**\n该项目适合需要对大量事件和追踪数据进行高效管理和分析的组织和开发者。特别是对于那些希望在保证数据质量的同时，优化资源使用、降低存储成本的用户，例如需要监控低流量项目或特定交易的性能，并过滤掉不重要数据的场景。",
+      "degraded": false
+    },
+    {
+      "id": "colbymchenry/codegraph",
+      "owner": "colbymchenry",
+      "name": "codegraph",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "stars": 72949,
+      "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+      "one_liner": "CodeGraph 是一个本地优先的代码智能系统，它将源代码构建成语义知识图谱，以加速 AI 辅助开发。",
+      "detail_md": "**解决什么问题**\nAI 助手在理解代码时，通常需要通过 `grep`、`glob` 和 `read_file` 等工具反复扫描文件，这会消耗大量 token 并增加延迟。CodeGraph 通过预先索引代码结构、关系和语义，将代码库转化为可查询的知识图谱，从而减少 AI 探索代码的开销，提高效率和准确性。\n\n**核心功能**\nCodeGraph 提供以下核心功能：\n*   **代码图谱构建**：将源代码解析为节点（如函数、类）和边（如调用、继承），存储在本地 SQLite 数据库中。\n*   **语义搜索**：通过 FTS5 全文搜索功能，快速查找代码符号、文档字符串和签名。\n*   **影响分析**：追踪符号的调用者、被调用者以及变更影响范围。\n*   **上下文构建**：为 AI 代理提供任务相关的代码上下文，支持 Markdown 或 JSON 格式输出。\n*   **多语言支持**：支持 TypeScript、Python、Go、Rust、Java、C# 等 20 多种语言，并针对多种框架进行优化。\n\n**技术亮点**\n*   **本地优先**：所有数据和索引都存储在本地，不依赖外部 API，确保数据安全和隐私。\n*   **Rust 内核加速**：使用 Rust 编写的高性能内核进行解析和提取，提高性能。\n*   **Tree-sitter 解析**：利用 `web-tree-sitter` 和 WASM 语法进行高精度 AST 解析。\n*   **自动同步**：通过文件监听器（FSEvents/inotify/ReadDirectoryChangesW）实现代码变更的自动增量同步，保持图谱最新。\n*   **AI 代理集成**：通过 MCP (Model Context Protocol) 服务器与 Claude Code、Cursor 等 AI 代理无缝集成，提供精确的代码上下文。\n\n**适合谁用**\nCodeGraph 适合需要 AI 辅助开发、希望提高代码理解效率的开发者和团队。特别是使用 Claude Code、Cursor、GitHub Copilot 等 AI 编码助手的用户，CodeGraph 可以显著减少 token 消耗和工具调用次数，从而加速开发流程并降低成本。它也适用于处理大型或复杂代码库的场景，通过提供结构化的代码知识，帮助开发者更快地理解和修改代码。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 9493,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "`pstack` 是一个 Cursor 插件，旨在通过严谨的代理工作流帮助开发者编写更少但更高质量的代码，并支持并行化操作。",
+      "detail_md": "**解决什么问题**\n`pstack` 旨在解决代码质量、开发效率和复杂任务管理方面的问题。它通过提供结构化的代理工作流，帮助开发者在面对复杂任务时保持代码质量，减少重复工作，并能自信地并行化任务。  \n\n**核心功能**\n`pstack` 的核心功能包括 `poteto-mode`，这是一个高严谨性的编排技能，用于强制执行工程规则、初始化待办事项列表和选择匹配的剧本。   它还提供了一系列技能，如 `/how` 用于理解子系统工作原理，`/why` 用于探究设计原因，`/architect` 用于设计模块，以及 `/arena` 用于并行尝试多种解决方案。  此外，它还包含一套工程原则，指导代理进行决策。 \n\n**技术亮点**\n`pstack` 的技术亮点在于其基于代理的工作流和可配置性。它使用 `SKILL.md` 文件定义可执行的工作流，并通过 `plugin.json` 清单文件进行管理。   `poteto-mode` 能够根据任务需求动态选择和执行剧本，并支持通过 `/automate-me` 根据用户工作习惯定制技能。   它还支持通过 `/setup-pstack` 配置不同角色使用的模型。 \n\n**适合谁用**\n`pstack` 适合希望提高代码质量、优化开发流程的开发者和团队。特别是那些需要处理复杂任务、进行严格代码审查、或希望通过自动化代理工作流来提升效率的工程师。   它也适用于希望将自身工作习惯编码为自动化技能的个人开发者。",
+      "degraded": false
+    },
+    {
+      "id": "mvschwarz/openrig",
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "stars": 4289,
+      "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+      "one_liner": "OpenRig 是一个本地控制平面，用于管理多智能体编码拓扑，旨在将分散的终端会话转化为有组织、持久且可检查的软件工程团队。",
+      "detail_md": "### 解决什么问题\nOpenRig 旨在解决多智能体协作编码中缺乏组织、持久性和可追溯性的问题，通过提供一个统一的控制平面来协调智能体工作，并确保工作流程的透明和可管理。\n\n### 核心功能\nOpenRig 的核心功能包括：\n*   **多智能体拓扑管理**：允许用户设计、编写、验证和诊断 OpenRig 上运行的多智能体拓扑，包括 RigSpec 和 AgentSpec 文件。\n*   **任务和切片管理**：通过 `rig scope` CLI 命令管理任务（Missions）和切片（Slices），这些是工作分解的层次结构单元，并由审计引擎进行验证。<cite repo=\"mvschwarz/openrig\" path=\"mvschwarz/openrig\" start=\"6.2\" end=\"6.2\" />\n*   **SDLC 约定和策略**：支持轻量级（Part A）和严格（Part B）的软件开发生命周期（SDLC）约定，并提供内置的权限策略来管理智能体的行为。<cite repo=\"mvschwarz/openrig\" path=\"mvschwarz/openrig\" start=\"11.4\" end=\"11.4\" />\n*   **工作流运行时**：提供工作流的编译、实例化和执行功能，支持复杂任务的自动化和协调。\n*   **上下文和知识管理**：通过 `mission install` 机制为加入的智能体提供项目上下文，并使用 `docs/as-built/` 和 `docs/reference/` 结构化文档来维护系统状态和参考资料。<cite repo=\"mvschwarz/openrig\" path=\"mvschwarz/openrig\" start=\"11.4\" end=\"11.4\" />\n\n### 技术亮点\n*   **Hono-powered HTTP/WebSocket Daemon**：使用 Hono 框架构建的 HTTP/WebSocket 守护进程，提供客户端与控制平面之间的通信。\n*   **SQLite 持久化**：利用 SQLite 数据库进行数据持久化，确保系统状态的可靠存储。\n*   **tmux 终端复用**：集成 tmux 终端复用器，将分散的终端会话转化为有组织的、可检查的软件工程团队。\n*   **多客户端接口**：提供命令行界面（CLI）、终端用户界面（TUI）和 React Web 控制台等多种客户端接口，方便用户与系统交互。\n*   **SDLC 自动化和审计**：通过 `rig scope audit` 等工具对 SDLC 约定进行审计，确保工作流程的合规性和质量，但审计是建议性的，不会阻塞工作。\n\n### 适合谁用\nOpenRig 适合需要协调多个智能体进行软件开发、项目管理和自动化工作流的团队和个人。它特别适用于需要清晰定义任务、跟踪进度、管理权限和确保代码质量的场景，例如构建和发布 Web 应用程序、进行技术研究或操作和监控运行中的服务。",
+      "degraded": false
+    },
+    {
+      "id": "Effect-TS/effect",
+      "owner": "Effect-TS",
+      "name": "effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "stars": 16536,
+      "description": "Build production-ready applications in TypeScript",
+      "one_liner": "Effect-TS/effect 项目提供了一个类型安全的框架，用于构建与大型语言模型（LLM）交互的应用程序，特别是通过模型上下文协议（MCP）实现AI服务集成。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决在Effect应用程序中与AI模型（特别是LLM）集成时的复杂性问题，提供一个统一、类型安全且可扩展的框架来定义、暴露和消费AI能力，如工具、资源和提示。  它通过抽象底层RPC传输和序列化细节，简化了AI服务的开发和部署。\n\n### 核心功能\n*   **MCP服务器实现**：`McpServer` 模块提供了一个健壮的、类型化的基础，用于构建符合MCP规范的服务器，通过MCP暴露工具、资源、资源模板、提示和完成功能。 \n*   **工具和工具包**：允许定义具有输入和输出模式的工具 (`Tool.make`)，并将它们组织成工具包 (`Toolkit.make`)，以便AI客户端可以调用这些工具执行特定任务。 \n*   **资源管理**：支持定义可由客户端读取的资源 (`McpServer.resource`)，这些资源可以是静态内容，也可以是根据请求上下文动态生成的内容。\n*   **提示模板**：提供定义提示模板 (`McpServer.prompt`) 的能力，这些模板可以包含参数和完成逻辑，用于生成动态消息。\n*   **协议版本控制**：通过 `McpProtocol.ProtocolAdapter` 和 `McpProtocolRegistry` 支持多个协议版本，确保向后兼容性和可扩展性。\n\n### 技术亮点\n*   **基于Effect的RPC基础设施**：`McpServer` 直接构建在Effect的通用RPC服务器基础设施之上，利用模块化序列化层和多运行时传输（如Stdio、HTTP和Server-Sent Events）。\n*   **严格的Schema验证**：所有MCP交互都依赖于通过Effect的Schema系统 (`McpSchema`) 映射的严格JSON-RPC消息结构，确保数据完整性和类型安全。\n*   **并发和取消**：MCP请求生命周期与Effect fibers绑定，支持请求的取消和异步通知。\n*   **客户端上下文和能力**：`McpServer` 为每个连接的客户端维护 `McpServerClient` 服务，允许根据客户端的能力和信息动态调整工具和提示的行为。\n\n### 适合谁用\n该项目适合希望在Effect应用程序中构建和暴露AI服务（特别是基于LLM的工具、资源和提示）的开发者。 它对于需要与外部AI代理或客户端进行交互，并要求类型安全、可扩展性和高性能的应用程序特别有用。",
+      "degraded": false
+    },
+    {
+      "id": "pablostanley/yoinks",
+      "owner": "pablostanley",
+      "name": "yoinks",
+      "url": "https://github.com/pablostanley/yoinks",
+      "stars": 3484,
+      "description": "yoink any video from your terminal. no shady ads.",
+      "one_liner": "`yoinks` 是一个终端视频下载工具，支持 YouTube、X、Instagram、Threads、TikTok 等 1800 多个网站的视频下载，提供沉浸式全屏 TUI 体验。",
+      "detail_md": "### 解决什么问题\n`yoinks` 旨在解决用户在下载在线视频时遇到的浏览器弹窗、可疑重定向和广告等问题。它提供了一个干净、无干扰的终端界面，让用户可以直接粘贴 URL、选择下载格式并保存到本地。\n\n### 核心功能\n该工具的核心功能包括：\n*   **多平台视频下载**：支持 YouTube、X、Instagram、Threads、TikTok 以及超过 1800 个其他网站。\n*   **交互式终端用户界面 (TUI)**：提供全屏、沉浸式的交互体验，用户可以通过键盘或鼠标操作。\n*   **格式选择**：允许用户选择视频分辨率或仅下载音频 (MP3)。\n*   **自动依赖管理**：自动下载并管理 `yt-dlp` 和 `ffmpeg` 等二进制依赖。\n\n### 技术亮点\n`yoinks` 的技术亮点在于其现代化的 Node.js 生态系统和架构：\n*   **Ink 框架**：使用 Ink (React for the terminal) 构建用户界面，提供丰富的交互体验。\n*   **yt-dlp 集成**：利用 `yt-dlp` 进行视频元数据提取和下载。\n*   **ffmpeg 处理**：通过 `ffmpeg` 实现流合并和音频提取功能。\n*   **状态机管理**：应用核心通过一个 `Phase` 联合类型状态机管理整个下载流程，包括输入、探测、选择、下载和错误处理。\n\n### 适合谁用\n`yoinks` 适合需要从各种在线平台下载视频的用户，特别是那些偏爱命令行工具、寻求无广告、无干扰下载体验的用户。它也适合开发者和高级用户，因为它提供了命令行接口和可配置选项。",
+      "degraded": false
+    }
+  ]
+}
