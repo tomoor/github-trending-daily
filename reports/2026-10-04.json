@@ -1,0 +1,215 @@
+{
+  "doc_token": "Tj2rdG4KZo0pm9xMe3ycAjjHneW",
+  "doc_url": "https://my.feishu.cn/docx/Tj2rdG4KZo0pm9xMe3ycAjjHneW",
+  "items": [
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 153367,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail 是一个 AI 代理技能，旨在通过强制执行极简主义和“你不需要它”（YAGNI）原则来优化代码生成。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 AI 代理在生成代码时常见的过度工程、冗余代码和不必要的复杂性问题。 它通过模拟“懒惰的高级开发人员”的心态，减少代码量、降低成本并提高开发速度，同时确保代码的安全性。 \n\n### 核心功能\nPonytail 的核心功能是其“决策阶梯”和一系列规则，指导 AI 代理生成最少且有效的代码。 它支持三种强度级别（`lite`、`full`、`ultra`），允许用户根据需求调整极简主义的严格程度。 此外，它还提供代码审查 (`ponytail-review`) 和审计 (`ponytail-audit`) 功能，以识别和消除过度工程。 \n\n### 技术亮点\nPonytail 的技术亮点在于其跨平台兼容性，通过平台特定的插件清单（如 Claude、Codex、GitHub Copilot CLI、Devin、Qoder 和 Hermes）集成到各种 AI 代理主机中。    它通过 `SKILL.md` 文件定义核心行为，并通过脚本自动同步到不同平台的规则文件，确保一致性。  \n\n### 适合谁用\nPonytail 适合任何希望提高 AI 辅助代码生成效率和质量的开发人员和团队。 特别是那些关注减少技术债务、优化代码库、降低开发成本和加速交付的开发者。 它适用于需要编写、添加、重构、修复、审查或设计代码，以及选择库或依赖项的各种编码任务。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 75280,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个 AI 编码工具的设计技能框架，旨在通过共享词汇、确定性质量检查和实时视觉迭代来改进前端开发。",
+      "detail_md": "**解决什么问题**\nImpeccable 旨在解决 AI 编码工具在前端开发中缺乏统一设计语言、质量检查和实时反馈的问题。  它通过提供一个结构化的设置流程来帮助 AI 理解项目的设计上下文，从而生成更符合设计规范的代码。 \n\n**核心功能**\n核心功能包括项目初始化 (`/impeccable init`)，它会扫描代码库以生成 `PRODUCT.md`（战略性文件，定义产品目的、用户、品牌个性等）  和 `DESIGN.md`（视觉性文件，定义视觉主题、颜色、排版等）。  此外，它还支持实时模式配置，以便在开发过程中提供即时视觉反馈。 \n\n**技术亮点**\n该项目通过 CLI 安装程序 (`npx impeccable install`) 自动检测本地 AI 环境，并下载和提取特定于提供商的构建。  它能够根据代码库内容推断出项目的“注册”（品牌或产品）和“平台”（web、iOS、Android 或自适应）假设，并通过交互式提问与用户确认。 \n\n**适合谁用**\nImpeccable 适合使用 AI 编码工具进行前端开发的工程师和设计师。  特别是那些希望确保 AI 生成的代码符合既定设计规范、需要统一设计语言和实时视觉反馈的团队。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 272220,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "ECC 是一个生产就绪的智能体操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。",
+      "detail_md": "**解决什么问题**\nECC 旨在解决 AI 编码助手在复杂软件工程任务中自主性不足的问题，通过提供一套全面的专业智能体、技能和控制平面，将自然语言的用户意图转化为可执行的自动化流程。    它还解决了跨不同 AI 开发工具（如 Claude Code, Codex, Cursor 等）的代码自动化工作流统一性问题。  \n\n**核心功能**\nECC 的核心功能包括多工具兼容性，支持多种 AI 开发工具，确保统一的开发体验。   它拥有 68 个专业智能体和 290 多个技能，用于自动化工程生命周期任务，例如 `planner` (功能规划) 和 `security-reviewer` (漏洞检测)。    此外，它还强制执行测试驱动开发、输入验证和安全监控等最佳实践。 \n\n**技术亮点**\n该项目采用 Rust 编写的控制平面 `ecc2/`，提供会话生命周期管理、TUI 仪表板、持久状态和智能体间消息传递。  ECC 支持持续学习，通过“本能系统”从会话历史中提取可重用经验。  其模块化和可扩展的架构允许通过选择性安装配置文件（Minimal, Core, Full）来定制组件和资源使用。 \n\n**适合谁用**\nECC 适合希望将 AI 编码助手转变为高自主性、测试驱动和安全优先的软件工程伙伴的开发者和团队。   它特别适用于在 Claude Code, Codex, Cursor, OpenCode 和 Gemini 等多种 AI 开发工具上工作的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Effect-TS/effect",
+      "owner": "Effect-TS",
+      "name": "effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "stars": 16806,
+      "description": "Build production-ready applications in TypeScript",
+      "one_liner": "Effect-TS/effect 项目提供了一个统一的、类型安全的框架，用于构建 HTTP 服务和 AI 模型上下文协议（MCP）服务器。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在不同平台（如 Node.js、Bun、Deno 和浏览器）上构建和消费 HTTP 服务时，以及在 AI 领域中实现模型上下文协议（MCP）服务器时面临的复杂性和碎片化问题。  它通过提供统一的 API 定义、类型安全的通信和模块化的架构来简化开发。 \n\n**核心功能**\n该项目包含两个主要部分：HTTP 和 API 层以及模型上下文协议（MCP）子系统。  HTTP 和 API 层提供了一个 `HttpClient` 用于发出请求，一个 `HttpServer` 和 `HttpRouter` 用于处理传入请求，以及一个 `HttpApi` 框架用于声明式地定义 API。  MCP 子系统提供了一个健壮的、类型化的基础，用于构建 MCP 兼容的服务器，通过 MCP 暴露工具、资源、资源模板、提示和完成。 \n\n**技术亮点**\n该项目利用 Effect 的通用 RPC 服务器基础设施，支持模块化序列化层和多运行时传输（如 Stdio、HTTP 和 Server-Sent Events）。  它通过 `McpSchema` 强制执行严格的 JSON-RPC 消息结构和验证。  此外，它支持多个协议版本，允许向后兼容性和未来的可扩展性。  `HttpApi` 框架能够从一个 API 定义生成服务器、文档（OpenAPI 3.1、Scalar、Swagger）和类型化客户端。 \n\n**适合谁用**\n该项目适合需要构建高性能、类型安全且易于维护的 HTTP 服务和 AI 应用程序的开发者。  特别是，它适用于希望利用 Effect 强大的并发和错误处理能力来开发 AI 代理、工具和资源管理系统的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 109521,
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "one_liner": "`caveman` 是一个多层令牌压缩系统，旨在优化 AI 代理（如 Claude Code、Codex、Gemini CLI 等）的交互，通过精简通信风格和结构化压缩来降低成本和延迟。",
+      "detail_md": "**解决什么问题**\n`caveman` 项目旨在解决大型语言模型 (LLM) 交互中高昂的成本和延迟问题。  LLM 往往会产生冗长的回复，其中包含大量非必要词语，这增加了令牌使用量和处理时间。  该项目通过减少输入和输出令牌来降低这些成本，同时确保技术准确性不受影响。 \n\n**核心功能**\n`caveman` 提供了双层压缩机制。 \n1.  **技能层 (Skill Layer)**：通过系统提示指令，使 AI 代理生成更简洁的输出。  它会删除冠词、填充词和客套话，将输出令牌减少约 65%，同时保持 100% 的技术准确性。 \n2.  **引擎层 (Engine Layer)**：一个基于 Go 的本地运行时，在输入到达提供商之前，通过有损但可恢复的压缩技术（如 JSON、日志和代码的结构化重编码）来缩小代理读取的输入内容。 \n\n此外，它还包括 `caveman-compress` 等子技能，用于压缩项目内存文件，进一步减少重复输入的大小。 \n\n**技术亮点**\n*   **双层压缩模型**：结合了语言层面的输出压缩（通过 `SKILL.md` 定义的规则）和结构层面的输入压缩（通过 `caveman-engine`）。 \n*   **智能精简原则 (Smart Caveman Principle)**：确保在压缩英文解释的同时，响应的技术完整性保持 100% 准确，例如保留技术术语、API 名称和代码块。 \n*   **多强度级别**：支持 `lite`、`full`、`ultra` 以及 `wenyan`（文言文）等多种压缩强度，以适应不同需求。 \n*   **自动清晰度安全覆盖 (Auto-Clarity Safety Override)**：在安全警告、不可逆操作确认或可能导致误解的多步骤序列等高风险场景下，系统会自动切换回正常散文模式，以防止信息丢失。 \n\n**适合谁用**\n`caveman` 适用于需要与 AI 编码代理（如 Claude Code、Codex、Gemini CLI、Cursor 等）进行高效、低成本交互的开发者和团队。  特别是那些希望减少 LLM 令牌使用量、降低 API 成本并加快响应速度的用户。  它也适合希望通过精简通信来提高 AI 代理工作效率的个人和组织。",
+      "degraded": false
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 89773,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 赋予 AI Agent 访问互联网的能力，解决多平台数据获取难题，提供统一接口和自动化管理。",
+      "detail_md": "## 解决什么问题\nAgent Reach 旨在解决 AI Agent 在获取互联网内容时面临的平台壁垒问题。不同的平台有各自的访问限制，例如付费 API、IP 封锁、登录验证和反爬措施。Agent Reach 通过预选、集成和管理这些工具，让 AI Agent 能够通过统一的命令访问各种平台，而无需用户手动处理复杂的配置和错误。\n\n## 核心功能\nAgent Reach 提供了一个 Python CLI 包 `agent-reach`，其核心功能包括：\n*   **统一的命令行接口**：AI Agent 可以通过 `agent-reach read <url>` 或 `agent-reach search-twitter \"query\"` 等命令访问互联网内容。\n*   **多平台支持**：支持包括网页、YouTube、Twitter、Bilibili、GitHub、Reddit、小红书、LinkedIn、V2EX、雪球、小宇宙播客、RSS 等在内的 15+ 平台。\n*   **自动化安装与配置**：提供 `agent-reach install` 命令，自动安装依赖、配置环境，并注册 AI Agent 的技能文件 `SKILL.md`。\n*   **内置诊断工具**：`agent-reach doctor` 命令可以检查每个渠道的状态，报告哪些可用、哪些需要配置以及如何修复。\n\n## 技术亮点\n*   **胶水层设计**：Agent Reach 作为“胶水层”，负责工具选择和配置，但底层实现可插拔，每个后端都可替换。\n*   **零强制 API 费用**：默认后端均为免费工具，如 Jina Reader、`bird` CLI、`yt-dlp` 等。\n*   **凭据本地存储**：Cookie 和 Token 等敏感信息仅存储在本地 `~/.agent-reach/config.yaml` 文件中，并设置严格的权限，确保隐私安全。\n*   **多后端路由**：每个平台都配置了“首选 + 备选”的有序后端列表，当某个接入方式失效时，系统会自动切换到下一个可用后端，用户无感知。\n\n## 适合谁用\nAgent Reach 适合需要 AI Agent 具备广泛互联网访问能力的开发者和用户。特别是那些希望 AI Agent 能够：\n*   进行全网调研、搜索和信息查找。\n*   访问特定社交媒体、视频平台、技术社区等（如 Twitter、Bilibili、Reddit、小红书、GitHub、YouTube）。\n*   避免手动配置和维护各种平台 API 或爬虫工具的复杂性。\n*   使用 Claude Code、OpenClaw、Cursor 等任何能运行命令行指令的 AI Agent。",
+      "degraded": false
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "stars": 24671,
+      "description": "",
+      "one_liner": "T3 Code 是一个开源的控制平台，用于编排各种编码智能体，提供统一的开发体验。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者在管理和使用多个编码智能体（如 Claude Code、Codex、Antigravity、OpenCode、Cursor 和 Grok）时面临的碎片化问题。 它提供了一个统一的界面来编排这些智能体，并允许用户自定义和扩展其功能。 \n\n**核心功能**\nT3 Code 的核心功能包括一个聊天界面 (`ChatView`) 用于与智能体交互，消息时间线 (`MessagesTimeline`) 用于显示对话历史，以及一个撰写器 (`ChatComposer`) 用于输入提示和管理附件。它还支持项目管理，允许用户添加现有项目或创建新项目，并能从其他智能体工具（如 Claude Code 和 Codex）导入项目和对话历史。\n\n**技术亮点**\n该项目采用 React 构建前端界面，并结合 Zustand 和 Effect Atom 进行状态管理，实现了响应式和高性能的用户体验。它还支持乐观更新机制，以提高用户提交消息时的响应速度。项目是完全开源的，允许用户修改 UI、添加自定义智能体和工具，并自行构建和分发应用程序。\n\n**适合谁用**\nT3 Code 适合需要统一管理和编排多个编码智能体的开发者。 特别是那些希望自定义开发环境、集成自己的工具和模型，或者对开源项目有贡献意愿的用户。 它也适合希望从现有智能体工具中导入项目和对话历史的用户。",
+      "degraded": false
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 95562,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 AI 编码助手设计的持久化内存压缩系统，旨在跨会话保留上下文。",
+      "detail_md": "### 解决什么问题\nClaude-Mem 解决了 AI 代理在每次新会话开始时缺乏历史上下文的问题。  通过自动捕获工具使用观察结果、生成语义摘要，并将其提供给未来的会话，它使 AI 编码助手（如 Claude Code）能够保持项目知识的连续性。 \n\n### 核心功能\n*   **持久化内存**：确保上下文在不同会话之间得以保留。 \n*   **文件夹上下文文件**：在项目文件夹中自动生成 `CLAUDE.md` 文件，其中包含活动时间线。 \n*   **MCP 搜索工具**：允许使用自然语言查询项目历史。 \n*   **知识代理**：能够根据观察历史构建可查询的“大脑”。 \n*   **Web 查看器 UI**：通过本地 worker 提供实时内存流可视化。 \n*   **隐私控制**：支持使用 `<private>` 标签排除敏感内容存储。 \n*   **多语言模式**：支持 28 种语言，并可切换不同的工作流模式（如 Code、Email Investigation、Chill）。 \n\n### 技术亮点\nClaude-Mem 的核心组件包括 5 个生命周期钩子（SessionStart、UserPromptSubmit、PostToolUse、Summary、SessionEnd），一个由 Bun 管理的 Worker Service（本地 HTTP API），以及一个用于存储会话、观察和摘要的 SQLite 数据库。  它还利用 Chroma 向量数据库进行混合语义和关键词搜索，以实现智能上下文检索。  安装过程智能且自动化，可以处理 Bun 和 uv 等依赖的安装。 \n\n### 适合谁用\nClaude-Mem 主要为使用 AI 编码助手（如 Claude Code、Cursor、Windsurf、OpenCode 等）的开发者设计。  任何希望 AI 代理在不同会话中保持项目上下文和知识连续性的用户都将受益于此系统。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/cloudflare-os",
+      "owner": "cloudflare",
+      "name": "cloudflare-os",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "stars": 10558,
+      "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+      "one_liner": "Cloudflare OS 是一个 AI 生产力环境，旨在安全地编排 AI 工作负载和沙盒应用程序，以提高企业生产力。",
+      "detail_md": "**解决什么问题**\nCloudflare OS 旨在解决企业在利用 AI 提高生产力时面临的安全和效率挑战。它通过提供一个沙盒环境来运行 AI 代理和应用程序（称为“小工具”），确保数据安全和隐私。此外，它还通过“守门人”安全框架，对代理和应用程序的行为进行限制，防止潜在的风险操作。\n\n**核心功能**\n该项目提供了一个代理聊天用户界面，用户可以在其中分配任务给预加载了公司运营知识的 AI 代理。它支持沙盒应用程序开发，允许用户创建和安全共享“小工具”（小型个人应用程序）。此外，它还包含一个名为“守门人”的安全框架，用于对代理和应用程序施加限制，确保安全使用。\n\n**技术亮点**\nCloudflare OS 采用三层架构，灵感来源于操作系统，用于编排 AI 工作负载、沙盒客户端应用程序和安全的基于能力资源访问。它利用 Cloudflare Workers、基于 SQLite 的 Durable Objects 进行权威状态管理，并使用 Cap'n Web 进行基于 WebSocket 的 TypeScript RPC 通信。核心后端（`workshop-backend`）作为“内核”，负责用户身份、工作区隔离、存储协调和代理执行。\n\n**适合谁用**\nCloudflare OS 适用于希望安全地将 AI 代理和自定义应用程序集成到其工作流程中的企业和团队。它特别适合那些需要高度数据安全、隐私保护以及允许非技术用户安全使用 AI 工具的组织。该项目也适合希望基于 Cloudflare Workers 和 Durable Objects 构建类似 AI 生产力环境的开发者进行定制和部署。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 100827,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "这是一个为AI编程代理提供生产级工程技能的项目，涵盖从需求到发布的完整软件开发生命周期。",
+      "detail_md": "**解决什么问题**\nAI编程代理通常会选择最短路径，这可能导致跳过规范、测试和安全审查等关键实践，从而影响软件的可靠性。  `agent-skills` 项目通过为AI代理提供结构化的工作流程来解决这个问题，这些工作流程强制执行高级工程师在生产代码中使用的相同规范。 \n\n**核心功能**\n该项目提供了一系列工程技能，这些技能以Markdown格式编码，指导AI代理完成特定的工程任务。  这些技能包括定义、规划、构建、验证、审查和发布等软件开发生命周期的各个阶段。  用户可以通过斜杠命令（如`/spec`、`/plan`、`/build`等）或通过`npx skills add`命令安装所有或单个技能来激活这些技能。  \n\n**技术亮点**\n1.  **结构化工作流程**: 每个技能都是一个结构化的、流程驱动的工作流程，包含验证门、反合理化表格和明确的危险信号，而不是简单的提示。 \n2.  **多代理集成**: `agent-skills` 支持多种AI代理工具，如Claude Code、Cursor、Codex、Copilot等，并提供相应的设置指南。 \n3.  **三层评估框架**: 项目包含一个三层评估系统，用于检查技能的结构、触发和路由准确性，以及行为正确性，确保技能的有效性和可靠性。  \n\n**适合谁用**\n该项目适合希望提高AI编程代理在软件开发过程中产出质量的开发者和团队。  特别是对于需要确保AI代理遵循严格的工程实践、质量门和最佳实践的场景，例如在生产代码开发、代码审查、安全审计和性能优化等方面。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 294906,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为编码代理设计的软件开发方法论，通过可组合的技能集指导代理完成开发工作流。</cite>",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决编码代理在软件开发过程中面临的挑战，例如缺乏结构化的开发流程、上下文污染、以及在复杂任务中难以保持一致性和效率等问题。</cite>它通过引入“技能”（Skills）和“子代理驱动开发”（Subagent-Driven Development, SDD）等概念，确保代理在开发过程中遵循最佳实践，例如测试驱动开发（TDD）、避免过度工程（YAGNI）和减少重复（DRY）。</cite>\n\n**核心功能**\n该项目的核心功能包括：\n*   **技能系统（Skills System）**：提供模块化、可重用的 AI 指导单元，以 `SKILL.md` 文件的形式存储，指导代理在特定场景下如何行动。</cite>\n*   **子代理驱动开发（SDD）**：一种工作流，其中“控制器”代理将实施计划中的各个任务委托给独立的“子代理”，以防止上下文污染并提高效率。</cite>\n*   **开发工作流**：涵盖从构思（通过 `brainstorming` 技能）</cite>、计划（通过 `writing-plans` 技能）</cite>到实施和代码审查的完整软件开发生命周期。</cite>\n*   **可视化伴侣（Visual Companion）**：在架构头脑风暴期间提供一个基于浏览器的工具，用于可视化复杂设计。</cite>\n\n**技术亮点**\n*   **跨平台兼容性**：通过“Harness Adaptation Layer”实现，允许核心技能库在 Claude Code、Codex、Gemini CLI 和 Pi 等多个平台上运行。</cite>\n*   **会话启动钩子（Session-Start Hook）**：一种在会话开始时注入 `using-superpowers` 引导机制，确保技能自动触发。</cite>\n*   **严格的审查流程**：引入硬门（Hard-Gate）机制，要求在进入下一阶段前获得用户明确批准，以及内联自审查清单，以在人工审查前捕获问题。</cite>\n*   **上下文隔离**：子代理接收其所需的最小上下文，防止上下文窗口污染，提高效率和准确性。</cite>\n\n**适合谁用**\nSuperpowers 适合使用编码代理进行软件开发的开发者、团队和企业。</cite>特别是那些希望通过结构化方法、最佳实践和自动化工作流来提高代理开发效率、代码质量和协作能力的场景。</cite>它支持多种代理平台，使其适用于广泛的用户群体。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 275345,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "Matt Pocock 的 AI 代理技能集，旨在提升软件工程师的开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决软件开发中常见的痛点，包括开发人员与 AI 代理之间的沟通不畅、AI 代理输出冗长、代码质量低下 以及代码库架构混乱。它通过提供一套可组合的技能来弥补这些不足，帮助工程师更高效地构建和维护高质量的软件。 \n\n**核心功能**\n项目提供了一系列核心功能，例如通过 `/grill-with-docs` 技能进行“拷问式”对话，以明确需求并构建共享语言；使用 `/tdd` 技能进行测试驱动开发，确保代码质量；通过 `/improve-codebase-architecture` 技能扫描代码库，发现并改进架构“深化机会”；以及 `/ask-matt` 技能作为路由，帮助用户选择合适的技能或流程。\n\n**技术亮点**\n该项目采用模块化技能设计，每个技能都是一个独立的功能单元，可由 AI 模型或用户调用。它强调“无处不在的语言”和领域建模，通过 `GLOSSARY.md` 文件定义项目特定术语，减少 AI 代理的冗余输出并提高沟通效率。此外，项目还支持多种安装方式，包括作为 Claude Code 插件安装，以及通过 `skills.sh` 脚本复制可编辑文件，方便用户自定义和扩展。\n\n**适合谁用**\n该项目适合希望提升软件开发效率和代码质量的软件工程师，特别是那些使用 AI 代理进行辅助开发，并希望更好地与 AI 代理协作、减少沟通障碍、遵循良好工程实践的开发者。它也适用于需要管理复杂代码库，并希望通过系统化方法改进代码架构和可维护性的团队。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 25244,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`Context Mode` 是一个开源插件和商业平台，旨在解决大型语言模型 (LLM) 上下文窗口的效率问题，通过沙盒化工具输出和智能索引来节省上下文并保持会话连续性。",
+      "detail_md": "**解决什么问题**\nAI 编码代理在执行工具调用时，会将大量原始数据（例如 `gh issue list` 的 JSON 输出、文件内容、日志等）倾倒到上下文窗口中，导致上下文迅速膨胀。  这不仅会降低模型的准确性和响应速度，还会增加成本，并导致模型在上下文窗口满时进行压缩，从而丢失关键的工作状态和会话连续性。 \n\n**核心功能**\n`Context Mode` 通过三大核心机制解决上述问题： \n1.  **上下文窗口保护 (Context Saving)**：通过沙盒化执行工具输出，并对大型输出进行意图驱动的过滤和索引，将原始数据保留在子进程中，只将相关摘要或片段返回给 LLM，从而大幅减少上下文消耗。 \n2.  **会话连续性 (Session Continuity)**：实时捕获文件编辑、Git 操作、任务、错误和用户决策等事件，并将其存储在持久化的 `SessionDB` (SQLite) 中。  在上下文压缩时，系统会构建一个精简的 XML 快照，并在新会话开始时通过指令恢复，确保模型能够从上次中断的地方继续工作。 \n3.  **知识库 (Knowledge Base)**：使用 FTS5 全文搜索索引存储工具输出和会话事件，支持多层回退搜索（Porter、Trigram、Fuzzy）和智能片段提取，使 LLM 能够按需检索详细信息。 \n\n**技术亮点**\n该项目采用沙盒化执行模型，支持 11 种编程语言，并通过 `PreToolUse` 钩子拦截并重定向数据密集型工具调用。  它使用严格压缩公式计算上下文节省量，确保报告的准确性。  此外，`context-mode` 还提供了 `ctx_stats` 工具用于实时性能监控，`context-mode doctor` 用于诊断运行时问题，以及 `context-mode upgrade` 用于自动化更新。 \n\n**适合谁用**\n`Context Mode` 插件适用于使用 AI 编码代理（如 Claude Code, Cursor, Copilot, Codex, Gemini CLI 等）的开发者，帮助他们节省上下文、提高效率并降低成本。  其商业平台 `Context Mode Insight` 则面向工程组织，提供 AI 辅助团队的工程信号，帮助 CTO、EM、CISO 等角色了解团队的 AI 工具使用情况和效率。",
+      "degraded": false
+    },
+    {
+      "id": "earendil-works/pi",
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "stars": 112150,
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "one_liner": "`pi` 是一个高度可扩展的终端编码工具和 AI 代理框架，用于构建、运行和嵌入与本地文件系统和 shell 命令交互的自主代理。",
+      "detail_md": "**解决什么问题**\n`pi` 旨在解决传统开发中 AI 代理与本地环境交互受限的问题，通过提供一个统一的框架，使 AI 代理能够直接访问文件系统和执行 shell 命令，从而实现更深度的自动化和更高效的开发工作流。它还通过会话管理和上下文压缩来解决大型语言模型 (LLM) 上下文窗口限制的问题，确保长时间对话的连贯性和成本效益。\n\n**核心功能**\n*   **多模式执行**：支持交互模式 (TUI)、打印模式 (单次输出到 stdout) 和 RPC 模式 (通过 stdin/stdout 进行 JSON-RPC 2.0 通信)，适应不同的使用场景。\n*   **会话管理**：自动保存会话，支持分支、分叉和上下文压缩，通过 JSONL 存储库实现持久化会话。\n*   **上下文压缩**：当会话超出 LLM 上下文窗口限制时，自动或手动触发压缩，将旧的对话内容总结为精炼的摘要，以节省 token 并保持对话连贯性。\n*   **扩展系统**：允许用户注册自定义工具、斜杠命令、UI 组件和事件处理器，实现高度定制化和功能扩展。\n\n**技术亮点**\n*   **模块化架构**：采用 monorepo 结构，将核心代理逻辑 (`@earendil-works/pi-agent-core`)、LLM 抽象层 (`@earendil-works/pi-ai`)、终端 UI 组件 (`@earendil-works/pi-tui`) 和持久化原语 (`@earendil-works/pi-durable`) 分离，提高了可重用性和可维护性。\n*   **差分渲染终端 UI**：`@earendil-works/pi-tui` 包提供了一个自定义的终端 UI 库，采用差分渲染技术，实现高效的终端更新和交互式体验。\n*   **JSONL 会话格式**：会话历史以 JSON Lines (`.jsonl`) 格式持久化，支持追加写入、回放、分支和压缩，通过 `id` 和 `parentId` 字段构建有向无环图 (DAG) 会话树。\n*   **可配置的项目信任**：引入项目信任机制，在加载项目本地设置、资源、指令和包之前进行询问，增强了安全性。\n\n**适合谁用**\n`pi` 适合需要自动化开发任务、与 AI 代理进行深度交互的开发者。特别是那些希望通过 AI 代理执行文件操作、shell 命令、代码编辑和项目管理，并需要高度定制化和可扩展性的用户。它也适用于希望构建自己的 AI 代理工具或集成现有 LLM 服务的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "getsentry/sentry",
+      "owner": "getsentry",
+      "name": "sentry",
+      "url": "https://github.com/getsentry/sentry",
+      "stars": 45201,
+      "description": "Developer-first error tracking and performance monitoring",
+      "one_liner": "Sentry 是一个实时错误监控平台，帮助开发者监控、修复和优化代码性能。",
+      "detail_md": "**解决什么问题**\nSentry 旨在解决软件开发中遇到的错误和性能问题，通过实时监控应用程序的运行状况，帮助开发者快速发现、诊断并解决问题，从而提高软件质量和用户体验。它还通过 AI 辅助功能，如 Autofix 和 Seer Explorer，进一步简化了问题分析和修复流程。\n\n**核心功能**\nSentry 的核心功能包括错误和性能监控、事件数据聚合与查询、以及 AI 辅助的问题解决。它能够收集应用程序的错误事件和性能数据，并提供强大的查询和分析工具，例如通过 `OrganizationEventsEndpointTest` 类中的测试用例展示了对事件数据进行聚合和过滤的能力。此外，Sentry 还集成了 Seer 微服务，提供 Autofix（自动修复）和 Seer Explorer（交互式 AI 助手）等 AI 驱动的功能，帮助用户理解和解决问题。\n\n**技术亮点**\nSentry 的技术亮点在于其强大的数据处理和 AI 集成能力。它使用 Snuba 作为核心搜索和聚合引擎，处理大量的事件数据。通过 `SeerRpcServiceEndpoint` 和 `OrganizationSeerRpcEndpoint` 等端点，Sentry 与 Seer 微服务进行双向通信，实现 AI 辅助功能。这些 AI 功能通过特征标志进行控制，例如 `organizations:ai-issue-detection` 用于启用基于 LLM 的问题检测。\n\n**适合谁用**\nSentry 适合所有需要监控和优化其软件应用程序的开发者和团队。无论是个人开发者、小型团队还是大型企业，Sentry 都能提供从错误跟踪到性能监控的全面解决方案，帮助他们构建更稳定、更高效的软件。特别是对于那些希望利用 AI 技术加速问题诊断和解决的团队，Sentry 提供的 Autofix 和 Seer Explorer 功能将非常有价值。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 149216,
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "one_liner": "Claude Code 是一个终端中的智能编码工具，它理解代码库，并通过自然语言命令协助软件开发任务。",
+      "detail_md": "**解决什么问题**\nClaude Code 旨在解决软件开发中重复性任务、代码理解和 Git 工作流的效率问题。  它通过结合大型语言模型 (LLM) 的推理能力和直接的系统访问，帮助开发者更快地完成编码工作。 \n\n**核心功能**\n核心功能包括：代理编排和执行，支持子代理生成和工作区隔离；  上下文管理，自动压缩以保持在 token 限制内；  工具和协议集成，例如模型上下文协议 (MCP)；  以及第一方模块和插件，通过 `register(on, options)` 接口扩展功能。 \n\n**技术亮点**\n技术亮点在于其代理式架构，允许通过自然语言命令执行任务，并能理解代码库。  它支持多种安装方式，包括 macOS/Linux 的 `curl` 脚本和 Homebrew，以及 Windows 的 PowerShell 脚本和 WinGet。  此外，它还提供了丰富的配置选项和修复，例如处理长提示、优化内存使用和改进启动时间。  \n\n**适合谁用**\nClaude Code 适合需要提高编码效率的软件开发者，无论是在终端、IDE 中工作，还是通过 GitHub 上的 `@claude` 标签进行协作。  它也适用于希望通过插件扩展工具功能的用户，以及需要处理复杂代码和 Git 工作流的团队。",
+      "degraded": false
+    },
+    {
+      "id": "jamwithai/production-agentic-rag-course",
+      "owner": "jamwithai",
+      "name": "production-agentic-rag-course",
+      "url": "https://github.com/jamwithai/production-agentic-rag-course",
+      "stars": 9397,
+      "description": "",
+      "one_liner": "本项目是一个生产级的RAG系统，用于自动获取、理解学术论文并回答研究问题，支持从基础检索到智能体RAG的演进。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统大型语言模型（LLM）在处理特定领域知识时可能出现的幻觉、信息过时和领域知识不足等问题。</cite>通过结合检索增强生成（RAG）技术，它能够从学术论文中检索相关信息，并以此为基础生成准确、可靠的答案，从而提升LLM在学术研究领域的应用效果。</cite>\n\n**核心功能**\n该项目提供了一个完整的AI研究助手系统，其核心功能包括：</cite>\n*   **数据摄取管道**：自动从arXiv获取并解析学术论文，将元数据和内容存储在PostgreSQL数据库中。</cite>\n*   **混合搜索**：结合BM25关键词搜索和向量相似度搜索，通过RRF融合技术实现高效且语义理解的检索。</cite>\n*   **RAG问答**：利用本地LLM（Ollama）根据检索到的上下文生成答案，支持标准和流式响应。</cite>\n*   **智能体RAG**：通过LangGraph实现智能体工作流，支持决策制定、文档评分、查询重写和自适应检索等高级功能。</cite>\n*   **可观测性与缓存**：集成Langfuse进行端到端RAG管道追踪，并使用Redis进行响应缓存以优化性能。</cite>\n*   **用户界面**：提供Gradio Web UI和Telegram Bot，方便用户通过不同渠道与系统交互。</cite>\n\n**技术亮点**\n该项目在技术上具有以下亮点：\n*   **多层架构**：采用清晰分层的架构，包括客户端层、应用层（FastAPI）、处理层、数据层、AI/ML层和编排层，实现关注点分离。</cite>\n*   **Docker Compose编排**：使用Docker Compose管理12个容器化服务，包括FastAPI、PostgreSQL、OpenSearch、Ollama、Redis和Langfuse等，简化部署和管理。</cite>\n*   **工厂模式与依赖注入**：通过工厂函数实例化所有服务，并利用FastAPI的依赖注入机制实现松耦合和可测试性。</cite>\n*   **渐进式增强**：项目通过七周的迭代，从基础架构逐步演进到智能体RAG，展示了生产级RAG系统的构建过程。</cite>\n*   **Langfuse追踪**：全面集成Langfuse，对RAG管道的每个阶段进行端到端追踪，提供详细的性能和行为分析。</cite>\n*   **优雅降级**：关键服务实现优雅降级，例如嵌入失败时回退到BM25搜索，确保系统在部分组件故障时仍能继续运行。</cite>\n\n**适合谁用**\n本项目适合以下用户：\n*   **AI工程师和开发者**：希望学习和构建生产级RAG系统，掌握行业最佳实践和高级AI工程技能。</cite>\n*   **研究人员和学生**：需要一个高效的AI研究助手来自动获取、理解学术论文并回答研究问题。</cite>\n*   **对RAG系统感兴趣的个人**：希望从零开始了解RAG系统的基础设施、数据管道、搜索、LLM集成、监控和智能体功能。</cite>\n*   **寻求生产级解决方案的企业**：希望为特定领域构建可靠、可观测且高性能的RAG应用。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "meituan-longcat/LongCat-Video",
+      "owner": "meituan-longcat",
+      "name": "LongCat-Video",
+      "url": "https://github.com/meituan-longcat/LongCat-Video",
+      "stars": 8728,
+      "description": "",
+      "one_liner": "LongCat-Video是一个统一的视频生成模型，支持文本到视频、图像到视频和视频续写，尤其擅长高效生成高质量长视频，并提供音频驱动的虚拟形象生成功能。",
+      "detail_md": "### 解决什么问题\nLongCat-Video项目旨在解决视频生成领域中，文本到视频、图像到视频以及视频续写等任务的统一性、效率和质量问题。它特别关注长视频生成中常见的色彩漂移和质量下降问题，并提供了音频驱动的虚拟形象生成能力，以实现唇形同步和自然的角色动画。\n\n### 核心功能\n该项目的核心功能包括：\n*   **统一的视频生成框架**：在一个模型中支持文本到视频（T2V）、图像到视频（I2V）和视频续写（VC）任务。\n*   **长视频生成**：通过对视频续写任务的预训练，能够生成数分钟长的视频，同时保持色彩一致性和质量。\n*   **音频驱动的虚拟形象生成**：提供两种模式：\n    *   **Audio-Text-to-Video (AT2V)**：根据音频和文本提示生成角色视频，无需参考图像。\n    *   **Audio-Image-to-Video (AI2V)**：根据音频、参考图像和文本提示生成角色视频，确保视觉一致性并实现唇形同步。\n*   **多角色音频输入支持**：支持单流和多流音频输入，适用于多角色场景。\n\n### 技术亮点\n*   **13.6B参数的基础视频生成模型**：LongCat-Video是一个拥有13.6B参数的扩散模型，在T2V、I2V和VC任务上表现出色。\n*   **高效推理**：通过时空轴上的粗到细生成策略和块稀疏注意力（Block Sparse Attention），实现720p、30fps视频的快速生成。\n*   **多奖励RLHF**：采用多奖励组相对策略优化（GRPO）进行训练，提升了模型性能。\n*   **音频CFG参数**：通过`audio_guidance_scale`参数控制音频对视频生成的条件强度，影响唇形同步的准确性。\n*   **模型版本迭代**：`avatar-v1.0`使用`wav2vec2`音频编码器，而`avatar-v1.5`升级为`Whisper-large-v3`，提供更准确的唇形同步，并支持8步蒸馏推理和INT8量化以提高效率。\n\n### 适合谁用\n该项目适合需要以下功能的开发者和研究人员：\n*   **视频内容创作者**：希望从文本、图像或音频快速生成高质量、长时长的视频内容。\n*   **虚拟形象动画师**：需要根据音频输入生成唇形同步且表情自然的虚拟角色动画。\n*   **AI模型研究者**：对视频生成、音频驱动动画、高效推理和多模态学习感兴趣，可作为研究基础或参考。\n*   **对性能和效率有要求的用户**：希望在生成高质量视频的同时，能够利用蒸馏和INT8量化等技术实现快速推理和降低显存占用。",
+      "degraded": false
+    },
+    {
+      "id": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "stars": 91598,
+      "description": "The open-source CapCut alternative",
+      "one_liner": "OpenCut 是一个免费开源的视频编辑器，旨在为网络、桌面和移动平台提供高性能的编辑体验。",
+      "detail_md": "**解决什么问题**\nOpenCut 旨在解决传统视频编辑器在跨平台一致性、可扩展性和自动化方面的局限性。  它通过全新的架构，包括插件优先设计和基于 Rust 的核心，确保在不同平台（Windows、macOS、Linux 和浏览器）上提供一致的专业级编辑逻辑。 \n\n**核心功能**\n该项目提供跨平台视频编辑功能，支持桌面、Web 和移动端。  核心功能包括一个编辑器 API、第三方插件支持、无头模式（用于自动化和批量渲染）以及一个用于 AI 代理集成的 MCP 服务器。  此外，它还内置了脚本编辑功能，方便快速原型开发和自动化。 \n\n**技术亮点**\nOpenCut 的技术亮点在于其“插件优先架构”和“Rust 核心”。  Rust 核心通过 WebAssembly 实现了高性能和跨平台一致性。  桌面应用使用 GPUI 框架构建，  而 Web 应用则采用 TanStack Start 和 React 19。  项目还引入了 `MediaTime` 整数时间戳，以消除浮点运算带来的舍入误差，提高时间轴精度。 \n\n**适合谁用**\nOpenCut 适合需要免费、开源且高性能视频编辑工具的用户。  尤其适合希望在 Web、桌面和移动设备上进行视频创作的个人和团队。  其插件架构和脚本功能也使其成为开发者和需要自动化工作流程的用户的理想选择。",
+      "degraded": false
+    }
+  ]
+}
