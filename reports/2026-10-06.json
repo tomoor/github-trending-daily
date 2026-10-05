@@ -1,0 +1,149 @@
+{
+  "doc_token": "RqYtdKu5DocP6bxofJzcE4mUnBg",
+  "doc_url": "https://my.feishu.cn/docx/RqYtdKu5DocP6bxofJzcE4mUnBg",
+  "items": [
+    {
+      "id": "tester-army/e2e",
+      "owner": "tester-army",
+      "name": "e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "stars": 4253,
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "one_liner": "`e2e` 是一个用于 Web 和移动应用的智能端到端测试框架，它结合了编程断言和 LLM 驱动的自然语言命令。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统测试框架在应对 UI 变化时的脆弱性问题，通过引入 AI 代理 (`agent.act`, `agent.assert`)，使测试能够动态适应 UI 变化，同时在需要时保留确定性验证。 \n\n**核心功能**\n`e2e` 提供了核心 SDK、运行器和命令行接口 (`packages/e2e`)，以及针对 Web (基于 Playwright 的 `@e2e-dev/web`)  和移动 (基于 `agent-device` 的 `@e2e-dev/mobile`)  应用的自动化引擎。它还支持云浏览器 (`@e2e-dev/kernel`)  和移动模拟器 (`@e2e-dev/eas`)  集成，并能生成 GitHub Actions PR 评论报告 (`@e2e-dev/github`)。\n\n**技术亮点**\n该框架是一个 ESM-only TypeScript monorepo，通过 `pnpm` 工作区工具进行管理。它将核心逻辑与特定平台引擎分离，确保了模块化和可扩展性。文档站点使用 Mintlify 构建，并包含自动验证代码示例的机制，以确保文档的准确性。\n\n**适合谁用**\n`e2e` 适合需要对 Web 和移动应用程序进行端到端测试的开发者和团队，特别是那些希望利用 AI 代理提高测试适应性和效率，并能从 Playwright 等现有框架平滑迁移的用户。",
+      "degraded": false
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 96488,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 AI 编码助手 Claude Code 设计的持久化内存压缩系统，旨在跨会话保留上下文。",
+      "detail_md": "**解决什么问题**\n该项目解决了 AI 代理在每次会话开始时缺乏历史上下文的问题。  通过捕获工具使用观察、生成语义摘要并将其提供给未来的会话，Claude-Mem 确保了 AI 代理能够保持对项目知识的连续性。 \n\n**核心功能**\nClaude-Mem 的核心功能包括持久化内存、自动生成的项目文件夹上下文文件 (`CLAUDE.md`)、多语言支持、模式系统（如 Code、Email Investigation）、MCP 搜索工具用于自然语言查询项目历史、知识代理、Web 查看器 UI 以及隐私控制。  它通过生命周期钩子捕获会话活动，并使用 Worker 服务进行处理和存储。 \n\n**技术亮点**\n该项目采用分层架构，将外部钩子集成、中央 Worker 协调器、存储层和管理接口分离。  它使用 SQLite 数据库存储结构化数据和会话信息，并利用 ChromaDB 进行向量搜索，实现混合语义和关键词搜索。   此外，它还实现了三层工作流模式的 MCP 搜索工具，以实现令牌效率，通过渐进式披露节省约 10 倍的令牌。 \n\n**适合谁用**\nClaude-Mem 主要适用于使用 Claude Code 或其他支持的 IDE（如 Cursor、Windsurf、OpenCode 等）的开发者和知识工作者。  它旨在帮助 AI 代理在编码会话中保持上下文，提高工作效率，并支持通过自然语言查询历史项目信息。",
+      "degraded": false
+    },
+    {
+      "id": "michael-denyer/pstack-claude",
+      "owner": "michael-denyer",
+      "name": "pstack-claude",
+      "url": "https://github.com/michael-denyer/pstack-claude",
+      "stars": 1356,
+      "description": "Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "one_liner": "这是一个将Cursor的pstack插件移植到Claude Code和Codex的工具集，旨在提供高质量的代理工作流。",
+      "detail_md": "**解决什么问题**\n该项目解决了将Cursor平台的pstack插件适配到Claude Code和Codex等不同AI运行时环境的问题。 它通过转换Cursor特有的原语和模型配置，确保pstack的严谨代理工作流能在Claude Code和Codex中无缝运行。\n\n**核心功能**\n核心功能包括：将Cursor的pstack技能内容同步到Claude Code和Codex， 自动进行Cursor到Claude Code的机械替换， 以及生成适用于不同运行时的插件清单和命令。 它还提供了一系列代理技能，如`poteto-mode`用于非平凡任务的入口， `arena`用于并行尝试和选择最佳部分， 以及`interrogate`用于多模型审查。\n\n**技术亮点**\n技术亮点在于其“同步边界”机制，明确区分了上游pstack（Cursor）拥有的核心逻辑和此端口（Claude Code）拥有的翻译规则。 `tools/sync.mjs`脚本负责抓取上游变更并应用`tools/substitutions.json`中定义的替换规则。 `tools/generate.mjs`工具则负责将模型策略、版本信息等事实从单一来源注入到各个技能中，并验证跨文件的一致性。\n\n**适合谁用**\n该项目适合希望在Claude Code、Codex、Prime Agent、opencode和Gemini CLI等AI运行时环境中，利用pstack严谨的工程工作流和多模型编排能力的开发者和团队。 它特别适用于需要高质量代码、并行化工作流和多视角审查的工程任务。",
+      "degraded": false
+    },
+    {
+      "id": "earthtojake/text-to-cad",
+      "owner": "earthtojake",
+      "name": "text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "stars": 17246,
+      "description": "Give your agent CAD superpowers.",
+      "one_liner": "text-to-cad 是一个开源开发环境，旨在利用大型语言模型（LLM）代理生成 3D CAD 模型和机器人描述。</cite>",
+      "detail_md": "## 解决什么问题\n该项目旨在弥合自然语言描述与精确几何内核之间的鸿沟，使 LLM 编码代理能够通过结构化的迭代循环、本地可视化工具和一套命令行工具来生成、验证和预检 CAD 模型和机器人描述。</cite>它将 CAD 视为代码，允许代理通过编辑 Python 脚本来操作几何体，而不是手动使用图形用户界面。</cite>\n\n## 核心功能\n该项目提供了一系列核心功能，包括：\n*   **CAD 模型生成与编辑**：通过 Python 脚本使用 `build123d` 库创建和修改 CAD 模型，并支持导出为 STEP、STL、3MF 和 GLB 等格式。</cite>\n*   **机器人描述文件生成**：生成 URDF、SRDF 和 SDF 文件，用于定义机器人结构、运动规划和仿真模型。</cite>\n*   **CAD 查看器**：一个基于 React 的 Web 应用程序，用于实时预览生成的 3D 模型和机器人描述文件。</cite>\n*   **几何感知编辑**：使用 `@cad[...]` 引用系统，允许代理精确引用几何实体（如面、边、顶点）进行后续编辑。</cite>\n*   **制造和实用工具**：包括 `step.parts` 用于搜索和下载现成组件，DXF 用于创建 2D 工程图，以及 G-code 和 Bambu Labs 用于 3D 打印预处理和打印作业管理。</cite>\n\n## 技术亮点\n该项目的主要技术亮点包括：\n*   **代理集成循环**：遵循“编辑 → 重新生成 → 验证 → 检查”的严格循环，确保代理能够迭代地生成和完善几何体。</cite>\n*   **`SKILL.md` 文件**：作为系统提示，为代理提供上下文和约束，定义特定领域的运行时规则。</cite>\n*   **`plugin.json` 接口定义**：正式定义了代理如何发现和使用打包的技能，包括功能和默认提示。</cite>\n*   **命令行工具**：提供了一套 CLI 工具，如 `gen_step_part`、`cadref` 和 `snapshot`，用于几何生成、验证和视觉检查。</cite>\n\n## 适合谁用\n该项目适合需要利用大型语言模型进行 CAD 设计、机器人建模和制造预处理的开发者、工程师和研究人员。</cite>特别是那些希望通过代码而非传统 GUI 方式进行参数化设计和自动化工作流的用户。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "stars": 25491,
+      "description": "",
+      "one_liner": "T3 Code 是一个开源平台，用于编排和管理 AI 编码代理，支持多种模型，并提供跨平台开发体验。",
+      "detail_md": "**解决什么问题**\nT3 Code 旨在解决 AI 编码代理在不同模型和平台之间协作与管理的问题，提供一个统一的控制平面，简化开发流程，并确保代码质量和一致性。 它通过事件溯源架构管理 AI 会话状态，并支持多进程架构以隔离 UI 和后端逻辑，提高系统健壮性。\n\n**核心功能**\n核心功能包括：\n*   **多模型编排**：支持 Claude Code, Codex, Antigravity, OpenCode, Cursor, Grok 等多种 AI 编码模型。\n*   **项目管理**：允许用户导入、创建和管理项目，包括从现有 AI 编码工具（如 Claude Code 和 Codex）导入项目和会话。\n*   **跨平台支持**：提供 Web 应用、Electron 桌面应用和 React Native 移动应用，确保一致的用户体验。\n*   **代码质量保障**：通过自定义的 `oxlint-plugin-t3code` 插件和 Macroscope 检查代理，强制执行代码规范和最佳实践。\n\n**技术亮点**\n*   **Effect-Based 服务架构**：后端和部分前端利用 Effect 库进行依赖注入、生命周期管理和类型安全。\n*   **事件溯源架构**：通过命令生成事件，事件存储在 SQLite 中，并投影到读取模型以表示会话状态。\n*   **Monorepo 结构**：采用 pnpm monorepo 管理，实现模块化开发和增量构建。\n*   **隔离的开发环境**：`dev-runner.ts` 脚本通过端口分配和主目录隔离，防止开发环境冲突。\n\n**适合谁用**\nT3 Code 适合需要统一管理和编排多个 AI 编码代理的开发者、团队以及希望自定义和扩展 AI 编码工具的用户。 它也适用于追求代码质量、希望通过自动化工具强制执行开发规范的组织。",
+      "degraded": false
+    },
+    {
+      "id": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "stars": 4690,
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "one_liner": "AnyPS5 是一个将 PlayStation 5 (PS5) 原生可执行文件自动移植到 Linux 和 Windows 系统的工具，无需 CPU/GPU 仿真。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 PS5 原生可执行文件在非 PS5 平台上运行的问题，通过将它们转换为目标系统的原生格式并在运行时提供 Sony 系统模块的动态链接库等效项，从而实现跨平台兼容性。\n\n**核心功能**\n核心功能包括一个重链接器 (`relinker`)，它负责将客机可执行文件转换为目标系统的原生格式（如 Linux ELF 或 Windows PE），以及 `core/libs` 目录下实现的 Sony 系统库 (`PRX` 目标)，这些库将客机 API 调用直接桥接到原生操作系统和图形原语。例如，`libc.prx` 提供了文件 I/O、堆分配和字符串操作等功能。此外，`core/shader` 模块包含一个重编译器，用于将客机 AMD RDNA 着色器二进制文件转换为 SPIR-V 着色器以供 Vulkan 使用。\n\n**技术亮点**\n该项目不依赖 CPU/GPU 仿真或单独的运行时客机进程，而是通过静态移植实现。它使用 CMake 作为构建系统，强制使用 C++20 标准和静态链接，以确保在 Linux 和 Windows (通过 MinGW) 上的独立可移植性。构建系统还包括一个 `nid_patcher` 工具，用于处理 Sony PRX 二进制文件中的 NID (Name ID) 符号，以实现导出符号的识别。在 Windows 上，它通过 `objcopy` 重命名 `.eh_frame` 部分为 `.ehfram` 来配置 DWARF 展开。\n\n**适合谁用**\n该工具适用于需要将 PS5 原生可执行文件移植到 Linux 和 Windows 平台的研究人员、开发者以及任何对互操作性、保存和兼容性感兴趣的用户。它特别适合那些希望在没有完整仿真环境的情况下，在不同操作系统上运行和分析 PS5 应用程序的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 91661,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 是一款 Python CLI 工具，旨在为 AI Agent 提供一键式互联网访问能力，解决多平台数据获取难题。",
+      "detail_md": "**解决什么问题**\nAI Agent 在获取互联网信息时面临诸多障碍，例如付费 API、IP 封锁、登录限制和反爬措施等。 Agent Reach 解决了 Agent 难以访问 Twitter、Reddit、小红书、Bilibili 等平台内容的问题，避免了用户为每个平台单独寻找工具、安装依赖和调试配置的繁琐。\n\n**核心功能**\nAgent Reach 提供统一的命令行接口，让 AI Agent 能够通过简单的命令访问互联网内容。 它支持超过 15 个平台，包括网页阅读、YouTube 字幕提取、Bilibili 搜索、Twitter 搜索、Reddit 帖子阅读、小红书内容获取、GitHub 仓库信息查询、RSS 源解析以及全网语义搜索等。 项目内置诊断工具 `agent-reach doctor`，可以检查每个渠道的运行状态和后端选择。\n\n**技术亮点**\nAgent Reach 采用“能力层”设计理念，负责工具选型、安装、体检和路由，但不直接进行底层读取，而是让 Agent 调用上游工具。 它实现了可插拔的渠道架构，每个平台都对应一个独立的 Python 文件，并支持“首选 + 备选”的多后端路由策略，确保在某个接入方式失效时能自动切换。 所有默认后端均为免费开源工具，无需付费 API Key。 凭据本地存储，确保隐私安全。\n\n**适合谁用**\nAgent Reach 适用于任何能够运行命令行指令的 AI Agent，如 Claude Code、OpenClaw、Cursor、Windsurf 等。 它特别适合需要频繁从互联网获取信息、进行调研或内容聚合的 AI Agent 开发者和用户，帮助 Agent 轻松突破各种平台访问限制，提升其互联网信息获取能力。",
+      "degraded": false
+    },
+    {
+      "id": "calesthio/OpenMontage",
+      "owner": "calesthio",
+      "name": "OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "stars": 63771,
+      "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "one_liner": "OpenMontage 是首个开源的智能体驱动视频制作系统，能将自然语言描述转化为完整视频。",
+      "detail_md": "**解决什么问题**\nOpenMontage 旨在解决传统视频制作流程复杂、效率低下，以及 AI 辅助工具碎片化的问题。它通过将 AI 编程助手转化为一个完整的视频制作工作室，实现从研究、脚本、素材生成、编辑到最终合成的全流程自动化，用户只需提供自然语言描述即可。 \n\n**核心功能**\n该项目提供多项核心功能，包括：支持多种视频生成提供商（如 Kling、Runway、Google Veo 等）；图像生成（如 FLUX、Google Imagen）；文本转语音（TTS，如 ElevenLabs、Google TTS、Piper）；音乐和音效生成；以及强大的后期制作工具（如 FFmpeg 进行视频合成、编码、字幕烧录等）。它还支持 Remotion 和 HyperFrames 两种合成引擎，用于创建动画和动态图形视频。 \n\n**技术亮点**\nOpenMontage 采用“智能体优先编排”架构，将 AI 编程助手作为控制平面，而非传统的硬编码控制器。  它具有三层知识架构：第一层定义工具和编排，第二层是 OpenMontage 的使用约定和质量门槛，第三层包含外部技术知识包。  项目还内置了制作治理机制，包括质量检验门、基于评分的提供商选择、决策审计跟踪和预算控制，确保视频制作的质量和可控性。 \n\n**适合谁用**\nOpenMontage 适合需要高效、自动化视频制作的个人和团队，特别是那些希望通过自然语言描述来创作视频的用户。  它兼容多种 AI 编程助手，如 Claude Code、Cursor、GitHub Copilot 等，并支持零 API 密钥的免费视频制作，以及通过配置 API 密钥解锁更多高级功能。",
+      "degraded": false
+    },
+    {
+      "id": "caddyserver/caddy",
+      "owner": "caddyserver",
+      "name": "caddy",
+      "url": "https://github.com/caddyserver/caddy",
+      "stars": 76953,
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "one_liner": "Caddy 是一个可扩展的服务器平台，默认使用 HTTPS，旨在让每个网站都支持 HTTPS。",
+      "detail_md": "**解决什么问题**\nCaddy 旨在解决网站部署和维护 HTTPS 的复杂性问题，通过自动化证书管理和配置，简化了服务器的设置和运行。  它还提供了一个灵活的平台，可以运行各种 Go 应用程序，并支持动态配置和模块化架构，以适应不同的需求。 \n\n**核心功能**\nCaddy 的核心功能包括自动 HTTPS、易于使用的 Caddyfile 配置、强大的 JSON 配置以及动态配置 API。  它支持 HTTP/1.1、HTTP/2 和 HTTP/3，并具有高度可扩展的模块化架构，允许用户根据需要添加或移除功能。  此外，Caddy 还提供了反向代理功能，支持负载均衡、健康检查和动态后端。 \n\n**技术亮点**\nCaddy 的技术亮点在于其“安全优先”的设计理念，默认启用 HTTPS，并支持 ZeroSSL 和 Let's Encrypt 自动颁发证书。   它采用 Go 语言编写，具有内存安全保障，并且没有外部依赖，可以在任何地方运行。  Caddy 的模块系统允许高度定制，一切皆模块，包括应用程序和各种组件。 \n\n**适合谁用**\nCaddy 适合需要快速部署和管理 HTTPS 网站的开发者、系统管理员以及任何希望简化 Web 服务器配置的用户。  其模块化设计和强大的反向代理功能也使其成为构建复杂微服务架构和高可用性系统的理想选择。",
+      "degraded": false
+    },
+    {
+      "id": "DuarteSantos8/openGym",
+      "owner": "DuarteSantos8",
+      "name": "openGym",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "stars": 3828,
+      "description": "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+      "one_liner": "openGym 是一个免费、开源的健身和体重追踪器，无需订阅、无需账户、无遥测数据。</cite>",
+      "detail_md": "**解决什么问题**\nopenGym 旨在解决健身追踪应用订阅收费、数据不透明以及用户数据被滥用的问题。</cite>它提供了一个免费、开源的解决方案，让用户完全掌控自己的训练数据，并且没有广告或隐藏功能。</cite>\n\n**核心功能**\n该项目提供引导式训练、可定制的训练计划、AI 教练（可选）、肌肉图谱分析、体重追踪、活动热力图等核心功能。</cite>用户可以创建自定义动作，并支持多种语言的界面和训练说明。</cite>它还支持从其他健身应用导入历史数据，并提供数据导出功能。</cite>\n\n**技术亮点**\nopenGym 采用 React 19 + Vite 构建前端，后端使用 Node.js 且无框架，仅依赖 `@simplewebauthn/server` 用于 Passkey 认证。</cite>它支持 Docker 容器化部署，方便自托管。</cite>项目还包含一个可选的 Model Context Protocol (MCP) 服务器，允许外部 LLM 应用查询用户训练数据，且是只读的。</cite>\n\n**适合谁用**\nopenGym 适合希望免费、自主管理健身数据，并寻求高度可定制化和隐私保护的个人用户。</cite>它也适合家庭或训练团体进行自托管，以实现多设备同步和可选的管理员功能。</cite>对于开发者和技术爱好者，其开源特性和清晰的项目结构也便于贡献和二次开发。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/cloudflare-os",
+      "owner": "cloudflare",
+      "name": "cloudflare-os",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "stars": 10903,
+      "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+      "one_liner": "Cloudflare OS 是一个 AI 生产力平台，旨在安全地协调 AI 工作负载和沙盒应用程序。",
+      "detail_md": "**解决什么问题**\nCloudflare OS 旨在解决企业在利用 AI 提高生产力时面临的安全和效率问题。它提供了一个框架，使 AI 代理能够安全地执行任务、构建应用程序，并与外部服务交互，同时确保数据安全和用户控制。 \n\n**核心功能**\n该项目提供了一个代理聊天 UI，用于任务执行；  支持沙盒应用程序开发，允许 AI 构建和共享“小工具”（小型个人应用程序）；  以及一个名为 Gatekeepers 的安全框架，用于对代理和应用程序施加防护措施。  它还支持实时多人协作和蓝图共享，允许用户创建和分发应用程序模板。 \n\n**技术亮点**\nCloudflare OS 采用三层架构，包括内核 (`workshop-backend`)、沙盒应用程序 (`Gadgets`) 和能力驱动的 `Gatekeepers`。  它构建在 Cloudflare Workers 之上，利用 Durable Objects 进行状态管理，并使用 Cap'n Web RPC 进行高效的客户端-服务器通信。  Gatekeepers 实现了“人机协作”模拟，允许代理异步执行有副作用的操作，并在稍后进行用户审批。 \n\n**适合谁用**\nCloudflare OS 适合希望安全地将 AI 代理和自定义应用程序集成到其工作流程中的公司和团队。  它特别适用于需要高度定制化、安全沙盒环境以及对 AI 代理操作进行精细控制的场景。",
+      "degraded": false
+    },
+    {
+      "id": "Stremio/stremio-web",
+      "owner": "Stremio",
+      "name": "stremio-web",
+      "url": "https://github.com/Stremio/stremio-web",
+      "stars": 14195,
+      "description": "Stremio - Freedom to Stream",
+      "one_liner": "Stremio Web 是一个现代媒体中心，通过易于安装的插件，提供一站式视频娱乐解决方案，用于发现、观看和组织视频内容。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户在发现、观看和组织视频内容时面临的碎片化问题，通过集成各种插件，提供统一的媒体体验。</cite>它通过一个核心传输系统和模型架构来管理应用状态，确保数据流的可预测性和UI的响应性。</cite>\n\n**核心功能**\n核心功能包括内容发现、视频播放和用户内容组织。</cite>它通过七个不同的模型管理应用状态，例如 `CatalogsWithExtra` 用于展示目录，`Player` 用于管理播放状态，以及 `Ctx` 用于处理用户配置和设置。</cite>用户界面组件通过 `useModelState` 钩子订阅模型状态更新，实现响应式渲染。</cite>\n\n**技术亮点**\n该项目采用单向数据流架构，通过 `core.transport` 调度类型化动作来修改状态。</cite></cite>它使用 React 钩子 (`useModelState`, `useProfile`, `useSettings`) 进行状态订阅和访问，特别是 `Ctx` 模型用于管理全局用户状态。</cite></cite>此外，它还支持乐观更新、悲观更新和部分状态更新，以优化用户体验和性能。</cite>\n\n**适合谁用**\nStremio Web 适合希望在一个统一平台管理和享受视频内容的用户。</cite>对于开发者而言，其清晰的状态管理和数据流架构也为构建可维护和可扩展的媒体应用提供了良好的参考。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "msitarzewski/agency-agents",
+      "owner": "msitarzewski",
+      "name": "agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "stars": 157092,
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "one_liner": "一个包含 150 多个专业 AI 智能体定义的单一真实来源代码库，支持多平台部署与协作。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 AI 智能体平台之间定义格式不兼容的问题，避免为不同工具维护多份智能体定义，实现智能体定义的单一真实来源。 \n\n### 核心功能\n1.  **单一真实来源**：智能体以 Markdown + YAML Frontmatter 格式编写一次。 \n2.  **自动化转换**：`scripts/convert.sh` 脚本将智能体转换为特定平台格式。 \n3.  **简易部署**：`scripts/install.sh` 脚本将转换后的智能体部署到检测到的平台。 \n4.  **质量门控**：`scripts/lint-agents.sh` 在转换前验证智能体结构。 \n5.  **多智能体协作**：支持通过 NEXUS 框架等实现多智能体协同工作，解决复杂问题。 \n\n### 技术亮点\n1.  **模块化设计**：智能体按专业领域（如工程、设计、营销）划分，易于管理和扩展。 \n2.  **跨平台兼容**：通过统一的转换和安装脚本，支持 Claude Code、GitHub Copilot、Cursor 等 11 种主流 AI 智能体平台。 \n3.  **智能体设计原则**：每个智能体都具备鲜明个性、明确交付物、可量化成功指标、经过验证的工作流和学习记忆能力。 \n4.  **本地化支持**：提供中文本地化脚本，方便中文用户使用。 \n\n### 适合谁用\n1.  **AI 智能体开发者**：希望为不同 AI 平台开发和管理智能体，并寻求统一管理方案的开发者。 \n2.  **团队和企业**：需要部署和协调多个专业 AI 智能体以完成复杂项目或自动化工作流的团队。 \n3.  **内容创作者和研究者**：可以参考现有智能体设计，或贡献新的智能体来扩展其功能。",
+      "degraded": false
+    }
+  ]
+}
