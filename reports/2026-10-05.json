@@ -166,6 +166,17 @@
       "one_liner": "DS4项目提供高性能HTTP接口，兼容OpenAI和Anthropic API，支持DeepSeek V4和GLM 5.2模型。",
       "detail_md": "**解决什么问题**\n该项目旨在为DwarfStar模型（DeepSeek V4和GLM 5.2）提供一个高性能、兼容OpenAI和Anthropic API规范的HTTP接口，解决模型部署和集成中的复杂性问题，并优化KV缓存管理以提高推理效率。 \n\n**核心功能**\n核心功能包括实现`/v1/chat/completions`、`/v1/completions`和`/v1/messages`等API端点，支持标准聊天、原始文本补全和消息式接口。它还支持Anthropic的“思考模式”和工具使用循环的“实时延续”功能，通过`ds4_kvstore`实现KV缓存的磁盘持久化，以减少重复提示的预填充延迟。此外，项目还支持分布式推理，作为协调器管理多节点模型切片执行。\n\n**技术亮点**\n技术亮点包括单工作线程架构，确保GPU的序列化访问和KV缓存的高效管理。它通过`rax`（基数树）实现高效的内部索引，并利用SHA1哈希对缓存条目进行键控和修剪。项目还提供了离线工具，如`deepseek4-quantize.c`用于GGUF量化，以及`score_official.c`用于评估模型质量。\n\n**适合谁用**\n该项目适合需要部署和集成DeepSeek V4和GLM 5.2等大型语言模型的开发者和企业。特别是那些寻求高性能、低延迟推理服务，并希望利用OpenAI或Anthropic API兼容性来简化现有LLM客户端集成的用户。同时，对于需要对模型进行量化、性能基准测试和能力评估的研究人员和工程师也很有用。",
       "degraded": false
+    },
+    {
+      "id": "michael-denyer/pstack-claude",
+      "owner": "michael-denyer",
+      "name": "pstack-claude",
+      "url": "https://github.com/michael-denyer/pstack-claude",
+      "stars": 1203,
+      "description": "Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "one_liner": "该项目是pstack插件的Claude Code移植版，旨在通过严谨的代理工作流，帮助开发者编写更少但质量更高的代码，并支持多模型编排和跨运行时插件架构。",
+      "detail_md": "**解决什么问题**\n该项目解决了在不同AI代理运行时（如Claude Code、Codex、Prime Agent、opencode和Gemini CLI）之间统一和协调pstack插件工作流的问题。它通过将Cursor特有的原语替换为Claude Code等效项，确保了插件在Claude Code环境中的无缝运行，并提供了跨平台的一致体验。\n\n**核心功能**\n核心功能包括提供一套代理技能（Agent Skills），如`poteto-mode`，用于处理复杂的工程任务，并强制执行一系列“不可协商”的原则和剧本。它还支持多模型策略，允许根据任务角色动态选择模型。项目还包含一个同步工具，用于从上游pstack仓库获取更新并应用必要的代码替换。\n\n**技术亮点**\n技术亮点在于其多模型和跨运行时架构，通过`tools/generate.mjs`工具将模型策略和版本信息统一注入到各个技能中。它使用`tools/sync.mjs`工具处理上游同步和Cursor到Claude Code的机械替换，确保代码库的兼容性。此外，项目通过`user-invocable: false`等前端元数据控制技能在不同运行时菜单中的可见性，实现了灵活的技能管理。\n\n**适合谁用**\n该项目适合需要利用AI代理进行软件开发、代码审查、架构设计和问题排查的工程师和团队。特别是那些在Claude Code、Codex、Prime Agent、opencode或Gemini CLI等不同AI代理环境中工作的用户，可以通过此项目获得一套统一且高效的工程工作流。",
+      "degraded": false
     }
   ]
 }
