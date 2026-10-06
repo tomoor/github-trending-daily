@@ -155,6 +155,72 @@
       "one_liner": "这是一个基于ESP32-C3的DNS广告拦截器，无需PSRAM，通过闪存中的哈希表高效拦截广告和追踪器。",
       "detail_md": "**解决什么问题**\n该项目旨在解决传统DNS广告拦截器（如Pi-hole）需要大量RAM来存储黑名单的问题，特别是对于资源受限的ESP32设备。它通过将域名存储为40位哈希值在闪存中，并进行二分查找，从而在低成本的ESP32-C3芯片上实现高效的广告拦截，无需额外的PSRAM。\n\n**核心功能**\n核心功能包括DNS查询的拦截和转发。当设备接收到DNS查询时，它会提取域名并计算其40位FNV-1a哈希值。然后，它会在闪存中的哈希表 (`blocklist.bin`) 中进行二分查找，判断域名是否被阻止。如果命中，则返回 `0.0.0.0` (sinkholed)；如果未命中，则将查询转发到上游DNS解析器（默认为Quad9）。项目还提供了一个Web仪表板，用于管理自定义黑名单、查看客户端统计信息以及进行OTA固件和黑名单更新。\n\n**技术亮点**\n该项目的技术亮点在于其独特的“闪存中哈希”方法。它使用40位FNV-1a哈希算法将域名转换为固定长度的二进制数据，并将其存储在ESP32-C3的闪存中。通过对这些排序后的哈希值进行二分查找，设备可以在大约10毫秒内完成域名匹配，同时仅消耗约50KB的RAM。这种方法使得在没有PSRAM的ESP32-C3上也能支持超过50万个域名的黑名单。此外，它还支持通过Web界面进行OTA固件和黑名单更新，以及远程自动更新黑名单。\n\n**适合谁用**\n该项目非常适合希望在家庭网络中部署低成本、高效能的DNS广告拦截器的用户。特别是那些拥有ESP32-C3开发板且不希望额外购买PSRAM的用户。它也适合对物联网设备、嵌入式系统开发感兴趣的开发者，可以作为学习ESP32平台和DNS协议的实践项目。",
       "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 277677,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "`mattpocock/skills` 项目提供了一套模块化的、基于 Markdown 的能力（“技能”），供编码代理使用，旨在解决传统代理开发中常见的沟通不畅、冗余和代码质量问题，帮助工程师更高效…",
+      "detail_md": "`mattpocock/skills` 项目提供了一套模块化的、基于 Markdown 的能力（“技能”），供编码代理使用，旨在解决传统代理开发中常见的沟通不畅、冗余和代码质量问题，帮助工程师更高效地构建和维护高质量的软件。 \n\n**解决什么问题**\n该项目旨在解决 AI 辅助软件开发中的常见痛点，包括代理与开发者之间的沟通不畅、 代理输出冗余、 以及代码库复杂性加速增长导致的代码质量下降问题。 它通过提供结构化的技能和工作流，帮助代理更好地理解需求、减少不必要的输出并遵循良好的软件工程实践。\n\n**核心功能**\n项目提供了一系列核心技能，例如 `/grill-with-docs` 用于通过访谈细化想法并构建领域模型， `/tdd` 用于测试驱动开发以确保代码质量， 以及 `/improve-codebase-architecture` 用于扫描代码库以发现架构改进机会。 此外，还有 `/to-spec` 和 `/to-tickets` 等技能，用于将对话转化为规范和可执行的任务。\n\n**技术亮点**\n该项目采用模块化技能设计， 技能以 Markdown 形式组织， 易于适应和组合。 它支持用户调用和模型调用两种技能触发方式， 并通过 `GLOSSARY.md` 和 ADRs（架构决策记录）促进共享语言和决策记录， 从而提高代理的效率和代码库的可维护性。\n\n**适合谁用**\n该项目主要面向使用 Claude Code、Codex 或其他编码代理的软件工程师和团队。 特别适合那些希望通过 AI 辅助工具提高开发效率、改善代码质量、减少沟通成本，并遵循良好软件工程实践的开发者。 它也适用于需要管理复杂代码库、进行架构改进或进行测试驱动开发的场景。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 77449,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个为 AI 编码工具设计的框架，旨在通过共享词汇、确定性质量检查和实时视觉迭代来提升前端开发的设计质量。",
+      "detail_md": "**解决什么问题**\nImpeccable 旨在解决 AI 编码工具在设计方面产生的“AI 劣质品”问题，即大型语言模型（LLM）容易生成可预测、通用且存在设计缺陷的界面，例如使用 Inter 字体、紫蓝色渐变和嵌套卡片等常见问题。 \n\n**核心功能**\n该项目提供一个核心技能 `impeccable`，包含 23 个命令，用于转换用户界面，例如 `/impeccable polish` 和 `/impeccable audit`。   它还包括一个“实时模式”，这是一个基于浏览器的视觉迭代系统，用于元素选择和基于热模块替换（HMR）的变体生成。  此外，它通过 `PRODUCT.md` 和 `DESIGN.md` 文件收集项目的设计上下文，以确保所有命令在执行前都读取这些设计规范。 \n\n**技术亮点**\nImpeccable 采用“单一事实来源”架构，内容以通用格式编写，然后转换为特定于不同 AI 工具（如 Cursor、Claude Code、Gemini 等）的输出。  它包含 46 条确定性检测规则，用于识别设计反模式和质量问题，这些规则可以在持续集成（CI）检查中运行。   系统还通过“注册”系统（`brand` 或 `product`）根据项目意图调整设计默认值。 \n\n**适合谁用**\n该项目适合使用 AI 编码工具进行前端开发的工程师和设计师，特别是那些希望确保 AI 生成的代码符合特定设计系统和质量标准的用户。  它通过提供结构化的设计上下文和自动化检查，帮助用户避免“AI 劣质品”，并保持设计的一致性和高质量。",
+      "degraded": false
+    },
+    {
+      "id": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "stars": 54193,
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "one_liner": "该项目为大语言模型提供ADHD友好输出，优化信息呈现方式，提高可读性和行动力。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大语言模型（LLM）输出内容对注意力缺陷多动障碍（ADHD）人群不友好的问题。 传统的LLM输出可能包含冗余信息、模糊的指令和非结构化内容，这会增加ADHD用户理解和执行任务的认知负担。 通过应用一系列规则，该项目使LLM的输出更直接、更具行动导向，从而减少ADHD用户在“理解”与“执行”之间的摩擦。\n\n**核心功能**\n核心功能是根据预设的10条规则来塑造LLM的输出。 这些规则包括：以行动开头、 对多步骤任务进行编号、 以一个具体的下一步行动结束、 抑制无关内容、 每次都重述状态、 提供具体的时间估算、 使成果可见、 事实性错误、 列表项不超过5个、 以及无前言、无回顾、无结束语。 这些规则定义在 `skills/i-have-adhd/SKILL.md` 文件中。\n\n**技术亮点**\n该项目以模块化和可扩展性为设计核心。 技能逻辑完全包含在基于Markdown的规则引擎中， 无需复杂的编译。 用户可以通过Fork仓库、修改 `skills/i-have-adhd/SKILL.md` 文件来自定义规则， 并将其注册到代理环境中。 它支持Claude Code、Codex和Cursor等多种编码代理， 并提供了“始终开启”的配置选项， 确保规则在每次交互中自动生效。\n\n**适合谁用**\n该项目适合任何希望LLM输出更清晰、更直接的用户，尤其是有ADHD倾向或需要高度结构化信息的用户。 开发者、程序员以及任何与Claude Code、Codex或Cursor等AI代理交互的用户都可以通过安装此技能来优化其工作流程和信息获取体验。 即使没有ADHD诊断，用户也可以受益于这种简明扼要的输出风格。",
+      "degraded": false
+    },
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 7436,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA：一个 CLI 和 MCP 服务器，赋能编程智能体进行逆向工程。",
+      "detail_md": "**解决什么问题**\nREA 旨在解决软件开发中的“黑盒”问题，即在没有源代码的情况下，开发者难以理解功能的工作原理。  它通过提供一个系统化的方法，让智能体能够调查编译后的应用，理解其工作原理，并根据需求构建新版本。 \n\n**核心功能**\nREA 的核心功能包括反编译、理解和重建。  智能体可以恢复可读的伪代码和汇编代码，追踪执行流程、交叉引用和调用图，并将观察到的逻辑转化为新的代码。  REA 提供 46 种工具，分为直接代理工具、增强工具和会话工具，用于二进制检查和组合分析。 \n\n**技术亮点**\nREA 是一个分层的 ESM TypeScript 应用程序，依赖关系从适配器流向核心领域逻辑。  它通过一个 Python 脚本在 Hopper Disassembler 内部运行，实现 Node.js 与 Hopper 之间的桥接。  REA 支持自动配置 Claude Desktop 和 Cursor 等 MCP 客户端，并提供幂等的 `setup` 命令来准备环境。 \n\n**适合谁用**\nREA 适合需要理解没有源代码的应用程序功能，并希望在自己的项目中重建这些功能的开发者。  它特别适用于使用编程智能体进行开发的用户，因为 REA 专为智能体设计，能够让智能体搜集证据而非猜测。",
+      "degraded": false
+    },
+    {
+      "id": "deepseek-ai/DeepGEMM",
+      "owner": "deepseek-ai",
+      "name": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "stars": 8592,
+      "description": "DeepGEMM: clean and efficient BLAS kernel library on GPU",
+      "one_liner": "DeepGEMM 是一个高性能 CUDA 库，用于深度学习中的通用矩阵乘法 (GEMM) 和注意力操作。",
+      "detail_md": "**解决什么问题**\nDeepGEMM 旨在为 NVIDIA Hopper (SM90) 和 Blackwell (SM100) GPU 架构上的深度学习工作负载提供统一、高性能的 Tensor Core 内核库。 它解决了传统库在处理 FP8、BF16、FP4 等数据类型以及 Mega MoE 和 MQA 等特定深度学习模式时性能不足的问题。\n\n**核心功能**\nDeepGEMM 提供多种核心功能，包括：支持 FP8、BF16 和 FP4 数据类型的 GEMM 内核； 融合了 EP 调度、双线性层和激活的 Mega MoE 内核； 用于预填充和分页解码的多查询注意力 (MQA) 内核； 以及 HyperConnection (HC) 和 Einsum 操作。 所有内核都通过轻量级 JIT 模块在运行时编译。\n\n**技术亮点**\n该库的技术亮点包括：运行时 JIT 编译，无需在安装期间进行 CUDA 编译； 针对 SM90 和 SM100 架构的特定优化，例如 SM90 支持 TMA、WGMMA 和 FP32 缩放因子，而 SM100 支持 UMMA、打包 UE8M0 缩放因子和 FP4 支持； 以及针对 Mega MoE、分组 GEMM 和 MQA Logits 等特定深度学习模式的专业化操作支持。\n\n**适合谁用**\nDeepGEMM 适合需要高性能、优化过的 Tensor Core 内核的深度学习研究人员和工程师， 特别是那些使用 NVIDIA Hopper (SM90) 和 Blackwell (SM100) GPU 架构的用户。 它也适用于希望学习 NVIDIA GPU 内核优化技术的人员，因为它设计简洁，核心内核函数数量有限。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 43726,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "本项目是一个为大型语言模型设计的技能，用于生成高质量、品牌定制化的图表。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）在生成图表时，输出结果通用、缺乏品牌定制化的问题。它通过自动化流程，将网站的品牌风格（颜色、字体）应用于生成的图表，避免了手动调整的繁琐。\n\n**核心功能**\n核心功能包括：根据用户网站自动提取品牌风格并应用于图表（`Onboarding`），支持42种视觉类型和语义模式，以及从`draw.io`、`Mermaid`或`Excalidraw`文件重新绘制图表。生成的图表是独立的HTML+SVG文件，无需构建步骤或外部依赖。\n\n**技术亮点**\n技术亮点包括：使用语义令牌（`Semantic Tokens`）定义颜色和样式，实现轻松换肤；严格的排版层级和字体栈（`Typography Hierarchy`），确保可读性；以及通过`Paint Oracle`（`scripts/lint-render.py`）进行渲染检查，确保图表质量和可访问性。\n\n**适合谁用**\n该项目适合需要生成高质量、品牌一致性图表的设计师、工程师和内容创作者。特别是那些使用`Claude Code`、`Codex`、`Factory Droid`或`Pi`等LLM代理的用户，以及希望将现有图表（如`draw.io`）转换为统一品牌风格的用户。",
+      "degraded": false
     }
   ]
 }
