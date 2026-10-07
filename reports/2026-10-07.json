@@ -1,0 +1,138 @@
+{
+  "doc_token": "Kaond0T3JoUlrwx47tncsCPAnFe",
+  "doc_url": "https://my.feishu.cn/docx/Kaond0T3JoUlrwx47tncsCPAnFe",
+  "items": [
+    {
+      "id": "tester-army/e2e",
+      "owner": "tester-army",
+      "name": "e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "stars": 6270,
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "one_liner": "`e2e` 是一个智能端到端测试框架，用于 Web 和移动应用，通过自然语言驱动测试执行和验证。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统端到端测试框架在应对 UI 变化时的脆弱性问题，通过引入大型语言模型（LLM）驱动的智能代理，使测试能够动态适应 UI 变化，同时保留确定性验证的能力。 \n\n**核心功能**\n`e2e` 框架的核心功能包括：使用自然语言描述测试目标，由智能代理 (`agent.act`) 驱动应用程序达到目标，并使用定位器和断言 (`agent.assert`, `expect`) 验证结果。  它支持 Web 和移动应用测试，并提供 `e2e init` 命令快速初始化项目和配置 AI 模型提供商。 \n\n**技术亮点**\n该框架的技术亮点在于其代理式测试方法，结合了程序化测试断言和 LLM 驱动的自然语言命令。  它采用单体仓库结构，将核心框架逻辑 (`packages/e2e`) 与平台引擎 (`@e2e-dev/web`, `@e2e-dev/mobile`) 和集成模块 (`@e2e-dev/kernel`, `@e2e-dev/eas`, `@e2e-dev/github`) 分离，提高了模块化和可扩展性。  此外，它还支持从 Playwright 等现有测试工具迁移。 \n\n**适合谁用**\n`e2e` 适合需要对 Web 和移动应用程序进行端到端测试的开发人员和团队，特别是那些希望利用 AI 代理提高测试效率、减少维护成本，并使测试更具弹性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 278097,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供了一套模块化的AI代理技能，旨在提升软件工程师的日常开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助开发中常见的四大问题：代理未能准确理解用户意图、代理输出过于冗长、代理生成的代码无法正常工作，以及代码库随着AI加速开发而变得复杂难以维护（“大泥球”问题）。\n\n**核心功能**\n核心功能包括通过“拷问”机制（`/grill-me` 和 `/grill-with-docs`）确保人机对齐；通过共享语言（`GLOSSARY.md`）减少冗余和提高沟通效率；通过测试驱动开发（`/tdd`）和调试（`/diagnosing-bugs`）确保代码质量；以及通过架构改进（`/improve-codebase-architecture`）和领域建模（`/domain-modeling`）维护代码库的健康和可维护性。\n\n**技术亮点**\n项目采用模块化、可组合的技能设计，支持用户自定义和扩展。它区分用户调用（`User-invoked`）和模型调用（`Model-invoked`）技能，并提供 `/ask-matt` 作为技能路由器。项目还强调“智能区”（`Smart Zone`）概念，以优化模型推理能力，并通过“交接”（`Handoff`）机制在不同上下文窗口间传递工作。\n\n**适合谁用**\n该项目适合希望利用AI代理提升软件开发效率和代码质量的工程师。特别是那些在使用Claude Code、Codex或其他编码代理时遇到沟通不畅、代码质量问题或项目复杂性挑战的用户。它为个人开发者和团队提供了灵活的工具集，以适应不同的开发流程和需求。",
+      "degraded": false
+    },
+    {
+      "id": "earthtojake/text-to-cad",
+      "owner": "earthtojake",
+      "name": "text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "stars": 17959,
+      "description": "Give your agent CAD superpowers.",
+      "one_liner": "本项目是一个开源开发环境，旨在通过大型语言模型（LLM）代理生成3D CAD模型和机器人描述。",
+      "detail_md": "## 解决什么问题\n本项目旨在解决传统CAD设计中，通过图形用户界面（GUI）手动操作效率低下的问题，并弥合自然语言描述与精确几何内核之间的鸿沟。它允许用户通过自然语言提示，利用LLM编码代理自动生成、检查、采购、切片和交付CAD及机器人描述文件。\n\n\n\n## 核心功能\n核心功能包括：\n\n\n**CAD模型生成与编辑**：通过Python脚本和`build123d`库创建和编辑CAD模型，并支持导出为STEP、STL、3MF和GLB等格式。\n**机器人描述文件生成**：生成URDF、SRDF和SDF文件，用于定义机器人结构、运动规划和仿真模型。\n**CAD查看器**：提供一个基于React的本地Web应用程序，用于实时预览CAD和机器人文件，支持PBR渲染、零件选择和运动学关节动画。\n**制造与实用工具**：包括查找现成STEP零件、创建2D DXF图纸、检查DXF/STEP文件是否符合制造规范、将网格切片为G代码以及控制3D打印机等功能。\n\n\n\n## 技术亮点\n该项目将CAD视为代码，通过Python脚本定义几何形状，并利用LLM代理进行迭代生成和优化。它采用严格的“编辑 → 重新生成 → 验证 → 检查”循环，代理修改Python源文件，然后调用CLI工具生成工件。`@cad[...]`引用系统允许代理通过拓扑令牌引用几何特征，实现精确的几何编辑。项目通过`SKILL.md`文件为代理提供上下文和约束，并通过`plugin.json`定义正式的接口。\n\n\n\n## 适合谁用\n本项目适合需要通过自动化和编程方式生成、修改和管理CAD模型及机器人描述文件的工程师、设计师、机器人专家和开发人员。特别是那些希望利用LLM代理提高设计效率、实现参数化设计和自动化制造工作流程的用户。",
+      "degraded": false
+    },
+    {
+      "id": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "stars": 6454,
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "one_liner": "AnyPS5 是一个将 PlayStation 5 原生可执行文件自动移植到 Linux 和 Windows 的工具。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 PlayStation 5 游戏和应用程序在非 PS5 平台上运行的问题。它通过静态移植而非 CPU/GPU 模拟或单独的运行时进程来消除对原始硬件环境的依赖。这有助于实现互操作性、研究、保存和兼容性。\n\n**核心功能**\nAnyPS5 的核心功能包括一个重链接器（relinker），用于将客机可执行文件转换为目标系统的原生格式。它还提供了索尼系统模块（PRX 库）的原生动态链接库实现，例如 `libc`、`libkernel` 和 `libSceAgcDriver`。此外，它还包含一个着色器重编译器，用于将 AMD RDNA 着色器二进制文件转换为 SPIR-V 格式。\n\n**技术亮点**\n该项目不依赖于 CPU/GPU 模拟或单独的运行时客户进程。它通过重链接器将客机 ELF 可执行文件重写为原生 Linux ELF 或 Windows PE 二进制文件。系统库通过 NID（Name ID）机制进行解析和链接。着色器重编译器能够将 RDNA 着色器转换为中间表示（IR），最终生成 SPIR-V 着色器，供 Vulkan 消费。\n\n**适合谁用**\nAnyPS5 适合希望在 Linux 或 Windows 系统上运行 PlayStation 5 原生可执行文件的开发者、研究人员和游戏爱好者。它也适用于那些对游戏机互操作性、软件保存和逆向工程感兴趣的用户。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 77667,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个 AI 编码工具的设计技能系统，旨在解决 AI 生成 UI 的通用性和设计缺陷问题。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 AI 编码工具在生成用户界面时普遍存在的“AI Slop”问题，即 AI 倾向于生成可预测、通用且缺乏设计质量的 UI，例如使用 Inter 字体、紫蓝色渐变和嵌套卡片等常见设计错误。 \n\n### 核心功能\nImpeccable 提供一个核心技能 (`impeccable`)，包含 23 个命令，用于转换 UI，例如 `/impeccable polish` 和 `/impeccable audit`。   它还包含 46 条确定性检测规则和 LLM 批判检查，用于识别设计反模式。  此外，它还具备“实时模式”（Live Mode），一个基于浏览器的可视化迭代系统，用于元素选择和基于 HMR 的变体生成。 \n\n### 技术亮点\n该系统采用“单一事实来源”架构，内容以通用格式编写一次，然后转换为针对多种 AI 工具（如 Claude Code, Cursor, Gemini 等）的特定输出。  它通过 `PRODUCT.md` 和 `DESIGN.md` 文件收集项目的设计上下文，并根据“品牌”或“产品”注册系统调整设计默认值。   其反模式检测引擎 (`cli/engine/detect-antipatterns.mjs`) 能够识别设计质量问题，并可集成到 CI/CD 流程中。  \n\n### 适合谁用\nImpeccable 适用于使用 AI 编码工具进行前端开发的工程师和设计师，特别是那些希望提高 AI 生成 UI 的设计质量、确保其符合品牌规范并避免常见设计缺陷的用户。  它支持多种 AI 编码工具，如 Codex CLI, Claude Code, GitHub Copilot, Cursor 和 Gemini CLI。",
+      "degraded": false
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 97152,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "`claude-mem` 是一个为 AI 编码助手设计的持久化内存压缩系统，旨在通过捕获和压缩工具使用观察结果来增强会话上下文。",
+      "detail_md": "<empty_citation />\n\n**解决什么问题** <empty_citation />\n`claude-mem` 解决了 AI 代理在每次新会话开始时缺乏历史上下文的问题。  通过存储和检索过去的交互，它确保 AI 助手能够保持对项目知识的连续性，即使在会话结束或重新连接后也能如此。 \n\n**核心功能** <empty_citation />\n该项目提供持久化内存，使上下文能够在会话之间保留。  它会自动生成项目文件夹中的 `CLAUDE.md` 文件，其中包含活动时间线。  `claude-mem` 还包括 MCP 搜索工具，允许用户使用自然语言查询项目历史。  此外，它还提供了一个 Web 查看器 UI，用于实时可视化内存流。 \n\n**技术亮点** <empty_citation />\n`claude-mem` 采用分层架构，包括外部钩子集成、中央工作器编排、存储层和管理接口。  它使用 SQLite 存储结构化数据和会话状态，并使用 ChromaDB 进行语义向量嵌入，实现混合搜索能力。   核心组件包括生命周期钩子、由 Bun 管理的 Worker 服务、SQLite 数据库和 Chroma 向量索引。 \n\n**适合谁用** <empty_citation />\n`claude-mem` 主要适用于使用 Claude Code 或其他支持的 IDE（如 Cursor、Windsurf、OpenCode）的开发者和用户。  它旨在帮助那些希望 AI 编码助手能够记住过去的交互和项目上下文，从而提高工作效率和代码质量的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "stars": 54383,
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "one_liner": "这是一个为大型语言模型（LLM）设计的技能，旨在优化其输出，使其更符合注意力缺陷多动障碍（ADHD）人群的阅读习惯，提供清晰、直接、可操作的信息。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决LLM输出中常见的问题，例如冗长的寒暄、模糊的指令、过多的背景信息和不明确的下一步行动，这些都可能让ADHD人群难以理解和执行。   它通过强制LLM遵循一套特定的规则来改善信息呈现方式，从而降低认知负担，提高效率。 \n\n### 核心功能\n核心功能是根据10条预设规则来塑造LLM的输出。  这些规则包括：以下一步行动开头、对多步骤任务进行编号、以一个具体的下一步行动结束、抑制离题内容、每次都重述状态、给出具体的时间估算、使完成的工作可见、对错误使用事实性语气、将列表限制在5项以内，以及避免寒暄、回顾和结束语。  \n\n### 技术亮点\n该技能以Markdown文件 `SKILL.md`  的形式定义规则，易于理解和修改。  它支持Claude Code、Codex和Cursor等多种代理环境，并提供了详细的安装、更新和卸载指南。  用户可以轻松地通过Fork项目并修改 `SKILL.md` 文件来定制规则，以适应个人需求。 \n\n### 适合谁用\n该项目适合任何希望LLM输出更清晰、更直接、更易于执行的用户，特别是那些有ADHD倾向或需要高效获取信息和行动指令的开发者、学生和专业人士。  它也适合希望定制LLM行为以满足特定工作流程或个人偏好的高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 9272,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA 是一个为编程智能体提供逆向工程能力的工具包和 MCP 服务器。",
+      "detail_md": "**解决什么问题**\nREA 旨在解决软件开发中的“黑盒”问题，即在没有源代码的情况下，帮助开发者和编程智能体理解应用程序的功能和工作原理。  它允许智能体检查编译后的二进制文件，反编译例程，并重建逻辑，从而帮助开发者理解功能并构建可互操作的实现。 \n\n**核心功能**\nREA 的核心功能包括：反编译（恢复可读的伪代码和汇编代码）、理解（追踪执行流程、交叉引用和调用图）和重建（将观察到的逻辑转化为新的代码）。  它通过一个 CLI 和 MCP 服务器提供这些能力，并暴露了 46 种工具，分为二进制检查、组合分析和二进制会话三类。 \n\n**技术亮点**\nREA 是一个分层的 ESM TypeScript 应用程序，依赖关系从适配器流向核心领域逻辑。  它通过一个 Python 脚本在 Hopper Disassembler 内部运行，实现了 Node.js 与 Hopper 之间的桥接。  REA 可以在本地 macOS 环境中运行，不上传二进制文件到托管分析服务，确保了分析的本地性和安全性。 \n\n**适合谁用**\nREA 适合需要理解编译后应用程序功能、重建其行为或为自己的产品构建类似功能的开发者和编程智能体。  特别是当源代码不可用时，它能帮助智能体进行深入调查，并将其学到的知识应用于新的编码任务。",
+      "degraded": false
+    },
+    {
+      "id": "deepseek-ai/DeepGEMM",
+      "owner": "deepseek-ai",
+      "name": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "stars": 8682,
+      "description": "DeepGEMM: clean and efficient BLAS kernel library on GPU",
+      "one_liner": "DeepGEMM 是一个高性能张量核心核函数库，用于现代大型语言模型计算原语。",
+      "detail_md": "### 解决什么问题\nDeepGEMM 旨在解决大型语言模型中计算原语（如 GEMM、MoE、MQA 等）的性能瓶颈问题。它通过提供统一、高性能的 CUDA 核函数库，优化了 FP8、FP4、BF16 等数据类型的矩阵乘法运算，并支持混合精度计算。\n\n### 核心功能\nDeepGEMM 的核心功能包括：\n*   **高性能 GEMM 核函数**：支持 FP8、FP4、BF16 等多种数据类型，并针对 NVIDIA SM90 和 SM100 架构进行了优化。\n*   **融合 MoE (Mega MoE)**：支持通信重叠的融合 MoE 操作。\n*   **MQA 评分**：为 lightning indexer 提供 MQA 评分核函数。\n*   **JIT 编译**：所有核函数都通过轻量级即时 (JIT) 模块在运行时编译，无需在安装时进行 CUDA 编译。\n\n### 技术亮点\n*   **统一的 CUDA 代码库**：将多种计算原语整合到一个内聚的 CUDA 代码库中。\n*   **轻量级设计**：借鉴了 CUTLASS 和 CuTe 的概念，但避免了对它们模板或代数的重度依赖，使得代码库简洁易懂。\n*   **卓越的性能**：在各种矩阵形状下，其性能与专业调优的库相当或更优。\n*   **支持最新硬件**：支持 NVIDIA SM90 (Hopper) 和 SM100 (Blackwell) 架构。\n\n### 适合谁用\nDeepGEMM 适合需要高性能、低延迟的大型语言模型开发者和研究人员。特别是那些在 NVIDIA SM90 或 SM100 GPU 上运行模型，并希望优化矩阵乘法、MoE 和 MQA 等关键计算的用户。它也适合希望学习 NVIDIA GPU 核函数优化技术的工程师。",
+      "degraded": false
+    },
+    {
+      "id": "msitarzewski/agency-agents",
+      "owner": "msitarzewski",
+      "name": "agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "stars": 157808,
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "one_liner": "这是一个包含 150 多个专业 AI 智能体定义的单一真实来源库，可自动化转换为 11 种 AI 平台格式并进行部署。",
+      "detail_md": "**解决什么问题**\nAI 智能体平台之间格式不兼容，导致为不同工具（如 Claude Code、Copilot、Cursor 等）编写智能体时需要维护多个副本。本项目通过提供单一的智能体定义源，并自动化转换为平台特定格式来解决这一问题。\n\n**核心功能**\n*   **单一真实来源**：智能体以 Markdown + YAML frontmatter 格式编写一次。\n*   **自动化转换**：`scripts/convert.sh` 脚本将智能体转换为平台特定格式。\n*   **轻松部署**：`scripts/install.sh` 脚本将转换后的智能体部署到检测到的平台。\n*   **质量门禁**：`scripts/lint-agents.sh` 脚本在转换前验证智能体结构。\n\n**技术亮点**\n项目采用领域驱动的目录结构，每个专业领域包含其专业智能体定义。智能体文件采用 Markdown 格式，包含 YAML frontmatter，遵循严格的结构，确保与工具的兼容性。转换管道使用四种主要策略将智能体定义转换为工具特定格式。\n\n**适合谁用**\n该项目适用于需要为多个 AI 智能体平台开发和部署智能体的开发者、团队和组织。它特别适合希望通过专业化 AI 智能体提升工作效率、实现快速原型开发、优化营销活动、进行企业级功能开发以及进行付费媒体账户接管等场景的用户。",
+      "degraded": false
+    },
+    {
+      "id": "DuarteSantos8/openGym",
+      "owner": "DuarteSantos8",
+      "name": "openGym",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "stars": 5651,
+      "description": "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+      "one_liner": "openGym 是一个免费、开源的健身和自重训练追踪器，无需订阅、无需账户，且不收集遥测数据，旨在帮助用户掌控自己的训练数据。",
+      "detail_md": "## 解决什么问题\nopenGym 旨在解决传统健身应用订阅收费、数据隐私侵犯以及缺乏个性化和本地化支持的问题。它提供了一个无需账户、不收集用户数据的解决方案，让用户能够完全掌控自己的训练历史和身体数据。此外，它还通过本地化支持和 AI 教练功能，满足了用户对个性化训练指导的需求。\n\n## 核心功能\nopenGym 提供引导式训练、个性化训练计划、肌肉图谱分析、1324 种带动画演示的练习库、体重追踪、训练热力图、多语言支持、Passkey 登录以及数据导入导出等核心功能。它还包含一个可选的 AI 教练，可以根据用户的目标和实际训练数据来设计和调整训练计划。\n\n## 技术亮点\n该项目采用 React 19 + Vite 构建前端，后端使用 Node.js 且无框架，仅依赖 `simplewebauthn/server` 用于 Passkey 认证。它支持多阶段 Docker 构建，方便自托管部署。此外，openGym 还包含一个可选的 Model Context Protocol (MCP) 服务器，允许外部 LLM 应用（如 Claude Desktop）以只读方式查询用户的训练数据，且不包含在 Docker 构建中，确保数据隐私。\n\n## 适合谁用\nopenGym 适合那些希望免费、无广告、完全掌控自己训练数据的健身爱好者。无论是使用 Android 移动应用、自托管服务器，还是通过浏览器演示版，用户都可以根据自己的需求选择最适合的方式来追踪和管理训练。对于开发者和技术爱好者，其开源特性和清晰的项目结构也提供了贡献和学习的机会。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 44002,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "这是一个为大型语言模型设计的技能和设计系统，用于生成高质量、品牌一致的图表。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）在生成图表时，输出结果通用、缺乏品牌一致性以及需要手动调整的问题。 它通过自动化品牌匹配和提供多种图表类型，减少了设计师和工程师在图表创建上的时间和精力投入。 \n\n**核心功能**\n核心功能包括：根据网站自动提取品牌颜色和字体，并应用于图表； 支持42种视觉图表类型，涵盖系统、数据、层级和分析等多种场景； 能够重新绘制来自`draw.io`、Mermaid或Excalidraw的现有图表，并根据输出需求调整格式、尺寸、细节和受众。 \n\n**技术亮点**\n技术亮点在于其“文档优先”的架构，`SKILL.md`作为LLM的入口和路由器，按需加载特定图表类型的规则和约定。 它采用语义模式来描述系统行为，与视觉布局分离，从而在不增加图表类型数量的情况下实现行为描述。 此外，项目还包含严格的样式指南和验证门，确保图表的可读性、可访问性和品牌一致性，例如WCAG AA对比度检查和4px网格系统。  \n\n**适合谁用**\n该项目适合需要生成高质量、品牌一致图表的工程师、设计师以及使用Claude Code、Codex、Factory Droid和Pi等代理技能平台的开发者。 它特别适用于那些希望自动化图表创建流程，并确保图表符合特定品牌视觉规范的用户。",
+      "degraded": false
+    }
+  ]
+}
