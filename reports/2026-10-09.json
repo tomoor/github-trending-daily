@@ -100,6 +100,61 @@
       "one_liner": "该项目是关于系统设计面试的笔记集合，涵盖了从基础概念到复杂应用设计的广泛主题。",
       "detail_md": "**解决什么问题**\n该项目旨在为准备系统设计面试的工程师提供结构化的学习材料和参考指南。它通过总结和组织系统设计书籍中的关键概念，帮助用户理解和应用分布式系统设计原则。\n\n**核心功能**\n项目核心功能包括提供系统设计的基础概念，例如从零到百万用户的扩展、估算方法、系统设计面试框架、限流器、一致性哈希、键值存储和分布式唯一ID生成器。此外，它还涵盖了多种应用级系统设计，如URL缩短器、聊天系统、搜索自动完成和YouTube等。\n\n**技术亮点**\n技术亮点在于其对分布式系统核心组件的深入探讨，例如在唯一ID生成器中比较了UUID、Ticket Server和Twitter Snowflake等方法。在键值存储设计中，详细介绍了协调器、法定人数、Gossip协议和Merkle树等概念。项目还通过图表清晰地展示了各章节之间的依赖关系和基础概念如何应用于实际应用设计。\n\n**适合谁用**\n该项目非常适合正在准备系统设计面试的软件工程师、希望深入理解分布式系统原理的开发者，以及任何对构建可扩展、高可用系统感兴趣的技术人员。",
       "degraded": false
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 44926,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review 是一个 AI 驱动的代码审查 CLI 工具，它结合确定性工程与 LLM Agent 推理，提供高精度缺陷检测。",
+      "detail_md": "**解决什么问题**\n通用 AI Agent 在代码审查中存在覆盖不全、位置漂移和质量不稳定等问题，因为它们缺乏对审查流程的强约束。  Open Code Review 旨在解决这些痛点，通过混合架构提供更稳定、更精准的代码审查。 \n\n**核心功能**\n*   **深度上下文审查**：Agent 能读取完整文件内容、搜索代码库、检查其他变更文件以获取上下文，进行深度审查。 \n*   **多模式操作**：支持审查工作区变更、分支或提交之间的差异，以及通过 `ocr scan` 对整个文件进行审计。 \n*   **多语言支持和内置规则**：提供针对 40 多种语言和文件类型的审查规则，涵盖 NPE、线程安全、XSS、SQL 注入等检查。 \n*   **灵活集成**：可作为 CLI 工具、CI/CD 插件或“委托模式”使用。 \n\n**技术亮点**\n*   **混合架构：确定性工程 × Agent 混合驱动**：将确定性工程（文件筛选、打包、规则匹配、定位与反思）与 LLM Agent 推理（动态决策、上下文召回）相结合，各司其职，优化质量、成本和速度。 \n*   **精准评论定位与反思**：独立的行级评论定位模块和反思模块，提升 AI 反馈的位置和内容准确性。 \n*   **智能记忆压缩**：专为代码审查构建的三级分区上下文管理方案，突破 Token 限制实现深度审查。 \n*   **多模型协议支持**：支持 Anthropic Messages API、OpenAI Chat Completions API 等，并内置多种预设提供商，也支持自定义模型端点。 \n\n**适合谁用**\n*   **独立开发者**：在本地 AI 辅助开发工作流中获得即时、高质量的代码审查反馈。 \n*   **平台团队**：无缝集成到内部系统，完全掌控数据流和审查策略。 \n*   **ML 研究者**：作为 RL 训练流水线中的代码质量验证器，为代码生成模型提供可靠的奖励信号。",
+      "degraded": false
+    },
+    {
+      "id": "BerriAI/litellm",
+      "owner": "BerriAI",
+      "name": "litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "stars": 60507,
+      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+      "one_liner": "LiteLLM 提供统一的 OpenAI 兼容接口，简化了 100 多个大型语言模型 (LLM) 提供商的集成和管理。",
+      "detail_md": "**解决什么问题** \n管理多个 LLM 提供商时，面临 SDK、API、认证和定价模式多样化的挑战。 LiteLLM 通过提供一个统一的接口来解决这些问题，从而简化了 LLM 的集成和使用。 \n\n**核心功能** \n*   **统一的 LLM 接口**: 提供一个与 OpenAI 兼容的 API，支持超过 100 个 LLM 提供商。 \n*   **双模式架构**: 既可以作为 Python SDK 直接使用，也可以作为独立的 HTTP 代理服务器运行。 \n*   **多租户管理**: 代理服务器支持多租户认证、预算控制、API 路由和管理。 \n*   **成本跟踪与限速**: 提供支出跟踪、速率限制和合规策略等企业级功能。 \n\n**技术亮点** \n*   **自动提供商检测与转换**: 自动识别模型提供商并调整输入输出格式。 \n*   **标准化响应格式**: 使用 `ModelResponse` 统一响应，包含 token 使用量和成本元数据。 \n*   **灵活的路由与负载均衡**: `litellm.Router` 支持在多个部署之间进行负载均衡和故障转移。 \n*   **持久化与缓存**: 代理模式下通过 PostgreSQL 和 Redis 实现状态持久化和缓存。 \n\n**适合谁用** \n*   **开发者**: 希望通过统一接口轻松集成和切换不同 LLM 的开发者。 \n*   **企业**: 需要多租户管理、成本控制、安全认证和专业支持的企业用户。 \n*   **AI 应用构建者**: 寻求简化 LLM 基础设施管理，专注于应用开发的团队。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 103741,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "这是一个为AI代理提供结构化工程工作流的技能库，旨在提高代码质量和开发效率。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在软件开发过程中可能出现的非结构化、低效或质量不达标的问题。它通过提供预定义的、经过验证的工作流程（技能）来指导AI代理完成从需求定义到部署的各个阶段，确保输出的代码符合质量标准，并减少人为干预和返工。\n\n**核心功能**\n核心功能是提供25个结构化的“技能”，每个技能都代表一个工程任务的工作流程。这些技能涵盖了软件开发生命周期的各个阶段，包括需求定义（如`spec-driven-development`）、计划（如`planning-and-task-breakdown`）、构建（如`test-driven-development`）、验证、代码审查（如`code-review-and-quality`）和部署。每个技能都包含详细的步骤、验证门槛和反合理化表格，以确保AI代理遵循最佳实践。\n\n**技术亮点**\n技术亮点在于其“技能”的结构化设计，每个技能都以Markdown文件（`SKILL.md`）形式存在，包含概述、使用时机、流程、常见合理化、红旗和验证等部分。这种设计使其具有模型无关性，可以与多种AI代理和工具集成，如Claude Code、GitHub Copilot、Codex等。项目还定义了代理角色（Persona）和参考清单，以提供更专业的指导和质量保障。\n\n**适合谁用**\n该项目适合使用AI编码代理进行软件开发，并希望提高开发效率、代码质量和一致性的开发者、团队和组织。特别是那些希望通过标准化工作流程来确保AI代理产出高质量代码，并减少人工审查负担的场景。",
+      "degraded": false
+    },
+    {
+      "id": "Robbyant/lingbot-map",
+      "owner": "Robbyant",
+      "name": "lingbot-map",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "stars": 17587,
+      "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
+      "one_liner": "LingBot-Map是一个用于流式3D重建的几何上下文Transformer模型，能从图像或视频高效生成高质量3D点云。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统3D重建方法在处理长序列数据时效率低、内存占用大以及漂移累积的问题。它通过流式推理和优化的KV缓存机制，实现了对长序列图像或视频的实时、稳定3D重建。\n\n**核心功能**\n*   **流式3D重建**：支持从图像序列或视频文件进行实时的3D重建，并提供两种推理模式：`streaming`（全历史）和`windowed`（滑动窗口）。\n*   **高效KV缓存管理**：利用FlashInfer的paged KV缓存，实现高效的流式推理，即使在处理超过10,000帧的超长序列时也能保持约20 FPS的稳定性能。\n*   **实时可视化与导出**：通过`viser`服务器提供交互式3D点云实时查看功能，并支持点云的GLB格式导出。\n*   **天空遮罩**：可选地应用基于ONNX模型的天空分割，过滤掉点云中的天空部分，提升户外场景的可视化质量。\n\n**技术亮点**\n*   **几何上下文Transformer (GCT)**：架构上统一了坐标接地、密集几何线索和长距离漂移校正，通过锚点上下文、姿态参考窗口和轨迹记忆实现流式框架内的3D重建。\n*   **两种推理模式**：\n    *   `streaming`模式：KV缓存随序列增长，通过`--keyframe_interval`控制哪些帧被永久缓存，以节省内存。\n    *   `windowed`模式：针对超长序列（>3000帧），维护一个滑动窗口，只缓存最新帧，避免$O(N^2)$的复杂度增长。\n*   **3D RoPE支持**：支持3D旋转位置编码（3D RoPE），以增强时间一致性。\n\n**适合谁用**\n该项目适合需要从连续图像或视频流中进行高效、高质量3D重建的研究人员和开发者。特别适用于机器人、自动驾驶、AR/VR等领域，这些领域对实时性、长序列处理能力和重建精度有较高要求。",
+      "degraded": false
+    },
+    {
+      "id": "twostraws/SwiftUI-Agent-Skill",
+      "owner": "twostraws",
+      "name": "SwiftUI-Agent-Skill",
+      "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "stars": 5283,
+      "description": "SwiftUI agent skill for Claude Code, Codex, and other AI tools.",
+      "one_liner": "SwiftUI-Agent-Skill 是一个 AI 代理技能，用于审查 SwiftUI 代码，确保其遵循最佳实践、使用现代 API 并避免常见陷阱。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 模型在生成 SwiftUI 代码时常犯的错误，例如生成对 VoiceOver 不可见的按钮、使用已弃用的 API 以及导致意外性能问题的代码。它通过提供专家指导来帮助开发者确保代码质量、可访问性和性能。\n\n**核心功能**\n核心功能包括一个 9 步的代码审查流程，涵盖现代 API 使用、视图结构、数据流、导航、设计、可访问性、性能、Swift 实践和代码卫生等多个方面。它能生成结构化的审查报告，包含文件、行号、违规规则以及修改前后的代码示例。\n\n**技术亮点**\n该技能采用 Agent Skills 格式构建，可无缝集成到 Claude Code、Codex、Gemini、Cursor 等多种 AI 编码平台。它注重令牌效率，专注于边缘情况和 AI 模型常犯的错误，而不是重复已知信息。\n\n**适合谁用**\n该项目适用于希望确保其 SwiftUI 代码符合最佳实践、使用现代 API (iOS 26+, Swift 6.2+)、遵循可访问性指南并避免性能问题的 SwiftUI 开发者。它也适合那些希望利用 AI 代理进行代码审查以提高代码质量的团队和个人。",
+      "degraded": false
     }
   ]
 }
