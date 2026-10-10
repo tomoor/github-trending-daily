@@ -122,6 +122,83 @@
       "one_liner": "SwiftUI-Agent-Skill 是一个 AI 代理技能，用于审查 SwiftUI 代码，确保其符合最佳实践、现代 API 使用和常见陷阱。",
       "detail_md": "**解决什么问题**\n该项目旨在解决 SwiftUI 代码质量、现代化和可维护性方面的问题。它通过自动化代码审查，帮助开发者确保代码使用现代 SwiftUI API (iOS 26+, Swift 6.2+)，遵循可访问性最佳实践，避免性能陷阱，并符合 Apple 的人机界面指南。它特别针对 AI 模型常犯的错误，如 VoiceOver 不可见按钮、使用废弃 API 和导致性能问题。\n\n**核心功能**\n该技能提供一个 9 步的代码审查流程，涵盖 API 使用、视图结构、数据流、导航、设计、可访问性、性能、Swift 实践和代码卫生等多个方面。它能生成结构化的审查报告，包含按文件组织的发现、问题行号、违反的规则名称以及修改前后的代码示例。用户可以通过明确命令、自然语言或隐式上下文触发审查。\n\n**技术亮点**\n该项目采用 Agent Skills 格式构建，可无缝集成到 Claude Code、Codex、Gemini、Cursor 等多种 AI 编码平台。它设计为 token 高效，专注于边缘情况、软弃用和 AI 模型常犯的错误，而非重复已知信息。技能的核心是一个协调器 (`SKILL.md`) 和九个领域特定的参考文件 (`references/*.md`)，共同构成专家知识库。\n\n**适合谁用**\n该技能适合 SwiftUI 开发者，特别是那些希望确保其代码符合最新 SwiftUI 最佳实践、提高代码质量、避免常见错误并优化性能的开发者。它也适用于使用 AI 编码工具的开发者，帮助他们弥补 AI 在 SwiftUI 代码生成方面可能存在的不足。",
       "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 26092,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP 插件，通过沙盒执行、知识库和会话连续性，为 AI 编码助手节省 98% 的上下文窗口。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口被工具输出数据淹没和会话状态丢失的问题。例如，一个 Playwright 快照会消耗 56 KB，20 个 GitHub issue 会消耗 59 KB，导致上下文窗口迅速被填满，并丢失工作记忆。\n\n**核心功能**\n`context-mode` 通过以下三个核心机制解决这些问题：\n1.  **沙盒执行**：`PolyglotExecutor` 在沙盒中执行代码，只将结果而非原始数据写入上下文，实现高达 99% 的上下文节省。\n2.  **知识库**：使用 SQLite FTS5 索引内容，并通过 BM25 排名检索相关信息，避免重复发送大量数据。\n3.  **会话连续性**：通过 `SessionDB` 捕获事件并存储，在上下文压缩时生成 2KB 的 XML 快照以恢复代理状态，防止状态丢失。\n\n**技术亮点**\n该项目支持 17 种以上的 AI 平台，并提供了一套 MCP 工具，如 `ctx_execute` 用于沙盒代码执行，`ctx_index` 和 `ctx_search` 用于知识库管理。它还通过钩子机制在会话生命周期中拦截工具调用，实现路由强制和事件捕获。\n\n**适合谁用**\n`context-mode` 适合使用 AI 编码助手的开发者和工程团队。对于开发者，它能显著节省上下文窗口，提高 AI 助手的效率。对于工程组织，它提供了一个平台层，可以洞察团队使用 AI 工具的情况，例如生产力、成本和合规性，而不会泄露源代码或提示内容。",
+      "degraded": false
+    },
+    {
+      "id": "flutter/flutter",
+      "owner": "flutter",
+      "name": "flutter",
+      "url": "https://github.com/flutter/flutter",
+      "stars": 179321,
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "one_liner": "Flutter 的 Widget Preview 和 Localization 工具，旨在简化 UI 开发与国际化流程，提升开发效率。",
+      "detail_md": "**解决什么问题**\n该项目解决了 Flutter 开发者在 UI 组件开发和应用国际化过程中遇到的痛点。 开发者无需在完整应用中运行即可预览单个 Widget，同时自动化处理多语言文本的生成和管理，确保类型安全和减少手动错误。\n\n**核心功能**\n核心功能包括 Widget Preview 系统和 Localization 工具链。 Widget Preview 允许开发者通过 `@Preview` 注解隔离地预览 UI 组件，并提供热重启、导航到源码等交互功能。 Localization 工具 (`gen_l10n`) 则能从 `.arb` 文件自动生成 Dart 国际化类，支持复数和选择表达式，并进行类型推断。\n\n**技术亮点**\n技术亮点在于其集成度与自动化能力。 Widget Preview 利用 Dart Analyzer 进行静态分析，并通过 Dart Tooling Daemon (DTD) 实现工具与预览环境的通信。 Localization 工具通过 `LocalizationsGenerator` 解析 ICU 风格的 ARB 文件，并生成类型安全的 Dart 代码。 两者都深度集成到 `flutter_tools` 构建系统。\n\n**适合谁用**\n该项目适合所有 Flutter 开发者，特别是那些需要频繁迭代 UI 组件和开发多语言应用的团队。 它能显著提高开发效率，减少调试时间，并确保国际化文本的准确性和一致性。",
+      "degraded": false
+    },
+    {
+      "id": "tensorflow/tensorflow",
+      "owner": "tensorflow",
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "stars": 200614,
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "one_liner": "本项目提供 MHLO 和 StableHLO 两种 MLIR 方言，用于表示机器学习计算的高级操作，是 XLA 编译基础设施中的中间表示。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决机器学习模型在不同框架和硬件平台之间互操作性差的问题，通过提供稳定的中间表示（StableHLO）来确保模型定义的长期兼容性和可移植性。同时，它也作为 XLA 内部的 MLIR 表示（MHLO），支持丰富的机器学习操作，以便于优化和生成硬件特定的代码。\n\n**核心功能**\n核心功能包括 MHLO 和 StableHLO 两种 MLIR 方言的定义和实现。MHLO 作为 XLA 内部表示，支持广泛的机器学习操作和类型系统。StableHLO 提供了一个稳定的、前向兼容的 API，用于长期序列化和跨框架互操作。项目还提供了 CHLO、StableHLO 和 MHLO 之间的方言转换和合法化通道，以及将 MLIR 模块翻译成 XLA 的内部可执行表示 `xla::XlaComputation` 的能力。\n\n**技术亮点**\n技术亮点在于其双重方言设计，MHLO 侧重于 XLA 内部的灵活性和丰富性，而 StableHLO 则强调外部接口的稳定性和兼容性。项目通过 Bazel 工作区宏集成 StableHLO 作为第三方依赖，确保了稳定的集成点。此外，它支持有界动态形状（Bounded Dynamic Shapes），允许张量维度是动态的但有上限，这有助于内存分配和优化。\n\n**适合谁用**\n本项目适合需要进行机器学习模型编译、优化和跨平台部署的开发者和研究人员。特别是那些希望在不同机器学习框架（如 TensorFlow）和硬件后端（如 XLA 支持的 CPU、GPU 和专用加速器）之间实现模型互操作性和可移植性的用户。它也适用于开发自定义 ML 编译器后端和进行模型交换的场景。",
+      "degraded": false
+    },
+    {
+      "id": "hugohe3/ppt-master",
+      "owner": "hugohe3",
+      "name": "ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master",
+      "stars": 59070,
+      "description": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+      "one_liner": "PPT Master 是一个 AI 驱动的开源工作流，能将多种源文档转换为可深度编辑的原生 PowerPoint 演示文稿。",
+      "detail_md": "**解决什么问题**\nPPT Master 旨在解决现有 AI 演示工具的局限性，例如将幻灯片导出为扁平图片、缺乏对演示逻辑的推理以及原生深度不足等问题。它通过连接推理、视觉和原生交付三个层次，避免了在不同阶段重复工作。\n\n**核心功能**\n该项目能够从 PDF、DOCX、URL、Markdown 等多种源文档生成 PPTX 文件。它支持多角色协作，例如“策略师”负责规划演示逻辑，“执行者”负责视觉设计。生成的 PPTX 文件具有原生深度，包含母版、原生形状、数据驱动的图表和表格，并且可继续编辑。\n\n**技术亮点**\nPPT Master 的核心技术亮点在于使用 SVG 作为创作语言，AI 生成受约束的 SVG，然后脚本将其编译为 DrawingML，从而实现深度的原生 PowerPoint 兼容性。它还支持 100% 本地运行，确保数据隐私，并且不锁定特定平台或 AI 模型。\n\n**适合谁用**\n该项目适合那些需要将主题、文档、数据或现有演示文稿转化为高质量、可深度编辑的 PowerPoint，并重视演示逻辑、数据隐私和成本透明的用户。它不适合追求零配置、即时生成或实时协作的用户。",
+      "degraded": false
+    },
+    {
+      "id": "pytorch/pytorch",
+      "owner": "pytorch",
+      "name": "pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "stars": 104048,
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "one_liner": "PyTorch 是一个开源机器学习框架，提供灵活高效的深度学习研究与生产平台。",
+      "detail_md": "**解决什么问题**\nPyTorch 旨在解决深度学习模型开发、训练和部署中的复杂性与效率问题。 它通过提供动态计算图、强大的 GPU 加速和丰富的库生态系统，简化了神经网络的构建和优化过程。\n\n**核心功能**\nPyTorch 的核心功能包括张量计算（支持强大的 GPU 加速）、 自动微分系统（Autograd）、 丰富的神经网络模块库（`torch.nn`）、 以及用于分布式训练的工具。 它还支持 Intel GPU (XPU) 后端， 提供了设备管理、内存分配和异步执行等功能。\n\n**技术亮点**\nPyTorch 的技术亮点在于其动态计算图（Define-by-Run）， 使得模型构建和调试更加灵活。 它采用混合构建系统，结合 `scikit-build-core` (PEP 517) 和 CMake 进行编译。 此外，它还提供了 `torchgen` 等代码生成工具， 以及针对 Intel GPU 的 XPU 后端， 支持 SYCL 运行时和 oneAPI， 包含高效的缓存分配器和图捕获功能。\n\n**适合谁用**\nPyTorch 适合机器学习研究人员、深度学习工程师以及需要构建、训练和部署高性能神经网络模型的开发者。 尤其适用于需要灵活模型定义、快速迭代和高效 GPU 加速的场景。 对于使用 Intel GPU 的用户，XPU 后端提供了原生支持， 使得 PyTorch 能够充分利用 Intel 硬件的性能。",
+      "degraded": false
+    },
+    {
+      "id": "huggingface/transformers",
+      "owner": "huggingface",
+      "name": "transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "stars": 167035,
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+      "one_liner": "Hugging Face Transformers 是一个为文本、视觉、音频、视频及多模态提供推理和训练支持的先进机器学习模型定义框架。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决先进机器学习模型在推理和训练中的复杂性与碎片化问题。 它通过集中化模型定义，确保整个生态系统对模型定义达成一致，从而简化了模型的应用和普及。 此外，它还致力于降低计算开销和碳足迹，通过共享预训练模型而非每次从零开始训练。 \n\n**核心功能**\n核心功能包括提供数千个预训练模型，支持文本、视觉、音频、视频及多模态任务的推理和训练。 它提供统一的 `pipeline` API，使得用户能够快速上手进行情感分析、图像分类、自动语音识别等多种任务。  用户可以在 PyTorch 等框架中自由迁移和使用模型。 \n\n**技术亮点**\n技术亮点在于其“单文件模型”设计哲学，每个模型家族都封装在一个独立的 Python 文件中，减少了抽象层级，便于调试和理解。 项目还采用了“组合优于过度抽象”的原则，避免了深层继承，提高了代码清晰度。 此外，它支持动态权重加载 API，通过 `WeightConverter` 类声明性地处理检查点权重转换，以支持复杂的模型并行化和量化方案。 \n\n**适合谁用**\n该项目适合开发者、研究人员、学生、教师和工程师等，任何希望利用先进机器学习模型进行开发和研究的人群。 它为那些寻求易用、高性能且可定制的预训练模型解决方案的用户提供了便利。",
+      "degraded": false
+    },
+    {
+      "id": "multica-ai/andrej-karpathy-skills",
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 217927,
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "one_liner": "该项目提供一套基于 Andrej Karpathy 观察的指南，旨在改善大型语言模型（LLM）的代码生成行为，减少常见编码错误。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 LLM 在编码过程中常出现的几个问题，包括：模型做出错误假设、不寻求澄清、过度复杂化代码、堆砌抽象、不清理死代码，以及在不完全理解的情况下修改无关代码和注释等。\n\n**核心功能**\n项目通过四个核心原则来指导 LLM 的行为：\n1.  **编码前思考**：强制 LLM 明确假设、呈现多种解释、适时提出异议并在困惑时寻求澄清，以避免错误假设和隐藏困惑。\n2.  **简洁优先**：要求 LLM 用最少的代码解决问题，避免过度工程、不必要的抽象和未请求的功能。\n3.  **精准修改**：限制 LLM 只修改与任务直接相关的代码，避免“改进”无关代码、注释或格式，并只清理自己造成的孤儿代码。\n4.  **目标驱动执行**：将指令式任务转化为可验证的成功标准（通常通过测试），使 LLM 能够独立循环验证直到达成目标。\n\n**技术亮点**\n这些指南以多种形式提供，以适应不同的 AI 开发环境：\n*   **Claude Code 插件**：作为 Claude Code 的插件安装，使指南在所有项目中可用。\n*   **CLAUDE.md 文件**：可作为项目根目录下的 `CLAUDE.md` 文件，用于通用 LLM 工具或项目特定指令。\n*   **Cursor 项目规则**：通过 `.cursor/rules/karpathy-guidelines.mdc` 文件集成到 Cursor IDE 中，实现自动应用。\n*   **SKILL.md**：提供可复用的技能文件 `skills/karpathy-guidelines/SKILL.md`，方便个人智能体库或手动复制使用。\n\n**适合谁用**\n该项目适用于使用 Claude Code、Cursor 或其他 LLM 辅助编码工具的开发者和团队。 它旨在帮助开发者减少 LLM 引入的错误、提高代码质量、简化代码审查流程，并确保 LLM 的行为更符合资深工程师的标准。 这些指南倾向于“谨慎而非速度”，适用于需要减少非琐碎工作中代价高昂错误的场景。",
+      "degraded": false
     }
   ]
 }
