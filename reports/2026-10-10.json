@@ -1,0 +1,127 @@
+{
+  "doc_token": "JedRdvWAjoSZQDxiRYgcdh3wn2g",
+  "doc_url": "https://my.feishu.cn/docx/JedRdvWAjoSZQDxiRYgcdh3wn2g",
+  "items": [
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 45277,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA：用智能体逆向工程任何程序，从应用行为到原生二进制文件。",
+      "detail_md": "## 解决什么问题\nREA 旨在解决软件开发中“黑盒”问题，即在没有源代码的情况下理解软件功能和行为的挑战。它提供了一种系统化的方法，让智能体能够分析应用程序、解释功能工作原理并提供证据，最终帮助开发者在自己的项目中实现类似功能。\n\n## 核心功能\nREA 的核心功能包括：\n*   **反编译与分析**：能够打开原生应用或可执行文件，恢复过程、伪代码、汇编、字符串、符号、段和元数据。\n*   **理解与追踪**：通过追踪调用者、被调用者、交叉引用和调用图，帮助智能体理解功能或算法的实际工作方式。\n*   **重建与实现**：将智能体学到的内容转化为适合特定技术栈、界面和需求的产品功能。\n*   **多类型应用支持**：提供原生二进制、JavaScript 与 Electron 应用、.NET 程序集和网站的分析工具。\n\n## 技术亮点\nREA 的技术亮点在于其为智能体设计，通过 CLI 和 MCP（Model Context Protocol）服务器，将逆向工程能力暴露给 AI 编程助手。它支持多种分析工具，如 Hopper 和 Ghidra，并在本地运行分析，确保数据安全。REA 还通过引导式设置简化了配置过程，并能保留上下文，支持连续调查多个应用。\n\n## 适合谁用\nREA 适合需要理解现有软件功能、行为或实现细节的开发者和团队。特别是当缺乏源代码时，它能帮助用户通过逆向工程获取洞察。它也适用于希望利用 AI 编程助手加速逆向工程和功能重建过程的工程师，以及需要分析不同类型二进制文件（如原生应用、JavaScript/Electron 应用、.NET 程序集和网站）的专业人士。",
+      "degraded": false
+    },
+    {
+      "id": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "stars": 22203,
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "one_liner": "AnyPS5 旨在将 PlayStation 5 原生可执行文件自动移植到 Linux 和 Windows 平台。",
+      "detail_md": "### 解决什么问题\n该项目解决了 PlayStation 5 游戏和应用程序在非原生 Linux 和 Windows 系统上运行的问题，无需 CPU/GPU 模拟或单独的运行时客户进程。它通过将客户可执行文件转换为原生格式并提供索尼系统模块（`PRX` 库）的原生动态链接库等效项来实现这一点。\n\n### 核心功能\n核心功能包括一个重链接器，用于将 PS5 可执行文件转换为目标系统的原生格式，以及实现索尼系统 `PRX` 库（如 `libc`、`libkernel` 和 `libSce*` 服务模块）。它还包含一个着色器重编译器，可将 AMD RDNA 着色器二进制文件转换为 SPIR-V 着色器以供 Vulkan 使用。\n\n### 技术亮点\n技术亮点在于其无模拟的移植方法，通过重链接器将客户 ELF 可执行文件重写为原生 Linux ELF 或 Windows PE 二进制文件。它还实现了对 PS5 系统库的直接桥接，将客户 API 调用映射到原生操作系统和图形原语。项目支持 SDL 映射的游戏控制器，包括模拟摇杆和扳机。\n\n### 适合谁用\n该项目适用于希望在 Linux 和 Windows 系统上运行 PS5 原生可执行文件的开发者、研究人员和用户。它也适用于对互操作性、研究、保存和兼容性感兴趣的人。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 282644,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供了一套模块化的、基于 Markdown 的技能集，用于提升 AI 编码代理的工程效率和代码质量。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 AI 编码代理在软件开发中常见的痛点，包括代理与开发者之间的沟通不一致、代理输出过于冗长、生成的代码质量不佳，以及代码库容易演变为“泥球”架构。\n\n### 核心功能\n核心功能包括通过“拷问”会话（`/grill-me`  和 `/grill-with-docs` ）来明确需求；建立共享语言（`GLOSSARY.md` ）以减少冗余；通过测试驱动开发（`/tdd` ）和调试（`/diagnosing-bugs` ）提升代码质量；以及通过架构改进（`/improve-codebase-architecture` ）来维护代码库健康。\n\n### 技术亮点\n该项目采用模块化技能设计，技能以 Markdown 形式定义，易于适应和组合。它支持用户调用和模型自动调用两种模式，并通过 `ask-matt` 技能作为路由。项目还强调“深度模块”设计原则，以及通过 `GLOSSARY.md`  和 ADRs  维护领域模型。\n\n### 适合谁用\n该项目适合希望通过 AI 编码代理提高软件开发效率和代码质量的工程师。特别是那些在使用 Claude Code、Codex 或其他编码代理时遇到沟通障碍、代码冗余、质量问题或架构腐化等挑战的开发者。它为个人开发者和团队提供了可定制的工具集。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 47836,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "本项目是一个智能体技能和设计系统，用于生成高质量、品牌化的技术和产品图表。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统图表工具生成通用、低质量图表的问题，特别是大型语言模型（LLM）生成的图表缺乏品牌一致性和编辑质量的问题。它通过提供一套设计系统和自动化流程，确保生成的图表具有专业、品牌化的外观。\n\n## 核心功能\n*   **图表生成**：能够生成42种不同类型的图表，包括架构图、流程图、状态机图等。\n*   **品牌定制**：通过抓取网站自动提取品牌调色板和字体，并将其应用于图表，实现品牌一致性。\n*   **导入与重绘**：支持从 `.drawio`、Mermaid 和 Excalidraw 文件导入图表，并根据设计系统进行重绘，而非简单转换。\n*   **可访问性**：支持可选的动画效果，同时确保静态输出的可访问性，并提供无障碍描述。\n\n## 技术亮点\n*   **语义模式**：将系统行为与视觉布局分离，允许不同的行为模式重用现有视觉类型，而不增加图表类型数量。\n*   **自包含HTML+SVG**：生成的图表是自包含的HTML文件，内联SVG和CSS，无需外部依赖、JavaScript或构建步骤。\n*   **设计系统**：采用“自信的克制”美学，强调删除不必要的元素，并通过语义化令牌实现颜色和字体的灵活定制。\n*   **严格的验证门**：通过一系列脚本（如 `lint-render.py`、`verify-semantic-motion.py`）确保图表质量、可访问性和文档同步。\n\n## 适合谁用\n*   **内容创作者和技术作家**：需要高质量、品牌一致的图表来增强文章、文档和演示文稿。\n*   **开发者和架构师**：希望快速生成清晰、专业的架构图、流程图和数据模型图，并能从现有工具导入。\n*   **使用Claude Code、Codex、Factory Droid、Pi等智能体平台的工程师**：本项目作为这些平台的技能，可以直接集成使用。",
+      "degraded": false
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 45180,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review 是一个 AI 驱动的代码审查 CLI 工具，它结合确定性工程与 LLM Agent 推理，提供高精度的代码缺陷检测。",
+      "detail_md": "**解决什么问题**\nOpen Code Review 旨在解决通用 AI Agent 在代码审查中存在的局限性，例如覆盖不全、评论位置漂移和质量不稳定等问题。它通过引入强约束的工程逻辑，确保审查的准确性和稳定性。\n\n**核心功能**\n该项目能够读取 Git diffs，通过具备工具调用能力的 Agent 将变更文件发送至可配置的 LLM，生成具有行级精度的结构化审查意见。Agent 可以读取完整文件内容、搜索代码库、检查其他变更文件以获取上下文，从而进行深度审查。此外，`ocr scan` 命令支持审查整个文件，适用于审计不熟悉的代码库或没有有意义 diff 的目录。\n\n**技术亮点**\nOpen Code Review 采用“确定性工程 × Agent 混合驱动”的核心设计理念。确定性工程负责精准的文件筛选、智能的文件打包、精细化规则匹配以及外挂的定位与反思组件，确保审查过程的强约束和准确性。Agent 则专注于动态决策和动态召回上下文，通过场景化提示词调优和场景化工具集沉淀，提升效果并降低 Token 消耗。\n\n**适合谁用**\nOpen Code Review 适合独立开发者，可将其嵌入本地 AI 辅助开发工作流，获得即时、高质量的代码审查反馈。平台团队可以无缝集成到内部系统中，完全掌控数据流和审查策略。ML 研究者可将其作为 RL 训练流水线中的代码质量验证器，为代码生成模型提供可靠的奖励信号。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 28237,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "one_liner": "该项目旨在通过可定制的插件扩展Claude的功能，使其能与外部工具和数据源交互，自动化工作流程。",
+      "detail_md": "**解决什么问题**\n该项目解决了Claude在处理特定领域知识和执行外部操作时的局限性。它通过允许用户集成各种工具和数据源，使Claude能够更深入地参与到生物研究、金融、法律、销售、营销、工程等专业工作流程中，从而提高效率和自动化水平。\n\n**核心功能**\n核心功能包括插件管理，允许创建、定制和管理根据组织工具和工作流程量身定制的插件。它通过“技能”（Skills）提供领域专业知识和逐步工作流程，通过“命令”（Commands）执行明确操作，并通过“连接器”（Connectors）实现工具集成。例如，生物研究插件可以连接到临床前研究工具和数据库，加速生命科学研发。\n\n**技术亮点**\n技术亮点在于其模块化和可扩展的插件系统，基于模型上下文协议（MCP）。插件使用`~~category`作为占位符，实现工具无关性，例如`~~project tracker`可以映射到Asana、Linear或Jira。这种设计使得插件能够灵活适应不同的外部工具，并通过`SKILL.md`文件定义触发短语和指令，实现自动化工作流。\n\n**适合谁用**\n该项目适合需要扩展Claude能力以处理特定领域任务和自动化工作流程的组织和个人。这包括生物研究人员、金融专业人士、法律团队、销售和营销团队、工程师以及任何希望通过AI增强其专业工作流程的用户。",
+      "degraded": false
+    },
+    {
+      "id": "BerriAI/litellm",
+      "owner": "BerriAI",
+      "name": "litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "stars": 60647,
+      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+      "one_liner": "LiteLLM 提供了一个统一的、与 OpenAI 兼容的接口，用于访问超过 100 种大型语言模型（LLM）提供商。",
+      "detail_md": "**解决什么问题**\nLiteLLM 旨在解决管理多个 LLM 提供商带来的挑战，这些挑战包括不同的 SDK、API、认证方案和定价模型。它通过提供一个统一的接口来简化 LLM 集成，抽象化了提供商特定的 SDK、认证方法和请求格式。\n\n**核心功能**\nLiteLLM 具有双模式架构，支持 Python SDK 模式和代理服务器模式。Python SDK 模式允许通过 `litellm.completion()` 等入口点直接使用 Python 库进行编程交互。代理服务器模式 (`litellm.proxy.proxy_server:app`) 是一个独立的 FastAPI HTTP AI 网关，提供多租户 LLM 访问、认证、预算、API 路由和管理功能。它还提供统一的响应格式 `ModelResponse`，包含 token 使用量和成本元数据。\n\n**技术亮点**\n该项目的一个技术亮点是其统一的 LLM 接口，它兼容 OpenAI 格式，并支持超过 100 种 LLM 模型。它还具备提供商检测和转换逻辑，能够自动适应不同提供商的输入和输出要求。代理服务器模式还集成了企业级功能，如多租户、支出控制、速率限制和合规策略。\n\n**适合谁用**\nLiteLLM 适合需要简化 LLM 集成、管理多个 LLM 提供商的开发者和企业。对于希望通过统一 API 访问各种 LLM 的开发者，可以使用其 Python SDK。对于需要多租户管理、成本控制、速率限制和集中式 LLM 访问的企业，其代理服务器模式提供了强大的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 103970,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "这是一个为AI代理提供结构化工程工作流的技能库，旨在提高AI在软件开发中的效率和质量。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI代理在执行软件工程任务时缺乏结构化流程、容易产生幻觉、难以保证输出质量和一致性的问题。通过提供预定义的“技能”（`SKILL.md`文件），每个技能都包含详细的步骤、验证门、反合理化表格和明确的红旗，确保AI代理能够遵循最佳实践，产出高质量的代码和文档。\n\n**核心功能**\n核心功能是提供25个结构化的“技能”，涵盖软件开发生命周期的各个阶段，包括定义、规划、构建、验证、审查和发布。每个技能都是一个工作流，指导AI代理完成特定任务，例如`spec-driven-development`用于编写产品需求文档，`test-driven-development`用于测试驱动开发，以及`code-review-and-quality`用于代码审查。项目还包含预配置的专家“角色”（personas），如`code-reviewer`和`security-auditor`，用于进行有针对性的审查。\n\n**技术亮点**\n技术亮点在于其“过程而非散文”的设计理念，技能是AI代理遵循的工作流，而非参考文档。每个技能都包含“反合理化”机制，以应对AI代理跳过步骤的常见借口。强制性的“验证”环节要求AI代理提供证据（如测试通过、构建输出），确保任务正确完成。此外，技能采用渐进式披露，仅在需要时加载支持性参考资料，以最小化token使用。\n\n**适合谁用**\n本项目适合希望提高AI辅助开发效率和质量的开发者、团队和AI代理工具提供商。它支持多种AI代理平台，如OpenCode、GitHub Copilot、Codex和Command Code。无论是新项目（绿地项目）还是现有代码库（棕地项目），都可以根据`Adoption Guide`（`docs/adoption-guide.md`）选择完整生命周期或增量式采用策略。",
+      "degraded": false
+    },
+    {
+      "id": "storytold/artcraft",
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "stars": 11395,
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "one_liner": "ArtCraft 是一个桌面 AI 创意工具，旨在为艺术家提供无与伦比的控制和精度，用于生成图像和视频。",
+      "detail_md": "**解决什么问题**\nArtCraft 旨在解决传统文本提示生成 AI 内容的局限性，为艺术家提供更直观、更具控制力的创作方式。  它通过提供桌面应用程序，避免了在浏览器中管理多个标签页的繁琐，并支持在 Windows、Mac 等多个平台运行。 \n\n**核心功能**\nArtCraft 的核心功能包括通过画布绘图或在 3D 空间中操作来创建图像和视频，就像玩视频游戏一样。  它还支持集成各种图像和视频模型，允许用户在一个地方使用所有模型，并可登录现有订阅。 \n\n**技术亮点**\n该项目的一个技术亮点是其作为桌面应用程序的实现，支持 Windows、Mac，并计划支持 Linux 和平板电脑，提供一流的用户体验。  此外，ArtCraft 是开源的，其桌面应用程序的代码和基础设施都在 GitHub 上公开，鼓励社区贡献。 \n\n**适合谁用**\nArtCraft 适合需要对 AI 生成内容有高度控制和精度的艺术家。  它也适合那些希望在一个统一的桌面环境中，利用各种 AI 模型进行创作的专业人士和爱好者。",
+      "degraded": false
+    },
+    {
+      "id": "Robbyant/lingbot-map",
+      "owner": "Robbyant",
+      "name": "lingbot-map",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "stars": 17685,
+      "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
+      "one_liner": "LingBot-Map是一个用于流式3D重建的几何上下文Transformer模型。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统3D重建方法在处理长序列数据时效率低下和漂移累积的问题。它通过引入几何上下文Transformer架构，实现了高效、稳定的流式3D重建。\n\n**核心功能**\nLingBot-Map的核心功能包括：从图像序列或视频文件中进行3D重建；支持两种推理模式：`streaming`（流式）和 `windowed`（窗口式），以适应不同长度的序列；提供实时点云可视化功能，并通过`viser`服务器进行交互式查看；支持天空遮罩以优化户外场景的重建效果。\n\n**技术亮点**\n该项目采用几何上下文Transformer架构，通过锚点上下文、姿态参考窗口和轨迹记忆，统一了坐标定位、密集几何线索和长距离漂移校正。它实现了高效的流式推理，利用分页KV缓存注意力机制，在长序列（超过10,000帧）上也能保持约20 FPS的稳定推理速度。此外，它还支持FlashInfer加速，并在FlashInfer不可用时回退到SDPA（PyTorch原生注意力）。\n\n**适合谁用**\nLingBot-Map适合需要对图像或视频序列进行高效、稳定3D重建的研究人员和开发者。特别是对于处理长序列数据、需要实时可视化以及对重建质量有较高要求的应用场景。",
+      "degraded": false
+    },
+    {
+      "id": "twostraws/SwiftUI-Agent-Skill",
+      "owner": "twostraws",
+      "name": "SwiftUI-Agent-Skill",
+      "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "stars": 5413,
+      "description": "SwiftUI agent skill for Claude Code, Codex, and other AI tools.",
+      "one_liner": "SwiftUI-Agent-Skill 是一个 AI 代理技能，用于审查 SwiftUI 代码，确保其符合最佳实践、现代 API 使用和常见陷阱。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 SwiftUI 代码质量、现代化和可维护性方面的问题。它通过自动化代码审查，帮助开发者确保代码使用现代 SwiftUI API (iOS 26+, Swift 6.2+)，遵循可访问性最佳实践，避免性能陷阱，并符合 Apple 的人机界面指南。它特别针对 AI 模型常犯的错误，如 VoiceOver 不可见按钮、使用废弃 API 和导致性能问题。\n\n**核心功能**\n该技能提供一个 9 步的代码审查流程，涵盖 API 使用、视图结构、数据流、导航、设计、可访问性、性能、Swift 实践和代码卫生等多个方面。它能生成结构化的审查报告，包含按文件组织的发现、问题行号、违反的规则名称以及修改前后的代码示例。用户可以通过明确命令、自然语言或隐式上下文触发审查。\n\n**技术亮点**\n该项目采用 Agent Skills 格式构建，可无缝集成到 Claude Code、Codex、Gemini、Cursor 等多种 AI 编码平台。它设计为 token 高效，专注于边缘情况、软弃用和 AI 模型常犯的错误，而非重复已知信息。技能的核心是一个协调器 (`SKILL.md`) 和九个领域特定的参考文件 (`references/*.md`)，共同构成专家知识库。\n\n**适合谁用**\n该技能适合 SwiftUI 开发者，特别是那些希望确保其代码符合最新 SwiftUI 最佳实践、提高代码质量、避免常见错误并优化性能的开发者。它也适用于使用 AI 编码工具的开发者，帮助他们弥补 AI 在 SwiftUI 代码生成方面可能存在的不足。",
+      "degraded": false
+    }
+  ]
+}
