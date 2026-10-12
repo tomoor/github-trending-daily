@@ -1,0 +1,94 @@
+{
+  "doc_token": "Ii8qdfGujouE8FxQhJHcgI9XnLf",
+  "doc_url": "https://my.feishu.cn/docx/Ii8qdfGujouE8FxQhJHcgI9XnLf",
+  "items": [
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 103376,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA 是一款本地 CLI + MCP 服务器，用于帮助 AI 智能体分析应用程序、二进制文件和运行时行为，从而理解软件工作原理并实现所需功能。",
+      "detail_md": "**解决什么问题** \nREA 旨在解决在没有源代码的情况下理解软件功能和行为的挑战。  它允许用户通过 AI 智能体或命令行界面检查应用程序，解释功能的工作方式，展示证据，并为项目实现类似功能。 \n\n**核心功能** \nREA 提供多种分析工具，包括原生二进制、JavaScript 与 Electron 应用、.NET 程序集和网站的分析。  核心功能包括反编译、理解软件行为和重建功能。  例如，它可以打开原生应用或可执行文件，恢复过程、伪代码、汇编等，并通过追踪调用者、被调用者、交叉引用和调用图来理解功能或算法。 \n\n**技术亮点** \nREA 专为智能体设计，  支持 CLI 和 MCP (Model Context Protocol) 接口，  允许在终端或智能体中使用相同的逆向工程能力。  它提供引导式设置，可以配置智能体、连接已有分析工具（如 Hopper 或 Ghidra），或在用户批准后安装 Hopper。  分析在本地运行，确保数据安全。 \n\n**适合谁用** \nREA 适合需要理解现有软件功能、重建特定行为或将洞察转化为代码的开发者和逆向工程师。  特别是那些使用 AI 编程助手（如 Claude Code, Cursor, Devin 等）的用户，可以通过 REA 扩展其分析能力。",
+      "degraded": false
+    },
+    {
+      "id": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "stars": 30050,
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "one_liner": "AnyPS5是一个将PlayStation 5原生可执行文件自动移植到Linux和Windows的工具，无需模拟。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决PlayStation 5原生可执行文件在Linux和Windows系统上运行的问题，通过自动静态移植，避免了CPU/GPU模拟或独立的运行时客户进程的需要。它通过将客户可执行文件转换为原生格式，并提供索尼系统模块（`PRX`库）的原生动态链接库等效项来实现这一点。\n\n**核心功能**\nAnyPS5的核心功能包括一个重链接器（`core/relinker`），负责将客户ELF可执行文件重写为原生Linux ELF或Windows PE二进制文件。它还包含`core/libs`目录下的索尼系统库（`PRX`目标）的重新实现，例如`libc`、`libkernel`和各种`libSce*`服务模块，这些模块将客户API调用直接桥接到原生操作系统和图形原语。此外，`core/shader`模块实现了重编译器，将客户AMD RDNA着色器二进制文件转换为中间表示（IR），并最终生成用于Vulkan的SPIR-V着色器。\n\n**技术亮点**\n该项目的技术亮点在于其独特的静态移植方法，不依赖于CPU/GPU模拟。它通过重链接器和原生动态链接库等效项实现了高效的跨平台运行。着色器重编译器能够将RDNA着色器转换为SPIR-V，支持Vulkan图形API。项目还支持SDL映射的游戏控制器以及键盘和鼠标控制。\n\n**适合谁用**\nAnyPS5适合希望在Linux和Windows系统上运行PlayStation 5原生游戏的开发者、研究人员和游戏爱好者。它也适用于那些对游戏互操作性、保存和兼容性感兴趣的用户。用户需要自行确保所使用的二进制文件符合适用法律和许可条款。",
+      "degraded": false
+    },
+    {
+      "id": "storytold/artcraft",
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "stars": 17812,
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "one_liner": "ArtCraft 是一个面向艺术家的 AI 创意工具，提供桌面应用和营销网站，支持图像和视频生成，并强调开源和多模型兼容性。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统文本提示生成图像和视频的局限性，为艺术家提供更直观、更具控制力的创作方式。 它通过桌面应用提供跨平台支持，避免了网页端工具的繁琐，并整合了多种图像和视频模型，解决艺术家在不同平台间切换的痛点。\n\n**核心功能**\n核心功能包括通过易用的 AI 工具创建图像和视频，支持在画布上绘画或在 3D 空间中操作，如同玩视频游戏一般。 它还提供桌面应用程序，支持 Windows、Mac，并计划支持 Linux 和平板设备。 此外，项目强调开源特性，并允许用户在一个地方使用所有图像和视频模型，甚至可以登录现有订阅。\n\n**技术亮点**\n技术亮点在于其桌面应用程序的跨平台兼容性，以及将多种 AI 图像和视频模型整合到一个统一的创作环境中。 项目采用开源模式，鼓励社区贡献，提升了透明度和可扩展性。 营销网站使用 React 和 Vite 构建，实现了用户获取、产品信息展示、认证和订阅支付流程。\n\n**适合谁用**\n该项目特别适合需要精确控制和高质量输出的艺术家和电影制作人。 无论是希望摆脱传统文本提示限制，还是寻求一个集成多种 AI 模型、跨平台工作的创意工具，ArtCraft 都能满足他们的需求。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 50302,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "本项目是一个为大型语言模型（LLM）设计的技能，用于生成高质量、符合品牌风格的编辑级图表，并支持多种图表类型和导入格式。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决LLM在生成图表时，输出结果通常是通用、风格不统一的问题。它通过提供一套设计系统和验证机制，确保生成的图表具有编辑质量，并能快速适应用户品牌风格。\n\n**核心功能**\n核心功能包括：\n*   **品牌定制**：通过分析用户网站自动提取品牌颜色和字体，并应用于图表。\n*   **多类型图表生成**：支持42种视觉图表类型，如架构图、流程图、序列图等。\n*   **图表导入与重绘**：能够导入`draw.io`、`Mermaid`或`Excalidraw`格式的图表，并按照本设计系统的风格进行重绘。\n*   **可选动画**：支持为图表添加可选的、可访问的动画效果，以增强解释性。\n\n**技术亮点**\n*   **语义模式**：将系统行为、状态等概念与视觉布局分离，允许重用现有视觉类型来描述不同的行为上下文。\n*   **四项调节**：通过“格式”、“尺寸”、“细节级别”和“受众”四个参数精细控制图表输出，以适应不同场景需求。\n*   **严格的验证门禁**：集成了一系列自动化质量检查，包括皮肤检查、可访问性、几何验证和渲染画板检查，确保图表质量和一致性。\n\n**适合谁用**\n该项目适合需要生成高质量、品牌一致性图表的LLM开发者、设计师以及任何希望通过自动化工具快速创建专业图表的用户。它特别适用于那些对图表视觉风格和可读性有高要求的场景，例如技术文档、博客文章和演示文稿。",
+      "degraded": false
+    },
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "stars": 51634,
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "one_liner": "God's Eye View 是一个高性能、浏览器端的空间智能平台，将实时公共数据聚合到逼真的 3D 地球上，并支持语音控制。",
+      "detail_md": "## 解决什么问题\n该项目旨在将分散的公共信号（如航班、船舶、卫星、地震、交通和公共闭路电视）整合到一个统一的、交互式的控制台中，使用户能够从全球视角切换到单个目标（如飞机、船舶或街道）的详细视图，从而实现对世界的实时追踪和探索。 \n\n## 核心功能\n核心功能包括驾驶舱视角、目标追踪、语音白板、3D 机库、多种传感器模式（如夜视、热成像）、全局态势感知和电影级场景导演等。  它聚合了来自 OpenSky、AISStream、CelesTrak、USGS、NASA FIRMS 等多个数据源的实时数据。 \n\n## 技术亮点\n项目采用“香草”架构哲学，优先使用直接的 DOM 和 WebGL 操作，而非重型框架，以保持高帧率和低延迟。  它基于 CesiumJS 构建，支持 Google Photorealistic 3D Tiles，并使用 Vite 进行开发。  敏感的外部 API 交互通过 Vite 代理中间件处理，以防止凭据暴露。 \n\n## 适合谁用\n该项目适合对空间智能、地理空间数据可视化、开源情报 (OSINT) 感兴趣的开发者、研究人员和普通用户。  它提供了一个快速、可修改的基础，用于探索和学习公共数据，并鼓励用户添加自己的数据源和功能。",
+      "degraded": false
+    },
+    {
+      "id": "pytorch/pytorch",
+      "owner": "pytorch",
+      "name": "pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "stars": 104473,
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "one_liner": "PyTorch 是一个开源机器学习框架，提供强大的GPU加速，用于构建和训练深度神经网络。",
+      "detail_md": "**解决什么问题**\nPyTorch 旨在解决机器学习领域中模型开发和训练的复杂性问题，特别是对于需要高性能计算（如GPU加速）的深度学习任务。  它提供了一个灵活的平台，支持研究人员和开发者快速迭代和实验。 \n\n**核心功能**\nPyTorch 的核心功能包括张量操作库（ATen）、 <cite repo=\"pytorch/pytorch\" path=\"pytorch/pytorch\" start=\"1.1\" end=\"1.1\" /> 动态神经网络构建、强大的GPU加速支持、以及丰富的Python前端API。 <cite repo=\"pytorch/pytorch\" path=\"pytorch/pytorch\" start=\"1.1\" end=\"1.1\" /> 它还提供了分布式训练、自动微分和各种优化器。 <cite repo=\"pytorch/pytorch\" path=\"pytorch/pytorch\" start=\"1.1\" end=\"1.1\" />\n\n**技术亮点**\nPyTorch 的技术亮点在于其混合构建系统，结合了 `scikit-build-core` (PEP 517)、CMake 和 Ninja 进行并行构建。 <cite repo=\"pytorch/pytorch\" path=\"pytorch/pytorch\" start=\"1.1\" end=\"1.1\" /> 它支持多种硬件后端，如CUDA、ROCm和XPU。 <cite repo=\"pytorch/pytorch\" path=\"pytorch/pytorch\" start=\"1.1\" end=\"1.1\" /> `OpInfo` 测试框架确保了数据驱动的运算符验证，保证了数值正确性和类型推广规则。 <cite repo=\"pytorch/pytorch\" path=\"pytorch/pytorch\" start=\"1.1\" end=\"1.1\" />\n\n**适合谁用**\nPyTorch 适合机器学习研究人员、深度学习工程师以及需要构建、训练和部署高性能AI模型的开发者。  无论是学术研究还是工业应用，PyTorch 都能提供强大的支持。",
+      "degraded": false
+    },
+    {
+      "id": "lyogavin/airllm",
+      "owner": "lyogavin",
+      "name": "airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "stars": 36461,
+      "description": "AirLLM 70B inference with single 4GB GPU",
+      "one_liner": "AirLLM 是一个优化大型语言模型推理内存的框架，使 70B+ 模型能在消费级硬件上运行，甚至支持 405B Llama3.1 在 8GB 显存上运行，无需牺牲性能。",
+      "detail_md": "**解决什么问题**\nAirLLM 旨在解决大型语言模型（LLM）在消费级硬件上运行时的内存限制问题。 传统的 LLM 需要大量 GPU 显存，使得普通用户难以部署和使用。 该项目通过创新的内存优化技术，使得 70B 模型可以在 4GB GPU 上运行，甚至 405B Llama3.1 模型也能在 8GB 显存上运行。\n\n**核心功能**\nAirLLM 的核心功能包括层级分片（Layer Sharding），即将模型分解为独立层并按需加载到内存中。 它还支持层预取（Layer Prefetching），通过重叠计算和 I/O 操作来提高推理速度。 此外，项目提供了模型压缩功能，通过 4 位或 8 位块级量化，可将推理速度提升高达 3 倍，同时保持高精度。 `AutoModel` 是用户的主要入口点，能够自动检测模型架构并实例化相应的 AirLLM 类。\n\n**技术亮点**\nAirLLM 的技术亮点在于其独特的内存管理方法，通过将模型层序列化加载和执行，显著减少了 VRAM 占用。 模型压缩采用仅对权重进行量化的方式，避免了传统量化对精度的影响，主要解决磁盘加载瓶颈。 项目还支持多种平台，包括 Linux、macOS（通过 MLX）和 CPU 推理。\n\n**适合谁用**\nAirLLM 适合希望在有限硬件资源（如消费级 GPU）上运行大型语言模型的研究人员、开发者和个人用户。 对于需要部署大型 LLM 但预算有限，或希望在本地设备上进行推理的用户，AirLLM 提供了一个高效且经济的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "chrislgarry/Apollo-11",
+      "owner": "chrislgarry",
+      "name": "Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "stars": 74233,
+      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "one_liner": "本项目是阿波罗11号制导计算机（AGC）指令模块和登月模块原始源代码的数字化存档。",
+      "detail_md": "**解决什么问题**\n本项目旨在保存和提供阿波罗11号任务中指令模块（`Comanche055`）和登月模块（`Luminary099`）的原始制导计算机源代码，解决历史代码的数字化和可访问性问题。   \n\n**核心功能**\n核心功能是提供阿波罗11号制导计算机的原始源代码，包括`Comanche055`和`Luminary099`两个版本。 项目还提供了多语言翻译的README文件，方便全球用户理解项目内容。 \n\n**技术亮点**\n技术亮点在于其对原始代码的忠实数字化，由Virtual AGC和MIT博物馆的专家完成。 项目使用`yaYUL`汇编器，并严格遵循原始文档的格式和内容，甚至保留了历史错误，以确保历史准确性。  \n\n**适合谁用**\n本项目适合对航天历史、软件工程、计算机科学感兴趣的研究人员、学生、爱好者以及任何希望了解阿波罗11号任务背后技术细节的人。",
+      "degraded": false
+    }
+  ]
+}
