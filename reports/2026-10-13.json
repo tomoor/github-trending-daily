@@ -1,0 +1,105 @@
+{
+  "doc_token": "FMU2daaAAooBPoxR5TRcge76nCx",
+  "doc_url": "https://my.feishu.cn/docx/FMU2daaAAooBPoxR5TRcge76nCx",
+  "items": [
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 144805,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA：一个通过智能体和命令行工具分析软件行为的逆向工程平台。",
+      "detail_md": "**解决什么问题**\nREA 旨在解决在没有源代码的情况下理解软件功能和行为的挑战。它允许用户通过编程智能体或命令行工具调查应用程序，解释其工作原理，并根据证据实现类似功能。\n\n**核心功能**\nREA 提供多种分析工具，包括对原生二进制文件、JavaScript/Electron 应用程序、.NET 程序集和网站的分析。它支持反编译、理解控制流和重建功能。用户可以通过智能体或终端使用这些工具，分析在本地运行，并提供证据和限制说明。\n\n**技术亮点**\nREA 的主要技术亮点包括：\n*   **为智能体设计**：允许智能体直接询问应用行为，进行调查而非猜测。\n*   **CLI 与 MCP**：在终端或智能体中使用同一套逆向工程能力。MCP (Model Context Protocol) 是 REA 用于向 AI 智能体公开其工具的标准协议。\n*   **本地运行**：分析在本地系统上运行，不上传二进制文件到托管分析服务。\n*   **广泛的工具支持**：集成了 Hopper、Ghidra、JADX、Binwalk/Unblob 等多种分析工具。\n\n**适合谁用**\nREA 适合需要理解现有软件功能、重建应用行为、分析安全逻辑或为自己的项目实现类似功能的开发者和逆向工程师。它特别适用于希望利用 AI 编程助手进行软件分析的用户。",
+      "degraded": false
+    },
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "stars": 53156,
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "one_liner": "God's Eye View 是一个高性能、浏览器端的空间智能平台，将实时公共数据聚合到逼真的 3D 地球上，并支持语音控制。",
+      "detail_md": "## 解决什么问题\n该项目旨在将分散的实时公共数据（如 ADS-B 航班遥测、AIS 海事信标、轨道元素、地震、交通和公共闭路电视馈送）整合到一个统一的、交互式的控制台中，使用户能够在一个逼真的 3D 地球上探索世界。  它解决了传统数据源分散、难以整合和可视化的问题，提供了一个直观的界面来理解全球实时动态。 \n\n## 核心功能\n*   **实时数据聚合**：聚合来自 OpenSky Network 的实时航班数据、AISStream 的实时船舶数据、CelesTrak 的卫星数据、USGS 的地震数据、TomTom 的交通数据  和公共 CCTV 摄像机数据。\n*   **逼真 3D 地球**：基于 CesiumJS 构建，支持 Google Photorealistic 3D Tiles、Esri World Imagery 等多种地图源，提供沉浸式可视化体验。  \n*   **语音控制**：通过 OpenAI Realtime API 实现免提语音控制，用户可以使用自然语言与地球进行交互，执行导航、查询和操作图层等任务。  \n*   **多种传感器视图**：提供 CRT、NVG、FLIR/热成像、Noir、Snow 等多种视觉样式，模拟不同传感器下的地球视图。 \n*   **交互式跟踪与分析**：支持跟踪实时航班、船舶和卫星，提供驾驶舱视图、250 公里范围内的联系人列表、点击跟踪任何实体并显示元数据等功能。 \n\n## 技术亮点\n*   **“香草”架构**：优先使用直接 DOM 和 WebGL 操作，而非重型框架，以保持高帧率和低延迟的复杂地理空间可视化。 \n*   **信任服务器/不信任客户端模型**：前端浏览器处理 3D 渲染，而所有敏感的外部 API 交互（如 OpenAI、OpenSky）通过 Vite 代理中间件进行，防止凭据暴露。 \n*   **CesiumJS 和 WebGL**：利用 CesiumJS 和 WebGL 进行高性能 3D 渲染。 \n*   **模块化数据层**：`src/data/` 目录下的模块化馈送处理器管理从数据摄取到 WebGL 渲染的实体生命周期。 \n*   **渲染控制器**：`renderGovernor.js` 动态切换 Cesium 的渲染模式以节省主机资源。 \n*   **服务器端凭据管理**：所有涉及私钥的 API 都通过强化的服务器端代理进行，确保安全性。 \n\n## 适合谁用\n*   **地理空间情报 (GEOINT) 和开源情报 (OSINT) 爱好者**：对实时全球数据可视化和分析感兴趣的用户。 \n*   **开发者和研究人员**：希望探索、扩展或集成自己的数据源到 3D 地球平台的用户，因为代码是开源且可检查的。  \n*   **教育和演示**：用于展示全球实时动态、航空、海事和空间活动。 \n*   **对公共数据可视化感兴趣的个人**：无需 API 密钥即可开始使用，提供了一个低门槛的体验。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 27054,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP 插件，通过沙盒执行、知识库和会话连续性，为 AI 编码助手节省高达 99% 的上下文窗口，并支持 17 种 AI 平台。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口溢出和状态丢失的问题。每次工具调用都会将大量原始数据（如 Playwright 快照、GitHub 问题、访问日志）倾倒到上下文窗口中，导致 40% 的上下文被工具输出而非实际代码和对话占据。当上下文窗口填满时，代理会通过丢弃旧消息来压缩对话，从而丢失工作记忆和会话状态。\n\n**核心功能**\n`context-mode` 通过以下三种机制解决上述问题：\n1.  **上下文节省**：通过沙盒工具将原始数据排除在上下文窗口之外，实现高达 98% 的上下文减少。例如，`ctx_execute` 工具可以在沙盒中运行 12 种语言的代码，只有标准输出进入上下文，将 56 KB 的数据减少到 299 B。\n2.  **会话连续性**：通过 SQLite 跟踪文件编辑、git 操作、任务和用户决策，并在上下文压缩时构建一个约 2KB 的 XML 恢复快照，以恢复代理的状态。\n3.  **知识库**：使用 SQLite FTS5 索引内容，并通过 BM25 排名进行搜索。`ctx_index` 工具将 Markdown 内容分块并存储，`ctx_search` 工具则提供三层搜索（Porter 词干提取、三元子字符串、模糊匹配）以检索相关内容片段。\n\n**技术亮点**\n1.  **沙盒执行**：`PolyglotExecutor` 为 12 种语言（包括 JavaScript、Python、Rust、Go 等）生成隔离的子进程，确保只有结果进入上下文，实现 99% 的上下文节省。\n2.  **FTS5 知识库**：利用 SQLite FTS5 提供快速文本搜索和 BM25 排名，支持多层搜索回退（Porter 词干提取、三元子字符串、模糊匹配）和 RRF 融合，实现 99% 的上下文节省。\n3.  **会话持久化**：`SessionDB` 将事件捕获到持久存储中，并通过快照恢复状态，防止 100% 的状态丢失。\n4.  **广泛的平台支持**：支持 Claude Code、Gemini CLI、Cursor 等 17 种 AI 平台，通过不同的 Hook 范式进行集成。\n\n**适合谁用**\n1.  **AI 编码助手开发者**：希望优化 AI 代理的上下文使用，提高效率和准确性。\n2.  **工程组织**：希望通过 `Context Mode Platform` 获得团队 AI 工具使用情况的工程信号，例如生产力率、重试浪费等，并支持 CTO、EM、CISO 等不同角色。\n3.  **注重隐私的用户**：该项目完全在本地运行，不收集遥测数据、不进行云同步、不跟踪使用情况，确保代码、提示和会话数据的隐私性。",
+      "degraded": false
+    },
+    {
+      "id": "storytold/artcraft",
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "stars": 20869,
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "one_liner": "ArtCraft 是一款桌面 AI 创意工具，帮助艺术家通过直观的 2D/3D 界面创作图像和视频。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统文本提示生成 AI 图像和视频的局限性，为艺术家提供更直观、更具控制力的创作方式。它通过桌面应用程序的形式，避免了浏览器多标签页的繁琐，提供更流畅的创作体验。\n\n**核心功能**\n核心功能包括通过 2D 画布或 3D 空间进行图像和视频创作。它支持多种 AI 模型，并允许用户整合现有订阅。此外，项目还提供用户注册、登录、订阅管理和桌面应用下载等功能。\n\n**技术亮点**\n该项目采用 React 18、Vite、TypeScript 和 Tailwind CSS 构建前端营销网站。桌面应用代码和基础设施开源，支持 Windows、Mac，并计划支持 Linux 和平板设备。\n\n**适合谁用**\nArtCraft 适合需要精确控制和高效工作流程的艺术家、设计师和电影制作人。它也适合希望参与开源项目、共同构建创意工具的开发者和社区成员。",
+      "degraded": false
+    },
+    {
+      "id": "open-webui/open-webui",
+      "owner": "open-webui",
+      "name": "open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "stars": 154714,
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "one_liner": "Open WebUI 是一个用于定制和扩展 AI 能力的中央管理平台，提供统一界面管理模型、知识库、提示词、工具和技能，以构建复杂的 AI 工作流。",
+      "detail_md": "**解决什么问题**\nOpen WebUI 旨在解决用户在管理和定制 AI 模型及相关资源时面临的复杂性问题。它提供了一个统一的界面，简化了对 AI 模型、知识库、提示词、工具、函数和技能的创建、编辑、管理和共享，从而帮助用户构建和组织复杂的 AI 工作流。\n\n**核心功能**\n该项目提供模型管理、知识库管理、提示词和工具管理以及技能系统等核心功能。用户可以通过模型编辑器创建和编辑自定义模型配置，控制模型能力和访问权限。知识库支持文档集合的层级组织、文件上传处理和导出共享。提示词库用于管理可重用的系统提示和命令模板，支持导入导出、标签和访问控制。工具和函数允许通过 Python 扩展自定义功能。技能系统则用于创建、共享和管理可重用的 AI 技能定义。\n\n**技术亮点**\nOpen WebUI 采用模块化架构，前端组件（如 `Models.svelte` ）通过 Svelte 框架实现，并与后端 API 进行连接，支持 CRUD 操作、导入/导出、过滤和用户访问控制。它还集成了国际化（i18n）系统，支持超过 30 种语言，通过 JSON 翻译文件和动态加载实现多语言体验 <cite repo=\"open-webui/open-webui\" path=\"wiki_page\" start=\"14.1\" end=\"14.1\" />。此外，项目还包含 RAG（检索增强生成）系统，通过嵌入函数和重排函数增强 AI 响应。\n\n**适合谁用**\nOpen WebUI 适合需要定制和扩展 AI 能力的个人用户和企业。无论是希望管理自己的 AI 模型、构建知识库、创建自定义提示词，还是开发和共享 AI 技能，该平台都能提供全面的支持。对于开发者而言，其模块化设计和清晰的 API 接口也便于进行二次开发和集成。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 52183,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "本项目是一个为大型语言模型（LLM）设计的技能，用于生成高质量、品牌定制化的图表，支持多种图表类型和导入导出功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决LLM在生成图表时，输出图表样式通用、不符合品牌规范的问题。它通过提供一套设计系统和自动化品牌适配流程，确保生成的图表具有编辑级质量，并能快速融入用户品牌风格。此外，它还解决了现有图表工具（如draw.io、Mermaid、Excalidraw）生成的图表在不同场景下需要重新调整样式和细节的问题，支持将这些来源的图表重新绘制成符合设计系统规范的输出。\n\n**核心功能**\n1.  **品牌定制化图表生成**：能够根据用户网站自动提取品牌颜色和字体，并应用于生成的图表，确保图表与品牌风格一致。\n2.  **多达42种图表类型支持**：提供架构图、流程图、序列图、状态机、ER图、时间线、泳道图等多种视觉类型，满足不同场景的图表需求。\n3.  **图表导入与重新绘制**：支持从draw.io、Mermaid和Excalidraw等工具导入现有图表，并根据设计系统重新绘制，而非简单转换，以适应目标输出格式和细节级别。\n4.  **语义模式与可选动画**：引入语义模式来描述系统行为，并提供可选的动画功能，以更清晰地解释图表中的有序变化，同时保持静态输出为默认。\n\n**技术亮点**\n1.  **设计系统驱动**：采用语义化Token（如`paper`、`ink`、`accent`）来定义颜色和样式，使得整个系统可以通过修改少量配置进行重新换肤。\n2.  **无头浏览器品牌提取**：利用`agent-browser`进行“无头抓取”（Headless Fetch），自动从目标网站提取HTML和CSS，以识别品牌标识。\n3.  **WCAG AA对比度验证**：在应用品牌颜色前，自动进行WCAG AA对比度检查，确保`ink`和`paper`颜色满足可访问性标准。\n4.  **自包含HTML输出**：生成的图表是自包含的HTML文件，内联SVG和CSS，默认无JavaScript，可在任何现代浏览器中离线正确渲染。\n\n**适合谁用**\n1.  **内容创作者和博主**：需要高质量、品牌一致的图表来增强文章或博客内容的视觉吸引力。\n2.  **技术文档工程师**：希望快速生成清晰、专业的架构图、流程图等，并能轻松与公司品牌风格保持一致。\n3.  **LLM开发者**：希望为Claude Code、Codex、Factory Droid、Pi等LLM平台提供一个能够生成定制化图表的技能。\n4.  **设计师和品牌团队**：希望确保所有输出的图表都严格遵循品牌指南，无需手动调整。",
+      "degraded": false
+    },
+    {
+      "id": "lyogavin/airllm",
+      "owner": "lyogavin",
+      "name": "airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "stars": 37281,
+      "description": "AirLLM 70B inference with single 4GB GPU",
+      "one_liner": "AirLLM通过层分片和量化技术，让大型语言模型能在消费级硬件上高效推理，降低大模型使用门槛。",
+      "detail_md": "**解决什么问题**\nAirLLM旨在解决大型语言模型（LLM）推理对硬件资源要求过高的问题，使得70B模型可以在4GB GPU上运行，甚至405B的Llama3.1模型也能在8GB显存上运行，无需进行量化、蒸馏或剪枝。  这极大地降低了LLM的部署成本和硬件门槛。 \n\n**核心功能**\n项目核心功能包括模型层分片、块级量化和层预取。    `AutoModel`作为主要入口，能够自动检测模型架构并实例化相应的AirLLM类。  `AirLLMBaseModel`处理分层前向传播、内存清理和磁盘I/O管理。 \n\n**技术亮点**\nAirLLM采用层分片技术，将模型分解为独立层并存储为磁盘上的分片，推理时按需加载和卸载，以节省VRAM。  通过4位或8位块级量化（`compress_layer_state_dict`和`uncompress_layer_state_dict`），减少模型权重大小，优化磁盘到VRAM的加载瓶颈。  层预取功能通过CUDA流重叠当前层执行与下一层加载，提升推理速度。 \n\n**适合谁用**\nAirLLM适合希望在消费级硬件上运行大型语言模型，或在资源受限环境下进行LLM推理的开发者和研究人员。  它支持多种主流模型，如Llama、ChatGLM、QWen等，并提供MacOS支持，使得更多用户能够体验大模型推理。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/BitNet",
+      "owner": "microsoft",
+      "name": "BitNet",
+      "url": "https://github.com/microsoft/BitNet",
+      "stars": 40814,
+      "description": "Official inference framework for 1-bit LLMs",
+      "one_liner": "`bitnet.cpp` 是一个为 1-bit 大语言模型（LLMs）提供快速、无损推理的官方框架，支持 CPU 和 GPU，显著提升了边缘设备的 LLM 运行效率和能效。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决 1-bit LLMs 在 CPU 和 GPU 上推理效率低、能耗高的问题。 通过提供高度优化的内核，`bitnet.cpp` 显著提升了 1-bit LLMs 的推理速度，并大幅降低了能耗，使得在本地设备上运行大型 LLMs 成为可能。\n\n**核心功能**\n`bitnet.cpp` 的核心功能包括为 1-bit LLMs 提供优化的推理框架。 它支持多种 1-bit LLM 模型，如 BitNet b1.58，并在 CPU 上实现了 1.37x 至 6.17x 的速度提升，同时能耗降低 55.4% 至 82.2%。 最新优化还引入了并行内核实现、可配置的平铺和嵌入量化，进一步提升了 1.15x 至 2.1x 的速度。\n\n**技术亮点**\n技术亮点包括：专为 1-bit LLMs 设计的优化内核，支持 ARM 和 x86 CPU 架构。 实现了权重与激活并行计算、原生 I2_S GEMM/GEMV 支持、可配置的平铺与并行度以及嵌入层量化（Q6_K 格式）。 这些优化使得在单 CPU 上运行 100B BitNet b1.58 模型达到每秒 5-7 个 token 的速度。\n\n**适合谁用**\n本项目适合希望在 CPU 或 GPU 上高效运行 1-bit LLMs 的开发者和研究人员。 特别是那些关注边缘设备、本地部署 LLMs 以及对推理速度和能耗有严格要求的用户。 它也适用于希望探索和开发 1-bit LLMs 的社区，以推动其在大规模应用中的发展。",
+      "degraded": false
+    },
+    {
+      "id": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "stars": 58704,
+      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "one_liner": "一个高性能、轻量级的本地代理，连接编码智能体与多种AI提供商，支持免费和付费模型，并提供消息集成。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决编码智能体（如Claude Code、Codex等）与多样化AI提供商（包括OpenAI兼容和原生AI提供商）之间的连接问题。它允许开发者利用免费层级或付费模型，每月提供超过13亿个token，从而降低使用成本并提高灵活性。此外，它还通过自动模型回退和请求优化，确保在提供商中断时仍能继续编码。\n\n**核心功能**\n核心功能包括作为HTTP代理，处理Anthropic Messages和OpenAI Responses流量。它还提供CLI启动器，将编码智能体指向本地代理。可选的消息桥接功能允许通过Discord或Telegram将聊天消息转换为托管的智能体CLI会话，并支持语音转代码。项目还包含一个本地管理UI，用于配置提供商、模型路由和认证。\n\n**技术亮点**\n该项目采用FastAPI构建，优化了低延迟流式传输和高可靠性。它通过模型路由器 (`ModelRouter`) 和提供商执行器 (`ProviderExecutor`) 实现请求的智能路由和执行。技术亮点还包括协议中立的逻辑 (`core` 包)、多种提供商适配器 (`providers` 包)，以及严格的包边界和依赖策略，确保可维护性。\n\n**适合谁用**\n该项目适合需要使用多种AI提供商（包括免费和付费）的开发者，特别是那些使用Claude Code、Codex、Pi等编码智能体的用户。它也适用于希望通过Discord或Telegram远程管理编码智能体，或利用语音转代码功能的团队。对于寻求成本效益、高可用性和灵活模型选择的AI应用开发者来说，这是一个理想的解决方案。",
+      "degraded": false
+    }
+  ]
+}
