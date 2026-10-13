@@ -1,0 +1,105 @@
+{
+  "doc_token": "QscOd7P8xo3FgVxlpXRcgajwnte",
+  "doc_url": "https://my.feishu.cn/docx/QscOd7P8xo3FgVxlpXRcgajwnte",
+  "items": [
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 196336,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA 是一款强大的逆向工程工具，能帮助智能体和开发者分析软件行为和二进制文件。",
+      "detail_md": "### 解决什么问题\nREA 旨在解决在没有源代码的情况下理解软件功能和行为的挑战。它允许用户通过智能体或命令行界面检查应用程序、解释功能工作方式、展示证据，并为自己的项目实现类似功能。\n\n### 核心功能\nREA 提供对原生二进制文件、JavaScript/Electron 应用程序、.NET 程序集和网站的分析工具。它支持引导式设置，可以配置智能体、连接现有的分析工具（如 Hopper 或 Ghidra），甚至在用户批准后安装 Hopper。核心功能包括二进制文件的打开与识别、搜索字符串和过程、连接线索到可执行代码、重建控制流以及反编译相关程序。\n\n### 技术亮点\nREA 的技术亮点在于其为智能体设计，允许直接询问应用行为，并支持 CLI 和 MCP (Model Context Protocol) 接口，使得智能体和终端可以使用同一套逆向工程能力。分析在本地运行，确保数据隐私和安全。它还支持多种编程智能体，如 Claude Code、Devin 等，并通过 `npx rea-agents setup` 命令进行快速设置。\n\n### 适合谁用\nREA 适合需要理解软件内部工作原理的开发者、逆向工程师和安全研究人员。特别是那些希望利用 AI 编程智能体来辅助逆向工程任务，或者需要在没有源代码的情况下重建功能的用户。它也适用于需要分析不同平台（如 macOS、Linux、Windows）和技术栈（如原生二进制、JavaScript、.NET）应用程序的用户。",
+      "degraded": false
+    },
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "stars": 54859,
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "one_liner": "这是一个高性能、浏览器端的空间智能平台，将实时公共数据聚合到逼真的3D地球上，并支持语音控制。",
+      "detail_md": "**解决什么问题** \n该项目旨在将分散的公共数据信号（如航班、船舶、卫星、地震、交通和公共摄像头）整合到一个可交互的3D地球上，使用户能够实时追踪全球动态，并从宏观视角切换到特定目标，从而提供统一的空间情报视图。 \n\n**核心功能** \n核心功能包括驾驶舱视角、目标联系人列表、点击追踪、语音白板标注、3D机库模型、多种视觉传感器模式（如夜视、热成像）、检测叠加层、战术HUD、全球情境视图、场景导演以及分享链接等。  它聚合了十余种数据层，包括实时航班、船舶、卫星、地震、交通、CCTV、电台、共享单车、活跃火灾和火箭发射等。 \n\n**技术亮点** \n项目采用“香草”架构哲学，优先使用直接的DOM和WebGL操作，而非重型框架，以确保复杂地理空间可视化的高帧率和低延迟。  它基于CesiumJS和Vite构建，并利用Google Photorealistic 3D Tiles和OpenAI实时API实现语音控制。  敏感的API交互通过Vite代理中间件在服务器端处理，以防止客户端凭据泄露。 \n\n**适合谁用** \n该项目适合对地理空间情报、开源情报（OSINT）感兴趣的开发者、研究人员以及任何希望探索和理解全球实时数据的人。  它提供了一个可检查和可扩展的代码库，鼓励用户添加新的数据层、视觉样式或语音控制功能。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 62141,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的本地语音克隆和处理工具，支持多语言配音、声音设计和有声书制作。",
+      "detail_md": "### 解决什么问题\nVoiceStudio 旨在解决用户在语音克隆、声音设计、视频配音、转录和有声书制作方面的需求，特别是那些需要本地运行、注重隐私和数据安全的用户。它提供了一个无需依赖云服务即可进行高级语音处理的解决方案。\n\n### 核心功能\n该项目提供声音克隆、声音设计、视频配音、转录和有声书制作等核心功能。用户可以克隆现有声音，根据描述设计新声音，将视频翻译并配音成多种语言，将音频或视频转录为可编辑文本，以及将长脚本制作成有声读物。\n\n### 技术亮点\nVoiceStudio 的主要技术亮点在于其完全本地运行的能力，确保用户数据的隐私和安全。它支持约 21 种语言的国际化，通过嵌套的 JSON 文件结构管理多语言翻译。项目还包含语言一致性测试（Locale Parity Ratchet Test）和防止硬编码 CJK 字符的机制，以维护翻译质量。\n\n### 适合谁用\nVoiceStudio 适合需要进行语音克隆、声音设计、视频配音、转录和有声书制作的创作者和专业人士。特别是那些关注数据隐私、希望在本地环境中处理敏感语音数据，以及需要多语言支持的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 27948,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP 插件和平台，旨在优化 AI 编码助手的上下文窗口使用，提高效率并降低成本。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口被工具输出数据“淹没”和上下文窗口压缩时状态丢失的问题。 例如，一个 Playwright 快照可能占用 56 KB，GitHub issue 占用 59 KB，导致 40% 的上下文窗口被工具输出而非实际代码和对话占据。 当上下文窗口满时，旧消息被丢弃，导致工作记忆（如正在编辑的文件、进行中的任务）丢失。 \n\n**核心功能**\n`context-mode` 通过三大支柱解决这些问题：沙盒执行、基于 FTS5 的知识管理和会话连续性。 它通过 `ctx_execute` 等工具在沙盒中执行代码，仅将结果而非原始数据送入上下文，实现高达 99% 的上下文窗口节省。  `ContentStore` 使用 SQLite FTS5 索引内容，并通过 BM25 排名进行高效检索。  `SessionDB` 捕获事件并构建快照，以在上下文压缩时恢复会话状态。 \n\n**技术亮点**\n该项目采用 TypeScript 实现 MCP 服务器，支持 17 种 AI 平台。 其 `PolyglotExecutor` 支持 12 种编程语言的沙盒执行。 知识库利用 SQLite FTS5 提供快速全文搜索，并结合 Porter 词干提取、Trigram 子字符串和模糊匹配等高级搜索功能。 会话连续性通过将文件编辑、git 操作等事件存储在 SQLite 中，并在需要时生成 2KB 的 XML 恢复快照来实现。 \n\n**适合谁用**\n`context-mode` 适合使用 AI 编码助手的开发者，帮助他们节省上下文窗口，提高开发效率。 对于工程组织，Context Mode Platform 提供了 Insight 解决方案，通过分析结构化事件（非源代码）来提供工程信号，帮助 CTO、EM、CISO 等角色了解 AI 投资回报、团队阻塞情况和合规审计。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 53695,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "本项目是一个代理技能，能为LLM生成高质量、品牌定制的编辑级图表，输出为自包含的HTML文件。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）在生成图表时，输出结果通常是通用且缺乏品牌风格的问题。它通过提供一套指令和参考材料，使LLM能够生成高质量、符合特定品牌风格的SVG图表。\n\n**核心功能**\n核心功能包括：支持42种不同的图表类型，例如架构图、流程图、序列图等；能够从网站提取品牌颜色和字体，并自动应用到图表中；支持从`draw.io`、`Mermaid`或`Excalidraw`文件导入并重新绘制图表；提供可选的动画效果以增强解释性。\n\n**技术亮点**\n技术亮点包括：采用语义模式来描述系统行为，独立于视觉布局；严格的设计系统，包括单一强调色、三种字体家族、无阴影等规则；自动进行WCAG AA对比度检查，确保图表可访问性；输出为自包含的HTML文件，无需构建步骤、JavaScript或外部图像依赖。\n\n**适合谁用**\n本项目适合需要为LLM（如Claude Code, Codex, Factory Droid, Pi）定制高质量、品牌化图表的用户。特别是那些希望图表与自身品牌风格保持一致，并能从现有图表工具导入进行重新绘制的用户。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/skills",
+      "owner": "vercel-labs",
+      "name": "skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "stars": 34274,
+      "description": "The open agent skills tool - npx skills",
+      "one_liner": "`skills` CLI 是一个用于管理 AI 代理技能的包管理器，旨在扩展 AI 编码代理的能力并促进技能共享。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码代理能力扩展和技能共享的问题。它提供了一个统一的平台，让开发者可以发现、安装、更新和管理各种 AI 编码代理的技能，从而打破不同代理之间的技能壁垒，促进技能生态系统的互操作性。\n\n**核心功能**\n`skills` CLI 提供了以下核心功能：\n*   **安装技能**：支持从 GitHub 仓库、GitLab 仓库、本地路径、直接 URL 等多种来源安装技能。\n*   **使用技能**：允许用户在不永久安装的情况下使用技能，通过生成提示或启动代理来执行。\n*   **管理技能**：包括卸载技能 (`remove`)、列出已安装技能 (`list`)、搜索技能 (`find`)  和更新技能 (`update`)。\n*   **技能同步**：`experimental_sync` 命令可以从 `node_modules` 中同步技能到代理目录。\n\n**技术亮点**\n该项目采用 TypeScript 编写，基于 Node.js 运行时。它使用自定义的 CLI 调度器 (`src/cli.ts`) 处理命令路由。技能安装支持符号链接和复制两种模式。通过 `src/source-parser.ts` 中的 `parseSource()` 函数，能够解析和标准化多种技能源格式。项目还集成了 `simple-git` 进行 Git 操作，并遵循 XDG Base Directory 规范。\n\n**适合谁用**\n`skills` CLI 适合需要扩展 AI 编码代理能力的开发者和 AI 代理用户。它支持 70 多个 AI 编码代理，包括 OpenCode、Claude Code、Codex、Cursor 等。无论是希望为现有代理添加新功能的开发者，还是希望利用社区共享技能提升工作效率的个人用户，都可以使用此工具。",
+      "degraded": false
+    },
+    {
+      "id": "lyogavin/airllm",
+      "owner": "lyogavin",
+      "name": "airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "stars": 38113,
+      "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
+      "one_liner": "AirLLM是一个优化大型语言模型推理内存使用的框架，支持在低显存硬件上运行70B+模型，甚至405B Llama3.1模型。",
+      "detail_md": "### 解决什么问题\nAirLLM旨在解决大型语言模型（LLMs）在消费级硬件上运行推理时对GPU显存需求过高的问题。  它允许70B参数的模型在单个4GB GPU卡上运行，而无需进行量化、蒸馏或剪枝等可能降低模型性能的操作。  最新版本甚至支持在8GB显存下运行405B的Llama3.1模型。 \n\n### 核心功能\n该项目通过层级模型分片和优化的内存管理来实现其目标。 \n*   **层级分片（Layer Sharding）**：将模型拆分为单独的层，仅在需要时才加载到内存中。 \n*   **预取（Prefetching）**：重叠计算和I/O操作，以提高性能，可带来10%的速度提升。 \n*   **模型压缩（Model Compression）**：可选的4位/8位块级量化，可将推理速度提高3倍。 \n*   **多模型支持**：支持多种模型架构，包括Llama 3.1、ChatGLM、QWen、Baichuan、Mistral、Mixtral和InternLM等。 \n*   **平台支持**：支持macOS（通过MLX）、Linux和CPU推理。  \n\n### 技术亮点\nAirLLM的核心技术在于其内存管理方法，它通过顺序加载模型层来避免一次性加载整个模型。  此外，它还提供了`AutoModel`类，可以自动检测模型类型并实例化相应的实现。  项目还集成了RLHF技术，特别是DPO（Direct Preference Optimization），支持低成本的RLHF训练。 \n\n### 适合谁用\nAirLLM适合希望在消费级硬件上运行大型语言模型，但受限于GPU显存的用户和开发者。  它也适用于需要进行低成本RLHF训练，例如在单个GPU上训练33B模型。",
+      "degraded": false
+    },
+    {
+      "id": "storytold/artcraft",
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "stars": 24682,
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "one_liner": "ArtCraft 是一个面向艺术家和电影制作人的 AI 创意工具平台。",
+      "detail_md": "**解决什么问题**\nArtCraft 旨在解决传统文本提示生成图像和视频的局限性，为艺术家提供更直观、更强大的创作方式。 它还解决了在多个平台和模型之间切换的麻烦，将所有图像和视频模型整合到一个桌面应用程序中。\n\n**核心功能**\n核心功能包括通过直观的 AI 工具创建图像和视频，用户可以在画布上绘画或在 3D 空间中操作，就像玩视频游戏一样。 它提供了一个跨 Windows、Mac 平台（即将支持 Linux 和平板电脑）的桌面应用程序。 此外，它还整合了所有图像和视频模型，允许用户使用现有订阅登录。\n\n**技术亮点**\n该项目采用 React 18 作为 UI 框架，Vite 作为构建工具和开发服务器。 它使用 React Router 进行客户端路由，并利用 TypeScript 提供类型安全。 样式方面，它使用了 Tailwind CSS，并使用 GSAP 实现动画效果。 桌面应用程序的代码和基础设施是开源的。\n\n**适合谁用**\nArtCraft 专为艺术家和电影制作人设计。 它为那些希望摆脱传统文本提示限制，寻求更具创造性和沉浸式 AI 创作体验的用户提供了理想的工具。",
+      "degraded": false
+    },
+    {
+      "id": "xtool-org/xtool",
+      "owner": "xtool-org",
+      "name": "xtool",
+      "url": "https://github.com/xtool-org/xtool",
+      "stars": 8873,
+      "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+      "one_liner": "`xtool` 是一个跨平台工具链，旨在 Linux、Windows (通过 WSL) 和 macOS 上复制 Xcode 功能，用于 iOS 应用开发。",
+      "detail_md": "**解决什么问题**\n`xtool` 解决了 iOS 应用开发对 macOS 和 Xcode 的传统依赖问题。 它允许开发者在非 macOS 系统上构建、签名和部署 iOS 应用，并以编程方式与 Apple Developer Services 交互。\n\n**核心功能**\n该项目提供以下核心功能：\n*   **SwiftPM 到 iOS 的构建流程**：将 Swift 包构建成 `.app` 和 `.ipa` 格式的 iOS 应用。\n*   **跨平台签名**：在非 macOS 系统上进行代码签名和配置文件管理。\n*   **设备管理**：与 iOS 设备直接通信，进行应用安装和调试。\n*   **Apple 服务集成**：通过编程方式与 Apple Developer Services 交互，管理证书和配置文件。\n\n**技术亮点**\n`xtool` 的技术亮点在于其跨平台策略和对 Apple 服务的集成：\n*   **SDK 提取**：`sdk` 命令可以从 `Xcode.xip` 中提取 Darwin Swift SDK，供 Linux Swift 工具链使用。\n*   **Linux 设备支持**：通过 `usbmuxd` 和 `SwiftyMobileDevice` 库在 Linux/WSL 上实现与 iOS 设备的通信。\n*   **Apple 服务集成**：通过 `DeveloperAPI` (App Store Connect API) 和私有 API (针对免费 Apple ID，通过 `XADI` 处理 Anisette 数据) 与 Apple 后端交互。\n\n**适合谁用**\n`xtool` 适合希望在 Linux、Windows (通过 WSL) 或 macOS 上进行 iOS 应用开发的开发者。 特别是那些希望摆脱 macOS 限制，利用 SwiftPM 构建和部署 iOS 应用的开发者。 此外，它也适合需要以编程方式管理 Apple Developer Services 的开发者，或者希望将 `XKit` 作为独立 SwiftPM 库集成到自定义 iOS 工具中的开发者。",
+      "degraded": false
+    }
+  ]
+}
