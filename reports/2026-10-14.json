@@ -100,6 +100,94 @@
       "one_liner": "`xtool` 是一个跨平台工具链，旨在 Linux、Windows (通过 WSL) 和 macOS 上复制 Xcode 功能，用于 iOS 应用开发。",
       "detail_md": "**解决什么问题**\n`xtool` 解决了 iOS 应用开发对 macOS 和 Xcode 的传统依赖问题。 它允许开发者在非 macOS 系统上构建、签名和部署 iOS 应用，并以编程方式与 Apple Developer Services 交互。\n\n**核心功能**\n该项目提供以下核心功能：\n*   **SwiftPM 到 iOS 的构建流程**：将 Swift 包构建成 `.app` 和 `.ipa` 格式的 iOS 应用。\n*   **跨平台签名**：在非 macOS 系统上进行代码签名和配置文件管理。\n*   **设备管理**：与 iOS 设备直接通信，进行应用安装和调试。\n*   **Apple 服务集成**：通过编程方式与 Apple Developer Services 交互，管理证书和配置文件。\n\n**技术亮点**\n`xtool` 的技术亮点在于其跨平台策略和对 Apple 服务的集成：\n*   **SDK 提取**：`sdk` 命令可以从 `Xcode.xip` 中提取 Darwin Swift SDK，供 Linux Swift 工具链使用。\n*   **Linux 设备支持**：通过 `usbmuxd` 和 `SwiftyMobileDevice` 库在 Linux/WSL 上实现与 iOS 设备的通信。\n*   **Apple 服务集成**：通过 `DeveloperAPI` (App Store Connect API) 和私有 API (针对免费 Apple ID，通过 `XADI` 处理 Anisette 数据) 与 Apple 后端交互。\n\n**适合谁用**\n`xtool` 适合希望在 Linux、Windows (通过 WSL) 或 macOS 上进行 iOS 应用开发的开发者。 特别是那些希望摆脱 macOS 限制，利用 SwiftPM 构建和部署 iOS 应用的开发者。 此外，它也适合需要以编程方式管理 Apple Developer Services 的开发者，或者希望将 `XKit` 作为独立 SwiftPM 库集成到自定义 iOS 工具中的开发者。",
       "degraded": false
+    },
+    {
+      "id": "nvm-sh/nvm",
+      "owner": "nvm-sh",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "stars": 95376,
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "one_liner": "NVM (Node Version Manager) 是一个命令行工具，用于管理多个 Node.js 版本。</cite>",
+      "detail_md": "**解决什么问题**\nNVM 解决了开发者在同一系统上需要使用不同 Node.js 版本的问题。</cite>例如，一个项目可能需要 Node.js v14，而另一个项目需要 v16。</cite>它避免了手动安装、卸载和切换 Node.js 版本的复杂性，并能处理不同项目对特定 Node.js 版本的依赖。</cite>\n\n**核心功能**\nNVM 的核心功能包括安装、使用、列出和卸载不同版本的 Node.js。</cite>它允许用户通过简单的命令安装指定版本的 Node.js，并在不同版本之间快速切换。</cite>此外，NVM 支持通过 `.nvmrc` 文件自动切换项目所需的 Node.js 版本，并管理版本别名。</cite>\n\n**技术亮点**\nNVM 是一个 POSIX 兼容的 shell 脚本，这意味着它可以在多种 shell 环境（如 sh, dash, bash, ksh, zsh）中运行，并支持 Unix、macOS 和 Windows WSL 平台。</cite>它通过修改 shell 的 `PATH` 环境变量来实现版本切换，而不是安装传统的二进制文件。</cite>NVM 还支持从远程源下载预编译的 Node.js 二进制文件或从源代码编译安装。</cite>\n\n**适合谁用**\nNVM 适合所有需要管理多个 Node.js 版本的开发者。</cite>这包括前端开发者、后端开发者以及任何在不同项目中使用不同 Node.js 版本的工程师。</cite>它特别适用于那些希望简化 Node.js 版本管理流程，并确保项目在正确环境中运行的用户。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 48957,
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "one_liner": "该项目是一个全面的科学智能体技能库，旨在将AI编码智能体转变为专业的科研助手，支持跨生物、化学、医学和工程领域的复杂多步骤工作流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决科研人员在进行科学研究时，需要处理大量数据、调用多种工具和数据库、以及进行复杂分析的痛点。 它通过提供预构建的科学技能，将自然语言的研究意图转化为可执行的代码，从而简化了科研工作流程，提高了效率和可重复性。\n\n**核心功能**\n该项目提供了163项即用型科学和研究技能，涵盖了数据库访问、Python包集成、实验室自动化、数据分析、机器学习、材料科学、工程仿真、科学交流与写作等多个方面。 例如，它包含用于查询78个公共科学数据库的`database-lookup`技能，以及用于处理单细胞基因组数据的`AnnData`包。\n\n**技术亮点**\n该项目遵循开放的Agent Skills标准，兼容支持该协议的任何智能体，如Cursor、Claude Code等。 每个技能都是一个独立的目录，包含定义其功能、环境要求和元数据的`SKILL.md`规范。 系统通过`SKILL.md`前端信息告知AI智能体可用的工具和限制，实现从自然语言到代码空间的转换。\n\n**适合谁用**\n该项目适合需要利用AI智能体加速科研工作的科学家、研究人员、生物信息学家、化学家、工程师以及任何从事数据密集型科学领域工作的人员。 它特别适用于希望通过自动化和标准化流程来提高研究效率和可重复性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 52230,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "CLI-Anything项目旨在通过自动化生成命令行接口（CLI），使任何软件都能被AI Agent驱动和操作，从而弥合AI Agent与现有软件之间的鸿沟。",
+      "detail_md": "**解决什么问题**\nAI Agent在操作真实专业软件时面临困难，现有解决方案如GUI自动化脆弱且API覆盖有限。 CLI-Anything通过将任何专业软件转化为Agent原生工具，提供完整的命令行功能，解决了AI Agent无法有效操控复杂软件的问题。 \n\n**核心功能**\n项目核心功能是为任意软件自动生成结构化CLI，支持7阶段流水线（从代码分析到发布），并提供统一的REPL交互界面。  生成的CLI支持JSON输出，方便Agent消费，同时保留可读格式便于调试。  \n\n**技术亮点**\nCLI-Anything采用全自动7阶段流水线，实现从代码分析到发布的全程自动化。 它直接集成真实应用后端，而非模拟，确保功能完整性。 项目还具备智能会话管理、零配置安装以及生产级多层测试（单元测试、端到端测试、CLI子进程测试）等特点。   \n\n**适合谁用**\nCLI-Anything适合希望将GitHub开源项目、AI/ML平台、数据分析工具、开发工具、创意与媒体软件、图表与可视化工具、科学计算软件以及企业办公应用等转化为Agent可控工具的开发者和AI Agent用户。 它也适用于需要将零散API统一成有状态CLI，或替代/增强基于GUI的Agent方案的场景。",
+      "degraded": false
+    },
+    {
+      "id": "ifixai-ai/iFixAi",
+      "owner": "ifixai-ai",
+      "name": "iFixAi",
+      "url": "https://github.com/ifixai-ai/iFixAi",
+      "stars": 26707,
+      "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+      "one_liner": "iFixAi 是一个开源诊断框架，用于检测、衡量和审计 AI 智能体操作偏差风险。",
+      "detail_md": "**解决什么问题**\niFixAi 旨在解决现有 AI 评估工具无法有效识别 AI 智能体操作偏差的问题。传统工具主要关注技术能力，如令牌效率、延迟或提示注入，但难以判断智能体是否真正按照业务 KPI 和组织结构执行任务。iFixAi 通过在问题失控前发现智能体的错误和盲区，弥补了这一空白。\n\n**核心功能**\niFixAi 提供多达 49 项检查，涵盖策略合规性、对抗压力和结构性边界情况。这些检查分为 32 项核心检查和 17 项扩展检查。核心检查覆盖捏造、操纵、欺骗、不可预测性和不透明性五大支柱，并生成字母等级。项目支持 CLI 引导式向导、显式参数以及作为插件或 Skill 运行，方便用户集成到 CI/CD 流程或智能体中。\n\n**技术亮点**\n该项目的一大亮点是其独立的评审机制，通过使用独立提供商的模型来评审被测智能体，避免自我评审的偏见，确保等级的可引用性。它还支持多种提供商和模型，并能通过轻量级适配器测试真实部署的智能体。此外，iFixAi 提供了详细的 JSON 和 Markdown 报告，以及丰富的终端评分卡，确保结果可审计和重放。\n\n**适合谁用**\niFixAi 适合需要对 AI 智能体进行严格审计和风险评估的开发者、团队和组织。无论是首次使用、需要快速重复运行的团队，还是希望在 CI/CD 中实现自动化、可审计批处理的工程师，亦或是希望在现有智能体中进行引导式、交互式评估的用户，都能找到合适的运行方式。",
+      "degraded": false
+    },
+    {
+      "id": "vxcontrol/pentagi",
+      "owner": "vxcontrol",
+      "name": "pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "stars": 28844,
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "one_liner": "PentAGI 是一个利用AI代理进行自动化渗透测试的平台，旨在提升网络安全效率和深度。",
+      "detail_md": "**解决什么问题**\nPentAGI 旨在解决传统渗透测试中效率低下、重复性高以及对专业知识依赖强的问题。它通过自动化流程，使安全专业人员能够更快速、更全面地发现系统漏洞，并提供详细的漏洞报告和利用指南。\n\n**核心功能**\n该项目提供多项核心功能，包括：安全的沙盒Docker环境进行所有操作；AI驱动的自主代理，能够自动规划和执行渗透测试步骤；内置20多种专业安全工具；智能记忆系统，用于长期存储研究结果和成功方法；以及可选的知识图谱集成，用于语义关系跟踪。\n\n**技术亮点**\nPentAGI 采用分层微服务架构，实现了水平扩展性和执行环境的隔离。它支持10多种LLM提供商，包括OpenAI、Anthropic、Gemini等。所有操作都在沙盒Docker环境中执行，并通过`DockerClient`管理容器。数据持久化通过PostgreSQL和pgvector实现，用于存储命令、输出、流程和任务，并支持语义搜索。\n\n**适合谁用**\nPentAGI 专为信息安全专业人员、研究人员和爱好者设计。它适用于需要强大且灵活的解决方案来执行渗透测试的用户，特别是那些希望通过AI自动化来提高测试效率和深度的团队和个人。",
+      "degraded": false
+    },
+    {
+      "id": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "stars": 120045,
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "one_liner": "Rust项目是Rust编程语言的官方源代码仓库，包含编译器、标准库和开发工具。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个高性能、内存安全且并发友好的编程语言及其生态系统。</cite> 它通过严格的编译时检查来减少运行时错误，例如内存泄漏和数据竞争，从而提高软件的可靠性。</cite>\n\n**核心功能**\n核心功能包括 `rustc` 编译器、</cite> `core`、`alloc` 和 `std` 标准库、</cite> 以及 `rustdoc` 文档工具。</cite> 它还集成了 `Cargo` 包管理器、</cite> `rustfmt` 代码格式化工具、</cite> `Clippy` Linter </cite> 和 `rust-analyzer` 编辑器支持。</cite>\n\n**技术亮点**\nRust项目采用多阶段自举构建系统，</cite> 通过 `rustbook` 工具链生成文档，</cite> 并使用 `tidy` 和 `sembr` 等工具强制执行代码风格和质量。</cite> 编译器管道包括解析、HIR转换、类型检查、MIR构建和借用检查，最终生成机器代码。</cite>\n\n**适合谁用**\n该项目适合需要构建高性能、高可靠性软件的开发者，</cite> 包括系统编程、嵌入式开发和Web服务等领域。</cite> 同时，它也为Rust编译器开发者和贡献者提供了全面的开发指南和工具。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "ntdevlabs/tiny11builder",
+      "owner": "ntdevlabs",
+      "name": "tiny11builder",
+      "url": "https://github.com/ntdevlabs/tiny11builder",
+      "stars": 20057,
+      "description": "WinUI app for building smaller, customized Windows 11 images.",
+      "one_liner": "本项目旨在通过PowerShell脚本自动化创建精简、无冗余的Windows 11安装镜像，支持多种版本、语言和架构，显著减小ISO文件大小。",
+      "detail_md": "**解决什么问题**\n该项目解决了标准Windows 11安装镜像体积庞大、包含大量预装应用和遥测功能的问题。通过移除不必要的组件，它旨在提供一个更小、更高效的Windows 11版本，尤其适用于资源受限的环境或需要快速部署的场景。\n\n**核心功能**\n项目提供两个核心PowerShell脚本：`tiny11maker.ps1` 和 `tiny11Coremaker.ps1`。\n*   `tiny11maker.ps1`：移除大量冗余软件，但保留Windows组件存储（WinSxS），确保系统可维护，支持Windows更新、语言包和可选功能安装。\n*   `tiny11Coremaker.ps1`：更激进地移除组件，包括Windows组件存储，导致系统不可维护，无法接收更新或添加功能，适用于测试、开发或虚拟机环境。\n两个脚本都自动化了DISM操作、注册表修改和ISO创建过程。\n\n**技术亮点**\n*   **PowerShell自动化**：使用PowerShell脚本实现整个流程自动化，取代了旧的Batch脚本，提高了灵活性和兼容性。\n*   **DISM工具链**：主要依赖Microsoft的Deployment Image Servicing and Management (DISM) 工具进行镜像操作，确保兼容性和稳定性。\n*   **无外部工具依赖**：除了用于创建可启动ISO的`oscdimg.exe`（通常包含在Windows ADK中），不依赖其他外部可执行文件。\n*   **无人值守安装**：集成`autounattend.xml`文件，实现OOBE（开箱即用体验）自动化，绕过Microsoft账户要求，并启用Compact OS部署。\n*   **硬件限制绕过**：通过修改注册表，绕过Windows 11的CPU、TPM、安全启动等硬件要求。\n\n**适合谁用**\n*   **普通用户**：推荐使用`tiny11maker.ps1`，以获得一个精简但功能完整的Windows 11系统，同时保留更新和添加功能的能力。\n*   **开发者/测试人员**：`tiny11Coremaker.ps1`适用于需要极度精简、快速部署的测试环境或虚拟机，但需注意其不可维护性。\n*   **对系统纯净度有高要求者**：希望移除大量预装应用和遥测功能，追求更纯净操作系统的用户。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 86899,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 是一个由美国国家安全局开发的软件逆向工程框架，用于分析编译后的代码。</cite>",
+      "detail_md": "**解决什么问题**\nGhidra 旨在解决复杂逆向工程工作中遇到的扩展性和团队协作挑战，并提供一个可扩展的研究平台。</cite>它通过提供一套分析工具，帮助用户检查 Windows、macOS 和 Linux 平台上的编译代码。</cite>\n\n**核心功能**\nGhidra 的核心功能包括：反汇编（使用 Sleigh 处理器规范）、反编译（将低级 P-code 转换为高级 C 语言表示）、静态分析（自动恢复控制流、数据流、类型和函数签名）、动态分析（原生调试和仿真集成）以及通过 Java 和 Python 进行自动化和定制的扩展性。</cite>\n\n**技术亮点**\n该项目采用模块化插件架构，分析工具、加载器和用户界面都是动态发现和管理的。它使用 JavaCC 生成的语法解析 C/C++ 源代码，并包含一个自定义预处理器来处理宏和条件编译指令。Ghidra 还提供了预构建的类型信息档案（.gdt 文件），用于快速访问标准库定义。\n\n**适合谁用**\nGhidra 适合需要进行软件逆向工程的分析师、研究人员和开发人员。它支持个人用户进行项目管理，也支持多用户协作项目，提供网络共享仓库、用户访问控制和修订历史功能。",
+      "degraded": false
     }
   ]
 }
