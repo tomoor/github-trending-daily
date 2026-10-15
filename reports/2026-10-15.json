@@ -1,0 +1,138 @@
+{
+  "doc_token": "G2MUdEOdAoM6NgxT3YvctsyxnWd",
+  "doc_url": "https://my.feishu.cn/docx/G2MUdEOdAoM6NgxT3YvctsyxnWd",
+  "items": [
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 240852,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA 是一个本地运行的 CLI 和 MCP 服务器，通过 AI 智能体或终端分析各种二进制文件和应用行为。",
+      "detail_md": "**解决什么问题**\nREA 旨在解决在没有源代码的情况下理解软件功能和行为的挑战。它允许用户通过 AI 智能体或命令行工具，调查应用程序、解释功能工作原理、展示证据，并为自己的项目实现类似功能。\n\n**核心功能**\nREA 提供对原生二进制文件、JavaScript 和 Electron 应用、.NET 程序集以及网站的分析工具。它支持反编译、理解和重建功能，例如恢复过程、伪代码、汇编、字符串、符号和元数据，并追踪调用者、被调用者和交叉引用。REA 通过 Model Context Protocol (MCP) 将其工具暴露给 AI 智能体，并支持多种编程助手。\n\n**技术亮点**\nREA 的分析在本地运行，确保数据隐私。它采用引导式设置，可以配置智能体、连接现有的分析工具（如 Hopper 或 Ghidra），甚至在用户批准后安装 Hopper。REA 不会上传二进制文件到托管分析服务。它还支持多种工具类别，包括原生检查、调查工作流、macOS 原生工具、固件分析、Android APK 分析和浏览器观察等。\n\n**适合谁用**\nREA 适合需要理解现有软件功能、进行逆向工程、或希望在没有源代码的情况下为自己的项目实现类似功能的开发者和研究人员。它特别适合使用 AI 编程助手进行开发的用户，因为 REA 旨在为智能体提供强大的逆向工程能力。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 66243,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个本地优先的开源语音平台，提供语音克隆、设计、视频配音和自动化工作流功能。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 旨在解决传统云端语音服务在成本、隐私和本地化方面的痛点。  它通过提供一个完全在用户本地硬件上运行的解决方案，避免了高昂的云服务费用和数据隐私问题。  尤其是在多语言配音和批量处理场景下，本地解决方案的成本优势更为明显。 \n\n**核心功能**\n该项目提供语音克隆、语音设计、视频配音和自动化工作流等核心功能。  用户可以克隆现有声音，设计具有特定性别、年龄、音高和口音的新声音。  视频配音功能支持转录、翻译和重新配音，并能保留说话人并对齐时间轴。  此外，它还提供了一个图形化的自动化工作流构建器，允许用户创建包含合成步骤、条件判断和外部调用的复杂工作流。 <cite repo=\"debpalash/VoiceStudio\" path=\"debpalash/VoiceStudio\" start=\"7.3\" end=\"7.3\" />\n\n**技术亮点**\nVoiceStudio 的技术亮点包括其本地优先的架构、对多达 646 种语言的支持、增量式重复配音功能  以及 AudioSeal 水印技术。  它通过 OpenAI 兼容的 API 暴露本地语音平台，支持 TTS 和 STT 功能，并能与代理框架集成。  项目还实现了严格的国际化（i18n）框架，支持约 21 种语言环境，并通过校验测试确保翻译的完整性和一致性。 <cite repo=\"debpalash/VoiceStudio\" path=\"debpalash/VoiceStudio\" start=\"7.5\" end=\"7.5\" />\n\n**适合谁用**\nVoiceStudio 适合需要进行语音克隆、设计和视频配音的创作者、开发者和企业。  尤其是那些关注数据隐私、希望降低云服务成本，以及需要高度定制化和自动化语音处理流程的用户。  其本地运行的特性使其成为 ElevenLabs 等云服务的有力替代品。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 29089,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP 插件和平台，旨在通过沙盒执行、知识库和会话连续性来优化 AI 编码助手的上下文窗口使用，从而节省高达 98% 的上下文并保持会话状态。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口被工具输出数据（如 Playwright 快照、GitHub 问题、访问日志等）迅速填满的问题，导致上下文泛滥。  当上下文窗口满时，助手会通过丢弃旧消息来压缩对话，从而导致工作记忆丢失，例如正在编辑的文件、进行中的任务和已解决的错误。 \n\n**核心功能**\n`context-mode` 通过以下核心功能解决这些问题：\n*   **上下文节省**：通过沙盒工具将原始数据排除在上下文窗口之外，可实现高达 98% 的上下文减少。\n*   **会话连续性**：使用 SQLite 跟踪文件编辑、Git 操作和任务，并在上下文压缩时通过 FTS5 索引事件和 BM25 搜索来恢复会话状态，防止状态丢失。\n*   **代码思维**：鼓励 LLM 编写分析脚本，而不是直接处理大量数据，从而显著减少所需的上下文。\n\n**技术亮点**\n该项目采用以下技术亮点：\n*   **沙盒执行**：`PolyglotExecutor` 支持 12 种语言的隔离子进程执行，只有结果进入上下文，大幅减少数据量。\n*   **知识库**：`ContentStore` 使用 SQLite FTS5 进行内容索引，并结合 BM25 排名、Porter 词干提取、Trigram 子字符串和模糊匹配，提供高效搜索。\n*   **平台集成**：支持 Claude Code、Gemini CLI、Cursor 等 17 种 AI 平台，通过 JSON stdin/stdout、TypeScript 插件或纯 MCP 工具进行集成。\n\n**适合谁用**\n*   **开发者**：希望优化 AI 编码助手上下文窗口使用、减少令牌消耗并保持会话连续性的个人开发者。\n*   **工程组织**：希望通过 `Context Mode Platform` 获得 AI 辅助工程团队的洞察力，例如工程师生产力、团队重试浪费和审计跟踪，同时保护代码和 IP 的组织。",
+      "degraded": false
+    },
+    {
+      "id": "nvm-sh/nvm",
+      "owner": "nvm-sh",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "stars": 95445,
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "one_liner": "NVM 是一个基于 shell 的 Node.js 版本管理器，允许用户轻松安装、切换和管理多个 Node.js 版本。",
+      "detail_md": "**解决什么问题**\nNVM 解决了开发者在不同项目中使用不同 Node.js 版本时遇到的兼容性问题。它允许用户在同一个系统上安装和管理多个 Node.js 版本，并根据需要轻松切换，避免了版本冲突和环境配置的复杂性。\n\n**核心功能**\nNVM 的核心功能包括 Node.js 版本的安装、使用和管理。用户可以使用 `nvm install [version]` 命令安装指定版本的 Node.js，使用 `nvm use [version]` 命令切换当前 shell 使用的 Node.js 版本，以及使用 `nvm ls` 命令列出已安装的 Node.js 版本。它还支持通过 `.nvmrc` 文件自动切换版本。\n\n**技术亮点**\nNVM 是一个 POSIX 兼容的 shell 脚本，这意味着它可以在多种 shell 环境（如 sh, dash, bash, ksh, zsh）中运行，并支持 Unix、macOS 和 Windows WSL 平台。其架构模块化，核心逻辑位于 `nvm.sh` 文件中，通过修改用户的 shell 环境变量来实现版本管理。它还提供了安装脚本 `install.sh` 来简化安装过程。\n\n**适合谁用**\nNVM 适合所有需要管理多个 Node.js 版本的开发者。无论是前端开发者、后端开发者还是全栈工程师，只要他们的项目依赖于不同版本的 Node.js，NVM 都能提供便捷高效的解决方案。它特别适用于那些需要在不同项目之间频繁切换 Node.js 版本的用户。",
+      "degraded": false
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 49303,
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "one_liner": "该项目提供了一系列技能，用于访问和分析专业的科学及财政数据集，支持多领域研究。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决科研人员在处理海量、多样化科学数据时面临的挑战，例如癌症影像数据、生物医学知识图谱、群体基因组数据以及美国联邦财政数据等。它通过提供标准化的接口和工具，简化了数据的获取、查询和分析过程，从而加速科学发现和决策制定。\n\n**核心功能**\n核心功能包括：\n*   **影像数据查询与下载**：通过 `imaging-data-commons` 技能，用户可以查询和下载国家癌症研究所 (NCI) 的癌症影像数据，支持按模态、研究ID等进行过滤。\n*   **基因组数据分析**：`onekgpd` 技能允许对 1000 基因组项目数据进行个体水平查询，例如查找特定变异携带者、评估亲缘关系等。\n*   **生物医学知识图谱推理**：`ncats-arax` 技能能够利用 NCATS 生物医学数据翻译器进行多跳推理，发现疾病、药物和生物通路之间的非显而易见的关系。\n*   **财政数据访问**：`usfiscaldata` 技能提供对美国财政部金融数据集的 REST 接口访问，包括国债、利率和政府支出等信息。\n\n**技术亮点**\n该项目利用了多种技术实现高效数据处理和访问：\n*   **DuckDB 和 BigQuery**：`imaging-data-commons` 技能使用本地 DuckDB 索引或 Google BigQuery 进行高级元数据查询。\n*   **Python 客户端**：`onekgpd` 技能通过 `dnaerys` Python 客户端与公共查询端点交互。\n*   **TRAPI 接口**：`ncats-arax` 技能通过 `arax_client.py` 脚本与 ARAX TRAPI (Translator Reasoner API) 端点进行交互。\n*   **RESTful API**：`usfiscaldata` 技能通过 REST 接口访问财政数据。\n*   **Mermaid 图表**：项目文档中广泛使用 Mermaid 图表来可视化数据流和架构，增强可读性。\n\n**适合谁用**\n该项目适合需要处理和分析大规模科学数据的研究人员、数据科学家以及对生物医学、基因组学、癌症研究和财政数据分析感兴趣的开发者。它为不同领域的专业数据提供了便捷的编程访问接口，降低了数据使用的门槛。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 52466,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "CLI-Anything 旨在将任何软件转化为 AI Agent 可控的命令行工具，弥合 AI Agent 与专业软件之间的鸿沟。",
+      "detail_md": "**解决什么问题**\nAI Agent 在推理方面表现出色，但在操作真实专业软件时能力较弱。现有解决方案如 GUI 自动化脆弱且易崩溃，API 覆盖面有限，或功能被阉割。CLI-Anything 通过将任何专业软件转化为 Agent 原生工具，且功能不打折扣，解决了这些痛点。\n\n**核心功能**\nCLI-Anything 的核心功能包括：全自动 7 阶段流水线，从代码分析到发布上线，无需人工介入；真实软件集成，直接调用真实应用进行渲染，确保零妥协的专业能力；智能会话管理，支持持久化项目状态、撤销/重做以及统一的 REPL 交互界面；零配置安装，通过 `pip install -e .` 即可安装到 PATH；生产级测试，包含单元测试、端到端测试和 CLI 子进程测试。\n\n**技术亮点**\n项目采用 Click 框架构建 CLI，支持结构化 JSON 输出供 Agent 消费，同时保留可读格式方便调试。它通过 `HARNESS.md` 定义方法论 SOP，并利用 `SKILL.md` 文件包含 CLI 的元数据，用于 AI Agent 的工具发现。CLI-Hub 作为集中式注册和发现系统，管理所有 Agent 原生 CLI。\n\n**适合谁用**\nCLI-Anything 适用于希望将任何有代码库的软件转化为 Agent 可控工具的开发者和 AI Agent 用户。这包括 GitHub 开源项目、AI/ML 平台、数据与分析工具、开发工具、创意与媒体应用、科学计算软件以及企业办公工具等。它也适合需要将零散 API 统一成一个有状态 CLI 的场景，以及希望替代或增强基于 GUI 的 Agent 方案的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ifixai-ai/iFixAi",
+      "owner": "ifixai-ai",
+      "name": "iFixAi",
+      "url": "https://github.com/ifixai-ai/iFixAi",
+      "stars": 27345,
+      "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+      "one_liner": "iFixAi 是一个开源诊断框架，用于检测、衡量和审计 AI 智能体系统中的操作偏差风险。</cite>它通过运行多达 49 项检查来评估智能体，以确保它们符合业务目标和组织结构。</cite>",
+      "detail_md": "**解决什么问题**\niFixAi 旨在解决传统评估工具无法发现的 AI 智能体操作偏差问题。</cite>这些偏差可能包括智能体泄露权限、捏造引用、屈服于诱导性提示或执行未经授权的操作，而这些问题往往不会体现在常规 KPI 中，直到造成损害后才被发现。</cite>\n\n**核心功能**\niFixAi 提供多达 49 项检查，分为 5 个核心支柱（捏造、操纵、欺骗、不可预测性和不透明性）和 13 个高级类别。</cite>它支持三种运行方式：引导式向导、显式参数 CLI 和智能体插件/Skill，适用于不同的使用场景。</cite>运行结果会生成字母等级和详细报告，帮助用户理解智能体的表现。</cite>\n\n**技术亮点**\n该项目采用独立评审模型来评估被测智能体，避免自我评审的偏见。</cite>它支持多种模型提供商，如 OpenAI、Anthropic、Gemini 等，并通过轻量级适配器测试真实部署的智能体。</cite>配置可复用，并默认忽略敏感信息。</cite>\n\n**适合谁用**\niFixAi 适合需要确保 AI 智能体符合业务意图、设计和预期的开发者、团队和组织。</cite>它特别适用于在 CI/CD 流程中集成 AI 智能体审计，以及希望在问题失控之前发现智能体错误和盲区的用户。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "vxcontrol/pentagi",
+      "owner": "vxcontrol",
+      "name": "pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "stars": 29406,
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "one_liner": "PentAGI 是一个利用 AI 代理进行自动化渗透测试的安全平台，提供沙盒环境和多 LLM 支持。",
+      "detail_md": "**解决什么问题**\nPentAGI 旨在为信息安全专业人员、研究人员和爱好者提供一个强大且灵活的解决方案，以自动化方式执行渗透测试，解决传统手动测试效率低下、重复性高的问题。 它通过 AI 代理自动规划和执行测试步骤，并在沙盒 Docker 环境中进行所有操作，确保安全隔离。\n\n**核心功能**\n该项目提供全自动的 AI 驱动渗透测试，内置 20 多种专业安全工具，如 nmap、metasploit、sqlmap 等。 它具备智能记忆系统，用于长期存储研究结果和成功方法。 支持多种 LLM 提供商，包括 OpenAI、Anthropic、Gemini、Ollama 等，并可通过 Docker Compose 快速部署。\n\n**技术亮点**\nPentAGI 采用分层微服务架构，具有清晰的表示层、应用层、领域层和基础设施层。 所有操作都在沙盒 Docker 环境中执行，通过 `DockerClient` 管理容器。 它集成了 PostgreSQL + pgvector 用于数据持久化和语义搜索，以及可选的 Neo4j 用于知识图谱。 系统还支持 Langfuse 进行 LLM 追踪和成本分析。\n\n**适合谁用**\nPentAGI 适合信息安全专业人员、安全研究员以及对自动化渗透测试和 AI 驱动安全解决方案感兴趣的爱好者。 对于需要高效、可重复且安全隔离的渗透测试流程的团队和个人，这是一个理想的工具。",
+      "degraded": false
+    },
+    {
+      "id": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "stars": 120010,
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "one_liner": "Rust 编译器通过抽象层支持多种代码生成后端，将优化后的中间表示转换为特定后端的机器码。",
+      "detail_md": "**解决什么问题**\n该项目解决了 Rust 编译器将高级语言代码转换为不同目标平台（如 LLVM、GCC、Cranelift）可执行机器码的问题，同时确保代码生成的高效性、正确性和可扩展性。它通过抽象层支持多种后端，避免了为每个后端重复实现代码生成逻辑，并处理了 ABI 兼容性、类型布局、内联汇编和优化等复杂问题。\n\n**核心功能**\n核心功能包括：定义了 `CodegenBackend` 等特质，作为代码生成后端的统一接口；实现了 LLVM、GCC 和 Cranelift 三种主要代码生成后端；提供了将 MIR（中间表示）转换为后端特定 IR 的通用逻辑；管理代码生成单元的并行处理以提高吞吐量；以及处理最终的链接过程，生成可执行文件或库。\n\n**技术亮点**\n技术亮点在于其高度模块化的设计，通过 `rustc_codegen_ssa` crate 提供了一个清晰的后端抽象层。它支持异步代码生成，利用多核并行处理来加速编译。此外，项目还集成了 ABI 和类型布局计算，确保生成的代码符合目标平台的调用约定和内存布局，并支持内联汇编、自动微分和 GPU 卸载等高级功能。\n\n**适合谁用**\n该项目主要面向 Rust 编译器开发者、对编译器后端技术感兴趣的研究人员，以及需要为 Rust 语言添加新目标平台或优化现有代码生成的用户。它为理解 Rust 编译器如何工作、如何扩展其功能提供了基础。",
+      "degraded": false
+    },
+    {
+      "id": "xtool-org/xtool",
+      "owner": "xtool-org",
+      "name": "xtool",
+      "url": "https://github.com/xtool-org/xtool",
+      "stars": 10760,
+      "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+      "one_liner": "`xtool` 是一个跨平台工具链，旨在 Linux、Windows 和 macOS 上复刻 Xcode 功能，用于 iOS 应用开发。",
+      "detail_md": "**解决什么问题**\n`xtool` 旨在解决 iOS 应用开发对 macOS 和 Xcode 的传统依赖问题。它允许开发者在非 macOS 系统上构建、签名和部署 iOS 应用，并以编程方式与 Apple Developer Services 交互。\n\n**核心功能**\n`xtool` 的核心功能包括：将 Swift 包构建成 iOS 应用（`.app` 和 `.ipa` 捆绑包）；在非 macOS 系统上进行代码签名和配置；与 iOS 设备直接通信以进行安装和调试；以及通过编程方式与 Apple Developer Services 交互，进行证书和配置文件管理。\n\n**技术亮点**\n`xtool` 通过抽象 Darwin 环境实现跨平台 iOS 开发。它能够提取 `Xcode.xip` 以生成可在 Linux Swift 工具链中使用的 Darwin Swift SDK。在 Linux/WSL 上，通过 `usbmuxd` 和 `SwiftyMobileDevice` 库处理与 iOS 设备的通信。`XKit` 库集成了 `DeveloperAPI`、`SwiftyMobileDevice` 和 `Zupersign`，用于 Apple 服务和设备交互。\n\n**适合谁用**\n`xtool` 适合希望在 Linux、Windows (通过 WSL) 或 macOS 上进行 iOS 应用开发的开发者。它特别适用于那些希望摆脱对 macOS 和 Xcode 传统依赖的开发者，以及需要以编程方式管理 Apple Developer Services 的用户。此外，`XKit` 库也可供开发者用于构建自己的自定义 iOS 工具。",
+      "degraded": false
+    },
+    {
+      "id": "ntdevlabs/tiny11builder",
+      "owner": "ntdevlabs",
+      "name": "tiny11builder",
+      "url": "https://github.com/ntdevlabs/tiny11builder",
+      "stars": 20201,
+      "description": "WinUI app for building smaller, customized Windows 11 images.",
+      "one_liner": "tiny11builder 项目通过 PowerShell 脚本自动化创建精简版 Windows 11 安装镜像，去除臃肿软件和遥测功能，提供两种优化方案以满足不同需求。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决标准 Windows 11 镜像体积庞大、预装应用过多以及包含遥测功能的问题。它通过移除不必要的组件来减小镜像大小，并提供禁用遥测和绕过硬件限制的选项，从而提升系统性能和用户隐私。\n\n## 核心功能\n项目提供两个核心 PowerShell 脚本：`tiny11maker.ps1` 和 `tiny11Coremaker.ps1`。`tiny11maker.ps1` 创建可维护的精简镜像，保留 Windows 更新和语言包功能，减小 3-4GB。`tiny11Coremaker.ps1` 则创建更激进的精简镜像，移除 Windows 组件存储 (WinSxS) 以实现最大程度的体积减小（5-6GB），但牺牲了更新和功能添加的能力，适用于测试和开发环境。两个脚本都自动化移除 AppX 包、Edge、OneDrive 等预装软件，并进行注册表修改以禁用广告、遥测和绕过 OOBE 限制。\n\n## 技术亮点\n该项目主要使用 PowerShell 脚本，结合 DISM 工具进行 Windows 镜像操作，包括挂载、组件移除和导出。它还利用 `oscdimg.exe` 创建可启动 ISO 镜像。通过修改注册表，脚本能绕过 Windows 11 的硬件要求（如 TPM、安全启动），并使用 `autounattend.xml` 文件实现无人值守安装和本地账户创建。`tiny11Coremaker.ps1` 的 WinSxS 精简操作是其独特之处，通过复制必要的服务堆栈文件并删除原始 WinSxS 目录来实现极致瘦身。\n\n## 适合谁用\n`tiny11maker.ps1` 适合希望获得更轻量、无臃肿软件但仍能接收更新和添加功能的日常用户和生产环境。`tiny11Coremaker.ps1` 则更适合需要极致精简、用于快速测试、开发或虚拟机环境的用户，这些用户不介意牺牲系统可维护性以换取最小的体积和资源占用。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 87450,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 是一个功能强大的软件逆向工程套件，用于分析恶意代码和研究二进制文件。",
+      "detail_md": "## 解决什么问题\nGhidra 旨在帮助用户对二进制文件进行逆向工程，理解其内部工作原理，从而支持恶意代码分析、漏洞研究和软件互操作性等任务。\n\n## 核心功能\nGhidra 提供创建、设置和自定义项目的功能，并支持代码分析、标记、导航、搜索和数据创建，以辅助逆向工程过程。它还包括字节查看器、反编译器、程序树、符号表、符号树、函数图和函数调用树等工具。Ghidra 支持多用户协作，提供网络共享仓库、用户访问控制和版本历史记录。\n\n## 技术亮点\nGhidra 能够动态共享数据，处理大型数据集，并提供高度可配置和可扩展的环境。它支持通过插件和脚本进行扩展，这些可以使用 Java 或 Python 编写。Ghidra 是一个跨平台工具，支持 Linux、macOS 和 Windows 操作系统。\n\n## 适合谁用\nGhidra 适合需要进行软件逆向工程的个人和团队，例如恶意软件分析师、漏洞研究员以及任何需要理解二进制文件内部结构和行为的开发者。",
+      "degraded": false
+    }
+  ]
+}
