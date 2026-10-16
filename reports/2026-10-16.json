@@ -144,6 +144,61 @@
       "one_liner": "LibreTV 是一个免费在线视频搜索与观看平台，聚合多源内容，无需注册，支持多设备访问。",
       "detail_md": "**解决什么问题**\nLibreTV 旨在解决用户在不同视频平台之间切换、寻找免费视频资源以及观看时受广告干扰的问题。它提供一个统一的入口，聚合来自多个视频源的内容，并支持无广告观看。\n\n**核心功能**\n*   **多源内容聚合搜索**：LibreTV 能够并行搜索多个视频 API 源，并将结果聚合展示。用户可以自定义 API 源。\n*   **视频播放与管理**：提供视频播放功能，支持 HLS 流处理、键盘快捷键、播放进度保存  和广告过滤。\n*   **安全与隐私**：支持密码保护、XSS 保护和 URL 清理。\n\n**技术亮点**\n*   **客户端-服务器架构**：采用前端 Web 应用和后端代理服务的架构，支持多种部署方式，如 Vercel、Netlify、Render 和 Docker。\n*   **模块化前端**：使用原生 JavaScript、Tailwind CSS 构建，模块化设计便于维护和扩展。\n*   **灵活的 API 管理**：支持标准的苹果 CMS V10 API 格式，用户可添加自定义 API 源。\n\n**适合谁用**\nLibreTV 适合希望免费观看在线视频、厌倦广告干扰、寻求聚合多源内容的用户。它也适合对隐私有要求，不希望注册或订阅的用户。",
       "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 53239,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "CLI-Anything通过自动化流程将任何软件转化为Agent可控的命令行工具，弥合AI Agent与专业软件之间的鸿沟。",
+      "detail_md": "**解决什么问题** \nAI Agent在推理方面表现出色，但在操作真实专业软件时面临困难，现有解决方案如UI自动化、有限API或功能阉割的重新实现都存在脆弱性或功能缺失。  CLI-Anything旨在解决Agent与专业软件之间的“鸿沟”，让Agent能够充分利用软件的全部功能。 \n\n**核心功能** \nCLI-Anything的核心功能是提供一个全自动的7阶段流水线，将软件代码库转化为Agent原生的CLI工具。  它直接调用真实软件后端，实现零妥协的专业功能集成，并提供结构化的JSON输出，方便Agent消费。   此外，它还支持智能会话管理和零配置安装。 \n\n**技术亮点** \n该项目采用全自动7阶段流水线，从代码分析到PyPI发布，涵盖架构设计、实现、测试规划、测试编写和文档生成。  它通过直接调用真实软件（如Blender、LibreOffice）而非重新实现功能，确保了功能的完整性。  项目还具备生产级测试，包含单元测试、端到端测试和CLI子进程测试，确保CLI的稳定性和可靠性。 \n\n**适合谁用** \nCLI-Anything适用于希望让AI Agent操控任何有代码库的软件的用户和开发者。  这包括GitHub开源项目、AI/ML平台、数据与分析工具、开发工具、创意与媒体应用、科学计算软件、企业办公应用以及图表与可视化工具等多个领域。  它特别适合需要将散乱API统一成一个CLI，或希望替代/增强GUI Agent工作流的场景。",
+      "degraded": false
+    },
+    {
+      "id": "android/skills",
+      "owner": "android",
+      "name": "skills",
+      "url": "https://github.com/android/skills",
+      "stars": 7891,
+      "description": "",
+      "one_liner": "Android skills 是一个 AI 优化的指令和资源库，旨在帮助 LLM 更好地理解和执行 Android 开发任务。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型 (LLM) 在理解和执行遵循 Google 最佳实践的 Android 开发任务时面临的挑战。它通过提供 AI 优化的模块化指令和资源，帮助 LLM 更好地理解特定模式和工作流程。例如，它提供了一个结构化的工作流程，用于将 Android XML 视图迁移到 Jetpack Compose，解决了将传统 UI 转换为现代声明式 Compose 组件的问题。\n\n**核心功能**\n核心功能是提供“技能”（Skill），即 AI 优化的模块化指令单元。每个技能都包含在一个 `SKILL.md` 文件中，遵循开放标准代理技能规范。这些文件包含元数据（作者、关键词）和结构化的工作流程。项目还包括支持文档（References），为技能提供“基础”数据，如 API 映射或迁移逻辑。\n\n**技术亮点**\n技术亮点在于其模块化的“技能”设计，每个技能都是一个独立的 `SKILL.md` 文件。这些技能通过结构化的工作流程指导 LLM 完成复杂的开发任务。例如，迁移 XML 视图到 Jetpack Compose 的技能包含一个 10 步的方法论，确保稳定、安全和视觉一致的过渡。此外，项目还利用 GitHub Actions 自动化维护技能目录和数据协调。\n\n**适合谁用**\n该项目主要适用于需要利用 LLM 进行 Android 开发的开发者和团队。特别是那些希望通过 AI 辅助来遵循 Google 最佳实践、执行特定开发任务（如 UI 迁移或导航库升级）的用户。它也适合希望将传统 XML 布局逐步迁移到 Jetpack Compose 的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 11791,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "Cursor 插件市场提供官方插件，涵盖开发工具、框架、SaaS集成和AI代理技能。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过提供一系列预构建的插件来简化和加速开发工作流程、增强AI代理能力以及集成第三方服务。  它解决了开发者在CI/CD自动化、代码审查、质量审计、并行执行、UI渲染以及与各种SaaS产品（如Google Workspace、Salesforce、GitHub等）集成方面的痛点。 \n\n**核心功能**\n核心功能包括：开发者工作流程插件，用于CI自动化和代码审查；代理编排插件，支持并行执行和AI循环；画布和实用工具插件，用于UI渲染和CLI设计；以及与多种第三方应用（如Gmail、Salesforce、GitHub、QuickBooks Online等）的集成。 \n\n**技术亮点**\n技术亮点在于其模块化的插件架构，每个插件都是一个独立的目录，包含自己的清单文件 `plugin.json`。  项目还包括 `pstack` 这样的高严谨性代理工作流系统，强调深入的架构规划和原则驱动的开发。  此外，还支持语音和模型咨询插件，扩展了AI代理的实时音频和决策能力。 \n\n**适合谁用**\n该项目适合需要提升开发效率的开发者、寻求自动化CI/CD和代码审查流程的团队、希望扩展AI代理功能的用户，以及需要将Cursor平台与各种SaaS工具集成的企业和个人。",
+      "degraded": false
+    },
+    {
+      "id": "MadsLorentzen/ai-job-search",
+      "owner": "MadsLorentzen",
+      "name": "ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "stars": 47866,
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "one_liner": "AI求职助手：一个基于Claude Code的智能框架，助您高效求职，从简历定制到面试准备。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统求职过程中耗时且重复的任务，例如根据不同职位定制简历和求职信、评估职位匹配度以及准备面试等问题。它通过自动化和智能化这些流程，帮助用户提高求职效率和成功率。  \n\n**核心功能**\n核心功能包括：\n*   **职位匹配评估**：根据用户个人资料（技能、经验、行为特征）评估职位匹配度。 \n*   **简历定制**：根据目标职位定制LaTeX格式的简历，确保内容与职位要求高度相关。  \n*   **求职信撰写**：自动撰写有针对性的LaTeX格式求职信。  \n*   **面试准备**：提供STAR格式的答案示例和面试问题准备。  \n*   **职位搜索**：通过`/scrape`命令搜索多个招聘网站的职位，并根据匹配度排序。 \n*   **技能提升建议**：通过`/upskill`命令分析技能差距并提供学习计划。 \n\n**技术亮点**\n该项目采用“起草者-审阅者”双代理工作流，确保申请材料的质量和准确性。 它还包含强制性的PDF编译和检查循环，以确保生成的LaTeX文档在视觉上完美无瑕，例如简历严格控制在两页，求职信严格控制在一页。  所有AI辅助生成的内容都会明确引用“Claude Code”。 \n\n**适合谁用**\n该项目适合希望提高求职效率、优化申请材料的求职者。特别是那些希望利用AI技术自动化简历定制、求职信撰写和面试准备过程，并获得个性化职业发展建议的用户。",
+      "degraded": false
+    },
+    {
+      "id": "hmjz100/LinkSwift",
+      "owner": "hmjz100",
+      "name": "LinkSwift",
+      "url": "https://github.com/hmjz100/LinkSwift",
+      "stars": 23308,
+      "description": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+      "one_liner": "LinkSwift 是一个浏览器用户脚本，旨在帮助用户从多个云存储服务获取文件直链，并支持多种下载方式，同时注重用户隐私和合规性。",
+      "detail_md": "**解决什么问题**\n该项目主要解决了用户从百度网盘、阿里云盘等八大主流云盘下载文件时，因官方客户端限制或不便使用而无法直接获取下载链接的问题。  它通过提供直链下载，让用户可以使用自己偏好的下载工具进行下载，避免了第三方工具可能带来的隐私泄露和账号封禁风险。 \n\n**核心功能**\nLinkSwift 的核心功能包括支持八大云盘（百度网盘、阿里云盘、中国移动云盘、天翼云盘、迅雷云盘、夸克网盘、UC网盘、123云盘）的直链获取。  它能将获取到的直链格式化为多种下载方式，如 API 下载（适用于 IDM、NDM）、Aria2 下载、RPC 下载、cURL 下载和 BC 下载（比特彗星），以适应不同用户的需求和下载工具。 \n\n**技术亮点**\n该项目采用纯客户端架构，所有操作均在用户浏览器内完成，不依赖任何第三方服务器进行文件传输，从而保障用户隐私。  它仅使用云服务商公开的 API 接口获取下载链接，不破解限速机制。  此外，LinkSwift 运用适配器模式支持多平台，并通过 CSS 选择器注入 UI 元素，提供无缝的用户体验。  \n\n**适合谁用**\nLinkSwift 适合那些希望通过浏览器直接从主流云盘获取文件直链，并使用第三方下载工具进行下载的用户。  特别是注重数据隐私、不希望文件经过第三方服务器的用户，以及希望灵活选择下载方式的用户。",
+      "degraded": false
     }
   ]
 }
