@@ -1,0 +1,138 @@
+{
+  "doc_token": "EcW9dSWeYoFc6UxoloPcilXynrc",
+  "doc_url": "https://my.feishu.cn/docx/EcW9dSWeYoFc6UxoloPcilXynrc",
+  "items": [
+    {
+      "id": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "stars": 269439,
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "one_liner": "REA 是一个本地 CLI 和 MCP 服务器，用于通过 AI 智能体或终端分析各种二进制文件和应用程序行为。",
+      "detail_md": "**解决什么问题**\nREA 旨在解决软件开发中“黑盒”问题，即在没有源代码的情况下理解应用程序功能。它允许用户通过智能体或命令行界面调查应用程序、解释功能原理并重建类似功能，从而将低级静态和动态分析与高级智能体工作流相结合。\n\n**核心功能**\nREA 提供对原生二进制文件、JavaScript/Electron 应用程序、.NET 程序集、浏览器、Android 包和固件的分析工具。 它支持反编译、理解执行流程、交叉引用和调用图，以及将观察到的逻辑转换为新的代码实现。 用户可以通过 `npx rea-agents setup` 命令配置 REA 并连接到各种 AI 编程助手，如 Claude Code、Cursor 等。\n\n**技术亮点**\nREA 采用分层 ESM TypeScript 架构，确保模块化和可维护性。 它通过模型上下文协议 (MCP) 服务器将逆向工程工具暴露给 AI 智能体。 REA 集成了 Hopper Disassembler、Ghidra、JADX 等多种分析提供程序，支持多种二进制类型和平台。 分析在本地运行，确保数据隐私和安全性。\n\n**适合谁用**\nREA 适用于需要理解应用程序内部工作原理的开发人员、逆向工程师和安全研究人员，尤其是在没有源代码的情况下。 它也适合希望利用 AI 编程助手进行软件分析和功能重建的用户，例如将现有功能移植到新项目或分析可疑行为。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 39058,
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "one_liner": "该项目提供了一个多阶段系统，用于将遗留代码库（如COBOL、Java、C++和.NET）迁移到现代架构，以降低行为偏差风险。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决遗留代码库现代化过程中面临的挑战，包括理解和映射代码、提取业务逻辑以及在迁移过程中避免行为偏差等问题。  它通过结构化的多阶段方法，确保在代码转换之前充分理解代码，从而降低风险。 \n\n**核心功能**\n核心功能包括：预检（`modernize-preflight`）、评估（`modernize-assess`）、拓扑映射（`modernize-map`）、业务规则提取、现代化简报（`modernize-brief`）以及三种现代化方法：跨栈重写（`modernize-transform`）、全新重构（`modernize-reimagine`）和同栈升级（`modernize-uplift`）。     \n\n**技术亮点**\n该项目利用专门的代理和JavaScript工作流来执行深度发现、提取业务逻辑并进行迁移。  它强制执行特定的命令序列，以防止在理解代码之前进行转换等常见故障模式。  此外，它还包括一个可选的TypeScript钩子运行时和UI组件套件，用于实时进度显示和审查，以及一个可选的遥测管道。  \n\n**适合谁用**\n该项目适合需要将遗留代码库（如COBOL、旧版Java、C++和.NET）迁移到现代架构的开发人员和团队。  它也适用于希望通过结构化、多阶段的方法降低现代化风险，并确保迁移过程中的行为一致性的用户。",
+      "degraded": false
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 50443,
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "one_liner": "该项目是一个全面的研究资助技能工具，旨在帮助用户撰写有竞争力的研究资助提案。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决撰写研究资助提案时面临的复杂性和挑战，特别是针对美国主要的四个资助机构：NSF（美国国家科学基金会）、NIH（美国国立卫生研究院）、DOE（美国能源部）和DARPA（美国国防高级研究计划局）。  它通过提供机构特定的指导、模板和策略来帮助研究人员提高提案的竞争力。 \n\n**核心功能**\n核心功能包括提供机构特定的指导，例如NSF的使命和优先事项、NIH的评审标准等。  它还提供关键组件的详细指南，如NIH的特定目标页面和NSF的项目摘要（包括概述、知识价值和广泛影响）。  此外，项目还提供可直接使用的模板，例如NSF项目摘要模板和预算说明模板。 \n\n**技术亮点**\n该项目的技术亮点在于其结构化的知识库和针对不同资助机构的定制化内容。  它详细区分了NSF提案中“知识价值”和“广泛影响”的同等重要性，并提供了具体的策略。  对于NIH提案，它强调了“特定目标页面”的关键性。  对于DOE和DARPA，则分别侧重于能源相关性、技术成熟度以及高风险高回报问题。 \n\n**适合谁用**\n该项目适合需要撰写研究资助提案的科研人员、学者以及研究机构。  特别是那些希望向NSF、NIH、DOE或DARPA申请资助，并希望提高提案质量和成功率的用户。  它也适用于希望了解不同资助机构之间提案差异的研究人员。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 112522,
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "one_liner": "Caveman 是一个多层令牌压缩系统，旨在降低 AI 代理交互的成本和延迟，同时保持技术准确性。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型 (LLM) 交互中因冗长输出和输入导致的成本高昂和延迟问题。</cite> 它通过强制执行“石器时代”的交流风格和结构化的引擎级压缩来减少令牌使用。</cite>\n\n**核心功能**\nCaveman 具有两个主要层：技能层和引擎层。</cite> 技能层通过系统提示指令，使代理生成更短的输出，去除冠词、填充词和客套话，将输出令牌减少约 65%，同时保持 100% 的技术准确性。</cite> 引擎层是一个基于 Go 的本地运行时，它在代理读取输入（日志、工具模式、文件）之前对其进行压缩，使用有损但可恢复的压缩方式。</cite> 它还包括 `caveman-compress` 子技能，用于压缩项目内存文件，进一步减少输入令牌。</cite>\n\n**技术亮点**\n该项目采用两层压缩模型，包括语言层面的“智能穴居人”交流风格和结构层面的二进制压缩器。</cite> 它支持多种强度级别，如 `lite`、`full`、`ultra` 和 `wenyan` 变体，以适应不同的压缩需求。</cite> 此外，它还具备“自动清晰度”安全覆盖机制，在处理安全警告或不可逆操作时，会自动切换到正常散文模式，以防止误解。</cite>\n\n**适合谁用**\nCaveman 适用于使用 AI 代理（如 Claude Code、Codex、Gemini CLI 以及其他 30 多个代理）的开发者和用户。</cite> 它可以帮助那些希望降低 LLM 交互成本、减少延迟并优化代理输出简洁性的用户。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 69031,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的本地语音克隆和配音工具，支持多语言，旨在为创作者提供高质量的音频制作能力。",
+      "detail_md": "**解决什么问题**\nVoiceStudio 解决了传统语音合成服务对网络依赖、隐私风险以及高昂费用等问题。 它提供了一个完全本地运行的解决方案，确保用户的数据安全和隐私，同时避免了按分钟计费的成本。 \n\n**核心功能**\n该项目提供语音克隆、声音设计、视频配音、语音输入、转录和有声书制作等核心功能。 它支持多达 646 种语言，允许用户将视频转录、翻译并重新配音，同时保留说话人并对齐时间轴。 \n\n**技术亮点**\nVoiceStudio 的技术亮点在于其完全本地运行的能力，无需数据离开用户机器。 它采用 AGPL-3.0 许可证，提供开源且免费使用的版本，包括商业和企业内部用途。 项目还支持多语言界面，通过 JSON 文件管理约 21 种语言的本地化字符串，并有测试机制确保翻译完整性。 <cite repo=\"debpalash/VoiceStudio\" path=\"electron/src/renderer/src/i18n/locales/zh-CN.json\" start=\"1-120\" />\n\n**适合谁用**\nVoiceStudio 适合需要进行语音克隆、声音设计、视频配音、转录和有声书制作的创作者、内容生产者以及企业用户。 对于那些重视数据隐私、希望避免云服务成本，并需要高度定制化语音解决方案的用户来说，这是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 299869,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编码代理设计的完整软件开发方法论，通过可组合的技能和强制性指令协议，将 AI 代理从被动代码编写者转变为系统工程师。",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决 AI 编码代理在软件开发过程中缺乏系统性、容易直接跳入代码编写的问题。它通过强制执行“退一步”的方法，在实施前明确规范并签署设计，从而避免了代理直接编写代码。\n\n**核心功能**\n该项目提供了一套核心技能库，包括测试驱动开发（TDD）、系统调试、协作模式和经过验证的技术。它支持多平台集成，例如 Claude Code、Devin CLI、Kimi Code 等，确保在不同 AI 环境中都能应用其开发方法。核心工作流包括头脑风暴、计划编写、子代理驱动开发和计划执行。\n\n**技术亮点**\nSuperpowers 的技术亮点在于其强制性的指令协议和可组合的技能系统。它通过 `using-superpowers` 元技能强制执行协议，确保代理在执行任务前检查相关技能。此外，它还引入了计划范围的工作区管理，为每个计划提供独立的目录，以避免冲突。视觉头脑风暴伴侣功能允许代理利用基于浏览器的工具进行可视化辅助。\n\n**适合谁用**\nSuperpowers 适合使用 AI 编码代理进行软件开发的个人和团队。特别是那些希望将 AI 代理从简单的代码生成器转变为遵循系统化、结构化开发流程的工程师的用户。它支持多种 AI 平台，因此适用于在不同 AI 环境中工作的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "ruvnet/ruflo",
+      "owner": "ruvnet",
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "stars": 75101,
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "one_liner": "Ruflo 是一个生产级的企业级 AI 智能体编排平台，将 Claude Code 和 Codex 转化为多智能体开发环境，实现 AI 智能体的部署、协调和优化。",
+      "detail_md": "**解决什么问题**\nRuflo 解决了在复杂软件工程任务中，AI 智能体难以有效协作、记忆和自我学习的问题。 它通过提供一个执行层，让智能体能够彼此协作，而非孤立运行，从而提升开发效率和质量。\n\n**核心功能**\nRuflo 提供了超过 100 种专用智能体，用于编码、测试、安全、文档和架构等任务。 它支持智能体蜂群协调，具备共识机制的层级、网状与自适应拓扑。 平台还包含自学习能力，通过 SONA 神经模式、ReasoningBank 和轨迹学习不断优化智能体行为。 此外，它还具备基于 HNSW 索引的 AgentDB 向量记忆系统，实现亚毫秒级检索。\n\n**技术亮点**\nRuflo 的技术亮点包括其自学习架构，通过 Q-learning 和神经强化来改进智能体选择。 它采用 WASM 内核，由 Rust 编写，为策略引擎、嵌入计算和神经模式提供强大支持。 智能体联邦功能允许跨机器和组织安全协作，通过零信任联邦、PII 门控数据流和行为信任评分确保数据安全和合规性。\n\n**适合谁用**\nRuflo 适合需要部署、协调和优化 AI 智能体以处理复杂软件工程任务的团队和企业。 特别是那些使用 Claude Code 和 Codex，并希望构建一个能够规划、记忆、测试和自我改进的 AI 团队的开发者。 它也适用于对安全性、合规性和跨团队协作有高要求的场景。",
+      "degraded": false
+    },
+    {
+      "id": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 29785,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "one_liner": "`context-mode` 是一个 MCP 插件，通过沙盒执行、知识库和会话连续性，为 AI 编码助手节省 94-99% 的上下文窗口。",
+      "detail_md": "**解决什么问题**\nAI 编码助手面临上下文窗口被工具输出数据淹没和上下文压缩时状态丢失的问题。例如，一个 Playwright 快照会消耗 56 KB 的上下文，GitHub issue 消耗 59 KB，访问日志消耗 45 KB，导致 30 分钟后 40% 的上下文窗口被工具输出而非实际代码和对话占据。当上下文窗口满时，代理会通过丢弃旧消息来压缩对话，从而丢失工作记忆和会话状态。\n\n**核心功能**\n`context-mode` 通过以下三种机制解决上述问题：\n1.  **沙盒执行**：`PolyglotExecutor` 在隔离的子进程中执行 12 种语言的代码，只有执行结果进入上下文，将 56 KB 的数据减少到 299 B，实现 99% 的上下文节省。\n2.  **知识库**：`ContentStore` 使用 SQLite FTS5 索引内容，并采用 BM25 排名，将 60 KB 的数据减少到 40 B，实现 99% 的上下文节省。\n3.  **会话连续性**：`SessionDB` 将文件编辑、Git 操作和任务等事件捕获到持久存储中。当上下文压缩时，会话状态可以通过一个约 2KB 的 XML 恢复快照来恢复，从而防止 100% 的状态丢失。\n\n**技术亮点**\n该项目是一个用 TypeScript 实现的 MCP 服务器，支持 17 种以上的 AI 平台。它通过拦截工具调用、在沙盒子进程中运行并索引到本地 FTS5 数据库来工作。它还提供了一套 MCP 工具，例如 `ctx_execute` 用于沙盒代码执行，`ctx_index` 用于内容索引，`ctx_search` 用于三层搜索（Porter、Trigram、Fuzzy）与 BM25 排名。\n\n**适合谁用**\n`context-mode` 适合使用 AI 编码助手的开发者和工程组织。对于开发者，它是一个免费的开源插件，可在本地运行，帮助节省上下文窗口。对于工程组织，它提供了一个商业平台，通过可选的事件转发，提供团队 AI 工具使用情况的洞察，同时保护代码和提示等敏感信息不离开本地机器。",
+      "degraded": false
+    },
+    {
+      "id": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "stars": 88719,
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "one_liner": "Ghidra 是一个由 NSA 开发的软件逆向工程（SRE）框架，用于分析恶意代码和二进制文件。",
+      "detail_md": "## 解决什么问题\nGhidra 旨在解决对二进制文件进行逆向工程的挑战，例如分析恶意软件、漏洞研究以及理解专有系统。它通过提供一个集成的平台来处理大型数据集、支持团队协作和高度可配置的环境来应对这些问题。\n\n## 核心功能\nGhidra 的核心功能包括管理项目、工具和程序数据。它允许用户导入程序、创建和管理工具，并支持多用户协作，通过 Ghidra Server 共享项目数据和版本控制。它还提供插件和脚本机制来扩展功能。\n\n## 技术亮点\nGhidra 的技术亮点在于其高度可扩展的架构，支持通过 Java 或 Python 编写插件和脚本。它能够处理大型数据集，并提供动态数据共享的工具。Ghidra Server 提供了网络共享存储库、用户访问控制和版本历史记录，支持团队协作。\n\n## 适合谁用\nGhidra 适合需要进行软件逆向工程的个人和团队，包括安全研究人员、恶意软件分析师以及需要理解二进制代码的开发人员。其协作功能使其特别适合多用户共同分析项目的场景。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 280348,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "Everything Claude Code (ECC) 是一个生产就绪的 AI 智能体平台操作系统，旨在将 AI 编码助手转变为高自主性的工程伙伴。",
+      "detail_md": "**解决什么问题**\nECC 旨在解决 AI 编码助手在实际软件开发中缺乏高自主性、跨平台兼容性差、以及难以进行持续学习和安全保障的问题。它通过提供一套完整的系统，包括技能、本能、内存优化、持续学习和安全扫描，将 AI 助手从简单的配置文件集合提升为能够处理复杂工程任务的伙伴。\n\n**核心功能**\nECC 提供多项核心功能，包括：多 Harness 兼容性，支持 Claude Code、Codex、Cursor、OpenCode、Gemini 等多种 AI 智能体平台；专业智能体舰队，包含 68 个领域专用智能体，如 `planner`、`security-reviewer` 和 `build-error-resolver`，用于自动化工程生命周期任务；持续学习与演进，通过本能系统从会话历史中提取可重用模式，提升项目特定能力；以及集成的控制平面，提供会话生命周期管理、TUI 仪表板、持久状态和智能体间消息传递。\n\n**技术亮点**\n该项目采用测试驱动、安全优先和不可变性的开发原则。它通过 `scripts/ci/catalog.js` 脚本实现代码库与多语言文档之间的一致性验证，确保文档不会过时或与代码不符。此外，ECC 还引入了统一记忆库 (`ecc memory`)，使用可检查的 Markdown 文档在不同 Harness 之间传递上下文，并支持选择性安装架构，允许用户根据需求定制组件。\n\n**适合谁用**\nECC 适用于希望将 AI 编码助手转变为高自主性工程伙伴的开发者和团队。特别是那些使用 Claude Code、Codex、Cursor、OpenCode、Gemini 等 AI 智能体平台，并寻求提高开发效率、确保代码质量和安全、以及实现持续学习和自动化工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "lightseekorg/tokenspeed",
+      "owner": "lightseekorg",
+      "name": "tokenspeed",
+      "url": "https://github.com/lightseekorg/tokenspeed",
+      "stars": 2474,
+      "description": "TokenSpeed is a speed-of-light LLM inference engine.",
+      "one_liner": "TokenSpeed 是一个为智能体工作负载设计的高性能 LLM 推理引擎，兼具 TensorRT-LLM 的性能和 vLLM 的易用性。",
+      "detail_md": "**解决什么问题**\nTokenSpeed 旨在解决现有 LLM 推理引擎在生产级智能体工作负载中性能和可用性不足的问题。 它通过分离控制平面和执行平面，以及模块化的内核系统，提供强大的正确性保证和快速的开发迭代速度。\n\n**核心功能**\nTokenSpeed 的核心功能包括：\n*   **调度器（Scheduler）**：采用 C++ 控制平面和 Python 执行平面，通过有限状态机管理请求生命周期和 KV 缓存所有权，并在编译时强制执行安全的 KV 资源重用。\n*   **内核（Kernels）**：提供可插拔、分层的内核系统，具有便携式公共 API 和集中式注册表，包含针对智能体工作负载优化的 MLA（多头潜在注意力）实现。\n*   **入口点（Entrypoint）**：通过 SMG 集成的 AsyncLLM 实现低开销的 CPU 端请求处理。\n\n**技术亮点**\nTokenSpeed 的技术亮点在于其独特的架构：\n*   **控制平面与执行平面分离**：C++ 实现的控制平面提供核心调度系统的强正确性保证，Python 实现的执行平面则支持快速迭代和降低开发认知负担。\n*   **模块化内核子系统**：内核被视为一等公民，通过便携式公共 API、集中式注册表和选择模型与核心引擎分离，支持异构加速器的可扩展插件机制。\n*   **多硅片支持**：`tokenspeed-kernel` 库旨在为多硅片 AI 推理提供高性能内核，支持 NVIDIA、AMD 和 Ascend NPU 等多种硬件平台。\n\n**适合谁用**\nTokenSpeed 适合需要为生产级智能体工作负载部署高性能 LLM 推理服务的开发者和企业。 它特别适用于追求极致性能、高可用性和灵活硬件支持的场景，例如需要处理 Kimi K3、Qwen3.8 等前沿模型的部署。",
+      "degraded": false
+    },
+    {
+      "id": "xerj-org/xerj",
+      "owner": "xerj-org",
+      "name": "xerj",
+      "url": "https://github.com/xerj-org/xerj",
+      "stars": 5614,
+      "description": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+      "one_liner": "XERJ.ai 是一个用 Rust 编写的单一二进制文件，用于日志、向量和代理内存存储，旨在替代传统的多系统解决方案，并为 AI 代理提供高效的搜索能力。",
+      "detail_md": "**解决什么问题**\nXERJ 旨在解决传统日志、向量和代理内存存储系统分散、复杂的问题，通过一个单一的 Rust 二进制文件提供统一的解决方案。 它减少了 AI 代理处理代码库时的 token 消耗，提高了效率。 此外，它还提供了 Elasticsearch 的替代方案，具有相似的 API 和查询语言，但部署更轻量。 \n\n**核心功能**\nXERJ 的核心功能包括语义搜索、全方位搜索（BM25、语义、向量 kNN、混合）、RAG 应用、代理记忆、日志异常检测和向量量化。 它支持自动索引各种文件类型（如代码、PDF、Markdown），并能将笔记转化为知识图谱。 XERJ 还提供了一个 ES 兼容的 API 接口，方便现有 Elasticsearch 用户迁移。 \n\n**技术亮点**\nXERJ 的技术亮点在于其单一二进制的 Rust 实现，无需 JVM 或外部依赖。 它采用两层压缩（列编码和块压缩），实现了比 Elasticsearch 更小的磁盘占用。 XERJ 还具备资源治理能力，通过监控内存使用和电路断路器机制确保系统稳定性。 \n\n**适合谁用**\nXERJ 适合需要高效、统一的日志、向量和代理内存存储解决方案的开发者和企业。 特别是 AI 代理开发者，可以通过 XERJ 减少 token 消耗，提高代码理解和交互效率。 对于寻求 Elasticsearch 替代方案，尤其是在安全审计、运维智能和统一可观测性等领域的用户，XERJ 也是一个理想选择。",
+      "degraded": false
+    }
+  ]
+}
