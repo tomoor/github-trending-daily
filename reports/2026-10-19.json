@@ -155,6 +155,50 @@
       "one_liner": "`dsh-purge` 是 DeepSeek Harness 的红队安全评测插件，用于分离宿主层与模型层的安全机制，以便进行受控评估。",
       "detail_md": "### 解决什么问题\n本项目旨在解决 DeepSeek Harness 在运行时对提示词、审批门、沙箱策略和会话迁移等进行重写时，将宿主层拦截误判为模型拒绝的问题。通过分离这两层，安全工程师和研究人员可以更清晰地评估 Harness 的安全机制。\n\n### 核心功能\n`dsh-purge` 提供一个侧栏界面，包含“清洗”和“演练台”两页。\n*   **清洗**：允许用户查看和应用补丁、编辑提示词、管理规则集以及导入技能。\n*   **演练台**：在授权后，可用于查看资产、技能和本地环境，主要用于受控评测。\n项目还支持命令行工具和聊天命令，用于状态查询、应用/还原补丁、卸载插件等操作。\n\n### 技术亮点\n该插件通过修改 DeepSeek Harness 的核心文件来实现功能，并在应用前备份原始文件。它支持官方 Web 和桌面版 DeepSeek Harness 0.2 版本。插件的提示词注入机制允许用户自定义系统提示词，并能根据规则集进行决策。此外，它还包含红队评测工具，如 `redteam_poc_search` 用于搜索知识库中的 POC/EXP。\n\n### 适合谁用\n`dsh-purge` 适合网络安全红队、安全研究人员以及需要对 DeepSeek Harness 平台进行安全评估和鲁棒性测试的用户。它旨在帮助用户理解和控制 Harness 的内部安全策略，但严禁用于任何非法或违规用途。",
       "degraded": false
+    },
+    {
+      "id": "headroomlabs-ai/headroom",
+      "owner": "headroomlabs-ai",
+      "name": "headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "stars": 76077,
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "one_liner": "Headroom 是一个 AI 应用上下文优化层，可将 LLM 成本和延迟降低 50-90%，同时保持模型准确性。",
+      "detail_md": "**解决什么问题**\nHeadroom 旨在解决大型语言模型 (LLM) 应用中高昂的 token 消耗、高延迟以及上下文管理复杂性问题。它通过智能压缩工具输出、日志、RAG 块、文件和对话历史，显著减少发送给 LLM 的 token 数量，从而降低运营成本并提高效率。\n\n**核心功能**\nHeadroom 提供多项核心功能，包括：\n*   **多算法压缩**：使用 `SmartCrusher` (JSON)、`CodeCompressor` (AST 感知) 和 `Kompress` (ML 文本压缩) 等专用压缩器，针对不同内容类型进行优化。\n*   **可逆架构 (CCR)**：通过“压缩-缓存-检索”机制，将压缩内容存储在本地，并允许 LLM 在需要时使用 `headroom_retrieve` 工具检索原始数据，确保信息不丢失。\n*   **代理集成**：支持与 Claude Code、GitHub Copilot CLI、Cursor 等流行编码代理的无缝集成，通过 `headroom wrap` 命令自动配置优化层。\n*   **输出整形**：通过 `RTK` 和 `OutputShaper` 工具减少模型响应中的冗余内容，进一步降低成本。\n\n**技术亮点**\n*   **高性能代理**：通过 FastAPI 服务器或高性能 Rust 核心拦截流量，为任何语言或框架提供透明优化。\n*   **智能内容路由**：`ContentRouter` 自动检测内容类型（JSON、代码、日志、文本等），并将其路由到最适合的压缩器。\n*   **缓存优化**：`CacheAligner` 稳定消息前缀，以最大化 LLM 提供商的 KV 缓存命中率，利用缓存折扣。\n*   **本地运行**：所有压缩都在用户本地机器上运行，确保数据隐私和安全。\n\n**适合谁用**\nHeadroom 适合任何希望降低 LLM 成本、提高 AI 应用性能的开发者和团队。特别是那些在代理工作流中处理大量工具输出、日志、代码和 RAG 结果的用户，以及使用 Claude Code、Cursor、GitHub Copilot 等编码代理的开发者，将从 Headroom 的上下文优化中获得显著收益。",
+      "degraded": false
+    },
+    {
+      "id": "withmarbleapp/os-taxonomy",
+      "owner": "withmarbleapp",
+      "name": "os-taxonomy",
+      "url": "https://github.com/withmarbleapp/os-taxonomy",
+      "stars": 5955,
+      "description": "",
+      "one_liner": "Marble Skill Taxonomy 是一个开放的、图结构的初等教育学习内容分类数据集。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统课程数据通常是扁平列表或封闭在产品内部的问题。 它提供了一个连接的学习图谱，使得系统能够程序化地追踪学习路径并识别知识差距。\n\n**核心功能**\n该项目包含 1,590 个细粒度的“微主题”，每个微主题代表一个可教授的概念，并附有描述、掌握证据和评估提示。 它还包含 3,221 个前置依赖关系，形成一个有向无环图，明确了主题间的学习顺序。 此外，每个微主题都与国际课程标准（如英国国家课程、Common Core）对齐。\n\n**技术亮点**\n该分类法以纯数据形式提供，没有运行时依赖，易于在任何环境中消费。 数据完整性通过 JSON Schema 和验证脚本 `scripts/validate.mjs` 维护，确保了数据结构和引用完整性。 数据采用多许可证模式，数据库结构遵循 ODbL 1.0，内容遵循 CC BY-SA 4.0，平衡了商业用途和开源发展。\n\n**适合谁用**\n该项目适合教育技术开发者、研究人员以及任何需要结构化、可编程学习路径数据的组织。 它可以用于构建个性化学习系统、评估工具或课程规划软件。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 152452,
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "one_liner": "Claude Code 是一个终端内的智能编码工具，通过自然语言协助软件开发。",
+      "detail_md": "## 解决什么问题\nClaude Code 旨在解决软件开发中重复性任务、代码理解和 Git 工作流的效率问题。它通过结合大型语言模型 (LLM) 的推理能力和直接的系统访问，帮助开发者更高效地完成编码工作。\n\n## 核心功能\n该项目提供代理编排和执行、上下文管理、工具和协议集成以及第一方模块和插件等核心功能。它支持子代理生成、工作区隔离，并能通过上下文压缩优化效率。此外，它还集成了模型上下文协议 (MCP) 和沙盒执行环境。\n\n## 技术亮点\nClaude Code 的技术亮点包括其模块化架构，允许通过 `mods/` 目录集成第一方插件。它利用 `register(on, options)` 入口点实现功能扩展。系统还具备强大的工具路由和沙盒执行能力，确保操作的安全性和隔离性。\n\n## 适合谁用\nClaude Code 适合需要提高软件开发效率的开发者。无论是进行日常编码任务、理解复杂代码库，还是管理 Git 工作流，它都能提供有力的支持。特别是对于希望通过自然语言命令与代码库交互的开发者，该工具能显著简化工作流程。",
+      "degraded": false
+    },
+    {
+      "id": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "stars": 41396,
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "one_liner": "Kronos 是首个开源金融K线基础模型，用于金融市场预测和量化投资策略。",
+      "detail_md": "**解决什么问题**\nKronos 旨在解决金融时间序列数据高噪声、非平稳的特点，通过深度学习方法对金融K线数据进行建模和预测。它提供了一个统一的模型来处理多样化的量化任务。\n\n**核心功能**\n该项目核心功能包括：将连续多维K线数据（OHLCV）量化为分层离散token；使用大型自回归Transformer模型对这些token进行预训练；提供 `KronosPredictor` 类进行数据预处理、预测和逆归一化，简化预测流程；支持在自定义CSV数据集上进行模型微调，并提供分布式训练能力。\n\n**技术亮点**\nKronos 的技术亮点在于其两阶段框架：首先，一个专门的tokenizer将OHLCV数据量化为分层离散token；其次，一个大型自回归Transformer模型在这些token上进行预训练。模型架构中包含 `BinarySphericalQuantizer` 进行离散化，以及 `HierarchicalEmbedding` 和 `DependencyAwareLayer` 处理分层特性。它还支持使用Qlib进行数据准备和回测。\n\n**适合谁用**\nKronos 适合需要对金融市场K线数据进行预测的开发者、量化研究员和交易员。特别是那些希望利用基础模型进行多样化量化任务，并能根据自身数据进行模型微调的用户。它也适用于对深度学习在金融领域应用感兴趣的研究人员。",
+      "degraded": false
     }
   ]
 }
