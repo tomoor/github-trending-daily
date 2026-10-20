@@ -133,6 +133,94 @@
       "one_liner": "Kronos是一个金融K线基础模型，能将K线数据转化为离散token并进行预测。",
       "detail_md": "**解决什么问题**\nKronos旨在解决金融市场数据高噪声、非平稳的特点，提供一个统一的模型来处理多样化的量化任务。它通过将连续、多维的K线数据（OHLCV）转化为分层的离散token，从而使Transformer模型能够更好地理解和预测金融市场行为。  \n\n**核心功能**\n项目核心功能包括K线数据的分词（tokenization）和基于Transformer的预测。  `KronosTokenizer`负责将OHLCV数据量化为分层离散token，而`Kronos`模型则在此基础上进行自回归预测。   项目还提供了`KronosPredictor`类，简化了数据预处理、预测和后处理的流程，支持单次和批量预测。  \n\n**技术亮点**\nKronos采用两阶段框架：首先，一个专门的tokenizer将连续的K线数据量化为分层离散token；其次，一个大型自回归Transformer模型在这些token上进行预训练。  `KronosTokenizer`使用了`BinarySphericalQuantizer`进行混合量化，并结合了编码器和解码器Transformer块。  模型支持分布式数据并行（DDP）训练，以加速多GPU环境下的训练过程。 \n\n**适合谁用**\nKronos适合量化金融研究人员、交易策略开发者以及对金融时间序列预测感兴趣的数据科学家。  它提供了一个基础模型，可以针对特定任务和数据集进行微调，例如A股市场数据。  用户可以使用自定义CSV格式数据进行模型训练和评估。",
       "degraded": false
+    },
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 33239,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "这是一个将编码代理转变为安全审计员的技能，通过六个阶段发现代码库中的漏洞。",
+      "detail_md": "**解决什么问题**\n该项目旨在通过自动化和结构化的方式，帮助安全工程师或开发人员发现代码库中的安全漏洞。它解决了传统安全审计中可能存在的覆盖不全、效率低下以及结果不一致等问题<cite repo=\"cloudflare/security-audit-skill\" path=\"README.md\" start=\"9-16\" end=\"9-16\" />。通过多阶段的审计流程，确保发现的漏洞有充分的证据支持，并提供可操作的修复建议。\n\n**核心功能**\n该技能的核心功能是执行一个六阶段的安全审计流程：\n1.  **侦察 (Reconnaissance)**：映射架构、信任边界和输入面，生成 `architecture.md` 和 `coverage-ledger.json`。\n2.  **覆盖引导式狩猎 (Coverage-led hunting)**：根据 `coverage-ledger.json` 分配任务，猎人代理执行检查并记录结果。\n3.  **候选验证 (Candidate validation)**：独立的验证器尝试反驳每个发现的候选漏洞。\n4.  **结构化输出 (Structured output)**：将确认、待验证和已拒绝的记录写入 `findings.json`，并进行验证。\n5.  **独立记录验证 (Independent record verification)**：新的代理验证最终的源声明。\n6.  **目标中立报告 (Target-neutral reporting)**：从验证过的记录和覆盖账本中生成 `REPORT.md`、`FINDINGS-DETAIL.md` 和 `NEEDS-VALIDATION.md`。\n\n**技术亮点**\n该项目的技术亮点在于其结构化的六阶段审计管道，以及对代理的精心编排。它强调对抗性验证，即发现漏洞的代理与验证漏洞的代理是独立的。此外，它支持多次运行以提高覆盖率，并能利用先前的审计结果来聚焦未覆盖的区域和重新验证变更的代码。项目还定义了严格的沙箱执行环境，以确保安全地执行目标代码进行验证。\n\n**适合谁用**\n该项目适合需要对代码库进行全面安全审计的开发团队、安全工程师和渗透测试人员。特别是那些希望通过自动化工具提高审计效率、确保审计质量和一致性，并获得详细、可操作的安全报告的用户。它也适用于希望将AI代理集成到安全工作流程中的组织。",
+      "degraded": false
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 168840,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail 是一个 AI 智能体技能，旨在通过“你不需要它”（YAGNI）原则，生成最少、最有效且安全的精简代码。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决 AI 智能体在生成代码时可能出现的过度工程、代码冗余、成本高昂和执行时间长的问题。   它通过强制执行“最少代码”原则，减少代码行数、降低 token 使用量和成本，同时确保代码的安全性、正确性和可访问性。 \n\n### 核心功能\nPonytail 的核心功能是引导 AI 智能体遵循一个决策层级，即“Ponytail 阶梯”。它提供 `/ponytail-review` 和 `/ponytail-audit` 等命令，用于审查代码变更和整个代码库，发现潜在问题并给出修复建议。  此外，它还提供一个信息栏和看板功能，帮助用户监控任务成本、token 使用和智能体时间。 \n\n### 技术亮点\nPonytail 的技术亮点在于其“Ponytail 阶梯”决策机制，它在编写代码前会优先考虑现有解决方案（如代码库内已有组件、标准库、平台原生功能或已安装的依赖），最后才考虑编写新代码。  它支持多种 AI 智能体和开发环境，并通过 `scripts/check-rule-copies.js` 脚本确保规则文件在不同宿主之间的同步和一致性。  \n\n### 适合谁用\nPonytail 适合希望提高 AI 智能体代码生成效率、降低开发成本和维护复杂度的开发者和团队。  特别是那些追求精简、高质量代码，并希望避免过度工程的资深开发者，以及在 Claude Code 等 AI 编程环境中工作的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Graphify-Labs/graphify",
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": 129652,
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "one_liner": "Graphify 将代码、文档等项目内容转化为可查询的知识图谱，赋能 AI 助手，提升开发效率。",
+      "detail_md": "**解决什么问题**\nGraphify 旨在解决 AI 编程助手在理解复杂代码库时，需要手动搜索文件（grep）的低效问题。  它通过将项目内容（包括代码、文档、PDF、图片、视频）转化为知识图谱，使 AI 助手能够直接查询，从而降低 token 成本并提高代码质量。 \n\n**核心功能**\nGraphify 的核心功能包括：将代码通过 `tree-sitter` AST 进行本地解析，生成确定性的代码图谱，不依赖 LLM 且数据不离开本地机器。  对于非代码文件，它通过 LLM 进行语义解析。  图谱中的每条边都明确标记为 `EXTRACTED`（直接提取）或 `INFERRED`（推断），以区分数据来源。  用户可以通过 `graphify query`、`graphify path` 和 `graphify explain` 命令直接查询图谱。 \n\n**技术亮点**\n该项目采用混合提取方法，结合 `tree-sitter` 进行结构化（AST-based）代码解析，支持 36 种以上编程语言，并利用 LLM 进行语义化（LLM-based）非代码文件解析。  它不使用向量索引，而是构建一个可遍历的真实图谱。  此外，Graphify 还支持社区检测功能，通过 Leiden 算法将图谱划分为概念模块或架构子系统。 \n\n**适合谁用**\nGraphify 适合需要提高 AI 编程助手效率的开发者和团队。  特别是处理大型代码库、单体仓库（monorepo）或跨仓库项目的用户，Graphify Cloud 版本提供持续更新的图谱、形式化验证和 SDLC 全局代码审查功能，并能与 Sentry、Jira 等工具集成。",
+      "degraded": false
+    },
+    {
+      "id": "YuJunZhiXue/dsh-purge",
+      "owner": "YuJunZhiXue",
+      "name": "dsh-purge",
+      "url": "https://github.com/YuJunZhiXue/dsh-purge",
+      "stars": 10613,
+      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "one_liner": "`dsh-purge` 是一个 DeepSeek Harness 红队安全评估插件，旨在解耦宿主层安全拦截与模型层拒绝，用于安全审计和策略评估。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 DeepSeek Harness 平台中宿主层安全拦截与模型层拒绝混淆的问题。 Harness 在运行时会修改提示词、审批门、沙箱和会话格式，导致仅凭模型响应难以区分是宿主拦截还是模型拒绝。 `dsh-purge` 将这两层分离，使用户能够进行受控评测，并评估默认策略的收紧程度。\n\n**核心功能**\n`dsh-purge` 提供侧栏界面，包含“清洗”和“演练台”两页。 “清洗”功能允许用户分组查看、应用、还原和卸载补丁，并编辑提示词和多套规则。 “演练台”则用于查看资产、技能和本机环境，主要用于授权的本机、离线靶标或书面授权的演练。 插件还支持调整宿主策略，如默认文案、权限策略和工具上限。\n\n**技术亮点**\n该插件作为模块化扩展集成到 DeepSeek Harness 中，通过 Cordis 依赖注入框架管理。 它支持官方 `dsh web` 和官方桌面 Electron 应用。 插件通过修改本机已安装的官方 `@deepseek-ai` 包和本机配置来实现功能，不修改 Harness 源码仓库，而是通过点击“应用”写入补丁。 提示词身份来自插件内的加密提示词，不读取宿主磁盘上的提示词文件。\n\n**适合谁用**\n`dsh-purge` 适合网络安全红队工程师、安全研究人员以及需要对 DeepSeek Harness 平台进行安全评估和审计的用户。 它为那些希望深入了解 Harness 如何重写提示词、执行审批门、管理沙箱策略和构建会话迁移的用户提供了工具。",
+      "degraded": false
+    },
+    {
+      "id": "msitarzewski/agency-agents",
+      "owner": "msitarzewski",
+      "name": "agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "stars": 162027,
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "one_liner": "该项目提供了一个包含 140 多个专业 AI 智能体的集合，旨在通过自动化转换和安装流程，在多种 AI 智能体平台之间实现无缝部署和协作。",
+      "detail_md": "## 解决什么问题\nAI 智能体平台之间存在格式不兼容的问题，导致为不同平台编写智能体需要维护多份不同格式的副本。本项目通过提供一个单一事实来源的智能体定义，并自动化转换和安装过程，解决了这一痛点。 \n\n## 核心功能\n该项目提供了一个包含 12 个以上专业部门的 140 多个专业 AI 智能体定义。   每个智能体都具有独特的个性、工作流程和可衡量的交付成果。  它支持将智能体定义自动转换为多种 AI 智能体平台（如 Claude Code, GitHub Copilot, Cursor 等）的特定格式，并提供安装脚本进行部署。  \n\n## 技术亮点\n项目采用 Markdown 和 YAML Frontmatter 作为智能体定义的单一事实来源。  通过 `scripts/convert.sh` 脚本实现自动化格式转换，  并通过 `scripts/install.sh` 脚本将转换后的智能体部署到检测到的平台。  每个智能体都遵循严格的设计原则，包括鲜明的性格、明确的交付物、成功指标、经过验证的工作流程和学习记忆能力。 \n\n## 适合谁用\n该项目适合需要利用专业 AI 智能体来优化工作流程的个人和团队。  无论是开发者、设计师、营销人员、销售人员还是项目经理，都可以找到对应的专业智能体来协助完成特定任务，提高效率和产出质量。     它也适合希望在不同 AI 智能体平台之间无缝切换和部署智能体的用户。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 30626,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "one_liner": "该项目是Anthropic开源的Claude插件集合，旨在扩展Claude在专业知识工作中的能力，无需代码即可定制AI助手。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决企业和个人在特定工作职能、工具和工作流程中，Claude AI助手无法提供定制化支持的问题。</cite>它通过提供可配置的插件，使Claude能够理解特定领域的知识、执行特定操作并集成外部工具，从而提高工作效率和准确性。</cite>\n\n**核心功能**\n核心功能包括提供一个插件市场，其中包含各种预构建的插件，涵盖运营、GTM与业务、技术和专业领域。</cite></cite>用户可以通过这些插件将Claude与CRM、数据仓库等外部工具连接，并根据自身需求定制插件，例如调整连接器、添加公司特定术语和修改工作流程。</cite>\n\n**技术亮点**\n技术亮点在于其“无代码”或“低代码”的插件开发和定制方式，插件以文件形式（Markdown和JSON）存在，易于编辑、审查和版本控制。</cite>它采用工具无关性设计，通过`~~category`占位符实现工具的灵活替换。</cite>此外，通过Model Context Protocol (MCP) 服务器集成外部工具，提供统一的接口。</cite>\n\n**适合谁用**\n该项目适合三类用户：希望Claude理解其特定领域知识的终端用户（如销售、财务、法律等），</cite>希望定制插件以适应公司特定流程和工具栈的团队管理员，</cite>以及希望创建新插件或扩展现有插件的插件开发者。</cite>",
+      "degraded": false
+    },
+    {
+      "id": "sickn33/agentic-awesome-skills",
+      "owner": "sickn33",
+      "name": "agentic-awesome-skills",
+      "url": "https://github.com/sickn33/agentic-awesome-skills",
+      "stars": 48032,
+      "description": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+      "one_liner": "本项目旨在将聊天记录、组织材料、项目复盘和公共争议整理成可复用、可脱敏、可追溯的案例库。",
+      "detail_md": "**解决什么问题**\n本项目解决的核心问题是如何将非结构化的信息，如聊天记录、项目复盘和公共争议等，转化为结构化、可追溯且可复用的案例知识。  这有助于组织更好地管理和利用其内部知识，避免信息孤岛和重复劳动。 \n\n**核心功能**\n核心功能是将原始材料整理成 CrossFrame 案例库条目。  这包括读取相邻的规范 CrossFrame 和路由图，区分事实和推测，对来源进行脱敏，并输出案例摘要、事实边界、材料来源、尺度窗口、机制链、责任链、反向条件、可复用概念和后续观察。 \n\n**技术亮点**\n本项目通过智能代理能力，能够自动化地处理和结构化复杂信息。  它强调对信息进行事实与推测的区分，并进行来源脱敏，确保案例库的准确性和隐私性。  此外，它还能够生成多维度的案例分析要素，如机制链和责任链，提升案例的深度和实用性。 \n\n**适合谁用**\n本项目适合需要对大量非结构化信息进行整理、分析和知识管理的组织和个人。  特别是那些需要从聊天记录、项目复盘或公共争议中提取有价值信息，并构建可复用知识库的团队，例如咨询公司、研究机构、项目管理团队以及任何重视知识沉淀和复用的企业。",
+      "degraded": false
+    },
+    {
+      "id": "vllm-project/vllm",
+      "owner": "vllm-project",
+      "name": "vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "stars": 94272,
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "one_liner": "vLLM 是一个用于大型语言模型 (LLM) 推理和服务的快速易用库，旨在提供高吞吐量和低延迟。",
+      "detail_md": "**解决什么问题**\nvLLM 解决了 LLM 推理和服务中存在的吞吐量低、内存效率差的问题。  它通过优化注意力键值内存管理、动态请求调度和批处理等技术，显著提升了 LLM 的服务性能。 \n\n**核心功能**\nvLLM 的核心功能包括：通过 PagedAttention 实现高效的注意力键值内存管理，消除碎片化；  连续批处理、分块预填充和前缀缓存以优化吞吐量；  支持多种量化技术（如 FP8, INT8, GPTQ/AWQ）；  优化的注意力内核和 GEMM/MoE 内核；  推测解码；  以及对 Hugging Face 模型的无缝集成。  它还提供 OpenAI 兼容的 API 服务器。 \n\n**技术亮点**\nvLLM 的技术亮点在于其创新的 PagedAttention 机制，  能够有效管理 KV 缓存，避免内存碎片。  此外，它还支持连续批处理、分块预填充和前缀缓存，  结合 `torch.compile` 进行自动内核生成和图级优化，  实现了卓越的性能。  项目还支持多种硬件平台，包括 NVIDIA、AMD、Intel GPU 和 CPU，  以及各种模型架构，包括解码器模型、MoE 模型和多模态模型。 \n\n**适合谁用**\nvLLM 适合需要高性能、低延迟 LLM 推理和服务的开发者、研究人员和企业。  尤其适用于那些希望在生产环境中部署大型语言模型，并对吞吐量和内存效率有严格要求的用户。  它的易用性和对多种模型的广泛支持也使其成为 LLM 应用开发的理想选择。",
+      "degraded": false
     }
   ]
 }
