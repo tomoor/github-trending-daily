@@ -144,6 +144,28 @@
       "one_liner": "vLLM 是一个用于大型语言模型推理和服务的快速易用库。",
       "detail_md": "**解决什么问题**\nvLLM 旨在解决大型语言模型 (LLM) 推理和服务中的性能瓶颈，例如低吞吐量和高延迟问题。  它通过优化注意力机制的内存管理和请求的批处理来提高效率。 \n\n**核心功能**\nvLLM 提供最先进的服务吞吐量，支持高效的注意力键值内存管理（PagedAttention），以及连续批处理、分块预填充和前缀缓存。  它还支持多种量化技术和优化的注意力内核，如 FlashAttention。  此外，vLLM 具有灵活易用的特点，无缝集成 Hugging Face 模型，支持多种解码算法、分布式推理、流式输出和结构化输出。 \n\n**技术亮点**\nvLLM 的技术亮点包括 PagedAttention 机制，用于高效管理注意力键值内存，消除碎片化。  它还采用连续批处理和分块预填充技术，以优化请求调度和迭代级批处理。  vLLM 支持推测解码，并通过 `torch.compile` 进行内核融合和图优化。  此外，它支持 NVIDIA、AMD、Intel GPU 以及 TPU 和 CPU 等多平台硬件。 \n\n**适合谁用**\nvLLM 适合需要高性能、低延迟 LLM 推理和服务的开发者、研究人员和企业。  它特别适用于那些希望在各种硬件平台上部署大型语言模型，并需要高效内存管理和高吞吐量的场景。",
       "degraded": false
+    },
+    {
+      "id": "wshobson/agents",
+      "owner": "wshobson",
+      "name": "agents",
+      "url": "https://github.com/wshobson/agents",
+      "stars": 41319,
+      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
+      "one_liner": "这是一个为Claude Code设计的插件市场，提供细粒度自动化和多智能体编排，覆盖现代软件开发。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型在软件开发中面临的三个主要挑战：提高Token效率、扩展领域覆盖范围以及优化成本。    通过允许开发者按需安装插件，它避免了同时加载所有185个智能体，从而节省了Token使用并降低了成本。  \n\n**核心功能**\n核心功能包括一个插件市场架构，其中包含80个插件、185个智能体、153个技能和16个多智能体编排器。  每个插件都是一个独立的单元，结合了领域专家（智能体）、可执行工具（命令）和渐进式知识包（技能）。  用户可以通过`/plugin install`命令安装特定插件，例如`/plugin install python-development`。 \n\n**技术亮点**\n该项目采用四层模型策略（Opus 4.7/Sonnet 4.6/Haiku 4.5/Inherit），根据任务复杂性平衡性能和成本。  技能通过三层渐进式披露模式实现，以最小化Token使用。  此外，还引入了PluginEval质量框架，通过静态分析、LLM判断和蒙特卡洛模拟对插件和技能进行三层评估和认证。 \n\n**适合谁用**\n该项目适合需要自动化和智能体协助的软件开发者，涵盖从后端开发、前端移动开发到安全、运维、市场营销等25个类别。   例如，`python-development`插件适用于Python开发者，`security-scanning`插件适用于安全审计。",
+      "degraded": false
+    },
+    {
+      "id": "sickn33/agentic-awesome-skills",
+      "owner": "sickn33",
+      "name": "agentic-awesome-skills",
+      "url": "https://github.com/sickn33/agentic-awesome-skills",
+      "stars": 48184,
+      "description": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+      "one_liner": "本项目提供多语言文档和AI代理技能，旨在提升AI开发效率与协作。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI代理开发中多语言文档支持不足的问题，通过提供结构化的多语言文档，降低全球开发者和AI研究人员的参与门槛。同时，它也解决了AI代理技能复用和标准化的问题，通过定义清晰的技能结构和模板，促进高质量AI技能的创建和共享。\n\n**核心功能**\n核心功能包括全面的多语言文档，特别是简体中文和越南语文档，涵盖用户指南、维护流程和贡献指南。此外，项目还提供AI代理技能，例如 `CrossFrame Casebook`，能够将聊天记录、项目复盘等材料整理成可复用、可追溯的案例库。\n\n**技术亮点**\n技术亮点在于其目录式本地化策略，确保不同语言文档结构与英文源文档一致。AI代理技能（如 `SKILL.md` 文件）保持英文，以确保模型性能和兼容性。项目还通过 `registry-sync` 注释块跟踪版本和技能数量，保证元数据同步。\n\n**适合谁用**\n本项目适合全球的AI开发者、AI研究人员以及希望利用AI代理提升工作效率的团队。特别是对于需要多语言支持和标准化AI技能开发的社区，本项目提供了强大的工具和文档支持。",
+      "degraded": false
     }
   ]
 }
