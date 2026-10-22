@@ -1,0 +1,127 @@
+{
+  "doc_token": "Jt2idC9HXoOf6HxKJp4c2ur6n9b",
+  "doc_url": "https://my.feishu.cn/docx/Jt2idC9HXoOf6HxKJp4c2ur6n9b",
+  "items": [
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 36349,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "本项目是一个代码代理技能，能将您的代理转变为安全审计员，通过六阶段流程发现代码库中的安全漏洞。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决传统安全审计效率低下、覆盖不全的问题。它通过自动化和结构化的审计流程，帮助发现代码库中违反信任边界的漏洞，并提供可复现的证据和最小化的修复建议。\n\n### 核心功能\n核心功能包括六个阶段的审计流程：\n1.  **侦察**：映射架构、信任边界和输入面，生成 `architecture.md` 和 `coverage-ledger.json`。\n2.  **覆盖引导式狩猎**：分配独立的代理执行检查，记录结果，并识别未覆盖的区域。\n3.  **候选验证**：独立的验证器尝试反驳发现的漏洞候选。\n4.  **结构化输出**：将确认、待验证和已拒绝的记录写入 `findings.json`，并进行验证。\n5.  **独立记录验证**：新的代理验证最终的源声明。\n6.  **目标中立报告**：从验证过的记录和覆盖账本中生成 `REPORT.md`、`FINDINGS-DETAIL.md` 和 `NEEDS-VALIDATION.md`。\n\n### 技术亮点\n该项目采用多代理协调工作，通过严格的沙盒环境确保执行安全。它强调对抗性验证，即检查发现结果的代理与发现结果的代理是独立的，以提高审计的公正性。此外，它支持多次运行以提高覆盖率，并能根据预算和范围调整审计深度。\n\n### 适合谁用\n本项目适合需要对代码库进行安全审计的开发者、安全工程师和团队。特别是那些希望自动化安全审查流程、提高漏洞发现效率、并确保审计结果可信赖的用户。它也适用于需要进行渗透测试或专注于特定漏洞研究的场景。",
+      "degraded": false
+    },
+    {
+      "id": "vllm-project/vllm",
+      "owner": "vllm-project",
+      "name": "vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "stars": 94847,
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "one_liner": "vLLM 是一个用于大型语言模型 (LLM) 推理和服务的快速易用库，旨在提供最先进的吞吐量和灵活的部署选项。",
+      "detail_md": "**解决什么问题**\nvLLM 旨在解决 LLM 推理和部署中的性能瓶颈和复杂性问题。 它通过高效的内存管理、连续批处理和优化的内核，显著提高了 LLM 的服务吞吐量，降低了推理成本。\n\n**核心功能**\nvLLM 的核心功能包括：\n*   **PagedAttention**：高效管理注意力机制中的键值 (KV) 内存，提高内存利用率。\n*   **连续批处理**：对传入请求进行连续批处理，以及分块预填充和前缀缓存，以优化吞吐量。\n*   **多种量化支持**：支持 FP8、MXFP8/MXFP4、NVFP4、INT8、INT4、GPTQ/AWQ 等多种量化技术，以降低模型大小和计算需求。\n*   **优化的注意力内核**：集成了 FlashAttention、FlashInfer 等多种优化注意力内核。\n*   **分布式推理**：支持张量、流水线、数据、专家和上下文并行，用于分布式推理。\n*   **广泛的模型支持**：无缝集成 Hugging Face 上的 200 多种模型架构，包括解码器模型、MoE 模型、多模态模型等。\n*   **OpenAI 兼容 API**：提供 OpenAI 兼容的 API 服务器，方便集成。\n\n**技术亮点**\nvLLM 的技术亮点在于其创新的 **PagedAttention** 算法，该算法通过将 KV 缓存视为分页内存，有效解决了 LLM 推理中内存碎片化和利用率低的问题。 此外，它还利用 CUDA/HIP 图、自动内核生成和图级转换等技术，实现了快速灵活的模型执行。\n\n**适合谁用**\nvLLM 适合需要高性能、低成本 LLM 推理和服务的开发者、研究人员和企业。 无论是部署大型语言模型、构建 AI 驱动的应用，还是进行 LLM 相关的研究，vLLM 都能提供强大的支持。",
+      "degraded": false
+    },
+    {
+      "id": "stablyai/orca",
+      "owner": "stablyai",
+      "name": "orca",
+      "url": "https://github.com/stablyai/orca",
+      "stars": 101193,
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "one_liner": "Orca 是一个面向开发者的 AI 编排器，支持并行 worktree 和多智能体协作。",
+      "detail_md": "**解决什么问题** \nOrca 旨在解决开发者在使用 AI 智能体进行编程时遇到的效率和协作问题。它通过提供一个统一的平台，让开发者可以同时运行多个 AI 智能体，并在隔离的 `git worktree` 中比较和合并结果，从而提高开发效率。 \n\n**核心功能** \nOrca 的核心功能包括：移动 Companion 应用，用于监控和指挥智能体；并行 `Worktree`，允许同时分发提示给多个智能体并比较结果；终端分屏，提供 Ghostty 级终端体验；设计模式，能够将 UI 元素信息发送给智能体；以及 `Orca CLI`，支持脚本化工作流。\n\n**技术亮点** \nOrca 的技术亮点在于其对任何 `CLI` 智能体的广泛适配性，支持多种主流 AI 模型如 `Claude Code`、`Codex`、`OpenCode` 等。它还具备快速打开、账号切换与用量追踪、丰富仓库预览、`Computer Use`（智能体操作桌面应用）和通知系统等功能。项目文档支持多语言，例如简体中文 `README.zh-CN.md`，并通过 `GitHub Actions` 自动生成下载量徽章。\n\n**适合谁用** \nOrca 适合“100x 构建者”，即希望通过 AI 智能体大幅提升开发效率的开发者。它特别适合需要同时管理和协调多个 AI 编程助手、进行代码审查、以及自动化开发工作流的个人和团队。",
+      "degraded": false
+    },
+    {
+      "id": "headroomlabs-ai/headroom",
+      "owner": "headroomlabs-ai",
+      "name": "headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "stars": 77235,
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "one_liner": "Headroom 是一个 LLM 应用上下文优化层，可将 token 消耗降低 50-90%，同时保持模型准确性。",
+      "detail_md": "**解决什么问题**\nHeadroom 旨在解决大型语言模型 (LLM) 应用中高昂的 token 消耗、操作成本和延迟问题。  它通过优化 LLM 代理和应用与 LLM 提供商之间的上下文，显著减少 token 使用量，而不会牺牲模型响应的准确性。 \n\n**核心功能**\nHeadroom 提供多算法压缩、可逆架构 (CCR)、字节忠实代理、代理集成和输出整形等核心功能。  它能智能地压缩工具输出、日志、RAG 结果和文件，并将原始内容存储在本地，以便 LLM 在需要时检索。  \n\n**技术亮点**\n该项目采用多阶段压缩管道，针对对话的“实时区”进行优化，同时保留“冻结前缀”以最大化提供商侧的 KV 缓存命中。  它使用 `SmartCrusher` 进行 JSON 压缩、`CodeCompressor` 进行 AST 感知代码压缩以及 `Kompress` 进行基于 ML 的散文压缩。  Headroom 可以作为库、代理或 MCP 服务器运行，并支持多种 LLM 提供商。 \n\n**适合谁用**\nHeadroom 适用于希望降低 LLM 应用成本、减少延迟并优化上下文管理的开发者和团队。  它特别适合使用 Claude Code、GitHub Copilot CLI、Cursor、Aider 等编码代理的用户，以及处理大量工具输出、日志和 RAG 结果的工作负载。",
+      "degraded": false
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 171553,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail 是一个 AI 智能体技能和插件，旨在通过“不需则不写”原则，生成最少、高效的代码。",
+      "detail_md": "**解决什么问题**\nPonytail 旨在解决 AI 智能体在代码生成过程中可能出现的过度工程、代码冗余、成本高昂和执行时间长的问题。 它通过强制智能体遵循“不需则不写”（YAGNI）原则，减少不必要的代码和复杂性，从而降低代码行数、token 使用量、成本和时间。 \n\n**核心功能**\nPonytail 的核心功能是引导 AI 智能体像一位“懒惰的资深开发者”一样工作，优先选择最简单、最有效的解决方案。 它通过一个六步决策阶梯（Ponytail Ladder）来实现这一点：首先判断功能是否需要存在，然后依次考虑代码库中现有方案、标准库、平台原生功能、已安装依赖，最后才编写最少量的代码。 此外，它还提供 `/ponytail-review` 和 `/ponytail-audit` 等命令，用于代码审查和仓库审计，以发现 bug、安全漏洞和可优化点。 \n\n**技术亮点**\n该项目的主要技术亮点在于其可移植性，作为一个 AI 智能体技能和插件，它可以在多种宿主环境（如 Claude Code、Codex 等）中运行。 Ponytail 通过一个核心提示词 `skills/ponytail/SKILL.md` 定义其行为，并有精简版 `AGENTS.md` 供读取规则文件的智能体使用。 它还支持 `lite`、`full` 和 `ultra` 三种强度模式，以适应不同的开发需求。 \n\n**适合谁用**\nPonytail 适合任何希望提高 AI 智能体代码生成效率、降低开发成本和时间、并确保代码简洁性和可维护性的开发者和团队。 特别是那些使用 Claude Code、Codex 或其他支持技能/插件的 AI 智能体进行软件开发的个人或组织。",
+      "degraded": false
+    },
+    {
+      "id": "Comfy-Org/ComfyUI",
+      "owner": "Comfy-Org",
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "stars": 141485,
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "one_liner": "ComfyUI 是一个强大的模块化 AI 创作引擎，通过可视化节点图界面，赋能专业人士掌控 AI 模型和内容生成过程。",
+      "detail_md": "**解决什么问题**\nComfyUI 旨在解决 AI 内容创作中对模型、参数和输出缺乏精细控制的问题。它通过提供一个可视化、模块化的节点图界面，让用户无需编写代码即可构建复杂的 AI 工作流，从而实现对生成过程的全面掌控。\n\n**核心功能**\nComfyUI 的核心功能包括：可视化节点图界面，用于构建和重用图像、视频、音频、3D 和文本工作流；支持最新的开源和合作伙伴 AI 模型；优化的推理引擎，可在消费级硬件上高效运行，甚至在低 VRAM 环境下也能运行大型模型；以及通过 API 端点无缝集成到生产流程。\n\n**技术亮点**\n该项目的技术亮点在于其高度优化的扩散模型推理引擎，专注于本地消费级硬件，能够利用异步权重流技术在低至 4GB 显存和 8GB 内存的设备上快速运行大型模型。它还支持多种操作系统和 GPU 类型（NVIDIA, AMD, Intel, Apple Silicon, Ascend），并提供 Windows 便携版，无需传统 Python 安装即可运行。\n\n**适合谁用**\nComfyUI 适合需要对 AI 内容创作过程有精细控制的视觉专业人士、艺术家、设计师以及开发者。它也适合那些希望在本地消费级硬件上高效运行最新 AI 模型，并希望通过可视化界面构建复杂工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "supabase/supabase",
+      "owner": "supabase",
+      "name": "supabase",
+      "url": "https://github.com/supabase/supabase",
+      "stars": 112973,
+      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "one_liner": "Supabase是一个Postgres开发平台，提供后端服务，帮助开发者快速构建和扩展应用。",
+      "detail_md": "**解决什么问题**\nSupabase旨在提供一个开源的Firebase替代方案，解决开发者在构建应用时对后端服务（如数据库、认证、API、实时功能、存储等）的需求，同时避免了自行搭建和维护复杂后端基础设施的负担。它通过集成多个开源项目，提供统一的控制面板，简化了开发流程，让开发者能够专注于产品核心功能。\n\n**核心功能**\nSupabase的核心功能包括：\n*   **Postgres数据库**：提供一个完全托管的PostgreSQL数据库。\n*   **认证 (Auth)**：基于GoTrue的JWT认证系统，支持多种登录方式（如邮件、OAuth、SAML、SSO）。\n*   **即时API**：从数据库模式自动生成REST和GraphQL API。\n*   **边缘函数 (Edge Functions)**：基于Deno Runtime的无服务器函数。\n*   **实时订阅 (Realtime)**：通过WebSocket同步客户端状态，支持数据库变更监听、用户在线状态追踪和消息广播。\n*   **存储 (Storage)**：提供文件存储服务。\n*   **向量嵌入 (Vector Embeddings)**：支持AI/ML应用的向量存储和语义搜索。\n*   **AI助手**：提供上下文感知的帮助和SQL生成功能。\n\n**技术亮点**\n*   **基于PostgreSQL**：以PostgreSQL为核心，提供强大的关系型数据库功能。\n*   **模块化架构**：采用微服务架构，各组件独立运行并与PostgreSQL交互。\n*   **Next.js构建的Studio Dashboard**：管理界面使用Next.js构建，支持平台模式、CLI模式和测试环境。\n*   **Valtio状态管理**：全局UI状态通过Valtio代理管理。\n*   **特性标志系统**：通过ConfigCat和PostHog实现特性标志管理，支持根据用户属性动态启用功能。\n*   **资源监控**：提供CPU、RAM、磁盘I/O等资源使用情况的预警系统。\n*   **AI集成**：AI助手提供SQL生成和上下文帮助，并支持与Claude、Cursor等AI工具集成。\n\n**适合谁用**\nSupabase适合需要快速构建和扩展应用的开发者、初创公司以及创新团队。它为那些希望获得类似Firebase的开发体验，但又偏爱开源技术栈和PostgreSQL数据库的用户提供了理想的解决方案。特别是对于需要数据库、认证、实时功能、存储和AI/ML集成等后端服务的项目，Supabase能够显著提高开发效率。",
+      "degraded": false
+    },
+    {
+      "id": "twentyhq/twenty",
+      "owner": "twentyhq",
+      "name": "twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "stars": 59136,
+      "description": "The open alternative to Salesforce, designed for AI.",
+      "one_liner": "Twenty 是一个开源 CRM 平台，旨在为技术团队提供可定制、可扩展的构建模块，以满足复杂的业务需求并快速适应业务发展。",
+      "detail_md": "**解决什么问题**\nTwenty 旨在解决传统 CRM 软件灵活性不足、难以定制以及供应商锁定等问题。 它为企业提供了一个可根据自身业务需求进行重塑的 CRM 解决方案，避免了团队在工具上花费过多时间进行“对抗”的情况。\n\n**核心功能**\nTwenty 提供了全面的 CRM 功能，包括自定义数据模型、 视图与管道（如表格、看板、日历视图）、 工作流与自动化、 日历与邮箱同步、 AI 智能体、 仪表盘与报表、 权限与访问控制、 API 与可扩展性 以及数据导入导出和自托管能力。\n\n**技术亮点**\n该项目基于现代技术栈构建，如 React 和 TypeScript， 拥有开源内核， 支持自托管。 它提供开发者优先的 API（包括 GraphQL 和 REST）， 并能为每个工作区自动生成文档。 此外，它还集成了 Crowdin 平台，支持超过 28 种语言的自动化翻译工作流。\n\n**适合谁用**\nTwenty 适合正在寻求替代 Salesforce 的大型企业、 由技术型创始人领导的初创公司、 希望构建自定义潜在客户评分和外呼工作流的 GTM 团队、 重视数据隐私并需要自托管的组织、 Salesforce 合作伙伴 以及熟悉 TypeScript、React 和 PostgreSQL 的网页开发代理机构。",
+      "degraded": false
+    },
+    {
+      "id": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "stars": 42808,
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "one_liner": "Kronos 是首个开源金融K线基础模型，通过两阶段框架处理金融时序数据进行预测。",
+      "detail_md": "**解决什么问题**\nKronos旨在解决金融市场数据高噪声、非平稳的特点，提供一个统一的模型来处理多样化的量化任务。 它通过将连续、多维的K线数据（OHLCV）量化为分层离散token，并使用大型自回归Transformer进行预训练，从而实现对金融时间序列的有效建模和预测。 \n\n**核心功能**\n项目核心功能包括：1. `KronosTokenizer`，将OHLCV数据编码为分层离散token。2. `Kronos` 模型，一个基于Transformer的自回归预测器，用于生成金融市场预测。3. `KronosPredictor`，封装了数据预处理、归一化、预测和反归一化，简化了预测流程。4. 支持在自定义CSV数据集上进行微调，并提供分布式训练能力。\n\n**技术亮点**\n1. **两阶段框架**：先通过专门的`KronosTokenizer`将K线数据量化为分层离散token，再由大型自回归Transformer进行预训练。\n2. **分层离散Token**：使用`BinarySphericalQuantizer`将连续数据映射到离散二进制码，并采用分层比特拆分（s1/s2 bits）处理粗粒度和细粒度特征。\n3. **高效预测**：`KronosPredictor`支持批量预测，利用GPU并行处理多个数据集，提高效率。\n4. **分布式训练**：支持使用PyTorch的DDP（Distributed Data Parallel）进行多GPU训练，加速模型微调过程。\n\n**适合谁用**\nKronos适合量化研究员、金融工程师以及对金融市场预测感兴趣的开发者。它为希望利用深度学习技术分析金融时间序列、构建交易策略或进行市场预测的用户提供了强大的基础模型和工具。",
+      "degraded": false
+    },
+    {
+      "id": "akitaonrails/ai-memory",
+      "owner": "akitaonrails",
+      "name": "ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 12306,
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "one_liner": "AI 编码工具的长期记忆解决方案，实现跨代理、跨项目、跨机器的知识共享与延续。",
+      "detail_md": "**解决什么问题**\n`ai-memory` 旨在解决 AI 编码代理在切换工具、项目或机器时出现的上下文丢失问题。 传统的 AI 代理记忆功能通常局限于单个机器、单个代理，并且在会话结束后会丢失信息。 `ai-memory` 通过提供一个共享的、持久化的记忆系统，确保知识在不同代理、项目和设备之间无缝传递。\n\n**核心功能**\n*   **跨代理记忆**：支持 20 多个 AI 编码工具共享一个记忆库，实现会话间的无缝切换和延续。\n*   **跨项目和跨机器记忆**：用户的编码习惯和项目知识可以在不同项目和设备间同步，无需重复解释。\n*   **Git 版本化 Markdown Wiki**：以 Git 版本化的 Markdown 文件作为真相来源，确保记忆的可读性、可移植性和可检查性。\n*   **自动捕获与整合**：通过生命周期钩子自动记录代理活动（提示、工具调用、会话边界），并将其整合为可读的 Markdown 页面。\n*   **零 LLM 默认**：核心捕获、搜索和交接功能无需任何 LLM API 密钥，可在本地运行。\n\n**技术亮点**\n*   **混合存储架构**：采用 Git 支持的 Markdown Wiki 作为不可变、可人工编辑的真相来源，结合派生的 SQLite 索引实现高性能搜索和检索。\n*   **单二进制 Rust 应用**：整个系统打包成一个自包含的 Rust 二进制文件，简化部署和管理。\n*   **记忆分层与衰减机制**：通过结构化的记忆分层和数学衰减公式，防止知识无限增长和上下文污染，并根据访问频率调整记忆保留。\n*   **零摩擦捕获**：通过生命周期钩子脚本自动记录代理操作，无需手动干预。\n\n**适合谁用**\n`ai-memory` 适合需要为 AI 编码工具提供长期、跨代理记忆的开发者和团队。 尤其适用于频繁切换 AI 代理、在不同项目间工作或在多台机器上协作的用户。 它也适用于希望拥有可审计、可人工编辑的记忆系统，并能根据需求选择是否使用 LLM 的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Graphify-Labs/graphify",
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": 131581,
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "one_liner": "Graphify 将代码、文档等转换为可查询的知识图谱，赋能 AI 助手，提升开发效率。",
+      "detail_md": "**解决什么问题** \nGraphify 旨在弥合开发者自然语言思维与代码实体（文件、函数、关系）之间的鸿沟。它通过将项目内容转化为可查询的知识图谱，使 AI 编码助手能够理解复杂的架构，从而减少手动搜索文件的时间和成本。\n\n**核心功能** \nGraphify 的核心功能包括：将代码、文档、PDF、图片和视频等多种文件类型映射成知识图谱；提供结构化（基于 AST）和语义化（基于 LLM）两种提取方式；支持对图谱进行查询、路径追踪和概念解释；以及通过社区检测识别代码库中的概念模块或子系统。\n\n**技术亮点** \n该项目采用 `tree-sitter` 进行本地代码解析，支持约 40 种编程语言，确保确定性和隐私性，无需 LLM 即可完成代码映射。对于非代码文件，它利用大型语言模型进行语义提取。每个图谱连接都明确标记为 `EXTRACTED`（直接提取）或 `INFERRED`（推断），提高了透明度。Graphify 生成的图谱是可遍历的真实图，而非简单的向量索引。\n\n**适合谁用** \nGraphify 适合使用 AI 编码助手（如 Claude Code, Cursor, Gemini CLI, GitHub Copilot 等）的开发者和团队。它能帮助用户更高效地理解和查询大型代码库，减少 AI 助手在每次会话中重复读取和解释代码的 token 消耗。Graphify Cloud 版本还支持 monorepo 和跨仓库场景，提供形式化验证和 SDLC 全局视角的代码评审功能。",
+      "degraded": false
+    }
+  ]
+}
