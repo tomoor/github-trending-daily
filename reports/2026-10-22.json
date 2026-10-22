@@ -122,6 +122,17 @@
       "one_liner": "Graphify 将代码、文档等转换为可查询的知识图谱，赋能 AI 助手，提升开发效率。",
       "detail_md": "**解决什么问题** \nGraphify 旨在弥合开发者自然语言思维与代码实体（文件、函数、关系）之间的鸿沟。它通过将项目内容转化为可查询的知识图谱，使 AI 编码助手能够理解复杂的架构，从而减少手动搜索文件的时间和成本。\n\n**核心功能** \nGraphify 的核心功能包括：将代码、文档、PDF、图片和视频等多种文件类型映射成知识图谱；提供结构化（基于 AST）和语义化（基于 LLM）两种提取方式；支持对图谱进行查询、路径追踪和概念解释；以及通过社区检测识别代码库中的概念模块或子系统。\n\n**技术亮点** \n该项目采用 `tree-sitter` 进行本地代码解析，支持约 40 种编程语言，确保确定性和隐私性，无需 LLM 即可完成代码映射。对于非代码文件，它利用大型语言模型进行语义提取。每个图谱连接都明确标记为 `EXTRACTED`（直接提取）或 `INFERRED`（推断），提高了透明度。Graphify 生成的图谱是可遍历的真实图，而非简单的向量索引。\n\n**适合谁用** \nGraphify 适合使用 AI 编码助手（如 Claude Code, Cursor, Gemini CLI, GitHub Copilot 等）的开发者和团队。它能帮助用户更高效地理解和查询大型代码库，减少 AI 助手在每次会话中重复读取和解释代码的 token 消耗。Graphify Cloud 版本还支持 monorepo 和跨仓库场景，提供形式化验证和 SDLC 全局视角的代码评审功能。",
       "degraded": false
+    },
+    {
+      "id": "strelov1/freehire",
+      "owner": "strelov1",
+      "name": "freehire",
+      "url": "https://github.com/strelov1/freehire",
+      "stars": 2574,
+      "description": "freehire — the open-source search engine for job seekers",
+      "one_liner": "Freehire 是一个开源的 IT 职位聚合器，直接从公司招聘网站抓取职位信息，去重并智能标记，提供干净、可搜索的职位列表。",
+      "detail_md": "**解决什么问题**\nFreehire 旨在解决传统招聘网站信息冗余、存在大量重复、过期或虚假职位的问题。它通过直接从公司 ATS (Applicant Tracking System) 抓取职位，并进行标准化和去重，确保用户看到的是真实、最新的职位信息，避免了中介和死链接。\n\n**核心功能**\n核心功能包括：从公司招聘页面直接抓取职位；将不同来源的职位标准化并去重；提供基于地区、工作模式、资历、技能和薪资的智能搜索和筛选；支持用户跟踪申请进度；以及通过 CLI 和 API 进行交互。\n\n**技术亮点**\n项目采用 Go 语言构建后端服务，使用 PostgreSQL 进行数据存储，并结合 sqlc 实现类型安全的数据库访问。Meilisearch 提供全文和分面搜索功能。AI 驱动的 LLM (Large Language Model) 用于职位信息的丰富和标记，例如提取技能、资历和薪资范围。前端使用 SvelteKit 构建，支持 SSR 以优化 SEO 和初始加载速度。\n\n**适合谁用**\nFreehire 适合所有 IT 行业的求职者，尤其是那些希望直接从公司获取真实职位信息、避免中介干扰的用户。同时，由于其开源特性和提供的 API/CLI 工具，它也适合开发者、AI 代理以及希望在此基础上构建自定义招聘解决方案的团队。",
+      "degraded": false
     }
   ]
 }
