@@ -1,0 +1,105 @@
+{
+  "doc_token": "ZGbnduXEyoMfqZx89itczmn9nyf",
+  "doc_url": "https://my.feishu.cn/docx/ZGbnduXEyoMfqZx89itczmn9nyf",
+  "items": [
+    {
+      "id": "php/php-src",
+      "owner": "php",
+      "name": "php-src",
+      "url": "https://github.com/php/php-src",
+      "stars": 41134,
+      "description": "The PHP Interpreter",
+      "one_liner": "PHP 语言的官方实现，包含核心引擎、Zend 虚拟机、扩展系统和 SAPI 接口。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个完整的 PHP 编程语言解释器，使用户能够运行 PHP 脚本，并为 Web 开发提供强大的后端支持。 它解决了在不同服务器环境（如 Apache、Nginx）下执行 PHP 代码的需求。\n\n**核心功能**\n核心功能包括 PHP 脚本的解析、编译和执行，通过 Zend 引擎实现。 它提供了丰富的标准库和扩展机制，支持数据库连接、文件操作、网络通信等多种功能。 此外，还包含 SAPI 模块，用于与各种 Web 服务器接口集成，如 FPM、CLI 等。\n\n**技术亮点**\n技术亮点在于其模块化的架构，包括核心 PHP 引擎、Zend 虚拟机、扩展系统和 SAPI 接口。 Zend 引擎负责将 PHP 代码编译成操作码并执行，支持 JIT 优化。 灵活的扩展系统允许开发者添加自定义功能。 构建系统基于 Autoconf，支持跨平台编译。\n\n**适合谁用**\n该项目适合 PHP 语言开发者、Web 应用程序开发者、系统管理员以及对 PHP 内部工作原理感兴趣的贡献者。 开发者可以利用它构建和运行 PHP 应用程序，系统管理员可以部署和配置 PHP 环境，而贡献者可以参与到 PHP 语言本身的开发和改进中。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 31565,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "one_liner": "这个项目是Anthropic的知识工作插件集合，旨在通过专业插件扩展Claude在任务管理、企业搜索等方面的能力，以适应特定工作职能和工具流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决企业中信息碎片化和工作流程效率低下的问题。它通过提供统一的知识检索、任务管理和自动化工作流，帮助用户整合分散在不同工具（如电子邮件、聊天、维基和项目跟踪器）中的信息，并提高个人和团队的工作效率。\n\n**核心功能**\n项目包含两个主要插件：`productivity` 和 `enterprise-search`。`productivity` 插件提供任务管理（基于Markdown的 `TASKS.md` 文件）、工作记忆（`CLAUDE.md` 和 `memory/` 目录）以及可视化仪表盘功能。`enterprise-search` 插件则提供跨工具搜索（如Slack、Notion、Jira等）、每日/每周摘要和知识合成功能。\n\n**技术亮点**\n该项目采用文件化、工具无关和MCP（Model Context Protocol）集成三大架构原则。插件以Markdown和JSON文件形式存在，易于编辑和版本控制。通过MCP服务器，插件能够连接到各种外部工具，实现统一的数据接口和跨平台操作。\n\n**适合谁用**\n该项目适合希望通过Claude定制AI助手的最终用户（如销售、财务、法律等专业人士）、希望根据公司特定术语和流程定制插件的团队管理员，以及希望创建或扩展插件的开发者。它旨在为需要管理任务、检索信息和自动化工作流程的专业知识工作者提供支持。",
+      "degraded": false
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 173415,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "one_liner": "Ponytail是一个AI代理技能，旨在通过最少代码实现高效、高质量的开发。",
+      "detail_md": "### 解决什么问题\nPonytail解决的是AI代理在生成代码时可能出现的过度工程、代码冗余、成本高昂和效率低下等问题。  它通过遵循“你不需要它”（YAGNI）原则，鼓励生成最少且最必要的代码，同时确保代码的正确性、安全性和可维护性。 \n\n### 核心功能\nPonytail的核心功能是提供一套决策阶梯，指导AI代理在编写代码前进行思考。  这包括检查需求是否必要、代码库中是否已存在类似功能、是否可使用标准库或平台特性、是否可利用现有依赖，以及是否能用一行代码解决。  它还提供`/ponytail-review`和`/ponytail-audit`命令，用于代码审查和仓库审计，发现bug、安全漏洞、性能问题和可精简的代码。 \n\n### 技术亮点\nPonytail的技术亮点在于其“懒惰的资深开发者”模式，强调“最好的代码是未曾编写的代码”。  它通过严格的决策流程，显著减少代码行数（-53%）、降低成本（-26%）和时间（-41%），同时保持高水平的测试覆盖率（98%的风险逻辑带有测试）。  此外，它还支持多种强度级别（lite, full, ultra）以适应不同需求，并在Claude Code中提供可视化信息栏（band）和本地看板（board）来跟踪成本和效率。  \n\n### 适合谁用\nPonytail适合希望提高AI代理代码生成效率和质量的开发者和团队。  特别是那些在使用Claude Code、Codex或其他支持AI代理的开发环境中，追求精简、安全、高性能代码的用户。  它能帮助避免过度设计，确保代码只包含任务所需的核心功能，同时不牺牲验证、错误处理、安全性和可访问性。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 39480,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "该项目是一个将编码代理转变为安全审计员的技能，通过六阶段流程对代码库进行安全审计，发现漏洞并生成报告。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决传统安全审计中发现漏洞效率低、验证不充分以及报告不规范的问题。它通过自动化和结构化的流程，确保漏洞发现基于实际的信任边界和数据流，并提供可验证的证据和标准化的输出。\n\n### 核心功能\n核心功能包括六个阶段的审计流程：\n1.  **侦察**：映射架构、信任边界和输入面，生成 `architecture.md` 和 `coverage-ledger.json`。\n2.  **覆盖引导式搜寻**：分配独立的搜寻代理，根据 `coverage-ledger.json` 检查代码路径，并记录结果。\n3.  **候选验证**：将发现的每个候选漏洞提交给独立的验证器进行复现和验证。\n4.  **结构化输出**：将确认、待验证和已拒绝的记录写入 `findings.json`，并根据 `report-schema.json` 进行验证。\n5.  **独立记录验证**：独立的代理验证最终的源声明，并处理修正或状态变更。\n6.  **目标中立报告**：从验证后的记录和覆盖账本中生成 `REPORT.md`、`FINDINGS-DETAIL.md` 和 `NEEDS-VALIDATION.md` 报告。\n\n### 技术亮点\n该项目采用多代理协作模式，通过 `research` 代理进行侦察和 `general` 代理进行搜寻和验证。它强调“对抗性验证”，即发现漏洞的代理与验证漏洞的代理相互独立。所有目标代码的执行都在严格的沙盒环境中进行，以确保安全性和隔离性。此外，它还支持增量审计，利用先前的账本和发现来优化后续审计的覆盖范围。\n\n### 适合谁用\n该项目适用于需要对代码库、API、服务、CLI 工具、库和守护程序进行安全指导和漏洞审查的用户。特别是对于寻求全面、端到端安全审计或渗透测试的用户，以及希望通过自动化工具提高漏洞发现和验证效率的团队。它也适合那些需要结构化、可验证的安全报告和详细漏洞信息的安全专业人员。",
+      "degraded": false
+    },
+    {
+      "id": "Graphify-Labs/graphify",
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": 132910,
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "one_liner": "Graphify 将代码、文档等转换为可查询的知识图谱，赋能 AI 助手。",
+      "detail_md": "**解决什么问题**\nGraphify 旨在弥合开发者自然语言思维与代码实体之间的鸿沟，让 AI 编程助手无需手动搜索文件，即可理解复杂的架构。它通过将代码、文档、PDF、图片和视频等项目文件转化为可查询的知识图谱来解决这个问题。\n\n**核心功能**\nGraphify 的核心功能包括：\n*   **知识图谱构建**：将项目文件（代码、文档、多媒体）映射为知识图谱，支持结构化（AST 解析）和语义化（LLM 推断）两种提取方式。\n*   **图谱查询**：允许用户通过自然语言查询、路径追踪和概念解释来与图谱交互，例如使用 `graphify query`、`graphify path` 和 `graphify explain` 命令。\n*   **AI 助手集成**：通过安装技能或配置指令文件，使 AI 助手（如 Claude Code, Cursor）优先使用知识图谱回答问题，从而减少 token 消耗。\n*   **输出报告**：生成交互式 HTML 可视化图谱 (`graph.html`) 和包含关键概念、社区划分的 Markdown 报告 (`GRAPH_REPORT.md`)。\n\n**技术亮点**\n*   **混合提取**：结合 `tree-sitter` 进行本地 AST 解析（支持约 40 种编程语言），以及 LLM 进行语义推断，区分 `EXTRACTED`（显式存在）和 `INFERRED`（推断得出）的连接。\n*   **社区检测**：利用 Leiden 或 Louvain 算法对图谱进行社区检测，将代码库划分为概念模块或架构子系统。\n*   **本地优先与隐私**：代码解析完全在本地进行，不依赖 LLM，确保数据不离开用户机器；仅在配置后才对文档和媒体进行可选的语义解析。\n*   **非向量索引**：采用真正的图结构而非向量索引，支持直接遍历和查询，提供更精确的上下文理解。\n\n**适合谁用**\nGraphify 适合需要提升 AI 编程助手效率的开发者、团队和企业。特别是：\n*   **AI 编程助手用户**：希望减少 AI 助手 token 消耗，并获得更准确、上下文感知的代码理解和回答。\n*   **大型代码库维护者**：处理 monorepo 或跨仓库项目，需要全局架构视图和代码评审工具。\n*   **需要形式化验证的团队**：希望检查架构和依赖关系的不变性，确保代码质量。\n*   **希望整合 SDLC 工具的团队**：将 Sentry、Jira 等工具的数据整合到同一知识图谱中，实现事件和工单与代码的关联。",
+      "degraded": false
+    },
+    {
+      "id": "supabase/supabase",
+      "owner": "supabase",
+      "name": "supabase",
+      "url": "https://github.com/supabase/supabase",
+      "stars": 113469,
+      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "one_liner": "Supabase 是一个开源的后端即服务平台，它提供了一套工具来帮助开发者快速构建和扩展应用程序，无需管理复杂的后端基础设施。",
+      "detail_md": "**解决什么问题**\nSupabase 旨在解决传统后端开发中遇到的复杂性问题，例如数据库管理、用户认证、API 构建和实时数据同步等。它提供了一个类似 Firebase 的开发体验，但基于企业级的开源工具，让开发者能够专注于产品开发，而不是基础设施的维护。\n\n**核心功能**\nSupabase 的核心功能包括：基于 PostgreSQL 的数据库、JWT 认证服务 GoTrue、自动生成 RESTful API 的 PostgREST、实时数据同步服务 (Realtime)、以及边缘函数 (Edge Functions)。此外，它还提供可扩展的 S3 兼容对象存储 (Storage)  和 AI/Vector 功能。\n\n**技术亮点**\n该项目采用模块化架构，将多个独立的开源项目整合到一个统一的后端即服务平台中。技术栈主要基于 TypeScript、Next.js 和 PostgreSQL。它是一个 pnpm monorepo，使用 TurboRepo 进行管理，包含了仪表盘、文档、营销网站和共享工具包。Supabase 还支持可恢复上传 (Resumable Uploads)  和自动 CLI 登录，并提供 AI 助手  和自动生成的 API。\n\n**适合谁用**\nSupabase 适合需要快速构建和部署应用程序的开发者和初创公司。它为那些希望利用 PostgreSQL 的强大功能，同时避免手动配置和维护后端基础设施的用户提供了便利。对于寻求 Firebase 开源替代方案的开发者来说，Supabase 是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "fastapi/fastapi",
+      "owner": "fastapi",
+      "name": "fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "stars": 103717,
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "one_liner": "FastAPI 是一个现代、高性能的 Python Web 框架，用于快速构建 API，基于标准类型提示，提供自动文档和数据验证功能。",
+      "detail_md": "**解决什么问题**\nFastAPI 旨在解决传统 Python Web 框架在性能、开发效率和 API 文档生成方面的痛点。它通过利用 Python 类型提示，减少了代码重复，降低了人为错误，并显著提升了开发速度。\n\n**核心功能**\nFastAPI 的核心功能包括：极高的性能，与 NodeJS 和 Go 相媲美；基于标准 Python 类型提示的自动数据验证、序列化和文档生成；内置的依赖注入系统；以及对 OpenAPI 和 JSON Schema 的完全兼容，自动生成交互式 API 文档（Swagger UI 和 ReDoc）。\n\n**技术亮点**\nFastAPI 的技术亮点在于其“声明一次，获得所有”的设计哲学，通过单一的 Python 函数签名和类型注解，即可定义参数来源、验证规则、响应模型和 OpenAPI 文档。它底层依赖 Starlette 处理 Web 部分（路由、中间件、WebSocket）和 Pydantic 处理数据部分（验证、序列化、JSON Schema 生成），从而实现高性能和强大的数据处理能力。\n\n**适合谁用**\nFastAPI 适合需要构建高性能、易于维护且具有自动交互式文档的 API 的 Python 开发者。它特别适合开发微服务、数据科学和机器学习服务，以及任何需要快速开发和部署生产级 API 的场景。",
+      "degraded": false
+    },
+    {
+      "id": "luongnv89/claude-howto",
+      "owner": "luongnv89",
+      "name": "claude-howto",
+      "url": "https://github.com/luongnv89/claude-howto",
+      "stars": 43161,
+      "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "one_liner": "这个项目是Claude Code功能和概念的示例集合，旨在帮助用户学习和掌握其高级特性。</cite>",
+      "detail_md": "### 解决什么问题\n该项目旨在解决用户在学习和使用Claude Code时遇到的复杂性问题，通过提供结构化的示例和学习路径，帮助用户理解和应用其各项功能。</cite> 特别是，它通过Checkpoints功能解决了在开发过程中进行安全实验、从错误中恢复以及比较不同解决方案的需求。</cite>\n\n### 核心功能\n该项目展示了Claude Code的多种核心功能，包括：\n*   **Slash Commands**：用户可调用的快捷方式，用于执行特定任务。</cite>\n*   **Memory**：跨会话的持久化上下文，用于长期学习和偏好设置。</cite>\n*   **Skills**：可重用的、自动调用的能力，用于自动化工作流程。</cite>\n*   **Subagents**：具有独立上下文和自定义提示的专业AI助手，用于任务委派。</cite>\n*   **MCP Protocol**：用于访问外部工具和API的模型上下文协议。</cite>\n*   **Hooks**：事件驱动的自动化，响应Claude Code事件自动执行脚本。</cite>\n*   **Checkpoints**：会话快照和回溯功能，允许保存和恢复会话状态，进行安全实验和错误恢复。</cite></cite>\n*   **Advanced Features**：包括规划模式、扩展思考、后台任务、权限模式和无头模式等，用于复杂工作流程和自动化。</cite></cite>\n\n### 技术亮点\n该项目通过以下技术亮点提升了Claude Code的使用体验：\n*   **模块化设计**：各项功能（如Skills、Subagents）被设计为模块化组件，易于理解和重用。</cite>\n*   **事件驱动自动化**：Hooks系统允许在特定事件发生时自动执行脚本，实现工作流程自动化。</cite>\n*   **会话状态管理**：Checkpoints系统提供了会话状态的快照和回溯能力，支持安全实验和错误恢复，并且可以在会话中进行比较和导出。</cite></cite>\n*   **高级规划与思考**：规划模式和扩展思考功能使Claude Code能够处理复杂任务，生成详细计划并进行深入分析。</cite></cite>\n*   **CLI集成**：提供全面的命令行接口，便于CI/CD集成、脚本自动化和批处理。</cite>\n\n### 适合谁用\n该项目适合以下用户：\n*   **Claude Code新手**：提供推荐的学习路径和分步指南，帮助快速入门。</cite>\n*   **开发者和工程师**：希望利用Claude Code进行代码审查、重构、新功能开发和自动化工作流程的用户。</cite>\n*   **团队和组织**：希望标准化开发流程、提高代码质量、实现团队协作和自动化部署的用户。</cite>\n*   **高级用户和专家**：希望深入了解Claude Code的高级功能，如规划模式、无头模式和CLI自动化，以实现更复杂的任务和集成。</cite></cite>",
+      "degraded": false
+    },
+    {
+      "id": "Meloong-Git/PCL",
+      "owner": "Meloong-Git",
+      "name": "PCL",
+      "url": "https://github.com/Meloong-Git/PCL",
+      "stars": 8681,
+      "description": "Minecraft 启动器 Plain Craft Launcher（PCL）。",
+      "one_liner": "PCL2是一款多功能Minecraft启动器，支持下载、安装、配置和启动游戏实例。",
+      "detail_md": "**解决什么问题**\n该项目旨在为Minecraft玩家提供一个全面的解决方案，简化Minecraft游戏实例的下载、安装、配置和启动过程。它支持多种Mod加载器（如Forge、Fabric）和整合包格式（如CurseForge、Modrinth），解决了玩家在管理不同版本和模组时遇到的复杂性问题。\n\n**核心功能**\nPCL2的核心功能包括游戏启动、文件下载管理、Mod包安装和Minecraft实例管理。它还提供动态主题、自定义事件系统和异步任务管理等功能，以提升用户体验。\n\n**技术亮点**\n项目采用VB.NET和WPF构建，遵循分层架构设计，确保模块化和关注点分离。它实现了Loader任务模式进行异步操作，以及自定义事件模式来解耦UI交互和业务逻辑。此外，还包括动态HSL主题引擎和优化的网络配置以提高下载效率。\n\n**适合谁用**\nPCL2适合所有Minecraft玩家，特别是那些需要管理多个Minecraft版本、Mod和整合包的用户。它也适合希望简化游戏启动流程，并享受更多自定义和优化功能的玩家。",
+      "degraded": false
+    }
+  ]
+}
