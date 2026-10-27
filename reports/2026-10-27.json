@@ -1,0 +1,160 @@
+{
+  "doc_token": "H0yzdpenjoFjhax1dgScWNQYngi",
+  "doc_url": "https://my.feishu.cn/docx/H0yzdpenjoFjhax1dgScWNQYngi",
+  "items": [
+    {
+      "id": "Nutlope/hallmark",
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "stars": 36242,
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "one_liner": "Hallmark是一个AI编码助手的UI设计技能，旨在生成非AI痕迹的独特用户界面。",
+      "detail_md": "**解决什么问题**\nHallmark解决了AI生成代码中“同质化默认”的问题，即大多数AI模型倾向于生成颜色互换但结构相似的模板。它通过引入多样化的宏观结构和主题，以及严格的验证流程，确保不同的需求能产生结构上截然不同的网站。\n\n**核心功能**\nHallmark提供四种核心操作：`build`（构建新UI），`audit`（审计现有代码），`redesign`（重新设计页面结构）和`study`（从现有设计中提取“DNA”）。它通过选择宏观结构、应用主题和运行“Slop Test”来生成UI，避免了AI生成的通用外观。\n\n**技术亮点**\n该项目通过20多种目录主题和21种宏观结构实现设计多样化，并使用OKLCH色彩空间和4pt间距刻度来确保高保真度。它还包含一个58门的“Slop Test”验证套件，用于捕捉常见的AI布局和对比度错误。\n\n**适合谁用**\nHallmark适合使用Claude Code、Cursor和Codex等AI编码助手的开发者和设计师，他们希望生成具有独特设计感、避免“AI生成”外观的用户界面。它也适用于需要审计现有代码、重新设计页面或从现有设计中提取设计“DNA”的用户。",
+      "degraded": false
+    },
+    {
+      "id": "TauricResearch/TradingAgents",
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "stars": 116047,
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "one_liner": "TradingAgents 是一个基于 LangGraph 的多智能体 LLM 金融交易框架，通过协调专业智能体进行市场分析、模拟专业决策并生成交易决策。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统金融交易中信息处理复杂、决策效率低下以及缺乏多角度分析的问题。 它通过模拟真实交易公司的运作模式，将复杂的交易任务分解为专业角色，利用大型语言模型（LLM）驱动的智能体进行协作分析和决策，从而提高交易决策的质量和效率。\n\n## 核心功能\nTradingAgents 的核心功能包括多智能体协作分析、交易决策生成和回测评估。 它拥有分析师团队（基本面、情绪、新闻、技术分析）、 研究员团队（多空辩论）、 交易员智能体（决策合成） 和风险管理与投资组合经理（风险评估与批准）。此外，它还支持回测功能，可以评估不同股票和日期范围内的交易决策表现。\n\n## 技术亮点\n该项目基于 LangGraph 构建，确保了灵活性和模块化。 它支持多种 LLM 提供商，如 OpenAI、Google、Anthropic 等， 并实现了时间点完整性，确保历史运行不会引入未来数据。 其他技术亮点包括生成 HTML 报告、 投资组合上下文集成 以及 SEC EDGAR 财务数据服务。\n\n## 适合谁用\nTradingAgents 框架主要面向金融研究人员、量化交易员以及对多智能体系统和 LLM 在金融领域应用感兴趣的开发者。 它提供了一个研究平台，用于探索和评估基于 LLM 的交易策略，但需注意其设计用于研究目的，交易表现可能因多种因素而异。",
+      "degraded": false
+    },
+    {
+      "id": "JetBrains/thinkrail",
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "stars": 2863,
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "one_liner": "ThinkRail 是一个以 `pi` 代理为核心的集成开发环境，旨在通过提供隔离的工作区、丰富的 UI 和对代理操作的全面控制，提升开发人员使用 AI 代理进行编码的体验。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统 AI 代理在编码过程中缺乏可视化界面、隔离环境不足以及对代理操作控制力弱的问题。它为 `pi` 代理提供了一个功能齐全的 IDE 工作台，包括编辑器、差异视图、终端和代码审查功能，使用户能够直观地查看和引导代理的工作，而不是仅仅依赖滚动回溯来重建代理的操作。\n\n**核心功能**\nThinkRail 的核心功能包括：隔离的工作区，每个工作区都是一个独立的 Git 工作树，确保主分支的整洁；一个围绕 `pi` 代理的真实 IDE，提供文件、差异、终端和聊天等视图；支持 `pi` 的所有功能，包括模型、技能和会话状态，并在此基础上提供可视化界面；以及通过规范图（Spec Graph）作为事实来源，帮助代理理解和维护项目意图。\n\n**技术亮点**\n该项目采用“三环”架构，包括 Engine Host（服务器）、Wire（WebSocket 协议）和 UI Client（React 应用）。Engine Host 运行 `pi` 代理，管理 Git 工作树和 PTYs。Wire 提供类型化的 WebSocket 协议，连接客户端和主机。UI Client 是一个响应式的 React 应用，提供 IDE 工作台和状态管理。它还支持可移植的 `pi` 扩展，并通过注册表文件进行组合。\n\n**适合谁用**\nThinkRail 适合使用 `pi` 代理在真实 Git 仓库上进行开发的人员。这包括希望通过可视化界面入门的新手、希望在不牺牲 `pi` 深度的情况下获得 IDE 体验的资深用户，以及希望快速迭代同时保持对代理操作控制的代理优先开发者。",
+      "degraded": false
+    },
+    {
+      "id": "makecindy/cindy",
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "stars": 6430,
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "one_liner": "Cindy 是一个开源的 AI Agent 客户端，能在你的电脑上利用本地文件和应用完成真实任务，并支持多 Agent 协作与个性化培养。",
+      "detail_md": "## 解决什么问题\nCindy 旨在解决传统 AI Agent 无法深入本地环境、难以与用户自有数据和应用交互的问题。它通过在用户电脑上运行，实现对浏览器、电脑和手机的操作，并支持从即时通讯和定时任务接收指令，从而将 AI 能力融入日常工作流。\n\n## 核心功能\n*   **多 Agent 编排**：兼容 Claude Code 和 Codex 等多种 Agent Harness，支持模型与 Harness 自由组合，并在同一任务中随时切换。\n*   **本地化操作**：运行在用户电脑上，能够使用本地文件和已登录的应用，实现对浏览器、电脑和手机的控制。\n*   **个性化培养**：提供记忆、技能、自动化、系统集成（MCP）和插件等功能，允许用户根据需求培养和扩展 Agent 能力。\n*   **跨平台客户端**：提供 Electron 桌面客户端 (`apps/desktop`) 和 Expo/React Native 手机客户端 (`apps/mobile`)。\n\n## 技术亮点\n*   **pnpm Monorepo 架构**：项目采用 pnpm monorepo 结构，管理桌面端、移动端及共享包。\n*   **插件系统 (Ghosts)**：通过 `ghost.json` 清单文件定义插件能力，支持沙盒化运行和多种能力槽位（如 `tool`, `skill`, `cindy`, `node`），实现功能扩展。\n*   **Agent 二进制管理 (De-LFS)**：采用自定义的 \"De-LFS\" 策略管理外部 Agent 二进制文件（如 Claude Code, Codex, ripgrep），通过 SHA256 校验确保文件完整性。\n*   **Skill Hub**：允许插件携带 `SKILL.md` 文件，通过符号链接集成到全局 Agent 技能目录，赋予 Agent 执行用户权限下的指令能力。\n\n## 适合谁用\n*   **开发者**：希望通过开源客户端审计、fork 或二次开发 AI Agent，并贡献通用改进。\n*   **需要本地化 AI 协助的用户**：希望 AI Agent 能直接操作本地文件、应用，并与个人工作流深度融合的用户。\n*   **追求个性化 AI 体验的用户**：希望自定义 Agent 的记忆、技能、自动化流程和功能的用户。\n*   **企业用户**：希望将内部工具和业务系统接入 AI Agent，提升工作效率。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 289815,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "ECC 是一个将 AI 编码助手转变为高自主性工程伙伴的智能体操作系统。</cite>",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 编码助手在软件工程任务中缺乏高自主性和协调性的问题。它通过提供一个统一的框架，使 AI 能够跨多个平台（如 Claude Code, Codex, Cursor 等）执行复杂的开发工作流。</cite>\n\n**核心功能**\nECC 包含 68 个专业智能体、290 多个技能、可重用命令和跨平台控制平面。它支持多平台可移植性，允许在不同 AI 开发环境中复用智能体和技能。项目还强调测试驱动开发、安全优先和不可变数据模式，以确保软件开发实践的专业性。\n\n**技术亮点**\n该项目采用模块化和可扩展的架构，通过选择性安装配置文件管理组件。它包含一个 Rust 语言的控制平面 `ecc2/`，用于会话生命周期管理、持久状态和智能体间消息传递。此外，ECC 还支持持续学习，通过“本能系统”从会话历史中提取可重用模式。\n\n**适合谁用**\nECC 适合希望将 AI 编码助手转变为高自主性工程伙伴的开发者和团队。它特别适用于需要跨多种 AI 开发环境（如 Claude Code, Codex, Cursor, Gemini 等）进行统一开发体验和代码自动化工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 89146,
+      "description": "The design language that makes your AI harness better at design.",
+      "one_liner": "Impeccable 是一个 AI 驱动的工具，旨在帮助设计师和开发者改进前端界面设计，通过自动化检测和修复设计缺陷，并提供设计指导和协作功能，以确保高质量的用户体验。",
+      "detail_md": "**解决什么问题**\nImpeccable 旨在解决前端界面设计中常见的“AI Slop”问题，即由于训练数据偏差导致的 AI 生成界面中出现的视觉缺陷和模式化问题。它通过提供一套工具和工作流程，帮助用户设计、重构、审查、优化和改进各种前端界面，包括网站、着陆页、仪表板、产品 UI、组件以及 iOS 或 Android 原生屏幕。\n\n**核心功能**\nImpeccable 的核心功能包括：\n*   **设计审查与评估**：提供 `critique` 命令进行 UX 设计审查和启发式评分，以及 `audit` 命令进行技术质量检查（如可访问性、性能、响应式设计）。\n*   **设计改进与优化**：提供多种命令来细化和增强设计，例如 `polish` 进行最终质量检查，`bolder` 放大设计，`quieter` 降低视觉强度，`animate` 添加动画，`adapt` 适应不同设备和屏幕尺寸，以及 `optimize` 诊断和修复 UI 性能问题。\n*   **设计系统文档化**：`init` 命令用于捕获产品上下文并生成 `PRODUCT.md` 文件，`document` 命令用于从现有代码生成 `DESIGN.md` 文件以记录视觉设计系统。\n*   **实时迭代**：`live` 和 `generate` 命令支持在浏览器中进行视觉变体迭代，允许用户选择元素并生成替代方案。\n\n**技术亮点**\n该项目采用模块化架构，将设计逻辑封装为可供 AI 代理调用的技能。它使用 `skill/SKILL.src.md` 作为技能的源文件，并通过构建系统将其转换为特定提供商（如 Claude、OpenCode、Grok 等）的 `SKILL.md` 文件。核心逻辑由 Rust 编写的自包含二进制引擎 `engine` 实现，负责反模式检测、上下文管理和实时模式操作。项目还定义了四种“模式”（Persuade, Operate, Read, Experience）来指导 AI 的设计方法，确保设计与用户目标一致。\n\n**适合谁用**\nImpeccable 适合需要设计、改进或维护前端界面的设计师和开发者。特别是那些希望通过自动化工具提高设计质量、确保设计系统一致性、并快速迭代视觉方案的团队和个人。它支持多种 AI 工具和 IDE 环境，使其能够集成到不同的开发工作流中。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/SkillSpector",
+      "owner": "NVIDIA",
+      "name": "SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "stars": 22155,
+      "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
+      "one_liner": "SkillSpector 是一个 AI 代理技能安全扫描器，用于在安装前检测漏洞、恶意模式和安全风险。",
+      "detail_md": "**解决什么问题**\nAI 代理技能在执行时通常具有隐式信任且缺乏严格审查，这导致了高风险，研究表明有 26.1% 的技能包含漏洞，5.2% 具有恶意意图。 SkillSpector 旨在解决这一问题，通过在安装前提供关键的审查层，帮助用户判断技能是否安全。\n\n**核心功能**\nSkillSpector 提供多格式输入支持，可以扫描 Git 仓库、URL、zip 文件、目录或单个文件。 它能检测 17 个类别中的 71 种漏洞模式，包括提示注入、数据泄露和权限提升等。 系统采用两阶段分析：快速静态分析和可选的 LLM 语义评估。 它还支持实时漏洞查询，通过 OSV.dev 检查依赖项中的已知 CVE。 扫描结果可以生成终端、JSON、Markdown 和 SARIF 报告，并提供 0-100 的风险评分和明确的建议。\n\n**技术亮点**\n该项目基于 LangGraph 工作流构建，通过 `StateGraph` 协调数据流，从输入解析到最终报告生成。 它结合了基于正则表达式的模式匹配、AST 行为分析和 YARA 签名等静态分析技术。 可选的 LLM 语义分析能够评估上下文和意图，过滤误报，并提供人类可读的解释，将精度提高到约 87%。 SkillSpector 还可以作为 Model Context Protocol (MCP) 服务器运行，使 AI 代理能够将其作为工具调用，从而在运行时进行安全防护。\n\n**适合谁用**\nSkillSpector 适合需要在使用 AI 代理技能前进行安全评估的开发者、安全工程师和组织。 它是 NVIDIA Verified Skills 管道的一部分，用于在发布前扫描、评估和签署代理技能。 任何使用 Claude Code、Codex CLI、Gemini CLI 等 AI 代理的用户，都可以利用 SkillSpector 确保所安装技能的安全性。",
+      "degraded": false
+    },
+    {
+      "id": "pollen-robotics/microduck",
+      "owner": "pollen-robotics",
+      "name": "microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "stars": 12392,
+      "description": "A Tiny biped duck robot 🦆",
+      "one_liner": "这是一个为 Microduck 机器人设计的软件栈，提供核心控制、远程操作、系统更新和硬件交互功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在为 Microduck 机器人提供一个可靠、可更新的软件平台，解决机器人控制、远程交互、系统升级和硬件安全等方面的挑战。它通过分离实时控制与 IPC 接口，确保即使控制循环出现问题，系统也能报告健康状态并进行自动回滚。\n\n**核心功能**\n*   **核心控制循环 (`robotd`)**：以 50 Hz 频率运行，管理电机指令、强化学习策略执行和硬件安全。它负责从 IMU 和伺服电机读取数据，执行 ONNX 策略，并通过安全层将指令写入总线。\n*   **远程媒体与控制 (`mediad`)**：提供硬件加速的视频编码和 WebRTC 流媒体功能，通过 DataChannel 将远程指令桥接到机器人内部的 JSON-RPC IPC 总线。它还提供一个基于网页的控制台。\n*   **安全更新系统 (`updaterd`)**：支持守护程序二进制文件和 ML 步态模型的独立更新，确保原子性应用、自动回滚和签名验证，防止机器人变砖。\n\n**技术亮点**\n*   **实时与可靠性**：`robotd` 将实时控制线程与 IPC 接口分离，确保控制循环的稳定性，并支持健康状态报告以实现自动回滚。\n*   **硬件加速媒体流**：`mediad` 利用 Rockchip RK3566 SoC 的 VPU 进行 H.264 编码，实现零拷贝效率，优化视频流性能。\n*   **模块化与可扩展性**：系统采用微服务架构，各守护程序通过 Unix socket 和 JSON-RPC 2.0 进行通信，便于独立开发和部署。\n\n**适合谁用**\n该项目主要面向 Microduck 机器人的开发者、维护者以及需要远程操作和监控机器人的用户。它为机器人制造商提供了一个完整的软件解决方案，也为研究人员和爱好者提供了可扩展的平台。",
+      "degraded": false
+    },
+    {
+      "id": "nightly-labs/openbot",
+      "owner": "nightly-labs",
+      "name": "openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "stars": 1456,
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "one_liner": "OpenBot 是一个本地优先的桌面应用，用于运行持久化 AI 代理，支持多种提供商 CLI。",
+      "detail_md": "**解决什么问题**\nOpenBot 旨在将分散的 AI 工具整合为持久化的“队友”，解决用户每次开始新任务时都需要重新设置 AI 环境的问题。 它为每个代理提供独立的工作区和对话，并支持本地队列、文件传输、嵌入式浏览器和代理间消息传递，从而简化了 AI 代理的管理和协作。 \n\n**核心功能**\nOpenBot 的核心功能包括：支持多种 AI 提供商（如 Codex、Claude、Grok、OpenCode、Gemini、Cursor 和 Cline）的持久化 AI 代理；代理间消息传递和文件传输；嵌入式浏览器，代理可以打开、检查和控制；以及跨桌面和移动设备的任务管理和协作功能。它还提供本地数据存储和隐私保护的诊断导出。 \n\n**技术亮点**\n该项目采用本地优先的 Electron 桌面应用架构，结合 Bun monorepo 结构管理多个工作区。它通过 `src/main/index.ts` 启动 Electron 主进程，并通过 `src/main/application-services.ts` 初始化后端服务。OpenBot 还支持通过 `cua-driver` 实现的计算机使用功能，允许代理控制桌面环境。数据存储在本地 SQLite 数据库中，确保用户数据隐私。 \n\n**适合谁用**\nOpenBot 适合需要持久化 AI 代理来处理复杂或重复任务的开发者、内容团队和个人用户。它特别适用于那些希望将现有 AI 服务（如 ChatGPT、Claude 等）整合到统一工作流中，并保持数据本地化和隐私的用户。对于需要跨设备（桌面和移动）协作和管理 AI 代理的用户也十分适用。",
+      "degraded": false
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "stars": 103532,
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "one_liner": "Agent Reach 是一款 Python CLI 工具，旨在为 AI Agent 提供统一、便捷的互联网内容访问能力，解决多平台数据获取的复杂性。",
+      "detail_md": "**解决什么问题**\nAI Agent 在访问互联网内容时面临诸多障碍，例如各平台不同的 API 限制、付费墙、IP 封锁、登录验证和反爬机制等。 这导致 Agent 难以直接获取社交媒体（如 Twitter、Reddit、小红书、Bilibili）、视频平台（YouTube）和网页内容，需要用户手动寻找工具、安装依赖并配置。 Agent Reach 旨在消除这些复杂性，让 Agent 能够“一键”获取互联网信息。\n\n**核心功能**\nAgent Reach 提供了一个统一的命令行接口 `agent-reach`，允许 AI Agent 通过简单的命令访问超过 15 个互联网平台的内容，包括网页阅读、全网搜索、社交媒体（Twitter/X、Reddit、小红书、Bilibili、Facebook、Instagram、V2EX、雪球）、视频（YouTube、Bilibili）和代码托管（GitHub）等。 它通过自动选择和管理底层工具（如 `yt-dlp`、`bili-cli`、`gh CLI`、`Jina Reader` 等）来实现这一功能。 项目还包含 `agent-reach doctor` 命令用于诊断各渠道的可用性及配置状态。\n\n**技术亮点**\n该项目采用“能力层”设计理念，负责工具选型、安装、健康检查和路由，而非直接进行底层读取。 每个平台都配置了“首选 + 备选”的多后端列表，当某个接入方式失效时，系统会自动切换到下一个可用后端，用户无感知。 所有默认后端均为免费工具或免费 API，无需强制付费。 凭据（如 Cookie、Token）本地存储，并提供安全建议，强调使用小号以降低风险。\n\n**适合谁用**\nAgent Reach 适合所有需要 AI Agent 具备互联网信息获取能力的开发者和用户，特别是使用 Claude Code、OpenClaw、Cursor、Windsurf 等能运行命令行工具的 AI Agent 的用户。 它也适用于希望简化 Agent 环境配置、避免手动处理各平台接入复杂性的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 89153,
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "one_liner": "VoiceStudio 是一个开源的本地运行的 AI 语音工具，用于声音克隆、视频配音、语音输入、转录和有声书制作，支持多种语言。",
+      "detail_md": "**解决什么问题**\n该项目旨在提供一个完全本地运行的解决方案，以替代依赖云服务的语音 AI 工具，解决用户对数据隐私、成本控制和离线使用的需求。 它通过提供多语言支持和多种语音处理功能，满足了内容创作者、开发者和需要语音辅助工具的用户的多样化需求。\n\n**核心功能**\nVoiceStudio 的核心功能包括声音克隆、视频配音、语音转文字（ASR）、文字转语音（TTS）、语音输入、转录以及有声书制作。 它支持多达 646 种语言，并提供批量配音、语音水印和敏感内容过滤等高级功能。\n\n**技术亮点**\n项目采用模块化架构，支持依赖注入，使得 LLM、ASR 和 TTS 组件可插拔，易于测试和扩展。 它实现了本地化（i18n）框架，支持约 21 种语言的 UI 体验，并通过“Locale Parity Ratchet Test”确保翻译一致性。 此外，它还具备语音活动检测、敏感内容防护和语音形象（Archetypes）管理系统，能够生成和管理多种声音。\n\n**适合谁用**\nVoiceStudio 适合需要进行语音克隆、视频配音、内容本地化、有声书制作以及语音交互应用开发的个人用户和企业。 对于注重数据隐私、希望在本地设备上运行 AI 模型、以及寻求灵活且可定制语音解决方案的用户来说，这是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "gitroomhq/postiz-app",
+      "owner": "gitroomhq",
+      "name": "postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "stars": 38424,
+      "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+      "one_liner": "Postiz 是一个开源的 AI 社交媒体调度工具，支持多平台内容发布、团队协作和数据分析。",
+      "detail_md": "## 解决什么问题\nPostiz 旨在解决社交媒体内容管理和发布效率低下的问题，特别是对于需要管理多个社交平台、进行团队协作以及利用 AI 辅助内容创作的用户。 它提供了一个统一的平台来安排帖子、分析效果和管理团队，从而替代了 Buffer.com、Hypefury 等工具。\n\n## 核心功能\n*   **社交媒体内容调度**：支持在 X (Twitter)、Bluesky、Mastodon、Discord 等多个社交平台发布和调度帖子。\n*   **AI 辅助功能**：利用 AI 自动生成内容和图片，提高内容创作效率。\n*   **团队协作与管理**：支持邀请团队成员协作、评论和调度帖子，并提供日历视图进行管理。\n*   **数据分析**：提供分析功能以衡量发布效果。\n*   **媒体库管理**：支持媒体上传和管理，包括图片和视频的生成。\n\n## 技术亮点\n*   **插件化架构**：系统采用插件化架构，通过 `SocialAbstract` 和 `SocialProvider` 接口实现社交媒体集成，并通过 `@Plug`、`@PostPlug` 等装饰器定义自动化逻辑和验证规则，易于扩展。\n*   **Mastra AI 框架集成**：集成了 Mastra AI 框架，提供代理能力和模型上下文协议 (MCP) 支持，实现复杂的 AI 工作流。\n*   **多存储后端支持**：媒体上传系统支持本地文件系统、Cloudflare R2 或 Transloadit 等多种存储后端。\n*   **Monorepo 结构**：项目采用 PNPM monorepo 结构，包含 `apps/backend` (NestJS API)、`apps/orchestrator` (Temporal 后台任务) 和 `apps/frontend` (Vite ReactJS 前端) 等模块。\n\n## 适合谁用\nPostiz 适合需要高效管理多个社交媒体账户的个人、团队和企业。 特别是那些希望利用 AI 辅助内容创作、进行团队协作以及需要灵活扩展社交媒体集成能力的开发者和营销人员。",
+      "degraded": false
+    },
+    {
+      "id": "alchaincyf/huashu-design",
+      "owner": "alchaincyf",
+      "name": "huashu-design",
+      "url": "https://github.com/alchaincyf/huashu-design",
+      "stars": 26719,
+      "description": "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, Cursor & any agent",
+      "one_liner": "Huashu Design 是一款 AI 驱动的设计工具，通过自然语言指令生成高保真设计交付物。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决传统设计流程中效率低下、AI 生成设计质量参差不齐的问题，特别是避免“AI slop”（AI 垃圾）现象。 它通过强制执行“品牌资产协议”和“事实验证”等严格流程，确保设计产出符合品牌规范并具有高保真度。\n\n## 核心功能\nHuashu Design 提供多种设计交付能力，包括交互原型（App/Web）、 演讲幻灯片、 时间轴动画、 设计变体探索、 信息图/可视化 以及设计方向顾问和专家评审。 用户只需通过自然语言指令即可生成这些交付物。\n\n## 技术亮点\n项目核心机制包括“品牌资产协议”，它强制执行 5 个步骤来获取和验证品牌资产（如 Logo、产品图、UI 截图、色值、字体）， 确保设计基于真实上下文。 此外，还有“事实验证”原则，要求在设计前对产品或技术进行网络搜索验证，避免错误假设。 项目还包含“反 AI slop 规则”，通过避免通用 AI 视觉元素来保护品牌识别度。\n\n## 适合谁用\n该项目适合希望通过自然语言快速生成高保真设计交付物，而不愿使用传统图形界面的设计师、产品经理和开发者。 特别适用于需要制作交互原型、演示文稿、动画视频和信息图的用户。",
+      "degraded": false
+    },
+    {
+      "id": "multica-ai/andrej-karpathy-skills",
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 224619,
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "one_liner": "本项目提供一套基于 Andrej Karpathy 观察的 LLM 编码行为指南，旨在减少常见编码错误，提升代码质量和开发效率。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决大型语言模型 (LLM) 在编码过程中常出现的四大问题：做出错误假设、隐藏困惑、不寻求澄清、不呈现权衡；过度复杂化代码和 API、堆砌抽象、不清理死代码；以及在任务无关的情况下修改或删除不理解的代码和注释。\n\n**核心功能**\n核心功能是提供四个行为原则：**编码前思考**，强制 LLM 明确假设、呈现多种解释并适时提出异议；**简洁优先**，要求 LLM 用最少的代码解决问题，避免过度工程和不必要的抽象；**精准修改**，限制 LLM 只修改与任务直接相关的代码，并清理自身造成的冗余；**目标驱动执行**，将指令式任务转化为可验证的成功标准，通过测试循环验证直到达成目标。\n\n**技术亮点**\n本项目将这些行为指南以多种形式提供，包括 `CLAUDE.md` 文件用于项目内集成、Claude Code 插件用于跨项目复用，以及 Cursor 编辑器的项目规则文件 `.cursor/rules/karpathy-guidelines.mdc`。这些实现方式确保了指南在不同开发环境中的兼容性和易用性。\n\n**适合谁用**\n本项目适合使用 Claude Code 或 Cursor 等 AI 编程工具的开发者和团队，特别是那些希望提高 LLM 编码质量、减少不必要返工、并培养更严谨开发习惯的用户。这些指南倾向于“谨慎而非速度”，适用于非琐碎任务，以减少高成本错误。",
+      "degraded": false
+    }
+  ]
+}
