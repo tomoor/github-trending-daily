@@ -155,6 +155,39 @@
       "one_liner": "本项目提供一套基于 Andrej Karpathy 观察的 LLM 编码行为指南，旨在减少常见编码错误，提升代码质量和开发效率。",
       "detail_md": "**解决什么问题**\n本项目旨在解决大型语言模型 (LLM) 在编码过程中常出现的四大问题：做出错误假设、隐藏困惑、不寻求澄清、不呈现权衡；过度复杂化代码和 API、堆砌抽象、不清理死代码；以及在任务无关的情况下修改或删除不理解的代码和注释。\n\n**核心功能**\n核心功能是提供四个行为原则：**编码前思考**，强制 LLM 明确假设、呈现多种解释并适时提出异议；**简洁优先**，要求 LLM 用最少的代码解决问题，避免过度工程和不必要的抽象；**精准修改**，限制 LLM 只修改与任务直接相关的代码，并清理自身造成的冗余；**目标驱动执行**，将指令式任务转化为可验证的成功标准，通过测试循环验证直到达成目标。\n\n**技术亮点**\n本项目将这些行为指南以多种形式提供，包括 `CLAUDE.md` 文件用于项目内集成、Claude Code 插件用于跨项目复用，以及 Cursor 编辑器的项目规则文件 `.cursor/rules/karpathy-guidelines.mdc`。这些实现方式确保了指南在不同开发环境中的兼容性和易用性。\n\n**适合谁用**\n本项目适合使用 Claude Code 或 Cursor 等 AI 编程工具的开发者和团队，特别是那些希望提高 LLM 编码质量、减少不必要返工、并培养更严谨开发习惯的用户。这些指南倾向于“谨慎而非速度”，适用于非琐碎任务，以减少高成本错误。",
       "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 306053,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 为 AI 编程代理提供一套完整的软件开发方法论和可组合技能集。",
+      "detail_md": "**解决什么问题**\n该项目旨在将 AI 编程代理从被动的代码编写者转变为系统的工程师。它通过强制执行“后退一步”的方法，在实施之前提炼规范并批准设计，从而防止代理直接跳入代码编写。\n\n**核心功能**\nSuperpowers 提供一系列核心技能，包括：\n*   **头脑风暴 (`brainstorming`)**：在编写代码之前激活，通过提问、探索替代方案和分段呈现设计来完善想法。\n*   **编写计划 (`writing-plans`)**：根据批准的设计，将工作分解为小任务，每个任务包含精确的文件路径、完整的代码和验证步骤。\n*   **子代理驱动开发 (`subagent-driven-development`)** 或 **执行计划 (`executing-plans`)**：根据计划派遣子代理执行任务，并检查和审查其工作。\n*   **测试驱动开发 (`test-driven-development`)**：在实施过程中强制执行红-绿-重构循环，即先编写失败测试，再编写最少代码使其通过。\n*   **诊断 Superpowers (`diagnosing-superpowers`)**：用于诊断会话中出现的问题，提供带证据的报告。\n\n**技术亮点**\n该项目采用多平台架构，通过平台特定的钩子和配置文件与各种 AI 环境集成。它使用统一的技能库，并通过平台特定的引导机制和工具映射层适应不同的工具。例如，Kimi Code 通过 `plugin.json` 文件映射 Superpowers 的操作到 Kimi 的工具集。Devin CLI 通过 `.devin-plugin/plugin.json` 配置来注册技能目录和初始化钩子。\n\n**适合谁用**\nSuperpowers 适用于使用各种 AI 编程代理的开发者，包括但不限于 Claude Code、Antigravity、Codex App、Devin CLI、Kimi Code、Pi 等。它旨在帮助这些代理更系统化地进行软件开发，遵循测试驱动开发、系统化而非随意、降低复杂性以及注重证据的原则。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/DeepTutor",
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 45198,
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "one_liner": "DeepTutor 是一个智能体原生的学习工作区，旨在提供终身个性化辅导，整合了多种学习功能。",
+      "detail_md": "**解决什么问题**\nDeepTutor 旨在解决传统学习模式中缺乏个性化、功能分散的问题。它通过整合辅导、解题、测验生成、研究、可视化和掌握度练习等多种功能，提供一个统一且可扩展的学习环境，以适应不同用户的学习需求和进度。 \n\n**核心功能**\nDeepTutor 的核心功能包括统一的运行时环境，支持聊天、提问、测验、研究、可视化、解题、课程学习、掌握度路径、沉浸式阅读和沉浸式观看等多种能力。  它还提供互联的学习上下文，允许知识库、书籍、笔记等在不同工作流中复用。  此外，它支持沉浸式视频学习，具有隐私保护和时间戳辅导功能，并集成了多引擎知识库和可扩展的工具与技能。 \n\n**技术亮点**\n该项目采用智能体原生设计，通过 `AgentLoop` 实现迭代推理和工具调度。  它还拥有分层的可审计记忆系统，包括 L1 追踪、L2 表面摘要和 L3 综合，确保个性化学习过程的透明和可编辑。  DeepTutor 支持多种 RAG 引擎，如 LlamaIndex 和 LightRAG，以实现高效的知识检索。 \n\n**适合谁用**\nDeepTutor 适合需要个性化、智能化学习体验的学生、研究人员以及任何希望通过 AI 辅助提升学习效率的用户。  它也适用于教育机构和开发者，因为其开放的架构和可扩展性允许集成新的工具和技能。",
+      "degraded": false
+    },
+    {
+      "id": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "stars": 5042,
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "one_liner": "该项目是一个精心策划的系统提示、角色锁定、工作区策略和代理操作规范集合，适用于前沿、开源和免费的隐形模型。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型（LLM）行为控制和指令操纵的挑战。它通过提供一套全面的提示和配置，帮助研究人员和开发者理解和硬化AI系统，使其更能抵抗提示注入和指令操纵。\n\n**核心功能**\n该项目包含31个针对25+模型的提示，包括完整的系统提示、角色定义、工作区策略、`AGENTS.md`文件、配置块和Ollama Modelfiles。这些提示涵盖了OpenCode Zen的免费隐形模型、GLM、DeepSeek、Kimi、Qwen、Gemma和GPT-OSS等开源模型，以及Claude、Gemini、Grok和Mistral等封闭前沿模型。所有文件都是完整且可直接使用的。\n\n**技术亮点**\n该项目的一个技术亮点是其对不同模型部署架构的适应性。它支持API系统消息、工作区文件（如`AGENTS.md`）、Ollama Modelfiles和Grok CFG配置等多种部署方式。此外，它还详细定义了代理工具接口，如`read`、`write`、`edit`、`bash`、`search`等，以管理自主执行和工作区交互。\n\n**适合谁用**\n该项目主要适用于从事AI系统研究和开发的专业人士。特别是那些希望深入了解指令层级、角色框架、提示冲突和策略覆盖如何影响模型行为的研究人员，以及旨在增强AI系统对提示注入和指令操纵抵抗能力的开发者。",
+      "degraded": false
     }
   ]
 }
