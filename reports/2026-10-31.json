@@ -166,6 +166,61 @@
       "one_liner": "Lightpanda 是一个用 Zig 从零开始构建的无头浏览器，专为 AI 代理、网络抓取和自动化设计，比传统浏览器更轻量、更快。",
       "detail_md": "**解决什么问题**\nLightpanda 旨在解决传统无头浏览器（如基于 Chromium 的浏览器）在服务器端运行时资源消耗大、部署维护困难、扩展性差的问题。它提供了一个轻量、快速的 JavaScript 执行和 Web API 环境，优化了内存和执行速度，特别适合需要大规模并发的 AI 代理和自动化任务。\n\n**核心功能**\nLightpanda 提供多种操作模式：\n*   **抓取模式 (`fetch`)**：用于加载 URL 并将文档或结构化输出转储到标准输出，支持多种输出格式（HTML、Markdown、PDF、PNG 等）。\n*   **服务模式 (`serve`)**：启动一个 WebSocket 服务器，接受 Chrome DevTools Protocol (CDP) 或 WebDriver BiDi 连接，支持 Puppeteer 和 Playwright 等外部自动化框架。\n*   **代理模式 (`agent`)**：启动一个交互式 AI 代理循环，通过自然语言指令直接在进程内执行浏览器操作。\n*   **MCP 模式 (`mcp`)**：运行一个 Model Context Protocol 服务器，通过 stdio 或 HTTP 向 LLM 环境暴露浏览器能力和资源。\n*   **运行模式 (`run`)**：执行已保存的 PandaScript 自动化脚本，不涉及 LLM。\n\n**技术亮点**\n*   **从零开始构建**：Lightpanda 不基于 Chromium、Blink 或 WebKit，而是使用 Zig 语言从零开始构建，实现了对内存的显式控制，没有图形渲染引擎，从而实现了高性能。\n*   **高性能**：与无头 Chrome 相比，Lightpanda 在内存使用上减少约 16 倍，执行时间快约 9 倍。\n*   **统一的 CLI 接口**：所有功能都通过一个统一的命令行接口暴露，支持多种操作模式和 shell 自动补全。\n\n**适合谁用**\nLightpanda 适合需要高性能、低资源消耗的无头浏览器解决方案的开发者和团队。具体包括：\n*   **AI 代理开发者**：需要将浏览器能力集成到 AI 模型中的场景。\n*   **网络抓取和数据提取工程师**：需要高效、稳定地从网页中提取数据的自动化任务。\n*   **自动化和测试工程师**：需要进行网页自动化测试或执行复杂工作流的场景。",
       "degraded": false
+    },
+    {
+      "id": "Donchitos/Claude-Code-Game-Studios",
+      "owner": "Donchitos",
+      "name": "Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "stars": 30779,
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "one_liner": "Claude Code Game Studios 将单个 Claude Code 会话转化为结构化的专业游戏开发环境，拥有 49 个智能体和 72 项技能。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 辅助开发中常见的“意大利面条式代码”、缺乏设计文档和范围蔓延等问题。 它通过提供一个由 49 个专业智能体组成的团队，模拟真实工作室的层级结构，确保项目从构思到发布都保持组织性和高质量。\n\n**核心功能**\n项目核心功能包括：49 个专业智能体，涵盖设计、编程、美术、音频、叙事、QA 和制作等领域； 72 项斜杠命令（技能），用于自动化工作流程，如 `/sprint-plan`、`/design-system`； 12 个自动化质量门（Hooks），用于验证、审计和缺陷检测； 11 条路径范围规则，强制执行编码标准； 以及 39 个标准化文档模板。\n\n**技术亮点**\n技术亮点在于其三层智能体层级结构（总监、部门主管、专家）， 确保了高层愿景与技术执行的有效结合。 系统采用用户驱动的协作协议，所有修改都需要用户明确批准，遵循“提问 → 选项 → 决策 → 草稿 → 批准”的严格沟通循环。 此外，还支持 Godot、Unity 和 Unreal Engine 5 等主流游戏引擎。\n\n**适合谁用**\n该项目适合希望利用 AI 提升游戏开发效率，同时又需要保持项目结构化、高质量和用户控制的独立开发者、小型团队或游戏开发爱好者。 它为那些希望避免 AI 辅助开发中常见混乱，并希望拥有一个虚拟专业团队来指导和审查其工作的人提供了理想的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "Orkas-AI/Orkas",
+      "owner": "Orkas-AI",
+      "name": "Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "stars": 5922,
+      "description": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+      "one_liner": "Orkas is anopen-source, local-first multi-agent desktop applicationthat lets you command a team of …",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nOrkas is anopen-source, local-first multi-agent desktop applicationthat lets you command a team of AI specialist agents from a single chat — not one chatbot, not a code framework, not a hosted SaaS. Y...",
+      "degraded": true
+    },
+    {
+      "id": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "stars": 42037,
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "one_liner": "OpenMAIC 是一个开源的 AI 互动课堂平台，能将任何主题或文档转化为丰富的互动学习体验。",
+      "detail_md": "**解决什么问题**\nOpenMAIC 旨在解决传统学习材料静态、互动性差的问题，通过 AI 智能体和多模态内容，将枯燥的知识转化为沉浸式、个性化的学习体验。  它能够将用户提供的文本或多格式文档（如 PDF、音频、视频）自动生成为互动课堂，并支持 AI 教师和学生进行实时讲解、讨论和互动。 \n\n**核心功能**\nOpenMAIC 的核心功能包括：一键生成课堂，AI 可以在几分钟内根据主题或材料构建完整课堂；  多智能体互动，AI 老师和智能体同学进行实时授课、讨论和互动；  丰富的场景类型，如幻灯片、测验、HTML 交互式模拟和项目制学习（PBL）；  支持白板和语音，智能体可以在白板上绘图、书写公式并进行语音讲解；  灵活导出，可下载可编辑的 `.pptx` 幻灯片或交互式 `.html` 网页。  此外，它还集成了 Agent 工作台，支持在飞书、Slack 等聊天应用中直接生成课堂。 \n\n**技术亮点**\n该项目采用两阶段生成流水线，包括大纲生成和场景生成，将用户输入转化为结构化的课堂内容。  它基于 LangGraph 实现多智能体编排，管理智能体轮次和讨论。  播放引擎驱动课堂回放和实时互动，动作引擎执行语音、白板绘图等 21 种动作类型。  OpenMAIC 采用模块化组件结构，通过 `@openmaic/*` SDK 系列提供课程 DSL 定义、渲染、导入、编辑和存储等功能。 \n\n**适合谁用**\nOpenMAIC 适合教育工作者、内容创作者以及任何希望通过 AI 提升学习体验的个人或组织。  尤其适合需要快速生成高质量互动课程、希望利用多智能体进行教学和讨论，以及寻求灵活导出和集成现有工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "bregman-arie/devops-exercises",
+      "owner": "bregman-arie",
+      "name": "devops-exercises",
+      "url": "https://github.com/bregman-arie/devops-exercises",
+      "stars": 85631,
+      "description": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+      "one_liner": "DevOps面试准备资源库，提供DevOps和SRE相关问题与练习。",
+      "detail_md": "**解决什么问题**\n该项目旨在帮助用户准备DevOps、SRE和生产工程师的面试。它通过提供大量的练习和问题，帮助用户构建DevOps关键领域的知识，并提升面试所需的技能。\n\n**核心功能**\n该项目包含超过2600个练习和问题，涵盖DevOps和SRE的广泛技能。它提供了多种主题，例如DevOps、Git、Kubernetes、软件开发、Python、Go、云平台（AWS、Azure、GCP）、操作系统（Linux）、Shell脚本、数据库、CI/CD、Terraform、Ansible、可观察性、安全和系统设计等。此外，它还提供了随机问题生成器和问题计数器等工具，以辅助学习和自我评估。\n\n**技术亮点**\n该项目内容丰富，涵盖了DevOps工程师所需的核心技能，包括Linux/OS知识、编程、架构设计和工具专业知识。它强调通过情景学习和创建自己的DevOps项目来实践和应用所学知识。项目还提供了针对特定工具（如Ansible）的详细解释和组件关系描述。\n\n**适合谁用**\n该项目适合希望准备DevOps、SRE和生产工程师面试的个人。它也适用于希望提升DevOps相关技能和知识的工程师。",
+      "degraded": false
+    },
+    {
+      "id": "vorssaint/vorssaint-utils",
+      "owner": "vorssaint",
+      "name": "vorssaint-utils",
+      "url": "https://github.com/vorssaint/vorssaint-utils",
+      "stars": 31598,
+      "description": "Free and open-source macOS menu bar toolkit.",
+      "one_liner": "Vorssaint 是一款 macOS 多功能菜单栏工具，集系统监控、音频控制、窗口管理和效率工具于一体，免费开源，注重隐私。",
+      "detail_md": "**解决什么问题**\nVorssaint 旨在替代 macOS 上一系列单一功能的付费工具。它将系统监控、每应用音频混音、窗口管理和各种生产力工具整合到一个隐私优先的二进制文件中，避免用户购买和管理多个独立应用。\n\n**核心功能**\n该项目提供广泛的功能，包括：\n*   **系统监控**：实时 CPU、GPU、内存、网络和电源遥测，并带有历史趋势图。\n*   **音频控制**：每应用音量混音器、输出路由和麦克风管理。\n*   **窗口与文件管理**：⌘Tab 替代品（带缩略图）、临时文件“Shelf”以及 Finder ⌘X/⌘V 支持。\n*   **电源管理**：保持唤醒计时器和 MacBook 的“合盖模式”。\n*   **实用工具**：应用卸载器、Homebrew 管理器、URL 跟踪清理器和键盘清洁模式。\n*   **动态岛**：在动态岛中显示实时活动、音乐控制、AI 代理使用情况和通知。\n*   **屏幕捕获**：截图、带编辑器的屏幕录制、OCR 和颜色采样。\n\n**技术亮点**\nVorssaint 使用原生 Swift、SwiftUI 和 AppKit 构建，目标是 macOS 14.0 及更高版本，并专注于 Apple Silicon 的性能。其设计理念包括：\n*   **本地优先与隐私**：无遥测、无账户、无云后端，网络访问严格限于用户发起的行为。\n*   **原生与轻量**：避免外部依赖，利用标准 Apple 框架保持小巧的体积。\n*   **权限感知**：每个功能都是可选的，如果 macOS TCC 权限被拒绝，特定功能会优雅降级或保持静默。\n\n**适合谁用**\nVorssaint 适合所有 macOS 用户，特别是那些希望通过一个免费、开源、注重隐私的工具来整合和简化日常系统管理和效率提升的用户。它特别适合需要精细控制系统资源、音频输出、窗口布局以及希望拥有多种实用工具而不想安装多个独立应用的 macOS 用户。",
+      "degraded": false
     }
   ]
 }
