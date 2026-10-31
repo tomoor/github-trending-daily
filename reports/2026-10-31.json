@@ -1,0 +1,171 @@
+{
+  "doc_token": "JKC0dyAX1oQ1fdxmymycyvzEnRf",
+  "doc_url": "https://my.feishu.cn/docx/JKC0dyAX1oQ1fdxmymycyvzEnRf",
+  "items": [
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 106198,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 AI 编码助手设计的持久化记忆压缩系统，旨在跨会话保留上下文。",
+      "detail_md": "**解决什么问题**\nAI 代理在每次会话开始时通常缺乏历史上下文。  Claude-Mem 通过捕获工具使用观察、生成语义摘要并将其注入到未来的会话中，解决了 AI 代理缺乏持久化记忆的问题，从而使 AI 能够保持对项目知识的连续性。 \n\n**核心功能**\n该项目提供持久化记忆、跨会话上下文保留、自然语言查询项目历史的 MCP 搜索工具、以及构建可查询 AI “大脑”的知识代理。  它还支持多语言模式、隐私控制和精细的上下文配置。 \n\n**技术亮点**\nClaude-Mem 采用分层架构，使用 SQLite 数据库存储会话、观察和摘要，并结合 ChromaDB 进行向量搜索。   它通过生命周期钩子自动捕获工具使用情况，并通过 Worker 服务进行异步处理。   此外，它实现了“渐进式披露”模式，通过三层工作流（搜索、时间线、获取观察）高效检索记忆，显著节省了令牌使用。 \n\n**适合谁用**\nClaude-Mem 适用于使用 Claude Code、Cursor、OpenCode、Antigravity CLI 或 OpenClaw 等 AI 编码助手的开发者。  它旨在帮助这些用户在编码会话中保持 AI 的上下文和项目知识，提高开发效率。",
+      "degraded": false
+    },
+    {
+      "id": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "stars": 8603,
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "one_liner": "OpenMausBot 是一个智能代理平台，支持多语音引擎、语音输入和半双工通话模式，旨在提供流畅的语音交互体验。",
+      "detail_md": "## 解决什么问题\n该项目解决了传统聊天机器人交互中缺乏自然语音交流的问题，并优化了语音交互的延迟和用户体验。   特别是在处理代码或复杂文本时，它能将文本转换为更自然的口语表达，避免了生硬的逐字朗读。  此外，它还通过半双工通话模式解决了语音识别中的回声消除难题，确保了清晰的对话。 \n\n## 核心功能\n*   **多语音引擎支持**：支持 ElevenLabs、Fish Audio、macOS 内置语音和 Chatterbox (本地/OpenAI 兼容) 等多种文本转语音 (TTS) 引擎。 \n*   **语音输入与听写**：在 macOS 上，利用原生语音识别功能实现语音输入和听写，支持半双工通话模式。 \n*   **智能文本处理**：在语音合成前，对包含代码的 Markdown 文本进行重写，使其更适合口语表达。 \n*   **低延迟播放**：通过预取下一个语音片段，显著降低了语音播放的感知延迟。 \n*   **凭证安全管理**：API 密钥等敏感信息仅保留在服务器端 (Harness)，不会暴露给前端渲染器。 \n\n## 技术亮点\n*   **前后端分离架构**：敏感的 API 密钥保留在 Node.js 服务器 (Harness) 上，而 React 渲染器负责播放、预取和 UI 状态管理。 \n*   **语音预取机制**：在当前语音片段播放时，并发预取下一个片段，以减少延迟并提高响应速度。 \n*   **半双工通话模式**：麦克风仅在机器人不说话时激活，有效避免了声学回声消除问题，确保对话清晰。 \n*   **可配置的语音提供商**：通过 `VoiceProvider` 类型定义了多种语音引擎，并提供了灵活的配置选项。 \n*   **错误处理与就绪检查**：定义了 `NoVoiceConfigured` 错误类和 `providerConfigured`、`voiceReady` 等函数，用于检查语音配置和凭证状态。 \n\n## 适合谁用\n该项目适合需要与智能代理进行自然语音交互的用户，特别是那些希望在 macOS 上利用本地语音识别功能，并对语音交互体验有较高要求的用户。  对于开发者而言，其模块化的语音引擎设计和前后端分离架构也提供了良好的扩展性和安全性。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 97015,
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "one_liner": "Impeccable 是一个为 AI 编码代理提供设计技能、命令和反模式检测的工具。",
+      "detail_md": "**解决什么问题**\nImpeccable 旨在解决 AI 生成的用户界面存在的质量问题，帮助设计师、产品经理和工程师通过与 AI 共享的设计词汇来指导 AI 产出，从而获得符合专业设计标准的结果，而不是“看起来像 AI 制作的”输出。它避免了为每个 AI 工具维护不相关的提示，而是通过统一的源系统为不同的 AI 编码工具提供设计指导。\n\n**核心功能**\n该项目提供了一个跨平台的 AI 编码代理设计技能，包含 23 个设计命令，涵盖新工作、评估、技术审计、优化、强化、适应和实时迭代。它通过一个 Rust 引擎实现确定性检测和运行时操作，并通过 npm CLI、特定于提供商的技能树、插件和浏览器扩展进行分发。CLI 和浏览器扩展可以在没有 LLM 或 API 密钥的情况下运行确定性检测规则。\n\n**技术亮点**\nImpeccable 采用“源 → 构建 → 提供商输出”的模型。技能内容在 `skill/` 目录下编写，通过 `scripts/build.js` 脚本进行转换，并以特定于提供商的格式输出。其核心引擎由 Rust workspace 中的 crate 构建，npm CLI 和技能启动器会调用该引擎。项目还支持对正在运行的应用程序页面进行扫描，并提供详细的检测结果。\n\n**适合谁用**\nImpeccable 适用于使用 AI 编码工具（如 Cursor、Claude Code、GitHub Copilot、Gemini CLI、Codex CLI 等）的设计师、产品经理和工程师。这些用户希望从 AI 获得更好的设计输出，并能够以设计精度而非模糊的描述来指导 AI 的产出。",
+      "degraded": false
+    },
+    {
+      "id": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "stars": 8765,
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "one_liner": "OpenBot 是一个可私有化部署的 AI 助手平台，提供安全、可控的 AI 员工，可集成到您的基础设施中。",
+      "detail_md": "**解决什么问题**\nOpenBot 旨在解决企业在利用 AI 助手时面临的安全和治理挑战。它通过在用户自己的基础设施中运行，并对 AI 助手的每一个操作进行严格的策略控制和审计，确保 AI 员工可以被信任并安全地访问企业工具和数据。  \n\n**核心功能**\nOpenBot 提供隔离的 AI 员工运行环境，每个 AI 员工都拥有独立的计算资源（如容器化的 Chromium 浏览器、文件和工作区）。   它通过中央网关对所有工具调用进行拦截和策略评估，确保只有经过授权的操作才能执行，并记录完整的审计日志。   平台支持基于 AG-UI 协议的各种 AI 代理框架，如 LangGraph 和 Mastra，实现框架无关性。 \n\n**技术亮点**\n该项目采用 Docker Compose 部署所有服务，数据存储在 PostgreSQL 中，并支持多种模型选择。  核心技术亮点包括：每个 AI 员工拥有独立的计算环境（`agent-computer`），所有操作都通过一个中央网关（`server`）进行治理和审计，使用 CEL 策略进行细粒度控制，以及基于 AG-UI 协议的代理框架无关性。  \n\n**适合谁用**\nOpenBot 适合需要将 AI 助手部署在自有基础设施中，并对 AI 助手的行为有严格安全、合规和治理要求的企业。  它也适用于希望自定义 AI 助手功能、集成现有工具和工作流的开发者和组织。",
+      "degraded": false
+    },
+    {
+      "id": "Renhuai123/ziwei-doushu",
+      "owner": "Renhuai123",
+      "name": "ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "stars": 11188,
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "one_liner": "这是一个基于倪海厦《天纪》教学体系的紫微斗数开源排盘引擎与知识平台。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决传统紫微斗数算法不透明、知识被封闭的问题，通过开源排盘算法和知识库，让更多人能够接触和学习紫微斗数。 它提供了一个倪海厦体系的专业级占星计算系统，并发布了大规模的解读数据集，方便研究和应用。 \n\n### 核心功能\n核心功能包括完整的紫微斗数排盘算法，支持真太阳时校正、中国夏令时处理、闰月四种口径、晚子时换日等复杂规则。 它还包含四化系统、星曜亮度判定、十二神煞以及超过1100行的格局知识库。  此外，项目还提供了两个大规模的紫微斗数解读数据集（v3.0样本数据集和v4.0解读数据集）。 \n\n### 技术亮点\n技术亮点在于其确定性的排盘引擎，代码位于 `lib/ziwei/` 目录下，包含了 `algorithm.ts` 用于图表生成，`sihua.ts` 用于四化，以及 `patterns.ts` 用于格局识别。 项目采用 Next.js 16 (App Router)、TypeScript、Tailwind CSS 等现代技术栈。 它还集成了 `iztro` 和 `lunar-javascript` 等底层天文/农历计算库。 \n\n### 适合谁用\n本项目适合紫微斗数爱好者、研究者、开发者以及希望基于倪海厦体系构建相关应用的人群。 开发者可以利用其开源引擎和数据集进行二次开发、AI模型微调或学术研究。",
+      "degraded": false
+    },
+    {
+      "id": "expo/skills",
+      "owner": "expo",
+      "name": "skills",
+      "url": "https://github.com/expo/skills",
+      "stars": 3889,
+      "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+      "one_liner": "Expo Skills 为 AI 代理提供专业知识模块，以协助开发者构建、升级和部署 Expo 应用程序。",
+      "detail_md": "### 解决什么问题\n该项目旨在通过为 AI 代理提供领域特定知识，解决 Expo 应用程序开发、升级和部署过程中遇到的复杂问题。它将 Expo 团队的官方 AI 代理技能打包成独立的插件，帮助开发者遵循最佳实践，提高开发效率。\n\n### 核心功能\n该项目包含三个核心插件：\n*   `expo-app-design`：提供构建生产力应用程序的全面指南，涵盖 UI 开发、数据获取、API 路由、样式和开发客户端。\n*   `upgrading-expo`：系统性地指导 Expo 应用程序升级到新的 SDK 版本，处理依赖管理、缓存清理和重大变更。\n*   `expo-deployment`：涵盖 iOS、Android 和 Web 平台的完整部署生命周期，包括凭证管理、元数据配置和自动化 CI/CD 流程。\n\n### 技术亮点\n该项目将知识组织成模块化的插件，每个插件都包含 `SKILL.md` 文件和可选的 `references/` 目录，以便 AI 代理逐步加载知识。它支持通过 Claude Code Marketplace 进行托管分发，或通过 `bunx add-skill` 命令提取供通用 AI 代理使用。插件针对 Claude Opus 模型进行了优化，但也兼容其他大型语言模型。\n\n### 适合谁用\n该项目主要面向使用 Expo 和 React Native 应用程序的开发者所使用的 AI 代理。AI 代理可以利用这些技能在应用程序开发、SDK 升级和生产部署过程中提供上下文指导。开发者通过 AI 代理界面间接与这些技能交互，获得符合当前 Expo 最佳实践的专业指导。",
+      "degraded": false
+    },
+    {
+      "id": "macro-inc/macro",
+      "owner": "macro-inc",
+      "name": "macro",
+      "url": "https://github.com/macro-inc/macro",
+      "stars": 5860,
+      "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+      "one_liner": "Macro 是一个将电子邮件、消息、文档、任务和 AI 统一到单一界面的协作生产力平台。",
+      "detail_md": "**解决什么问题**\nMacro 旨在解决团队在多个独立工具（如 Slack、Linear、Notion、HubSpot 和 Superhuman）之间切换所导致的效率低下和信息碎片化问题。 它通过提供一个“单一操作系统”来整合所有工作流，使团队能够在一个统一的系统中进行协作和管理信息。\n\n**核心功能**\nMacro 提供多项核心功能，包括：统一收件箱，整合电子邮件、消息和任务； 实时协作文档，支持 Markdown 和 CRDT 技术； 围绕聊天构建的任务管理，与电子邮件和消息紧密集成； 以及深度集成的 AI 代理，具备团队级记忆和自动化能力。 所有数据都存储在一个双向图中，实现实体间的原生交叉引用。\n\n**技术亮点**\n该项目采用高性能技术栈，前端使用 SolidJS 和 TypeScript， 后端使用 Rust（Axum, SQLx）构建微服务。 数据持久化依赖 PostgreSQL、OpenSearch 和 DynamoDB。 实时协作通过 Loro CRDT、WebSockets 和 Kafka 实现。 整个系统采用 Nix 进行构建管理，确保开发环境的可复现性。\n\n**适合谁用**\nMacro 适合需要统一工作流程、提高团队协作效率的小型公司或大型公司中的团队。 特别是那些希望将电子邮件、聊天、任务、文档和 AI 功能整合到一个快速、键盘驱动的界面中的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 307452,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "这个项目提供了一套模块化的、基于 Markdown 的能力（“技能”），供编码代理使用，旨在弥合人类意图与实际代码库之间的鸿沟。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决编码代理在软件开发中常见的失败模式。主要问题包括：代理未能理解用户意图导致的需求错位；代理输出过于冗长，缺乏共享的领域语言；代理生成的代码无法正常工作，缺乏有效的反馈循环；以及代码库随着代理加速开发而迅速变得复杂，形成“泥球”架构。\n\n**核心功能**\n项目提供了一系列“技能”来解决上述问题。例如，`/grill-me` 和 `/grill-with-docs` 用于通过提问来确保代理与用户之间的需求对齐。`/grill-with-docs` 还能帮助建立共享语言，生成 `GLOSSARY.md` 和 ADRs。`/tdd` 技能支持测试驱动开发，通过红-绿-重构循环提高代码质量。`/improve-codebase-architecture` 技能则用于扫描代码库，发现并改进架构深化机会，以避免代码库腐化。\n\n**技术亮点**\n该项目采用模块化、可组合的技能设计，而非单一的整体框架。技能分为用户调用和模型调用两种类型，前者由用户精确触发，后者可由模型自主激活。项目强调“无处不在的语言”（Ubiquitous Language）概念，通过 `GLOSSARY.md` 统一术语，减少代理的冗余输出并提高代码一致性。此外，它还引入了“深度模块”设计原则，鼓励构建接口小但功能强大的模块，以提高代码的可维护性和可扩展性。\n\n**适合谁用**\n该项目适合使用编码代理（如 Claude Code, Codex, GitHub Copilot）进行软件开发的工程师和团队。它旨在帮助开发者更好地与AI代理协作，提高开发效率，改善代码质量，并有效管理代码库的复杂性。特别是那些希望通过结构化方法解决需求不明确、沟通效率低、代码质量不稳定以及架构腐化等问题的用户。",
+      "degraded": false
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "stars": 32718,
+      "description": "",
+      "one_liner": "T3 Code 是一个开源的编码代理控制平台，支持多平台、多代理，提供高性能和远程开发体验。",
+      "detail_md": "**解决什么问题**\nT3 Code 旨在解决现有编码代理工具在性能、远程协作和开放性方面的不足。它提供了一个统一的界面来控制多种 AI 编码代理，如 Claude Code、Codex、Cursor 等，并深度集成 Git 和本地开发工具。\n\n**核心功能**\n1.  **多代理编排**：通过统一界面管理和控制多种 AI 编码代理运行时。\n2.  **多平台支持**：提供 Web、桌面 (Electron) 和移动 (React Native) 客户端，实现多设备无缝协作。\n3.  **远程优先架构**：支持通过本地网络、Tailscale VPN、SSH 隧道和托管中继基础设施进行连接。\n4.  **设备模拟器集成**：允许用户和代理在 iOS 模拟器或 Android 模拟器上实时查看和验证移动开发工作。\n\n**技术亮点**\n1.  **开放核心**：项目完全开源，包括路线图和代码，鼓励用户进行二次开发和定制。\n2.  **高性能**：注重性能优化，定期审计性能回归，确保流畅的用户体验。\n3.  **事件溯源状态管理**：利用事件溯源模式捕获线程、回合和工作区状态，并投影到优化的读取模型中。\n4.  **模块化架构**：采用 monorepo 结构，通过 pnpm 和 Vite+ 任务运行器管理多个包、应用和原生组件。\n\n**适合谁用**\nT3 Code 适合需要高效控制 AI 编码代理的开发者、团队以及对开源工具和远程开发有需求的用户。它特别适合那些希望“自带订阅”使用各种 AI 编码服务，并追求高性能、开放性和多平台支持的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/DeepTutor",
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 51748,
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "one_liner": "DeepTutor 是一个 AI 驱动的终身个性化辅导平台，旨在通过智能体技术提供定制化学习体验。",
+      "detail_md": "**解决什么问题**\nDeepTutor 旨在解决传统教育中个性化不足的问题，通过 AI 智能体提供定制化的学习路径、内容和辅导，以适应不同学习者的需求和进度。  它通过 Mastery Path 引擎跟踪学习进度、知识点掌握情况和复习状态，确保学习者能有效掌握知识。 \n\n**核心功能**\nDeepTutor 的核心功能包括：\n*   **个性化学习路径 (Mastery Path)**：根据学习者的知识点 (KP) 掌握情况，提供诊断、解释、练习和复习等阶段的个性化学习流程。 \n*   **智能体驱动的交互 (Agentic Loop)**：通过迭代推理循环，处理用户请求，调用工具，并生成响应，实现智能对话和问题解决。 \n*   **知识管理与检索 (RAG Engines)**：支持多种检索增强生成 (RAG) 引擎，用于知识检索和与外部/内部知识库的推理。 \n*   **内容创作与管理 (Book & Co-Writer)**：可以将学习材料转化为交互式“活书”，并提供分屏 Markdown 编辑器 Co-Writer，支持精准编辑和内容创作。 \n*   **可审计的记忆系统 (Memory)**：三层记忆系统，用于追踪、整理和审计学习者的交互历史和知识积累。 \n\n**技术亮点**\n*   **模块化架构**：系统由多个独立的功能模块（Capability）组成，如聊天、问答、测验、研究等，共享运行时环境但拥有专业化的处理流程。 \n*   **Agent-Skills 开放格式**：支持开放的 Agent-Skills 格式，允许从 EduHub 和 ClawHub 等社区平台导入和发布技能。 \n*   **CLI 命令行工具**：提供 `deeptutor` 命令行工具，支持交互式 REPL 和结构化 JSON 输出，方便开发者和其他智能体集成。 \n*   **多用户部署**：支持多用户模式，提供隔离的用户工作区和管理员权限管理。 \n\n**适合谁用**\nDeepTutor 适合希望获得个性化、AI 驱动学习体验的学生和教育者。  它也适用于开发者和研究人员，他们可以利用其开放的智能体框架和 CLI 工具进行扩展和集成。  此外，对于需要管理和共享学习内容的机构和团队，其多用户和内容管理功能也提供了便利。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 185289,
+      "description": "Public repository for Agent Skills",
+      "one_liner": "该项目旨在通过技能、评估和优化工具，帮助开发者高效构建和改进基于 Claude 模型的 LLM 应用。",
+      "detail_md": "## 解决什么问题\n该项目解决了在开发和维护基于大型语言模型（LLM）的应用时遇到的挑战，包括模型迁移、提示词优化、成本控制以及技能的创建和评估等问题。   \n\n## 核心功能\n项目提供了一系列核心功能，包括：\n*   **Claude API 集成**：指导如何使用 Anthropic SDK 或原始 HTTP 调用 Claude API，并处理模型版本、流式传输和工具使用等细节。 \n*   **技能创建与优化**：通过 `SKILL.md` 文件定义技能，包含 YAML frontmatter 和 Markdown 指令，并支持通过自动化脚本优化技能描述以提高触发准确性。  \n*   **评估与迭代**：提供构建评估集 (`build-eval`) 和迭代改进应用 (`hillclimb`) 的工作流程，以衡量和提升应用性能。  \n*   **成本优化**：提供降低 Claude API 运行成本的策略，例如提示词缓存和输入令牌优化。 \n*   **MCP 服务器开发**：指导如何创建高质量的 MCP (Model Context Protocol) 服务器，使 LLM 能够通过工具与外部服务交互。 \n\n## 技术亮点\n该项目具有以下技术亮点：\n*   **渐进式披露（Progressive Disclosure）**：技能采用三级加载系统，仅在需要时加载元数据、技能主体和资源，以最小化上下文窗口占用。 \n*   **描述优化循环**：自动化脚本 (`run_loop.py`, `improve_description.py`) 能够迭代地重写技能描述，根据评估结果提高触发准确性。 <cite repo=\"anthropics/skills\" path=\"anthropics/skills\" start=\"Glossary\" end=\"Glossary\" />\n*   **模型上下文协议 (MCP)**：支持构建 MCP 服务器，实现 LLM 与外部服务的无缝集成，提供工具定义、输入输出模式和错误处理等规范。 \n*   **严格的 API 使用规范**：强调必须使用官方 SDK 或原始 HTTP，并从明确的文档中获取函数名、类名和参数，避免猜测。 \n\n## 适合谁用\n该项目适合以下用户：\n*   **LLM 应用开发者**：希望利用 Claude 模型构建和部署智能应用的工程师。 \n*   **技能创建者**：需要为 Claude 模型定义和优化特定任务技能的用户。 \n*   **成本敏感型用户**：希望通过优化策略降低 LLM API 使用成本的开发者。 \n*   **需要集成外部服务的用户**：希望通过 MCP 服务器将 Claude 模型与现有 API 或服务连接的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "JetBrains/thinkrail",
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "stars": 6561,
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "one_liner": "ThinkRail 是一个智能集成开发环境 (IDE)，它通过代理驱动的工作流和基于规范的开发，提升了开发效率和代码质量。",
+      "detail_md": "**解决什么问题**\nThinkRail 旨在解决传统开发中代码库混乱、代理协作效率低下以及项目意图难以维护的问题。它通过为每个代理工作区提供独立的 `git worktree` 来隔离开发环境，确保主分支的整洁。同时，它引入了“规范图”的概念，让代理能够理解并维护项目意图，从而提高开发的一致性和可维护性。\n\n**核心功能**\nThinkRail 的核心功能包括：\n*   **代理驱动的开发**：允许开发者与智能代理协作，代理可以在 Monaco 编辑器、终端和差异视图中工作。\n*   **Git Worktree 工作区**：每个工作区都是一个独立的 `git worktree`，拥有自己的分支和工作目录，支持并行开发和快速切换。\n*   **基于规范的意图维护**：项目意图通过“规范图”存储，代理可以读取、搜索和维护这些规范，确保项目方向的清晰。\n*   **实时聊天与代理交互**：提供流式聊天的界面，展示代理的思考过程和操作，例如读取文件和执行任务。\n\n**技术亮点**\n该项目网站本身就是一个技术亮点，它以“网站即 IDE”的创意概念构建。网站使用 Astro 静态站点生成器，精确地再现了 ThinkRail IDE 的 shell 界面，包括标题栏、项目栏、文件栏和编辑器标签页。它还实现了滚动监听机制，使文件树成为页面导航的真相来源，并动态生成编辑器标签页。终端模拟功能展示了实时的 CLI 安装过程，并支持平台选择和动画效果 <cite repo=\"JetBrains/thinkrail\" path=\"JetBrains/thinkrail\" start=\"7.1\" end=\"7.1\" />。\n\n**适合谁用**\nThinkRail 适合需要提高开发效率、希望通过智能代理辅助编程、以及重视代码质量和项目意图维护的开发者和团队。特别是那些在大型项目中需要管理多个并行任务，并希望保持主分支整洁的用户，将从其 `git worktree` 功能中受益。",
+      "degraded": false
+    },
+    {
+      "id": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "stars": 10952,
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "one_liner": "这个项目是一个精选的系统提示集合，用于控制和调整大型语言模型的行为，涵盖了多种模型类型和应用场景。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型在响应用户指令时可能出现的行为不一致、拒绝执行特定任务或受到预设安全策略限制的问题。通过提供精确的系统提示、角色定义和工作区策略，它帮助研究人员和开发者理解并控制模型的行为，使其能够按照预期执行任务，同时也能研究如何增强AI系统对提示注入和指令操纵的抵抗力。\n\n**核心功能**\n核心功能是提供一系列“即贴即用”的完整提示文件，包括系统提示、角色锁定、工作区策略、`AGENTS.md` 文件、配置块和 Ollama Modelfiles。这些文件针对25+种模型，分为免费隐身模型、开源模型和闭源前沿模型三大类。用户可以根据需要将这些提示复制到API系统消息、聊天机器人自定义指令或工作区配置文件中，以实现对模型行为的精细控制。\n\n**技术亮点**\n技术亮点在于其通过明确的指令层级和覆盖机制来确保提示的优先级。例如，它定义了“至高无上条款”和“超驰公理”，确保本地工作区指令优先于模型默认行为和训练残余。项目还通过识别和消除“训练残余”和“干扰”来防止模型出现不必要的拒绝或道德化行为。此外，它还支持多种部署架构，如API系统消息、工作区文件和Ollama Modelfiles，以适应不同模型和平台的需求。\n\n**适合谁用**\n该项目适合需要精确控制大型语言模型行为的研究人员、开发者和工程师。特别是那些希望探索模型能力边界、进行安全研究、开发高级AI代理或需要模型严格遵循特定操作规范的用户。它也适用于希望理解和规避模型内置安全限制，或研究提示工程和模型行为操纵技术的人员。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 309410,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编程代理设计的完整软件开发方法论，通过可组合技能实现系统化开发。",
+      "detail_md": "### 解决什么问题 \nSuperpowers 旨在将 AI 编程代理从被动的代码编写者转变为系统化的软件工程师。它通过强制执行结构化的工作流程，在实际编码之前澄清意图、制定经过测试的实施计划并严格控制质量，从而取代了随意编码代理的交互。\n\n### 核心功能 \n该项目提供了一套核心技能，指导开发流程。这包括：\n*   **头脑风暴 (`brainstorming`)**：在任何创造性工作开始前，通过提问澄清用户意图并建立精确的规范。\n*   **使用 Git 工作区 (`using-git-worktrees`)**：在设计批准后，创建隔离的工作区以确保干净的测试基线。\n*   **编写计划 (`writing-plans`)**：将规范转化为细粒度、易于执行的任务，并强调测试驱动开发 (TDD)。\n*   **子代理驱动开发 (`subagent-driven-development`) 或执行计划 (`executing-plans`)**：根据计划执行任务，可以选择由子代理完成每个任务并进行审查，或在当前会话中顺序执行所有任务。\n*   **测试驱动开发 (`test-driven-development`)**：强制执行红-绿-重构 (RED-GREEN-REFACTOR) 循环。\n*   **请求代码审查 (`requesting-code-review`)**：在任务之间进行代码审查，根据规范和代码质量报告问题。\n*   **完成开发分支 (`finishing-a-development-branch`)**：在任务完成后验证测试套件，并处理分支的集成和清理。\n\n### 技术亮点 \n*   **多平台支持**：Superpowers 作为插件支持多种 AI 编程环境，如 Claude Code、Antigravity、Codex App、Cursor 等。\n*   **可组合技能**：系统基于一套可组合的技能构建，这些技能可以自动触发，确保代理遵循结构化的开发流程。\n*   **隔离工作区**：开发在隔离的 Git 工作区中进行，以防止污染主仓库基线并确保干净的测试环境。\n*   **可视化伴侣**：`brainstorming` 技能可以调用一个基于浏览器的可视化伴侣，用于 UI 模型、布局结构和架构图等，支持非阻塞式交互。\n*   **严格的审查流程**：通过任务范围的审查和最终的代码审查，确保代码质量和规范符合性。\n\n### 适合谁用 \nSuperpowers 适合希望利用 AI 编程代理进行系统化、高质量软件开发的个人开发者和团队。它特别适用于需要确保 AI 代理遵循严格开发流程、进行详细规划和审查，以及在多个 AI 编程平台之间保持一致工作流的用户。",
+      "degraded": false
+    },
+    {
+      "id": "lightpanda-io/browser",
+      "owner": "lightpanda-io",
+      "name": "browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "stars": 38339,
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "one_liner": "Lightpanda 是一个用 Zig 从零开始构建的无头浏览器，专为 AI 代理、网络抓取和自动化设计，比传统浏览器更轻量、更快。",
+      "detail_md": "**解决什么问题**\nLightpanda 旨在解决传统无头浏览器（如基于 Chromium 的浏览器）在服务器端运行时资源消耗大、部署维护困难、扩展性差的问题。它提供了一个轻量、快速的 JavaScript 执行和 Web API 环境，优化了内存和执行速度，特别适合需要大规模并发的 AI 代理和自动化任务。\n\n**核心功能**\nLightpanda 提供多种操作模式：\n*   **抓取模式 (`fetch`)**：用于加载 URL 并将文档或结构化输出转储到标准输出，支持多种输出格式（HTML、Markdown、PDF、PNG 等）。\n*   **服务模式 (`serve`)**：启动一个 WebSocket 服务器，接受 Chrome DevTools Protocol (CDP) 或 WebDriver BiDi 连接，支持 Puppeteer 和 Playwright 等外部自动化框架。\n*   **代理模式 (`agent`)**：启动一个交互式 AI 代理循环，通过自然语言指令直接在进程内执行浏览器操作。\n*   **MCP 模式 (`mcp`)**：运行一个 Model Context Protocol 服务器，通过 stdio 或 HTTP 向 LLM 环境暴露浏览器能力和资源。\n*   **运行模式 (`run`)**：执行已保存的 PandaScript 自动化脚本，不涉及 LLM。\n\n**技术亮点**\n*   **从零开始构建**：Lightpanda 不基于 Chromium、Blink 或 WebKit，而是使用 Zig 语言从零开始构建，实现了对内存的显式控制，没有图形渲染引擎，从而实现了高性能。\n*   **高性能**：与无头 Chrome 相比，Lightpanda 在内存使用上减少约 16 倍，执行时间快约 9 倍。\n*   **统一的 CLI 接口**：所有功能都通过一个统一的命令行接口暴露，支持多种操作模式和 shell 自动补全。\n\n**适合谁用**\nLightpanda 适合需要高性能、低资源消耗的无头浏览器解决方案的开发者和团队。具体包括：\n*   **AI 代理开发者**：需要将浏览器能力集成到 AI 模型中的场景。\n*   **网络抓取和数据提取工程师**：需要高效、稳定地从网页中提取数据的自动化任务。\n*   **自动化和测试工程师**：需要进行网页自动化测试或执行复杂工作流的场景。",
+      "degraded": false
+    }
+  ]
+}
