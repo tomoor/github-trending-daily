@@ -1,0 +1,160 @@
+{
+  "doc_token": "M7GvdGmAsoLCC8xvol2c88GynJg",
+  "doc_url": "https://my.feishu.cn/docx/M7GvdGmAsoLCC8xvol2c88GynJg",
+  "items": [
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 107834,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 AI 编码助手设计的持久化内存压缩系统，旨在通过捕获和压缩工具使用观察来增强 AI 的上下文感知能力。",
+      "detail_md": "**解决什么问题**\nAI 代理在每次会话开始时缺乏历史上下文，导致无法记住之前的交互和项目细节。  Claude-Mem 通过自动捕获工具使用观察、生成语义摘要，并将其注入到未来的会话中，解决了这一问题，使 AI 能够保持对项目知识的连续性。 \n\n**核心功能**\n该项目提供持久化内存、文件夹上下文文件自动生成、多语言模式（支持 28 种语言，包括简体中文）、多种工作流模式切换（如代码、邮件调查）、MCP 搜索工具用于自然语言查询项目历史、知识代理构建、Web Viewer UI 实时可视化内存流、隐私控制以及上下文配置等功能。 \n\n**技术亮点**\nClaude-Mem 采用分层架构，核心组件包括 5 个生命周期钩子（`SessionStart`、`UserPromptSubmit`、`PostToolUse`、`Stop`、`SessionEnd`），一个由 Bun 管理的本地 HTTP API Worker 服务，用于存储会话、观察和摘要的 SQLite 数据库，以及用于混合语义和关键词搜索的 Chroma 向量数据库。  它还实现了三层工作流模式的 MCP 搜索工具，通过 `search`、`timeline` 和 `get_observations` 工具，可节省约 10 倍的令牌消耗。 \n\n**适合谁用**\nClaude-Mem 适用于使用 Claude Code 或其他支持的 IDE（如 Cursor, Windsurf, OpenCode, Codex CLI, Antigravity CLI, OpenClaw）的开发者和知识工作者。  它旨在帮助 AI 编码助手在不同会话中保持上下文，提高开发效率和代码质量。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 308352,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供了一套代理技能，旨在帮助工程师更高效地进行软件开发，解决AI辅助开发中的常见问题。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助软件开发中的四个常见问题：代理未能准确理解用户意图，代理输出过于冗长，代理生成的代码无法正常工作，以及代码库随着AI加速开发而变得复杂难以维护（“大泥球”问题）。\n\n**核心功能**\n项目提供了一系列“技能”（Skills），这些技能是模块化的能力，通常基于Markdown并包含前置信息，供编码代理使用。核心功能包括：通过`/grill-me`和`/grill-with-docs`进行“拷问式”对话以明确需求和建立共享语言；通过`/tdd`技能实现测试驱动开发，确保代码质量；通过`/diagnosing-bugs`技能进行系统化的bug诊断；以及通过`/improve-codebase-architecture`技能扫描代码库，发现并改进架构“深化机会”。此外，还有`/to-spec`用于将对话转化为规范，`/to-tickets`用于将计划拆分为可执行的任务票据，以及`/implement`和`/implement-spec`用于执行开发工作。\n\n**技术亮点**\n该项目强调“深度模块”设计原则，即通过小接口封装大量功能，提高代码的可维护性和可测试性。它利用“拷问会话”（grilling session）来确保代理与用户之间的理解一致，并建立“通用语言”（ubiquitous language）来减少代理的冗余输出并提高代码库的可导航性。项目还支持多种代理平台（如Claude Code, Codex, GitHub Copilot, Gemini CLI），并提供用户调用和模型调用两种技能触发方式。\n\n**适合谁用**\n该项目适合希望利用AI代理提高软件开发效率和代码质量的工程师。特别是那些在使用AI辅助开发过程中遇到沟通不畅、代码质量不稳定或代码库快速腐化等问题的开发者。它也适用于希望通过结构化方法进行需求分析、任务分解、测试驱动开发和架构改进的团队。",
+      "degraded": false
+    },
+    {
+      "id": "Donchitos/Claude-Code-Game-Studios",
+      "owner": "Donchitos",
+      "name": "Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "stars": 31146,
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "one_liner": "Claude Code Game Studios 将单个 Claude Code 会话转化为结构化的专业游戏开发环境，通过多代理协作提升 AI 辅助开发效率和质量。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 辅助开发中常见的“意大利面条式代码”、缺乏设计文档和范围蔓延等问题。 它通过引入一个由 49 个专业代理组成的层级结构、72 种专业技能和 12 个自动化质量门，为 AI 会话提供真实工作室的结构。 这样可以确保项目从最初的构思到最终发布都保持组织性和高质量。\n\n**核心功能**\n核心功能包括一个三层代理层级结构（总监、部门主管、专家）， 72 个斜杠命令（技能）用于自动化工作流程，例如 `/start`、`/design-system` 和 `/team-combat`。 它还包含 12 个自动化钩子用于验证和审计， 11 条路径范围规则用于代码标准， 以及 39 个标准化文档模板。\n\n**技术亮点**\n技术亮点在于其精密的代理协调机制，遵循“提问 → 选项 → 决策 → 草稿 → 批准”的协作协议，确保用户始终掌握控制权。 自动化安全钩子（如 `validate-commit.sh`）在会话中自动运行，执行代码规范和质量检查。 路径范围规则根据文件位置自动强制执行编码标准，例如 `src/gameplay/**` 路径下的代码会遵循游戏玩法规则。\n\n**适合谁用**\n该项目适合希望利用 AI 提升游戏开发效率，同时又需要保持项目结构、设计质量和代码规范的独立开发者、小型团队或游戏工作室。 它为那些希望避免 AI 辅助开发中常见混乱，并希望拥有一个虚拟专业团队来指导和审查其工作的人提供了理想的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "stars": 35500,
+      "description": "",
+      "one_liner": "T3 Code 是一个 AI 驱动的编码助手，它通过多提供商代理集成和深度 Git 集成来协助开发工作流。",
+      "detail_md": "T3 Code 是一个 AI 驱动的编码助手，它通过多提供商代理集成和深度 Git 集成来协助开发工作流。 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.1\" end=\"1.1\" />\n\n**解决什么问题**\nT3 Code 旨在解决传统编码过程中效率低下、重复性任务多以及代码质量难以保证等问题。它通过提供 AI 辅助、自动化任务和版本控制集成，帮助开发者更高效地完成编码工作，并确保代码质量和可追溯性。 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.2\" end=\"1.2\" />\n\n**核心功能**\n该项目提供核心功能包括：AI 驱动的编码辅助、多提供商代理集成（如 Claude、Codex 等）、深度 Git 集成以实现代码快照和回滚、以及对不同运行环境（本地、远程、云）的支持。 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.2\" end=\"1.2\" /> <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.1\" end=\"1.1\" /> 它通过 `Thread` 管理会话，`Turn` 处理用户输入和 AI 响应，并通过 `Activity` 记录细粒度的操作。 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.2\" end=\"1.2\" />\n\n**技术亮点**\n技术亮点包括：基于 `pnpm` 和 `Vite+ (vp)` 的单体仓库管理 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.1\" end=\"1.1\" />；通过 `EnvironmentId`、`ProjectId`、`ThreadId` 和 `TurnId` 等概念构建的层次化数据模型 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.2\" end=\"1.2\" />；以及通过 `Checkpoint` 实现的 Git 支持的源代码快照和状态回溯功能 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.2\" end=\"1.2\" />。此外，它还支持产品使用数据遥测，并允许用户禁用或导出诊断数据。 \n\n**适合谁用**\nT3 Code 适合需要 AI 辅助来提高编码效率的开发者、团队，以及希望通过自动化和版本控制集成来优化开发工作流的组织。 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.1\" end=\"1.1\" /> 它也适用于那些需要管理多个开发环境和项目的用户。 <cite repo=\"pingdotgg/t3code\" path=\"wiki_page\" start=\"1.2\" end=\"1.2\" />",
+      "degraded": false
+    },
+    {
+      "id": "Renhuai123/ziwei-doushu",
+      "owner": "Renhuai123",
+      "name": "ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "stars": 12256,
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "one_liner": "这是一个基于倪海厦《天纪》体系的紫微斗数开源排盘引擎与知识平台。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决传统紫微斗数算法不透明、被商业应用封闭的问题，通过开源核心算法和知识库，让更多人接触和学习紫微斗数这门传统学问。 \n\n### 核心功能\n核心功能包括：提供倪海厦《天纪》教学体系的紫微斗数排盘算法，支持真太阳时校正、中国夏令时处理、闰月四种口径配置、晚子时换日策略、星曜亮度七档分级及流派切换、四化与飞星系统、十二神煞，以及超过 1100 行的格局判定规则。此外，项目还发布了大规模的紫微斗数解读数据集，例如 v4.0 解读数据集包含 674,976 张命盘的 877 万段解读。\n\n### 技术亮点\n技术亮点在于其开源的确定性排盘引擎，采用 Next.js 16 (App Router) 和 TypeScript 构建。引擎代码位于 `lib/ziwei/` 目录下，包含 `algorithm.ts` 用于排盘流程、`sihua.ts` 处理四化飞星、`patterns.ts` 实现格局知识库。项目还集成了古籍原文数据 和倪海厦《天纪》原话语料。\n\n### 适合谁用\n本项目适合紫微斗数研究者、开发者、数据分析师以及对传统文化和命理学感兴趣的人群。开发者可以利用其开源引擎进行二次开发，研究者可以利用其数据集进行学术分析，普通用户则可以通过其排盘功能了解自己的命盘。",
+      "degraded": false
+    },
+    {
+      "id": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "stars": 9588,
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "one_liner": "OpenMausBot 是一个本地优先的 AI 代理平台，它将 AI 机器人团队管理集成到消息应用中，支持本地和云端模型，并能与本地设备、移动设备或远程云环境交互。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 代理的本地化、数据隐私和多功能性问题。它允许用户使用自己的 AI 引擎和订阅，确保数据（如对话记录、密钥和事件）存储在本地，而非云端。此外，它还提供了 AI 代理与计算机、移动设备和各种应用程序交互的能力，解决了 AI 代理在实际操作中的局限性。\n\n**核心功能**\n*   **自带 AI 引擎**：支持用户使用本地安装的 `claude`、`codex` 和 `grok` 等 CLI 工具，无需新账户或中间代理。\n*   **本地优先**：所有代理进程由本地服务器管理，数据存储在用户本地目录 `~/.openmausbot` 中。\n*   **代理具备操作能力**：机器人可以操作云端 Linux 桌面、隔离的本地虚拟机，或在 macOS 和 Ubuntu Xorg 上直接控制用户电脑，并通过 Composio 集成 500 多个应用。\n*   **权限审批**：所有高风险操作（如 shell 命令、文件编辑）都会以卡片形式弹出，需要用户手动“允许”或“拒绝”。\n*   **多模型支持**：提供模型选择器，允许用户在对话中切换机器人的模型。\n*   **移动设备控制**：通过 ADB 技能直接控制 Android 设备，实现手机应用交互、手势操作和屏幕内容读取。\n\n**技术亮点**\n*   **三进程架构**：采用 Electron 主进程、Node.js Harness 服务器和 React 前端 SPA 的三进程模型，分离了 UI、业务逻辑和原生系统集成。\n*   **CUA 驱动集成**：通过 `cua-driver` 实现本地桌面控制，确保权限边界和安全套接字创建。\n*   **内置浏览器**：利用 Electron 内置的 Chromium 渲染器实现浏览器使用功能，无需额外安装 Chrome 或 Playwright。\n*   **模块化技能定义**：通过 `skills/` 目录定义 MCP 技能，例如 `phone-harness` 用于 ADB 设备代理。\n\n**适合谁用**\n该项目适合需要本地化、注重数据隐私、并希望 AI 代理能够与本地计算机、移动设备和各种应用程序进行深度交互的开发者和高级用户。它也适合那些希望整合现有 AI 服务（如 Claude、Codex）并对其进行精细控制的用户。",
+      "degraded": false
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 98249,
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "one_liner": "Impeccable 是一个用于扫描 UI 反模式和设计质量问题的命令行工具，支持多种检测模式和目标，并提供设计评审功能。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决用户界面设计中存在的反模式和质量问题。它通过自动化检测和设计评审流程，帮助开发者和设计师识别并改进用户体验，确保设计的一致性和高质量。\n\n**核心功能**\n核心功能包括：\n*   **UI 反模式检测**：`detect` 命令可以扫描 HTML 文件、非 HTML 文件（如 CSS、JSX、TSX）、URL 以及正在运行的应用程序，以发现 UI 反模式和设计质量问题。\n*   **忽略规则管理**：`ignores` 命令允许用户管理检测器的忽略规则、文件和值，以定制检测行为。\n*   **技能管理**：提供 `install`、`update`、`link` 和 `check` 等命令来管理 Impeccable 技能，支持从 GitHub 发布版本进行安全安装。\n*   **设计评审**：`critique` 命令通过独立评估（设计评审和自动化检测）生成设计批判报告，并支持将报告持久化。\n\n**技术亮点**\n*   **Rust 引擎**：项目核心检测逻辑已从 JavaScript 迁移到 Rust，提高了性能和安全性，特别是在远程下载和验证技能包时。\n*   **多目标检测**：支持对静态 HTML/CSS 文件、非 HTML 代码、URL（通过 Puppeteer 渲染）和正在运行的 Chromium 应用（通过 CDP）进行检测。\n*   **严格的 CLI 合约**：定义了严格的命令行接口行为，包括参数、环境变量、输入/输出、退出码等，并通过黄金记录进行验证。\n*   **原生捕获机制**：利用无头浏览器进行视觉捕获，确保视觉数据的准确性和可复现性，支持快照冻结、时钟固定和栅格覆盖测量。\n\n**适合谁用**\n该工具适合需要自动化检测 UI 反模式和设计质量问题的开发者、设计师和质量保证团队。特别是那些希望在开发流程中集成设计评审、确保产品符合设计规范并持续改进用户体验的团队。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 310044,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers 是一个为 AI 编码代理设计的完整软件开发方法论，通过可组合技能和强制指令协议，将 AI 编码代理从被动代码编写者转变为系统化软件工程师。",
+      "detail_md": "**解决什么问题**\nSuperpowers 旨在解决 AI 编码代理在没有结构化流程时，直接生成代码而缺乏上下文理解、精确规范和用户确认的问题。它通过强制执行“退一步”工作流，确保在实施前收集上下文、提取精确规范并获得用户批准，从而提升代码质量和开发效率。\n\n**核心功能**\n该项目提供了一套核心技能，包括：`brainstorming`（激活于构建前，用于澄清需求）、`using-git-worktrees`（设计批准后创建隔离工作区）、`writing-plans`（将设计分解为详细任务）、`subagent-driven-development` 或 `executing-plans`（执行计划）、`test-driven-development`（强制 RED-GREEN-REFACTOR 循环）、`requesting-code-review`（任务间代码审查）  和 `finishing-a-development-branch`（完成开发分支）。这些技能作为强制性操作框架，而非可选建议。\n\n**技术亮点**\nSuperpowers 的技术亮点在于其多平台插件架构，支持 Claude Code、Antigravity、Codex App 等多种 AI 平台。它通过 `using-superpowers` 元技能强制执行行为规范，确保代理在执行任何任务前检查相关技能。此外，它还支持可视化头脑风暴伴侣功能，可以启动本地 Web 服务器显示模型和图表。\n\n**适合谁用**\nSuperpowers 适合希望将 AI 编码代理从简单的代码生成器转变为遵循系统化软件工程实践的开发者的个人或团队。它适用于在企业环境中使用 AI 代理，并需要商业支持、额外工具或托管支出的用户。",
+      "degraded": false
+    },
+    {
+      "id": "lightpanda-io/browser",
+      "owner": "lightpanda-io",
+      "name": "browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "stars": 39230,
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "one_liner": "Lightpanda 是一个用 Zig 从零开始构建的无头浏览器，专为 AI 代理、网络抓取、自动化和测试而设计，提供轻量、快速的 JavaScript 执行环境。",
+      "detail_md": "**解决什么问题**\n传统的无头浏览器（如基于 Chromium 或 WebKit 的浏览器）在服务器上运行时资源消耗大、难以扩展和维护，且包含许多在无头模式下不必要的功能。Lightpanda 旨在解决这些问题，提供一个内存占用更小、执行速度更快、更易于部署和扩展的替代方案，特别优化了 AI 代理和自动化场景。\n\n**核心功能**\nLightpanda 支持多种操作模式：`fetch` 模式用于加载 URL 并导出文档或结构化输出；`serve` 模式启动 WebSocket 服务器，支持 Chrome DevTools Protocol (CDP) 和 WebDriver BiDi，兼容 Puppeteer 和 Playwright 等自动化框架；`agent` 模式提供交互式 AI 代理循环，通过自然语言指令执行浏览器操作；`mcp` 模式运行 Model Context Protocol 服务器，将浏览器能力暴露给 LLM 环境。\n\n**技术亮点**\nLightpanda 完全使用 Zig 语言从零构建，不基于 Chromium、Blink 或 WebKit，实现了对内存的精细控制，从而实现高性能。它集成了 V8 JavaScript 引擎进行 JS 执行，使用 `html5ever` 进行 HTML 解析，并支持 HTTP/2、TLS 和 SQLite 等现代网络和存储技术。其基准测试显示，内存占用比 Headless Chrome 少约 16 倍，执行速度快约 9 倍。\n\n**适合谁用**\nLightpanda 适合需要高性能、低资源消耗的无头浏览器解决方案的开发者和团队。具体包括：AI 代理开发者，需要浏览器与大型语言模型（LLM）集成；网络抓取和数据提取工程师，追求效率和资源优化；自动化测试工程师，寻求更轻量、更快的测试环境。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/DeepTutor",
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 52783,
+      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+      "one_liner": "DeepTutor 是一个智能体原生的学习工作区，提供个性化辅导和多种学习功能。",
+      "detail_md": "**解决什么问题**\nDeepTutor 旨在解决传统学习模式中缺乏个性化和集成化的问题。它通过提供一个统一的平台，将辅导、解题、测验生成、研究、可视化和掌握度练习等多种学习活动整合在一起，从而实现终身个性化学习。  \n\n**核心功能**\nDeepTutor 的核心功能包括统一的运行时环境，支持聊天、问答、测验、研究、可视化、解题、课程学习、掌握度路径、沉浸式阅读和沉浸式观看等多种能力。  它还提供互联的学习上下文，允许知识库、书籍、笔记等在不同工作流中复用。  此外，它支持沉浸式视频学习、多引擎知识库、可扩展工具与技能，以及可审计的记忆功能。 \n\n**技术亮点**\n该项目采用智能体原生设计，所有能力共享一个运行时环境和会话上下文，但各自拥有专门的循环和流水线。  它集成了多种 RAG 引擎（如 LlamaIndex, PageIndex, LightRAG）用于知识检索和推理。  DeepTutor 还支持通过 MCP 协议连接外部工具服务器和子智能体，极大地扩展了其功能。 \n\n**适合谁用**\nDeepTutor 适合需要个性化学习体验的学生、寻求高效辅导工具的教育工作者，以及希望利用 AI 智能体进行研究、问题解决和知识管理的个人用户。",
+      "degraded": false
+    },
+    {
+      "id": "Orkas-AI/Orkas",
+      "owner": "Orkas-AI",
+      "name": "Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "stars": 6125,
+      "description": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+      "one_liner": "Orkas is anopen-source, local-first multi-agent desktop applicationthat lets you command a team of …",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nOrkas is anopen-source, local-first multi-agent desktop applicationthat lets you command a team of AI specialist agents from a single chat — not one chatbot, not a code framework, not a hosted SaaS. Y...",
+      "degraded": true
+    },
+    {
+      "id": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "stars": 42174,
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "one_liner": "OpenMAIC是一个开源AI平台，能将任何主题或文档转化为沉浸式互动学习体验。",
+      "detail_md": "**解决什么问题**\nOpenMAIC旨在解决传统学习材料缺乏互动性和个性化的问题。它通过多智能体协作和生成式AI技术，将静态内容转化为动态、沉浸式的互动课堂，提供AI老师和AI同学进行讲解、讨论和互动，从而提升学习体验和效率。\n\n**核心功能**\nOpenMAIC的核心功能包括一键生成课堂，支持多智能体互动授课、讨论和问答。它能生成幻灯片、测验、交互式模拟实验和项目制学习（PBL）等多种场景类型。此外，还支持白板绘图和语音讲解，并能导出可编辑的PPTX或交互式HTML页面。\n\n**技术亮点**\n该项目采用两阶段生成流水线，包括大纲生成和场景生成。它基于LangGraph实现多智能体编排，并提供深度交互模式，支持3D可视化、模拟实验、游戏、思维导图和在线编程等。OpenMAIC还支持多种LLM服务商和本地AI服务（如Lemonade和FunASR），并提供模块化的SDK系列。\n\n**适合谁用**\nOpenMAIC适合教育工作者、内容创作者以及任何希望通过AI技术提升学习体验的个人或机构。它也适用于开发者，可以通过其开放的Skill包集成到Agent工作台，如OpenClaw、Codex等，在聊天应用或IDE中直接生成课堂。",
+      "degraded": false
+    },
+    {
+      "id": "bregman-arie/devops-exercises",
+      "owner": "bregman-arie",
+      "name": "devops-exercises",
+      "url": "https://github.com/bregman-arie/devops-exercises",
+      "stars": 85967,
+      "description": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+      "one_liner": "这是一个DevOps和SRE面试准备资源库，包含2600多个问题和练习。",
+      "detail_md": "**解决什么问题**\n该项目旨在帮助DevOps、SRE和生产工程师准备技术面试，通过提供大量的练习和问题来弥补知识空白，并提升相关技能。  它还提供了一种结构化的学习路径，帮助用户掌握DevOps领域的核心技能。 \n\n**核心功能**\n项目包含DevOps、Git、网络、Kubernetes、编程语言（如Python、Go）、云平台（AWS、Azure、GCP）、操作系统、数据库、CI/CD、Terraform等多个主题的问题和练习。  它还提供了随机问题生成器 `scripts/random_question.py` 和问题计数器 `scripts/count_questions.sh` 等辅助工具。 \n\n**技术亮点**\n该项目涵盖了广泛的DevOps核心技能，包括Linux/OS知识、编程、架构设计和工具专业知识。  它通过场景化学习和鼓励用户创建自己的DevOps项目来强调实践应用。  \n\n**适合谁用**\n该项目适合希望在DevOps、SRE和生产工程师领域寻求职业发展的人员，以及任何希望提升DevOps相关技术知识和实践技能的工程师。",
+      "degraded": false
+    },
+    {
+      "id": "vorssaint/vorssaint-utils",
+      "owner": "vorssaint",
+      "name": "vorssaint-utils",
+      "url": "https://github.com/vorssaint/vorssaint-utils",
+      "stars": 31885,
+      "description": "Free and open-source macOS menu bar toolkit.",
+      "one_liner": "Vorssaint 是一款 macOS 多合一开源工具，集系统监控、音频控制、窗口管理和多种效率工具于一体，注重隐私保护。",
+      "detail_md": "**解决什么问题** \nVorssaint 旨在替代 macOS 上一系列单一用途的付费工具，将多种常用功能整合到一个免费、开源且本地优先的应用中，避免用户购买和管理多个应用，同时解决隐私泄露和订阅费用问题。  \n\n**核心功能** \n它提供系统监控（CPU、GPU、内存、网络、电池）、  音频控制（按应用调节音量、输出切换、麦克风管理）、  窗口管理（应用切换器、窗口布局、Dock 预览）、  剪贴板历史、文本片段、文件暂存架、应用卸载器等多种实用工具。  \n\n**技术亮点** \n项目采用原生 Swift、SwiftUI 和 AppKit 构建，  针对 macOS 14.0 及更高版本和 Apple Silicon 进行了优化。  其设计哲学强调“本地优先与隐私保护”（无遥测、无账户、无云后端）、  “原生与轻量”（避免外部依赖）、  以及“权限感知”（功能可选，权限拒绝时优雅降级）。 \n\n**适合谁用** \nVorssaint 适合所有 macOS 用户，特别是那些希望整合系统工具、提高效率、关注个人隐私、并寻求免费开源解决方案的用户。  用户可以根据需求选择性安装和启用各项功能。",
+      "degraded": false
+    }
+  ]
+}
