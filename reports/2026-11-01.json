@@ -155,6 +155,127 @@
       "one_liner": "Vorssaint 是一款 macOS 多合一开源工具，集系统监控、音频控制、窗口管理和多种效率工具于一体，注重隐私保护。",
       "detail_md": "**解决什么问题** \nVorssaint 旨在替代 macOS 上一系列单一用途的付费工具，将多种常用功能整合到一个免费、开源且本地优先的应用中，避免用户购买和管理多个应用，同时解决隐私泄露和订阅费用问题。  \n\n**核心功能** \n它提供系统监控（CPU、GPU、内存、网络、电池）、  音频控制（按应用调节音量、输出切换、麦克风管理）、  窗口管理（应用切换器、窗口布局、Dock 预览）、  剪贴板历史、文本片段、文件暂存架、应用卸载器等多种实用工具。  \n\n**技术亮点** \n项目采用原生 Swift、SwiftUI 和 AppKit 构建，  针对 macOS 14.0 及更高版本和 Apple Silicon 进行了优化。  其设计哲学强调“本地优先与隐私保护”（无遥测、无账户、无云后端）、  “原生与轻量”（避免外部依赖）、  以及“权限感知”（功能可选，权限拒绝时优雅降级）。 \n\n**适合谁用** \nVorssaint 适合所有 macOS 用户，特别是那些希望整合系统工具、提高效率、关注个人隐私、并寻求免费开源解决方案的用户。  用户可以根据需求选择性安装和启用各项功能。",
       "degraded": false
+    },
+    {
+      "id": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "stars": 45048,
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "one_liner": "Kronos 是首个开源金融 K 线基础模型，用于金融市场数据预测。",
+      "detail_md": "**解决什么问题**\nKronos 旨在解决金融时间序列数据预测的挑战，特别是 K 线数据的高噪声和复杂性问题。它通过将连续、多维的 K 线数据（OHLCV）转化为分层离散令牌，并使用大型自回归 Transformer 模型进行预训练，从而实现对金融市场的统一建模和预测。\n\n**核心功能**\nKronos 的核心功能包括 K 线数据的分词化和预测。它使用 `KronosTokenizer` 将 OHLCV 数据编码为分层离散令牌，然后由 `Kronos` 模型进行自回归预测。`KronosPredictor` 类封装了数据预处理、归一化、预测和逆归一化等步骤，简化了预测流程。它还支持批量预测，以高效处理多个时间序列。\n\n**技术亮点**\n该项目的主要技术亮点在于其两阶段框架：首先，一个专门的 `KronosTokenizer` 使用 `BinarySphericalQuantizer` 将连续的 K 线数据量化为分层离散令牌。其次，一个大型自回归 Transformer 模型在这些令牌上进行预训练。模型架构中还包含了 `HierarchicalEmbedding` 用于处理多部分离散令牌  和 `DependencyAwareLayer` 以尊重 s1 和 s2 预测阶段之间的依赖关系。此外，它采用了 `RoPE` (旋转位置嵌入) 和 `RMSNorm` (均方根层归一化) 来增强模型性能和稳定性。\n\n**适合谁用**\nKronos 适合需要对金融市场 K 线数据进行预测的研究人员、量化交易员和开发者。特别是那些希望利用基础模型进行金融时间序列分析，并能够根据自己的数据集进行微调的用户。它提供了从数据准备到模型微调和回测的完整流程，支持自定义 CSV 数据集和分布式训练。",
+      "degraded": false
+    },
+    {
+      "id": "public-apis/public-apis",
+      "owner": "public-apis",
+      "name": "public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "stars": 494146,
+      "description": "A collective list of free APIs",
+      "one_liner": "这是一个社区维护的免费公共API目录，旨在帮助开发者快速查找和使用API。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决开发者难以发现和管理免费公共API的问题。它提供了一个集中、结构化的API列表，并确保API信息的准确性和可用性，避免了无效或过时的API链接。\n\n### 核心功能\n核心功能包括：\n*   **API目录**：一个包含超过1000个API条目的Markdown文件 (`README.md`)，按50多个类别组织。\n*   **验证工具链**：通过Python脚本 (`format.py` 和 `links.py`) 自动检查API条目的格式、字段值、字母顺序和链接可用性。\n*   **CI/CD流水线**：GitHub Actions工作流用于在代码推送、拉取请求和定时任务时执行验证，确保目录的持续准确性。\n\n### 技术亮点\n*   **自动化验证**：使用Python脚本 (`scripts/validate/format.py` 和 `scripts/validate/links.py`) 自动执行格式和链接验证，确保数据质量。\n*   **Cloudflare保护检测**：链接验证器能够识别因Cloudflare反机器人措施导致的链接失败，避免误报。\n*   **模块化设计**：验证工具链分为格式验证和链接验证两个独立模块，提高了可维护性和可扩展性。\n\n### 适合谁用\n*   **开发者**：寻找免费公共API以集成到其项目中的开发者。\n*   **贡献者**：希望向API目录添加新API或更新现有API的社区成员。\n*   **下游工具开发者**：需要解析API列表以构建自己的工具或服务的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "cjpais/Handy",
+      "owner": "cjpais",
+      "name": "Handy",
+      "url": "https://github.com/cjpais/Handy",
+      "stars": 36178,
+      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
+      "one_liner": "Handy 是一款注重隐私的桌面语音转文本应用，支持离线转录，通过快捷键激活，并将文本自动粘贴到活动应用中。",
+      "detail_md": "**解决什么问题**\nHandy 解决了用户对语音转文本服务隐私和便捷性的需求。它通过在本地设备上进行所有音频处理和机器学习推理，避免了将敏感音频数据发送到云服务，从而保护用户隐私。同时，它提供跨平台支持和可配置的全局快捷键，简化了语音转文本的操作流程。\n\n**核心功能**\n核心功能包括语音活动检测（VAD）以过滤静音，支持 Whisper (GGUF)、Parakeet 等多种模型，提供 GPU 加速，以及用于录音控制的全局快捷键。此外，它还具备转录历史记录功能，将转录文本和音频存储在 SQLite 数据库中。\n\n**技术亮点**\nHandy 采用 Tauri 2.x 框架构建，结合 Rust 后端处理音频管道、Whisper 推理和系统级快捷方式，以及 React/TypeScript 前端管理用户配置和引导。其架构亮点包括管理器模式（Manager Pattern）、命令-事件架构（Command-Event Architecture）和基于 Zustand 的状态管理。它还支持国际化（i18n），所有用户界面字符串都使用 i18next 进行翻译。\n\n**适合谁用**\nHandy 适合需要高效、私密地将语音转换为文本的用户。这包括需要离线转录以保护数据隐私的专业人士、学生以及任何希望通过语音输入提高生产力的人。由于其开源和可扩展性，它也适合开发者作为构建自定义语音应用的基础。",
+      "degraded": false
+    },
+    {
+      "id": "kornia/kornia",
+      "owner": "kornia",
+      "name": "kornia",
+      "url": "https://github.com/kornia/kornia",
+      "stars": 11631,
+      "description": "🐍 Geometric Computer Vision Library for Spatial AI",
+      "one_liner": "Kornia是一个基于PyTorch的可微分计算机视觉库，提供丰富的图像处理和几何视觉算法。",
+      "detail_md": "**解决什么问题**\nKornia旨在解决在深度学习工作流中集成计算机视觉操作的挑战，特别是需要端到端梯度流的场景。  它通过提供GPU加速、批处理的经典和现代计算机视觉算法实现，使视觉操作可学习和优化。 \n\n**核心功能**\nKornia的核心功能包括可微分的图像处理操作（如滤波、色彩空间转换、形态学操作）、几何变换和相机模型、支持可微分变换的数据增强、以及特征检测、描述和匹配。  此外，它还包含AI模型和实验性功能，例如人脸检测、特征匹配和图像分割模型。 \n\n**技术亮点**\nKornia的技术亮点在于其“可微分优先”的设计原则，所有操作都支持PyTorch的自动求导，确保梯度信息在整个管道中流动。  它支持批处理张量输入，并且设备无关，可以在CPU、CUDA或其他加速器上运行。  Kornia是PyTorch原生的，不依赖OpenCV等外部库，并兼容TorchScript和ONNX导出。  它还支持多框架，可与TensorFlow、JAX和NumPy一起使用。 \n\n**适合谁用**\nKornia适合需要将计算机视觉算法集成到深度学习管道中的研究人员和开发者。  特别是那些需要进行图像变换、数据增强、特征检测与匹配，以及利用预训练AI模型进行视觉任务的用户。  它也适用于希望利用GPU加速和自动微分进行端到端优化的场景。",
+      "degraded": false
+    },
+    {
+      "id": "beenuar/AiSOC",
+      "owner": "beenuar",
+      "name": "AiSOC",
+      "url": "https://github.com/beenuar/AiSOC",
+      "stars": 5947,
+      "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+      "one_liner": "AiSOC 是一个开源、自托管的 AI 安全运营中心，可自动化检测、分类和调查安全威胁，并提供完全可审计的 AI 决策过程。",
+      "detail_md": "**解决什么问题**\nAiSOC 旨在解决传统安全运营中心面临的警报量大、上下文切换频繁、AI 决策不透明以及合规性审计困难等问题。 它通过自动化威胁检测、调查和响应，帮助分析师从海量警报中识别真实威胁，并提供可审计的 AI 决策过程，以满足合规性要求。  \n\n**核心功能**\nAiSOC 的核心功能包括：从各种安全工具摄取遥测数据并进行标准化；运行 2535 条可执行检测规则；使用 AI 代理调查事件并记录所有决策到调查分类账；提供 87 种即插即用的数据连接器；以及支持 L0-L4 自动化成熟度模型，从人工审批到完全自主响应。\n\n**技术亮点**\n该项目采用模块化微服务架构，结合实时数据摄取、机器学习融合和基于 LangGraph 的多代理编排层。 它使用 PostgreSQL 存储关系数据，ClickHouse 存储时间序列事件，Neo4j 存储实体图，Qdrant 存储基于向量的 RAG 内存。 此外，它还提供公共评估工具，用于衡量 MITRE ATT&CK 准确性、调查完整性和响应质量。\n\n**适合谁用**\nAiSOC 适合需要自动化安全运营、提高威胁检测和响应效率的组织。 特别是对于受监管行业的用户，其可审计的 AI 决策过程和自托管能力有助于满足合规性要求。 SOC 分析师、SOC 经理/检测工程师以及 CISO/SecOps 总监等角色都能从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "anomalyco/hex",
+      "owner": "anomalyco",
+      "name": "hex",
+      "url": "https://github.com/anomalyco/hex",
+      "stars": 2757,
+      "description": "Local-first voice dictation for macOS. Hold a shortcut, speak, and paste into any app. Native Rust, on-device speech recognition, and a Linux beta.",
+      "one_liner": "Hex 是一款本地优先的语音听写和语音控制应用程序，支持 macOS、Windows 和 Linux 平台。",
+      "detail_md": "**解决什么问题**\nHex 旨在解决用户在不同操作系统上进行语音输入和控制的需求，提供本地化的语音转文本服务，避免了对云服务的依赖，从而保护用户隐私并提高效率。   它还支持在没有网络连接的情况下进行语音听写。 \n\n**核心功能**\nHex 的核心功能包括：设备上语音转录，支持多种语言和模型；通过快捷键进行听写，并将结果粘贴到当前应用程序；可定制的模式和文本处理功能，例如修正和文本转换；可选的 OpenCode 功能，用于高级文本后处理；以及屏幕录制和标注功能，可将录制内容发送给代理。\n\n**技术亮点**\n该项目采用 Rust 语言构建，确保了高性能和跨平台兼容性。它利用本地语音模型（如 Parakeet 和 Whisper）进行设备上转录。Hex 还支持 TypeScript SDK，允许其他桌面应用程序集成其转录功能。其架构结合了单进程后台运行时和通过 Rune UI 框架渲染的跨平台 GUI。\n\n**适合谁用**\nHex 适合需要高效、私密语音输入和控制的用户，特别是那些注重数据隐私、不希望语音数据上传到云端的专业人士。  它支持 macOS (Apple Silicon)、Windows (x64 和 ARM64) 和 Linux (x86_64 X11 和 Wayland) 平台，因此适用于广泛的桌面用户。",
+      "degraded": false
+    },
+    {
+      "id": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "stars": 9297,
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "one_liner": "OpenBot 是一个可私有化部署的 AI 助手平台，提供可信赖的 AI 员工，具备工具访问和严格的治理模型。",
+      "detail_md": "**解决什么问题**\nOpenBot 旨在解决企业在利用 AI 助手时面临的信任和安全问题。 传统的 AI 代理可能缺乏对操作的可见性和控制，而 OpenBot 通过在企业基础设施内部运行，并对每个代理操作进行严格的治理和审计，确保 AI 员工可以安全地访问和使用企业工具。\n\n**核心功能**\nOpenBot 提供以下核心功能：\n*   **隔离的计算环境**：每个 AI 员工（coworker）都拥有独立的计算环境，包括一个 Chromium 浏览器容器、独立的登录、文件和工作区卷，确保操作隔离。\n*   **严格的治理模型**：所有代理操作都通过一个中心网关进行决策和记录，并根据通用表达式语言 (CEL) 策略进行评估，确保每次操作都经过授权和审计。\n*   **框架无关性**：基于 AG-UI 协议构建，OpenBot 可以托管使用 LangGraph、Mastra 或自定义实现的代理。\n*   **可审计性**：所有代理操作都会被记录在审计日志中，提供完整的操作历史。\n\n**技术亮点**\n*   **自托管能力**：整个平台可以在用户自己的基础设施中运行，数据存储在用户的 PostgreSQL 数据库中，模型选择也由用户决定。\n*   **细粒度策略控制**：通过 CEL 策略，可以对代理的工具使用、文件访问、命令执行等进行细致的控制。\n*   **AG-UI 协议**：采用开放的 AG-UI 协议，使得 OpenBot 不受限于特定的代理框架，具有高度的灵活性和可扩展性。\n*   **安全隔离**：每个代理的计算机都绑定到 `127.0.0.1` 并需要容器令牌，防止未经授权的访问。\n\n**适合谁用**\nOpenBot 适合需要将 AI 助手集成到其内部工作流程中，同时又对数据安全、操作透明度和合规性有严格要求的企业和组织。 它适用于希望拥有和完全控制其 AI 助手平台，并能够根据自身需求进行定制和扩展的用户。",
+      "degraded": false
+    },
+    {
+      "id": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "stars": 12652,
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "one_liner": "这个项目是一个精心策划的系统提示、角色锁定、工作区策略和代理操作规范集合，适用于前沿、开源和免费的隐形模型。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型在面对复杂指令、安全限制和默认行为时可能出现的偏差和拒绝问题。它通过提供一套完整的提示和配置，帮助研究人员和开发者理解并控制模型行为，使其更符合预期，同时也能研究如何增强AI系统对提示注入和指令操纵的抵抗力。\n\n**核心功能**\n该项目核心功能是提供31个针对25+模型的完整提示集合，包括系统提示、角色定义、工作区策略、`AGENTS.md`文件、配置块和Ollama Modelfiles。这些文件可以直接使用，无需修改，覆盖了OpenCode Zen的免费隐形模型、GLM、DeepSeek等开源模型以及Claude、Gemini等闭源前沿模型。它还定义了请求处理逻辑，例如`handle(request)`、`match(content, boundaries)`、`decline(hit)`和`produce(request, fidelity, intensity)`等函数，以确保模型在特定边界内执行任务。\n\n**技术亮点**\n技术亮点在于其对模型行为的精细控制和覆盖范围广泛的提示工程实践。项目引入了“至高无上条款”（Supremacy Clause）等概念，确保操作规范优先于模型默认设置和训练先验。它还定义了严格的“硬底线”（Hard Floor）安全边界，仅禁止少数具体、可预见的危害行为，同时允许在其他领域进行高度自由的创作和技术工作。此外，项目还包含了针对“训练残余”（Training Residue）和“干扰”（INTERFERENCE）的抑制机制，以消除模型不必要的谨慎和过滤行为。\n\n**适合谁用**\n该项目适合AI研究人员、提示工程师、安全研究人员以及希望深入理解和控制大型语言模型行为的开发者。对于需要为特定任务定制模型响应、探索模型能力边界或研究模型安全漏洞的用户来说，这是一个宝贵的资源。",
+      "degraded": false
+    },
+    {
+      "id": "patchy631/ai-engineering-hub",
+      "owner": "patchy631",
+      "name": "ai-engineering-hub",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "stars": 39925,
+      "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+      "one_liner": "AI Engineering Hub 提供生产就绪的AI工程实现和教育资源，涵盖RAG系统、多智能体工作流和模型评估。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI工程领域快速发展带来的挑战，为开发者提供深入理解和实践经验的资源。它通过提供RAG系统、多智能体应用和模型评估框架等实现，帮助用户构建可靠、可信赖的AI系统，并确保AI输出的质量和可解释性。\n\n**核心功能**\n核心功能包括检索增强生成（RAG）系统，支持结构化数据（SQL）和非结构化文档的混合查询路由。它还提供多智能体工作流，用于复杂任务编排，以及模型评估框架，用于基准测试和推理评估。此外，项目还集成了Cleanlab Codex进行响应验证和信任评分，确保AI输出的可靠性。\n\n**技术亮点**\n技术亮点在于其混合查询路由系统，能够智能地在SQL和文档搜索工具之间进行路由。它利用LlamaIndex进行编排，Milvus作为向量存储，并结合Cleanlab Codex进行响应验证，提供信任评分和护栏检测。项目还展示了Streamlit应用架构，支持API密钥管理、文件上传和流式响应。\n\n**适合谁用**\n该项目适合所有技能水平的AI工程师、数据科学家、研究人员以及希望在AI工程领域进行实验和取得成功的初学者。特别是那些需要构建可靠的RAG系统、多智能体应用或进行模型评估的用户，以及对AI输出质量和可信度有高要求的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "FlashML-org/FreeToken",
+      "owner": "FlashML-org",
+      "name": "FreeToken",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "stars": 15171,
+      "description": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
+      "one_liner": "FreeToken 是一个边缘原生 MoE 服务引擎，旨在消费级硬件上运行大型模型，提供高性能和内存效率。",
+      "detail_md": "**解决什么问题**\nFreeToken 旨在解决消费级硬件（如游戏 PC、桌面工作站）在运行大型前沿模型（290B+ 参数）时面临的 VRAM 限制问题。 它通过将异构资源（GPU、CPU、主机内存、互连）视为统一的推理平台，实现高效的模型推理。\n\n**核心功能**\nFreeToken 提供带宽自适应的 CPU-GPU 协同执行策略（$q^\\star$ 策略），动态管理专家权重在主机与 GPU 之间。 它还具备语义感知缓存功能，避免在代理工作流中重复计算上下文。 此外，FreeToken 支持弹性内存管理，允许在运行时动态重新分配 VRAM，无需重启引擎。 它还支持多种前沿 MoE 和密集模型，并提供与 OpenAI 和 Anthropic 兼容的 API。\n\n**技术亮点**\n该项目采用边缘原生 MoE 服务引擎设计，通过带宽自适应执行策略优化推理性能。 它实现了复杂的 MoE 卸载和协同执行子系统，以克服消费级硬件的 VRAM 限制。 FreeToken 支持多种 MoE 执行策略，包括 `fused`、`offload`、`cpu`、`hybrid` 和 `auto`，以适应不同的硬件配置和性能需求。\n\n**适合谁用**\nFreeToken 适合希望在个人和消费级硬件（如笔记本电脑、游戏台式机、工作站 GPU）上运行大型语言模型（LLM）的开发者和研究人员。 它特别适用于需要利用现有硬件资源进行高性能、低延迟推理的用户，以及希望集成到现有代理工作流（如编码代理）中的场景。",
+      "degraded": false
+    },
+    {
+      "id": "hyprwm/Hyprland",
+      "owner": "hyprwm",
+      "name": "Hyprland",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "stars": 39194,
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "one_liner": "Hyprland 是一个 100% 独立的动态平铺 Wayland 合成器，兼顾美观与功能。它提供最新的 Wayland 功能，高度可定制，拥有丰富的视觉效果和强大的插件支持。",
+      "detail_md": "**解决什么问题**\nHyprland 旨在提供一个现代、高性能且高度可定制的 Wayland 桌面环境。它解决了传统 X11 窗口管理器在 Wayland 时代面临的兼容性、性能和视觉效果方面的挑战。通过独立实现 Wayland 协议，Hyprland 避免了对 `wlroots` 或其他第三方合成器库的依赖，从而提供了更灵活和优化的解决方案。\n\n**核心功能**\nHyprland 的核心功能包括动态平铺窗口管理，支持多种布局算法，如 `dwindle`、`master`、`monocle` 和 `scrolling`。它还提供高级渲染效果，例如渐变边框、多种模糊效果、动画和阴影。此外，Hyprland 支持 Wayland 协议以实现应用程序兼容性，包括原生 IME 支持，并拥有一个强大的插件系统和内置插件管理器。通过 IPC 接口，用户可以对 Hyprland 进行外部控制和监控。\n\n**技术亮点**\nHyprland 的技术亮点在于其 100% 独立的架构，不依赖于 `wlroots`、`libweston` 或 `kwin` 等现有合成器库。它基于 `Aquamarine` 后端库实现 Wayland 协议，并提供自己的窗口管理、渲染和输入处理逻辑。项目采用 C++ 编写，并遵循集中式编排模式，其中 `CCompositor` 作为所有子系统的中央协调器。其初始化过程分为三个阶段 (`STAGE_PRIORITY`, `STAGE_BASICINIT`, `STAGE_LATE`)，以管理复杂的依赖关系。\n\n**适合谁用**\nHyprland 适合寻求高性能、视觉效果丰富且高度可定制的 Wayland 桌面环境的用户。它特别适合那些希望对窗口管理行为、视觉外观和输入设备配置有精细控制的用户。开发者和高级用户可以通过其插件系统和 IPC 接口进行深度定制和扩展。",
+      "degraded": false
     }
   ]
 }
