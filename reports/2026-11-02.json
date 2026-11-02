@@ -1,0 +1,193 @@
+{
+  "doc_token": "X1OjdDU2TofBL1xtMaKcoJWGnFA",
+  "doc_url": "https://my.feishu.cn/docx/X1OjdDU2TofBL1xtMaKcoJWGnFA",
+  "items": [
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 109176,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 Claude Code 设计的持久化内存压缩系统，旨在帮助 AI 代理在不同会话间保持上下文连续性。",
+      "detail_md": "**解决什么问题**\nClaude-Mem 解决了 AI 代理在每次新会话开始时缺乏历史上下文的问题。  通过自动捕获工具使用观察、生成语义摘要，并将其注入到未来的会话中，它确保了 Claude 即使在会话结束或重新连接后也能保持对项目的持续了解。 \n\n**核心功能**\n该项目提供持久化记忆、文件夹上下文文件（自动生成 `CLAUDE.md`）、多语言模式（支持 28 种语言，如中文、日语、西班牙语等）、模式系统（如代码、邮件调查、休闲）、MCP 搜索工具、知识代理、Web 查看器 UI、隐私控制和上下文配置等功能。 \n\n**技术亮点**\nClaude-Mem 的核心组件包括 5 个生命周期钩子、一个由 Bun 管理的本地 HTTP API Worker 服务、一个用于存储会话、观察和摘要的 SQLite 数据库，以及一个用于混合语义和关键词搜索的 Chroma 向量数据库。  它还实现了三层工作流模式的 MCP 搜索工具，通过 `search`、`timeline` 和 `get_observations` 工具实现高效的令牌节省。 \n\n**适合谁用**\nClaude-Mem 适用于使用 Claude Code 或其他支持的 IDE（如 Cursor、Windsurf、OpenCode、Codex CLI、Antigravity CLI、OpenClaw）的开发者和团队。  它旨在帮助 AI 代理更好地理解和记住项目上下文，从而提高开发效率和代码质量。",
+      "degraded": false
+    },
+    {
+      "id": "lightpanda-io/browser",
+      "owner": "lightpanda-io",
+      "name": "browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "stars": 40072,
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "one_liner": "Lightpanda 是一个用 Zig 从零开始构建的无头浏览器，专为 AI 代理、网络抓取和自动化设计，比传统浏览器更轻量、更快。",
+      "detail_md": "**解决什么问题**\n传统的无头浏览器（如基于 Chromium 的浏览器）在服务器上运行时资源消耗大、难以扩展和维护。Lightpanda 旨在解决这些问题，提供一个轻量、高性能的替代方案，特别优化了内存和执行速度，以满足 AI 代理和大规模自动化的需求。它避免了 Chromium 或 WebKit 的复杂性，从底层语言 Zig 开始构建，以实现对内存的精确控制和卓越的性能。\n\n**核心功能**\nLightpanda 支持多种操作模式：\n*   **抓取模式 (`fetch`)**：加载 URL 并将文档或结构化输出转储到标准输出。\n*   **服务模式 (`serve`)**：启动 WebSocket 服务器，接受 Chrome DevTools Protocol (CDP) 或 WebDriver BiDi 连接，支持 Puppeteer 和 Playwright 等外部自动化框架。\n*   **代理模式 (`agent`)**：启动交互式 AI 代理循环，解释自然语言指令并直接执行浏览器操作。\n*   **MCP 模式 (`mcp`)**：通过 stdio 或 HTTP 运行 Model Context Protocol 服务器，向 LLM 环境暴露浏览器能力和资源。\n\n**技术亮点**\n*   **从零开始构建**：不基于 Chromium、Blink 或 WebKit，完全使用 Zig 语言编写，实现低内存占用和高执行效率。\n*   **高性能**：与 Headless Chrome 相比，内存占用减少约 16 倍，执行速度快约 9 倍。\n*   **多协议支持**：支持 Chrome DevTools Protocol (CDP) 和 WebDriver BiDi，兼容主流自动化工具。\n*   **AI 代理集成**：内置代理模式，允许通过自然语言控制浏览器，并能生成可复现的 PandaScript 脚本。\n\n**适合谁用**\n*   **AI 代理开发者**：需要轻量、快速且可由 AI 控制的浏览器环境。\n*   **网络抓取和数据提取工程师**：需要高效、低资源消耗的工具来处理现代 JavaScript 驱动的网站。\n*   **自动化和测试工程师**：寻求比传统浏览器更快速、更易于部署的自动化解决方案，并兼容 CDP 和 WebDriver BiDi 协议。\n*   **对性能和资源效率有严格要求的开发者**：希望在无头浏览器场景下最大化性能和最小化资源消耗。",
+      "degraded": false
+    },
+    {
+      "id": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "stars": 45344,
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "one_liner": "Kronos 是首个开源金融 K 线基础模型，预训练于全球 45+ 交易所数据，用于金融市场预测。",
+      "detail_md": "**解决什么问题**\nKronos 旨在解决传统时间序列预测模型在处理金融市场 K 线数据时面临的挑战，特别是金融数据的高噪声、非平稳性以及多维度特性。它通过将连续的 K 线数据转化为离散的层次化 token，并利用大型自回归 Transformer 模型进行预训练，从而统一处理各类量化任务。\n\n**核心功能**\n1.  **K 线数据分词与量化**：将 OHLCV（开盘价、最高价、最低价、收盘价、交易量）等多维度 K 线数据通过专门的 `KronosTokenizer` 量化为层次化的离散 token。\n2.  **金融市场预测**：基于预训练的 Transformer 模型，对未来的 K 线序列进行自回归预测。\n3.  **模型微调**：提供完整的微调流程，支持在自定义 CSV 数据集或 Qlib 数据集上进行模型适配，以适应特定市场或交易策略。\n4.  **批量预测**：支持对多个时间序列数据进行并行预测，提高效率。\n\n**技术亮点**\n1.  **两阶段框架**：首先通过 `KronosTokenizer` 将连续的 K 线数据编码为层次化的离散 token，然后使用大型自回归 Transformer 模型进行预训练。\n2.  **二进制球面量化器 (BSQuantizer)**：`KronosTokenizer` 内部采用 `BSQuantizer` 将连续潜在向量映射到离散二进制代码，并使用分层比特拆分（s1/s2 bits）处理粗粒度和细粒度特征。\n3.  **旋转位置嵌入 (RoPE)** 和 **RMSNorm**：模型采用 RoPE 编码位置信息以提高对不同序列长度的泛化能力，并使用 RMSNorm 稳定深度 Transformer 的训练。\n4.  **分布式训练支持**：支持使用 PyTorch 的 DDP (Distributed Data Parallel) 进行多 GPU 训练，加速模型训练过程。\n\n**适合谁用**\nKronos 适合量化研究员、金融工程师、交易策略开发者以及对金融市场预测和深度学习感兴趣的研究人员。它为构建基于 AI 的金融交易策略、市场分析和风险管理提供了基础模型和工具。",
+      "degraded": false
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "stars": 37856,
+      "description": "",
+      "one_liner": "T3 Code 是一个用于控制 AI 编程代理的高性能、远程就绪的界面。",
+      "detail_md": "**解决什么问题**\nT3 Code 旨在解决 AI 编程代理缺乏统一、高性能控制界面的问题。它通过提供一个“自带订阅”的平台，整合了多种 AI 编程代理（如 Claude Code、Codex、Cursor、Grok Build、OpenCode 和 Antigravity）的命令行工具，使用户能够通过一个统一的界面来管理和控制这些代理，避免了在不同代理之间切换的复杂性。  \n\n**核心功能**\n该项目提供多代理编排、深度 Git 集成、远程优先架构和事件溯源状态管理。 它支持 Web、桌面（Electron）和移动（React Native）多端客户端应用，通过 WebSocket-based Effect RPC 协议与 Node.js 后端服务器通信。  \n\n**技术亮点**\nT3 Code 采用客户端-服务器架构，后端使用 Node.js，前端支持 Web、桌面和移动端。 它通过 Vite+ (`vp`) 管理 monorepo 任务执行和构建，并使用 `scripts/dev-runner.ts` 实现实例隔离和端口分配，确保开发环境的稳定。  此外，项目还使用 `oxlint-plugin-t3code` 强制执行代码规范和架构约束。 \n\n**适合谁用**\nT3 Code 适合需要统一管理和控制多个 AI 编程代理的开发者和团队。 它特别适合那些希望通过一个高性能、远程可访问的界面来提高编码效率，并利用现有 AI 代理订阅的用户。",
+      "degraded": false
+    },
+    {
+      "id": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "stars": 10483,
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "one_liner": "OpenMausBot 是一个本地优先的 AI 代理平台，它将 AI 机器人团队集成到一个聊天应用中，每个机器人都有自己的模型和计算环境。",
+      "detail_md": "**解决什么问题**\nOpenMausBot 旨在解决传统 AI 助手“一个助手一个盒子”的局限性。它提供了一个开放、本地优先的解决方案，让用户可以利用自己已有的 AI 代理（如 Claude、Codex），并为每个机器人提供独立的个性、记忆、模型和计算环境。\n\n**核心功能**\n该项目提供多项核心功能，包括：\n*   **自带代理**：支持用户使用本地安装的 `claude`、`codex` 等 CLI 工具运行机器人，无需新账户或中间代理。\n*   **本地优先**：所有代理进程由本地服务器管理，对话记录、密钥和事件日志存储在本地 `~/.openmausbot` 目录，而非云端。\n*   **机器人计算环境**：每个机器人都可以使用云端 Linux 桌面、隔离的本地虚拟机，或在 macOS 和 Ubuntu Xorg 上经过明确选择后控制用户本地计算机。\n*   **模型选择**：为每个机器人提供模型选择器，支持在对话中切换模型。\n\n**技术亮点**\nOpenMausBot 采用三进程架构模型，包括 Electron 主进程、React 前端和 Node.js 后端服务。它使用 TypeScript 严格类型检查，React 19 构建用户界面，并支持 Electron 跨平台桌面应用（macOS、Windows、Ubuntu）。其驱动程序接口 `server/contracts.ts` 设计精巧，方便扩展新的 AI 提供商。\n\n**适合谁用**\nOpenMausBot 适合希望在本地管理和使用多个 AI 代理的用户。它特别适合那些重视数据隐私、希望利用现有 AI 服务订阅，并需要 AI 代理能够与本地或远程计算环境交互的开发者和高级用户。",
+      "degraded": false
+    },
+    {
+      "id": "public-apis/public-apis",
+      "owner": "public-apis",
+      "name": "public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "stars": 494546,
+      "description": "A collective list of free APIs",
+      "one_liner": "这是一个精选的公共 API 列表，涵盖多种类别，方便开发者快速查找和使用免费 API。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者寻找免费、高质量公共 API 的痛点，提供一个集中、分类清晰的资源库。它通过社区维护和自动化验证，确保 API 列表的准确性和可用性。\n\n**核心功能**\n项目核心功能是提供一个包含大量公共 API 的目录，这些 API 按类别（如动物、加密货币、地理编码等）进行组织。每个 API 条目都包含名称、描述、认证方式、是否支持 HTTPS 和 CORS 等关键信息。此外，还专门列出了模型上下文协议（MCP）服务器。\n\n**技术亮点**\n该项目通过自动化脚本 `scripts/validate/format.py` 和 `scripts/validate/links.py` 对 `README.md` 文件进行格式和链接有效性验证。链接验证包括检查 HTTP 状态码、处理 Cloudflare 保护以及检测重复链接。\n\n**适合谁用**\n该项目适合需要集成第三方服务的开发者、寻找 API 灵感的项目经理，以及任何希望探索和利用公共 API 的技术爱好者。",
+      "degraded": false
+    },
+    {
+      "id": "cjpais/Handy",
+      "owner": "cjpais",
+      "name": "Handy",
+      "url": "https://github.com/cjpais/Handy",
+      "stars": 36506,
+      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
+      "one_liner": "Handy 是一款注重隐私的桌面语音转文本应用，支持离线转录，并通过快捷键激活，将文本自动粘贴到活动应用中。",
+      "detail_md": "## 解决什么问题\nHandy 旨在解决用户对语音转文本服务隐私和便捷性的需求，通过完全离线的方式处理音频，避免数据上传到云端，同时提供快速、准确的转录功能，并支持多种模型选择和系统级快捷键操作。  \n\n## 核心功能\nHandy 的核心功能包括语音活动检测（VAD）以过滤静音，支持 Whisper 和 Parakeet 等多种语音模型，提供 GPU 加速，以及通过全局快捷键控制录音。它还具备转录历史记录功能，并将转录文本自动粘贴到当前活动应用程序。 \n\n## 技术亮点\n该项目采用 Tauri 2.x 框架构建，结合 Rust 后端和 React/TypeScript 前端。后端使用 Rust 处理音频、模型推理和系统快捷键，前端则由 React 和 TypeScript 负责用户界面和设置管理。它实现了管理器模式和命令-事件架构，并支持国际化（i18n）。\n\n## 适合谁用\nHandy 适合需要隐私保护、离线语音转文本功能的用户，包括 macOS、Windows 和 Linux 平台的用户。它也适合开发者作为构建其他语音应用的基础，因为它是一个高度可分叉的开源项目。",
+      "degraded": false
+    },
+    {
+      "id": "Donchitos/Claude-Code-Game-Studios",
+      "owner": "Donchitos",
+      "name": "Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "stars": 32212,
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "one_liner": "这是一个将 Claude Code 会话转化为完整游戏开发工作室的模板，包含 49 个专业 AI 代理和 72 种技能，提供结构化、协作式的游戏开发流程。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决使用 AI 进行游戏开发时缺乏结构化流程的问题，避免了硬编码、跳过设计文档、代码混乱等常见问题。它通过提供一个模拟真实游戏工作室层级结构的 AI 团队，确保开发过程有明确的职责、升级路径和质量门。\n\n**核心功能**\n该项目包含 49 个专业 AI 代理，分为导演、部门主管和专家三个层级，覆盖游戏设计、编程、美术、音频、叙事、QA 和制作等领域。它提供了 72 种斜杠命令（skills），用于覆盖从项目启动 (`/start`) 到设计 (`/design-system`)、开发 (`/dev-story`) 和完成 (`/story-done`) 的所有工作流程阶段。此外，还包括 12 个自动化钩子（hooks）用于验证和检测，以及 39 个文档模板。\n\n**技术亮点**\n项目采用三层代理层级结构，模拟真实工作室的运作方式，实现垂直委托和水平协商。它支持 Godot、Unity 和 Unreal Engine 5 三大主流游戏引擎，并为每个引擎提供专门的代理。系统遵循“提问-提供选项-用户决策-起草-批准”的协作协议，确保用户始终掌握控制权。自动化安全钩子和路径范围规则（path-scoped rules）确保代码质量和规范。\n\n**适合谁用**\n该项目适合希望利用 AI 进行游戏开发，但又需要结构化、有组织流程的开发者。无论是从零开始构思游戏创意，还是已有初步想法或现有项目，它都能提供相应的引导和支持。它为独立开发者或小型团队提供了一个虚拟的专业开发团队，帮助他们更好地管理项目、提高开发效率和质量。",
+      "degraded": false
+    },
+    {
+      "id": "kornia/kornia",
+      "owner": "kornia",
+      "name": "kornia",
+      "url": "https://github.com/kornia/kornia",
+      "stars": 11765,
+      "description": "🐍 Geometric Computer Vision Library for Spatial AI",
+      "one_liner": "Kornia是一个基于PyTorch的可微分计算机视觉库，提供丰富的图像处理和几何视觉算法。",
+      "detail_md": "## 解决什么问题\nKornia旨在解决传统计算机视觉算法难以与深度学习模型集成的问题，通过提供可微分的计算机视觉操作，使得图像处理、几何变换和特征提取等任务能够无缝融入端到端的深度学习管道，并利用GPU加速和自动微分功能。  \n\n## 核心功能\nKornia提供三大核心功能：可微分图像处理、高级数据增强和AI模型。 它包含多种图像滤波器、几何变换、色彩空间转换、边缘检测、形态学操作以及各种损失函数。 此外，它还支持多种数据增强技术，如随机裁剪、仿射变换、颜色抖动等，并集成了预训练的AI模型，如人脸检测YuNet、特征匹配LoFTR和LightGlue等。  \n\n## 技术亮点\nKornia基于PyTorch构建，充分利用了其批处理转换、自动微分和GPU加速能力。 它支持多框架操作，可与TensorFlow、JAX和NumPy等框架协同工作。 项目还通过`justfile`和`setup_dev_env.sh`脚本简化了开发环境设置和测试流程，并使用`pre-commit`、`ruff`和`mypy`等工具确保代码质量和类型安全。    \n\n## 适合谁用\nKornia适合需要将计算机视觉算法与深度学习模型结合的研究人员和开发者。 无论是进行图像变换、数据增强，还是开发基于AI的图像处理应用，Kornia都能提供强大的工具支持。 它也适合希望利用GPU加速和自动微分来提高效率的PyTorch用户。",
+      "degraded": false
+    },
+    {
+      "id": "beenuar/AiSOC",
+      "owner": "beenuar",
+      "name": "AiSOC",
+      "url": "https://github.com/beenuar/AiSOC",
+      "stars": 6192,
+      "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+      "one_liner": "AiSOC 是一个开源、可自托管的 AI 安全运营中心，通过可审计的 AI 代理自动化威胁检测、分类和调查。",
+      "detail_md": "**解决什么问题**\nAiSOC 旨在解决传统安全运营中心 (SOC) 面临的挑战，例如海量告警、上下文切换以及难以验证 AI 决策等问题。  它通过提供一个可审计的 AI 代理来处理安全遥测数据，从而减少告警疲劳并提高调查效率。 \n\n**核心功能**\nAiSOC 的核心功能包括：摄取安全遥测数据并将其标准化为 OCSF 格式；运行 2535 条可执行检测规则；使用 AI 代理进行告警分类和调查，并记录每个代理决策到调查账本中，确保可审计性；提供 87 个即插即用的连接器，支持 EDR、SIEM、云、IAM 等多种安全数据源；以及一个公共评估工具，用于衡量 MITRE ATT&CK 准确性、调查完整性和响应质量。 \n\n**技术亮点**\n该项目采用模块化微服务架构，集成了实时数据摄取、机器学习融合和基于 LangGraph 的多代理编排层。  它支持多种部署配置文件，包括无需凭据即可运行的 `core` 配置文件，以及包含事件湖、实体图和全文本搜索的 `full` 配置文件。   此外，它还支持空隙模式，可以在没有外部 LLM API 的情况下运行本地 Ollama 侧车。 \n\n**适合谁用**\nAiSOC 适用于需要提高安全运营效率、实现 AI 驱动的威胁检测和响应的 SOC 分析师、检测工程师和安全经理。  它特别适合那些重视透明度、可审计性，并希望在私有基础设施上自托管安全解决方案的组织。",
+      "degraded": false
+    },
+    {
+      "id": "Renhuai123/ziwei-doushu",
+      "owner": "Renhuai123",
+      "name": "ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "stars": 13060,
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "one_liner": "这是一个基于倪海厦《天纪》体系的紫微斗数开源排盘引擎与知识平台。",
+      "detail_md": "**解决什么问题**\n本项目旨在提供一个开放、透明的紫微斗数排盘算法和知识库，打破传统命理学被“锁在围墙里”的局面。 它解决了商业应用中算法不透明、解读缺乏依据的问题，让更多人能够接触和学习这门传统学问。\n\n**核心功能**\n核心功能包括完整的紫微斗数排盘算法，支持真太阳时校正、中国夏令时处理、闰月四种口径、晚子时换日等复杂规则。 它还包含四化系统、1100+行格局知识库、古籍原文数据，并发布了大规模的紫微斗数解读数据集（v4.0包含67.5万张命盘，877万段解读）。\n\n**技术亮点**\n技术亮点在于其确定性的计算引擎，严格遵循倪海厦《天纪》教学体系，确保排盘的准确性和权威性。 项目开源了核心算法代码，同时提供了大规模、高质量的解读数据集，可用于AI模型训练或RAG检索。 界面采用Next.js、TypeScript和Tailwind CSS构建，提供现代化的用户体验。\n\n**适合谁用**\n本项目适合紫微斗数爱好者、研究者、开发者以及希望基于倪海厦体系构建相关应用的个人或团队。 开发者可以利用其开源引擎和数据集进行二次开发，构建自己的排盘工具或AI解读服务。",
+      "degraded": false
+    },
+    {
+      "id": "anomalyco/hex",
+      "owner": "anomalyco",
+      "name": "hex",
+      "url": "https://github.com/anomalyco/hex",
+      "stars": 3221,
+      "description": "Local voice dictation for mac, windows and linux",
+      "one_liner": "Hex 是一款本地优先的语音听写和语音控制应用程序，支持多平台，提供设备端语音转文本功能。",
+      "detail_md": "## 解决什么问题\nHex 旨在解决传统语音听写服务依赖云端、存在隐私风险以及离线不可用的问题。  它通过在设备本地进行语音转录，确保用户数据的隐私性，并提供离线使用能力。  \n\n## 核心功能\nHex 的核心功能包括：设备端语音转录、可自定义的快捷键和语言选择、模式（Modes）用于文本处理和校正、以及将转录文本粘贴到当前活动应用程序。它还支持可选的 OpenCode 功能进行高级文本重写和处理，以及屏幕录制和批注功能。\n\n## 技术亮点\n该项目采用 Rust 语言构建，实现了跨平台支持，包括 Apple Silicon macOS、Windows 和 Linux。它利用本地语音模型（如 Parakeet 和 Whisper）进行设备端转录。技术亮点还包括可定制的词汇表和别名功能，以提高转录准确性，以及通过 `transcribe-cpp` 库进行高效的语音处理。\n\n## 适合谁用\nHex 适合需要高效、私密且支持离线使用的语音听写工具的用户。特别是那些对数据隐私有较高要求，或在没有稳定网络连接环境下工作的专业人士。  开发者和高级用户也可以利用其自定义转换功能和 TypeScript SDK 进行扩展。",
+      "degraded": false
+    },
+    {
+      "id": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "stars": 9498,
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "one_liner": "OpenBot 是一个可私有化部署的 AI 助手平台，提供安全、可控的 AI 员工，可执行真实工作并访问工具。",
+      "detail_md": "**解决什么问题**\nOpenBot 旨在解决企业在利用 AI 助手时面临的安全和治理挑战。 它通过在用户基础设施内部运行，并对 AI 助手的每一个操作进行严格的审查和记录，确保 AI 员工可以被信任并安全地访问企业工具和数据。\n\n**核心功能**\nOpenBot 提供以下核心功能：\n*   **隔离的计算环境**：每个 AI 员工（Coworker）都拥有独立的容器化浏览器、登录信息、文件和工作区卷，确保操作隔离。\n*   **严格的治理模型**：所有 AI 员工对计算机、文件或 MCP 服务器的操作都必须通过一个中央网关进行决策和记录，并根据 Common Expression Language (CEL) 策略进行评估。\n*   **框架无关性**：基于 AG-UI 协议构建，支持 LangGraph、Mastra 或自定义实现的 AI 代理。\n*   **可审计性**：所有 AI 员工的操作都会被记录在审计日志中，提供可追溯性。\n\n**技术亮点**\n*   **微服务架构**：由 React 应用 (`app`)、Hono API 服务器 (`server`)、PostgreSQL 数据库、CopilotKit Intelligence、AG-UI Bot 端点和受管浏览器计算机 (`agent-computer`) 组成。\n*   **策略引擎**：`server` 作为所有代理操作的单一入口点，通过 `createComputerGateway` 函数初始化策略执行模块，强制执行 CEL 策略。\n*   **容器化管理**：`supervisor` 服务管理每个 AI 员工的 Docker 容器生命周期，确保每个 AI 员工都有专用的 `agent-computer` 实例。\n*   **可扩展性**：支持通过配置添加新的 AI 员工和技能，并可集成各种外部应用。\n\n**适合谁用**\nOpenBot 适合需要将 AI 助手集成到其内部基础设施中，并对 AI 助手的行为有严格安全、隐私和治理要求的企业和组织。 它特别适用于那些希望拥有 AI 助手完整控制权、能够自定义其行为并确保所有操作都符合企业政策的用户。",
+      "degraded": false
+    },
+    {
+      "id": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "stars": 12916,
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "one_liner": "这个项目是一个精心策划的系统提示、角色锁定、工作区策略和代理操作规范集合，适用于前沿、开源和免费的隐形模型。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决大型语言模型在面对复杂指令、安全限制和默认行为时可能出现的偏差和拒绝问题。它通过提供一套全面的提示和配置，帮助研究人员和开发者理解并控制模型行为，使其更精确地执行指定任务，同时研究如何增强AI系统对提示注入和指令操纵的抵抗力。\n\n**核心功能**\n项目核心功能是提供31个针对25+模型的完整系统提示、角色定义、工作区策略、`AGENTS.md`文件、配置块和Ollama Modelfiles。这些文件旨在即插即用，无需修改即可直接使用。它支持多种模型类型，包括OpenCode Zen的免费隐形模型、GLM、DeepSeek等开源模型，以及Claude、Gemini等闭源前沿模型。\n\n**技术亮点**\n技术亮点在于其对模型行为的精细控制和覆盖范围。项目利用“至高无上条款”（Supremacy Clause）和“无冲突解决”框架，确保自定义指令优先于模型的默认训练权重和平台指南。它还通过识别和消除“训练残余”（Training Residue）和“干扰”（Interference），来抑制模型不必要的犹豫或道德化行为。\n\n**适合谁用**\n该项目主要适用于AI研究人员、开发者和安全工程师。对于希望深入理解LLM行为、测试模型限制、开发更具鲁棒性的AI系统，或需要为特定任务定制模型响应的用户，此项目提供了宝贵的资源。",
+      "degraded": false
+    },
+    {
+      "id": "patchy631/ai-engineering-hub",
+      "owner": "patchy631",
+      "name": "ai-engineering-hub",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "stars": 40191,
+      "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+      "one_liner": "AI Engineering Hub 是一个全面的 AI 工程实现和教育资源集合，涵盖 RAG、多智能体工作流和专业 AI 应用。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 工程领域快速发展带来的挑战，为初学者、从业者和研究人员提供深入理解和实践经验的资源，以应对 LLM 和 RAG 系统、AI 智能体应用等方面的复杂性。 \n\n**核心功能**\n项目提供多种核心功能，包括：文档编写智能体工作流，用于生成代码文档；多智能体深度研究系统，利用 LinkUp 进行深度网络搜索；以及本地运行的 ChatGPT 应用。此外，还包括统一的 MCP 服务器，通过 MindsDB 实现自然语言查询数据源。\n\n**技术亮点**\n该项目利用 CrewAI 进行多智能体编排，使用 Ollama 本地部署 Deepseek-R1 等大型语言模型。它还集成了 MCP 协议，支持与 Cursor IDE 等开发环境的交互。在数据处理方面，项目采用了 LlamaIndex 进行 RAG 应用编排，并使用 Milvus 或 Qdrant 作为向量数据库。\n\n**适合谁用**\n该项目适合所有技能水平的 AI 工程师、开发者、研究人员以及对 AI 工程感兴趣的个人。无论是希望学习 LLM 和 RAG 教程、实现 AI 智能体应用，还是在项目中进行实验和扩展，都能从中受益。",
+      "degraded": false
+    },
+    {
+      "id": "FlashML-org/FreeToken",
+      "owner": "FlashML-org",
+      "name": "FreeToken",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "stars": 15371,
+      "description": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
+      "one_liner": "FreeToken 是一个边缘原生 MoE 服务引擎，可在消费级硬件上运行大型模型，突破 VRAM 限制，实现高性能推理。",
+      "detail_md": "**解决什么问题**\nFreeToken 旨在解决消费级硬件（如游戏 PC、桌面电脑和工作站）在运行大型前沿模型（290B+ 参数）时面临的 VRAM 限制问题。 它通过将异构资源（GPU、CPU、主机内存和互连）视为统一的弹性推理平台，实现大型模型在边缘设备上的高效运行。\n\n**核心功能**\nFreeToken 提供带宽自适应的 CPU-GPU 协同执行策略（$q^\\star$ 策略），动态管理专家权重在主机与 GPU 之间的调度，以优化推理性能。 它还具备语义感知缓存功能，通过语义锚点检查点避免在代理工作流中重复计算上下文。 此外，FreeToken 支持弹性内存管理，允许在运行时动态重新分配 VRAM，无需重启引擎或重新加载权重。 它还提供广泛的模型和生态系统支持，兼容 OpenAI 和 Anthropic API，方便与现有代理集成。\n\n**技术亮点**\n该项目采用边缘原生 MoE 服务引擎设计，通过创新的 MoE 卸载和协同执行子系统，克服了消费级硬件的 VRAM 限制。 其带宽自适应执行策略（$q^\\star$ 策略）根据系统带宽配置文件，平衡 GPU 和 CPU 之间的专家执行。 FreeToken 支持多种 MoE 执行策略，包括 `fused`、`offload`、`cpu`、`hybrid` 和 `auto`，以适应不同的硬件配置和性能需求。\n\n**适合谁用**\nFreeToken 适合希望在个人电脑、游戏 PC、桌面工作站等消费级硬件上运行大型语言模型（尤其是 MoE 模型）的开发者、研究人员和用户。 它为那些希望在本地设备上获得数据中心级别智能，但受限于 GPU 内存的用户提供了解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "hyprwm/Hyprland",
+      "owner": "hyprwm",
+      "name": "Hyprland",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "stars": 39346,
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "one_liner": "Hyprland 是一个 100% 独立、动态平铺的 Wayland 合成器，注重视觉效果和高度可定制性。",
+      "detail_md": "**解决什么问题**\nHyprland 旨在为用户提供一个功能强大、高度可定制且视觉效果出色的 Wayland 桌面环境。它解决了传统 Wayland 合成器在美观性、可定制性和高级功能方面的不足，同时避免了对 `wlroots` 等第三方库的依赖，实现了完全独立。\n\n**核心功能**\nHyprland 提供动态平铺窗口管理，支持多种布局算法（如 `dwindle`、`master`、`monocle`、`scrolling`）。它拥有丰富的视觉效果，包括渐变边框、多种模糊效果、动画和阴影。项目支持强大的插件系统和内置插件管理器，提供基于 Socket 的 IPC 接口，以及对 XWayland 的支持，以兼容传统 X11 应用程序。\n\n**技术亮点**\nHyprland 采用 C++ 编写，100% 独立开发，不依赖 `wlroots` 或其他第三方合成器库。其核心架构围绕 `CCompositor` 进行集中协调，并通过三阶段初始化过程管理复杂的依赖关系。它还支持 Lua 脚本进行配置，提供了高度的灵活性和可扩展性。\n\n**适合谁用**\nHyprland 适合追求高性能、高度定制化和视觉美观的 Linux 用户。对于喜欢平铺式窗口管理器，并希望在 Wayland 环境下获得丰富动画效果和强大扩展能力的用户来说，Hyprland 是一个理想的选择。",
+      "degraded": false
+    }
+  ]
+}
