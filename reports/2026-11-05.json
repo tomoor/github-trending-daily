@@ -1,0 +1,182 @@
+{
+  "doc_token": "PWuJdtoa2oCVxaxBYDVcghijnBb",
+  "doc_url": "https://my.feishu.cn/docx/PWuJdtoa2oCVxaxBYDVcghijnBb",
+  "items": [
+    {
+      "id": "NVIDIA/auto-ontology",
+      "owner": "NVIDIA",
+      "name": "auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "stars": 4273,
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "one_liner": "本项目通过AI代理和语义层，将自然语言查询转化为SQL，实现数据分析和管理。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决传统数据查询和管理中，用户需要掌握复杂SQL语言才能与数据库交互的问题。它通过将自然语言问题转化为结构化查询语言（SQL），降低了数据分析和管理的门槛，使得非技术用户也能轻松获取所需信息。\n\n**核心功能**\n核心功能包括：\n*   **自然语言到SQL转换**：将用户的自然语言问题（例如“上个月交付了多少批货？”）转换为可执行的SQL查询。\n*   **语义层管理**：允许开发者和数据工程师定义和发布语义模型，编辑术语和SQL属性，并进行模型的导入导出。\n*   **数据查询与验证**：提供查询Auto Ontology、验证语义层覆盖范围、验证生成的SQL和结果的功能。\n*   **系统安装与故障排除**：支持通过Helm、Docker Compose等方式进行安装、启动和故障排除。\n\n**技术亮点**\n*   **Model Context Protocol (MCP) 服务器**：`auto-ontology-mcp` 是一个FastMCP Python应用，通过MCP暴露Auto Ontology API，作为公共Auto Ontology API的HTTP客户端。\n*   **代理技能包**：包含 `nvidia-ontology-setup` (安装与故障排除)、`nvidia-ontology-query` (查询与验证) 和 `nvidia-ontology-management` (语义模型管理) 三个结构化代理技能包，每个都经过严格的基准测试。\n*   **依赖管理**：Python项目使用 `uv` 和 `pyproject.toml` 进行依赖管理，Node.js项目使用 `pnpm` 工作区管理依赖，确保构建的可复现性。\n*   **容器化部署**：前端应用通过多阶段构建的 `Dockerfile` 进行容器化，实现依赖隔离和高效部署。\n\n**适合谁用**\n本项目适合需要通过自然语言进行数据查询和分析的业务用户，以及负责构建、管理和维护数据语义层的开发者和数据工程师。它也适用于希望简化数据访问流程、提高数据分析效率的组织。",
+      "degraded": false
+    },
+    {
+      "id": "max-sixty/worktrunk",
+      "owner": "max-sixty",
+      "name": "worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "stars": 10875,
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "one_liner": "Worktrunk 是一个 Git 工作区管理器，专为 AI 代理工作流设计，旨在简化并行开发和提高效率。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在使用 Git 工作区进行并行开发时，尤其是与 AI 代理集成时遇到的复杂性问题。它通过提供自动化的提交信息生成、工作区隔离和统一的配置管理，减少了手动操作和上下文切换的开销。\n\n**核心功能**\nWorktrunk 的核心功能包括：\n*   **LLM 集成**：自动生成提交信息和 squash 信息，支持多种 LLM CLI 工具，如 Claude Code、Codex、OpenCode 和 Gemini CLI。它通过 `CommitGenerationConfig` 配置 LLM 命令和模板。\n*   **工作区管理**：提供 `wt switch --create` 命令来创建和管理工作区，确保遵循项目命名规范并触发生命周期钩子。\n*   **可配置的模板系统**：使用 Minijinja 语法支持自定义提交和 squash 消息模板，允许用户和项目定义自己的提交规范。\n*   **AI 代理集成**：为 Claude Code、Codex 等代理提供活动跟踪和状态行报告，例如在 `wt list` 中显示代理状态。\n*   **配置管理**：通过用户配置文件 (`~/.config/worktrunk/config.toml`) 和项目配置文件 (`.config/wt.toml`) 管理个人偏好和团队共享设置，包括钩子、别名和 LLM 提交配置。\n\n**技术亮点**\n*   **灵活的 LLM 接口**：通过 `execute_llm_command` 函数执行外部 LLM CLI 命令，并将渲染后的提示通过 `stdin` 传递。\n*   **智能 Diff 处理**：对大型 Git diff 进行过滤和截断，以适应 LLM 的上下文窗口限制，例如使用 `DIFF_BUDGET` 和 `MAX_LINES_PER_FILE`。\n*   **模块化插件架构**：支持多种 AI 代理插件，易于扩展和集成新的 LLM 工具。\n*   **Minijinja 模板引擎**：提供强大的模板定制能力，支持变量、过滤器、条件语句和循环。\n\n**适合谁用**\nWorktrunk 适合需要频繁使用 Git 工作区进行并行开发、希望自动化提交信息生成、并与 AI 代理（如 Claude Code、Codex）协同工作的开发者和团队。它特别适用于那些追求高效、规范化开发流程，并希望利用 AI 提升开发体验的用户。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 312705,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "本项目提供一套模块化、可组合的 AI 代理技能，旨在提升软件工程效率和代码质量。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决 AI 编码代理在实际软件开发中常见的痛点，例如代理未能准确理解用户意图、输出过于冗长、生成的代码质量不佳以及导致代码库混乱等问题。它通过引入“拷问会话”、共享语言（`GLOSSARY.md`）、测试驱动开发（TDD）和关注代码架构设计等方法来解决这些问题。\n\n**核心功能**\n核心功能包括：\n*   **意图对齐**：通过 `/grill-me` 和 `/grill-with-docs` 等技能，让代理在开始编码前通过提问来深入理解需求，确保与用户意图一致。\n*   **共享语言**：利用 `/grill-with-docs` 技能建立项目特有的 `GLOSSARY.md`，减少代理的冗余输出，提高沟通效率和代码一致性。\n*   **代码质量**：提供 `/tdd` 技能支持测试驱动开发，确保代码质量；`/diagnosing-bugs` 技能则提供结构化的调试流程。\n*   **架构改进**：`/improve-codebase-architecture` 技能帮助识别代码库中可优化的“深层模块”机会，防止代码库演变为“泥球”。\n\n**技术亮点**\n*   **模块化与可组合性**：技能以 Markdown 格式定义，小巧、易于适应且可组合，可与任何模型配合使用。\n*   **用户调用与模型调用**：技能分为用户手动触发（如 `/grill-me`）和模型自动触发（如 `/tdd`），以适应不同场景。\n*   **工程实践集成**：将数十年的软件工程经验（如 TDD、领域驱动设计、代码架构原则）融入到自动化技能中。\n*   **多代理平台支持**：支持 Claude Code、Codex、GitHub Copilot 等多种 AI 编码代理平台。\n\n**适合谁用**\n本项目适合希望通过 AI 编码代理提高开发效率、改善代码质量、并遵循良好软件工程实践的**软件工程师和开发团队**。尤其适用于那些在使用 AI 代理时遇到沟通障碍、代码质量问题或架构维护挑战的用户。",
+      "degraded": false
+    },
+    {
+      "id": "floci-io/floci",
+      "owner": "floci-io",
+      "name": "floci",
+      "url": "https://github.com/floci-io/floci",
+      "stars": 29381,
+      "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+      "one_liner": "Floci 是一个快速、免费、开源的本地 AWS 服务模拟器，专为开发、测试和 CI 环境设计。",
+      "detail_md": "**解决什么问题**\nFloci 旨在解决在本地开发和测试 AWS 应用程序时对真实云环境的依赖问题。它提供了一个无需 AWS 账户、身份验证令牌或商业功能限制的本地 AWS 服务环境。这使得开发人员可以加速开发周期，并改进离线测试能力。\n\n**核心功能**\nFloci 支持多种 AWS 协议，包括 Query、JSON 1.1、REST JSON、REST XML 等，确保与真实 AWS SDK 和工具的兼容性。对于复杂的计算和数据库服务，如 Lambda、RDS，它通过运行真实的 Docker 容器来模拟 AWS 行为。它还提供可配置的存储模式，包括内存、持久化、混合和 WAL，以适应不同的数据持久性和性能需求。\n\n**技术亮点**\nFloci 基于 Quarkus 框架构建，提供快速启动时间（约 24 毫秒）和低内存占用（空闲时约 13 MiB）。它以 JVM Docker 镜像和 GraalVM 原生二进制文件形式分发，优化了资源效率。Floci 还支持多账户隔离，通过 AWS 访问密钥 ID 实现资源隔离。\n\n**适合谁用**\nFloci 适合需要进行本地 AWS 服务开发、测试和持续集成 (CI) 的开发人员和团队。它特别适用于那些希望在本地模拟 AWS 环境，而无需依赖云账户或处理复杂的身份验证和权限配置的用户。对于从 LocalStack 社区版迁移的用户，Floci 也是一个直接的替代品。",
+      "degraded": false
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": 112582,
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "one_liner": "Claude-Mem 是一个为 Claude Code 设计的持久化内存压缩系统，它通过自动捕获工具使用观察结果、生成语义摘要，并将其提供给未来的会话，从而在会话之间无缝地保留上下文。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决 AI 代理在不同会话中缺乏持久化记忆的问题。传统的 AI 代理在会话结束后会丢失上下文，导致每次新会话都需要重新学习项目信息，降低效率。Claude-Mem 通过存储和检索历史交互数据，使 AI 能够保持对项目的持续理解。\n\n**核心功能**\n*   **持久化内存**：上下文在会话之间保留，确保 AI 代理对项目有持续的了解。\n*   **渐进式披露**：采用三层工作流模式（`search`、`timeline`、`get_observations`）进行分层内存检索，优化令牌使用效率。\n*   **MCP 搜索工具**：允许用户通过自然语言查询项目历史记录。\n*   **Web 查看器 UI**：提供实时内存流的可视化界面。\n*   **隐私控制**：支持使用 `<private>` 标签排除敏感内容，防止其被存储。\n*   **自动操作**：无需手动干预，系统自动捕获和管理记忆。\n\n**技术亮点**\n*   **双数据库持久化**：结合 SQLite 数据库用于结构化存储（会话、观察、用户提示）和 ChromaDB 用于向量嵌入和语义搜索。\n*   **生命周期钩子**：通过 `SessionStart`、`UserPromptSubmit`、`PostToolUse`、`Stop`、`SessionEnd` 等钩子管理会话和记忆的生命周期。\n*   **令牌优化**：渐进式披露机制通过分层检索，显著减少了 AI 模型处理不相关信息所需的令牌数量，实现约 10 倍的令牌节省。\n*   **多语言支持**：支持 28 种语言，包括简体中文、日语、西班牙语等。\n\n**适合谁用**\n该项目主要面向使用 Claude Code 或其他支持的 IDE（如 Cursor, Windsurf, OpenCode, Codex CLI, Antigravity CLI, OpenClaw）的开发者和知识工作者。它特别适合需要 AI 代理在长时间或跨会话项目中保持上下文和记忆的场景，例如代码开发、问题排查和项目管理。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/agent-desktop",
+      "owner": "vercel-labs",
+      "name": "agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "stars": 14449,
+      "description": "Computer use CLI for AI agents",
+      "one_liner": "`agent-desktop` 是一个命令行工具和 C 库，旨在通过操作系统辅助功能树，让 AI 代理能够观察和操作 macOS、Windows 和 Linux 上的桌面应用程序。",
+      "detail_md": "**解决什么问题**\n该项目解决了 AI 代理与桌面应用程序交互的难题，提供了一种无需像素匹配即可读取和操作 UI 的方法。 它通过访问操作系统的辅助功能树来获取结构化 JSON 数据，其中包含可供代理操作的元素引用。 这使得 AI 代理能够执行点击按钮、填写表单、读取 UI 状态、管理窗口等任务。 \n\n**核心功能**\n`agent-desktop` 的核心功能包括：观察桌面应用程序的 UI 状态（`snapshot`、`find`、`get`、`is`、`screenshot`、`list-surfaces`）， 对 UI 元素执行操作（`click`、`type`、`set-value`、`scroll` 等）， 以及管理应用程序和窗口（`launch`、`close-app`、`list-windows` 等）。 它还支持通知管理和剪贴板操作。 所有命令都以 JSON 格式返回结果，便于 AI 代理解析和处理。 \n\n**技术亮点**\n该项目采用 Rust 语言开发，提供 CLI 和 C 语言库两种形式。  它通过 `PlatformAdapter` 特性实现了跨平台兼容性，支持 macOS (AX API)、Windows (UI Automation) 和 Linux (AT-SPI) 上的原生辅助功能 API。  其“无头”模式允许在不抢占焦点或移动鼠标的情况下进行交互，而“有头”模式则支持物理输入。 \n\n**适合谁用**\n`agent-desktop` 主要适用于需要与桌面应用程序进行自动化交互的 AI 代理和开发者。 它为构建能够理解和操作桌面 UI 的智能系统提供了基础工具，特别适合那些需要进行桌面自动化、测试或辅助功能增强的场景。",
+      "degraded": false
+    },
+    {
+      "id": "github/spec-kit",
+      "owner": "github",
+      "name": "spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "stars": 147114,
+      "description": "💫 Toolkit to help you get started with SDD or any other process!",
+      "one_liner": "Spec Kit 是一个开源工具包，通过可执行规范和 AI 代理实现规范驱动开发。",
+      "detail_md": "**解决什么问题**\nSpec Kit 旨在解决传统软件开发中规范与代码脱节的问题，通过使规范可执行，直接通过 AI 代理生成工作实现，而不是仅仅作为指导。 它将需求变更从障碍转变为系统性再生，从而提高工程效率。 它还通过模板引导大型语言模型 (LLM) 行为，确保生成高质量、一致且完整的规范。 \n\n**核心功能**\nSpec Kit 的核心功能围绕其规范驱动开发 (SDD) 工作流展开，包括一系列斜杠命令：\n*   `/speckit.constitution`：建立项目原则和开发指南。  \n*   `/speckit.specify`：定义要构建的内容，侧重于“什么”和“为什么”。  \n*   `/speckit.plan`：创建技术实现计划，包括技术栈和架构选择。  \n*   `/speckit.tasks`：从实现计划中生成可操作的任务列表。  \n*   `/speckit.implement`：执行任务以构建功能。  \n*   `/speckit.converge`：评估代码库与规范、计划和任务的一致性，并添加剩余工作作为新任务。  \n\n**技术亮点**\nSpec Kit 的技术亮点包括：\n*   **AI 代理抽象**：通过统一的 `INTEGRATION_REGISTRY` 支持 30 多个 AI 编码助手。  \n*   **标准化工作流**：通过斜杠命令定义从自然语言意图到工作代码的清晰路径。 \n*   **跨平台逻辑**：提供多变体脚本层（Bash/PowerShell/Python）用于核心操作。 \n*   **可扩展性**：提供扩展、预设和捆绑系统，以适应特定项目需求。 \n*   **模板驱动质量**：使用模板作为复杂的提示，约束 LLM 输出，以确保规范的质量、清晰度和完整性。 \n\n**适合谁用**\nSpec Kit 适用于希望利用 AI 编码代理进行软件开发，并需要结构化、可重复和可追溯流程的开发人员和团队。 它特别适合那些希望通过使规范成为代码的单一事实来源来提高开发效率、减少技术债务并应对快速变化的项目。",
+      "degraded": false
+    },
+    {
+      "id": "The-PR-Agent/pr-agent",
+      "owner": "The-PR-Agent",
+      "name": "pr-agent",
+      "url": "https://github.com/The-PR-Agent/pr-agent",
+      "stars": 14608,
+      "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+      "one_liner": "PR-Agent是一个开源的AI代码审查工具，旨在通过自动化反馈和建议，帮助开发团队高效处理拉取请求。",
+      "detail_md": "**解决什么问题**\nPR-Agent旨在解决开发团队在处理拉取请求（PR）时面临的效率和质量问题。 它通过自动化PR描述生成、代码审查、代码改进建议等功能，减少人工审查的工作量，提高代码质量和开发效率。\n\n**核心功能**\nPR-Agent提供一系列核心工具，包括：\n*   `/describe`：自动生成PR的标题、类型、摘要、代码概览和标签。\n*   `/review`：对PR进行多方面分析，提供潜在问题、安全漏洞和审查工作量评估等反馈。\n*   `/improve`：扫描PR代码变更，自动生成代码改进建议。\n*   `/ask`：回答关于PR内容的自由文本问题，或针对特定代码行提问。\n*   `/add_docs`：为缺少文档的代码组件生成文档字符串。\n*   `/update_changelog`：根据PR内容自动更新`CHANGELOG.md`文件。\n\n**技术亮点**\n该项目具有以下技术亮点：\n*   **快速且经济**：每个工具通常只需一次LLM调用，在大约30秒内提供反馈，成本较低。\n*   **处理任意大小的PR**：采用自适应且感知token的PR压缩策略，有效处理大小PR，避免超出LLM的token限制。\n*   **高度可定制**：通过JSON提示和分层配置系统（`configuration.toml`）实现，允许团队根据需求定制审查类别和代理行为。\n*   **平台无关性**：支持GitHub、GitLab、Bitbucket、Azure DevOps和Gitea等主流Git平台，并可通过CLI、GitHub Actions或自托管Webhook服务器部署。\n\n**适合谁用**\nPR-Agent适合需要提高代码审查效率和质量的开发团队。 无论是小型团队还是大型企业，只要使用支持的Git平台，并希望通过AI自动化PR流程，减少人工干预，确保代码规范和质量，都可以使用PR-Agent。 尤其适合追求数据控制和基础设施自主权的开源项目和团队。",
+      "degraded": false
+    },
+    {
+      "id": "harry0703/MoneyPrinterTurbo",
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "stars": 138731,
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "one_liner": "MoneyPrinterTurbo 是一款一站式 AI 短视频生成工具，只需主题或关键词即可自动生成高清短视频。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决短视频内容创作中脚本撰写、素材查找、配音、字幕制作和视频剪辑等繁琐且耗时的问题。通过自动化流程，它极大地降低了视频制作的门槛，让用户能够快速、高效地生成高质量短视频。\n\n**核心功能**\nMoneyPrinterTurbo 提供从主题到成片的完整自动化工作流。它支持 AI 自动生成多语言视频脚本，集成多种 LLM 提供商。在素材方面，支持本地上传、免费图库（Pexels、Pixabay）以及多种文生视频服务。配音功能集成了 Edge TTS 等多种服务，并能自动生成可自定义样式的字幕。最终视频支持多种画幅，并可一键发布到 TikTok、Instagram 和 YouTube Shorts 等平台。\n\n**技术亮点**\n项目采用模块化设计，支持多种 LLM、TTS 和视频素材提供商，具有高度的可扩展性。它提供了 WebUI、API、CLI 和 AI Agent 四种使用方式，满足不同用户的需求。视频生成流程包括脚本、配音、素材、字幕、配乐和剪辑等多个环节，每个环节都支持自定义内容。此外，还支持批量生成、任务历史记录以及配置导入导出等高级功能。\n\n**适合谁用**\nMoneyPrinterTurbo 适合需要快速制作短视频的内容创作者、营销人员、自媒体从业者以及任何希望通过自动化工具提高视频生产效率的用户。对于不熟悉视频剪辑软件或缺乏素材资源的用户，该工具能显著降低创作门槛。",
+      "degraded": false
+    },
+    {
+      "id": "garrytan/gstack",
+      "owner": "garrytan",
+      "name": "gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "stars": 139142,
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "one_liner": "gstack 是一个结合了 Claude AI 技能和快速无头浏览器的 AI 工程工作流工具，旨在简化整个 AI 开发流程。",
+      "detail_md": "**解决什么问题**\ngstack 旨在解决 AI 工程工作流中的效率和复杂性问题。它通过集成 AI 技能和浏览器自动化，帮助开发者更高效地进行产品构思、技术规划、代码实现、审查、QA 和发布。例如，它能帮助用户从产品痛点出发，重新定义产品方向，而不是简单地实现功能需求。\n\n**核心功能**\ngstack 提供了一系列核心技能来支持 AI 工程工作流。\n*   `/office-hours`：作为项目启动点，帮助用户重新构思产品，从痛点出发定义核心能力，并生成设计文档。\n*   `/plan-ceo-review`：以“创始人模式”运作，从用户角度重新思考问题，旨在发现更具创新性和吸引力的产品版本。\n*   `/plan-eng-review`：以“工程经理模式”运作，专注于技术实现细节，包括架构、系统边界、数据流、故障模式和测试覆盖，并能生成系统图表。\n*   `/cso`：提供首席安全官功能，进行静态安全评估，识别应用路由、租户授权、秘密信息和依赖暴露等安全问题。\n*   `/document-release`：作为技术文档撰写模式，在代码发布前更新项目文档，确保文档与代码变更同步。\n\n**技术亮点**\ngstack 的技术亮点在于其结合了 Claude AI 技能和快速无头浏览器自动化。它利用 Playwright 进行浏览器自动化，支持多种 AI 模型集成。项目采用模块化设计，通过 `package.json` 定义了多种脚本，用于构建、测试和文档生成。其技能系统能够根据用户意图生成和执行复杂的任务，例如从原型浏览器流程 (`/scrape`) 转换为可重用的代码脚本 (`/skillify`)。\n\n**适合谁用**\ngstack 适合需要高效进行 AI 驱动的软件开发和工程的用户。这包括：\n*   **创业公司创始人**和**内部创业者**：通过 `/office-hours` 和 `/plan-ceo-review` 技能，帮助他们从产品构思阶段就进行深入思考，定义核心价值。\n*   **软件工程师和技术负责人**：通过 `/plan-eng-review` 技能，获得详细的技术规划和架构设计支持。\n*   **需要自动化浏览器任务的开发者**：利用其无头浏览器功能和 `/scrape`、`/skillify` 技能，实现高效的网页数据抓取和自动化。\n*   **注重代码质量和安全性的团队**：通过 `/cso` 进行安全审计，以及 `/document-release` 确保文档同步和准确性。",
+      "degraded": false
+    },
+    {
+      "id": "FareedKhan-dev/kimi-k3-in-c",
+      "owner": "FareedKhan-dev",
+      "name": "kimi-k3-in-c",
+      "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+      "stars": 10094,
+      "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+      "one_liner": "`kimi-k3-in-c` 是一个 C99 实现，旨在单 CPU、低至 8GB 内存上运行 2.78 万亿参数的 Kimi K3 MoE 模型，同时保持字节级输出一致性。",
+      "detail_md": "**解决什么问题**\n该项目解决了在消费级硬件上运行大型语言模型（LLM）的挑战，特别是 2.78 万亿参数、1.56 TB 大小的 Kimi K3 模型，该模型通常需要数据中心级别的资源。 它通过创新的内存管理技术，使得模型能够在低至 8GB 的 RAM 上运行，而无需 GPU。 \n\n**核心功能**\n核心功能包括：CPU-only 推理，支持 AVX2/FMA 架构； “内存即刻度盘”设计，允许模型在 8GB 到 224GB RAM 之间运行，且输出字节完全一致； 以及严格的浮点控制，确保与参考实现位精确匹配。 它还包含一个 C 语言实现的 BPE 分词器，直接读取 `tiktoken.model`。 \n\n**技术亮点**\n技术亮点在于其内存优化策略，包括“Trunk Streaming”技术，将模型主干部分按需加载，以及一个 LRU 缓存管理 896 个专家模型，这些专家模型以 4 位 MXFP4 格式直接使用。 整个引擎用可移植的 C99 编写，没有外部依赖，如 BLAS 或其他重型框架。 它还实现了严格的配置加载，如果配置不完整或专家加载失败，则拒绝启动，以防止静默的数值损坏。 \n\n**适合谁用**\n该项目适合希望在资源受限的设备（如笔记本电脑或普通台式机）上运行大型 Kimi K3 模型的研究人员、开发者和爱好者。 它也适用于需要对模型推理过程进行底层控制和优化的开发者，以及对高性能、低内存占用的 LLM 推理引擎感兴趣的用户。",
+      "degraded": false
+    },
+    {
+      "id": "JiaFeiMiao-K-Cat/DiscImageStudio",
+      "owner": "JiaFeiMiao-K-Cat",
+      "name": "DiscImageStudio",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "stars": 6221,
+      "description": "",
+      "one_liner": "Disc Image Studio 是一款 Windows 工具，用于在 CD、DVD 和蓝光光盘上刻蚀肉眼可见的图像，并支持数据生成与刻录。",
+      "detail_md": "### 解决什么问题\n本项目旨在解决用户希望在光盘盘面刻蚀个性化图像的需求，提供了一种将图片转换为光盘物理层数据并进行刻录的解决方案。它通过精确的物理模型和辅助标定功能，解决了传统方法中图像刻蚀精度低、效果不可控的问题。\n\n### 核心功能\n*   **光盘数据生成**：支持 CD、DVD 和单层 BD-R 的数据生成，可导出 WAV+CUE、RAW 音轨、ISO 镜像，并支持随盘文件功能。\n*   **辅助标定**：提供智能且精准的辅助标定流程，通过照片矫正和曲线标定，将盘面物理数据精确度提升至 10<sup>-14</sup>。\n*   **刻录功能**：支持导出镜像文件进行手动刻录，也提供实验性的即时流式刻录功能，无需保存完整镜像即可直接写入空白盘片。\n*   **多图层设计画布**：用户可以在设计页导入多张图片，进行移动、缩放、旋转、调整层次等操作，以完成盘面排版。\n\n### 技术亮点\n*   **物理层精确控制**：项目深入到光盘物理层，如 DVD 的 EFMPlus 编码、蓝光的 17PP 调制等，确保图像能被刻蚀到光盘上。\n*   **高精度辅助标定算法**：通过拟合三次轨距模型等高级算法，实现对光盘物理参数的精确校准。\n*   **流式刻录技术**：利用 Windows IMAPI2 接口，实现边生成边刻录，减少了对临时存储的需求。\n*   **模块化架构**：CD、DVD 和蓝光功能通过 `IOpticalDiscModule` 接口接入，保证了系统的可扩展性和维护性。\n\n### 适合谁用\n本工具适合需要个性化定制光盘盘面、对光盘刻蚀图像有高精度要求的用户。包括：\n*   **个人用户**：制作具有独特纪念意义或艺术性的光盘。\n*   **专业人士**：在特定领域（如数据归档、艺术创作）需要精确控制光盘物理刻蚀效果的用户。\n*   **开发者和研究人员**：对光盘物理层编码、调制和刻录技术感兴趣，希望进行相关实验或研究的用户。",
+      "degraded": false
+    },
+    {
+      "id": "MichaelCade/90DaysOfDevOps",
+      "owner": "MichaelCade",
+      "name": "90DaysOfDevOps",
+      "url": "https://github.com/MichaelCade/90DaysOfDevOps",
+      "stars": 30243,
+      "description": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic.",
+      "one_liner": "这是一个为期90天的DevOps学习项目，涵盖DevOps、DevSecOps基础知识及社区贡献的进阶主题。",
+      "detail_md": "**解决什么问题**\n该项目旨在为个人提供一个结构化的学习路径，以掌握DevOps的核心原则、流程和工具，并特别强调在软件开发生命周期中集成安全实践（DevSecOps）。它解决了学习者在面对DevOps广阔知识体系时，缺乏系统性指导的问题。\n\n**核心功能**\n项目提供按年份划分的不同版本内容，包括2022年的DevOps基础知识、2023年由专家贡献的DevSecOps主题，以及2024年社区驱动的视频课程。内容涵盖编程语言、Linux基础、网络、云平台、Git、容器、Kubernetes、基础设施即代码、配置管理、CI/CD、监控和数据管理等多个领域。\n\n**技术亮点**\n项目采用多语言支持，方便全球学习者。2023年版本引入了主题专家贡献模式，确保内容的专业性和深度。项目强调实践操作，通过实际场景和工具集成来加深理解。\n\n**适合谁用**\n该项目适合希望系统学习DevOps和DevSecOps基础知识的个人，包括开发者、运维工程师、QA工程师以及任何对软件开发和运维集成感兴趣的人员。它也适合希望通过社区贡献和交流来提升技能的学习者。",
+      "degraded": false
+    },
+    {
+      "id": "D4Vinci/Scrapling",
+      "owner": "D4Vinci",
+      "name": "Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "stars": 96082,
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "one_liner": "Scrapling 是一个 Python 网页抓取框架，集成了快速 HTTP 请求、隐身浏览器、页面解析和并发爬取功能，旨在简化现代网站的数据提取工作。",
+      "detail_md": "**解决什么问题** \nScrapling 旨在解决传统网页抓取中遇到的挑战，例如网站结构频繁变化、选择器不稳定、反爬机制（如 CAPTCHA、浏览器指纹识别）以及处理动态内容和 JavaScript 渲染的需求。  它通过提供适应性解析、隐身抓取和智能反爬绕过功能来应对这些问题。 \n\n**核心功能** \n该项目提供全面的爬虫框架，支持类似 Scrapy 的 API、并发爬取、多会话管理、任务暂停与恢复、以及自动节流。  它还具备高级网站抓取能力，包括快速 HTTP 请求、动态加载、反爬绕过、会话管理和代理轮换。  此外，Scrapling 提供了强大的解析和数据提取工具，支持 CSS、XPath、文本和正则表达式选择器，并能智能追踪元素变化。 \n\n**技术亮点** \nScrapling 的技术亮点在于其渐进式增强的抓取器层级，允许用户从轻量级 HTTP 请求升级到隐身浏览器自动化。  它提供统一的 `Response` 接口，确保不同抓取策略下的代码一致性。  项目还集成了 AI 功能，如 MCP 服务器，使 AI 智能体能够通过 Scrapling 进行网页抓取和浏览器操作，并支持将页面转换为 LLM 友好的 Markdown 格式。 \n\n**适合谁用** \nScrapling 适合需要从现代网站高效、稳定地提取数据的开发者、数据科学家和 AI 工程师。  无论是进行简单的单页抓取、构建复杂的并发爬虫，还是为 AI 智能体提供网页交互能力，Scrapling 都能提供强大的支持。",
+      "degraded": false
+    },
+    {
+      "id": "Thysrael/Horizon",
+      "owner": "Thysrael",
+      "name": "Horizon",
+      "url": "https://github.com/Thysrael/Horizon",
+      "stars": 12373,
+      "description": "📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达",
+      "one_liner": "Horizon 是一个 AI 驱动的信息聚合系统，它能从多源抓取、智能筛选、丰富内容并生成个性化日报。",
+      "detail_md": "**解决什么问题** \nHorizon 旨在解决信息过载问题，帮助用户从分散的、海量的信息源中，通过 AI 筛选、去重和内容丰富，获取个性化、高质量的每日新闻摘要，从而节省手动筛选信息的时间。 \n\n**核心功能** \nHorizon 的核心功能包括多源信息聚合（如 Hacker News, RSS, Reddit, Telegram, Twitter/X, GitHub, OpenBB）、  AI 智能打分与过滤、  跨平台内容去重、  自动补充背景知识、  社区评论总结、  生成中英文双语日报，  并支持多种分发渠道，如 GitHub Pages、邮件和 Webhook。 \n\n**技术亮点** \n项目采用模块化管道设计，由 `HorizonOrchestrator` 协调抓取、去重、AI 分析、内容丰富和总结等阶段。  AI 能力通过 `AIClient` 抽象层支持多种大模型（如 Claude, GPT, Gemini），  确保灵活性。  数据模型 `ContentItem` 贯穿整个处理流程，逐步丰富信息。 \n\n**适合谁用** \nHorizon 适合需要高效追踪学术动态、开源项目、技术趋势或特定领域信息的用户。  尤其适用于希望通过自动化工具，减少手动筛选信息时间，并获取个性化、高质量信息摘要的个人或团队。",
+      "degraded": false
+    },
+    {
+      "id": "scenario-labs/skills",
+      "owner": "scenario-labs",
+      "name": "skills",
+      "url": "https://github.com/scenario-labs/skills",
+      "stars": 2220,
+      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+      "one_liner": "...",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\n...",
+      "degraded": true
+    }
+  ]
+}
