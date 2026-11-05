@@ -1,0 +1,171 @@
+{
+  "doc_token": "AWjWd1lNooHsrkxcquTcJmnknsf",
+  "doc_url": "https://my.feishu.cn/docx/AWjWd1lNooHsrkxcquTcJmnknsf",
+  "items": [
+    {
+      "id": "NVIDIA/auto-ontology",
+      "owner": "NVIDIA",
+      "name": "auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "stars": 6782,
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "one_liner": "本项目旨在为关系型数据库构建业务语义层，提供数据目录、检索和语义查询能力。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决在关系型数据库之上构建业务语义层的问题，使得业务用户能够使用清晰、精确的业务语言来描述实体和属性。它通过将调用者的图谱词汇转换为表和列来弥合图谱数据与关系型数据之间的鸿沟。\n\n**核心功能**\n核心功能包括：\n*   **数据目录与语义层构建**：将图谱数据模型转换为关系型数据库的表和列，并管理实体与属性的映射。\n*   **实体覆盖与检索**：提供快速的实体覆盖管道，用于提取实体、检索候选实体并评估覆盖率。\n*   **语义查询处理**：通过对用户问题进行净化和实体提取，将自然语言查询转化为可操作的数据库实体。\n*   **前端界面**：提供基于 Next.js 的前端应用，与后端 FastAPI 服务交互，展示数据和查询结果。\n\n**技术亮点**\n*   **Python 后端**：使用 FastAPI 构建后端服务，处理数据目录、检索和语义查询逻辑。\n*   **Node.js 前端**：采用 Next.js 16 和 React 19 构建用户界面。\n*   **依赖管理**：Python 项目使用 `uv` 进行依赖管理，Node.js 项目使用 `pnpm` 管理依赖<cite repo=\"NVIDIA/auto-ontology\" path=\"NVIDIA/auto-ontology\" start=\"Dependency Management and Packaging\" end=\"Dependency Management and Packaging\" />。\n*   **数据库集成**：与 PostgreSQL (pgvector) 集成，用于数据存储和向量搜索。\n\n**适合谁用**\n本项目适合需要为关系型数据库构建业务语义层、希望通过自然语言进行数据查询和分析的业务用户和数据工程师。它也适用于需要管理复杂数据目录和提高数据可发现性的组织。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 314639,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供了一套AI代理技能，旨在提升软件开发效率和代码质量，通过结构化方法解决AI辅助开发中的常见问题。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI辅助软件开发中的四大常见问题：\n1.  **代理未能理解用户意图**：通过“拷问”会话（grilling session）弥合用户与AI代理之间的沟通鸿沟，确保开发前期的理解一致性。\n2.  **代理过于冗长**：通过建立共享语言和领域模型（`GLOSSARY.md`），减少AI代理的冗余输出，提高沟通效率和代码一致性。\n3.  **代码无法正常工作**：引入测试驱动开发（TDD）和调试技能，通过快速反馈循环确保代码质量。\n4.  **代码库变得混乱**：通过强调代码设计原则，如“深模块”（deep modules），并提供架构改进工具，防止代码库复杂性失控。\n\n**核心功能**\n项目提供多种“技能”（skills），分为用户调用（User-invoked）和模型调用（Model-invoked）两类：\n*   **用户调用技能**：例如 `/grill-with-docs` 用于需求澄清和文档构建，`/to-spec` 用于将对话转化为规范，`/implement` 用于执行开发任务，`/improve-codebase-architecture` 用于扫描代码库并提出架构改进建议。\n*   **模型调用技能**：例如 `/tdd` 实施测试驱动开发，`/diagnosing-bugs` 用于调试，`/codebase-design` 提供代码设计指导。\n\n**技术亮点**\n*   **模块化技能设计**：每个技能都是一个独立的模块，易于适应和组合。\n*   **统一语言**：通过 `GLOSSARY.md` 强制使用统一的领域术语，提高人与AI代理之间的沟通精确性。\n*   **反馈驱动开发**：强调测试驱动开发（TDD）和纪律性调试流程，确保代码质量。\n*   **架构演进**：提供 `/improve-codebase-architecture` 技能，主动识别并改进代码库中的“深模块”机会，提升可维护性。\n*   **多代理支持**：支持多种AI代理平台，如Claude Code、Codex、GitHub Copilot和Gemini CLI。\n\n**适合谁用**\n该项目适合希望利用AI代理提升软件开发效率和代码质量的“真正的工程师”。特别是那些在使用AI辅助开发过程中遇到沟通不畅、代码冗余、质量问题或架构混乱的开发者。它通过提供结构化的工作流程和工具，帮助开发者更好地与AI代理协作，构建高质量的应用程序。",
+      "degraded": false
+    },
+    {
+      "id": "garrytan/gstack",
+      "owner": "garrytan",
+      "name": "gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "stars": 139765,
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "one_liner": "gstack 旨在通过提供专业化的认知角色和高性能浏览器层来增强 AI 编码助手的功能。",
+      "detail_md": "**解决什么问题**\n该项目解决了 AI 编码助手在软件开发生命周期中面临的挑战，例如产品规划、代码审查、发布流程和安全审计。它通过提供结构化的“技能”来帮助 AI 更好地理解和执行复杂的工程任务，从而提高效率和准确性。\n\n**核心功能**\ngstack 提供了一系列核心技能，包括：`/office-hours` 用于产品重构和设计文档生成；`/plan-ceo-review` 用于从产品角度进行规划；`/plan-eng-review` 用于技术架构和实现细节的规划；`/qa` 用于质量保证和回归测试；`/ship` 用于自动化发布流程；以及 `/cso` 用于安全审计。\n\n**技术亮点**\n该项目利用“技能”作为 AI 主机的认知模式，每个技能都由 `SKILL.md` 文件定义。它还包括一个“浏览守护程序” (`Browse Daemon`)，这是一个通过 Playwright 管理 Chromium 实例的后台进程，用于执行浏览器命令。`gbrain` 是一个语义搜索和内存引擎，用于存储和索引项目上下文，支持持久化知识。\n\n**适合谁用**\ngstack 适合需要增强 AI 编码助手能力的开发者、团队和公司。特别是那些希望通过 AI 自动化产品规划、代码审查、发布和安全流程，并提高开发效率和软件质量的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Usagi-org/ai-goofish-monitor",
+      "owner": "Usagi-org",
+      "name": "ai-goofish-monitor",
+      "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+      "stars": 17431,
+      "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+      "one_liner": "这是一个基于AI和Playwright的闲鱼智能监控机器人，提供Web界面管理、多任务并发、实时分析与通知功能。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决用户在闲鱼等二手交易平台寻找特定商品时，需要耗费大量时间手动刷新、筛选和比对的问题。通过自动化监控和AI智能分析，帮助用户快速发现符合其复杂需求的商品，并及时获得通知。\n\n**核心功能**\n核心功能包括：提供可视化的Web管理界面，支持任务创建、编辑、启停和日志查看；支持自然语言描述需求，AI自动生成监控任务和筛选标准；利用多模态AI（如GPT-4o）对商品图文和卖家信息进行深度分析；实时处理新商品并即时发送通知（支持ntfy.sh、企业微信、Bark等）；支持Cron定时任务调度和Docker一键部署。\n\n**技术亮点**\n技术亮点在于结合了Playwright进行健壮的Web scraping和反爬策略，以及集成多模态大语言模型进行智能分析。项目采用FastAPI构建Web界面，实现RESTful API和实时日志流。异步IO和APScheduler用于多任务并发和定时调度，确保系统高效稳定运行。\n\n**适合谁用**\n本项目适合经常在闲鱼等二手平台购物，希望自动化筛选和监控商品的用户。特别是那些对商品有复杂筛选条件（如成色、价格、卖家信誉等），且希望第一时间获取符合条件商品信息的用户。对于开发者和技术爱好者，也适合作为学习Web scraping、AI集成和Web服务开发的实践项目。",
+      "degraded": false
+    },
+    {
+      "id": "D4Vinci/Scrapling",
+      "owner": "D4Vinci",
+      "name": "Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "stars": 97631,
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "one_liner": "Scrapling 是一个 Python 网页抓取框架，集成了 HTTP 请求、隐身浏览器、页面解析和并发爬取功能，支持 AI 智能体使用。",
+      "detail_md": "**解决什么问题**\nScrapling 旨在解决现代网站抓取中的复杂问题，包括处理动态内容、绕过反爬机制（如 Cloudflare Turnstile/Interstitial）、管理会话和代理，以及在网站结构变化后依然能准确提取数据。它还支持 AI 智能体进行网页浏览和数据提取。\n\n**核心功能**\n*   **灵活的页面获取**：提供快速 HTTP 请求 (`Fetcher`) 和隐身浏览器自动化 (`StealthyFetcher`)，支持 JavaScript 渲染、TLS 指纹伪装和 HTTP/3。\n*   **强大的解析和数据提取**：支持 CSS、XPath、文本和正则表达式选择器，具备智能元素跟踪和相似元素查找功能。\n*   **完整的爬虫框架**：提供类似 Scrapy 的 API，支持并发爬取、代理轮换、自动限速 (`AutoThrottle`)、暂停与恢复，以及多种数据导出格式（JSON、CSV、XML）。\n*   **AI 集成**：通过 MCP 服务器让 AI 智能体（如 Claude、Cursor）进行网页抓取和操作，并提供 Agent Skill 帮助 AI 理解库的 API。\n*   **命令行工具**：提供交互式 Shell 和 `extract` 命令，无需编写代码即可进行网页抓取。\n\n**技术亮点**\n*   **渐进式增强**：根据需求从轻量级 HTTP 请求升级到浏览器自动化，所有 Fetcher 共享统一的 `Response` 接口。\n*   **高性能与内存效率**：优化了数据结构和懒加载，实现了快速 JSON 序列化，性能优于多数 Python 抓取库。\n*   **高隐蔽性**：支持浏览器指纹伪装、Cloudflare 挑战解决和 DNS 泄露防护。\n*   **AI 友好**：提供将网页转换为 LLM-ready Markdown 的功能，并内置提示词注入防护。\n\n**适合谁用**\nScrapling 适合需要从现代网站高效、稳定地提取数据的开发者、数据科学家和 AI 工程师。无论是进行简单的单页抓取、复杂的并发爬取，还是将网页抓取能力集成到 AI 智能体中，Scrapling 都能提供全面的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/agent-desktop",
+      "owner": "vercel-labs",
+      "name": "agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "stars": 16426,
+      "description": "Computer use CLI for AI agents",
+      "one_liner": "`agent-desktop` 是一个 Rust 命令行工具和 C 语言库，旨在让 AI 代理通过操作系统辅助功能树观察和操作桌面应用程序。",
+      "detail_md": "**解决什么问题**\n该项目解决了 AI 代理与桌面应用程序交互的问题，允许 AI 代理通过统一的 JSON 接口观察和操作 macOS、Windows 和 Linux 上的桌面应用，而无需进行像素匹配。它抽象了不同操作系统的辅助功能 API，例如 macOS 的 Accessibility AX、Windows 的 UI Automation (UIA) 和 Linux 的 AT-SPI。\n\n**核心功能**\n`agent-desktop` 提供了一系列命令，包括观察（如 `snapshot`、`find`、`screenshot`）、对引用进行操作（如 `click`、`type`、`set-value`）、键盘和鼠标控制、应用程序和窗口管理、通知处理以及剪贴板操作。它通过返回带有可操作元素引用的 JSON 快照，使 AI 代理能够执行“观察-行动-再观察”的循环。\n\n**技术亮点**\n该项目采用 Rust 编写，提供原生 CLI 和 C FFI 库。它具有平台无关的核心 (`agent-desktop-core`) 和针对 macOS (`agent-desktop-macos`)、Windows (`agent-desktop-windows`) 和 Linux (`agent-desktop-linux`) 的平台特定实现。其架构强调依赖反转，确保核心模块不依赖于平台特定模块。\n\n**适合谁用**\n`agent-desktop` 适合需要让 AI 代理与桌面应用程序进行自动化交互的开发者和团队。特别是那些希望构建能够理解和操作图形用户界面（GUI）的 AI 代理，而无需依赖图像识别或屏幕坐标的场景。",
+      "degraded": false
+    },
+    {
+      "id": "max-sixty/worktrunk",
+      "owner": "max-sixty",
+      "name": "worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "stars": 11384,
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "one_liner": "Worktrunk 是一个 Git worktree 管理工具，专为并行 AI 代理工作流设计，提供自动化和配置管理功能。",
+      "detail_md": "**解决什么问题**\nWorktrunk 旨在解决 Git worktree 管理的复杂性，特别是当需要并行处理多个任务或与 AI 代理集成时。它通过将 Git worktree 视为一级公民，强制分支与目录之间的一对一映射，从而简化了工作流。此外，它还解决了传统 shell 无法直接更改父 shell 工作目录的问题，通过 shell 包装器实现无缝目录切换。\n\n**核心功能**\nWorktrunk 的核心功能包括：\n*   **Worktree 管理**：通过分支名称管理 worktree，例如使用 `wt switch feature-auth` 命令切换工作区，Worktrunk 会自动管理底层文件系统路径。\n*   **钩子和生命周期自动化**：提供一个 10 阶段的钩子系统，在 worktree 生命周期中触发自动化任务，支持阻塞式 `pre-` 钩子和后台运行的 `post-` 钩子。\n*   **配置系统**：采用分层配置系统，包括用户配置 (`~/.config/worktrunk/config.toml`) 和项目配置 (`.config/wt.toml`)，用于管理个人偏好和项目特定设置。\n*   **LLM 集成**：支持与外部 LLM CLI 工具集成，自动生成提交信息，并提供可定制的模板和智能的 diff 过滤功能 <cite repo=\"max-sixty/worktrunk\" path=\"max-sixty/worktrunk\" start=\"4.8\" end=\"10\" />。\n\n**技术亮点**\n*   **Git Worktree 作为一级公民**：强制分支与目录的一对一映射，简化了 Git 工作流。\n*   **10 阶段钩子系统**：提供灵活的自动化能力，支持 `pre-` 和 `post-` 钩子，并包含审批系统以防止恶意代码执行。\n*   **Shell 集成**：通过 shell 包装器和指令文件实现无缝的目录切换，解决了标准进程无法更改父 shell 工作目录的问题。\n*   **分层配置**：通过环境变量、命令行参数、项目配置和用户配置的优先级，实现灵活的配置管理。\n*   **AI 代理集成**：支持 Claude Code、Codex 等多种 AI 代理，提供活动跟踪、worktree 隔离和状态行报告等功能 <cite repo=\"max-sixty/worktrunk\" path=\"max-sixty/worktrunk\" start=\"4.8\" end=\"10\" />。\n\n**适合谁用**\nWorktrunk 适合需要高效管理 Git worktree 的开发者，特别是那些：\n*   **并行处理多个任务**：需要频繁切换分支和工作目录的用户。\n*   **使用 AI 代理进行开发**：希望将 AI 代理集成到提交信息生成、分支摘要等工作流中的开发者 <cite repo=\"max-sixty/worktrunk\" path=\"max-sixty/worktrunk\" start=\"4.8\" end=\"10\" />。\n*   **寻求自动化工作流**：希望通过钩子系统自动化构建、测试等任务的团队。\n*   **需要统一配置管理**：希望在个人偏好和团队项目设置之间取得平衡的团队。",
+      "degraded": false
+    },
+    {
+      "id": "lz4/lz4",
+      "owner": "lz4",
+      "name": "lz4",
+      "url": "https://github.com/lz4/lz4",
+      "stars": 12286,
+      "description": "Extremely Fast Compression algorithm",
+      "one_liner": "LZ4 是一个极致快速的无损数据压缩算法库，提供高速压缩与解压功能，支持多种压缩模式和帧格式，适用于高性能数据处理场景。",
+      "detail_md": "**解决什么问题**\nLZ4 旨在解决数据传输和存储中对速度有极高要求的压缩需求。它提供了比其他压缩算法更快的压缩和解压速度，尤其是在解压方面，能够达到多 GB/s 的速度，接近内存带宽限制。这对于需要实时处理大量数据的应用（如日志处理、数据库、网络通信等）至关重要。\n\n**核心功能**\n该项目提供核心的 LZ4 压缩和解压算法，支持多种 API 级别：块 API (`lz4.h`) 用于简单的内存到内存的单块压缩；流 API (`lz4.h`) 用于处理大型数据流，支持跨块冗余；以及帧 API (`lz4frame.h`)，提供标准化的自包含帧格式，确保与 `lz4` 命令行工具的互操作性。它还提供了 LZ4_HC 高压缩变体，以牺牲压缩速度为代价获得更好的压缩比。\n\n**技术亮点**\nLZ4 的技术亮点在于其极致的速度，压缩速度超过 500 MB/s/核，解压速度达到数 GB/s/核。它支持动态调整“加速”因子，以权衡压缩比和速度。项目还支持字典压缩，可以显著提高小文件的压缩性能。LZ4 帧格式 (`doc/lz4_Frame_format.md`) 提供了标准化的数据封装，包含魔数、帧描述符、数据块和校验和，确保了数据的自包含性和可移植性。\n\n**适合谁用**\nLZ4 适合需要高性能数据压缩和解压的开发者和系统。它特别适用于对延迟敏感的应用，如实时数据分析、游戏开发、嵌入式系统、日志管理、数据库系统以及任何需要快速读写压缩数据的场景。对于追求极致解压速度，同时对压缩比有一定要求的用户，LZ4 是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "stars": 22211,
+      "description": "Agent Skills for Google products and technologies",
+      "one_liner": "该项目为AI代理提供Google产品和技术的模块化技能，以简化云操作和开发。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决AI代理在理解和执行Google Cloud产品和技术相关任务时的复杂性问题。它通过提供预定义的、模块化的“技能”来简化AI代理与Google Cloud资源的交互，从而降低了AI代理开发和部署的门槛。\n\n**核心功能**\n核心功能包括为AI代理提供Google产品和技术的模块化知识和指令。每个技能都由一个包含`SKILL.md`文件的目录定义，该文件作为代理的主要入口点和系统提示。用户可以通过`npx skills add google/skills`命令选择性地安装特定技能。\n\n**技术亮点**\n技术亮点在于其模块化的“Agent Skill”设计，以及通过`skills.sh`平台进行技能分发和管理。`SKILL.md`文件定义了技能的身份和行为，通常包含前置信息（名称、描述）和结构化主体（核心原则、参考目录、验证清单）。此外，它还支持模型上下文协议（MCP）以连接外部数据源和工具。\n\n**适合谁用**\n该项目适合需要利用AI代理管理和操作Google Cloud产品和技术的开发者、企业和IT管理员。例如，它可以帮助开发者快速上手Google Cloud，部署应用程序，或者优化云成本和安全性。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 45714,
+      "description": "Browser automation CLI for AI agents",
+      "one_liner": "这是一个为AI代理设计的浏览器自动化命令行工具，通过紧凑的文本输出和引用（refs）来提高效率。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统浏览器自动化中，AI代理处理DOM时上下文令牌消耗过多且易受UI变化影响的问题。通过使用紧凑的快照和引用（refs），它将上下文令牌使用量从数千个减少到数百个，从而提高了效率和确定性。\n\n**核心功能**\n`agent-browser` 提供超过50个命令，用于导航、表单操作、截图、网络控制、存储、文件、标签页、框架和调试。其核心功能包括：\n*   **基于引用的交互**：通过`snapshot`命令生成带有唯一引用（如`@e1`）的可访问性树，实现对页面元素的确定性选择和快速交互。\n*   **网络控制**：支持拦截、模拟和监控网络请求。\n*   **会话管理**：支持会话、配置文件、认证状态、Cookie和存储，以支持长时间运行的代理。\n*   **跨平台支持**：提供macOS、Linux和Windows的原生二进制文件。\n\n**技术亮点**\n*   **原生Rust实现**：整个项目采用纯Rust编写，包括CLI和守护进程，无需Node.js或Playwright依赖，显著提高了冷启动速度、降低了内存占用和安装大小。\n*   **客户端-守护进程架构**：CLI解析命令并与持久运行的Rust守护进程通信，守护进程通过Chrome DevTools Protocol (CDP) 直接管理Chrome浏览器，优化了性能。\n*   **引用系统（Refs）**：使用紧凑的字符串标识符（如`@e1`）指向快照中的特定元素，确保了AI代理选择元素的确定性和效率。\n*   **可观测性工具**：内置视频录制、流媒体、调试、性能分析和差异化工具。\n\n**适合谁用**\n该项目适用于需要进行浏览器自动化的AI代理，包括Claude Code、Cursor、GitHub Copilot、OpenAI Codex、Google Gemini等，以及任何可以运行shell命令的代理。它特别适合那些对上下文令牌效率、确定性元素选择和高性能有要求的场景。",
+      "degraded": false
+    },
+    {
+      "id": "scenario-labs/skills",
+      "owner": "scenario-labs",
+      "name": "skills",
+      "url": "https://github.com/scenario-labs/skills",
+      "stars": 2874,
+      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+      "one_liner": "...",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\n...",
+      "degraded": true
+    },
+    {
+      "id": "ConardLi/garden-skills",
+      "owner": "ConardLi",
+      "name": "garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills",
+      "stars": 14036,
+      "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+      "one_liner": "本项目能将文章、脚本或演讲稿转换为电影级的点击驱动式 16:9 网页演示文稿，专为高质量屏幕录制设计，提供视频般的交互体验。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决传统幻灯片演示缺乏沉浸感和互动性的问题，通过将内容转化为视频化的网页演示，实现每次点击或按键都推进叙述节奏，并同步驱动视觉动态和布局变化，从而提升观众的参与度和信息接收效率。 \n\n**核心功能**\n核心功能包括将 `script.md` (叙述稿) 和 `article.md` (原文) 结合，生成基于 Vite + React + TypeScript 的演示文稿脚手架。它支持主题系统、可选的音频合成管道，并遵循“双源原则”，即叙述稿驱动时间节奏，原文提供视觉信息。  整个工作流程分为内容、脚手架、音频和录制四个阶段。 \n\n**技术亮点**\n技术亮点在于其“光标模型”，通过 `(chapter, step)` 驱动演示进程；16:9 的固定舞台，确保屏幕录制完美适配；以及基于 CSS 变量的强大主题系统，提供 10 种内置视觉主题。项目还强制执行严格的四阶段工作流和硬检查点，以确保设计质量。 \n\n**适合谁用**\n该项目适合需要制作高质量、电影感、交互式视频演示的个人或团队，例如技术分享者、教育工作者、产品演示者以及任何希望将文字内容转化为引人入胜的视觉叙事的创作者。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/VibeVoice",
+      "owner": "microsoft",
+      "name": "VibeVoice",
+      "url": "https://github.com/microsoft/VibeVoice",
+      "stars": 55552,
+      "description": "Open-Source Frontier Voice AI",
+      "one_liner": "VibeVoice 是一个开源的前沿语音 AI 模型家族，提供文本转语音 (TTS) 和自动语音识别 (ASR) 功能。",
+      "detail_md": "**解决什么问题**\nVibeVoice 旨在解决长篇语音处理中的挑战，例如在长时间音频中保持说话人一致性和语义连贯性。它还解决了实时语音交互的需求，通过提供低延迟的流式 ASR 和 TTS 功能。\n\n**核心功能**\n该项目提供多种模型变体，包括：\n*   **VibeVoice-ASR-7B**：用于长达 60 分钟的语音识别，可生成包含说话人、时间戳和内容的结构化转录。\n*   **VibeVoice-ASR-Streaming-7B**：提供流式 ASR，在语音到达时连续转录。\n*   **VibeVoice-TTS-1.5B**：支持长达 90 分钟的多说话人文本转语音，适用于播客和多说话人对话。\n*   **VibeVoice-Realtime-0.5B**：一个轻量级实时 TTS 模型，具有约 200 毫秒的首次可听延迟。\n\n**技术亮点**\nVibeVoice 的核心创新在于其使用连续语音分词器（声学和语义）以 7.5 Hz 的超低帧率运行。它采用下一词元扩散框架，结合大型语言模型 (LLM) 理解文本上下文和对话流，并使用扩散头生成高保真声学细节。模型还支持定制热词以提高 ASR 准确性，并利用 vLLM 进行高性能推理。\n\n**适合谁用**\n该项目适用于需要长篇语音识别和合成的研究人员和开发者。它特别适合需要处理多说话人对话、实时转录或生成低延迟语音的应用场景。",
+      "degraded": false
+    },
+    {
+      "id": "floci-io/floci",
+      "owner": "floci-io",
+      "name": "floci",
+      "url": "https://github.com/floci-io/floci",
+      "stars": 30162,
+      "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+      "one_liner": "Floci 是一个快速、免费、开源的本地 AWS 服务模拟器，用于开发、测试和 CI 环境。",
+      "detail_md": "**解决什么问题**\nFloci 解决了在本地开发和测试 AWS 应用程序时，需要真实 AWS 账户、认证令牌或商业功能门槛的问题。它提供了一个无需连接到实际云环境即可运行 AWS 工作负载的解决方案，从而加速开发周期并改善离线测试能力。\n\n**核心功能**\nFloci 支持多种 AWS 协议，包括 Query、JSON 1.1、REST JSON、REST XML、CBOR 和 EC2 Query，确保与真实的 AWS SDK 和工具兼容。对于复杂的计算和数据库服务，如 Lambda、RDS 和 ElastiCache，Floci 运行真实的 Docker 容器以模拟 AWS 行为。它还提供可配置的持久化模式，包括内存、磁盘持久化、混合和预写日志 (WAL)，以适应不同的数据持久性需求。\n\n**技术亮点**\nFloci 基于 Quarkus 3.40.1 框架构建，以 GraalVM 原生二进制形式优化，启动速度快，内存占用低（空闲时约 13 MiB），特别适合 CI 环境。它通过单个端口（默认为 4566）提供广泛的 AWS 服务。项目还强制执行 Conventional Commits 规范，以自动化变更日志生成和版本控制。\n\n**适合谁用**\nFloci 适合需要本地模拟 AWS 服务进行开发、测试和持续集成 (CI) 的开发者和团队。它是一个无需认证令牌和商业功能门的 LocalStack 社区版替代方案，特别适合那些寻求免费、开源且高度兼容 AWS 行为的本地模拟解决方案的用户。",
+      "degraded": false
+    },
+    {
+      "id": "JiaFeiMiao-K-Cat/DiscImageStudio",
+      "owner": "JiaFeiMiao-K-Cat",
+      "name": "DiscImageStudio",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "stars": 7108,
+      "description": "",
+      "one_liner": "Disc Image Studio 是一款 Windows 工具，用于在 CD、DVD 和蓝光光盘上生成并刻录肉眼可见的图像。",
+      "detail_md": "## 解决什么问题\n该项目旨在解决在光盘盘面刻蚀肉眼可见图像的问题，并提供一套智能且精准的辅助标定流程，将盘面物理数据精确度从 10<sup>-6</sup> 提升到 10<sup>-14</sup>。\n\n## 核心功能\n*   **光盘数据生成**：支持 CD、DVD 和单层 BD-R 光盘，可将图片转换为符合物理层约束的数据。支持导出 ISO、RAW、WAV+CUE 等格式。\n*   **盘面设计**：提供多图层设计画布，支持导入图片、移动、缩放、旋转、调整层次与显隐。\n*   **辅助标定**：提供智能精准的辅助标定流程，用于校准盘面物理数据。\n*   **刻录功能**：支持镜像文件输出和即时流式刻录（实验性功能），可边生成边刻录，不保存完整镜像。\n\n## 技术亮点\n*   **模块化架构**：应用外壳不依赖特定光盘编码，CD、DVD、蓝光通过 `IOpticalDiscModule` 接口接入，共享任务生命周期和产品能力。\n*   **高精度物理模型**：实现并参考了多项光盘标准，如 ECMA-394 (CD-R)、ECMA-267 (DVD)、ISO/IEC 30190:2021 (BD-R) 等。\n*   **流式刻录**：利用 Windows IMAPI2 实现 CD、DVD 和 BD-R 的即时流式刻录，无需生成完整镜像文件。\n*   **统一命令行与 GUI**：提供 GUI 界面和统一命令行两种入口，方便自动化操作。\n\n## 适合谁用\n该工具适合需要将图像刻蚀到 CD、DVD 或蓝光光盘盘面，并对刻录精度有较高要求的用户。也适用于需要进行光盘物理参数辅助标定和研究的用户。",
+      "degraded": false
+    }
+  ]
+}
