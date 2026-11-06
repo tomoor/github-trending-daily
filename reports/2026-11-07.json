@@ -1,0 +1,204 @@
+{
+  "doc_token": "H9XNdTd4Hov01wxamAscuZ2LnAf",
+  "doc_url": "https://my.feishu.cn/docx/H9XNdTd4Hov01wxamAscuZ2LnAf",
+  "items": [
+    {
+      "id": "zed-industries/zed",
+      "owner": "zed-industries",
+      "name": "zed",
+      "url": "https://github.com/zed-industries/zed",
+      "stars": 93222,
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "one_liner": "Zed 是面向软件开发的开源代码编辑器。",
+      "detail_md": "**解决什么问题**  \n帮助你在一个开发环境中编辑代码、管理项目，并完成运行、测试和协作等日常工作。\n\n**核心功能**  \n提供代码编辑与补全、诊断和快速修复、项目搜索、终端、任务、调试器及 Git 功能；也包含 AI 助手与 Agent 工具，可协助处理软件工程任务。\n\n**技术亮点**  \n项目以 Rust 构建，支持多种语言及语言服务器能力；Vim 模式结合语义解析、多光标和 Zed 自身的搜索与宏功能，而非逐项照搬 Vim。\n\n**适合谁用**  \n适合需要编写、导航、运行和调试代码的开发者，也适合习惯 Vim 操作方式、希望使用 AI 编程辅助，或参与 Zed 社区贡献的人。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/auto-ontology",
+      "owner": "NVIDIA",
+      "name": "auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "stars": 8553,
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "one_liner": "NVIDIA Auto Ontology 是一个开源库，用于从企业元数据构建上下文层，协调定义，并通过 MCP、CLI 和 API 将其暴露给代理。",
+      "detail_md": "**解决什么问题**\n代理在检索文档和查询数据库时，需要一个可靠的上下文层来理解数据的位置、含义、使用方式、来源以及相关性，以确保分析结果的准确性。本项目旨在解决代理分析中数据理解和可靠性问题，通过构建企业本体论来提供可信的业务含义和数据来源验证。\n\n**核心功能**\n*   **自然语言查询**：将自然语言问题转换为 SQL 并在连接的数据库上执行，由 NVIDIA NIM 提供支持。\n*   **语义目录/本体层**：在关系型数据源之上构建语义目录和本体层，存储在 PostgreSQL 中。\n*   **认证与 RBAC**：使用 Better Auth 进行身份验证和基于角色的访问控制。\n*   **Web UI**：提供用于聊天、分析、数据目录和设置的 Web 用户界面。\n*   **灵活部署**：支持通过 Helm Chart 部署到 Kubernetes 或使用 Docker Compose 进行本地部署。\n\n**技术亮点**\n*   **NVIDIA NIM 集成**：利用 NVIDIA NIM 端点进行推理，包括 LLM、嵌入和重排序模型，以支持自然语言查询和数据处理。\n*   **多阶段 Docker 构建**：后端和前端服务均采用多阶段 Docker 构建，优化镜像大小和构建效率 <cite repo=\"NVIDIA/auto-ontology\" path=\"NVIDIA/auto-ontology\" start=\"4.3\" end=\"4.3\" />。\n*   **MCP 服务器**：通过 Model Context Protocol (MCP) 服务器，使代理工具（如 Cursor 和 Claude Desktop）能够查询数据。\n*   **Agent 技能包**：提供 `nvidia-ontology-setup`、`nvidia-ontology-query` 和 `nvidia-ontology-management` 三个代理技能包，用于安装、查询和管理语义模型 <cite repo=\"NVIDIA/auto-ontology\" path=\"NVIDIA/auto-ontology\" start=\"4.3\" end=\"4.3\" />。\n\n**适合谁用**\n*   **开发者**：希望从企业元数据生成本体论、连接现有本体论和语义模型、构建 AI 就绪知识图谱的开发者。\n*   **数据科学家/分析师**：需要为代理提供可信的业务含义、协调不一致的定义、验证生成查询并获取数据来源的用户。\n*   **企业用户**：希望通过自然语言查询结构化数据，并利用 AI 代理进行数据分析和决策的企业。",
+      "degraded": false
+    },
+    {
+      "id": "rails/rails",
+      "owner": "rails",
+      "name": "rails",
+      "url": "https://github.com/rails/rails",
+      "stars": 58926,
+      "description": "Ruby on Rails",
+      "one_liner": "Ruby on Rails 是用于构建全栈 Web 应用的 Ruby 框架。",
+      "detail_md": "**解决什么问题**  \nRails 通过约定与内建组件，减少开发 Web 应用时重复编写代码和繁琐配置的工作，并提供组织应用结构的统一方式。\n\n**核心功能**  \n框架覆盖 MVC 开发：模型处理数据，视图生成响应，控制器处理请求；组件还包括数据库对象关系映射、模板与表单辅助、邮件、后台任务、文件存储及实时通信。\n\n**技术亮点**  \nRails 由可独立使用的多个 Ruby gem 组成，`rails` gem 汇集并依赖这些框架组件；`railties` 提供应用启动、插件、生成器和 Rake 任务相关工具。插件可通过 Railtie 接入启动流程，较完整的 Engine 还能拥有自己的路由、控制器和视图。\n\n**适合谁用**  \n适合希望使用 Ruby 构建 Web 应用的开发者与团队，尤其是愿意遵循 Rails 惯例、并希望借助现成组件和插件扩展应用的人。",
+      "degraded": false
+    },
+    {
+      "id": "mpv-player/mpv",
+      "owner": "mpv-player",
+      "name": "mpv",
+      "url": "https://github.com/mpv-player/mpv",
+      "stars": 37799,
+      "description": "🎥 Command line media player",
+      "one_liner": "mpv是一个免费、开源、跨平台的命令行媒体播放器，支持多种媒体格式、编解码器和字幕类型，并提供高质量的视频渲染和强大的扩展能力。",
+      "detail_md": "**解决什么问题**\nmpv旨在提供一个高度可定制、功能强大的媒体播放解决方案，解决传统媒体播放器在命令行控制、高质量渲染和可扩展性方面的不足。它通过提供无内置GUI的极简设计，将控制权交给用户，并通过脚本和IPC接口实现高度定制化。\n\n**核心功能**\nmpv的核心功能包括播放各种媒体文件和URL，支持高级视频处理（如`vo_gpu`和`libplacebo`）以实现高质量渲染，以及通过FFmpeg库提供广泛的编解码器和容器格式支持。它还提供全面的脚本API（Lua/JS）和IPC接口，允许用户和外部应用程序与播放器进行交互。\n\n**技术亮点**\nmpv的技术亮点在于其模块化设计和分层架构。它使用`MPContext`作为核心状态结构来协调所有播放操作，并采用`ta`（talloc-inspired）分层内存管理器进行高效的资源管理和自动清理。此外，mpv拥有线程安全的选项系统和统一的客户端API，确保了配置的稳定性和与各种客户端（如脚本、IPC和libmpv）的无缝集成。\n\n**适合谁用**\nmpv适合需要高度定制化媒体播放体验的用户和开发者。对于希望深入理解媒体播放器内部机制、为项目贡献代码或将mpv集成到自己应用程序的开发者来说，它是一个理想的选择。同时，其跨平台支持（Linux、Windows、macOS）也使其适用于不同操作系统的用户。",
+      "degraded": false
+    },
+    {
+      "id": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "stars": 121265,
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "one_liner": "Rust项目是Rust编程语言的核心代码库，包含编译器、标准库和开发工具，旨在赋能开发者构建可靠高效的软件。",
+      "detail_md": "**解决什么问题**\n\nRust项目致力于解决软件开发中的性能、可靠性和生产力问题。它通过提供内存安全和线程安全的编程范式，减少运行时错误和调试时间，同时提供强大的工具链来提高开发效率。\n\n**核心功能**\n\n该项目包含Rust编译器、标准库（分为core、alloc和std三个层次）以及一系列开发工具。core库提供基本类型和操作，不依赖堆内存和操作系统。alloc库在此基础上增加了堆分配类型如Box和Vec。std库则提供完整的标准库功能，包括I/O、线程和操作系统接口。此外，还包括Cargo（包管理器）、rustfmt（代码格式化工具）、Clippy（Linter）和rust-analyzer（IDE支持）。\n\n**技术亮点**\n\nRust项目采用多阶段构建系统（bootstrap）确保编译器的正确性和稳定性。它使用分阶段API系统来管理标准库的稳定性。Miri是一个MIR解释器，用于检测Rust程序中的未定义行为（UB），并支持并发和数据竞争检测。compiletest是主要的测试基础设施，支持多种测试模式。tidy工具则强制执行代码风格和仓库规范。\n\n**适合谁用**\n\nRust项目适合需要高性能、高可靠性软件的开发者，例如系统编程、嵌入式开发和WebAssembly应用。它也适合希望通过严格的编译时检查来减少运行时错误的开发者。此外，对于寻求良好开发体验和强大工具支持的开发者，如使用rust-analyzer进行IDE集成的用户，Rust项目提供了全面的支持。",
+      "degraded": false
+    },
+    {
+      "id": "react/react",
+      "owner": "react",
+      "name": "react",
+      "url": "https://github.com/react/react",
+      "stars": 252121,
+      "description": "The library for web and native user interfaces.",
+      "one_liner": "React 是一个用于构建用户界面的 JavaScript 库，它采用声明式、组件化的方式，旨在简化 UI 开发并优化性能。",
+      "detail_md": "**解决什么问题**\nReact 旨在解决传统 UI 开发中状态管理复杂、代码难以维护和性能优化困难的问题。它通过声明式编程模型，让开发者只需描述 UI 的不同状态，React 会高效地更新和渲染正确的组件。此外，React Compiler 的目标是消除手动记忆化（`useMemo` 和 `useCallback`），通过自动分析组件和 Hook 代码来插入缓存原语，从而解决手动记忆化容易出错的问题，确保应用默认情况下具有可预测的快速性能。\n\n**核心功能**\nReact 的核心功能包括声明式 UI 创建、组件化开发和“一次学习，随处编写”的能力。它允许开发者构建封装自身状态的组件，然后组合这些组件来构建复杂的 UI。React 可以在服务器端使用 Node.js 渲染，也可以通过 React Native 支持移动应用。React Compiler 作为其生态系统的一部分，提供自动记忆化功能，通过静态分析确定数据响应性，并重写表达式以缓存结果，从而优化渲染性能。\n\n**技术亮点**\nReact 的技术亮点在于其高效的更新和渲染机制，以及灵活的组件模型。React Compiler 是一个实验性的 Babel 插件，它通过编译管道将 Babel AST 函数转换为控制流图，执行静态分析，计算响应式作用域，并发出优化后的代码，从而实现自动记忆化。该编译器还集成了 ESLint 插件，用于报告违反 React 规则的无效模式。\n\n**适合谁用**\nReact 适合需要构建交互式、高性能用户界面的开发者。无论是开发单页应用、复杂的企业级应用，还是移动应用（通过 React Native），React 都能提供强大的支持。对于希望减少手动性能优化工作、提高开发效率并确保应用性能的开发者，React Compiler 提供了自动化的解决方案。",
+      "degraded": false
+    },
+    {
+      "id": "angular/angular",
+      "owner": "angular",
+      "name": "angular",
+      "url": "https://github.com/angular/angular",
+      "stars": 101199,
+      "description": "Deliver web apps with confidence 🚀",
+      "one_liner": "Angular 是一个用于构建移动和桌面 Web 应用程序的开发平台，使用 TypeScript/JavaScript 及其他语言。",
+      "detail_md": "**解决什么问题**\nAngular 旨在帮助开发者构建快速、可靠且用户喜爱的应用程序。它提供了一套全面的工具、API 和库，以简化和优化开发工作流程，并提供了一个坚实的基础，以构建可随团队规模和代码库规模扩展的应用程序。\n\n**核心功能**\nAngular 提供了组件化开发、细粒度响应式模型（Angular Signals）、服务器端渲染 (SSR) 和静态站点生成 (SSG)、依赖注入、路由  和表单管理  等核心功能。它还通过 Angular CLI、Angular DevTools  和语言服务  等工具加速开发。\n\n**技术亮点**\nAngular 的技术亮点包括其细粒度响应式模型 Signals，结合编译时优化，简化开发并默认构建更快的应用程序。它支持完整的 DOM 水合的 SSR 和 SSG。此外，Angular CLI 的 `ng update` 命令可以运行自动化代码转换，简化主要版本更新。它还集成了 Vite 和 esbuild，提供了快速现代的构建管道。\n\n**适合谁用**\nAngular 适合需要构建可扩展的移动和桌面 Web 应用程序的开发者和团队。它特别适合需要一个全面、意见明确且功能丰富的平台，以确保应用程序的稳定性、安全性和高性能的场景。对于大型团队和需要国际化支持、内置安全功能  的项目，Angular 也是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "symfony/symfony",
+      "owner": "symfony",
+      "name": "symfony",
+      "url": "https://github.com/symfony/symfony",
+      "stars": 31293,
+      "description": "The Symfony PHP framework",
+      "one_liner": "Symfony 是一套模块化的 PHP 框架与可复用组件生态。",
+      "detail_md": "**解决什么问题**  \nSymfony 为构建 Web 应用及其他 PHP 程序提供通用基础能力，减少开发者重复实现请求处理、路由、配置和服务管理等工作的需要。\n\n**核心功能**  \n项目包含 HTTP 请求与响应处理、URL 路由、依赖注入、命令行应用、表单与数据校验、序列化、翻译、缓存和消息处理等组件；也提供用于整合组件及第三方库的 bundles 和 bridges。\n\n**技术亮点**  \n采用模块化设计，组件可独立使用，也可组合成完整框架；通过 PSR 接口和桥接层提升互操作性，并支持通过依赖注入组织应用服务。\n\n**适合谁用**  \n适合使用 PHP 构建 Web 应用、需要成熟基础设施的团队，以及希望按需选用独立组件、逐步扩展项目的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "prometheus/prometheus",
+      "owner": "prometheus",
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "stars": 67038,
+      "description": "The Prometheus monitoring system and time series database.",
+      "one_liner": "Prometheus 是一个开源的系统监控和告警工具包，用于收集、存储、查询和告警时间序列数据。",
+      "detail_md": "**解决什么问题**\nPrometheus 旨在解决传统监控系统在云原生和动态环境中面临的挑战。它通过多维数据模型和强大的查询语言 PromQL，帮助用户理解和分析复杂系统的行为，并在出现问题时及时发出告警。\n\n**核心功能**\nPrometheus 的核心功能包括：通过 HTTP pull 模型从配置的目标收集指标；使用 PromQL 进行灵活的时间序列数据查询和聚合；支持记录规则以预计算昂贵的表达式；支持告警规则以在特定条件满足时触发告警并发送通知到 Alertmanager；提供内置的 Web UI 和 HTTP API 进行数据展示和管理。\n\n**技术亮点**\nPrometheus 的技术亮点在于其多维数据模型，强大的 PromQL 查询语言，以及自主的单服务器设计，不依赖分布式存储。它采用 HTTP pull 模型进行数据采集，并通过服务发现或静态配置来发现监控目标。此外，它还支持 Agent 模式，优化数据转发到远程存储。\n\n**适合谁用**\nPrometheus 适合需要对系统和服务进行可靠监控和告警的开发者、运维工程师和SRE团队。尤其适用于云原生环境中的微服务架构，以及需要灵活查询和自定义告警规则的场景。",
+      "degraded": false
+    },
+    {
+      "id": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "stars": 22692,
+      "description": "Agent Skills for Google products and technologies",
+      "one_liner": "面向 AI 助手的 Google 产品与云技术技能指南。",
+      "detail_md": "**解决什么问题**  \n帮助 AI 助手及开发者理解和使用 Google 产品与 Google Cloud，减少查找产品文档、规划操作步骤及配置服务的成本。内容涵盖从云端入门、身份认证到具体产品使用与架构建议。\n\n**核心功能**  \n提供 Gemini API、AlloyDB、BigQuery、Cloud Run、Cloud SQL、Firebase、GKE 等产品技能，并提供云端入门、认证、网络可观测性及 Well-Architected Framework 相关指南。\n\n**技术亮点**  \n技能以 `SKILL.md` 为入口，按产品或任务组织；部分技能附有专题参考资料，并指导 AI 助手按需读取。Gemini 技能覆盖多语言 Gen AI SDK、文本与多模态生成、函数调用、嵌入及实时交互等能力。\n\n**适合谁用**  \n适合使用 AI 助手查询 Google Cloud 技术信息的开发者，以及负责云服务部署、身份认证、数据平台、容器集群或云架构规划的团队；可通过 `npx skills add google/skills` 安装所需技能。",
+      "degraded": false
+    },
+    {
+      "id": "microsoft/vscode",
+      "owner": "microsoft",
+      "name": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "stars": 194878,
+      "description": "Visual Studio Code",
+      "one_liner": "这是一个功能丰富的代码编辑器，支持桌面和浏览器环境，提供强大的开发工具和可扩展性。",
+      "detail_md": "**解决什么问题**\n该项目旨在为开发者提供一个高效、可定制的代码编辑环境，解决传统IDE笨重、启动慢、扩展性差的问题。它通过模块化的架构和丰富的扩展生态系统，满足不同开发场景的需求。\n\n**核心功能**\n核心功能包括代码编辑、调试、版本控制集成、任务运行、以及通过扩展支持的各种语言和工具。它支持多进程模型，可以在桌面（基于Electron）和浏览器环境中运行。项目还提供了丰富的UI组件和设计哲学，确保用户体验的统一性和高质量。\n\n**技术亮点**\n技术亮点在于其灵活的架构，将核心功能与平台特定实现分离，例如 `workbench.common.main.ts` 包含共享代码，而 `workbench.desktop.main.ts` 和 `web.main.ts` 分别处理桌面和浏览器特有的部分。它采用模块化设计，通过服务和贡献点机制实现高度可扩展性。此外，项目还强调设计哲学，通过“价值观-原则-行动”的层次结构指导UI设计，确保一致性和用户体验。\n\n**适合谁用**\n该项目适合所有需要高效、可定制代码编辑器的开发者，无论是前端、后端、移动端还是其他领域的开发人员。它也适合希望通过贡献代码或扩展来改进开发工具的社区成员。",
+      "degraded": false
+    },
+    {
+      "id": "lz4/lz4",
+      "owner": "lz4",
+      "name": "lz4",
+      "url": "https://github.com/lz4/lz4",
+      "stars": 12579,
+      "description": "Extremely Fast Compression algorithm",
+      "one_liner": "LZ4是一个极致快速的无损压缩算法库，提供高速压缩和解压功能，并支持多种压缩级别和模式。",
+      "detail_md": "**解决什么问题**\nLZ4旨在解决数据传输和存储中对速度有极高要求的场景下的压缩问题。它提供了比其他压缩算法更快的压缩和解压速度，尤其是在多核CPU系统上，解压速度可达RAM带宽限制。\n\n**核心功能**\nLZ4的核心功能包括：\n*   **高速无损压缩与解压**：提供每核超过500 MB/s的压缩速度和数GB/s的解压速度。\n*   **可调谐的压缩速度与比率**：用户可以通过“加速”因子动态调整压缩速度，以权衡压缩比。\n*   **高压缩模式 (LZ4_HC)**：提供更高的压缩比，但会牺牲部分压缩速度，解压速度保持不变。\n*   **字典压缩**：支持字典压缩，可显著提高小块相似数据的压缩性能。\n*   **帧格式支持**：提供标准化的帧格式，确保不同系统间的互操作性，并包含元数据和可选校验和。\n\n**技术亮点**\n*   **分层库结构**：库文件分为核心压缩 (`lz4.c`/`lz4.h`)、高压缩 (`lz4hc.c`/`lz4hc.h`)、帧格式 (`lz4frame.c`/`lz4frame.h`) 和文件操作 (`lz4file.c`/`lz4file.h`)，允许开发者按需选择组件。\n*   **块与帧分离**：LZ4核心库处理原始数据块，而帧库则将数据块封装成包含元数据的自包含帧，便于数据管理和传输。\n*   **多线程支持**：命令行工具支持多线程压缩，可利用多核CPU提升性能。\n*   **多种构建系统支持**：支持Makefile、CMake、Meson和vcpkg等多种构建和集成方式。\n\n**适合谁用**\nLZ4适合需要极致压缩和解压速度的开发者和系统，例如：\n*   **实时数据处理系统**：如日志处理、网络通信等，对延迟敏感的场景。\n*   **游戏开发**：用于快速加载游戏资源，减少等待时间。\n*   **嵌入式系统**：在资源有限的环境中，通过选择性编译所需模块来优化二进制大小和依赖。\n*   **大数据和云计算**：在数据传输和存储中，提高I/O效率。\n*   **需要与`lz4`命令行工具互操作的应用**：通过使用帧格式确保数据兼容性。",
+      "degraded": false
+    },
+    {
+      "id": "nushell/nushell",
+      "owner": "nushell",
+      "name": "nushell",
+      "url": "https://github.com/nushell/nushell",
+      "stars": 40840,
+      "description": "A new type of shell",
+      "one_liner": "Nushell 是一个现代的、跨平台的 shell，它将数据视为结构化而非原始文本流，旨在提供更高效、更可靠的命令行体验。",
+      "detail_md": "**解决什么问题**\n传统的 Unix shell 主要通过文本流处理数据，这在处理复杂数据时容易出错且效率低下。Nushell 旨在解决这一问题，它引入了结构化数据管道模型，使得命令之间可以交换类型化的结构化数据，从而提高了数据处理的可靠性和效率。\n\n**核心功能**\nNushell 的核心功能包括：结构化数据管道，命令处理结构化数据（如表格、记录、列表）而非纯文本；强大的数据操作能力，支持对结构化数据进行过滤、排序和转换；跨平台支持，可在 Windows、macOS 和 Linux 上运行；以及插件系统，允许用户扩展 shell 的功能。\n\n**技术亮点**\nNushell 使用 Rust 语言开发，以其内存安全和高性能著称。它采用分层架构，将不同功能模块（如协议层、引擎层、命令层）清晰分离，提高了可维护性和可扩展性。其独特的 NUON 格式是 JSON 的超集，支持更多 Nushell 特有的数据类型和语法糖，如注释、无引号键和文件大小字面量。\n\n**适合谁用**\nNushell 适合需要更强大、更可靠的命令行工具的开发者、系统管理员和数据分析师。对于那些习惯于传统 shell 但又希望获得更现代、更具结构化数据处理能力的命令行体验的用户来说，Nushell 是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "etcd-io/etcd",
+      "owner": "etcd-io",
+      "name": "etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "stars": 52521,
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "one_liner": "etcd 是一个分布式、可靠的键值存储系统，用于存储分布式系统中最关键的数据，专注于简单、安全、快速和可靠。",
+      "detail_md": "**解决什么问题**\netcd 旨在解决分布式系统中数据一致性和高可用性的问题。它通过 Raft 共识算法管理高可用复制日志，确保数据在分布式环境中的可靠性。这使得 etcd 能够为 Kubernetes 等应用提供关键的配置存储、服务发现和分布式锁等功能。\n\n**核心功能**\netcd 提供了一个定义良好的用户友好 API (gRPC)，支持自动 TLS 和可选的客户端证书认证以确保安全。它是一个高性能的键值存储，基准测试显示每秒可达 10,000 次写入。etcd 还提供了命令行客户端 `etcdctl` 用于简单的操作和管理。\n\n**技术亮点**\netcd 使用 Go 语言编写，并采用 Raft 共识算法实现分布式一致性。项目采用多模块组织结构，包括 `api`、`pkg`、`client/v3`、`server` 等模块，便于管理和维护。etcd 还通过严格的鲁棒性测试来确保其在关键部署场景下的可靠性。\n\n**适合谁用**\netcd 适合需要分布式、高可用、强一致性键值存储的系统和应用。它被广泛应用于生产环境，特别是与 Kubernetes、locksmith、vulcand 等应用结合使用。对于需要存储关键元数据、进行服务发现、实现分布式锁或管理配置的分布式系统开发者和运维人员来说，etcd 是一个理想的选择。",
+      "degraded": false
+    },
+    {
+      "id": "openssl/openssl",
+      "owner": "openssl",
+      "name": "openssl",
+      "url": "https://github.com/openssl/openssl",
+      "stars": 31229,
+      "description": "General purpose TLS and crypto library",
+      "one_liner": "OpenSSL 是一个功能全面的开源工具包，用于实现 TLS、DTLS 和 QUIC 协议，并提供通用的加密库和命令行工具。",
+      "detail_md": "**解决什么问题**\nOpenSSL 旨在为网络通信提供安全保障，解决数据传输过程中的加密、认证和完整性问题。它通过实现 TLS、DTLS 和 QUIC 等安全协议，确保客户端和服务器之间通信的机密性和可靠性。此外，它还提供了一套强大的加密算法，用于数据加密、数字签名和密钥管理等，满足各种安全需求。\n\n**核心功能**\nOpenSSL 的核心功能包括 `libssl`、`libcrypto` 和 `openssl` 命令行工具。`libssl` 实现了 TLSv1.3、DTLSv1.3 和 QUICv1 协议。`libcrypto` 是一个通用的加密库，提供各种加密算法，是 `libssl` 的基础，也可独立使用。`openssl` 命令行工具则是一个多功能的工具，可用于密钥生成、证书管理、数据加解密、消息摘要计算以及 SSL/TLS/DTLS/QUIC 客户端测试等。\n\n**技术亮点**\nOpenSSL 的技术亮点在于其全面性、灵活性和 FIPS 标准支持。它支持最新的 TLS 1.3、DTLS 1.3 和 QUIC 协议，确保了现代网络通信的安全性。其模块化的设计使得 `libcrypto` 可以独立于协议栈使用，为开发者提供了极大的灵活性。此外，OpenSSL 还包含一个经过 FIPS 标准验证的加密模块，满足了对高安全性有严格要求的场景。项目还持续优化加密算法性能，例如 Ed25519 算法的加速。\n\n**适合谁用**\nOpenSSL 适合需要实现安全网络通信和加密功能的开发者、系统管理员以及企业。它广泛应用于 Web 服务器（如 Apache、Nginx）、邮件服务器、VPN 解决方案以及各种需要数据加密和身份验证的应用程序中。对于需要符合 FIPS 标准的政府机构和金融行业，OpenSSL 提供的 FIPS 模块也是一个重要的选择。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 316305,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "本项目提供一套AI编码技能，旨在提升AI代理在软件开发中的协作效率和代码质量。",
+      "detail_md": "**解决什么问题**\n本项目旨在解决AI编码代理在软件开发中常见的四大问题：代理未能准确理解用户意图、代理输出过于冗长、代理生成的代码质量不高以及代码库随着AI加速开发而迅速变得复杂难以维护。通过引入“拷问”机制、共享语言、测试驱动开发（TDD）和代码架构改进等方法，提升AI代理的开发效率和代码质量。\n\n**核心功能**\n核心功能包括：\n*   **意图对齐**：通过`/grill-me`和`/grill-with-docs`等技能，让AI代理在开发前通过提问深入理解用户需求，确保人机对齐。\n*   **共享语言**：利用`GLOSSARY.md`建立项目特有的通用语言，减少AI代理的冗余输出，提高沟通效率和代码一致性。\n*   **代码质量保障**：提供`/tdd`技能支持测试驱动开发，确保AI代理编写的代码经过测试验证；`/diagnosing-bugs`技能则提供结构化的调试流程。\n*   **架构改进**：`/improve-codebase-architecture`技能帮助识别代码库中可优化的“深度模块”机会，防止代码库演变为“泥球”。\n\n**技术亮点**\n*   **模块化技能设计**：所有功能都以“技能”（Skill）的形式封装，易于AI代理调用和组合。\n*   **用户/模型调用分离**：技能分为用户调用（如`/grill-me`）和模型调用（如`/tdd`），前者用于编排流程，后者提供可复用的开发规范。\n*   **上下文管理**：通过“智能区域”（Smart Zone）和“阶段边界”（Phase Boundary）概念，优化AI代理的上下文窗口管理，避免推理能力下降。\n*   **多代理集成**：支持与Claude Code, Codex, GitHub Copilot等多种AI编码代理集成。\n\n**适合谁用**\n本项目适合希望提升AI编码代理协作效率、改善代码质量、并有效管理AI驱动项目复杂度的开发者和团队。尤其适用于使用AI代理进行日常开发、需要确保代码质量和架构健康的项目。",
+      "degraded": false
+    },
+    {
+      "id": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 63187,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "one_liner": "面向代码智能体的结构化安全审计技能。",
+      "detail_md": "**解决什么问题**  \n帮助安全审计避免只凭清单或猜测判断漏洞；通过追踪信任边界、代码路径和可观察影响，区分已确认问题、待验证事项与已排除候选。\n\n**核心功能**  \n按六阶段开展审计：架构与覆盖范围侦察、基于覆盖台账的漏洞搜索、独立验证候选、结构化记录、独立复核和报告生成；覆盖注入、访问控制、业务逻辑及多种专项攻击类别。\n\n**技术亮点**  \n使用 `coverage-ledger.json` 追踪审计单元与覆盖状态，并通过独立验证和 `validate-findings.cjs` 检查发现记录；执行目标代码要求隔离沙箱，限制网络、环境、写入范围和资源。\n\n**适合谁用**  \n适合使用支持工具调用与并行子代理的编程智能体、希望审查单个代码仓库的开发者与安全团队；需要 Node.js 运行校验器，并应具备符合要求的操作系统级沙箱。",
+      "degraded": false
+    },
+    {
+      "id": "astral-sh/ruff",
+      "owner": "astral-sh",
+      "name": "ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "stars": 50540,
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "one_liner": "Ruff 是一个用 Rust 编写的极速 Python 代码检查器和格式化工具。",
+      "detail_md": "**解决什么问题**\nRuff 旨在解决现有 Python 代码检查和格式化工具速度慢、功能分散的问题。它能够替代 Flake8、Black、isort、pydocstyle、pyupgrade 等多种工具，并提供 10-100 倍的性能提升。\n\n**核心功能**\nRuff 的核心功能包括高性能的 Python 代码检查和格式化。它内置了超过 900 条规则，并支持自动修复错误。Ruff 还支持 `pyproject.toml` 配置，并提供内置缓存以避免重复分析未更改的文件。\n\n**技术亮点**\nRuff 的主要技术亮点在于其使用 Rust 语言实现，从而带来了卓越的性能。它采用单体仓库架构，将用户可见的二进制文件与内部组件库清晰分离。Ruff 的代码检查流程包括文件发现、包解析、缓存、词法分析、索引、多种规则评估（基于 Token、文件系统、逻辑行、AST、导入、物理行）以及诊断报告。\n\n**适合谁用**\nRuff 适合所有 Python 开发者，尤其是那些追求极致性能、希望整合多个代码质量工具、并需要快速反馈的开发者。它已被 Apache Airflow、FastAPI、Pandas 等大型开源项目采用。",
+      "degraded": false
+    }
+  ]
+}
