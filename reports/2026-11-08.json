@@ -166,6 +166,28 @@
       "one_liner": "NVIDIA Kubernetes Engine (NVKE) 旨在 NVIDIA 基础设施上编排 Kubernetes 集群的完整生命周期，提供统一的控制平面和节点代理。",
       "detail_md": "**解决什么问题**\nNVKE 解决了在 NVIDIA 基础设施上部署和管理 Kubernetes 集群的复杂性问题。 它通过自动化集群的创建、升级、节点管理和生命周期操作，简化了运维流程。\n\n**核心功能**\nNVKE 提供以下核心功能：\n*   **集群生命周期管理**：包括 Kubernetes 集群的创建、更新和删除。\n*   **节点代理 (`nvke-agent`)**：在每个受管节点上运行的 gRPC 服务器，负责低级别节点引导。\n*   **REST API**：提供用于管理集群、节点池和节点的编程接口。\n*   **Temporal 工作流**：用于编排集群供应、拆除和重启等复杂操作。\n*   **节点池管理**：允许用户定义和管理共享相同配置的 worker 节点组。\n\n**技术亮点**\n*   **Go Workspace 架构**：代码库由十三个 Go 模块组成，包括控制器、代理、CLI 工具和 API 定义等。\n*   **Site-Controller 和 Tenant-Cluster 模型**：管理集群（Site Controller Cluster）负责托管 NVKE 控制器，而租户集群（Tenant/Workload Clusters）则运行实际的工作负载。\n*   **Cluster API (CAPI) 集成**：利用 CAPI 资源进行集群供应和基础设施管理。\n*   **PostgreSQL 和 Temporal**：使用 PostgreSQL 进行状态持久化，并使用 Temporal 作为工作流编排引擎。\n\n**适合谁用**\nNVKE 适合需要在 NVIDIA 硬件基础设施上部署和管理 Kubernetes 集群的运维团队、SRE 和开发人员。 它为那些寻求自动化、可扩展和可靠的 Kubernetes 部署解决方案的用户提供了便利。",
       "degraded": false
+    },
+    {
+      "id": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 19240,
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "one_liner": "`claude-quickstarts` 是一个项目集合，旨在帮助开发者快速使用 Claude API 构建应用程序。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者在开始使用 Claude API 构建应用程序时遇到的困难，通过提供一系列自包含的参考实现，降低学习曲线并加速开发过程。 \n\n**核心功能**\n`claude-quickstarts` 包含多个独立运行的项目，每个项目都展示了 Claude API 的不同应用场景。例如：\n*   **客户支持代理**：一个基于 Claude 的客户支持聊天应用，集成了 Amazon Bedrock 知识库进行 RAG。 \n*   **金融数据分析师**：一个 Next.js 应用，接受文件上传并利用 Claude 的工具生成交互式图表。 \n*   **计算机使用演示**：展示 Claude 如何控制 Docker 容器内的 Linux 桌面，执行桌面自动化任务。 \n*   **自主编码代理**：一个使用 Claude Agent SDK 的双代理模式项目，用于自主代码生成。 \n*   **浏览器工具 API 演示**：一个基于 Playwright 的浏览器自动化参考实现。 \n*   **代理框架**：一个最小化的教育性 Python 包，演示如何从头开始实现 LLM 代理。 \n\n**技术亮点**\n项目利用 Claude API 的强大能力，结合了多种现代技术栈：\n*   **多语言/框架支持**：包括 Python (Streamlit, Docker, Playwright) 和 TypeScript (Next.js)。 \n*   **工具使用**：广泛演示了 Claude 的工具使用能力，例如生成图表、控制桌面、浏览器自动化等。 \n*   **代理模式**：展示了单代理和双代理（如自主编码代理）的实现模式。 \n*   **RAG 集成**：客户支持代理项目集成了 Amazon Bedrock 知识库进行检索增强生成。 \n*   **安全沙箱**：自主编码代理通过 `ClaudeSDKClient` 实现了安全沙箱和文件系统限制。 \n\n**适合谁用**\n该项目适合希望快速入门 Claude API 的开发者、AI 工程师以及对构建基于 Claude 的智能应用感兴趣的个人和团队。  它为各种应用场景提供了可定制的起点，无论是构建聊天机器人、数据分析工具、自动化代理还是教育性示例。",
+      "degraded": false
+    },
+    {
+      "id": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "stars": 16218,
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "one_liner": "MuJoCo是一个通用的物理引擎，旨在促进机器人、生物力学、图形动画和机器学习等领域的研究与开发，提供快速准确的关节结构与环境交互模拟。",
+      "detail_md": "**解决什么问题**\nMuJoCo解决了在机器人、生物力学、图形动画和机器学习等领域中，需要对关节结构与环境交互进行快速准确模拟的问题。 它通过结合广义坐标和现代接触动力学，克服了传统物理引擎在处理接触动力学时的局限性，例如需要极小时间步长或数值不准确的问题。\n\n**核心功能**\nMuJoCo的核心功能包括：高效准确的物理模拟引擎，支持C API和Python绑定； 优化的运行时模块，直接操作低级数据结构； 内置的XML编译器，支持MJCF和URDF模型定义； 交互式可视化GUI； 以及用于物理相关计算的大量实用函数。 它还支持GPU加速后端（MJX和MuJoCo Warp）进行大规模并行模拟。\n\n**技术亮点**\nMuJoCo的技术亮点在于其独特的物理建模方法，结合了广义坐标和基于优化的接触动力学，能够处理软接触、摩擦和各种约束。 它采用模型和数据分离的架构，`mjModel`存储静态模型属性，`mjData`存储动态仿真状态，便于多模型和多状态的并行模拟。 此外，它还具有可重构的计算管道、肌腱几何建模、通用驱动模型、插件系统以及GPU加速后端（MJX和MuJoCo Warp）等特性。\n\n**适合谁用**\nMuJoCo适合需要进行快速准确物理模拟的研究人员和开发人员，特别是在机器人学、生物力学、图形动画、机器学习等领域。 它也适用于需要模型驱动计算（如控制合成、状态估计、系统识别）以及大规模并行采样的机器学习应用。 对于Python用户，还提供了Python绑定和JAX加速后端MJX，方便进行强化学习和基于梯度的优化工作流。",
+      "degraded": false
     }
   ]
 }
