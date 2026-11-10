@@ -1,0 +1,138 @@
+{
+  "doc_token": "S2Z8dyW6zof0IexWTyJcmp74nbh",
+  "doc_url": "https://my.feishu.cn/docx/S2Z8dyW6zof0IexWTyJcmp74nbh",
+  "items": [
+    {
+      "id": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "stars": 22078,
+      "description": "An open source design system that's fully customizable and agent ready",
+      "one_liner": "Astryx CLI 是一个设计系统命令行工具，用于组件探索、文档访问、模板脚手架、主题构建和集成诊断。",
+      "detail_md": "Astryx CLI 是一个设计系统命令行工具，用于组件探索、文档访问、模板脚手架、主题构建和集成诊断。 <cite repo=\"meta/astryx\" path=\"packages/cli/README.md\" start=\"1-4\" end=\"4\" />\n\n**解决什么问题**\n该项目旨在为人类开发者和自动化编码代理提供一个统一的接口，以管理和使用 Astryx 设计系统。 <cite repo=\"meta/astryx\" path=\"packages/cli/README.md\" start=\"1-4\" end=\"4\" /> 它解决了在设计系统中探索组件、访问文档、生成模板、构建主题以及诊断集成等任务的复杂性。 \n\n**核心功能**\nAstryx CLI 提供了一系列命令，包括 `init`、`doctor`、`search`、`swizzle`、`template`、`theme build` 和 `blog`。  例如，`astryx search button` 命令可以搜索组件、钩子、文档、模板和主题，并返回相关结果。 <cite repo=\"meta/astryx\" path=\"packages/cli/README.md\" start=\"63-82\" end=\"82\" /> 它还支持集成包的验证，确保第三方集成符合规范。 \n\n**技术亮点**\nCLI 采用分层架构，将执行、用户呈现、脚本化 API、创作模式和核心基础逻辑分离。  每个命令都可以通过终端或通过类型化的 JSON 封装以编程方式调用，方便 AI 代理和构建工具使用。  响应是严格类型化的，成功和失败都有稳定的 JSON 封装，错误代码是追加式的，确保了机器可读的契约。 <cite repo=\"meta/astryx\" path=\"packages/cli/README.md\" start=\"133-157\" end=\"157\" />\n\n**适合谁用**\n该项目适合使用 Astryx 设计系统的开发者，无论是需要手动探索组件、生成代码，还是希望通过自动化工具和 AI 代理集成设计系统的团队。 <cite repo=\"meta/astryx\" path=\"packages/cli/README.md\" start=\"1-4\" end=\"4\" /> 它也适用于需要创建和验证 Astryx 集成包的作者。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 191968,
+      "description": "Public repository for Agent Skills",
+      "one_liner": "本项目旨在帮助用户使用Claude API构建LLM驱动的应用程序，并提供技能创建与评估工具。",
+      "detail_md": "## 解决什么问题\n本项目解决了使用Claude API开发LLM应用时的复杂性问题，包括模型选择、API调用、工具使用、成本优化以及技能的创建和评估。    它还通过提供结构化的技能定义和评估流程，帮助用户高效地开发和迭代AI能力。  \n\n## 核心功能\n*   **Claude API集成**：提供多种编程语言的SDK参考和最佳实践，用于调用Claude模型，包括消息创建、工具使用、流式传输和文件上传等。  \n*   **技能创建**：指导用户定义和构建可由Claude加载以执行特定任务的“技能”，包括`SKILL.md`文件的编写和资源的打包。 \n*   **模型迁移与优化**：提供模型迁移指南，帮助用户适应Claude API的变化，并提供成本优化策略。  \n*   **评估与改进**：支持创建评估集，并提供迭代改进技能的“爬坡”（hillclimb）机制，以提高性能和准确性。  \n\n## 技术亮点\n*   **渐进式披露（Progressive Disclosure）**：技能采用三级加载系统，按需加载元数据、技能主体和资源，以优化上下文窗口使用。 \n*   **托管代理（Managed Agents）**：支持持久化、有版本的代理配置，以及Anthropic托管的工具执行环境，实现有状态的代理会话。 \n*   **描述优化器（Description Optimizer）**：自动化脚本通过迭代重写技能描述，提高触发准确性。 \n*   **严格工具使用（Strict Tool Use）**：通过设置`strict: true`和`additionalProperties: false`确保工具输入严格符合Schema定义。 \n\n## 适合谁用\n本项目适合希望利用Claude API构建智能应用程序的开发者、AI工程师和研究人员。  特别是那些需要创建自定义AI能力（技能）、优化模型性能、管理API成本或对LLM应用进行系统评估的用户。",
+      "degraded": false
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 114929,
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "one_liner": "该项目通过结构化技能和流程，帮助AI代理像资深工程师一样进行软件开发，确保代码质量和项目成功。",
+      "detail_md": "**解决什么问题**\nAI编码代理通常会选择最短路径，可能跳过规范、测试和安全审查，导致软件不可靠。  该项目旨在通过提供结构化的工作流程，强制AI代理遵循资深工程师在生产代码中使用的相同规范，从而解决这一问题。 \n\n**核心功能**\n项目核心功能包括定义（Define）、规划（Plan）、构建（Build）、验证（Verify）、审查（Review）和发布（Ship）等软件开发生命周期阶段的技能。  每个技能都包含验证门、反合理化表格和明确的危险信号，确保代理遵循既定流程。  例如，`spec-driven-development` 技能在编写代码之前创建结构化规范，而 `constraint-driven-development` 技能则将项目质量标准记录为可机械检查的持久文件。  \n\n**技术亮点**\n该项目将资深工程判断和最佳实践编码为可执行的技能，例如API设计中的Hyrum定律、测试中的Beyonce规则和测试金字塔。  技能采用一致的结构，包括概述、使用时机、流程、常见合理化、危险信号和验证部分。  它还支持多种AI代理工具，如Claude Code、Codex、Gemini CLI和GitHub Copilot，通过平台特定的清单和适配器实现跨平台兼容性。  \n\n**适合谁用**\n该项目适用于希望确保AI编码代理遵循严格工程实践的开发者和团队。  无论是启动新项目（绿地项目）还是改进现有代码库（棕地项目），它都能提供指导。   对于需要全面覆盖软件开发生命周期、强调验证和质量门控的场景，该项目尤其适用。",
+      "degraded": false
+    },
+    {
+      "id": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 20341,
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "one_liner": "`claude-quickstarts` 项目提供了一系列基于 Claude API 的应用示例，旨在帮助开发者快速构建和定制 AI 应用。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决开发者在利用 Claude API 构建 AI 应用时面临的入门难题和开发效率问题。 它通过提供预先构建、可独立运行的参考实现，让开发者能够快速理解 Claude API 的用法，并在此基础上进行定制和扩展，从而加速开发进程。\n\n**核心功能**\n`claude-quickstarts` 包含多个功能各异的快速入门项目：\n*   **客户支持代理**：一个基于 Next.js 的聊天应用，利用 Amazon Bedrock 知识库实现 RAG（检索增强生成）功能。\n*   **金融数据分析师**：一个 Next.js 应用，支持文件上传，并利用 Claude 的工具使用能力生成交互式图表。\n*   **计算机使用演示**：展示 Claude 如何通过 `BashTool`、`ComputerTool` 和 `EditTool` 控制 Docker 容器内的 Linux 桌面环境。\n*   **自主编码代理**：一个 Python 项目，演示了使用 Claude Code SDK 的双代理模式，实现跨会话的自主代码生成。\n*   **浏览器使用演示**：提供基于 Playwright 的 `BrowserTool`，实现 Claude 的浏览器自动化能力。\n*   **代理框架**：一个轻量级的 Python 代理实现，用于教育目的，展示如何从头构建 LLM 代理。\n\n**技术亮点**\n该项目的主要技术亮点包括：\n*   **多语言与框架支持**：涵盖 Python (Streamlit, Playwright) 和 TypeScript (Next.js) 等多种语言和框架。\n*   **工具使用与代理模式**：多个项目深入展示了 Claude 的工具使用能力（如生成图表、控制桌面、浏览器自动化）和多代理协作模式。\n*   **集成多种 API 提供商**：部分项目支持 Anthropic 直连、AWS Bedrock 和 Google Vertex AI 等多种 API 提供商。\n*   **安全沙箱**：自主编码代理项目实现了多层安全机制，包括 OS 级沙箱、文件系统限制和 Bash 命令白名单。\n\n**适合谁用**\n该项目适合希望快速上手 Claude API 的开发者、AI 应用开发者、研究人员以及对构建基于大型语言模型的智能应用感兴趣的个人。 无论是想构建客户服务机器人、数据分析工具、自动化脚本还是探索自主代理，都能从中找到有价值的参考和起点。",
+      "degraded": false
+    },
+    {
+      "id": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "stars": 17226,
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "one_liner": "MuJoCo 是一个通用的物理引擎，旨在促进机器人、生物力学、图形动画和机器学习等领域的研究与开发，提供快速准确的关节结构模拟。",
+      "detail_md": "**解决什么问题**\nMuJoCo 旨在解决需要对关节结构及其与环境的交互进行快速、准确模拟的问题。 它结合了广义坐标和现代接触动力学，克服了传统物理引擎在处理复杂运动结构和接触力方面的局限性。\n\n**核心功能**\nMuJoCo 提供了一个 C/C++ 库，具有高性能的 C API，用于模拟、模型加载、编译和状态管理。 它支持 MJCF XML 格式或 URDF 文件定义模型，并将其编译为高效的运行时数据结构。 核心功能包括软性、凸面和可解析反演的接触动力学、肌腱几何建模、通用驱动模型以及可重配置的计算管道。 此外，它还提供 Python 绑定和交互式可视化工具，如 MuJoCo Studio。\n\n**技术亮点**\nMuJoCo 的技术亮点在于其独特的物理建模方法，它将广义坐标系下的高效递归算法与基于优化的接触动力学相结合。 它采用凸优化问题来解决摩擦接触力，支持软接触，并具有独特的逆动力学，便于数据分析和控制应用。 引擎还支持 GPU 加速后端，如 MJX (JAX) 和 MJWarp (CUDA)，以实现可微分物理和大规模批处理模拟。\n\n**适合谁用**\nMuJoCo 适合需要进行快速、准确物理模拟的研究人员和开发人员，特别是在机器人学、生物力学、图形动画、机器学习等领域。 它也适用于需要模型编译、状态估计、系统识别、机制设计以及机器学习并行采样等模型计算的应用。",
+      "degraded": false
+    },
+    {
+      "id": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "stars": 11619,
+      "description": "The personal finance app for everyone (by everyone)",
+      "one_liner": "Sure 是一个开源个人理财应用，旨在帮助用户管理财务、理解财务数据并做出明智决策。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决个人和家庭在管理财务数据、理解支出模式、规划预算以及追踪净资产方面遇到的挑战。它通过提供工具来自动化数据同步、分类交易、生成财务洞察和支持多语言本地化，从而简化复杂的财务管理过程。\n\n**核心功能**\nSure 的核心功能包括：\n*   **多语言支持**：通过 `config/locales` 目录下的 YAML 文件实现多语言本地化，支持包括简体中文在内的多种语言，确保全球用户都能使用其偏好语言进行财务管理。\n*   **智能财务助手**：提供一个友好的财务助手，能够回答关于账户、交易、收入、支出、净资产和预算等问题，并提供个性化指导。\n*   **文档智能与PDF导入**：支持导入PDF等非结构化财务文档，通过AI驱动的文档智能管道提取结构化财务数据，并进行交易映射和去重。\n*   **向量存储与语义搜索**：利用 `pgvector` 或 `Qdrant` 等向量存储后端，实现对嵌入式文档块和文本向量的高性能相似性搜索，为AI功能提供支持。\n\n**技术亮点**\n*   **模块化向量存储架构**：通过 `VectorStore::Base` 抽象层统一管理 `pgvector` 和 `Qdrant` 两种向量存储后端，提供灵活可扩展的向量搜索能力。\n*   **AI驱动的文档处理**：结合LLM（大型语言模型）进行PDF文档的文本提取、分类和结构化数据提取，例如使用 `Provider::Openai::PdfProcessor` 处理PDF内容。\n*   **国际化与本地化框架**：采用Rails I18n约定，通过分层YAML文件组织本地化字典，并使用 `Localize` 控制器关注点动态解析和设置用户区域设置。\n*   **持续集成与AI评估**：通过 `AiHealth` 评估框架和GitHub Actions工作流（如 `.github/workflows/llm-evals.yml`）自动化测试和验证AI组件的可靠性。\n\n**适合谁用**\nSure 适合希望更好地管理个人财务、追踪支出、规划预算、并利用AI技术获取财务洞察的个人和家庭。对于需要多语言支持的用户，以及对数据隐私和自托管解决方案有需求的用户，该项目也提供了良好的选择。",
+      "degraded": false
+    },
+    {
+      "id": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "stars": 6447,
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "one_liner": "Home Assistant MCP Server 旨在通过模型上下文协议 (MCP) 赋能 AI 助手与 Home Assistant 智能家居系统进行交互，实现自然语言控制和管理智能设备。",
+      "detail_md": "## 解决什么问题\n该项目解决了 AI 助手与 Home Assistant 智能家居系统之间缺乏标准化、安全交互接口的问题。它允许 AI 模型（如 Claude 或 GPT）通过自然语言控制设备、查询状态、管理自动化和配置仪表盘。\n\n## 核心功能\n核心功能包括作为 MCP 服务器，向 AI 模型暴露 Home Assistant 的工具和资源。它支持工具搜索与代理模式，以优化大型工具集对 LLM 的暴露，避免上下文窗口耗尽。此外，还提供智能搜索和回退链机制，结合模糊匹配和精确匹配来查找实体。\n\n## 技术亮点\n技术亮点在于采用了 FastMCP Vendoring 策略，通过私有副本避免了版本冲突和命名空间冲突。项目还实现了配置哈希 (`config_hash`) 进行乐观锁定和完整性检查，防止并发修改。安全方面，通过 Secret Path 保护 HTTP/webhook 端点免受未经授权的探测，并支持最佳实践检查 (BPS) 和代码模式 (`enable_code_mode`)。\n\n## 适合谁用\n该项目适合希望通过 AI 助手（如 Claude Desktop、Claude.ai、ChatGPT 等）以自然语言方式控制和管理 Home Assistant 智能家居系统的用户。它也适用于 Home Assistant OS、Supervised、Container 或 Core 等所有安装类型的用户。",
+      "degraded": false
+    },
+    {
+      "id": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 49019,
+      "description": "Browser automation CLI for AI agents",
+      "one_liner": "`agent-browser` 是一个专为 AI 代理设计的浏览器自动化命令行工具，提供高性能、确定性的网页交互方式，并优化了 AI 上下文使用。",
+      "detail_md": "**解决什么问题**\n`agent-browser` 解决了传统浏览器自动化工具在 AI 代理应用中面临的脆弱性、高延迟和高 token 消耗问题。  它通过提供一个确定性的、基于引用的交互模型，避免了传统 CSS 选择器不稳定性的问题。  此外，它通过持久化后台守护进程显著降低了命令执行延迟，并将 AI 代理与网页交互所需的 token 数量从数千减少到数百。  \n\n**核心功能**\n该项目提供了一系列核心功能，包括：\n*   **快照-引用工作流（Snapshot-Ref Workflow）**：通过 `snapshot` 命令生成可访问性树，为交互元素分配唯一的 `@eN` 引用，使 AI 代理能够以更少的 token 进行确定性交互。  \n*   **持久化守护进程与会话（Persistent Daemon & Sessions）**：后台守护进程管理浏览器生命周期和状态（如 cookies、标签页），并支持命名会话以隔离不同的任务。 \n*   **WebMCP**：一种实验性机制，用于发现和调用网页直接提供的工具，支持框架感知工具选择和结果处理。 \n*   **安全与边界（Security & Boundaries）**：通过内容边界（`BOUNDARY_NONCE`）、输出截断和域名白名单等功能，增强了在不受信任环境中的安全性。 \n\n**技术亮点**\n`agent-browser` 的技术亮点在于其高性能和 AI 友好设计：\n*   **Rust 原生 CLI 和守护进程**：使用 Rust 编写的命令行界面和守护进程，提供了极高的性能，将热启动命令延迟降低到约 1 毫秒。  \n*   **AI 优先设计**：通过生成紧凑的可访问性树和稳定元素引用，显著减少了 AI 代理处理网页信息所需的 token 数量。 \n*   **客户端-守护进程-浏览器架构**：这种架构分离了 CLI、守护进程和浏览器控制，实现了状态持久化和高效的命令执行。 \n*   **多平台支持**：提供 macOS、Linux 和 Windows 的原生 Rust 二进制文件。 \n\n**适合谁用**\n`agent-browser` 适用于需要进行网页导航、数据提取和自动化测试的 AI 代理，以及任何能够运行 shell 命令的 AI 编码助手，例如 Claude Code、GitHub Copilot、OpenAI Codex 和 Google Gemini。  它特别适合那些需要稳定、高效且 token 消耗低的浏览器自动化解决方案的开发者和团队。",
+      "degraded": false
+    },
+    {
+      "id": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "stars": 108547,
+      "description": "Hunt down social media accounts by username across social networks",
+      "one_liner": "Sherlock 是一个开源情报 (OSINT) 工具，通过用户名在数百个社交网络上查找社交媒体账户。",
+      "detail_md": "**解决什么问题**\n该项目旨在解决在众多社交媒体平台和在线服务中手动查找特定用户名是否存在的问题。它自动化了这一过程，使用户能够高效地进行用户名侦察。\n\n**核心功能**\nSherlock 的核心功能包括在超过 400 个社交网络上同时搜索用户名。它支持多种输出格式，如文本文件、CSV 和 Excel，方便用户处理结果。该工具还提供代理支持，以实现网络路由，并支持使用 `{?}` 进行用户名扩展，以检查相似的用户名。用户可以根据需要过滤特定站点或排除 NSFW 站点。\n\n**技术亮点**\n该项目基于 Python 3 构建，利用 `requests` 和 `requests-futures` 库进行高效的异步网络请求。它使用 `pandas` 和 `csv` 库处理数据导出，生成 CSV 和 Excel 报告。`data.json` 文件作为所有支持社交网络的定义清单，详细说明了每个站点的检测策略。\n\n**适合谁用**\nSherlock 适合需要进行开源情报 (OSINT) 收集、安全研究人员、调查员以及任何需要通过用户名查找社交媒体账户的人员。它也适用于开发者，因为它提供了 Python 包和命令行工具两种使用方式。",
+      "degraded": false
+    },
+    {
+      "id": "tokio-rs/topcoat",
+      "owner": "tokio-rs",
+      "name": "topcoat",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "stars": 6664,
+      "description": "A batteries-included framework for building web apps",
+      "one_liner": "Topcoat 是一个模块化、全栈的 Rust Web 框架，用于构建服务器渲染的应用程序，优先考虑简洁性和开发效率。",
+      "detail_md": "**解决什么问题**\nTopcoat 旨在解决传统全栈 Web 开发中服务器端逻辑与客户端交互之间存在的复杂性，减少了对独立 API 层或 WebAssembly 包的依赖。 它通过“服务器优先”的设计理念，允许组件直接查询数据库，从而简化了开发流程。 \n\n**核心功能**\n该框架提供了一系列核心功能，包括路由和自动发现机制，支持手动注册和模块化路由。 它还包含一个强大的视图引擎，通过 `view!` 宏提供类似 HTML 的 DSL，支持 Rust 控制流和组件组合。 此外，Topcoat 拥有集成的资产系统，通过 `asset!` 宏处理静态文件、内容哈希和浏览器缓存。 \n\n**技术亮点**\nTopcoat 的技术亮点在于其零样板的客户端响应性，通过 `$(...)` 表达式语法，Rust 代码可以在服务器端进行初始渲染，并自动转换为 JavaScript 以实现即时浏览器交互。 它还引入了“Shards”概念，即当客户端参数变化时，在服务器端重新渲染的响应式“岛屿”。 框架还支持可编辑的 UI 组件，通过 CLI 将组件直接集成到源代码中，允许完全定制。 \n\n**适合谁用**\nTopcoat 适合希望使用 Rust 构建全栈、服务器渲染 Web 应用程序的开发者。 特别是那些寻求高生产力、简化开发流程，并希望避免传统前后端分离带来的复杂性的团队。 它也适合需要细粒度控制 UI 组件并希望直接在源代码中进行定制的用户。",
+      "degraded": false
+    },
+    {
+      "id": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "stars": 6099,
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "one_liner": "`billion-context` 是一个 AI 编码代理的本地上下文压缩代理，旨在通过智能压缩管理上下文，实现长时间、低成本的编码会话。",
+      "detail_md": "**解决什么问题**\n传统的 AI 编码会话中，上下文窗口会迅速被工具输出、日志等信息填满，导致会话质量下降或中断，并且 token 费用高昂。  `billion-context` 旨在解决这一问题，通过上下文压缩，让模型在有限的上下文窗口内长时间工作，同时显著降低 token 消耗。 \n\n**核心功能**\n`billion-context` 作为一个代理服务器，位于 AI 编码助手和模型 API 之间。  它使用 `acp-kernel` 压缩引擎对对话进行增量、可逆、对前缀缓存友好的分层摘要压缩。   核心功能包括：\n*   **`compress`**: 将消息范围折叠成详细摘要。 \n*   **`decompress`**: 在需要时恢复已压缩的范围。 \n*   **`search_context`**: 在压缩摘要和可见消息中进行关键词检索。 \n*   **`acp_status`**: 提供上下文使用概览和可压缩范围信息。 \n\n**技术亮点**\n该项目采用模型驱动的增量分层压缩技术，而非硬截断。  压缩是增量的，每次只压缩自上次压缩以来新增的内容，确保了缓存前缀的完整性，从而提高了缓存命中率。  模型会根据任务状态自行决定何时以及如何压缩，而不是由固定的阈值触发。  项目支持插件模式和代理模式，以适应不同的集成方式。 \n\n**适合谁用**\n`billion-context` 适用于任何使用 AI 编码代理的用户，特别是那些需要长时间、高效率编码会话的开发者。  它支持多种主流的 AI 编码客户端，如 Claude Code, Codex, OpenCode, pi 等，可以通过启动器、原生插件或通用代理模式接入。",
+      "degraded": false
+    },
+    {
+      "id": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 320563,
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "one_liner": "该项目提供了一套代理技能，旨在帮助工程师更高效地开发软件，解决AI辅助开发中的常见问题，例如代理行为不符合预期、输出冗长以及代码质量下降等。",
+      "detail_md": "### 解决什么问题\n该项目旨在解决AI辅助软件开发中的核心痛点。首先，它通过“拷问会话”（grilling session）解决人与AI代理之间的沟通不一致问题，确保代理理解开发者的真实意图。其次，通过建立“通用语言”（ubiquitous language）和`GLOSSARY.md`文件，减少AI代理的冗余输出，提高沟通效率和代码一致性。此外，它还通过引入测试驱动开发（TDD）和调试技能，提升AI生成代码的质量和可靠性。最后，通过架构改进技能，帮助维护代码库的健康，防止代码库演变为“泥球”（ball of mud）。\n\n### 核心功能\n该项目提供了一系列核心技能，包括：\n*   **`/grill-me`** 和 **`/grill-with-docs`**：用于与AI代理进行深入的“拷问会话”，明确需求并构建项目领域模型。\n*   **`/tdd`**：支持测试驱动开发流程，确保代码质量。\n*   **`/diagnosing-bugs`**：提供结构化的调试流程，用于诊断和修复复杂bug。\n*   **`/improve-codebase-architecture`**：扫描代码库，识别并建议架构改进机会，以保持代码库的“深度”和可维护性。\n*   **`/to-spec`** 和 **`/to-tickets`**：将对话转化为详细的规范和可执行的任务工单。\n*   **`/implement`** 和 **`/implement-spec`**：根据规范或工单执行代码实现。\n*   **`/wayfinder`**：用于规划大型复杂项目，将其分解为一系列决策工单。\n\n### 技术亮点\n该项目的技术亮点在于其模块化、可组合的技能设计。技能被组织到不同的“桶”中，如`engineering/`和`productivity/`，并分为用户调用（User-invoked）和模型调用（Model-invoked）两种类型。项目强调“深度模块”（Deep Module）原则，即通过小接口隐藏大量功能，提高代码的杠杆率和局部性。此外，项目还通过`GLOSSARY.md`和ADR（Architectural Decision Record）等文档，强制执行统一的术语和记录重要的架构决策，确保人与AI代理之间的精确沟通。\n\n### 适合谁用\n该项目适合希望利用AI代理提高软件开发效率和代码质量的工程师和开发团队。特别是那些在使用AI辅助工具时遇到沟通障碍、代码冗余、质量不稳定或架构混乱等问题的用户。通过这套技能，用户可以更好地控制AI代理的行为，确保其产出符合预期，并逐步构建和维护高质量、易于理解和修改的代码库。",
+      "degraded": false
+    }
+  ]
+}
