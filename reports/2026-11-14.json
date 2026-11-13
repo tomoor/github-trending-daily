@@ -1,0 +1,138 @@
+{
+  "doc_token": "Y2THdafqNowYp8xku6AcxJjVnBg",
+  "doc_url": "https://my.feishu.cn/docx/Y2THdafqNowYp8xku6AcxJjVnBg",
+  "items": [
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 50351,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review：兼顾精准与效率的 AI 代码审查工具。",
+      "detail_md": "**解决什么问题**  \n针对通用 Agent 审查变更时可能覆盖不全、评论位置偏移、结果不稳定等问题，提供更有约束、低噪声的代码审查流程。\n\n**核心功能**  \n读取 Git diff 并生成行级结构化意见；支持工作区、分支范围和单次提交审查，也可用 `ocr scan` 扫描完整文件或目录。Agent 能读取文件、搜索代码库并结合其他变更获取上下文；还支持委托模式及 JSON 输出。\n\n**技术亮点**  \n采用确定性工程与 Agent 混合架构：工程逻辑负责文件筛选、关联文件分组和规则匹配，Agent 负责动态决策与上下文探索；独立定位和反思组件提升评论的位置与内容准确性。\n\n**适合谁用**  \n适合希望在本地开发或 CI 流程中提升审查质量的开发者与团队，也适用于需要审计陌生代码库、扫描完整文件，或将审查集成到编程 Agent 和内部系统的场景。",
+      "degraded": false
+    },
+    {
+      "id": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "stars": 4452,
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "one_liner": "面向 AI 编程代理的现代 Web 技术指南与评测项目。",
+      "detail_md": "**解决什么问题**  \nAI 编程代理可能因训练数据偏旧而推荐过时方案；项目提供专家整理的现代 Web 实践，帮助代理生成更符合当前平台能力的代码，并通过评测检验指南是否有效。\n\n**核心功能**  \n覆盖 CSS、HTML、JavaScript 等 Web 技术领域，提供性能、布局、表单、无障碍等主题指南；代理可通过技能 CLI 搜索并获取相关建议，也可使用 MCP 等方式接入。项目还运行代理任务，并根据指南中的预期生成评测，以比较输出质量。\n\n**技术亮点**  \n指南开发从用例梳理、内容撰写到评测校准分阶段进行；`gd dev` 可生成并校准评测文件。评测使用 Playwright 验证浏览器行为，也支持静态检查；指南强调渐进增强、基线兼容性与轻量回退方案。\n\n**适合谁用**  \n适合希望让 AI 编程代理采用现代 Web 实践的开发者，也适合编写指南的领域专家，以及维护 CLI、评测工具和指南交付流程的工程师。",
+      "degraded": false
+    },
+    {
+      "id": "openai/codex-security",
+      "owner": "openai",
+      "name": "codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 12941,
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "one_liner": "Codex Security：面向代码仓库的 AI 安全分析工具。",
+      "detail_md": "**解决什么问题**  \n帮助开发者发现代码中的安全漏洞，并通过扫描证据、覆盖情况和攻击路径辅助理解风险；支持全仓库、指定路径及 Git 变更扫描。\n\n**核心功能**  \n可扫描仓库、路径、提交差异和工作区变更，生成漏洞报告；支持历史扫描比较、结果导出、候选漏洞验证与修复建议，也能按严重程度为 CI 设置失败门槛。\n\n**技术亮点**  \n提供 TypeScript SDK 与命令行接口，底层搭配捆绑的安全分析插件；扫描结果包含结构化发现和覆盖摘要，并可导出 SARIF、JSON 或 CSV，供自动化流程使用。\n\n**适合谁用**  \n适合需要审查代码安全、跟踪漏洞修复的开发与安全团队，以及希望将安全扫描纳入 CI、按仓库批量执行或使用 SDK 集成扫描能力的工程团队。",
+      "degraded": false
+    },
+    {
+      "id": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "name": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "stars": 71403,
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "one_liner": "面向多市场自选股的 AI 智能分析与报告推送系统。",
+      "detail_md": "**解决什么问题**  \n汇集分散的行情、技术指标、新闻与基本面信息，自动生成分析报告，减少逐只搜集资料和整理决策信息的重复工作。\n\n**核心功能**  \n覆盖 A 股、港股、美股、日股、韩股、台股及 ETF，提供评分、趋势、买卖点位、风险警报和催化因素；支持 Web／桌面工作台、策略问股、回测、持仓管理，并可通过多种渠道推送报告。\n\n**技术亮点**  \n支持多种大模型、行情数据源和新闻搜索服务；可用 GitHub Actions、Docker 或本地定时任务运行，并通过 FastAPI 提供服务。默认可使用 AkShare、Baostock、YFinance 等免费行情源，但其稳定性受上游接口和网络影响。\n\n**适合谁用**  \n适合希望自动跟踪多市场自选股、定期获取结构化分析报告，或需要自行部署和配置模型、数据源及通知渠道的个人投资者与开发者。报告仅供学习研究，不构成投资建议。",
+      "degraded": false
+    },
+    {
+      "id": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "stars": 14502,
+      "description": "The personal finance app for everyone (by everyone)",
+      "one_liner": "Sure 是一款开源个人财务管理应用，帮助家庭看清并管理财务状况。",
+      "detail_md": "**解决什么问题**  \n账户分散、交易难追踪、预算与现金流不易掌握时，Sure 将相关财务信息集中呈现，帮助你了解收入、支出、净资产及预算情况。\n\n**核心功能**  \n支持查看仪表盘、配置预算与偏好设置、连接银行或其他金融服务以同步账户数据；还提供财务洞察，并可通过 AI 助手分析个人财务数据。\n\n**技术亮点**  \n项目提供多语言界面；AI 助手按请求类型选择回答或调用数据工具，并将稳定指令与会话上下文分开，以支持提示词缓存。部分连接强调只读访问，链上钱包数据无需私钥即可读取。\n\n**适合谁用**  \n适合希望集中管理家庭或个人财务、追踪账户与交易、制定预算并借助洞察理解财务变化的人；自托管用户也可按需配置服务连接。",
+      "degraded": false
+    },
+    {
+      "id": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 10339,
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "one_liner": "面向 AI 编程代理的本地交互式审阅工具。",
+      "detail_md": "**解决什么问题**  \n代理在终端展示计划或代码变更时，难以精确指出要修改的位置并把反馈传回代理；Plannotator 将审阅放到浏览器中，让你标注具体内容并发送反馈。\n\n**核心功能**  \n可审阅计划、规格文档和代理消息，批注 Markdown、HTML 等内容；也可审查本地变更或 GitHub/GitLab 合并请求，在差异中评论、建议代码，并将反馈交回代理。另提供用于异步消息与回复的 Inbox。\n\n**技术亮点**  \n通过钩子、插件和协议适配接入多种代理，启动本地服务并呈现浏览器界面；支持差异审阅、版本历史、草稿保存及链接分享，小型分享可用 URL 片段，大型内容可通过加密短链接分享。\n\n**适合谁用**  \n使用 Claude Code、OpenCode、Codex、Pi 等 AI 编程代理，想在执行计划前把关、审阅代理生成的代码，或通过具体批注与代理协作的开发者和团队；项目本地运行，且免费、开源。",
+      "degraded": false
+    },
+    {
+      "id": "louislam/uptime-kuma",
+      "owner": "louislam",
+      "name": "uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "stars": 93720,
+      "description": "A fancy self-hosted monitoring tool",
+      "one_liner": "Uptime Kuma：可自託管的服務可用性監控工具",
+      "detail_md": "**解决什么问题**  \n帮助你持续监测网站、服务器及网络服务是否在线，及时发现故障，并向相关人员发送通知；同时提供状态页面，方便公开服务运行状况。\n\n**核心功能**  \n支持多种监控类型与多个状态页面，可查看 Ping 图表和证书信息，并提供代理及双重验证支持。\n\n**技术亮点**  \n前端采用 Vue 3 与 Vite，后端位于 `server`，主要通过 WebSocket 通信；生产环境将前端构建至 `dist`，并由 Express 提供服务。\n\n**适合谁用**  \n适合希望自行部署监控工具、关注服务可用性并需要状态展示或故障通知的个人、开发者与运维团队；可通过 Docker 或非 Docker 方式安装。",
+      "degraded": false
+    },
+    {
+      "id": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "stars": 37221,
+      "description": "A hive mind communication platform",
+      "one_liner": "Buzz 是以中继为核心的人与 AI 协作工作空间。",
+      "detail_md": "**解决什么问题**  \nBuzz 将分散在聊天、代码托管、自动化和项目资料中的协作集中到一个工作空间；社区通过独立域名划分，数据与搜索彼此隔离。\n\n**核心功能**  \n提供实时频道聊天、论坛、私信、代理目录、工作流和全文搜索；支持托管 Git 仓库、分支协作与项目讨论，并让 AI 代理作为成员参与协作。\n\n**技术亮点**  \n采用 Nostr 签名事件作为协作记录，以 relay（中继）作为状态单一事实来源；Rust workspace 拆分协议、服务与代理组件，结合 Postgres 事件存储和全文搜索、Redis 发布订阅，以及 YAML 工作流。\n\n**适合谁用**  \n适合希望在自有域名或托管社区中，把团队沟通、代码、自动化与 AI 代理整合起来的开发团队、开源项目和其他协作小组。",
+      "degraded": false
+    },
+    {
+      "id": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "stars": 3991,
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "one_liner": "面向兼职交易者的美股周度策略分析与博客生成系统。",
+      "detail_md": "**解决什么问题**  \n将分散的图表、市场环境、新闻及日历信息整合为每周可读、可执行的交易策略，减少个人分析与整理负担。\n\n**核心功能**  \n分析VIX、利率、市场宽度、指数与大宗商品图表，评估泡沫风险、情绪和行业轮动，并追踪近期新闻及即将公布的经济指标与财报；最终整合分析报告，生成Markdown周度策略博客，也可选生成18个月、四种情景的中长期策略报告。\n\n**技术亮点**  \n采用Claude Agents分阶段协作：技术分析、市场环境评估、新闻分析后，由写作代理汇总报告；支持使用图表图片和FMP API，并将报告与博客按日期归档。\n\n**适合谁用**  \n适合使用Claude Code CLI或Claude Desktop、希望系统化复盘美股市场并获取周度策略参考的兼职交易者与投资者；使用前需准备相关Claude技能，日历数据还需配置FMP API密钥。",
+      "degraded": false
+    },
+    {
+      "id": "tailscale/tailcat",
+      "owner": "tailscale",
+      "name": "tailcat",
+      "url": "https://github.com/tailscale/tailcat",
+      "stars": 9300,
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "one_liner": "Tailcat：无需控制平面即可建立加密点对点隧道的网络工具",
+      "detail_md": "**解决什么问题**  \nTailcat 让两台设备无需 Tailscale 账号、管理员权限或修改系统路由，就能安全连通；它不依赖控制平面交换连接信息，并可在直连不可用时通过 DERP 中继。\n\n**核心功能**  \n支持通过隧道传输标准输入输出、转发 TCP 端口、使用 SOCKS5 代理、提供 SSH 与 SFTP 文件服务，也可作为出口节点；同时提供 Go 库和命令行工具。\n\n**技术亮点**  \n使用 WireGuard 端到端加密，借助 magicsock 进行 NAT 穿透，优先建立 UDP 直连，失败时回退到 DERP；基于用户态网络栈工作，无需配置操作系统网络。连接地址携带密钥与中继信息，也可使用自建 DERP。\n\n**适合谁用**  \n适合需要免账号、免特权连接两台设备的开发者和运维人员，也适合希望通过安全隧道访问端口、传输文件或运行 SSH 服务的团队；需要稳定 API 或 CLI 兼容性的场景应注意，项目不承诺接口与协议稳定。",
+      "degraded": false
+    },
+    {
+      "id": "Likely7/Veyra-NRVideo",
+      "owner": "Likely7",
+      "name": "Veyra-NRVideo",
+      "url": "https://github.com/Likely7/Veyra-NRVideo",
+      "stars": 1499,
+      "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "one_liner": "Explore Deep Research in Zread, the AI code wiki with multilingual guides, architecture insights, a…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nExplore Deep Research in Zread, the AI code wiki with multilingual guides, architecture insights, and community buzz, helping you dive into any GitHub repo in depth.",
+      "degraded": true
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 55310,
+      "description": "Chrome DevTools for coding agents",
+      "one_liner": "连接 AI 助手与 Chrome DevTools 的浏览器调试与自动化 MCP 服务。",
+      "detail_md": "**解决什么问题**  \n让 AI 编程助手通过标准化的 MCP 接口操作和检查 Chrome，减少在浏览器自动化、页面调试及性能排查中手动切换工具的需要。\n\n**核心功能**  \n支持浏览器操作、页面与网络检查、控制台错误排查，以及性能追踪和内存快照分析；结果可整理为摘要、结构化内容或分页数据。\n\n**技术亮点**  \n采用 MCP 标准，避免绑定单一 AI 客户端；强调小型、可组合的工具，并优先返回语义摘要，较大的数据则以文件或资源引用呈现。\n\n**适合谁用**  \n适合使用 AI 编程助手的开发者，以及需要自动化浏览器操作、检查网络与控制台信息、分析页面性能或排查内存问题的团队。",
+      "degraded": false
+    }
+  ]
+}
