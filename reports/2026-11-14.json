@@ -133,6 +133,83 @@
       "one_liner": "连接 AI 助手与 Chrome DevTools 的浏览器调试与自动化 MCP 服务。",
       "detail_md": "**解决什么问题**  \n让 AI 编程助手通过标准化的 MCP 接口操作和检查 Chrome，减少在浏览器自动化、页面调试及性能排查中手动切换工具的需要。\n\n**核心功能**  \n支持浏览器操作、页面与网络检查、控制台错误排查，以及性能追踪和内存快照分析；结果可整理为摘要、结构化内容或分页数据。\n\n**技术亮点**  \n采用 MCP 标准，避免绑定单一 AI 客户端；强调小型、可组合的工具，并优先返回语义摘要，较大的数据则以文件或资源引用呈现。\n\n**适合谁用**  \n适合使用 AI 编程助手的开发者，以及需要自动化浏览器操作、检查网络与控制台信息、分析页面性能或排查内存问题的团队。",
       "degraded": false
+    },
+    {
+      "id": "QwenLM/qwen-code",
+      "owner": "QwenLM",
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "stars": 30175,
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "one_liner": "Qwen Code：面向多种开发环境的开源 AI 编程助手。",
+      "detail_md": "**解决什么问题**  \n它让你能用自然语言处理代码开发任务，减少查找代码、理解项目、修改实现和运行测试之间的手工切换，支持调试、功能开发、重构、测试编写与代码审查。\n\n**核心功能**  \n提供终端交互与无头运行模式，可在工作区内协助编辑代码、执行命令和处理 Git 操作；也支持定时任务等自动化工作流。\n\n**技术亮点**  \n以 CLI 连接大语言模型服务，内置文件编辑、Shell、网络搜索和 MCP 等工具；支持 Qwen 模型及兼容的 OpenAI、Anthropic、Gemini 接口，并提供交互式、无头、IDE 集成和 daemon 等运行方式。\n\n**适合谁用**  \n适合希望在终端、编辑器或自动化流程中借助 AI 完成编码工作的开发者与团队；任务描述越具体，越便于助手理解目标并协助推进。",
+      "degraded": false
+    },
+    {
+      "id": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "stars": 24265,
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "one_liner": "Univer 是一个可扩展的开源办公文档与数据应用 SDK。",
+      "detail_md": "**解决什么问题**  \n为产品开发者提供可嵌入应用的电子表格、文档和演示文稿能力，也支持在 Node.js 中无界面处理工作簿、文档及自动化任务。\n\n**核心功能**  \n提供 Sheets、Docs、Slides 等模型与界面，以及公式、筛选排序、数字格式、数据验证、条件格式、评论和查找替换等能力；还支持浏览器与 Node.js 运行、Web Worker/RPC、多实例和框架集成。\n\n**技术亮点**  \n采用核心 SDK 与插件化架构，包含渲染引擎、公式引擎和 Facade API；支持无头运行，并可通过 React、Vue、Web Components 等方式集成。开源核心基于 Apache-2.0，商业扩展与开源能力边界明确。\n\n**适合谁用**  \n适合希望在浏览器产品中嵌入办公编辑器、构建结构化数据体验，或在 Node.js 服务端进行文档处理与自动化的开发团队；也适合需要按需组合插件和定制运行时的项目。",
+      "degraded": false
+    },
+    {
+      "id": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "stars": 17208,
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "one_liner": "AG-UI：连接 AI 智能体与用户应用的交互协议",
+      "detail_md": "**解决什么问题**  \n传统请求—响应接口难以支持智能体长时间运行、持续输出、状态变化和用户实时介入。AG-UI 为前端应用与智能体后端提供通用的双向通信方式，减少定制连接逻辑，便于构建可靠、易调试的交互体验。\n\n**核心功能**  \n支持实时流式对话、多模态内容、生成式 UI、前后端共享状态、前端工具调用，以及人工审核与协作；也可传递上下文、工具结果和自定义事件。\n\n**技术亮点**  \n协议采用开放、轻量、事件驱动的设计，以标准事件连接不同智能体与应用，并支持 SSE、WebSocket 等传输方式。提供 HTTP 参考实现、默认连接器及多语言 SDK；README 列有 LangChain、CrewAI、Google ADK、Mastra 等集成。\n\n**适合谁用**  \n适合开发智能体应用的前后端工程师，以及希望将现有智能体框架接入用户界面的团队；特别适用于需要实时交互、共享状态、多模态体验或人工审批流程的产品。AG-UI 与 MCP、A2A 互补，聚焦智能体与用户应用之间的交互。",
+      "degraded": false
+    },
+    {
+      "id": "ashhart/TensorFold",
+      "owner": "ashhart",
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "stars": 2095,
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "one_liner": "TensorFold 为本地 AI 模型运行与智能体协作提供一体化工具。",
+      "detail_md": "**解决什么问题**  \n帮助你在本地管理和使用模型，并通过本地 API 为其他应用提供模型服务；也提供项目、共享记忆和多智能体协作空间。\n\n**核心功能**  \n包括模型下载与加载、本地推理服务、聊天及多种模型 API；应用还支持智能体、项目、房间协作和多语言界面。\n\n**技术亮点**  \n原生推理引擎以 Zig 实现，可按硬件使用 Metal、CUDA、HIP/ROCm 等后端；支持并发请求、提示词缓存及草稿模型加速，并提供图像、视频输入等有条件的模型能力。\n\n**适合谁用**  \n适合希望在本机运行模型、向其他应用提供本地推理 API，或组织智能体协作的开发者与技术团队；实际模型能力和性能取决于模型与硬件。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 119842,
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "one_liner": "Caveman：让 AI 编程代理少说、少读，保留技术事实。",
+      "detail_md": "**解决什么问题**  \n代理冗长回答与大量上下文会增加 token 消耗和成本；Caveman 精简表达及输入，同时保护代码、命令、路径、数字和错误信息不被改写。\n\n**核心功能**  \n提供 `caveman`、`ultracave`、`megacave` 三种表达模式；压缩日志、JSON、测试输出等输入，并提供模型路由、脚本复用、浏览器页面压缩及记忆文件整理等工具。\n\n**技术亮点**  \n支持 30 多种代理；本地引擎按内容类型选择压缩器，并在需要时保存原文以供恢复。安全警告、不可逆操作和易混淆步骤会切回清晰表达。\n\n**适合谁用**  \n使用 Claude Code、Codex、Gemini CLI、OpenCode 等 AI 编程代理，想减少冗余输出、上下文 token 或重复脚本开销的开发者与团队。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/LoopForge",
+      "owner": "Tencent",
+      "name": "LoopForge",
+      "url": "https://github.com/Tencent/LoopForge",
+      "stars": 726,
+      "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "one_liner": "LoopForge：面向团队的软件交付工作台",
+      "detail_md": "**解决什么问题**  \n编程 Agent 单次执行容易遗漏设计、测试或评审，也难以追踪进度与验收。LoopForge 将对话式协作与可重复的交付流程结合，让需求、执行步骤、检查结果和交付产物可以持续追踪。\n\n**核心功能**  \n可通过 Main Bot 对话探索、迭代并处理代码，也可用 SOP 编排 Agent、脚本、人工审批和子流程；支持 Docker 沙箱、GitHub 仓库与 PR/MR 交付、失败返工、运行日志和产物查看。\n\n**技术亮点**  \n编排 CodeBuddy、Codex 和 Claude Code 等执行器，支持角色分工、可视化 SOP 设计与版本发布；运行过程提供节点状态、工具轨迹、日志和产物快照，并可通过人工关口审批或退回返工。平台可自主部署，提供 HTTP 与 MCP API；另有面向个人开发者的 LoopForge Local。\n\n**适合谁用**  \n适合希望团队共享工作区、规范重复交付流程、设置评审和验收关口并保留运行记录的团队；个人开发者也可在 IDE 或 CLI 中使用 Local，运行内置工作流。",
+      "degraded": false
+    },
+    {
+      "id": "martin-olivier/airgorah",
+      "owner": "martin-olivier",
+      "name": "airgorah",
+      "url": "https://github.com/martin-olivier/airgorah",
+      "stars": 5534,
+      "description": "A WiFi security auditing software",
+      "one_liner": "Airgorah 是一款面向 Linux 的 WiFi 安全审计工具。",
+      "detail_md": "**解决什么问题**  \n帮助网络管理员与安全人员发现周边无线网络及其连接设备，并检查网络安全状况；仅应在获授权的网络上使用。\n\n**核心功能**  \n扫描并查看附近 WiFi 流量、接入点和客户端；支持断开连接测试、捕获 WPA/WPA2 握手与 PMKID，并对捕获材料进行密码审计。\n\n**技术亮点**  \n以 Rust 编写，使用 GTK4 构建图形界面；界面以普通用户运行，需要特权操作时通过 Polkit 启动独立的 `airgorah-agent`。运行于 Linux，且无线网卡需支持监听模式和数据包注入。\n\n**适合谁用**  \n适合需要在自有或明确获授权网络上进行无线安全审计的网络管理员与安全专业人员；需具备兼容网卡及相应使用授权。",
+      "degraded": false
     }
   ]
 }
