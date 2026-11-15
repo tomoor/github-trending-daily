@@ -1,0 +1,171 @@
+{
+  "doc_token": "Q1uedYFtRoa2YYxBkgNcVx6FnJe",
+  "doc_url": "https://my.feishu.cn/docx/Q1uedYFtRoa2YYxBkgNcVx6FnJe",
+  "items": [
+    {
+      "id": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 11094,
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "one_liner": "Plannotator：为 AI 编程代理提供本地可视化审阅与反馈工具。",
+      "detail_md": "**解决什么问题**  \n代理的计划和代码常在终端中呈现，难以针对具体段落或代码行提出意见，也不便协作。Plannotator 将审阅放进浏览器，让你标注内容并把反馈直接交回代理。\n\n**核心功能**  \n审阅实施前的计划与 Markdown 文档、标注 HTML、检查本地变更或远程 PR/MR；支持行级评论、代码建议，并可分享审阅内容。Inbox 还能集中接收代理的问题与文件，供你异步回复。\n\n**技术亮点**  \n通过钩子、插件及工具接入多种 AI 编程代理，在本地浏览器打开审阅界面，并将结构化反馈传回代理。默认本地运行；小型分享可用 URL 片段，大型内容可使用加密短链接。\n\n**适合谁用**  \n使用 Claude Code、OpenCode、Codex、Pi、Gemini CLI、Copilot CLI、Droid、Amp、Kiro 等代理的开发者，以及希望在代理执行计划或提交代码后进行人工把关、精准反馈和团队协作的人。",
+      "degraded": false
+    },
+    {
+      "id": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "stars": 5986,
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "one_liner": "面向 AI 编程助手的现代 Web 最佳实践指南与评测项目。",
+      "detail_md": "**解决什么问题**  \nAI 助手可能因训练资料中的旧代码而采用过时方案；项目将专家整理的现代 Web 实践提供给助手，并通过评测检验这些指导是否改善生成结果。\n\n**核心功能**  \n涵盖 CSS、HTML、JavaScript 等领域的使用指南，经 Skills CLI 提供语义搜索和按需检索，也支持 MCP；评测工具运行 AI 编程任务，并依据自动化测试检查结果。\n\n**技术亮点**  \n指南配有示例、可测试的预期和 Playwright grader；`gd dev` 可生成评测材料并校准指南。Skills CLI 使用本地语义搜索，可离线运行，无需 API 密钥。\n\n**适合谁用**  \n适合希望让 AI 助手采用现代浏览器 API、性能与无障碍实践的 Web 开发者，也适合编写和维护技术指南、评测 AI 输出的领域专家与基础设施工程师。",
+      "degraded": false
+    },
+    {
+      "id": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "stars": 4776,
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "one_liner": "面向股票投资者与交易者的 Claude 技能集合，涵盖分析、策略与自动化工作流。",
+      "detail_md": "**解决什么问题**  \n帮助投资者和交易者借助 Claude 处理市场研究与策略分析，减少从图表、新闻、经济日历等信息中整理观点和生成报告的工作；部分技能依赖付费 API。\n\n**核心功能**  \n提供技术分析、市场环境与泡沫风险评估、新闻及经济事件分析、股票研究、投资组合管理和策略回测等技能；周度策略系统可整合技术面、市场环境和新闻报告，生成交易策略博客。\n\n**技术亮点**  \n技能采用统一结构，包含 `SKILL.md`、按需读取的参考资料及可执行脚本，并可在 Claude 网页版和 Claude Code 中使用；项目还提供双轴技能质量审查，以及自动评分、改进和创建 PR 的流程。\n\n**适合谁用**  \n适合希望用 Claude 辅助美股研究、市场监测、策略验证和报告生成的投资者与交易者；也适合需要构建、测试或持续改进 Claude 技能的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 56270,
+      "description": "Chrome DevTools for coding agents",
+      "one_liner": "面向 AI 编程助手的 Chrome 浏览器调试与自动化 MCP 服务。",
+      "detail_md": "**解决什么问题**  \n让 AI 编程助手和开发者通过统一的 MCP 接口操作并检查正在运行的 Chrome，减少在浏览器自动化、问题排查和性能分析之间切换工具的成本。\n\n**核心功能**  \n支持页面交互与浏览器自动化，并提供控制台和网络请求检查、性能追踪与分析、Lighthouse 测试及堆快照分析；大型截图、追踪等数据可通过文件路径或资源 URI 引用。\n\n**技术亮点**  \n基于 MCP 提供面向不同 AI 客户端的标准化接口，通过 Puppeteer 与 Chrome DevTools Protocol 操作浏览器；工具设计强调小而确定、结构化且易读的摘要，并支持从简单操作逐步使用高级参数。\n\n**适合谁用**  \n适合使用 Claude、Cursor、VS Code Copilot 等 MCP 客户端的开发者，以及需要自动化浏览器操作、诊断网页问题、分析网络或性能表现的工程团队。",
+      "degraded": false
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 51404,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review：面向代码审查的 AI 驱动 CLI 工具。",
+      "detail_md": "**解决什么问题**  \n缓解通用 Agent 审查大型变更时覆盖不全、问题定位偏移和质量不稳定等问题，减少误报与人工确认负担。\n\n**核心功能**  \n读取 Git diff 并生成带行级定位的结构化审查意见；Agent 可读取完整文件、搜索代码库和关联变更文件获取上下文。`ocr scan` 还能审查整个文件或目录，适用于没有有效 diff 的代码审计。\n\n**技术亮点**  \n采用确定性工程与 Agent 混合架构：工程逻辑负责文件筛选、关联文件打包和规则匹配，Agent 负责动态推理与上下文探索；另有评论定位与反思模块提升意见的定位和内容准确性。\n\n**适合谁用**  \n适合希望在本地 AI 辅助开发中获得审查反馈的独立开发者、需要集成并掌控数据流与审查策略的平台团队，以及将代码质量验证用于强化学习训练流程的机器学习研究者。",
+      "degraded": false
+    },
+    {
+      "id": "QwenLM/qwen-code",
+      "owner": "QwenLM",
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "stars": 30315,
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "one_liner": "面向多环境的软件工程 AI 编码代理。",
+      "detail_md": "**解决什么问题**  \n帮助开发者理解代码库、处理日常开发任务，减少查找、修改和验证代码的重复工作。\n\n**核心功能**  \n可用自然语言调试缺陷、实现功能、重构代码、编写测试、更新文档及协助 Git 操作；支持交互式终端使用，也可用于自动化流程。\n\n**技术亮点**  \n提供终端编码代理能力，内置文件编辑、命令执行等工具，并支持多种模型服务；对话历史可压缩以节省上下文，且提供命令行、编辑器集成和无头运行方式。\n\n**适合谁用**  \n适合希望借助 AI 完成代码维护、功能开发、测试和代码审查的开发者，也适用于需要将编码任务接入脚本或 CI/CD 的团队。",
+      "degraded": false
+    },
+    {
+      "id": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "stars": 24462,
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "one_liner": "Univer 是用于构建电子表格、文档和演示文稿应用的开源办公 SDK。",
+      "detail_md": "**解决什么问题**  \nUniver 提供可嵌入产品的办公编辑能力，无需使用托管应用或固定界面；也支持在 Node.js 中运行工作簿和文档逻辑，满足服务端处理与自动化需求。\n\n**核心功能**  \n覆盖 Sheets、Docs、Slides 等办公场景，提供公式、筛选排序、格式设置、评论及可扩展 UI 等能力；支持浏览器应用、无头运行和服务端自动化。\n\n**技术亮点**  \n采用插件优先架构，可按需组合、替换或延迟加载功能；通过 Canvas 渲染引擎、独立公式引擎和统一 Facade API，支持浏览器与 Node.js 共用一致的操作接口。\n\n**适合谁用**  \n适合希望在 SaaS、内部工具、BI 流程或 AI 应用中集成办公编辑能力的开发团队，也适合需要自定义插件、定制 UI，或在服务端处理表格与文档的团队。",
+      "degraded": false
+    },
+    {
+      "id": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "stars": 17345,
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "one_liner": "AG-UI：连接 AI 智能体与用户应用的开放交互协议。",
+      "detail_md": "**解决什么问题**  \nAI 智能体常需长时间运行、持续输出中间过程，并同时处理文本、工具调用与状态更新；传统请求—响应模式难以支持这类动态交互。AG-UI 为前端应用与智能体后端提供双向通信约定，减少繁琐的定制连接。\n\n**核心功能**  \n支持实时流式对话、前后端状态同步、结构化消息与生成式 UI、上下文增强、前端工具调用，以及人工审批和协作；也支持多模态内容和可视化工具结果。\n\n**技术亮点**  \n采用开放、轻量、事件驱动的协议，以标准事件类型传递智能体执行过程，并兼容 SSE、WebSocket、Webhook 等传输方式；提供参考 HTTP 实现和默认连接器，且可与 MCP、A2A 配合使用。\n\n**适合谁用**  \n适合构建带有智能体交互能力的前端应用的开发者，以及希望将现有智能体框架接入用户界面的团队；项目提供多种框架集成和示例，可用于探索、开发与验证交互功能。",
+      "degraded": false
+    },
+    {
+      "id": "ashhart/TensorFold",
+      "owner": "ashhart",
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "stars": 2154,
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "one_liner": "TensorFold 是面向本地 AI 模型与智能体工作流的应用及推理引擎。",
+      "detail_md": "**解决什么问题**  \n帮助你在本地运行和管理模型，并通过统一接口向其他应用提供推理服务；也支持将多个智能体组织起来协作，处理项目记忆、自动化和日常任务。\n\n**核心功能**  \n提供模型下载、本地 API 服务、聊天与文本生成，支持流式响应、工具调用、图像输入及多种兼容接口；应用还包含智能体协作、例行任务、语音功能和多语言界面。界面语言包可离线使用，不会因此下载模型或联系翻译服务。\n\n**技术亮点**  \n原生推理引擎以 Zig 实现，支持 Metal、CUDA、HIP/ROCm 和 Intel XPU 等硬件后端，并提供并发请求、提示缓存与模型家族专用优化。系统还提供 API 密钥与路由权限控制、健康和性能指标，以及适配不同模型家族的服务方案。\n\n**适合谁用**  \n适合希望在个人设备或自有服务器部署模型的开发者、AI 应用构建者，以及需要本地智能体协作、自动化和多语言桌面工作流的团队。",
+      "degraded": false
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "stars": 120046,
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "one_liner": "Caveman：为 AI 编程代理压缩输入与输出，减少 token 消耗。",
+      "detail_md": "**解决什么问题**  \nAI 代理冗长回答和大量日志、JSON、测试输出会增加 token 用量与成本；Caveman 精简表达和输入内容，同时保留技术信息。压缩效果依工作负载而异，项目也明确区分估算与实测数据。\n\n**核心功能**  \n提供 `caveman`、`ultracave`、`megacave` 三种表达模式；压缩日志、JSON、CSV、测试输出和网页内容；还支持自动模型路由、复用脚本块、token 用量分析及记忆文件压缩。\n\n**技术亮点**  \n通过技能规则精简代理回复，并由本地 Go 引擎识别内容类型、选择压缩器；技术术语、代码、命令、路径和错误信息保持原样。可恢复的有损压缩会先保存原文，解析失败或结果未变小时则保留原内容。\n\n**适合谁用**  \n适合希望降低 AI 编程代理 token 开销的开发者，以及需要在自建 AI 应用中观测成本、评估回答质量并优化模型调用的团队；支持 30 多种代理平台。",
+      "degraded": false
+    },
+    {
+      "id": "louislam/uptime-kuma",
+      "owner": "louislam",
+      "name": "uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "stars": 94219,
+      "description": "A fancy self-hosted monitoring tool",
+      "one_liner": "自托管的服务可用性监控与告警工具。",
+      "detail_md": "**解决什么问题**  \n帮助你持续掌握网站、服务器及网络资源是否在线，减少服务故障未及时发现的情况；项目面向希望自行部署监控工具的用户。\n\n**核心功能**  \n支持 HTTP(S)、TCP、Ping、DNS、Docker、数据库及游戏服务器等监控，并可通过多种通知渠道发送告警；还提供公开状态页，便于展示服务状态。\n\n**技术亮点**  \n前端采用 Vue 3，后端使用 Express，主要通过 WebSocket 通信；支持 Docker 部署，也可使用 Node.js 直接运行，安装目标是尽量简单。\n\n**适合谁用**  \n适合需要自主管理服务监控、关注可用性并希望故障时收到通知的个人开发者、小团队及自托管服务运营者；可按需求配置监控与通知。",
+      "degraded": false
+    },
+    {
+      "id": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "stars": 15276,
+      "description": "The personal finance app for everyone (by everyone)",
+      "one_liner": "Sure 是一款开源个人财务管理应用，帮助家庭看清财务状况并规划资金。",
+      "detail_md": "**解决什么问题**  \n分散的账户、交易与预算信息不易汇总，也难以持续了解收支、净资产和消费变化。Sure 将这些财务信息集中呈现，帮助你掌握家庭财务动态并作出规划。\n\n**核心功能**  \n提供账户与交易管理、预算和目标规划、仪表盘及财务报表；还可展示 AI 财务洞察，并通过聊天助手查询账户、交易、收入、支出、净资产和预算相关信息。\n\n**技术亮点**  \n项目采用 Ruby on Rails 的国际化翻译文件组织界面文案，支持简体中文；AI 助手可配置内置或外部模式，并根据请求类别选择直接回答或调用财务数据工具。\n\n**适合谁用**  \n适合希望集中管理个人或家庭财务、制定月度预算与储蓄目标、查看收支趋势的人；也适合偏好自托管，或希望通过 AI 助手探索自身财务数据的用户。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/LoopForge",
+      "owner": "Tencent",
+      "name": "LoopForge",
+      "url": "https://github.com/Tencent/LoopForge",
+      "stars": 884,
+      "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "one_liner": "LoopForge：面向团队的软件交付编排工作台",
+      "detail_md": "**解决什么问题**  \n编程 Agent 单次执行容易遗漏方案、测试、独立评审或人工验收，导致交付过程难以复用和追踪。LoopForge 将对话式协作与标准交付流程结合，让需求、检查和交付记录贯穿软件开发过程。\n\n**核心功能**  \n可通过 Main Bot 对话探索、迭代和修改代码，也可用 SOP 编排 Agent、脚本、人工审批、子流程及预览构建。支持 Docker 沙箱、项目角色复用、失败返工、暂停与重试，并集中查看运行状态、日志、工具轨迹和产物；还可跟踪需求及 PR/MR。\n\n**技术亮点**  \nLoopForge 编排 CodeBuddy、Codex 和 Claude Code，不取代这些编码助手；SOP 节点声明产物与依赖，由引擎按依赖推进，并支持人工关口和失败返工。平台可自主部署，提供 Docker 沙箱及 HTTP、MCP API。\n\n**适合谁用**  \n适合希望团队共享对话工作区、可复用交付流程、审批和运行记录的团队；也适合个人开发者通过 LoopForge Local 在 IDE 或 CLI 中使用内置工作流。",
+      "degraded": false
+    },
+    {
+      "id": "Likely7/Veyra-NRVideo",
+      "owner": "Likely7",
+      "name": "Veyra-NRVideo",
+      "url": "https://github.com/Likely7/Veyra-NRVideo",
+      "stars": 2211,
+      "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "one_liner": "Veyra：面向 Windows 的实时 GPU 视频增强与播放工具。",
+      "detail_md": "**解决什么问题**  \n将本地视频、采集卡、屏幕捕获及游戏串流接入同一增强流程，便于在播放或导出时改善画面，而不必为不同来源切换处理工具。\n\n**核心功能**  \n提供超分辨率、降噪、HDR处理、补帧、调色与截图；支持节点式处理链、多层降噪，以及带剪辑、音轨和字幕选项的离线导出。\n\n**技术亮点**  \nQML负责界面，原生D3D12负责视频呈现；列表与节点模式共用EnhanceGraph处理链，输入来源统一进入处理流程，并可连接实时预览或导出。节点链需有效连接才会执行；部分社区增强能力仍属实验性质。\n\n**适合谁用**  \n适合希望用GPU增强本地影片、采集卡画面或游戏串流，并需要细调处理链、色彩或导出设置的Windows用户；实际兼容性与效果会因显卡、驱动、设备及功能实验状态而异。",
+      "degraded": false
+    },
+    {
+      "id": "martin-olivier/airgorah",
+      "owner": "martin-olivier",
+      "name": "airgorah",
+      "url": "https://github.com/martin-olivier/airgorah",
+      "stars": 5832,
+      "description": "A WiFi security auditing software",
+      "one_liner": "Airgorah：面向 Linux 的 Wi-Fi 安全审计工具",
+      "detail_md": "**解决什么问题**  \n帮助你发现附近的无线接入点与客户端，并检查网络安全；项目仅适用于你有权测试的网络。\n\n**核心功能**  \n支持监听 Wi-Fi 流量、扫描接入点和客户端、保存抓包，并识别 WPA 握手与 PMKID；还提供断开认证和 WPA 密码审计相关功能。\n\n**技术亮点**  \n使用 Rust 与 GTK4 构建图形界面；由 `airgorah-agent` 处理需要权限的无线操作，GUI 与代理通过 Unix socket 上的 JSON IPC 通信。扫描引擎支持按频段或指定信道切换，并将抓取的数据写入文件分析。\n\n**适合谁用**  \n适合在 Linux 上进行授权 Wi-Fi 安全审计、网络排查或学习无线安全的用户；需要支持监听模式和数据包注入的无线网卡。",
+      "degraded": false
+    }
+  ]
+}
