@@ -166,6 +166,50 @@
       "one_liner": "Airgorah：面向 Linux 的 Wi-Fi 安全审计工具",
       "detail_md": "**解决什么问题**  \n帮助你发现附近的无线接入点与客户端，并检查网络安全；项目仅适用于你有权测试的网络。\n\n**核心功能**  \n支持监听 Wi-Fi 流量、扫描接入点和客户端、保存抓包，并识别 WPA 握手与 PMKID；还提供断开认证和 WPA 密码审计相关功能。\n\n**技术亮点**  \n使用 Rust 与 GTK4 构建图形界面；由 `airgorah-agent` 处理需要权限的无线操作，GUI 与代理通过 Unix socket 上的 JSON IPC 通信。扫描引擎支持按频段或指定信道切换，并将抓取的数据写入文件分析。\n\n**适合谁用**  \n适合在 Linux 上进行授权 Wi-Fi 安全审计、网络排查或学习无线安全的用户；需要支持监听模式和数据包注入的无线网卡。",
       "degraded": false
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 9102,
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "one_liner": "Stitch Skills：面向 AI 编程代理的 Stitch 设计工作流技能库",
+      "detail_md": "**解决什么问题**  \n将 UI 设计构思、Stitch 设计稿与后续开发衔接起来，减少从模糊需求到可复用设计规范、React 组件或演示视频之间的重复工作。项目技能遵循 Agent Skills 开放标准，面向多种编程代理。\n\n**核心功能**  \n`enhance-prompt` 将初步想法整理为包含页面结构、UI/UX 术语和设计系统信息的 Stitch 提示词；`design-md` 分析 Stitch 项目并生成 `DESIGN.md`；`stitch-loop` 从提示词生成多页面网站；`react-components` 将设计转换为 React 组件；`remotion` 则制作带转场和文字叠加的设计演示视频。\n\n**技术亮点**  \n通过 Stitch MCP 获取项目、屏幕及设计资源；设计规范提取颜色、字体、间距和组件模式，并转为自然语言；React 生成流程强调模块化、TypeScript 类型与 AST 自动校验；视频技能使用 Remotion 组合屏幕、动画和说明文字。\n\n**适合谁用**  \n适合使用 Stitch 进行界面设计，并希望通过 AI 编程代理优化提示词、沉淀设计系统、生成 React 组件或制作产品演示的设计师与开发者；也适合需要在 Antigravity、Gemini CLI、Claude Code 或 Cursor 等代理中复用技能的团队。",
+      "degraded": false
+    },
+    {
+      "id": "ggml-org/ggml",
+      "owner": "ggml-org",
+      "name": "ggml",
+      "url": "https://github.com/ggml-org/ggml",
+      "stars": 15817,
+      "description": "Tensor library for machine learning",
+      "one_liner": "面向机器学习的轻量、可移植张量计算库。",
+      "detail_md": "**解决什么问题**  \n为机器学习应用提供依赖少、易集成的张量计算能力，并支持在多种处理器和加速设备上运行。\n\n**核心功能**  \n提供张量运算与计算图执行基础，并支持多种量化格式，帮助降低模型权重的存储需求；项目还包含 GPT、图像分割等示例应用。\n\n**技术亮点**  \n采用无外部依赖的 C/C++ 实现，覆盖 x86、ARM、RISC-V 等平台，提供 SIMD 优化，并支持 CPU、GPU、NPU 和浏览器等后端；运行时可避免内存分配。\n\n**适合谁用**  \n适合构建或研究机器学习推理程序、模型执行器及硬件后端的开发者，也适合希望通过示例学习张量计算与模型部署的使用者。",
+      "degraded": false
+    },
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 6000,
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "one_liner": "面向 Claude Code 的漏洞挖掘与红队测试技能包。",
+      "detail_md": "**解决什么问题**  \n针对安全测试中流程零散、漏洞知识难复用、发现未经验证就提交，以及证据和报告不规范等问题，提供可组合的技能与工作流，支持经授权的漏洞赏金和外部红队评估。\n\n**核心功能**  \n覆盖资产侦察、漏洞类别测试、结果验证、证据整理和报告撰写；包含 Web、API、云与企业平台等专项技能，并提供 `/hunt`、`/recon`、`/triage`、`/report` 等命令及 `cbh` CLI。\n\n**技术亮点**  \n技能可依据对话关键词自动加载，漏洞模式整理自公开披露报告；六阶段工作流以七问验证关卡筛选发现，并强调敏感信息脱敏。项目提供 Claude Code 技能接口和可脚本化的 Python CLI。\n\n**适合谁用**  \n适合在明确授权范围内开展漏洞赏金、渗透测试或外部红队工作的安全研究人员与团队；初学者也可用训练目标熟悉侦察、验证与报告流程。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/SkillEvaluator",
+      "owner": "NVIDIA",
+      "name": "SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "stars": 1381,
+      "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "one_liner": "SkillEvaluator：评估 AI 智能体技能的开源框架。",
+      "detail_md": "**解决什么问题**  \n帮助你判断智能体技能是否规范、安全、与现有内容重复，以及是否能实际提升智能体完成任务的表现。技能通常是包含 `SKILL.md` 和支持文件的目录。\n\n**核心功能**  \n提供三个可独立运行的评估层级：Tier 1 检查结构、质量、安全、隐私信息、许可证和脚本；Tier 2 用嵌入相似度检测技能内外的重复内容；Tier 3 在沙箱中运行智能体，对比启用技能与不启用技能的结果，并生成评估数据集和报告。\n\n**技术亮点**  \n确定性检查可离线运行；语义去重支持嵌入模型；实时评估依托 Harbor，在 Docker 或其他沙箱中执行，并以 Skill Lift 衡量技能带来的表现差异。评估结果可输出为 CLI、JSON、HTML 或 Markdown。\n\n**适合谁用**  \n适合开发、维护或审核智能体技能的个人与团队，尤其是需要检查技能安全和质量、管理技能集合中的重复内容，或通过真实任务验证技能效果的场景。完整安全扫描需配置外部扫描工具；语义分析和实时评估则分别需要模型服务，以及智能体凭证和沙箱环境。",
+      "degraded": false
     }
   ]
 }
