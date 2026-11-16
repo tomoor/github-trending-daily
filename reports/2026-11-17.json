@@ -1,0 +1,171 @@
+{
+  "doc_token": "IIGTd99U5oGj6pxbtq4cmO2EnCb",
+  "doc_url": "https://my.feishu.cn/docx/IIGTd99U5oGj6pxbtq4cmO2EnCb",
+  "items": [
+    {
+      "id": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "stars": 18728,
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "one_liner": "AG-UI 是连接 AI 智能体与用户应用的开放交互协议。",
+      "detail_md": "**解决什么问题**  \n智能体运行时间长、持续输出，且会同时处理文本、工具调用和状态变化；传统请求—响应式前后端接口难以支持这类动态交互。AG-UI 为前端应用与智能体后端提供通用的双向通信方式，减少定制化连接工作。\n\n**核心功能**  \n支持实时流式对话、双向状态同步、生成式 UI、上下文补充、前端工具调用及人工介入；也支持多模态内容与可视化工具结果。\n\n**技术亮点**  \n以标准事件类型规范智能体与应用间的交互，传输方式可选 SSE、WebSocket 等，并提供 HTTP 参考实现；协议设计兼顾不同智能体框架，仓库列有 LangChain、CrewAI、Google ADK、Mastra 等集成。\n\n**适合谁用**  \n适合开发 AI 应用前端、智能体后端及框架集成的团队，尤其适用于需要实时交互、共享状态、工具协作或人工审批流程的产品；也适合希望用统一协议连接不同智能体框架的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 12419,
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "one_liner": "面向 AI 编程代理的本地计划与代码审阅工具。",
+      "detail_md": "**解决什么问题**  \n代理在终端展示计划或代码时，难以精确标注、提出修改意见并协作；Plannotator 提供可视化审阅界面，让反馈直接返回代理。\n\n**核心功能**  \n审阅代理计划并批准或请求修改；对代码差异、本地变更及 GitHub/GitLab PR 添加评论和代码建议；标注 Markdown、HTML 等文档；通过 Inbox 异步收发代理消息。\n\n**技术亮点**  \n通过 hooks、插件及命令接入多种 AI 编程代理，启动本地浏览器审阅界面；支持 Git、GitButler、Jujutsu、Perforce 和远程 PR，评审数据默认保存在本地。\n\n**适合谁用**  \n使用 Claude Code、Codex、OpenCode、Pi 等 AI 编程代理，希望在代理执行计划前把关、审阅代码改动，或将结构化意见直接交还代理的开发者与团队。",
+      "degraded": false
+    },
+    {
+      "id": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "stars": 27669,
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "one_liner": "Univer 是用于构建电子表格、文档和演示文稿应用的开源办公 SDK。",
+      "detail_md": "**解决什么问题**  \n它帮助你将办公编辑能力嵌入自己的产品，无需采用托管应用或固定界面；工作簿与文档逻辑也可在浏览器和 Node.js 中运行。\n\n**核心功能**  \n提供电子表格、文档和演示文稿体验，支持按需组合插件、使用预设快速集成，并通过自定义插件、命令、服务、UI 组件及 Facade API 扩展功能。\n\n**技术亮点**  \n采用同构架构与插件优先设计，具备 Canvas 渲染引擎和独立公式引擎；统一的 Facade API 可在浏览器和 Node.js 中操作工作簿、区域、公式与文档，并支持无头服务端处理。\n\n**适合谁用**  \n适合希望在 SaaS、内部工具、BI 流程或 AI 应用中集成办公能力的产品与开发团队，也适合需要服务端自动化处理工作簿或文档的场景。",
+      "degraded": false
+    },
+    {
+      "id": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "stars": 6166,
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "one_liner": "面向美股交易者的 AI 周度策略博客生成系统。",
+      "detail_md": "**解决什么问题**  \n将分散的市场图表、环境信号、新闻与日历事件整合为有条理的周度策略分析，帮助兼职交易者减少手动汇总工作。\n\n**核心功能**  \n分析 VIX、利率、市场宽度、主要指数及大宗商品周线；评估泡沫风险、市场情绪与板块轮动；分析近十日新闻影响及未来一周经济数据和财报，并生成 Markdown 策略博客。还可选生成包含四种情景的 18 个月中长期策略报告。\n\n**技术亮点**  \n通过 Claude Agents 将技术分析、市场环境评估、新闻与事件分析分步执行，再由写作 Agent 汇总报告；依托 Claude Code CLI 或 Claude Desktop，并调用相应 Claude Skills。日历数据配置需要 FMP API Key。\n\n**适合谁用**  \n适合关注美股、希望定期评估市场环境并制定交易计划的兼职交易者，也适合需要把多类分析整理成可阅读策略文章的研究者；生成的策略仅供教育参考，不构成财务建议。",
+      "degraded": false
+    },
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 7203,
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "one_liner": "面向授权安全测试的 Claude Code 漏洞挖掘技能工具包。",
+      "detail_md": "**解决什么问题**  \n它将分散的漏洞研究资料、测试步骤与报告要求整合起来，减少通用提示缺乏针对性、漏洞未经验证就提交，以及证据与测试记录难以管理等问题。项目面向漏洞赏金、授权渗透测试和企业红队任务。\n\n**核心功能**  \n提供覆盖范围确认、侦察、漏洞测试、验证、证据采集和报告撰写的六阶段流程；包含漏洞类型专项技能、企业平台测试技能，以及 `/recon`、`/hunt`、`/triage`、`/report` 等命令。`cbh` 命令行工具还支持侦察、分类、验证和报告草稿生成。\n\n**技术亮点**  \n技能可根据描述自动加载，既能在 Claude Code 对话中灵活组合，也能通过 Python CLI 执行可重复的确定性任务。提交前的七问验证关卡用于筛除误报；技能库整理了公开披露报告中的漏洞模式，并提供证据脱敏与多平台报告模板。\n\n**适合谁用**  \n适合使用 Claude Code 的漏洞赏金研究者、获授权的渗透测试人员、红队成员及安全研究者；测试对象应为自有资产、明确纳入范围的目标或获得书面授权的环境。",
+      "degraded": false
+    },
+    {
+      "id": "getarcaneapp/arcane",
+      "owner": "getarcaneapp",
+      "name": "arcane",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "stars": 8581,
+      "description": "Modern Docker Management, Designed for Everyone",
+      "one_liner": "Arcane 是一款用于管理 Docker 容器与 Compose 项目的平台。",
+      "detail_md": "**解决什么问题**  \n集中管理容器、镜像、网络、卷及 Compose 项目，减少在命令行和多个工具间切换的负担；也可通过代理管理远程环境。\n\n**核心功能**  \n支持启动、停止、重新部署项目，查看容器日志与活动，清理 Docker 资源，管理镜像更新；提供 Compose 编辑、工作区文件操作、Git 同步与备份，以及通知和自动化任务。\n\n**技术亮点**  \n前端使用 SvelteKit，并通过 Paraglide JS 管理多语言翻译；支持代理隧道配置、OIDC 角色映射及 Go 运行时诊断。\n\n**适合谁用**  \n适合希望通过图形界面管理 Docker 主机与 Compose 项目的个人开发者、家庭实验室维护者和小型团队；需要管理多个代理环境或自动化维护任务的用户也可参考。",
+      "degraded": false
+    },
+    {
+      "id": "DeanChensj/jiangshan-map",
+      "owner": "DeanChensj",
+      "name": "jiangshan-map",
+      "url": "https://github.com/DeanChensj/jiangshan-map",
+      "stars": 6639,
+      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "one_liner": "江山时序：可交互探索中国两千余年历史疆域与人物行迹的地图",
+      "detail_md": "**解决什么问题**  \n读史、赏诗时，古地名难以对应现代地点，历代疆域和政区变化也不易直观比较。本项目将公元前403年至今的历史地理信息汇集于一张交互式舆图，覆盖18个历史时期。\n\n**核心功能**  \n拖动时间轴查看疆域演变、政权对峙和在位君主；点击古城或名关查看古今政区沿革与当地史事；搜索历史人物，沿地图追踪生平行迹；还可参加古地名寻址挑战，并叠加现代省界作比较。\n\n**技术亮点**  \n采用原生 ES6 与 SVG，纯静态运行，无需安装依赖或构建；历史地图数据经拓扑去重、VLQ 编码并按需加载。支持中英双语、可分享的年份与地点链接，并提供面向 AI Agent 的查询接口和出图工具。\n\n**适合谁用**  \n适合历史与地理爱好者、学生和教师、诗词读者，以及需要查询古今地名或制作历史地图的开发者与 AI Agent；历史边界为示意性近似，适合辅助理解，不应视作精确测绘资料。",
+      "degraded": false
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 9667,
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "one_liner": "Stitch Skills 是面向 AI 编码代理的 Stitch 设计工作流技能库。",
+      "detail_md": "**解决什么问题**  \n它帮助你把模糊的界面想法转化为更清晰的生成提示、设计规范、前端组件或演示视频，减少设计到实现过程中的重复整理工作。\n\n**核心功能**  \n技能涵盖提示词增强、从 Stitch 项目提取设计系统并生成 `DESIGN.md`、生成多页面网站、将设计转为 React 组件，以及制作 Remotion 界面演示视频；另提供 shadcn/ui 集成指导。\n\n**技术亮点**  \n项目遵循 Agent Skills 开放标准，以独立技能目录组织指令、资源、示例和脚本；可结合 Stitch MCP 获取界面资料，并通过 AST 验证 React 组件结构。\n\n**适合谁用**  \n适合使用 Antigravity、Gemini CLI、Claude Code 或 Cursor 等编码代理，且希望借助 Stitch 加速界面设计、实现、设计系统整理或产品演示的开发者与设计团队。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 67997,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "一个连接多平台信号、发现近 30 天真实动态的 AI 研究技能",
+      "detail_md": "**解决什么问题**  \n社交平台、视频、新闻和技术社区各自分散，传统搜索容易错过最新评论、讨论热度和真实用户反馈。项目将这些来源汇总，帮助你快速了解某个主题近期发生了什么，并减少手动逐个平台检索的时间。 \n\n**核心功能**  \n并行搜索 Reddit、X、YouTube、TikTok、Hacker News、Polymarket、GitHub 等来源，综合互动度、相关性与新鲜度排序；提取字幕和热门评论、合并跨平台的同一事件，并生成带来源引用的研究简报。也支持趋势发现、人物与公司研究、工具比较、历史研究资料库及持续监控。 \n\n**技术亮点**  \n作为 Agent Skills 技能包，可安装到 Claude Code、Codex、Cursor、Copilot、Gemini CLI 等多种宿主；Python 引擎负责扩展查询、并行采集、评分与跨来源聚类，再由 AI 智能体综合结果。Reddit、Hacker News、Polymarket 等来源可免密钥使用，其他来源可按需配置。 \n\n**适合谁用**  \n适合需要快速掌握行业与社区动态的研究者、开发者、产品团队、内容创作者，以及会前调研、销售准备或旅行规划等希望依据近期信息做判断的人。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/SkillEvaluator",
+      "owner": "NVIDIA",
+      "name": "SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "stars": 2480,
+      "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "one_liner": "SkillEvaluator 是面向 AI 智能体技能的多层评估框架。",
+      "detail_md": "**解决什么问题**  \n帮助你判断智能体技能是否规范、安全、存在重复，以及是否能实际提升智能体表现；评估对象主要是包含 `SKILL.md` 和辅助文件的技能目录。\n\n**核心功能**  \n提供三个可独立运行的评估层级：Tier 1 检查结构、质量、安全、隐私信息和许可证；Tier 2 通过嵌入相似度发现技能内部或技能集合间的重复；Tier 3 在沙箱中比较智能体使用技能与不使用技能时的表现，并生成评估报告。\n\n**技术亮点**  \n静态检查可离线运行，质量评分无需 API 密钥；支持生成合成评估数据集，并以 Skill Lift 衡量技能带来的表现差异。评估结果可输出为 CLI、JSON、HTML 或 Markdown 格式，Tier 3 使用沙箱运行真实智能体试验。\n\n**适合谁用**  \n适合开发、维护或审核 AI 智能体技能的个人与团队，尤其是需要检查技能安全和质量、管理技能目录、比较不同技能效果，或将评估纳入 CI 流程的使用者。Tier 1、Tier 2、Tier 3 可按需求分别运行；实时评估需配置智能体、模型提供方及沙箱环境。",
+      "degraded": false
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 52826,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review：面向精准审查的 AI 代码审查命令行工具。",
+      "detail_md": "**解决什么问题**  \n通用 Agent 审查容易漏看文件、评论位置偏移且质量不稳定；本项目通过约束审查流程，减少误报并提升结果可控性。 \n\n**核心功能**  \n读取 Git diff 并生成带行级定位的结构化评论；Agent 可读取完整文件、搜索代码库并结合相关变更理解上下文。`ocr scan` 支持全文件审查，也可用于没有有效 diff 的目录。 \n\n**技术亮点**  \n采用“确定性工程 + Agent”混合架构：工程逻辑负责文件筛选、关联文件分组和规则匹配，Agent 负责动态判断与上下文检索；独立的评论定位和反思模块进一步提升位置与内容准确性。 \n\n**适合谁用**  \n适合希望在本地开发或 CI/CD 中自动审查代码的开发者与平台团队，也适合将代码质量检查用于强化学习训练流程的研究者。",
+      "degraded": false
+    },
+    {
+      "id": "google-research/paper-orchestra",
+      "owner": "google-research",
+      "name": "paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "stars": 1304,
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "one_liner": "PaperOrchestra 将研究材料编排为 AI 论文草稿。",
+      "detail_md": "**解决什么问题**  \n它将零散的研究想法和实验记录转化为可投稿的 LaTeX 论文，减少从原始材料到完整稿件之间的写作工作。\n\n**核心功能**  \n项目以多智能体流程生成论文大纲、检索并整合相关文献、撰写各章节、润色内容，并支持生成图表和概念图；最终可按目标会议模板输出 LaTeX 稿件。\n\n**技术亮点**  \n专门的文献智能体按大纲执行检索任务、生成参考文献并将引用写回大纲；章节写作智能体结合大纲、研究思路、实验记录和会议指南补全 LaTeX 内容。\n\n**适合谁用**  \n适合希望将研究构想与实验结果整理成会议论文的 AI 研究人员和团队；使用时需提供原始材料及 LaTeX 模板，并配置所需模型与文献检索 API 密钥。",
+      "degraded": false
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 57578,
+      "description": "Chrome DevTools for coding agents",
+      "one_liner": "Chrome DevTools MCP：让 AI 助手通过 MCP 操控并分析 Chrome。",
+      "detail_md": "**解决什么问题**  \n它把 Chrome DevTools 能力接入 AI 编程助手，便于在真实浏览器中自动化操作、排查问题和分析性能；通过标准 MCP 接口兼容不同客户端。\n\n**核心功能**  \n支持页面交互与截图、控制台和网络请求检查、性能追踪与 Lighthouse 分析，以及堆快照比较和内存问题排查。结果可提供可读摘要和结构化数据，大型产物则以文件路径或资源 URI 返回。\n\n**技术亮点**  \n以 MCP 为通用接口，通过 Puppeteer 与 Chrome DevTools Protocol 执行浏览器操作；工具采用小而确定的组合式设计，并兼顾简洁易用与进阶选项。\n\n**适合谁用**  \n适合使用 Claude Code、Cursor、VS Code Copilot 等 MCP 客户端的开发者，以及需要自动化浏览器测试、调试网页、检查网络与性能的团队。",
+      "degraded": false
+    },
+    {
+      "id": "sveltejs/svelte",
+      "owner": "sveltejs",
+      "name": "svelte",
+      "url": "https://github.com/sveltejs/svelte",
+      "stars": 88868,
+      "description": "web development for the rest of us",
+      "one_liner": "Svelte：将组件编译为高效 JavaScript 的 Web UI 框架。",
+      "detail_md": "**解决什么问题**  \n帮助开发者构建 Web 应用，将声明式组件转换成直接更新 DOM 的 JavaScript，减少应用运行时处理界面更新的负担。\n\n**核心功能**  \n提供组件编译与运行支持，并提供响应性、服务端渲染等相关入口；可通过 SvelteKit 创建应用，也可搭配 Vite 使用 Svelte。\n\n**技术亮点**  \n在编译阶段处理组件，并生成精简、高效的 JavaScript 来更新 DOM；按浏览器、worker 等环境提供不同模块入口。\n\n**适合谁用**  \n适合希望开发 Web 应用、构建交互式组件，或希望借助 SvelteKit 与 Vite搭建项目的开发者；新手可从教程、示例和 REPL 开始。",
+      "degraded": false
+    },
+    {
+      "id": "kajisho5/ffmpeg-skill",
+      "owner": "kajisho5",
+      "name": "ffmpeg-skill",
+      "url": "https://github.com/kajisho5/ffmpeg-skill",
+      "stars": 6471,
+      "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "one_liner": "面向 AI 编程代理的本地音视频处理工具集。",
+      "detail_md": "**解决什么问题**  \n让代理处理音视频时不必猜测媒体参数或依赖不安全的命令拼接；通过探测真实文件、结构化工具和结果核验，降低处理错误，并避免上传素材。\n\n**核心功能**  \n提供 21 个基于 FFmpeg 的工具，支持剪辑拼接、静音移除、画幅与时长调整、字幕和图形叠加、音频清理与同步、响度标准化、HDR 转 SDR、平台规格检查、批量处理及项目渲染；也支持纯音频文件。\n\n**技术亮点**  \n遵循先探测、尽量无损、先规划再执行、最后验证的流程；提供 `--dry-run`、结构化 JSON 执行契约及由契约生成的 MCP 工具接口。使用本地 FFmpeg 和 Python 标准库，不需要云服务、API 密钥或额外 Python 依赖。\n\n**适合谁用**  \n适合使用 Claude Code、Cursor、Codex 或兼容 `SKILL.md`、MCP 的代理，希望在本机处理视频、播客或其他音频的创作者与开发者；运行需要 FFmpeg 5.0+ 和 Python 3.9+。",
+      "degraded": false
+    }
+  ]
+}
