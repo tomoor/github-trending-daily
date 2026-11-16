@@ -1,0 +1,138 @@
+{
+  "doc_token": "QafsdaQfGoY2jNxH589c9EqSnxP",
+  "doc_url": "https://my.feishu.cn/docx/QafsdaQfGoY2jNxH589c9EqSnxP",
+  "items": [
+    {
+      "id": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "stars": 25586,
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "one_liner": "用于构建可嵌入式电子表格、文档与演示文稿体验的开源办公 SDK。",
+      "detail_md": "**解决什么问题**  \n帮助产品集成办公编辑能力，并支持在浏览器或 Node.js 中处理工作簿与文档；无需采用托管应用或固定 UI。\n\n**核心功能**  \n提供 Sheets、Docs、Slides 的模型与 UI 能力，包括表格编辑、公式、筛选排序、文档编辑及评论；可通过插件组合和扩展功能，也能以无头模式进行服务端处理与自动化。\n\n**技术亮点**  \n采用浏览器与 Node.js 共用的同构架构、插件化设计、Canvas 渲染引擎和独立公式引擎，并提供统一的 Facade API；可选择预设快速集成，或手动控制插件组合。\n\n**适合谁用**  \n适合希望在 SaaS、内部工具、BI 或 AI 应用中嵌入办公能力的产品与开发团队，也适合需要 Node.js 无头处理、公式计算或自动化流程的场景。",
+      "degraded": false
+    },
+    {
+      "id": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "stars": 17825,
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "one_liner": "AG-UI：连接 AI 智能体与用户应用的交互协议",
+      "detail_md": "**解决什么问题**  \n传统请求—响应模式难以处理智能体长时间运行、持续输出、状态变化及用户参与等需求。AG-UI 为前端应用与智能体后端提供通用的双向通信方式，减少定制化连接逻辑。\n\n**核心功能**  \n支持实时流式对话、多模态消息、生成式 UI、应用与智能体间的共享状态、前端工具调用，以及暂停并等待用户审批或输入等协作流程。\n\n**技术亮点**  \n协议开放、轻量、基于事件，定义标准事件类型并兼容多种传输方式，如 SSE、WebSocket 和 Webhook；消息采用厂商中立格式，并支持多种智能体框架与客户端接入。\n\n**适合谁用**  \n适合构建面向用户的智能体应用的前端与后端开发者，以及希望将现有智能体框架接入交互式应用的团队；可按需采用 SDK、框架集成或参考示例。",
+      "degraded": false
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 9274,
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "one_liner": "面向 Stitch 的 AI 设计与开发技能集。",
+      "detail_md": "**解决什么问题**  \n将模糊的界面构想、Stitch 设计稿和后续开发流程衔接起来，减少设计规范难以复用、界面生成提示不清晰，以及设计稿转代码和演示视频需要重复手工处理的问题。\n\n**核心功能**  \n包含提示词增强、设计系统文档生成、Stitch 页面转 React 组件、多页面网站生成、shadcn/ui 组件集成，以及基于 Remotion 制作界面演示视频等技能；可通过 `skills` CLI 安装到支持的编程代理。\n\n**技术亮点**  \n技能遵循 Agent Skills 开放标准，以独立的 `SKILL.md`、参考资料和示例组织工作流程；可结合 Stitch MCP 获取设计与页面素材，并通过语义化 `DESIGN.md` 复用颜色、字体和组件规范。React 转换技能还包含自动校验流程。\n\n**适合谁用**  \n适合使用 Stitch 生成界面、希望将设计规范延续到多页面或 React 项目中的产品设计师与前端开发者，也适合需要集成 shadcn/ui，或制作产品界面 walkthrough 视频的团队。",
+      "degraded": false
+    },
+    {
+      "id": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 11815,
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "one_liner": "Plannotator is alocal, browser-based review surface for AI coding agents— a tool that sits between …",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nPlannotator is alocal, browser-based review surface for AI coding agents— a tool that sits between you and your AI coding assistant, giving you a visual, annotatable interface to review plans before i...",
+      "degraded": true
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 56891,
+      "description": "Chrome DevTools for coding agents",
+      "one_liner": "Chrome DevTools MCPis an open-source server that bridges AI coding agents and the Chrome browser, g…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nChrome DevTools MCPis an open-source server that bridges AI coding agents and the Chrome browser, giving LLMs direct access to the full power of Chrome DevTools through the Model Context Protocol (MCP...",
+      "degraded": true
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 52038,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "one_liner": "Open Code Review：面向代码审查的 AI 命令行工具。",
+      "detail_md": "**解决什么问题**  \n通用 Agent 审查大型变更时可能漏看文件、评论位置偏移、结果不稳定；本项目以确定性工程约束审查流程，减少误报和噪声。\n\n**核心功能**  \n读取 Git diff 并生成带行级定位的结构化审查意见；Agent 可读取完整文件、搜索代码库和关联变更。`ocr scan` 支持全文件审查，也可用于审计没有有效 diff 的目录。\n\n**技术亮点**  \n采用确定性工程与 Agent 混合架构：工程逻辑负责文件筛选、关联文件分组和规则匹配，Agent 负责动态决策与上下文获取；独立定位和反思模块提升评论位置与内容准确性。\n\n**适合谁用**  \n适合希望在本地开发或 CI 中自动审查代码的个人开发者与团队，也适用于审计陌生代码库的场景；需配置 Git 和可用的模型端点。",
+      "degraded": false
+    },
+    {
+      "id": "Tencent/LoopForge",
+      "owner": "Tencent",
+      "name": "LoopForge",
+      "url": "https://github.com/Tencent/LoopForge",
+      "stars": 1450,
+      "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "one_liner": "LoopForge：让编程 Agent 的软件交付可重复、可审查。",
+      "detail_md": "**解决什么问题**  \n直接让 Agent 完成任务，可能漏掉方案、测试或独立评审，也难以追踪中途停滞。LoopForge 将交付步骤、检查和人工确认纳入流程，让团队复用有效做法并留存运行记录。\n\n**核心功能**  \n提供 Main Bot 对话工作台与可视化 SOP 流程设计器：前者支持与 Agent 迭代并处理代码交付；后者可串联 Agent、脚本、子 SOP 和人工关口。运行中可查看状态、日志及产物，并暂停、重试或退回返工。\n\n**技术亮点**  \n平台可自主部署，使用 Docker 沙箱运行对话工作区和 SOP；执行器可选 CodeBuddy、Codex 或 Claude Code。SOP 支持版本化配置、失败回退和人工审批，并将节点状态、工具轨迹、日志与产物集中呈现。\n\n**适合谁用**  \n适合希望团队协作交付软件、将固定研发步骤标准化并保留审批记录的团队；个人开发者也可使用 LoopForge Local，在编程助手中运行内置工作流。",
+      "degraded": false
+    },
+    {
+      "id": "ggml-org/ggml",
+      "owner": "ggml-org",
+      "name": "ggml",
+      "url": "https://github.com/ggml-org/ggml",
+      "stars": 15896,
+      "description": "Tensor library for machine learning",
+      "one_liner": "面向机器学习的简洁、可移植、高效张量计算库。",
+      "detail_md": "**解决什么问题**  \n为机器学习模型提供跨平台的张量计算能力，减少使用时的依赖和部署负担；支持模型推理所需的快速读写与量化存储。\n\n**核心功能**  \n提供张量运算、计算图及多种量化格式，并通过后端支持 CPU、GPU、NPU 等设备；仓库还包含 GPT、视觉模型等示例应用。\n\n**技术亮点**  \n核心实现采用 C/C++ 且不依赖外部库，面向多种处理器架构，并提供 SIMD 优化；GGUF 格式将模型信息与张量数据封装于单文件，支持扩展及内存映射加载。\n\n**适合谁用**  \n适合构建或研究机器学习推理程序、需要在不同硬件上运行模型的开发者，以及希望了解张量计算、量化和模型文件格式的学习者。",
+      "degraded": false
+    },
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 6391,
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "one_liner": "面向授权安全测试的 Claude Code 漏洞挖掘技能套件。",
+      "detail_md": "**解决什么问题**  \n它将通用、零散的漏洞测试指导整合为可复用的流程与技能，帮助研究者规划测试、验证发现并整理报告，减少误报、证据泄露和报告不符合项目要求等问题。\n\n**核心功能**  \n提供范围确认、资产侦察、漏洞类别测试、发现验证、证据清理和报告编写六阶段流程；包含 51 个技能和 15 个斜杠命令，覆盖 Web 漏洞、企业平台、红队测试及 Web3 审计，并可通过 `cbh` 命令行执行侦察、分类、分流和报告草拟。\n\n**技术亮点**  \n技能可根据自然语言描述自动加载；“7 问验证门”检查影响、授权范围和证据充分性，降低误报；Claude Code 交互式技能与基于 Python 的确定性 CLI 共用技能内容，也支持 Burp MCP 集成。\n\n**适合谁用**  \n适合在自有资产、明确授权的漏洞赏金范围、签约渗透测试、CTF 或授权红队项目中工作的安全研究者与测试团队；使用前应确认目标具有测试授权。",
+      "degraded": false
+    },
+    {
+      "id": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "stars": 7119,
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "one_liner": "Modern Web Guidance：为 AI 编码代理提供经过验证的现代 Web 开发指南。",
+      "detail_md": "**解决什么问题**  \n大型语言模型常因训练数据中的旧代码而采用过时方案，也可能缺少现代浏览器 API 的实用实现经验。本项目将专家知识整理成指南，帮助代理生成更现代、高性能且兼顾无障碍的 Web 代码。\n\n**核心功能**  \n覆盖 CSS、HTML、JavaScript 等 Web 平台功能与真实开发场景；通过 CLI、Agent Skills 或 MCP 向代理提供指南。项目还提供评测工具，比较代理在有无指南时的实现效果。\n\n**技术亮点**  \n指南配有示例、可测试的预期结果与自动生成的 Playwright 评测；`gd dev` 用于生成并校准评测材料。Skills CLI 支持本地语义搜索和指南检索，并强调渐进增强、兼容性与轻量回退方案。\n\n**适合谁用**  \n适合使用 AI 编码代理开发 Web 应用的开发者，也适合编写和维护 Web 平台指南的领域专家，以及维护 CLI、MCP、评测框架和仪表盘的工程师。",
+      "degraded": false
+    },
+    {
+      "id": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "stars": 5512,
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "one_liner": "基于 Claude Agents 的美股每周交易策略博客生成系统。",
+      "detail_md": "**解决什么问题**  \n整合分散的图表、市场环境与新闻分析，帮助交易者形成每周可执行的策略报告，减少手动汇总分析的负担。\n\n**核心功能**  \n分析 VIX、利率、市场宽度、主要指数及大宗商品周线；评估泡沫风险、情绪和板块轮动；解读近十日新闻，并关注未来一周经济指标与财报。系统整合分析报告，生成 Markdown 周度策略博客；还可选生成包含四种情景的 18 个月中长期策略报告。\n\n**技术亮点**  \n采用 Claude Agents 分阶段协作：技术市场分析、市场环境评估和新闻事件分析分别产出报告，再由博客撰写 Agent 汇总；支持图表图片作为输入，并可通过 FMP API 获取日历数据。\n\n**适合谁用**  \n适合使用 Claude Code CLI 或 Claude Desktop、希望定期分析美股并产出策略内容的兼职交易者；使用前需准备相应 Claude 技能，获取经济与财报日历还需配置 FMP API Key。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/SkillEvaluator",
+      "owner": "NVIDIA",
+      "name": "SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "stars": 1645,
+      "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "one_liner": "SkillEvaluator：面向 AI 智能体技能的多层评估框架。",
+      "detail_md": "**解决什么问题**  \n帮助你判断智能体技能是否规范、安全、与现有内容重复，以及是否能提升智能体完成任务的表现；技能通常是包含 `SKILL.md` 和支持文件的目录。\n\n**核心功能**  \nTier 1 执行结构、质量、安全、隐私信息、许可证和脚本检查；Tier 2 通过嵌入分析技能内部及技能集合间的内容重叠；Tier 3 在沙箱中比较智能体使用技能与不使用技能的表现，并生成评估数据集和报告。\n\n**技术亮点**  \n三层可独立运行；Tier 1 的确定性检查可离线执行，部分功能无需 API 密钥。Tier 3 使用 Harbor 在沙箱中运行真实智能体，通过两组表现差异衡量 Skill Lift，并支持多种报告格式。\n\n**适合谁用**  \n适合开发、维护或审核 AI 智能体技能的个人与团队，尤其是需要检查技能质量与安全、发现重复内容、验证实际效果，或将评估接入 CI 流程的使用者。",
+      "degraded": false
+    }
+  ]
+}
