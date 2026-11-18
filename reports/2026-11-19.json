@@ -1,0 +1,226 @@
+{
+  "doc_token": "BiCjd9uZno1BZQxtsWWc7CtEnN3",
+  "doc_url": "https://my.feishu.cn/docx/BiCjd9uZno1BZQxtsWWc7CtEnN3",
+  "items": [
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 10907,
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "one_liner": "Claude-BugHunter：面向授权安全测试的 Claude 技能与工作流工具包。",
+      "detail_md": "**解决什么问题**  \n它为漏洞赏金、授权渗透测试和红队工作提供方法与流程，避免测试经验零散、发现未经验证就提交、证据泄露敏感信息，以及报告格式不匹配等问题。\n\n**核心功能**  \n以范围确认、侦察、漏洞测试、验证、证据整理和报告六阶段组织任务；提供按漏洞类型划分的技能、企业平台与红队专项技能，以及 `/recon`、`/hunt`、`/triage`、`/report` 等命令和 `cbh` CLI。\n\n**技术亮点**  \n技能可根据提示内容自动加载，覆盖 51 个技能和 15 个命令；`cbh` 提供侦察、URL 分类、发现验证及报告草稿生成。七问验证门用于筛除不在范围、影响不明确或不符合提交要求的发现，证据流程强调 Cookie、个人信息和 HAR 脱敏。\n\n**适合谁用**  \n适合在自有资产、明确授权范围或练习靶场中开展测试的漏洞赏金研究者、渗透测试人员和红队成员；初学者可按流程练习，有经验的操作者也可用命令行进行可重复的侦察与验证。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 17113,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "pstack：面向严谨软件工程任务的 AI 工作流插件",
+      "detail_md": "**解决什么问题**  \n帮助你把复杂、非平凡的开发任务转为有步骤、可检查的工作流，减少仅凭模型自述判断完成、遗漏验证或重复犯错的风险。\n\n**核心功能**  \n以 `/poteto-mode` 作为入口，根据目标选择 playbook 并调用相应技能；提供架构分析、并行方案探索、代码审查、TDD、形式化验证、任务复盘等能力，也支持将独立工作分片并汇总结果。\n\n**技术亮点**  \n通过工程原则约束执行方式，强调从根因解决问题、让状态可验证、在真实产物上证明结果；可按技能委派子任务，并以独立验证者检查工作，适合需要清晰证据与可审阅交付的流程。\n\n**适合谁用**  \n适合使用 Cursor、希望把 AI 助手用于真实代码任务的开发者和团队，尤其是需要处理缺陷修复、功能开发、重构、性能分析、并行任务或长时间自动化执行的人；任务应有明确目标及可检查的完成条件。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 59498,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "CLI-Anything：把各类软件转化为 AI Agent 可调用的命令行工具。",
+      "detail_md": "**解决什么问题**  \nAI Agent 难以稳定操作专业软件；现有 GUI 自动化脆弱、API 覆盖有限，而重新实现又容易丢失原软件能力。CLI-Anything 通过结构化命令连接 Agent 与真实软件后端。\n\n**核心功能**  \n可为有代码库的软件生成 CLI harness，提供子命令、交互式 REPL、JSON 输出及撤销/重做等能力；生成的工具可安装到 PATH，供 Agent 发现和调用。\n\n**技术亮点**  \n采用自动化七阶段流程，覆盖源码分析、CLI 设计、实现、测试与发布；以真实软件后端执行渲染和导出，并通过单元、端到端及 CLI 子进程测试验证。\n\n**适合谁用**  \n希望让 Agent 自动化创意制作、办公、开发、数据分析或科研流程的开发者与团队；生成质量依赖可用源码和较强模型，且可能需要迭代补齐功能覆盖。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 69774,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "面向智能体的近 30 天多源社区研究与简报工具。",
+      "detail_md": "**解决什么问题**  \n社交平台、论坛、视频和预测市场各自分散，传统搜索难以呈现社区正在讨论和关注的内容；本项目聚合这些信号，帮助你快速了解人物、公司、产品或事件的近期动态。\n\n**核心功能**  \n并行搜索 Reddit、X、YouTube、TikTok、GitHub、Polymarket 等来源，结合互动度、相关性与时效性排序；提取字幕和热门评论、合并跨平台的同一事件，并生成带引用的研究简报。还支持趋势发现、主题比较、历史研究检索及 JSON、HTML 等输出。\n\n**技术亮点**  \nSkill 指令包与 Python 研究引擎协作，支持 Claude Code、Codex、Cursor、Copilot、Gemini CLI 等多种智能体宿主；多来源结果经评分、跨来源聚类后综合成简报，并可使用 SQLite 保存研究记录、监控趋势。\n\n**适合谁用**  \n需要快速了解行业动态、准备会议或销售沟通、比较工具、发现新兴话题，或依据社区反馈开展产品研究的人；也适合希望将研究结果接入脚本、工作流或定期简报的开发者与团队。",
+      "degraded": false
+    },
+    {
+      "id": "getarcaneapp/arcane",
+      "owner": "getarcaneapp",
+      "name": "arcane",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "stars": 9684,
+      "description": "Modern Docker Management, Designed for Everyone",
+      "one_liner": "Arcane 是一款用于管理 Docker 环境与容器化项目的平台。",
+      "detail_md": "**解决什么问题**  \nArcane 为管理 Docker 环境提供统一入口，帮助你查看和管理 Compose 项目，并监控 Arcane agents。\n\n**核心功能**  \n支持创建、启动、停止、更新、重新部署和归档 Compose 项目，也可将 `docker run` 命令转换为 Compose 配置；还提供 agent 管理与连接测试。\n\n**技术亮点**  \n后端采用 Go，前端采用 SvelteKit，并提供无头 agent 模式和 Cobra CLI。前端通过 Paraglide JS 使用结构化翻译资源，支持多语言本地化。\n\n**适合谁用**  \n适合需要管理 Docker 容器及 Compose 项目的个人开发者、运维人员和团队，也适用于通过 agent 管理多个环境的场景。",
+      "degraded": false
+    },
+    {
+      "id": "NVIDIA/SkillEvaluator",
+      "owner": "NVIDIA",
+      "name": "SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "stars": 3577,
+      "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "one_liner": "开源的 AI 智能体技能评测框架，覆盖验证、去重与实测。",
+      "detail_md": "**解决什么问题**  \n帮助你判断智能体技能是否安全、规范、与现有内容重复，以及能否实际提升智能体表现；技能通常由 `SKILL.md` 和相关支持文件组成。\n\n**核心功能**  \nTier 1 检查结构、质量、安全、隐私信息、许可证及脚本；Tier 2 用语义相似度发现单个技能内部及技能集合间的重叠；Tier 3 在沙箱中比较智能体使用技能与不使用技能的表现，并生成评测报告。各层可独立运行。\n\n**技术亮点**  \n确定性检查可离线运行；完整安全扫描可集成 SkillSpector、Semgrep 和 Gitleaks。实测由 Harbor 执行，报告以 Skill Lift 衡量技能带来的表现差异，也支持自定义评测数据与评分器。\n\n**适合谁用**  \n适合开发、维护或审核 AI 智能体技能的团队与个人，尤其是需要检查技能质量和安全、管理技能目录、或在 CI 中设置质量门槛的使用者。",
+      "degraded": false
+    },
+    {
+      "id": "nvm-sh/nvm",
+      "owner": "nvm-sh",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "stars": 96116,
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "one_liner": "面向多版本 Node.js 的用户级命令行版本管理工具。",
+      "detail_md": "**解决什么问题**  \n不同项目可能依赖不同 Node.js 版本；`nvm` 让你在同一用户环境中安装并切换版本，减少版本不匹配带来的困扰。\n\n**核心功能**  \n通过 `nvm install` 安装指定版本，`nvm use` 在当前 shell 切换版本，也可列出本地或远程版本、设置别名；项目根目录或父目录的 `.nvmrc` 可指定项目版本，供相关命令读取。\n\n**技术亮点**  \n核心实现位于 `nvm.sh`，以可加载的 POSIX shell 函数工作，而非独立可执行文件；支持 `sh`、`dash`、`ksh`、`zsh`、`bash`，并通过调整 `PATH` 完成版本切换。\n\n**适合谁用**  \n需要在多个 Node.js 项目或版本间切换的开发者；适用于 Unix、macOS 和 Windows WSL 上使用受支持 shell 的用户。`nvm` 按用户安装、在 shell 中调用，不支持 Fish。",
+      "degraded": false
+    },
+    {
+      "id": "astral-sh/uv",
+      "owner": "astral-sh",
+      "name": "uv",
+      "url": "https://github.com/astral-sh/uv",
+      "stars": 92161,
+      "description": "An extremely fast Python package and project manager, written in Rust.",
+      "one_liner": "uv：用 Rust 编写的高速 Python 包与项目管理工具。",
+      "detail_md": "**解决什么问题**  \nuv 将 Python 依赖安装与解析、项目管理、虚拟环境及 Python 版本管理整合起来，减少在多种工具间切换的负担。\n\n**核心功能**  \n可兼容常用 `pip`、`pip-tools` 和 `virtualenv` 工作流；也能管理项目依赖与跨平台锁文件、创建虚拟环境、安装和切换 Python 版本，并运行或安装 Python 工具。\n\n**技术亮点**  \n项目以 Rust 实现，主打高性能；`uv.lock` 记录精确依赖版本，支持跨平台、可复现安装。全局缓存可复用依赖，统一解析还可适配不同平台与 Python 版本。\n\n**适合谁用**  \n适合需要安装或发布 Python 包、维护个人或团队项目、管理多 Python 版本的开发者；希望沿用 `pip` 命令习惯，或需要一致依赖环境的团队也可使用。",
+      "degraded": false
+    },
+    {
+      "id": "google-research/paper-orchestra",
+      "owner": "google-research",
+      "name": "paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "stars": 4012,
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "one_liner": "PaperOrchestra：将研究素材自动转化为论文稿件的多智能体框架。",
+      "detail_md": "**解决什么问题**  \n研究想法、实验记录等未成稿材料，需要经过论文结构规划、文献整理、撰写与排版，才能形成投稿稿件；本项目旨在自动化衔接这些环节，生成符合目标会议模板的 LaTeX 论文。\n\n**核心功能**  \n由多个专门代理协作完成大纲生成、文献综述、章节写作、内容润色和绘图；可整合相关文献、生成图表，并产出投稿格式的 LaTeX 稿件。\n\n**技术亮点**  \n采用多代理流水线处理从素材到论文的任务；大纲规划可指定绘图方案、文献检索策略与章节结构，写作阶段依据实验日志和引用资料补全模板，并要求数据与图像描述有来源依据。\n\n**适合谁用**  \n适合希望把研究构想、实验记录和已有图表整理成 AI 研究论文初稿的研究人员与团队；使用时需提供原始素材和目标 LaTeX 模板，并配置所需模型及文献服务的 API 密钥。",
+      "degraded": false
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 10330,
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "one_liner": "面向 Stitch 的设计生成、转化与展示技能集合。",
+      "detail_md": "**解决什么问题**  \n将零散的界面构想、Stitch 设计稿与后续开发流程衔接起来，减少从提示词优化、设计规范提炼到组件实现和演示视频制作之间的重复工作。\n\n**核心功能**  \n包含 `enhance-prompt`（优化界面生成提示词）、`design-md`（分析 Stitch 项目并生成 `DESIGN.md`）、`stitch-loop`（生成多页面网站）、`react-components`（转换为 React 组件）、`shadcn-ui`（组件集成指导）及 `remotion`（制作界面演示视频）等技能。\n\n**技术亮点**  \n技能遵循 Agent Skills 开放标准，以独立的 `SKILL.md`、参考资料和示例组织工作流；可通过 Stitch MCP 获取设计与屏幕资料，并将设计令牌转化为语义化文档，或结合自动校验生成组件。\n\n**适合谁用**  \n适合使用 Stitch 设计界面、希望改进提示词或统一设计规范的设计与产品人员，也适合需要将设计转成 React 应用、集成 shadcn/ui，或制作产品界面演示视频的前端开发者。",
+      "degraded": false
+    },
+    {
+      "id": "sveltejs/svelte",
+      "owner": "sveltejs",
+      "name": "svelte",
+      "url": "https://github.com/sveltejs/svelte",
+      "stars": 89678,
+      "description": "web development for the rest of us",
+      "one_liner": "Svelte：将组件编译为高效 JavaScript 的 Web UI 框架",
+      "detail_md": "**解决什么问题**  \nSvelte 帮助开发者构建 Web 应用：它把声明式组件编译成 JavaScript，在 DOM 中精准更新内容。\n\n**核心功能**  \n提供组件编译器及浏览器、服务器运行时代码；可用 `$state`、`$derived` 等 runes 编写响应式逻辑。构建完整应用时，项目推荐搭配官方应用框架 SvelteKit。\n\n**技术亮点**  \n将工作前移到编译阶段，生成直接操作 DOM 的代码，减少运行时工作；组件可按环境解析到客户端或服务器入口。\n\n**适合谁用**  \n适合想用组件方式开发 Web 应用的开发者，也适合希望学习响应式 UI、构建交互界面或使用 SvelteKit 开发完整应用的团队。可通过教程、示例和 REPL 上手。",
+      "degraded": false
+    },
+    {
+      "id": "jquery/jquery",
+      "owner": "jquery",
+      "name": "jquery",
+      "url": "https://github.com/jquery/jquery",
+      "stars": 59977,
+      "description": "jQuery JavaScript Library",
+      "one_liner": "jQuery：简化网页开发的 JavaScript 库",
+      "detail_md": "**解决什么问题**  \njQuery 旨在简化客户端脚本开发，统一常见网页操作的调用方式，并处理浏览器差异，让开发者更轻松地操作 HTML 文档。\n\n**核心功能**  \n提供 DOM 元素选择与遍历、内容操作、事件处理、CSS 操作、动画效果和 Ajax 请求等能力；可用链式 API 执行一系列操作，也支持按需构建并排除不需要的模块。\n\n**技术亮点**  \n源码以 ECMAScript 模块组织，构建时编译成发布文件；提供标准、精简及 ES 模块等构建变体，也能生成适配无全局 `window` 环境的工厂版本。\n\n**适合谁用**  \n适合需要在浏览器或其他 JavaScript 环境中开发网页、操作 DOM、处理事件或发起 Ajax 请求的开发者；也适合希望通过自定义构建控制所需功能的项目。",
+      "degraded": false
+    },
+    {
+      "id": "appwrite/appwrite",
+      "owner": "appwrite",
+      "name": "appwrite",
+      "url": "https://github.com/appwrite/appwrite",
+      "stars": 58156,
+      "description": "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+      "one_liner": "Appwrite 是面向开发者与 AI 智能体的开源应用开发平台。",
+      "detail_md": "**解决什么问题**  \n减少从零搭建后端所需的时间与资源，将分散的后端能力整合到同一平台，降低集成和运维负担。\n\n**核心功能**  \n提供用户认证、数据库、文件存储、无服务器函数、网站托管、消息通知、防火墙、实时事件和 MCP；可通过 REST、WebSocket、GraphQL 等接口及多语言 SDK 使用。\n\n**技术亮点**  \n采用职责拆分的混合单体与微服务架构，结合缓存、消息队列和后台 Worker 处理负载；支持托管云服务，也可使用 Docker 自托管，并能连接 MCP 客户端。\n\n**适合谁用**  \n适合构建 Web、移动端及后端应用的开发者和团队，也适合希望让 AI 智能体通过 MCP 操作项目、或需要自行掌控部署基础设施的用户。",
+      "degraded": false
+    },
+    {
+      "id": "openvinotoolkit/openvino",
+      "owner": "openvinotoolkit",
+      "name": "openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "stars": 11265,
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "one_liner": "OpenVINO 是面向多种硬件的开源 AI 推理与部署工具包。",
+      "detail_md": "**解决什么问题**  \n帮助开发者将生成式与传统 AI 模型转换、优化并部署到云端、AI PC 和边缘设备，发挥硬件推理能力。\n\n**核心功能**  \n支持加载或转换模型、执行推理、压缩模型，并可通过 OpenVINO Model Server 提供服务；生态还包含 GenAI、Tokenizers、NNCF 和学习用 Jupyter Notebooks。\n\n**技术亮点**  \n提供 C、C++、Python 等 API，支持 Linux、Windows 和 macOS；可自动发现设备、面向不同硬件部署，并通过模型压缩提升性能、减少部署体积。\n\n**适合谁用**  \n适合希望在 Intel 硬件上运行或部署 AI 模型的应用开发者、机器学习工程师，以及需要学习、优化或服务模型的团队。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 319850,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "面向编程智能体的结构化软件开发方法与技能库。",
+      "detail_md": "**解决什么问题**  \n减少智能体未充分理解需求便直接写代码、计划不清晰或缺少验证的问题；通过先澄清目标、形成设计并取得确认，再进入实施，帮助开发过程更有条理。\n\n**核心功能**  \n提供从需求讨论、隔离工作区、编写实施计划，到分任务执行、代码审查和分支收尾的工作流；实施时强调测试驱动开发，并可采用子智能体协作或在当前会话中执行计划。\n\n**技术亮点**  \n以可组合技能和启动指引驱动智能体在任务前检查并使用相关流程；技能库涵盖头脑风暴、调试、测试、计划与审查，并支持多种编程智能体平台。\n\n**适合谁用**  \n适合使用 AI 编程智能体开发软件、希望先明确需求再实施，并重视测试、可审查计划和迭代质量的个人开发者与团队；也适合需要在不同智能体平台间复用开发流程的人。",
+      "degraded": false
+    },
+    {
+      "id": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 306272,
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "one_liner": "面向多种 AI 编码助手的生产级开发工作流系统。",
+      "detail_md": "**解决什么问题**  \n将分散的编码助手配置、开发规范与常见工程流程整合起来，帮助你在不同 AI 平台上复用一致的开发工作方式。\n\n**核心功能**  \n提供专业智能体、可复用技能、命令、自动化钩子、规则和 MCP 配置，覆盖规划、编码、测试、代码审查、安全检查及持续学习等场景。\n\n**技术亮点**  \n支持 Claude Code、Codex、Cursor、OpenCode、Gemini 等平台；强调测试驱动开发、安全优先和输入验证，并通过钩子支持跨会话记忆与技能学习。\n\n**适合谁用**  \n使用 AI 编码助手的个人开发者、开发团队，以及希望按自身技术栈定制智能体工作流、质量规范和工具配置的用户。",
+      "degraded": false
+    },
+    {
+      "id": "DeanChensj/jiangshan-map",
+      "owner": "DeanChensj",
+      "name": "jiangshan-map",
+      "url": "https://github.com/DeanChensj/jiangshan-map",
+      "stars": 7880,
+      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "one_liner": "一幅串联中国两千四百余年历史的交互地图。",
+      "detail_md": "**解决什么问题**  \n读史时，古地名难以对应今天的位置，疆域与政区的历代变化也不易直观比较。「江山时序」把公元前403年至今的历史地图、古今地名沿革与相关史事放在同一张可交互舆图中，帮助你按时间和地点理解历史。\n\n**核心功能**  \n拖动时间轴查看历代疆域、政权对峙与政区变化；点击古城或名关，查阅沿革和当地事件；搜索历史人物，浏览其生平行迹；还可进行古地名寻址挑战，并通过链接分享特定年份、地点或路线。\n\n**技术亮点**  \n项目采用原生 ES6 与 SVG，作为纯静态网页运行，无需安装运行依赖或构建工具；历史地图数据经拓扑去重和 VLQ 编码，并可按需加载。支持中英双语、深链接，以及面向 AI Agent 的 URL 协议和浏览器 API。\n\n**适合谁用**  \n适合对中国历史、历史地理或古典诗词感兴趣的读者、教师与学生，也适合需要查询古今地名和政区沿革的研究者，以及希望将历史地点与年份转化为地图视图的 AI Agent 开发者。",
+      "degraded": false
+    },
+    {
+      "id": "n8n-io/n8n",
+      "owner": "n8n-io",
+      "name": "n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "stars": 210924,
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "one_liner": "n8n 是一款用于连接服务并自动执行工作流的平台。",
+      "detail_md": "**解决什么问题**  \n帮助你将不同系统与服务的操作组织成工作流，减少重复的人工处理；项目包含工作流执行、Webhook 和多种节点。\n\n**核心功能**  \n提供可视化工作流编辑器、后端 API、工作流执行能力及基础节点；也支持创建自定义节点，扩展集成范围。\n\n**技术亮点**  \n采用单一代码仓库管理多个模块，并通过 pnpm workspaces 管理模块依赖；前端使用 Vue，代码库包含 CLI、核心执行模块、节点和工作流接口。\n\n**适合谁用**  \n适合希望搭建自动化流程的团队与个人，也适合需要扩展节点或参与项目开发的工程师；项目提供自定义节点开发入口。",
+      "degraded": false
+    },
+    {
+      "id": "solidjs/solid",
+      "owner": "solidjs",
+      "name": "solid",
+      "url": "https://github.com/solidjs/solid",
+      "stars": 36452,
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "one_liner": "Solid：以细粒度响应式更新构建高性能界面的 JavaScript 库。",
+      "detail_md": "**解决什么问题**  \nSolid 用于构建声明式用户界面，避免 Virtual DOM 的比较与协调开销；状态变化时，仅重新执行依赖该状态的代码，从而精准更新真实 DOM。\n\n**核心功能**  \n提供响应式原语、自动依赖追踪及一次执行的组件模型，并支持 JSX、Context、Portal、Suspense、错误边界、并发渲染，以及客户端与服务端渲染。\n\n**技术亮点**  \n编译器将 JSX 模板转换为真实 DOM 操作，静态模板可复用，动态表达式独立更新；无需 Virtual DOM，也无需组件整体重新渲染。\n\n**适合谁用**  \n适合使用 JavaScript 或 TypeScript、希望以 JSX 开发响应式 Web 应用的开发者；可用于客户端应用和服务端渲染项目，也适合需要 Web Components 或自定义渲染器的场景。",
+      "degraded": false
+    },
+    {
+      "id": "punkpeye/awesome-mcp-servers",
+      "owner": "punkpeye",
+      "name": "awesome-mcp-servers",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "stars": 97941,
+      "description": "A collection of MCP servers.",
+      "one_liner": "精选 MCP 服务器资源，帮助 AI 安全连接各类工具与数据。",
+      "detail_md": "**解决什么问题**  \nAI 模型需要以统一方式访问本地和远程资源；本项目整理可扩展 AI 能力的 MCP 服务器，涵盖文件访问、数据库连接、API 集成等场景。\n\n**核心功能**  \n按聚合器、浏览器自动化、数据库、开发者工具、文件系统、搜索等类别收录服务器，并提供客户端、教程、社区及同步的网页目录入口。\n\n**技术亮点**  \n以开放的模型上下文协议（MCP）为核心，支持服务器以标准化方式连接本地或远程资源；列表还用标记注明实现语言、服务范围和操作系统，便于筛选。\n\n**适合谁用**  \n适合正在挑选 MCP 客户端或服务器的 AI 应用开发者、研究者与工具使用者；无论想接入本地文件、云端 API，还是探索特定领域的集成，都可按类别查找相关资源。",
+      "degraded": false
+    }
+  ]
+}
