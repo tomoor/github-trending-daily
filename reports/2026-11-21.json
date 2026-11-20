@@ -1,0 +1,182 @@
+{
+  "doc_token": "OLsHdhkdSodvWexMysYc5eG2nhf",
+  "doc_url": "https://my.feishu.cn/docx/OLsHdhkdSodvWexMysYc5eG2nhf",
+  "items": [
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 13731,
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "one_liner": "Claude-BugHunter：面向授权安全测试的 Claude 技能工具包。",
+      "detail_md": "**解决什么问题**  \n它将零散的漏洞测试知识与流程整合起来，帮助减少缺乏验证、证据管理不当和报告不规范等问题，适用于有授权的漏洞赏金、渗透测试及外部红队工作。\n\n**核心功能**  \n提供范围确认、资产侦察、漏洞测试、发现验证、证据整理和报告撰写六阶段流程；包含 51 个技能与 15 个命令，覆盖常见 Web 漏洞、企业身份与云平台等场景。\n\n**技术亮点**  \n技能可依据自然语言关键词自动加载，也可通过 Claude Code 斜杠命令或 Python `cbh` CLI 使用；`triage-validation` 的七问关卡用于筛查发现，`evidence-hygiene` 规范敏感信息处理，并可集成 Burp MCP。\n\n**适合谁用**  \n适合熟悉或正在学习安全测试的研究者、漏洞赏金参与者、渗透测试人员及红队团队；使用时应限于自有资产、明确授权范围或专门的练习环境。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 322662,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "面向编码智能体的结构化软件开发方法与技能库。",
+      "detail_md": "**解决什么问题**  \n它让编码智能体不再收到需求就直接写代码，而是先澄清目标、形成设计并取得认可，再按计划实施，减少需求误解和未经验证的改动。\n\n**核心功能**  \n提供从头脑风暴、隔离工作区、编写实施计划，到子智能体分任务开发或在当前会话执行、代码审查及分支收尾的工作流；并包含测试驱动开发、系统化调试和验证技能。\n\n**技术亮点**  \n技能采用可组合设计，并支持多个编码智能体平台；工作流强调先写测试、再实现的 RED-GREEN-REFACTOR 循环，配合细粒度任务、审查关卡和隔离的 Git worktree。\n\n**适合谁用**  \n适合使用受支持编码智能体进行功能开发、修复问题或处理多步骤工程任务，并希望把需求确认、测试、审查和实现流程规范化的开发者与团队。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 61156,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "CLI-Anything 将软件代码库自动转化为 AI Agent 可用的命令行工具。",
+      "detail_md": "**解决什么问题**  \nAI Agent 难以稳定操控专业软件；图形界面自动化脆弱，零散 API 或简化重做又常有功能缺口。项目通过结构化命令连接 Agent 与真实软件后端，减少对截图点击和定制适配的依赖。\n\n**核心功能**  \n针对软件源码生成 CLI，自动完成分析、架构设计、实现、测试和发布；生成的工具支持子命令、交互式 REPL、JSON 输出及项目状态管理，并可按需迭代扩展功能。\n\n**技术亮点**  \n采用自动化七阶段流水线，生成基于 Click 的命令行工具；CLI 调用真实应用执行渲染或处理，支持 `--json` 结构化输出、撤销重做与持久化状态，并通过单元测试、端到端测试及已安装命令测试验证。\n\n**适合谁用**  \n适合希望让 Agent 自动化创意制作、办公、数据分析、开发或科研软件工作流的开发者与团队，也适合需要将已有 API 或 SDK 整理成统一命令接口的人；生成质量依赖可用源码和较强的基础模型，初次生成后可能还需迭代优化。",
+      "degraded": false
+    },
+    {
+      "id": "jingyaogong/minimind",
+      "owner": "jingyaogong",
+      "name": "minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "stars": 67573,
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "one_liner": "MiniMind：面向学习与复现的轻量级大语言模型项目",
+      "detail_md": "**解决什么问题**  \n大模型训练成本高、底层实现不易理解，MiniMind 提供从零训练小型语言模型的实践路径，降低学习和复现门槛。项目介绍称，约 64M 参数模型可在个人 GPU 上训练。 \n\n**核心功能**  \n提供 Dense 与 MoE 模型、分词器及数据，并覆盖预训练、监督微调、LoRA、DPO、PPO、GRPO、工具调用、Agentic RL 和蒸馏等流程；另含评测、推理服务与聊天 WebUI。 \n\n**技术亮点**  \n核心算法使用 PyTorch 原生实现，主线模型结构对齐 Qwen3 生态；支持单机单卡、多卡训练，并兼容多种主流训练框架与推理引擎。 \n\n**适合谁用**  \n适合希望理解大语言模型原理、亲手实践训练流程的学习者与开发者；可根据算力选择轻量数据集快速复现，或使用完整数据进行训练。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 17771,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "pstack 是面向软件工程任务的高严谨度 AI 工作流插件。",
+      "detail_md": "**解决什么问题**  \n它通过预设流程和验证原则，帮助你把开发目标拆成可执行、可检查的步骤，减少未经验证的改动和难以追踪的工作过程。\n\n**核心功能**  \n`/poteto-mode` 是默认入口，会按任务选择 playbook 并调用其他技能；技能覆盖故障修复、功能开发、重构、调查、测试驱动开发、代码审查、并行协作和形式化验证等场景。\n\n**技术亮点**  \n它以 playbook 编排任务，将原则纳入执行流程，并强调小步验证、行为测试和基于真实产物证明结果；复杂并行工作可由多个工作者分担后汇总。\n\n**适合谁用**  \n适合希望借助 AI 处理日常开发、需要明确验证依据的工程师和团队；新用户可先用 `/poteto-help` 了解技能与流程，再从 `/poteto-mode` 开始任务。",
+      "degraded": false
+    },
+    {
+      "id": "firecrawl/firecrawl",
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "stars": 204990,
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+      "one_liner": "Firecrawl：将网页转化为 AI 可用数据的开源平台。",
+      "detail_md": "**解决什么问题**  \n网页内容分散且常受 JavaScript 渲染、代理和限速等因素影响，难以直接用于 AI 应用。Firecrawl 处理抓取与内容清理，将网页转为便于模型使用的数据。\n\n**核心功能**  \n支持网页搜索并获取结果内容、单页抓取、整站爬取、站点 URL 发现及批量抓取；可输出 Markdown、HTML、截图或结构化 JSON，也能解析 PDF、DOCX 等文档。\n\n**技术亮点**  \n提供 REST API 和多语言 SDK，涵盖 Python、JavaScript、Go、Rust 等；支持 AI Agent 与 MCP 集成，并处理代理轮换、速率限制和 JavaScript 页面等抓取难题。\n\n**适合谁用**  \n适合需要为 AI Agent、搜索或数据分析应用获取网页资料的开发者和团队；可通过托管服务或自托管方式使用。",
+      "degraded": false
+    },
+    {
+      "id": "nginx/nginx",
+      "owner": "nginx",
+      "name": "nginx",
+      "url": "https://github.com/nginx/nginx",
+      "stars": 32505,
+      "description": "The official NGINX Open Source repository.",
+      "one_liner": "高性能 Web 服务器与流量代理平台",
+      "detail_md": "**解决什么问题**  \n面向网站和服务端应用，提供高效处理网络请求、转发流量及缓存内容的基础设施，帮助应对并发访问与资源利用需求。\n\n**核心功能**  \n可作为 Web 服务器、反向代理、负载均衡器、API 网关和内容缓存；支持邮件代理以及通用 TCP/UDP 代理。功能由模块扩展，通过文本配置文件中的指令进行配置。\n\n**技术亮点**  \n采用 master/worker 多进程架构，由 master 管理 worker 并读取配置，worker 处理请求；模块可静态编译或动态加载。项目强调高性能、稳定性、低资源消耗，并提供可按需选择的构建选项。\n\n**适合谁用**  \n适合需要部署网站、代理后端服务、分配请求流量或缓存内容的开发者与运维人员；也适合希望通过模块和配置灵活定制网络服务的团队。",
+      "degraded": false
+    },
+    {
+      "id": "openvinotoolkit/openvino",
+      "owner": "openvinotoolkit",
+      "name": "openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "stars": 11716,
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "one_liner": "OpenVINO 是面向多种硬件部署与加速 AI 推理的开源工具套件。",
+      "detail_md": "**解决什么问题**  \n帮助开发者将传统 AI 与生成式 AI 模型部署到云端、AI PC 和边缘设备，并充分利用硬件进行推理。\n\n**核心功能**  \n支持加载或转换模型、执行推理、模型压缩与优化，以及通过 Model Server 提供云端微服务部署。\n\n**技术亮点**  \n提供 Python、C++ 和 C API；支持 Linux、Windows、macOS，并具备自动设备发现、轻量部署和编译模型缓存等特性。\n\n**适合谁用**  \n适合希望在多种设备上运行 AI 推理的应用开发者，以及需要优化模型、构建生成式 AI 应用或进行云端模型服务部署的团队。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 69148,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "面向智能体的品牌化图表设计技能，生成可直接使用的 SVG/HTML 图表。",
+      "detail_md": "**解决什么问题**  \n针对智能体生成的图表样式通用、难以融入品牌，以及手工排版耗时的问题，提供可复用的视觉规范与图表制作流程；当信息用文字或表格更清楚时，也建议不要画图。\n\n**核心功能**  \n支持架构图、流程图、时序图、状态机、数据模型及多种定量图表；可从 draw.io、Mermaid 和 Excalidraw 提取内容后重新绘制，并按格式、尺寸、细节程度和受众调整输出。还可读取网站品牌色与字体，生成可离线打开的自包含 HTML/SVG 图表。\n\n**技术亮点**  \n以语义化设计令牌统一配色与字体；通过语义模式表达行为、再选择适合的图表布局。默认静态输出，动画为可选项；模板提供 SVG 无障碍名称与描述，导入流程保留内容并记录合并、简化或舍弃项。\n\n**适合谁用**  \n适合使用 Claude Code、Codex、Factory Droid、Pi 等兼容智能体，希望快速制作品牌一致图表的设计师、开发者、技术写作者与团队；也适合需要整理现有图表、制作架构或数据可视化的人。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 71289,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "面向 AI 智能体的近 30 天多源社区研究工具。",
+      "detail_md": "**解决什么问题**  \n社交平台、论坛、视频和新闻各自分散，传统搜索难以呈现社区近期真正关注的内容；本项目将多个来源连接起来，减少逐个平台搜集信息的工作。\n\n**核心功能**  \n输入人物、公司、产品或话题后，并行搜索 Reddit、X、YouTube、GitHub、Polymarket 等来源，按互动度、相关性和时效评分，合并跨平台的同一事件，并生成带来源引用的研究简报；也支持趋势发现、话题比较和历史研究搜索。\n\n**技术亮点**  \n多来源并行检索并结合参与度、相关性和新鲜度排序；通过跨来源聚类去重，支持 Markdown、JSON 和 HTML 等输出，并可借助 SQLite、观察列表和简报进行持续监控。\n\n**适合谁用**  \n适合需要快速了解近期社区动态的研究者、开发者、产品与市场团队，也适合会前调研、竞品比较、趋势追踪及旅行规划；可安装到 Claude Code、Codex、Cursor、Copilot、Gemini CLI 等多种智能体宿主。",
+      "degraded": false
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 10938,
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "one_liner": "面向 Stitch 工作流的 AI 设计与开发技能集。",
+      "detail_md": "**解决什么问题**  \n将模糊的界面构想、Stitch 设计稿及重复的前端工作，转化为更清晰的设计说明、可复用组件或演示视频，帮助设计到开发流程更顺畅。\n\n**核心功能**  \n`enhance-prompt` 补全并整理生成提示词；`design-md` 分析 Stitch 项目并生成设计系统文档；`stitch-loop` 根据提示词生成多页面网站；`react-components` 将设计转为 React 组件；`remotion` 制作界面漫游视频；`shadcn-ui` 提供组件集成与定制指导。\n\n**技术亮点**  \n技能遵循 Agent Skills 开放标准，按独立目录组织指令、资源和示例；通过 Stitch MCP 获取项目、屏幕及设计素材，并可结合自动验证、设计令牌与 Remotion 渲染流程。\n\n**适合谁用**  \n适合使用 Stitch 的设计师、前端开发者和产品团队，尤其适用于需要优化界面生成提示词、沉淀设计规范、搭建 React 界面，或制作产品演示视频的场景。",
+      "degraded": false
+    },
+    {
+      "id": "mjmirza/app-store-compliance",
+      "owner": "mjmirza",
+      "name": "app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "stars": 2524,
+      "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "one_liner": "Explore Deep Research in Zread, the AI code wiki with multilingual guides, architecture insights, a…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nExplore Deep Research in Zread, the AI code wiki with multilingual guides, architecture insights, and community buzz, helping you dive into any GitHub repo in depth.",
+      "degraded": true
+    },
+    {
+      "id": "Tracer-Cloud/opensre",
+      "owner": "Tracer-Cloud",
+      "name": "opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "stars": 13470,
+      "description": "The open-source agent for CI/CD reliability.",
+      "one_liner": "OpenSRE：面向生产运维的开源 AI SRE 智能体框架。",
+      "detail_md": "**解决什么问题**  \n帮助运维团队跨监控、云基础设施、代码与事件管理系统收集线索、分析生产问题，并减少排查时的上下文切换。\n\n**核心功能**  \n可关联分析日志、指标、链路、部署与配置，结合运行手册进行推理，并给出附带证据的结论和后续建议；支持可选的修复操作、定时任务及向 Slack、PagerDuty、Telegram 等渠道发送结果。项目提供 60 多种工具集成、交互式终端、CI/CD 可靠性分析与修复，以及 HTTP 和 Python API。\n\n**技术亮点**  \n采用工具调用循环跨系统检验假设，支持多种云端及本地 LLM；可在调用外部模型前对敏感标识进行可逆遮蔽，并提供会话续接、跨轮次目标、定时自动化和本地或托管部署方式。\n\n**适合谁用**  \n适合负责生产系统可靠性、告警响应和故障诊断的 SRE、DevOps 与平台工程团队，也适合希望自动分析 GitHub CI/CD、连接现有运维工具，或自行构建和托管 AI 运维智能体的开发者与组织。",
+      "degraded": false
+    },
+    {
+      "id": "toeverything/AFFiNE",
+      "owner": "toeverything",
+      "name": "AFFiNE",
+      "url": "https://github.com/toeverything/AFFiNE",
+      "stars": 75617,
+      "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+      "one_liner": "AFFiNE 是集文档、白板、数据库与 AI 于一体的协作工作空间。",
+      "detail_md": "**解决什么问题**  \nAFFiNE 将写作、视觉创作与任务规划整合在一个空间，帮助个人和团队管理知识、协作并组织工作；其本地优先设计也让数据保留在本地，同时支持实时协作。\n\n**核心功能**  \n支持以积木块组织内容的文档编辑、自由画布与白板、数据库和任务规划，并提供 AI 写作、思维导图、内容总结及会议记录等辅助能力；项目也支持自托管。\n\n**技术亮点**  \n底层采用 BlockSuite 的块式编辑框架，并以 CRDT 支持本地优先和实时同步；BlockSuite 文档以可嵌套的块树组织内容，操作可撤销和重做。\n\n**适合谁用**  \n适合希望在同一工具中写文档、绘制构想、规划任务并开展协作的个人与团队，尤其适合重视数据掌控、开源与自托管选择的人。",
+      "degraded": false
+    },
+    {
+      "id": "XiaoYouChR/Ghost-Downloader-3",
+      "owner": "XiaoYouChR",
+      "name": "Ghost-Downloader-3",
+      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "stars": 13500,
+      "description": "The only downloader you need. 下载器的集大成者。",
+      "one_liner": "跨平台一体化下载管理器，支持多种协议与媒体资源。",
+      "detail_md": "**解决什么问题**  \n整合分散的下载方式与工具，让网页媒体、常见文件及不同协议的下载任务可在同一应用中管理；下载过程中还能调整链接、请求头或代理，减少任务中断带来的不便。\n\n**核心功能**  \n支持 HTTP、磁力/BT、FTP、M3U8、MPEG-DASH、eD2k，以及 YouTube、Bilibili、GitHub 和 HuggingFace 等来源；可选择视频片段、画质、字幕或播放列表内容，并通过浏览器扩展嗅探和发送媒体资源。\n\n**技术亮点**  \n采用智能分块并按带宽调整下载，支持浏览器 TLS 指纹模拟；提供兼容 aria2 的 RPC 接口和功能包插件体系。桌面端覆盖 Windows、macOS、Linux，另有 Android 版本，支持直播录制与后台下载。\n\n**适合谁用**  \n适合需要集中管理多来源下载、获取在线视频及字幕、录制直播，或希望用第三方工具控制任务的用户；也适合需要在电脑与 Android 设备上使用下载管理器的人。",
+      "degraded": false
+    },
+    {
+      "id": "zhouxiaoka/autoclip",
+      "owner": "zhouxiaoka",
+      "name": "autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "stars": 12014,
+      "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "one_liner": "AutoClip 可将长视频智能分析并自动剪辑为精彩片段与主题合集。",
+      "detail_md": "**解决什么问题**  \n手动从长视频中寻找重点、剪辑片段并整理合集耗时费力；AutoClip 支持处理 YouTube、B站视频链接及本地视频，自动提取内容要点并生成切片。\n\n**核心功能**  \nAI 提取视频大纲、识别话题时间点并评估片段精彩度，进一步生成切片标题、推荐主题合集；用户可查看和编辑结果、调整合集顺序并下载导出。B站上传和字幕编辑仍标注为开发中。\n\n**技术亮点**  \n采用 React、TypeScript 前端与 FastAPI 后端；Celery、Redis 支持异步任务处理，WebSocket 推送实时进度，通义千问用于内容分析，并结合 yt-dlp 与 FFmpeg 处理视频。\n\n**适合谁用**  \n适合需要从长视频快速制作短片、整理主题合集的内容创作者，以及希望集中管理视频项目、跟踪处理进度并导出结果的用户。",
+      "degraded": false
+    }
+  ]
+}
