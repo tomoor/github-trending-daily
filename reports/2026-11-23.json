@@ -1,0 +1,182 @@
+{
+  "doc_token": "Mw8rdNxXioxYE7xmoAgcNKmVnde",
+  "doc_url": "https://my.feishu.cn/docx/Mw8rdNxXioxYE7xmoAgcNKmVnde",
+  "items": [
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 17170,
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "one_liner": "Claude-BugHunter：面向授权安全测试的 Claude Code 技能工具包。",
+      "detail_md": "**解决什么问题**  \n它为漏洞赏金与授权渗透测试提供系统化流程，减少通用提示不够具体、发现验证不足、证据泄露及报告分散等问题。\n\n**核心功能**  \n覆盖范围确认、侦察、漏洞测试、验证、证据整理和报告六阶段；51 个技能可按关键词自动加载，并提供 `/recon`、`/hunt`、`/triage`、`/report` 等命令。`cbh` 命令行工具支持侦察、分类、分流和报告草稿。\n\n**技术亮点**  \n按漏洞类型组织的 `hunt-*` 技能涵盖 Web、API、身份认证及企业平台测试；7 问验证门用于筛除不符合范围或缺乏实际影响的发现，证据流程包含 Cookie、个人信息及 HAR 脱敏。技能由 Claude Code 对话调用，CLI 则以可重复的方式执行部分流程。\n\n**适合谁用**  \n适合在自有资产、明确授权的测试范围或练习环境中工作的漏洞赏金研究者、渗透测试人员及红队人员；使用前应确认授权和目标范围。",
+      "degraded": false
+    },
+    {
+      "id": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 323943,
+      "description": "An agentic skills framework & software development methodology that works.",
+      "one_liner": "Superpowers：为编码智能体提供结构化开发流程的技能集。",
+      "detail_md": "**解决什么问题**  \nSuperpowers 避免编码智能体收到需求后立即动手写代码，而是先澄清目标、形成设计并取得确认，再进入实现，减少偏离需求和缺少验证的风险。\n\n**核心功能**  \n项目提供可组合的开发技能，覆盖头脑风暴、隔离工作区、编写实施计划、测试驱动开发、代码审查与分支收尾；实施计划可由子智能体逐项执行并审查，也可在当前会话中顺序执行。\n\n**技术亮点**  \n技能以模块化方式组织，并支持多种编码智能体平台；工作流强调 RED-GREEN-REFACTOR、YAGNI 和 DRY。头脑风暴还提供浏览器视觉伴侣，可展示界面草图、架构图和方案对比，并记录选择结果。\n\n**适合谁用**  \n适合使用 AI 编码智能体开发软件、希望把需求分析、计划、实现和审查纳入可重复流程的个人或团队；也适合需要在多个受支持平台间使用同一套开发技能的开发者。",
+      "degraded": false
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 62564,
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "one_liner": "CLI-Anything：把各类软件转化为 AI Agent 可用的命令行工具。",
+      "detail_md": "**解决什么问题**  \nAI Agent 擅长推理，却难以稳定操作专业软件；GUI 自动化容易受界面变化影响，零散 API 也可能覆盖不足。CLI-Anything 通过结构化命令连接 Agent 与真实软件后端，减少对截图点击和定制集成的依赖。\n\n**核心功能**  \n通过插件分析软件源码并生成 CLI，提供命令分组、交互式 REPL、JSON 输出及撤销/重做等能力；生成的工具可安装到 PATH，供 Agent 调用。CLI-Hub 还支持浏览、搜索、安装和管理社区 CLI。\n\n**技术亮点**  \n采用自动化七阶段流水线，覆盖源码分析、架构设计、实现、测试和文档生成；直接集成真实应用后端，并通过单元测试、端到端测试和 CLI 子进程测试验证。统一的 `ReplSkin`、持久化项目状态及 JSON 输出，让交互和机器消费更一致。\n\n**适合谁用**  \n需要让 AI Agent 操作桌面软件、开发工具、数据分析或办公应用的开发者与团队；也适合希望贡献新软件 CLI、扩展现有工具或通过 Hub 安装现成 CLI 的用户。生成效果依赖可用源码和较强的基础模型，部分工具可能需要迭代优化。",
+      "degraded": false
+    },
+    {
+      "id": "jingyaogong/minimind",
+      "owner": "jingyaogong",
+      "name": "minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "stars": 68497,
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "one_liner": "MiniMind：从零训练、理解与复现轻量级大语言模型。",
+      "detail_md": "**解决什么问题**  \n针对大模型训练门槛高、底层实现不易理解的问题，提供轻量、可复现的实践路径，让学习者不止调用或微调现成模型，也能亲手训练小型语言模型。\n\n**核心功能**  \n包含 Dense 与 MoE 模型结构、分词器及数据处理，覆盖预训练、SFT、LoRA、DPO、PPO、GRPO、CISPO、工具调用、Agentic RL 与蒸馏；还提供评测、推理接口和聊天 WebUI。\n\n**技术亮点**  \n核心算法使用 PyTorch 原生实现，减少对高层框架封装的依赖；主线模型对齐 Qwen3 生态，支持单卡及多卡训练，并兼容常用模型框架和推理引擎。\n\n**适合谁用**  \n适合希望系统学习大语言模型原理与训练流程的初学者、开发者和研究者，也适合希望在个人 GPU 上快速复现、扩展或评估小型模型的实践者。",
+      "degraded": false
+    },
+    {
+      "id": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 18331,
+      "description": "Cursor plugin specification and official plugins",
+      "one_liner": "面向高质量、可验证智能体开发的工作流插件。",
+      "detail_md": "**解决什么问题**  \n帮助开发者避免智能体工作流中的盲目执行与低质量产出，将任务目标转化为有步骤、有检查依据的工程过程；对于复杂或长时间运行的任务，也提供分阶段推进和决策记录的方式。\n\n**核心功能**  \n`/poteto-mode` 是主要入口，会根据任务匹配预设 playbook，并按步骤调用其他技能；技能覆盖代码理解、设计探索、测试驱动修复、并行审查、验证与交付。项目还提供夜间自主运行流程，以及用于 Slack 问题分流和复现修复的 Benny 自动化方案。\n\n**技术亮点**  \n以工程原则约束任务执行，强调追溯根因、先复现再修复、验证真实产物，并将工作拆成可检查的小单元；设计阶段可比较多个原型，较大工作可并行委派，长任务还能留下可审阅的决策轨迹。\n\n**适合谁用**  \n适合使用 Cursor 或 Claude Code 的工程师、技术负责人和开发团队，尤其是需要处理复杂代码任务、并行协作、夜间运行或严格验证交付结果的场景；新手也可通过 `/poteto-help` 获取技能建议和可直接使用的提示词。",
+      "degraded": false
+    },
+    {
+      "id": "firecrawl/firecrawl",
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "stars": 206739,
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "one_liner": "Firecrawl：为 AI 提供搜索、抓取与网页交互能力的开源 API。",
+      "detail_md": "**解决什么问题**  \n网页内容分散在动态页面和各类文档中，直接采集、清洗并交给 AI 使用往往繁琐。Firecrawl 将网页及文档转为适合模型处理的内容，并处理代理、速率限制和 JavaScript 页面等采集难题。\n\n**核心功能**  \n支持网页搜索并返回结果内容；抓取网址并输出 Markdown、HTML、截图或结构化 JSON；批量抓取、整站爬取与 URL 发现；还可通过提示词或代码与页面交互，并让 Agent 自动搜索、导航和获取资料。\n\n**技术亮点**  \n提供 Python、Node.js、Go、Java、Rust 等 SDK，支持 API、CLI 与 MCP 客户端接入；异步操作可由 SDK 自动轮询等待。项目开源，支持本地开发与自托管；主要采用 AGPL-3.0 许可，部分 SDK 和 UI 组件采用 MIT 许可。\n\n**适合谁用**  \n适合构建 AI Agent、MCP 工具、研究与内容处理应用的开发者，也适合需要批量采集网页或自托管服务的团队；使用时应遵守网站政策，项目默认尊重 robots.txt。",
+      "degraded": false
+    },
+    {
+      "id": "nginx/nginx",
+      "owner": "nginx",
+      "name": "nginx",
+      "url": "https://github.com/nginx/nginx",
+      "stars": 32836,
+      "description": "The official NGINX Open Source repository.",
+      "one_liner": "NGINX 是高性能的 Web 服务器、反向代理与负载均衡器。",
+      "detail_md": "**解决什么问题**  \nNGINX 用于高效处理并发网络请求，提供网页服务，并在客户端与后端服务之间转发流量；也可作为 API 网关和内容缓存，帮助管理服务流量与内容分发。cite repo=\"nginx/nginx\" path=\"README.md\" start=\"12\" end=\"14\" />\n\n**核心功能**  \n支持静态内容服务、反向代理、负载均衡、TLS 加密、请求限速和内容缓存。功能由模块扩展，配置通过文本文件中的指令进行；模块可静态编译，也可作为动态模块加载。cite repo=\"nginx/nginx\" path=\"README.md\" start=\"56\" end=\"72\" />\n\n**技术亮点**  \n采用 master-worker 多进程架构：master 管理 worker 并读取配置，worker 处理请求；可配置或自动调整 worker 数量，以利用可用 CPU 资源。模块化设计提供可配置扩展能力，项目以 BSD 2-Clause 许可证开源。cite repo=\"nginx/nginx\" path=\"README.md\" start=\"74\" end=\"79\" />\n\n**适合谁用**  \n适合需要部署网站、代理后端服务、分配请求流量或缓存内容的运维人员与开发者，也适用于希望通过模块和配置定制网络服务行为的团队。cite repo=\"nginx/nginx\" path=\"README.md\" start=\"68\" end=\"72\" />",
+      "degraded": false
+    },
+    {
+      "id": "openvinotoolkit/openvino",
+      "owner": "openvinotoolkit",
+      "name": "openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "stars": 12042,
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "one_liner": "OpenVINO 是用于优化并部署 AI 模型的开源工具套件。",
+      "detail_md": "**解决什么问题**  \nOpenVINO 帮助开发者将传统 AI 与生成式 AI 模型部署到云端、AI PC、边缘设备等环境，并利用硬件加速进行推理。它支持加载或转换模型，降低模型从训练框架迁移到实际应用的门槛。\n\n**核心功能**  \n提供模型加载与转换、推理运行、模型压缩，以及面向生成式 AI 的部署能力；也可通过 OpenVINO Model Server 提供服务，并借助 NNCF 进行训练时或训练后压缩。\n\n**技术亮点**  \n支持 Python、C++、C 等 API，兼容 Linux、Windows 和 macOS；自动发现设备，并通过模型压缩、编译模型缓存等机制提升部署灵活性与启动表现。\n\n**适合谁用**  \n适合希望在多种硬件和系统上运行 AI 推理的应用开发者，也适合需要部署生成式 AI、优化模型性能或开展模型转换与推理实验的团队和学习者。",
+      "degraded": false
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "stars": 70146,
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "one_liner": "面向智能体的品牌化图表设计技能，生成可直接使用的 HTML/SVG 图表。",
+      "detail_md": "**解决什么问题**  \n针对智能体生成的图表样式雷同、难以融入品牌的问题，提供统一的编辑式设计规范，并可将既有图表内容重新绘制为清晰、适合目标场景的成品。\n\n**核心功能**  \n支持架构图、流程图、时序图、数据模型等 42 种图表类型；可从网站提取品牌颜色与字体，也能导入 draw.io、Mermaid 和 Excalidraw 内容并按格式、尺寸、细节程度和受众重新绘制。\n\n**技术亮点**  \n输出为自包含 HTML，采用内嵌 SVG，默认静态且无需构建；支持语义化设计令牌、可访问性标记及可选动效，并以复杂度预算和自动检查约束布局与质量。\n\n**适合谁用**  \n适合使用 Claude Code、Codex、Factory Droid、Pi 等兼容智能体，希望快速制作品牌一致图表的开发者、技术写作者与团队；若内容用表格或文字表达更清楚，则不必使用。",
+      "degraded": false
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 72521,
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "one_liner": "一个跨平台 AI 社区研究引擎，汇集近 30 天信号并生成简报。",
+      "detail_md": "**解决什么问题**  \n社交平台、开发者社区和新闻网站各自封闭，手动逐一搜索费时，也难以比较信息热度。`last30days` 聚合这些分散来源，帮助你了解近期真实讨论与动态，而非只依赖编辑报道或过时内容。\n\n**核心功能**  \n输入人物、公司、产品或主题，即可并行搜索 Reddit、X、YouTube、TikTok、Hacker News、Polymarket、GitHub 等来源，按互动度、相关性和新鲜度评分，并将跨平台的同一事件合并为有引用依据的研究简报；也支持趋势发现、主题比较和招聘信号研究。\n\n**技术亮点**  \n通过预研究解析相关账号、社区和标签，再并行检索、综合评分并聚类；支持多种 AI 智能体宿主和多来源连接器。项目基于 Python 3.12+，并提供机器可读 JSON、SQLite 趋势存储及 HTML 简报等能力。\n\n**适合谁用**  \n适合需要快速了解行业与社区动态、会前调研人物或公司、比较产品工具、发现新兴话题，或在产品开发前验证用户痛点的研究者、创作者、从业者和团队。",
+      "degraded": false
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 11800,
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "one_liner": "Stitch Skills：面向 AI 编码代理的 Stitch 工作流技能集",
+      "detail_md": "**解决什么问题**  \n将模糊的界面构想转化为可执行的设计提示、设计系统文档、网页或演示视频，帮助减少从设计到实现过程中的重复工作，并保持多页面视觉一致。项目技能遵循 Agent Skills 开放标准，可用于 Antigravity、Gemini CLI、Claude Code 和 Cursor 等编码代理。\n\n**核心功能**  \n`enhance-prompt` 补充界面提示的结构、UI/UX 术语与设计系统上下文；`design-md` 分析 Stitch 项目并生成 `DESIGN.md`；`stitch-loop` 从单条提示生成多页面网站并整理、验证文件；`react-components` 将设计转为 React 组件；另提供 shadcn/ui 集成指导，以及基于 Remotion 的界面演示视频生成。\n\n**技术亮点**  \n技能以 `SKILL.md` 和配套参考资料组织，按 Agent Skills 开放标准提供工作流。设计分析技能通过 Stitch MCP Server 获取屏幕、HTML/CSS 和设计元数据，再提取颜色、字体、间距及组件样式并转写为语义化设计说明；提示增强技能可读取 `DESIGN.md`，为后续生成注入设计规范。\n\n**适合谁用**  \n适合使用 AI 编码代理和 Stitch 的设计师、前端开发者及产品团队，尤其适用于需要优化界面生成提示、复用设计规范、将 Stitch 设计转为 React 组件，或制作产品界面演示视频的场景。",
+      "degraded": false
+    },
+    {
+      "id": "mjmirza/app-store-compliance",
+      "owner": "mjmirza",
+      "name": "app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "stars": 3782,
+      "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "one_liner": "Explore Deep Research in Zread, the AI code wiki with multilingual guides, architecture insights, a…",
+      "detail_md": "> 注: 未获得 DeepWiki 深度解读, 仅展示简介\n\nExplore Deep Research in Zread, the AI code wiki with multilingual guides, architecture insights, and community buzz, helping you dive into any GitHub repo in depth.",
+      "degraded": true
+    },
+    {
+      "id": "Tracer-Cloud/opensre",
+      "owner": "Tracer-Cloud",
+      "name": "opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "stars": 14268,
+      "description": "The open-source agent for CI/CD reliability.",
+      "one_liner": "OpenSRE：面向可靠性工程的开源 AI 智能体框架",
+      "detail_md": "**解决什么问题**  \n帮助工程团队排查生产问题、提升 CI/CD 可靠性，减少手动查找监控、日志和代码信息的工作。你可以连接已有工具，让智能体基于自己的基础设施回答运维问题。\n\n**核心功能**  \n支持用自然语言交互或通过命令行操作；连接 60 多种监控、事件、云、代码和数据工具；分析 CI 可靠性并协助修复失败检查；还提供多轮目标、定时任务、消息通知，以及 HTTP 和 Python API。\n\n**技术亮点**  \n采用可扩展的工具与集成机制，支持自选 LLM、多实例服务配置及 MCP 连接；提供敏感标识脱敏、安全护栏和本地会话能力，也能通过网关部署并运行计划任务。\n\n**适合谁用**  \n适合负责生产运维、SRE、平台工程或 CI/CD 的团队，也适合希望将 AI 智能体接入自有工具和基础设施的开发者；项目目前处于公开 Alpha 阶段，接口和集成仍可能变化。",
+      "degraded": false
+    },
+    {
+      "id": "toeverything/AFFiNE",
+      "owner": "toeverything",
+      "name": "AFFiNE",
+      "url": "https://github.com/toeverything/AFFiNE",
+      "stars": 76637,
+      "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+      "one_liner": "AFFiNE 是一款开源的一体化工作空间，融合文档、任务管理与白板协作。",
+      "detail_md": "**解决什么问题**  \nAFFiNE 将分散的写作、规划与视觉协作整合在同一工作空间，并以本地优先和实时协作为设计方向，帮助个人与团队管理知识和数字资产。\n\n**核心功能**  \n支持文档编辑、任务看板、白板和数据库等内容组织方式；文档内容可转换为 Markdown，服务端也支持文档预览及 Markdown 响应。\n\n**技术亮点**  \nBlockSuite 以可扩展的区块树组织文档，支持区块增删改查及撤销重做；底层使用 CRDT 实现本地存储与实时同步。项目还提供多语言界面，以及可执行摘要、头脑风暴等任务的 AI 功能。\n\n**适合谁用**  \n适合希望自主掌控数据、不想受供应商锁定，并需要统一处理文档、任务、知识管理或团队协作的个人与团队。",
+      "degraded": false
+    },
+    {
+      "id": "XiaoYouChR/Ghost-Downloader-3",
+      "owner": "XiaoYouChR",
+      "name": "Ghost-Downloader-3",
+      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "stars": 14915,
+      "description": "The only downloader you need. 下载器的集大成者。",
+      "one_liner": "Ghost Downloader：跨平台、多协议的一站式下载工具",
+      "detail_md": "**解决什么问题**  \n将分散在不同工具中的文件、视频与资源下载整合到一个应用，减少复制链接、切换软件和处理网络波动的麻烦；支持从浏览器扩展发现媒体并交由桌面端接管。\n\n**核心功能**  \n支持 HTTP、磁力/BT、FTP、M3U8、MPEG-DASH、eD2k 下载，以及 YouTube、Bilibili 视频的画质、字幕、片段和播放列表选择；还提供 GitHub、HuggingFace 镜像加速、Android 直播录制、后台下载、命令行任务管理和兼容 `aria2` 的 RPC API。\n\n**技术亮点**  \n覆盖 Windows、macOS、Linux、Android；采用智能分块与带宽自适应，支持真实浏览器 TLS 指纹，并能在下载过程中修改链接、请求头或代理而不丢失进度。项目还提供逐步开放的功能包插件体系。\n\n**适合谁用**  \n适合需要集中管理多种协议下载、经常保存在线视频或直播、使用 BT 或 eD2k，或希望通过命令行及第三方工具控制下载任务的用户。",
+      "degraded": false
+    },
+    {
+      "id": "zhouxiaoka/autoclip",
+      "owner": "zhouxiaoka",
+      "name": "autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "stars": 13277,
+      "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "one_liner": "AutoClip 是一款利用 AI 自动分析视频并生成精彩切片与合集的工具。",
+      "detail_md": "**解决什么问题**  \n长视频内容整理和剪辑耗时，AutoClip 可从 YouTube、B站或本地视频中提取精彩片段，减少手动筛选与制作合集的工作。\n\n**核心功能**  \n支持视频下载和本地上传；AI 提取大纲、定位话题时间段并为片段评分、生成标题；自动切片并推荐合集，也可手动编辑排序。处理进度通过 WebSocket 实时反馈，结果可查看和下载。\n\n**技术亮点**  \n采用 React、TypeScript 前端与 FastAPI 后端分离架构，以 Celery 和 Redis 异步处理任务；结合通义千问进行内容分析，并使用 yt-dlp、FFmpeg 支持视频获取与处理。\n\n**适合谁用**  \n适合需要从长视频制作短片、整理主题合集的内容创作者，以及希望通过 Web 界面管理视频项目、查看处理结果的用户。项目也提供 Docker 部署支持；B站上传、字幕编辑和移动端支持仍在开发中。",
+      "degraded": false
+    }
+  ]
+}
